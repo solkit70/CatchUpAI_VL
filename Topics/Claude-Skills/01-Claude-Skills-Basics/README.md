@@ -2,8 +2,8 @@
 
 **모듈**: M1 - Claude Skills 기본 개념
 **난이도**: ⭐
-**학습 기간**: 2026-01-04 ~ 01-05 (Day 1-2)
-**현재 진행 상황**: Day 1 (실습 1 완료)
+**학습 기간**: 2026-01-04 ~ 2026-01-07 (실제 학습일: 2일)
+**현재 진행 상황**: ✅ 완료 (100%)
 
 ---
 
@@ -15,11 +15,11 @@
 
 ## 🎯 학습 목표
 
-- [x] Claude Skills가 무엇인지, 왜 사용하는지 설명할 수 있다
-- [x] Skill의 기본 구조 (manifest, entry point 등)를 이해한다
-- [ ] 간단한 "Hello World" Skill을 작성하고 실행할 수 있다
-- [ ] Claude Code에서 Skill을 등록하고 실행하는 방법을 안다
-- [ ] CUA_VL을 Skill vs GitHub Repository로 관리하는 것의 장단점을 비교할 수 있다
+- [x] Claude Skills가 무엇인지, 왜 사용하는지 설명할 수 있다 ✅
+- [x] Skill의 기본 구조 (manifest, entry point 등)를 이해한다 ✅
+- [x] 간단한 "Hello World" Skill을 작성하고 실행할 수 있다 ✅
+- [x] Claude Code에서 Skill을 등록하고 실행하는 방법을 안다 ✅
+- [x] CUA_VL을 Skill vs GitHub Repository로 관리하는 것의 장단점을 비교할 수 있다 ✅
 
 ---
 
@@ -31,9 +31,11 @@
 ├── concepts/
 │   └── claude-skills-overview.md    # Claude Skills 전체 개념 정리 ✅
 ├── examples/
-│   └── (실습 2에서 생성 예정)
+│   └── hello-skill/                  # 첫 번째 실습 Skill ✅
+│       ├── SKILL.md                  # Skill 정의 파일
+│       └── README.md                 # 학습 가이드 (219줄)
 ├── guides/
-│   └── (실습 3에서 생성 예정)
+│   └── cua-vl-skill-vs-repo.md      # CUA_VL Skill vs Repository 비교 분석 ✅
 └── references/
     └── useful-links.md               # 공식 문서 및 참조 링크 ✅
 ```
@@ -56,19 +58,33 @@
 - ✅ [concepts/claude-skills-overview.md](concepts/claude-skills-overview.md) - 상세한 개념 정리
 - ✅ [references/useful-links.md](references/useful-links.md) - 공식 문서 링크 모음
 
-### Day 2 (2026-01-05) - 예정
+### Day 2 (2026-01-07) ✅
 
-**실습 2: "Hello World" Skill 작성**
+**실습 2: "Hello World" Skill 작성** (완료)
 - 간단한 Skill 프로젝트 생성
-- SKILL.md 파일 작성
-- Claude Code에 등록 및 실행
-- 산출물: `examples/hello-skill/`
+- SKILL.md 파일 작성 (description 기반 자동 활성화)
+- Personal Skills 폴더에 설치 (`~/.claude/skills/hello-skill/`)
+- 실제 대화를 통한 실행 테스트 성공
+- 산출물:
+  - ✅ [examples/hello-skill/SKILL.md](examples/hello-skill/SKILL.md)
+  - ✅ [examples/hello-skill/README.md](examples/hello-skill/README.md) - 219줄 학습 가이드
 
-**실습 3: CUA_VL Skill vs Repository 비교 분석**
+**실습 3: CUA_VL Skill vs Repository 비교 분석** (완료)
 - CUA_VL을 Skill로 만들 경우 장단점 분석
 - Repository로 유지할 경우 장단점 분석
-- 결론 및 권장 방향 도출
-- 산출물: `guides/cua-vl-skill-vs-repo.md`
+- Option 3: 하이브리드 접근 (권장 ⭐)
+- **결론**: Repository 유지 + 선택적 Skill 래퍼
+- 산출물:
+  - ✅ [guides/cua-vl-skill-vs-repo.md](guides/cua-vl-skill-vs-repo.md) - 394줄 심층 분석
+
+**Module Retrospective 작성** (완료)
+- M1 전체 학습 내용 정리
+- 핵심 인사이트 3가지 도출
+- 학습 효율성 분석
+- M2 준비 사항 정리
+- 산출물:
+  - ✅ [vl_worklog/20260107_M1_Retrospective.md](../vl_worklog/20260107_M1_Retrospective.md)
+  - ✅ [vl_worklog/20260107_M1_Day2_Claude-Skills.md](../vl_worklog/20260107_M1_Day2_Claude-Skills.md)
 
 ---
 
@@ -115,18 +131,41 @@ Claude가 따를 단계별 지침
 
 ---
 
+## 🎓 M1 완료 성과
+
+### 학습 목표 달성도: 5/5 (100%) ✅
+
+### 산출물 현황
+- ✅ concepts/claude-skills-overview.md (350+ 줄)
+- ✅ references/useful-links.md
+- ✅ examples/hello-skill/SKILL.md
+- ✅ examples/hello-skill/README.md (219줄)
+- ✅ guides/cua-vl-skill-vs-repo.md (394줄)
+- ✅ vl_worklog/20260107_M1_Retrospective.md
+- ✅ vl_worklog/20260107_M1_Day2_Claude-Skills.md
+
+**총 산출물**: 7개 파일, 1000+ 줄
+
+### 핵심 결론
+⭐ **CUA_VL은 GitHub Repository로 유지 + 선택적 Skill 래퍼 (하이브리드)**
+
+---
+
 ## 🚀 다음 단계
 
-**Day 2 (2026-01-05)**:
-1. 실습 2: "Hello World" Skill 작성 및 실행
-2. 실습 3: CUA_VL Skill vs Repository 비교 분석
-3. M1 모듈 완료 및 Module Retrospective 작성
+**M2: Skill A - CUA_VL Skill 개발 (Day 3-4)**:
+- 최소 기능 Skill 래퍼 실험
+- Topic 폴더 생성 자동화
+- 템플릿 복사 자동화
+- Repository는 메인으로 유지
 
-**이후 계획**:
-- M2: Skill A - CUA_VL Skill 개발 (Day 3-4)
-- M3: Skill B - YouTube→MD Skill 개발 (Day 5-8, **우선 완료**)
+**M3: Skill B - YouTube→MD Skill 개발 (Day 5-8, 우선 완료)**:
+- Jan 16 마감 (Seattle AI Memory 360 Tour)
+- 한국어 자막 추출
+- 마크다운 변환
 
 ---
 
 **작성자**: CUA_VL Claude Skills 학습
-**최종 업데이트**: 2026-01-04 (Day 1)
+**최종 업데이트**: 2026-01-07
+**상태**: ✅ M1 완료 (100%)
