@@ -1,0 +1,17 @@
+# AI Memory 360 Tour - November 2025 YouTube Videos
+
+https://www.youtube.com/watch?v=7RTeHGbsd1o  # AI Memory, The Next Frontier - Charles Fan (MemVerge CEO)
+https://www.youtube.com/watch?v=7qX5iV2bqU4  # Amazon Bedrock AgentCore - Srinivas Jonnalagedda (AWS)
+https://www.youtube.com/watch?v=FbRcb8XryNg  # Building the visual memory layer for AI - Ben Zhou (Memories.ai)
+https://www.youtube.com/watch?v=Q5ivWi1msos  # The memory singularity - Gabriel Kreiman (Memory Machines)
+https://www.youtube.com/watch?v=xMNfRmXICJI  # AI Memory for Team Collaboration - Bei Zhang (Tanka)
+https://www.youtube.com/watch?v=TXTBJ79zXwU  # Memory is not an option - Cameron Pfiffer (Letta)
+https://www.youtube.com/watch?v=dXA5Ys32h7k  # Critical Path to Memory Consistency - Bojana Miloradovic Parman (Cognee)
+https://www.youtube.com/watch?v=ZY6JfigkOE8  # Caregiver Copilot Memory Architecture - Krish Patel & Viranshu Shaileshkumar
+https://www.youtube.com/watch?v=TCYYLa1OdDg  # AI Alliance - David Nielsen
+https://www.youtube.com/watch?v=QJhDd-M11Ls  # Building the AI memory ecosystem - Jing Xie (MemVerge VP)
+https://www.youtube.com/watch?v=nbaxzt237r0  # Memory Aware Agents at the Edge - Tina Tsou (InfiniEdge AI)
+https://www.youtube.com/watch?v=3dSO5_Lh3uE  # Enabling Context Engineering - Zaid Zaim (Neo4j)
+https://www.youtube.com/watch?v=P5XJcpEk_js  # From Milvus DB to Milvus Lake - James Luan (Zilliz)
+https://www.youtube.com/watch?v=jgKJGdhWzkE  # Additional presentation 1
+https://www.youtube.com/watch?v=sMKv4Uyh-gM  # Additional presentation 2
