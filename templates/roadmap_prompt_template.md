@@ -2,7 +2,7 @@
 
 **버전**: 2.0
 **생성일**: 2025-12-28
-**방법론**: Catch Up AI Vibe Learning (CUA_VL)
+**방법론**: VibeLearn AI (CUA_VL)
 
 ---
 
@@ -410,7 +410,7 @@ WorkLog 내에 작성:
 # {Topic} 학습 로드맵
 
 **생성일**: YYYY-MM-DD
-**방법론**: CUA_VL (Catch Up AI Vibe Learning)
+**방법론**: CUA_VL (VibeLearn AI)
 **버전**: 1.0
 
 ---
@@ -625,4 +625,4 @@ WorkLog 내에 작성:
 **생성자**: Claude with CUA_VL
 **Template 버전**: 2.0
 **생성일**: 2025-12-28
-**방법론**: Catch Up AI Vibe Learning (CUA_VL)
+**방법론**: VibeLearn AI (CUA_VL)

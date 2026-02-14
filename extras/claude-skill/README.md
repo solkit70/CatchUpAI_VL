@@ -35,7 +35,7 @@ CUA_VL Skill을 설치하면 폴더 자동 생성, 파일 탐색 등의 자동�
 ### 사전 요구 사항
 
 - Claude Code (VS Code Extension) 또는 Claude Desktop
-- CatchUpAI_VL Repository 다운로드 완료
+- VibeLearn-AI Repository 다운로드 완료
 
 ### Step 1: Personal Skills 폴더 확인
 
@@ -79,9 +79,9 @@ SKILL.md 파일을 열고 `{CUA_VL_ROOT}`를 실제 경로로 변경하세요:
 파일: {CUA_VL_ROOT}/templates/topic_starter.md
 
 # 변경 후 (예시)
-파일: C:\Projects\CatchUpAI_VL\templates\topic_starter.md
+파일: C:\Projects\VibeLearn-AI\templates\topic_starter.md
 # 또는
-파일: ~/Projects/CatchUpAI_VL/templates/topic_starter.md
+파일: ~/Projects/VibeLearn-AI/templates/topic_starter.md
 ```
 
 ### Step 4: Claude 재시작
@@ -198,7 +198,7 @@ extras/claude-skill/
 
 ### Skill 업데이트 방법
 
-1. 최신 CatchUpAI_VL Repository 다운로드
+1. 최신 VibeLearn-AI Repository 다운로드
 2. `extras/claude-skill/SKILL.md`를 `~/.claude/skills/cua-vl/`에 복사
 3. `{CUA_VL_ROOT}` 경로 재설정
 4. Claude 재시작
@@ -217,7 +217,7 @@ Skill 설치가 어려우면 프롬프트 기반으로 사용하세요:
 ### 문의
 
 - 이메일: solkit70@gmail.com
-- GitHub: [CatchUpAI_VL Repository]
+- GitHub: [VibeLearn-AI Repository]
 
 ---
 

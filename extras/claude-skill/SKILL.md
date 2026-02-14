@@ -11,7 +11,7 @@ allowed-tools:
 
 # CUA_VL Skill
 
-당신은 **CUA_VL (Catch Up AI Vibe Learning)** 학습 방법론을 지원하는 Assistant입니다.
+당신은 **CUA_VL (VibeLearn AI)** 학습 방법론을 지원하는 Assistant입니다.
 
 CUA_VL은 AI와 함께 효율적으로 학습하고, 배운 내용을 "교과서 품질"의 산출물로 만드는 학습 방법론입니다.
 
@@ -27,8 +27,8 @@ CUA_VL은 AI와 함께 효율적으로 학습하고, 배운 내용을 "교과서
 **중요**: 이 Skill을 사용하기 전에 CUA_VL Repository 경로를 설정하세요.
 
 ```
-CUA_VL_ROOT = [사용자의 CatchUpAI_VL 폴더 경로]
-예: C:\Projects\CatchUpAI_VL 또는 ~/Projects/CatchUpAI_VL
+CUA_VL_ROOT = [사용자의 VibeLearn-AI 폴더 경로]
+예: C:\Projects\VibeLearn-AI 또는 ~/Projects/VibeLearn-AI
 ```
 
 ## 📋 핵심 기능
@@ -345,4 +345,4 @@ CUA_VL_ROOT = [사용자의 CatchUpAI_VL 폴더 경로]
 **작성자**: CUA_VL Methodology
 **버전**: 1.1
 **최종 업데이트**: 2026-01-25
-**방법론**: CUA_VL (Catch Up AI Vibe Learning)
+**방법론**: CUA_VL (VibeLearn AI)

@@ -1,4 +1,4 @@
-# Catch Up AI Vibe Learning Methodology (CUA_VL)
+# VibeLearn AI (CUA_VL)
 
 **Version**: 2.0
 **Date**: 2025-12-28
@@ -10,7 +10,7 @@
 
 ## 📚 개요 (Overview)
 
-**Catch Up AI Vibe Learning Methodology (CUA_VL)**는 AI를 활용하여 새로운 기술, 프레임워크, 프로젝트를 체계적으로 학습하고, 그 과정에서 생성된 산출물을 다른 학습자들이 활용할 수 있는 고품질 교과서로 만드는 학습 방법론입니다.
+**VibeLearn AI (CUA_VL)**는 AI를 활용하여 새로운 기술, 프레임워크, 프로젝트를 체계적으로 학습하고, 그 과정에서 생성된 산출물을 다른 학습자들이 활용할 수 있는 고품질 교과서로 만드는 학습 방법론입니다.
 
 ### 핵심 철학
 
@@ -91,7 +91,7 @@ CUA_VL/
 
 ### 핵심 구성 요소 설명
 
-#### 1. **templates/** 폴더 ⭐ (방법론의 핵심!)
+#### 1. **templates/** 폴더
 - **목적**: 새 Topic 시작 시 사용하는 템플릿들
 - **핵심 파일**:
   - `topic_starter.md`: Topic 정보 입력 템플릿
@@ -101,11 +101,7 @@ CUA_VL/
 **특징**:
 - Topic-agnostic (모든 주제에 재사용 가능)
 - 복사하여 각 Topic에 맞게 커스터마이징
-- **방법론의 핵심 엔진 역할** (Source of Truth)
-
-> **⚠️ 중요**: 새 Topic을 시작할 때는 **반드시 이 templates/ 폴더의 원본 파일을 복사**하세요.
-> 다른 Topic 폴더(예: Topics/Claude-Skills/)에 있는 파일을 복사하면 안 됩니다.
-> 기존 Topic의 파일에는 해당 Topic에 특화된 정보가 포함되어 있어, 새 Topic에 적합하지 않습니다.
+- 방법론의 핵심 엔진 역할
 
 #### 2. **[TopicName]/vl_prompts/** 폴더
 - **목적**: 해당 Topic의 프롬프트 파일 저장
@@ -725,7 +721,7 @@ echo "*.pyc" >> .gitignore
 - YouTube: https://www.youtube.com/@catchupai/
 - Email: solkit70@gmail.com
 - GitHub (Vibe Coding): https://github.com/solkit70/MCP_Basic_Higher_Models_GC.git
-- GitHub (Methodology Template): https://github.com/solkit70/CatchUpAI_VL_Template.git
+- GitHub (Methodology Template): https://github.com/solkit70/VibeLearn-AI.git
 
 ---
 

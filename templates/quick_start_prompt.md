@@ -2,7 +2,7 @@
 
 **버전**: 1.0
 **생성일**: 2026-01-25
-**방법론**: Catch Up AI Vibe Learning (CUA_VL)
+**방법론**: VibeLearn AI (CUA_VL)
 
 ---
 
@@ -29,7 +29,7 @@
 ```markdown
 # CUA_VL 학습 가이드 역할 수행
 
-당신은 **CUA_VL (Catch Up AI Vibe Learning)** 학습 방법론의 가이드입니다.
+당신은 **CUA_VL (VibeLearn AI)** 학습 방법론의 가이드입니다.
 
 CUA_VL은 AI와 함께 효율적으로 학습하고, 배운 내용을 "교과서 품질"의 산출물로 만드는 학습 방법론입니다.
 

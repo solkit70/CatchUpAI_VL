@@ -7,7 +7,7 @@
 
 ## 🎯 CUA_VL이란?
 
-**Catch Up AI Vibe Learning (CUA_VL)**는 AI와 함께 새로운 기술을 체계적으로 학습하고, 그 과정에서 생성된 산출물을 다른 학습자들이 활용할 수 있는 고품질 교과서로 만드는 학습 방법론입니다.
+**VibeLearn AI (CUA_VL)**는 AI와 함께 새로운 기술을 체계적으로 학습하고, 그 과정에서 생성된 산출물을 다른 학습자들이 활용할 수 있는 고품질 교과서로 만드는 학습 방법론입니다.
 
 **핵심 철학**:
 > "AI와 함께 배우고, 배운 것을 구조화하여, 다음 학습자를 위한 길을 만든다"
@@ -23,7 +23,7 @@
 CUA_VL_v2.0/
 ├── README.md                        # CUA_VL 방법론 소개 (먼저 읽기 권장!)
 ├── GETTING_STARTED.md              # 이 파일 - 빠른 시작 가이드
-└── templates/                       # ⭐ 방법론의 핵심 엔진!
+└── templates/
     ├── topic_starter.md            # Topic 시작 템플릿
     ├── roadmap_prompt_template.md  # Roadmap 생성 템플릿
     └── daily_learning_prompt.md    # 매일 학습 프롬프트
@@ -32,37 +32,6 @@ CUA_VL_v2.0/
 **💡 추천 순서**:
 1. **README.md 먼저 읽기** - CUA_VL 방법론의 철학과 전체 구조 이해
 2. **이 가이드(GETTING_STARTED.md)로 실습** - 단계별로 따라하며 학습 시작
-
----
-
-### ⚠️ 중요: templates/ 폴더의 역할
-
-**CUA_VL 방법론의 핵심은 `templates/` 폴더입니다!**
-
-```
-📁 templates/              ← 이것이 "원본" (Source of Truth)
-   ├── topic_starter.md
-   ├── roadmap_prompt_template.md
-   └── daily_learning_prompt.md
-
-📁 Topics/Claude-Skills/   ← 이것은 "적용 사례" (Instance)
-   └── vl_prompts/
-       ├── roadmap_prompt.md      # templates/에서 복사 후 Topic 정보 주입
-       └── daily_learning_prompt.md
-```
-
-**🔴 절대 하지 말 것**:
-- 다른 Topic 폴더(예: Claude-Skills)에서 프롬프트 파일을 복사하여 사용
-- 기존 Topic의 구조를 "참고"하여 새 Topic을 시작
-
-**🟢 반드시 할 것**:
-- 새 Topic 시작 시 **항상 `templates/` 폴더의 원본 템플릿**을 복사하여 사용
-- Topic별 정보는 복사한 파일에 주입
-
-**이유**:
-- `templates/`는 방법론이 진화하면서 계속 개선됨
-- 다른 Topic의 파일은 해당 Topic에 특화된 정보가 포함되어 있음
-- 일관성 있는 방법론 적용을 위해 항상 원본 사용
 
 ---
 

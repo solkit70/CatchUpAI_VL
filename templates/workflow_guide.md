@@ -2,7 +2,7 @@
 
 **버전**: 1.0
 **생성일**: 2026-01-25
-**방법론**: Catch Up AI Vibe Learning (CUA_VL)
+**방법론**: VibeLearn AI (CUA_VL)
 
 ---
 
@@ -44,7 +44,7 @@
 #### 1.1 AI에게 보낼 프롬프트
 
 ```
-CUA_VL(Catch Up AI Vibe Learning) 방법론으로 새로운 학습 Topic을 시작하려고 합니다.
+CUA_VL(VibeLearn AI) 방법론으로 새로운 학습 Topic을 시작하려고 합니다.
 
 아래 정보를 바탕으로:
 1. Topic 폴더 구조를 만들어주세요
@@ -196,7 +196,7 @@ Topics/{TopicName}/vl_worklog/YYYYMMDD_M{X}_{TopicName}.md
 ### 전체 구조
 
 ```
-CatchUpAI_VL/
+VibeLearn-AI/
 ├── README.md                        # 방법론 설명
 ├── GETTING_STARTED.md               # 빠른 시작 가이드
 ├── templates/                       # 프롬프트 템플릿
@@ -334,7 +334,7 @@ CatchUpAI_VL/
 ### 문의
 
 - 이메일: solkit70@gmail.com
-- GitHub: [CatchUpAI_VL Repository]
+- GitHub: [VibeLearn-AI Repository]
 
 ---
 

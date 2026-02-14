@@ -2,7 +2,7 @@
 
 **버전**: 2.0
 **생성일**: 2025-12-28
-**방법론**: Catch Up AI Vibe Learning (CUA_VL)
+**방법론**: VibeLearn AI (CUA_VL)
 
 ---
 
@@ -449,7 +449,7 @@
 ---
 
 **작성자**: {이름}
-**방법론**: CUA_VL (Catch Up AI Vibe Learning)
+**방법론**: CUA_VL (VibeLearn AI)
 ```
 
 ---
@@ -687,4 +687,4 @@ graph TD
 
 **Template 버전**: 2.0
 **생성일**: 2025-12-28
-**방법론**: CUA_VL (Catch Up AI Vibe Learning)
+**방법론**: CUA_VL (VibeLearn AI)
