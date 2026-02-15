@@ -1,0 +1,99 @@
+```json
+{
+  "project": {
+    "name": "Catch Up AI 2026 Homepage",
+    "description": "Catch Up AI YouTube 채널의 핵심 콘텐츠와 활동을 소개하는 정적 웹사이트",
+    "language": "ko",
+    "targetAudience": [
+      "AI 관심 개발자 및 비개발자",
+      "시애틀 AI 커뮤니티 멤버",
+      "Vibe Coding/Learning 학습자"
+    ],
+    "goals": [
+      "5가지 핵심 프로젝트 명확히 소개",
+      "YouTube 콘텐츠 접근성 향상",
+      "커뮤니티 참여 유도",
+      "브랜드 인지도 및 전문성 강화"
+    ],
+    "techStack": {
+      "frontend": ["HTML5", "CSS3", "JavaScript"],
+      "hosting": "Amazon S3",
+      "analytics": "Google Analytics 4 (GA4)",
+      "forms": "Google Forms",
+      "comments": "Utterances (GitHub)",
+      "versionControl": "Git"
+    }
+  },
+  "coding_conventions": {
+    "html": {
+      "indentation": 2,
+      "semantic_tags": true,
+      "comment_for_content_areas": "<!-- CONTENT START --> / <!-- CONTENT END -->",
+      "multilingual_structure": "Separate HTML files per language (e.g., /ko/index.html)"
+    },
+    "css": {
+      "indentation": 2,
+      "use_css_variables": true,
+      "variable_file": "css/variables.css",
+      "naming_convention": "BEM-like (block__element--modifier)",
+      "media_queries_approach": "Mobile-first (min-width)"
+    },
+    "javascript": {
+      "indentation": 2,
+      "es6_plus": true,
+      "variable_declaration": ["const", "let"],
+      "no_var": true,
+      "arrow_functions": true,
+      "ga4_event_tracking_function": "gtag()"
+    }
+  },
+  "development_environment": {
+    "local_server_command": "python -m http.server 8000",
+    "version_control_system": "Git"
+  },
+  "tools": {
+    "allowed_ai_coding_tools": ["Claude Code", "Cursor"],
+    "allowed_external_services": [
+      "YouTube Embed",
+      "Google Forms",
+      "Google Sheets",
+      "Google Analytics 4",
+      "Utterances (GitHub)",
+      "Amazon S3"
+    ],
+    "permissions": {
+      "access_to_filesystem": true,
+      "internet_access": true,
+      "github_api_access": true,
+      "google_api_access": false,
+      "aws_api_access": false
+    }
+  },
+  "project_preferences": {
+    "output_language": "Korean",
+    "response_format": "Markdown",
+    "code_generation_style": "Clean, readable, adhering to conventions",
+    "priority_on_performance": true,
+    "priority_on_accessibility": true,
+    "priority_on_maintainability": true,
+    "content_management_method": "PO direct HTML editing with AI assistance"
+  },
+  "file_structure": [
+    ".claude/",
+    "css/",
+    "js/",
+    "img/",
+    "ko/",
+    "index.html",
+    "vibe-coding.html",
+    "vibe-learning.html",
+    "vibe-guiding.html",
+    "ai4pkm.html",
+    "seattle-ai-ecosystem.html",
+    "404.html",
+    "README.md",
+    "CLAUDE.md",
+    "REFERENCE_DOCUMENT.md"
+  ]
+}
+```

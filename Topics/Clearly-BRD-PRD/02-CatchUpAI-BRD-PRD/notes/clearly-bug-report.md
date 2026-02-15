@@ -105,6 +105,14 @@
 - Bug #3의 수정이 완전하지 않은 것으로 보임
 - 프로젝트 데이터가 데이터베이스에는 저장되지만 대시보드 UI에서 조회되지 않는 패턴이 반복됨
 
+**Session 3 (2026-02-15) 재현 확인**:
+- Bug #4 여전히 재현됨
+- 이번 세션에서는 BRD → PRD → **Choose Output Tool(Claude Code)까지 전체 완료** 후 대시보드 확인
+- 대시보드: Total Projects: 0, Documents: 0, Completion Rate: 0% — 이전과 동일한 현상
+- Output Tool 생성까지 정상 진행되었으나, 대시보드에서는 프로젝트가 표시되지 않음
+- 3회 연속 동일 패턴 재현 (Session 1: Bug #3, Session 2: Bug #4, Session 3: Bug #4 재현)
+- **워크어라운드**: 대시보드로 돌아가지 않고 프로젝트 페이지 내에서 모든 단계를 완료한 후, 산출물은 Markdown Export로 로컬에 저장하여 데이터 유실을 방지
+
 ---
 
 ## 환경 정보
@@ -120,6 +128,14 @@
 - **Clearly 앱 모드**: Unified
 - **계정**: Changsoo Park
 - **발생 시각**: 약 오후 6:00-6:30 PM (PST)
+
+### Session 3 (2026-02-15)
+- **OS**: Windows 11
+- **Clearly 앱 모드**: Unified
+- **계정**: Changsoo Park
+- **발생 시각**: 약 오전 4:40-5:30 AM (PST)
+- **진행 범위**: BRD → PRD → Choose Output Tool (Claude Code) — 전체 완료
+- **Bug #4 재현**: 대시보드 복귀 시 프로젝트 0건 표시
 
 ---
 
