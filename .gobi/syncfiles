@@ -1,7 +1,0 @@
-# Gobi WebDAV Sync Whitelist
-# Each line is a path or pattern to sync (gitignore-like format)
-# Files and folders can be listed
-# Lines starting with # are comments
-# Supports glob patterns: *, **, ?
-
-
