@@ -7,7 +7,7 @@ slidenumbers: true
 
 **Catch Up AI | 2026**
 
-^ 여러분, 안녕하세요! Catch Up AI 채널의 창수입니다. 오늘은 제가 요즘 정말 유용하게 쓰고 있는 도구를 소개해드리려고 합니다. 바로 Clearly라는 앱인데요. AI와 대화하듯이 질문에 답하기만 하면, 전문적인 요구사항 문서, 즉 BRD와 PRD를 자동으로 만들어 주는 도구입니다. 오늘 영상에서는 이 Clearly가 뭔지, 어떻게 쓰는지, 그리고 제가 실제로 이걸 써서 홈페이지 기획 문서를 만든 결과물까지 함께 보여드리겠습니다. 끝까지 봐주시면 여러분도 오늘 바로 쓸 수 있을 겁니다.
+^ 여러분, 안녕하세요! Catch Up AI 입니다. 오늘은 제가 요즘 정말 유용하게 쓰고 있는 도구를 소개해드리려고 합니다. 바로 Clearly라는 앱인데요. AI와 대화하듯이 질문에 답하기만 하면, 전문적인 요구사항 문서, 즉 BRD와 PRD를 자동으로 만들어 주는 도구입니다. 오늘 영상에서는 이 Clearly가 뭔지, 어떻게 쓰는지, 그리고 제가 실제로 이걸 써서 홈페이지 기획 문서를 만든 결과물까지 함께 보여드리겠습니다. 끝까지 봐주시면 여러분도 오늘 바로 쓸 수 있을 겁니다.
 
 ---
 
@@ -40,6 +40,8 @@ slidenumbers: true
 > **"AI와 대화하듯 질문에 답하면, 전문적인 BRD/PRD를 5분 만에 생성해주는 AI 기반 요구사항 문서 플랫폼"**
 
 🌐 **clearlyreqs.com**
+
+![right fit](_files_/clearly-main_before_login.png)
 
 ^ 바로 시작해볼까요? Clearly를 한 줄로 정리하면 이렇습니다. AI와 대화하듯이 몇 가지 질문에 답하면, 전문적인 BRD와 PRD를 자동으로 만들어주는 플랫폼입니다. 웹사이트 주소는 clearlyreqs.com이고요, 무료로 시작할 수 있습니다. 지금 제 화면에서 실제 앱을 보여드릴 건데요, 일단 개념 설명을 먼저 드리고 나서 바로 데모로 넘어갈게요.
 
@@ -131,6 +133,8 @@ AI에게 "홈페이지 만들어줘" → ??
 - 각 질문마다 3가지 예시 답변 제공
 - 한국어 출력 지원
 
+![right fit](_files_/clearly-main.png)
+
 ^ 자, 이제 Clearly 앱 자체에 대해 알아봅시다. Clearly의 핵심은 세 단계 워크플로우입니다. 첫째, BRD Wizard에서 AI가 5개 이상의 질문을 하고, 사용자가 답변하면 BRD를 자동으로 생성합니다. 둘째, PRD Wizard에서 BRD를 바탕으로 더 기술적인 질문들을 통해 PRD를 만듭니다. 셋째, Output Tool 단계에서 Claude Code, Cursor, v0 같은 AI 개발 도구에 최적화된 파일을 자동으로 생성해줍니다. 특히 좋은 점은 각 질문마다 3가지 예시 답변을 보여준다는 거예요. 처음 써보는 분들도 어떻게 답해야 할지 감을 잡기가 쉽습니다.
 
 ---
@@ -204,6 +208,8 @@ AI 코딩 도구 (Claude Code, Cursor 등)
 
 > 💡 **팁**: Initial Idea에 상세히 쓸수록 더 좋은 질문이 나옵니다!
 
+![right fit](_files_/project-create.png)
+
 ^ 실제로 사용해볼게요. clearlyreqs.com에 접속해서 구글 계정으로 로그인하면 대시보드가 나옵니다. 여기서 New Project를 클릭하면 프로젝트 생성 화면이 나오는데요. Project Title에 프로젝트 이름을 넣고, Initial Idea에 내 아이디어를 씁니다. 여기서 중요한 팁 하나! Initial Idea에 상세하게 쓸수록 AI가 더 좋은 질문을 만들어줍니다. 관련 웹사이트 URL, 타겟 사용자, 성공 지표 같은 내용을 포함하면 더 좋습니다. 출력 언어는 Korean으로 설정하면 한국어로 문서가 나옵니다.
 
 ---
@@ -223,6 +229,8 @@ AI 코딩 도구 (Claude Code, Cursor 등)
 4. 콘텐츠 관리 — "어떻게 운영할 것인가?"
 5. 리스크 — "예상되는 제약사항은?"
 
+![right fit](_files_/brd-wizard.png)
+
 ^ 이제 BRD Wizard입니다. 화면에 보이는 것처럼 AI가 질문을 하나씩 제시합니다. 각 질문 아래에 3가지 예시 답변이 있는데요, 이걸 참고해서 내 프로젝트에 맞게 답변하면 됩니다. 진행률 표시가 있어서 몇 개 답변했는지를 확인할 수 있고요, 최소 5개 질문에 답하면 Generate BRD 버튼이 활성화됩니다. 주요 질문 영역은 비즈니스 목표, 기술 스택, 타겟 사용자, 콘텐츠 관리, 리스크 이렇게 다섯 가지입니다.
 
 ---
@@ -240,7 +248,28 @@ AI 코딩 도구 (Claude Code, Cursor 등)
 - 답변할 내용을 텍스트 파일에 미리 정리해두기
 - URL, 타겟 사용자, KPI 등을 사전에 파악해두기
 
-^ BRD Wizard에서 답변할 때 몇 가지 팁이 있습니다. 첫째, 구체적으로 쓰세요. 빠르게가 아니라 3초 이내 로딩처럼요. 둘째, 측정 가능하게 쓰세요. 쉽게가 아니라 3단계 이내 완료처럼요. 셋째, 우선순위를 부여하세요. Must have, Should have, Nice to have로 나눠서 쓰면 AI가 더 정확한 문서를 만들어줍니다. 그리고 실용적인 팁 하나 더! 답변할 내용을 미리 텍스트 파일에 정리해두면 훨씬 빠르게 진행할 수 있습니다. 저도 세 번째 세션부터 이렇게 했더니 시간이 반으로 줄었거든요.
+^ BRD Wizard에서 답변할 때 몇 가지 팁이 있습니다. 첫째, 구체적으로 쓰세요. 빠르게가 아니라 3초 이내 로딩처럼요. 둘째, 측정 가능하게 쓰세요. 쉽게가 아니라 3단계 이내 완료처럼요. 셋째, 우선순위를 부여하세요. Must have, Should have, Nice to have로 나눠서 쓰면 AI가 더 정확한 문서를 만들어줍니다. 그리고 실용적인 팁 하나 더! 답변할 내용을 미리 텍스트 파일에 정리해두면 훨씬 빠르게 진행할 수 있습니다.
+
+---
+
+## 🤖 프로 팁: AI로 BRD/PRD 답변 미리 준비하기
+
+**Clearly Wizard 질문의 특성:**
+- AI 생성 질문 → **매번 조금씩 달라진다**
+- 예상치 못한 질문이 나올 수 있다
+
+**핵심 전략: 사전에 AI와 프로젝트를 충분히 논의하자!**
+
+```
+① Clearly에서 질문이 나오면
+② AI에게 질문을 복사 & 붙여넣기
+③ "이 질문에 대한 답변 작성해줘"
+→ 내 프로젝트에 최적화된 상세한 답변!
+```
+
+**포인트:** AI와 사전 대화가 많을수록 더 정확한 답변이 나온다
+
+^ 여기서 특별한 팁 하나를 드릴게요. 저는 실제로 Clearly의 BRD/PRD Wizard 질문에 대한 답변을 AI 도구를 활용해서 만들었습니다. Clearly의 Wizard 질문은 AI가 생성하기 때문에 매번 조금씩 달라지는데요. 그래서 예상치 못한 질문이 나올 때 막막할 수 있습니다. 핵심 전략은 이겁니다. Clearly를 사용하기 전에 AI 도구, 예를 들어 Claude Code나 ChatGPT 같은 도구와 내 프로젝트에 대해 충분히 이야기해두는 거예요. 목표가 무엇인지, 타겟 사용자가 누구인지, 기술 스택은 무엇인지를 AI와 미리 논의해두면, AI가 내 프로젝트를 깊이 이해하게 됩니다. 그러면 Clearly에서 어떤 질문이 나오더라도 그 질문을 AI에 붙여넣고 "이 질문에 대한 답변 작성해줘"라고 하기만 하면, 내 프로젝트에 딱 맞는 훌륭한 답변을 만들어줘요. 사전에 논의를 많이 할수록 더 정확하고 상세한 답변이 나오는 거죠.
 
 ---
 
@@ -260,6 +289,8 @@ AI 코딩 도구 (Claude Code, Cursor 등)
 
 > ⚠️ **중요**: 생성 즉시 로컬에 저장하세요!
 
+![right fit](_files_/brd-result.png)
+
 ^ Wizard 완료 후 Generate BRD를 클릭하면 몇 초 만에 완성된 BRD가 나옵니다. 구조를 보면 굉장히 전문적이죠? Introduction부터 시작해서 이해관계자 분석, RACI 매트릭스, KPI, 기능 요구사항, 비기능 요구사항, 리스크 분석까지 — 이걸 사람이 직접 쓰려면 몇 시간이 걸릴 내용을 AI가 5개 질문으로 만들어준 거예요. 생성 후에는 꼭 로컬에 저장하세요! Markdown으로 내보내면 편집하기 좋고, PDF로 내보내면 공유하기 좋습니다. 이 단계에서 Approve Document를 클릭해야 PRD Wizard가 활성화됩니다.
 
 ---
@@ -278,6 +309,8 @@ AI 코딩 도구 (Claude Code, Cursor 등)
 **결과**: 12개 섹션의 상세 PRD
 - Timeline, 성능 지표, 배포 전략 포함
 
+![right fit](_files_/prd-result.png)
+
 ^ BRD를 Approve하면 PRD Wizard가 시작됩니다. PRD Wizard는 BRD보다 훨씬 기술적인 질문들을 합니다. 기술 스택 세부사항, API 연동, 다국어 구현, 디자인 시스템, 애널리틱스와 보안까지 물어봐요. 그리고 완성된 PRD는 12개 섹션으로 구성되는데, Timeline과 Milestones, 성능 지표, 배포 전략까지 포함됩니다. 정말 놀라운 건 이 12개 섹션짜리 문서가 5개에서 6개 질문에 대한 답변만으로 자동 생성된다는 거예요.
 
 ---
@@ -286,17 +319,19 @@ AI 코딩 도구 (Claude Code, Cursor 등)
 
 **PRD Approve 후 활성화:**
 
-사용 가능한 도구들:
-- **v0** — Vercel의 AI 컴포넌트 생성
-- **Lovable** — AI 풀스택 앱 생성
-- **Bolt** — AI 빠른 프로토타이핑
+**Vibe Coding Tools:**
+- **v0**, **Lovable**, **Bolt.new**, **Replit**, **Firebase Studio**
+
+**AI Coding Tools:**
 - **Claude Code** ← 제가 선택한 도구
-- **Cursor** — AI 코드 에디터
+- **Cursor**, **OpenAI Codex**, **Google Antigravity**
 
 **Claude Code 선택 시 생성되는 파일:**
 - `CLAUDE.md` — 프로젝트 지시사항 파일
 - `.claude/settings.json` — 기술 스택/메타데이터
 - `REFERENCE_DOCUMENT.md` — BRD/PRD 종합 참조
+
+![right fit](_files_/output-tool.png)
 
 ^ 마지막 단계가 Output Tool입니다. 여기서 어떤 AI 개발 도구를 쓸지 선택합니다. v0, Lovable, Bolt, Claude Code, Cursor 등 주요 AI 도구들이 다 있어요. 저는 Claude Code를 선택했는데요, 선택하고 Generate Output을 클릭하면 Claude Code에 최적화된 파일들이 자동으로 생성됩니다. CLAUDE.md는 프로젝트 구조와 코딩 컨벤션을 담고, settings.json에는 기술 스택 정보가 들어갑니다. 이 파일들을 실제 프로젝트 폴더에 넣으면 Claude Code가 내 프로젝트를 바로 이해하고 코딩을 시작할 수 있어요. 이게 진짜 바이브코딩의 시작입니다!
 
@@ -407,6 +442,8 @@ AI 코딩 도구 (Claude Code, Cursor 등)
 - 🗺️ **Vibe Guiding** 페이지
 - 🤖 **AI4PKM** 페이지
 - 📰 **Seattle AI News** 페이지
+
+![right fit](_files_/homepage.png)
 
 ^ 그리고 이렇게 만들어진 기획 문서를 바탕으로 Claude Code가 개발한 홈페이지가 완성됐습니다! 제 채널 Catch Up AI의 공식 홈페이지로, 메인 페이지에서 5개 프로젝트를 소개하고, 각 프로젝트마다 상세 페이지가 있습니다. Vibe Coding, Vibe Learning, Vibe Guiding, AI4PKM, 그리고 시애틀 AI 뉴스 페이지까지요. 이 모든 게 Clearly로 만든 BRD와 PRD를 시작점으로 해서 만들어진 겁니다.
 
