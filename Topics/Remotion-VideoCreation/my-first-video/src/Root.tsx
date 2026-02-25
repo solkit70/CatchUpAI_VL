@@ -13,6 +13,10 @@ import { ExplanationScene, explanationSchema } from "./ExplanationScene";
 import { WorkflowScene, workflowSchema } from "./WorkflowScene";
 import { OutroScene, outroSchema } from "./OutroScene";
 import { VibeLearnIntro, vibeLearnIntroSchema } from "./VibeLearnIntro";
+import { ClearlyIntroKr } from "./clearly-kr/ClearlyIntroKr";
+import { TOTAL_FRAMES as KR_TOTAL_FRAMES } from "./clearly-kr/slideData";
+import { ClearlyIntroEn } from "./clearly-en/ClearlyIntroEn";
+import { TOTAL_FRAMES as EN_TOTAL_FRAMES } from "./clearly-en/slideData";
 
 // Each <Composition> is an entry in the sidebar!
 
@@ -256,6 +260,24 @@ export const RemotionRoot: React.FC = () => {
           accentColor: "#FFD700",
           bgColor: "#1a1a2e",
         }}
+      />
+      {/* M3 산출물: Clearly App 소개 영상 (한국어) — Remotion 버전 */}
+      <Composition
+        id="ClearlyIntroKr"
+        component={ClearlyIntroKr}
+        durationInFrames={KR_TOTAL_FRAMES}
+        fps={30}
+        width={1920}
+        height={1080}
+      />
+      {/* M3 산출물: Clearly App Introduction (English) — Remotion version */}
+      <Composition
+        id="ClearlyIntroEn"
+        component={ClearlyIntroEn}
+        durationInFrames={EN_TOTAL_FRAMES}
+        fps={30}
+        width={1920}
+        height={1080}
       />
     </>
   );
