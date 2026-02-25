@@ -343,7 +343,19 @@ PYTHONUTF8=1 python slides_to_video.py \
 | 최종 MP4 재생성 (27장, 16:28, 37.5 MB) | ✅ (2/24) |
 | GitHub 커밋 & 푸시 | ✅ (2/24) |
 
-**완료율**: **18/18 (100%) — M3 완전 완료! 🎉**
+**완료율**: **18/18 (100%) — M3 한국어 버전 완료! 🎉**
+
+### 4일차 (영어 버전, 2/24)
+
+| 항목 | 상태 |
+|------|------|
+| `create_slides_gemini.py` `--language` 파라미터 추가 | ✅ (2/24) |
+| `make_video.py` `gemini_language` 설정 추가 | ✅ (2/24) |
+| 영어 슬라이드 이미지 생성 (27장, 영어 전용) | ✅ (2/24) |
+| `clearly-intro-en.mp4` 생성 (13:48, 27 MB) | ✅ (2/24) |
+| GitHub 커밋 & 푸시 | ✅ (2/24) |
+
+**완료율**: **23/23 (100%) — M3 한국어 + 영어 버전 완전 완료! 🎉**
 
 ---
 
@@ -385,16 +397,39 @@ PYTHONUTF8=1 python slides_to_video.py \
 - **markdown-video 스킬 3단계 파이프라인**: 오디오(TTS) → 이미지(Gemini) → 비디오(FFmpeg). 각 단계가 독립적이어서 중간 단계에서 전환 가능
 - **슬라이드-오디오 동기화 원리**: 두 생성 스크립트 모두 "노트 있는 슬라이드만" 처리하는 같은 규칙 덕분에 별도 매핑 파일 없이도 완벽 동기화
 
+### 4일차 진행 내용 (2026-02-24, 영어 버전)
+
+#### 영어 영상 제작 완료 ✅
+
+**문제 발견**: 초기 생성된 슬라이드 4장에 한국어+영어 혼재
+- 원인: `create_slides_gemini.py` 프롬프트에 `"Include Korean text labels where appropriate."` 하드코딩
+
+**스크립트 수정**:
+1. `create_slides_gemini.py` — `--language en/ko` 파라미터 추가
+   - `en`: `"Use English text labels only. All text in the image must be in English."`
+   - `ko` (기본): `"Include Korean text labels where appropriate."`
+2. `make_video.py` — `gemini_language` 키 추가, `--language` 자동 전달
+
+**실행 결과**:
+```bash
+# 슬라이드 이미지 생성 (영어 전용)
+make_video.py --lang en --slides-only  →  slides-gemini-en/ 27개 생성 (~$1.05)
+
+# MP4 합성
+make_video.py --lang en --video-only  →  clearly-intro-en.mp4 생성
+```
+
+**최종 결과**:
+- 파일: `clearly-intro-en.mp4`
+- 재생 시간: **13분 48초**
+- 파일 크기: **27 MB**
+- 슬라이드: 27장, 영어 전용
+
+**인사이트**: `--lang en` 실행 시 자동으로 영어 전용 슬라이드 생성 (이후 재사용 가능)
+
 ### 다음 세션 계획
 
-**M3 완료** — 다음 세션은 영어 버전 영상 제작 + markdown-video 스킬 다국어 지원 강화
-
-#### 영어 영상 제작 계획
-1. `make_video.py` 다국어 래퍼 스크립트 작성 (스킬 폴더에 저장)
-2. SKILL.md에 다국어 섹션 추가
-3. 영어 스크립트 번역 (`clearly-intro-script-en.md`, `clearly-intro-script-en - slides.md`)
-4. `python make_video.py --lang en` 실행
-5. WorkLog 업데이트 + GitHub 푸시
+**M3 완전 완료 (한국어 + 영어 버전)** — 추가 작업 없음
 
 > 한국어 파일 rename (`-kr` 접미사)은 이미 완료 ✅ (2/24 당일 처리)
 

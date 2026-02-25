@@ -1,0 +1,137 @@
+{
+  "slide_0": {
+    "hash": "7504309b523f840a0972658eaa0e993e",
+    "voice": "alloy",
+    "model": "gpt-4o-mini-tts"
+  },
+  "slide_1": {
+    "hash": "33e7156815f9f14060f8e77574744416",
+    "voice": "alloy",
+    "model": "gpt-4o-mini-tts"
+  },
+  "slide_2": {
+    "hash": "ad91274e4ee4bd173a2e1d22fd5961f6",
+    "voice": "alloy",
+    "model": "gpt-4o-mini-tts"
+  },
+  "slide_3": {
+    "hash": "6867d12afa5169ffba75e45b431111a9",
+    "voice": "alloy",
+    "model": "gpt-4o-mini-tts"
+  },
+  "slide_4": {
+    "hash": "d6635a6c0cb17eba6a628064bcc8050c",
+    "voice": "alloy",
+    "model": "gpt-4o-mini-tts"
+  },
+  "slide_5": {
+    "hash": "7393f638f4aa544df02bb117099fe132",
+    "voice": "alloy",
+    "model": "gpt-4o-mini-tts"
+  },
+  "slide_6": {
+    "hash": "f8263a93773cc01db2fc2e6a770e67b2",
+    "voice": "alloy",
+    "model": "gpt-4o-mini-tts"
+  },
+  "slide_7": {
+    "hash": "898627c9c3755763c84bffe16ce6a440",
+    "voice": "alloy",
+    "model": "gpt-4o-mini-tts"
+  },
+  "slide_8": {
+    "hash": "7e1ffb5392a2071235757a5ca1b30028",
+    "voice": "alloy",
+    "model": "gpt-4o-mini-tts"
+  },
+  "slide_9": {
+    "hash": "582eef178a4aa99240e73ea5521f5b5d",
+    "voice": "alloy",
+    "model": "gpt-4o-mini-tts"
+  },
+  "slide_10": {
+    "hash": "bafebce922df247388be8574a9073e2a",
+    "voice": "alloy",
+    "model": "gpt-4o-mini-tts"
+  },
+  "slide_11": {
+    "hash": "94e80bf2d1ba5afe204de1212a2ff054",
+    "voice": "alloy",
+    "model": "gpt-4o-mini-tts"
+  },
+  "slide_12": {
+    "hash": "7bc24cfe34401be5b7ee6a0998104523",
+    "voice": "alloy",
+    "model": "gpt-4o-mini-tts"
+  },
+  "slide_13": {
+    "hash": "3d718e00f55c48abafd63805575aa1a9",
+    "voice": "alloy",
+    "model": "gpt-4o-mini-tts"
+  },
+  "slide_14": {
+    "hash": "51c6bcab1406712e34402f246fc3bd2c",
+    "voice": "alloy",
+    "model": "gpt-4o-mini-tts"
+  },
+  "slide_15": {
+    "hash": "b774a6fa1eeec31ab9a72a00546303aa",
+    "voice": "alloy",
+    "model": "gpt-4o-mini-tts"
+  },
+  "slide_16": {
+    "hash": "d8edc98f87e5ef9778272a40c50a1144",
+    "voice": "alloy",
+    "model": "gpt-4o-mini-tts"
+  },
+  "slide_17": {
+    "hash": "614db8f7460154546182bf5fc12c2ab7",
+    "voice": "alloy",
+    "model": "gpt-4o-mini-tts"
+  },
+  "slide_18": {
+    "hash": "75723faa7bfdafac37c89e8ebdfb5e3c",
+    "voice": "alloy",
+    "model": "gpt-4o-mini-tts"
+  },
+  "slide_19": {
+    "hash": "60fb15bcc7c9bbc48a6da62efd0e6c87",
+    "voice": "alloy",
+    "model": "gpt-4o-mini-tts"
+  },
+  "slide_20": {
+    "hash": "208b8a9196e2397dcb7ea82458900c7d",
+    "voice": "alloy",
+    "model": "gpt-4o-mini-tts"
+  },
+  "slide_21": {
+    "hash": "7f8d4fa0f9e291e78ea11c6101335138",
+    "voice": "alloy",
+    "model": "gpt-4o-mini-tts"
+  },
+  "slide_22": {
+    "hash": "8881a23d2e7bc299d422a811edabfac1",
+    "voice": "alloy",
+    "model": "gpt-4o-mini-tts"
+  },
+  "slide_23": {
+    "hash": "1755db5cc6c4e50b7746bbb2e078047f",
+    "voice": "alloy",
+    "model": "gpt-4o-mini-tts"
+  },
+  "slide_24": {
+    "hash": "086fae29b64e052c1762f6744fdd0fc4",
+    "voice": "alloy",
+    "model": "gpt-4o-mini-tts"
+  },
+  "slide_25": {
+    "hash": "42d8f0880d495e0b3f9c7cacc22c787b",
+    "voice": "alloy",
+    "model": "gpt-4o-mini-tts"
+  },
+  "slide_26": {
+    "hash": "130275de0aefc968c1ead63e35b9c3c3",
+    "voice": "alloy",
+    "model": "gpt-4o-mini-tts"
+  }
+}
