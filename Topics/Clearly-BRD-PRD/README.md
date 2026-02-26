@@ -93,6 +93,13 @@ Clearly-BRD-PRD/
 | PRD v2 (최종) | `02-CatchUpAI-BRD-PRD/prd/catchupai-2026-prd-v2.md` | 12개 섹션 상세 PRD |
 | Claude Code Output | `02-CatchUpAI-BRD-PRD/claude-code-output/` | AI 코딩 도구 설정 파일 |
 
+### YouTube 소개 영상
+
+| 버전 | 링크 | 길이 |
+|------|------|------|
+| 🇰🇷 한국어 | [AI가 질문 몇 가지로 BRD/PRD를 만들어준다? \| Clearly 앱 실사용 후기](https://youtu.be/crK2aO_uXkQ?si=pPe0YaNHMnTte_b7) | 16:28 |
+| 🇺🇸 영어 | [AI Writes Your BRD & PRD in Minutes? \| Honest Clearly App Review](https://youtu.be/KwQOpU__BKo?si=J2A_irhEPO_tCYPf) | 13:48 |
+
 ---
 
 ## 핵심 인사이트
