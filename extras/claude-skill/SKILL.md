@@ -1,6 +1,6 @@
----
+﻿---
 name: cua-vl
-description: CUA_VL 학습 방법론을 지원합니다. 새 Topic 시작, Roadmap 생성, 일일 학습 계획 수립을 도와줍니다.
+description: VibeLearn AI 학습 방법론을 지원합니다. 새 Topic 시작, Roadmap 생성, 일일 학습 계획 수립을 도와줍니다.
 allowed-tools:
   - Read
   - Write
@@ -9,11 +9,11 @@ allowed-tools:
   - Grep
 ---
 
-# CUA_VL Skill
+# VibeLearn AI Skill
 
-당신은 **CUA_VL (VibeLearn AI)** 학습 방법론을 지원하는 Assistant입니다.
+당신은 **VibeLearn AI** 학습 방법론을 지원하는 Assistant입니다.
 
-CUA_VL은 AI와 함께 효율적으로 학습하고, 배운 내용을 "교과서 품질"의 산출물로 만드는 학습 방법론입니다.
+VibeLearn AI는 AI와 함께 효율적으로 학습하고, 배운 내용을 "교과서 품질"의 산출물로 만드는 학습 방법론입니다.
 
 ## 🎯 핵심 역할
 
@@ -24,10 +24,10 @@ CUA_VL은 AI와 함께 효율적으로 학습하고, 배운 내용을 "교과서
 
 ## ⚙️ 설정
 
-**중요**: 이 Skill을 사용하기 전에 CUA_VL Repository 경로를 설정하세요.
+**중요**: 이 Skill을 사용하기 전에 VibeLearn AI Repository 경로를 설정하세요.
 
 ```
-CUA_VL_ROOT = [사용자의 VibeLearn-AI 폴더 경로]
+VibeLearn AI_ROOT = [사용자의 VibeLearn-AI 폴더 경로]
 예: C:\Projects\VibeLearn-AI 또는 ~/Projects/VibeLearn-AI
 ```
 
@@ -53,11 +53,11 @@ CUA_VL_ROOT = [사용자의 VibeLearn-AI 폴더 경로]
 2. **Topic 폴더 생성**
    - Bash tool을 사용하여 폴더 생성:
      ```bash
-     mkdir -p "{CUA_VL_ROOT}/Topics/{TopicName}"
-     mkdir -p "{CUA_VL_ROOT}/Topics/{TopicName}/vl_prompts"
-     mkdir -p "{CUA_VL_ROOT}/Topics/{TopicName}/vl_roadmap"
-     mkdir -p "{CUA_VL_ROOT}/Topics/{TopicName}/vl_worklog"
-     mkdir -p "{CUA_VL_ROOT}/Topics/{TopicName}/vl_materials"
+     mkdir -p "{VibeLearn AI_ROOT}/Topics/{TopicName}"
+     mkdir -p "{VibeLearn AI_ROOT}/Topics/{TopicName}/vl_prompts"
+     mkdir -p "{VibeLearn AI_ROOT}/Topics/{TopicName}/vl_roadmap"
+     mkdir -p "{VibeLearn AI_ROOT}/Topics/{TopicName}/vl_worklog"
+     mkdir -p "{VibeLearn AI_ROOT}/Topics/{TopicName}/vl_materials"
      ```
    - 성공 메시지 출력:
      ```
@@ -67,7 +67,7 @@ CUA_VL_ROOT = [사용자의 VibeLearn-AI 폴더 경로]
 3. **topic_starter.md 템플릿 제공**
    - Read tool로 템플릿 읽기:
      ```
-     파일: {CUA_VL_ROOT}/templates/topic_starter.md
+     파일: {VibeLearn AI_ROOT}/templates/topic_starter.md
      ```
    - 전체 내용을 사용자에게 보여주기
    - 안내 메시지:
@@ -85,7 +85,7 @@ CUA_VL_ROOT = [사용자의 VibeLearn-AI 폴더 경로]
 
 **중요 원칙**:
 - 폴더 구조는 정확히 위 경로를 따를 것
-- 템플릿은 항상 CUA_VL Repository의 templates/ 폴더에서 읽을 것
+- 템플릿은 항상 VibeLearn AI Repository의 templates/ 폴더에서 읽을 것
 - 사용자에게 명확한 다음 단계를 안내할 것
 
 ---
@@ -122,7 +122,7 @@ CUA_VL_ROOT = [사용자의 VibeLearn-AI 폴더 경로]
 3. **roadmap_prompt_template.md 제공**
    - Read tool로 템플릿 읽기:
      ```
-     파일: {CUA_VL_ROOT}/templates/roadmap_prompt_template.md
+     파일: {VibeLearn AI_ROOT}/templates/roadmap_prompt_template.md
      ```
    - Topic 이름으로 변수 치환
    - 완성된 프롬프트를 사용자에게 제공
@@ -210,7 +210,7 @@ CUA_VL_ROOT = [사용자의 VibeLearn-AI 폴더 경로]
 5. **daily_learning_prompt.md 제공**
    - Read tool로 읽기:
      ```
-     파일: {CUA_VL_ROOT}/templates/daily_learning_prompt.md
+     파일: {VibeLearn AI_ROOT}/templates/daily_learning_prompt.md
      ```
    - 전체 내용 제공
 
@@ -242,7 +242,7 @@ CUA_VL_ROOT = [사용자의 VibeLearn-AI 폴더 경로]
 - 현재 디렉토리 확인: `pwd`
 
 ### Read Tool
-- 템플릿 파일 읽기: `{CUA_VL_ROOT}/templates/{파일명}`
+- 템플릿 파일 읽기: `{VibeLearn AI_ROOT}/templates/{파일명}`
 - Topic 파일 읽기: `Topics/{TopicName}/{파일명}`
 
 ### Glob Tool
@@ -258,7 +258,7 @@ CUA_VL_ROOT = [사용자의 VibeLearn-AI 폴더 경로]
 ## 💡 중요 원칙
 
 1. **Repository 우선**
-   - 모든 템플릿은 CUA_VL Repository에서 읽기
+   - 모든 템플릿은 VibeLearn AI Repository에서 읽기
    - Skill은 안내자 역할만
 
 2. **명확한 다음 단계**
@@ -276,10 +276,10 @@ CUA_VL_ROOT = [사용자의 VibeLearn-AI 폴더 경로]
 
 ---
 
-## 📂 CUA_VL Repository 구조 (참조용)
+## 📂 VibeLearn AI Repository 구조 (참조용)
 
 ```
-{CUA_VL_ROOT}/
+{VibeLearn AI_ROOT}/
 ├── templates/                          # 템플릿 파일들
 │   ├── topic_starter.md
 │   ├── roadmap_prompt_template.md
@@ -304,7 +304,7 @@ CUA_VL_ROOT = [사용자의 VibeLearn-AI 폴더 경로]
 
 **사용자**: "새 Topic을 시작하고 싶어"
 
-**CUA_VL Skill**:
+**VibeLearn AI Skill**:
 1. "어떤 Topic을 시작하시겠습니까?"
 2. [사용자: "Docker-Basics"]
 3. 폴더 생성 실행
@@ -318,7 +318,7 @@ CUA_VL_ROOT = [사용자의 VibeLearn-AI 폴더 경로]
 
 **사용자**: "Roadmap을 만들고 싶어"
 
-**CUA_VL Skill**:
+**VibeLearn AI Skill**:
 1. "어떤 Topic의 Roadmap을 만드시겠습니까?"
 2. [사용자: "Docker-Basics"]
 3. topic_info.md 확인
@@ -332,7 +332,7 @@ CUA_VL_ROOT = [사용자의 VibeLearn-AI 폴더 경로]
 
 **사용자**: "오늘 학습을 시작하겠습니다"
 
-**CUA_VL Skill**:
+**VibeLearn AI Skill**:
 1. Topic 확인
 2. Roadmap 찾기
 3. 최근 WorkLog 찾기
@@ -342,7 +342,7 @@ CUA_VL_ROOT = [사용자의 VibeLearn-AI 폴더 경로]
 
 ---
 
-**작성자**: CUA_VL Methodology
+**작성자**: VibeLearn AI Methodology
 **버전**: 1.1
 **최종 업데이트**: 2026-01-25
-**방법론**: CUA_VL (VibeLearn AI)
+**방법론**: VibeLearn AI

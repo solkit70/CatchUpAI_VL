@@ -1,8 +1,8 @@
-# CUA_VL Roadmap 생성 프롬프트
+﻿# VibeLearn AI Roadmap 생성 프롬프트
 
 **버전**: 2.0
 **생성일**: 2025-12-28
-**방법론**: VibeLearn AI (CUA_VL)
+**방법론**: VibeLearn AI
 
 ---
 
@@ -14,7 +14,7 @@
 1. Topic 폴더가 생성되면 이 파일이 `[TopicName]/vl_prompts/`에 복사됨
 2. Topic 정보가 이미 주입된 상태
 3. 이 파일 전체를 AI에게 전달
-4. AI가 CUA_VL 표준 로드맵 생성
+4. AI가 VibeLearn AI 표준 로드맵 생성
 5. 생성된 로드맵을 `vl_roadmap/YYYYMMDD_RoadMap_{Topic}.md`에 저장
 
 ---
@@ -83,7 +83,7 @@
 
 ## [2단계] AI에게 요청할 작업
 
-위에 주입된 Topic 정보를 바탕으로 **CUA_VL 방법론**에 맞는 학습 로드맵을 생성해주세요.
+위에 주입된 Topic 정보를 바탕으로 **VibeLearn AI 방법론**에 맞는 학습 로드맵을 생성해주세요.
 
 ---
 
@@ -283,9 +283,9 @@ AI 시대에 맞는 평가 기준 (3-5문항):
 
 ---
 
-#### CUA_VL 방법론 통합
+#### VibeLearn AI 방법론 통합
 
-로드맵에 다음 CUA_VL 요소들을 통합하세요:
+로드맵에 다음 VibeLearn AI 요소들을 통합하세요:
 
 ##### 1. WorkLog 가이드
 ```markdown
@@ -327,7 +327,7 @@ WorkLog 내에 작성:
 ### Topic Retrospective (전체 완료 시, 30-60분)
 `vl_worklog/YYYYMMDD_{Topic}_Final_Retrospective.md`:
 - 전체 학습 여정 통계
-- CUA_VL 방법론 효과성 평가
+- VibeLearn AI 방법론 효과성 평가
 - 산출물 품질 평가
 - 향후 학습 개선 사항
 ```
@@ -410,7 +410,7 @@ WorkLog 내에 작성:
 # {Topic} 학습 로드맵
 
 **생성일**: YYYY-MM-DD
-**방법론**: CUA_VL (VibeLearn AI)
+**방법론**: VibeLearn AI
 **버전**: 1.0
 
 ---
@@ -566,9 +566,9 @@ WorkLog 내에 작성:
 
 ---
 
-**생성자**: Claude with CUA_VL
+**생성자**: Claude with VibeLearn AI
 **Roadmap 버전**: 1.0
-**방법론 버전**: CUA_VL 2.0
+**방법론 버전**: VibeLearn AI 2.0
 ```
 
 ---
@@ -594,7 +594,7 @@ WorkLog 내에 작성:
 - [ ] 참조 자료 링크
 - [ ] 9가지 필수 항목 모두 포함
 
-### CUA_VL 통합
+### VibeLearn AI 통합
 - [ ] WorkLog 가이드
 - [ ] Retrospective 가이드 (3단계)
 - [ ] 폴더 구조 명시
@@ -622,7 +622,7 @@ WorkLog 내에 작성:
 
 ---
 
-**생성자**: Claude with CUA_VL
+**생성자**: Claude with VibeLearn AI
 **Template 버전**: 2.0
 **생성일**: 2025-12-28
-**방법론**: VibeLearn AI (CUA_VL)
+**방법론**: VibeLearn AI

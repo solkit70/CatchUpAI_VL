@@ -1,14 +1,14 @@
-# CUA_VL 워크플로우 가이드
+﻿# VibeLearn AI 워크플로우 가이드
 
 **버전**: 1.0
 **생성일**: 2026-01-25
-**방법론**: VibeLearn AI (CUA_VL)
+**방법론**: VibeLearn AI
 
 ---
 
 ## 📌 개요
 
-이 가이드는 CUA_VL 학습 방법론을 **어떤 AI 도구**에서든 사용할 수 있도록 워크플로우별 프롬프트 사용법을 안내합니다.
+이 가이드는 VibeLearn AI 학습 방법론을 **어떤 AI 도구**에서든 사용할 수 있도록 워크플로우별 프롬프트 사용법을 안내합니다.
 
 **지원 AI 도구**:
 - ChatGPT (OpenAI)
@@ -44,7 +44,7 @@
 #### 1.1 AI에게 보낼 프롬프트
 
 ```
-CUA_VL(VibeLearn AI) 방법론으로 새로운 학습 Topic을 시작하려고 합니다.
+VibeLearn AI(VibeLearn AI) 방법론으로 새로운 학습 Topic을 시작하려고 합니다.
 
 아래 정보를 바탕으로:
 1. Topic 폴더 구조를 만들어주세요
@@ -99,13 +99,13 @@ mkdir -p "Topics/$topic"/{vl_prompts,vl_roadmap,vl_worklog,vl_materials}
 #### 2.1 AI에게 보낼 프롬프트
 
 ```
-CUA_VL 방법론에 따라 학습 Roadmap을 생성해주세요.
+VibeLearn AI 방법론에 따라 학습 Roadmap을 생성해주세요.
 
 ## Topic 정보
 [topic_info.md 내용을 여기에 붙여넣기]
 
 ## Roadmap 생성 요청
-아래 CUA_VL 표준에 맞춰 Roadmap을 생성해주세요:
+아래 VibeLearn AI 표준에 맞춰 Roadmap을 생성해주세요:
 
 ### 필수 포함 항목 (모듈별)
 1. 모듈 기본 정보 (번호, 제목, 예상 시간)
@@ -153,7 +153,7 @@ Topics/{TopicName}/vl_roadmap/YYYYMMDD_RoadMap_{TopicName}.md
 #### 3.1 AI에게 보낼 프롬프트
 
 ```
-CUA_VL 방법론에 따라 오늘의 학습을 시작합니다.
+VibeLearn AI 방법론에 따라 오늘의 학습을 시작합니다.
 
 ## 현재 상황
 - Topic: [예: Docker-Fundamentals]
@@ -339,5 +339,5 @@ VibeLearn-AI/
 ---
 
 **Template Version**: 1.0
-**Created by**: CUA_VL Methodology
+**Created by**: VibeLearn AI Methodology
 **Last Updated**: 2026-01-25

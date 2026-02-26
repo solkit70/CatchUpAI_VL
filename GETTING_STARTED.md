@@ -1,13 +1,15 @@
-# CUA_VL 빠른 시작 가이드
+﻿# VibeLearn AI 빠른 시작 가이드
+
+🌐 **Language / 언어**: [한국어](GETTING_STARTED.md) | [English](GETTING_STARTED.en.md)
 
 **버전**: 2.0
 **최종 업데이트**: 2025-12-28
 
 ---
 
-## 🎯 CUA_VL이란?
+## 🎯 VibeLearn AI가란?
 
-**VibeLearn AI (CUA_VL)**는 AI와 함께 새로운 기술을 체계적으로 학습하고, 그 과정에서 생성된 산출물을 다른 학습자들이 활용할 수 있는 고품질 교과서로 만드는 학습 방법론입니다.
+**VibeLearn AI**는 AI와 함께 새로운 기술을 체계적으로 학습하고, 그 과정에서 생성된 산출물을 다른 학습자들이 활용할 수 있는 고품질 교과서로 만드는 학습 방법론입니다.
 
 **핵심 철학**:
 > "AI와 함께 배우고, 배운 것을 구조화하여, 다음 학습자를 위한 길을 만든다"
@@ -18,10 +20,10 @@
 
 ### Step 0: 시작하기 전에
 
-**CUA_VL_v2.0 폴더에 포함된 파일**:
+**VibeLearn AI_v2.0 폴더에 포함된 파일**:
 ```
-CUA_VL_v2.0/
-├── README.md                        # CUA_VL 방법론 소개 (먼저 읽기 권장!)
+VibeLearn AI_v2.0/
+├── README.md                        # VibeLearn AI 방법론 소개 (먼저 읽기 권장!)
 ├── GETTING_STARTED.md              # 이 파일 - 빠른 시작 가이드
 └── templates/
     ├── topic_starter.md            # Topic 시작 템플릿
@@ -30,17 +32,17 @@ CUA_VL_v2.0/
 ```
 
 **💡 추천 순서**:
-1. **README.md 먼저 읽기** - CUA_VL 방법론의 철학과 전체 구조 이해
+1. **README.md 먼저 읽기** - VibeLearn AI 방법론의 철학과 전체 구조 이해
 2. **이 가이드(GETTING_STARTED.md)로 실습** - 단계별로 따라하며 학습 시작
 
 ---
 
 ### Step 1: 학습 준비
 
-CUA_VL_v2.0 폴더를 받으셨다면 바로 시작할 수 있습니다!
+VibeLearn AI_v2.0 폴더를 받으셨다면 바로 시작할 수 있습니다!
 
 **필요한 것**:
-- ✅ 이 폴더 (CUA_VL_v2.0/)
+- ✅ 이 폴더 (VibeLearn AI_v2.0/)
 - ✅ AI 어시스턴트 (Claude, ChatGPT, Gemini 등 - Vibe Coding Tools 권장)
 - ✅ 배우고 싶은 Topic과 학습 의지
 
@@ -59,7 +61,7 @@ topic_starter.md 작성이 막막하다면, AI에게 아래 프롬프트를 사�
 "[Topic 이름]을 배우고 싶은데, topic_starter.md 파일을 작성해줄 수 있어?
 [기간]에 마치고 싶고, [목표]를 달성하고 싶어.
 
-CUA_VL 방법론에 맞게 작성하려면 어떤 정보가 필요한지
+VibeLearn AI 방법론에 맞게 작성하려면 어떤 정보가 필요한지
 선택형 질문(라디오 버튼/체크박스)으로 물어보면서 함께 작성해줘."
 ```
 
@@ -68,7 +70,7 @@ CUA_VL 방법론에 맞게 작성하려면 어떤 정보가 필요한지
 "Deep Agent 기술을 배우고 싶은데, topic_starter.md 파일을 작성해줄 수 있어?
 2주 안에 마치고 싶고, 실제로 AI Application을 만들어보고 싶어.
 
-CUA_VL 방법론에 맞게 작성하려면 어떤 정보가 필요한지
+VibeLearn AI 방법론에 맞게 작성하려면 어떤 정보가 필요한지
 선택형 질문(라디오 버튼/체크박스)으로 물어보면서 함께 작성해줘."
 ```
 
@@ -81,10 +83,10 @@ CUA_VL 방법론에 맞게 작성하려면 어떤 정보가 필요한지
 
 2. **답변을 반영하여 topic_starter.md 작성**
    - 모든 섹션을 채운 완성된 파일 생성
-   - CUA_VL 템플릿 형식에 맞게 구조화
+   - VibeLearn AI 템플릿 형식에 맞게 구조화
 
 3. **파일 저장**
-   - `templates/[YourTopic]_topic_starter.md`로 저장 (CUA_VL_v2.0 폴더 기준)
+   - `templates/[YourTopic]_topic_starter.md`로 저장 (VibeLearn AI_v2.0 폴더 기준)
 
 **핵심 장점**:
 - ✅ 라디오 버튼/체크박스로 빠른 선택
@@ -132,7 +134,7 @@ topic_starter.md를 완성했다면, AI에게 아래 프롬프트를 사용하�
 **프롬프트 템플릿**:
 ```
 "[YourTopic]_topic_starter.md 파일을 보고
-CUA_VL 방법론에 맞는 Topic 폴더를 만들어주세요.
+VibeLearn AI 방법론에 맞는 Topic 폴더를 만들어주세요.
 
 완료되면 다음 단계로 무엇을 하면 좋을지 안내해주세요."
 ```
@@ -140,7 +142,7 @@ CUA_VL 방법론에 맞는 Topic 폴더를 만들어주세요.
 **예시**:
 ```
 "DeepAgent_topic_starter.md 파일을 보고
-CUA_VL 방법론에 맞는 Topic 폴더를 만들어주세요.
+VibeLearn AI 방법론에 맞는 Topic 폴더를 만들어주세요.
 
 완료되면 다음 단계로 무엇을 하면 좋을지 안내해주세요."
 ```
@@ -148,7 +150,7 @@ CUA_VL 방법론에 맞는 Topic 폴더를 만들어주세요.
 **AI가 하는 일**:
 1. **Topic 폴더 구조 자동 생성**
    ```
-   CUA_VL_v2.0/Topics/Deep-Agent/  # Topics 폴더 아래에 생성
+   VibeLearn AI_v2.0/Topics/Deep-Agent/  # Topics 폴더 아래에 생성
    ├── topic_info.md              # topic_starter 내용 복사
    ├── vl_prompts/
    │   ├── roadmap_prompt.md      # Topic 정보 주입된 프롬프트
@@ -252,7 +254,7 @@ Roadmap이 준비되었다면, 매일 학습할 때 AI에게 아래 프롬프트
 
 ```mermaid
 graph TD
-    A[CUA_VL 복사] --> B[topic_starter.md 작성]
+    A[VibeLearn AI 복사] --> B[topic_starter.md 작성]
     B --> C[AI에게 Topic 폴더 생성 요청]
     C --> D[roadmap_prompt.md로 로드맵 생성]
     D --> E[daily_learning_prompt.md로 매일 학습]
@@ -273,7 +275,7 @@ graph TD
 
 ### 배포 패키지 구조
 ```
-CUA_VL_v2.0/                    # 배포 패키지 (이 폴더)
+VibeLearn AI_v2.0/                    # 배포 패키지 (이 폴더)
 ├── README.md                    # 방법론 전체 설명
 ├── GETTING_STARTED.md          # 빠른 시작 가이드 (이 파일)
 └── templates/                  # 템플릿 파일들
@@ -284,7 +286,7 @@ CUA_VL_v2.0/                    # 배포 패키지 (이 폴더)
 
 ### 학습 시작 후 구조 (예시)
 ```
-CUA_VL_v2.0/                   # 배포 패키지 (루트)
+VibeLearn AI_v2.0/                   # 배포 패키지 (루트)
 ├── README.md
 ├── GETTING_STARTED.md
 ├── templates/
@@ -484,7 +486,7 @@ CUA_VL_v2.0/                   # 배포 패키지 (루트)
 ## ❓ FAQ
 
 ### Q1. AI 없이도 사용 가능한가요?
-**A**: **아니요, AI는 필수입니다.** CUA_VL의 "Vibe Learning"은 AI와의 협업을 핵심으로 합니다.
+**A**: **아니요, AI는 필수입니다.** VibeLearn AI의 "Vibe Learning"은 AI와의 협업을 핵심으로 합니다.
 
 **왜 AI가 필수인가?**
 - **Roadmap 생성**: AI가 Topic 정보를 분석하여 체계적인 학습 계획 수립
@@ -509,9 +511,9 @@ CUA_VL_v2.0/                   # 배포 패키지 (루트)
 **웹 기반 (보조)**:
 - Claude.ai, ChatGPT (복사/붙여넣기 방식, 비효율적)
 
-**중요**: 코드와 파일을 직접 읽고 쓸 수 있는 **CLI 환경 통합 AI 도구**를 사용해야 CUA_VL의 효율성을 최대화할 수 있습니다. 웹 기반 AI만 사용하면 복사/붙여넣기로 인한 시간 낭비가 발생합니다.
+**중요**: 코드와 파일을 직접 읽고 쓸 수 있는 **CLI 환경 통합 AI 도구**를 사용해야 VibeLearn AI의 효율성을 최대화할 수 있습니다. 웹 기반 AI만 사용하면 복사/붙여넣기로 인한 시간 낭비가 발생합니다.
 
-AI 없이는 CUA_VL의 핵심 가치인 "효율적 학습"과 "AI 시대 학습법"을 경험할 수 없습니다.
+AI 없이는 VibeLearn AI의 핵심 가치인 "효율적 학습"과 "AI 시대 학습법"을 경험할 수 없습니다.
 
 ### Q2. 어떤 Topic에 적합한가요?
 **A**: 학습 목표를 설정하고 체계적으로 접근할 수 있는 모든 Topic에 적합합니다.
@@ -527,7 +529,7 @@ AI 없이는 CUA_VL의 핵심 가치인 "효율적 학습"과 "AI 시대 학습�
 - ✅ 경영학, 경제학 등
 - ✅ 언어 학습 (영어, 프랑스어 등)
 
-**핵심**: CUA_VL은 Topic의 종류보다 **AI와 함께 체계적으로 학습**하는 것이 중요합니다. 실습이 없는 이론 과목이라도 AI와 대화하며 개념을 정리하고, WorkLog로 학습 과정을 기록하면 효과적입니다.
+**핵심**: VibeLearn AI는 Topic의 종류보다 **AI와 함께 체계적으로 학습**하는 것이 중요합니다. 실습이 없는 이론 과목이라도 AI와 대화하며 개념을 정리하고, WorkLog로 학습 과정을 기록하면 효과적입니다.
 
 ### Q3. 학습 기간은 어떻게 정하나요?
 **A**: **사용자가 직접 설정**하되, **AI가 적정성을 검토**해줍니다.
@@ -554,10 +556,10 @@ AI 없이는 CUA_VL의 핵심 가치인 "효율적 학습"과 "AI 시대 학습�
 - **중간 복잡도** (프레임워크, 라이브러리): 2-4주
 - **복잡한 Topic** (대규모 시스템, 다중 기술): 1-3개월
 
-**핵심**: CUA_VL은 사용자의 일정에 맞춰 **유연하게 조정**됩니다. AI가 적정성을 체크해주므로 안심하고 원하는 기간을 설정하세요!
+**핵심**: VibeLearn AI는 사용자의 일정에 맞춰 **유연하게 조정**됩니다. AI가 적정성을 체크해주므로 안심하고 원하는 기간을 설정하세요!
 
 ### Q4. 혼자 사용해도 되나요?
-**A**: 네! CUA_VL은 개인 학습에 최적화되어 있습니다. 팀으로 사용하면 산출물 공유로 더 큰 시너지를 낼 수 있습니다.
+**A**: 네! VibeLearn AI는 개인 학습에 최적화되어 있습니다. 팀으로 사용하면 산출물 공유로 더 큰 시너지를 낼 수 있습니다.
 
 ### Q5. Git이 필수인가요?
 **A**: 필수는 아니지만 강력히 권장합니다.
@@ -569,7 +571,7 @@ AI 없이는 CUA_VL의 핵심 가치인 "효율적 학습"과 "AI 시대 학습�
 **A**: 가능하지만 비권장입니다. 한 번에 하나의 Topic에 집중하는 것이 효과적입니다.
 
 ### Q7. 영어나 다른 언어로도 사용할 수 있나요?
-**A**: 네! CUA_VL은 **다국어를 완벽하게 지원**합니다.
+**A**: 네! VibeLearn AI는 **다국어를 완벽하게 지원**합니다.
 
 **현재 상태**:
 - 🇰🇷 **한국어**: 현재 버전 (v2.0)
@@ -595,7 +597,7 @@ Learning Period: 2 weeks
 ...
 ```
 
-CUA_VL은 **글로벌 학습자 모두가 사용**할 수 있는 방법론입니다!
+VibeLearn AI는 **글로벌 학습자 모두가 사용**할 수 있는 방법론입니다!
 
 ### Q8. topic_starter.md 수동으로 폴더 만들어도 되나요?
 **A**: 네! AI 도움 없이 직접 폴더 구조를 만드셔도 됩니다. 단, templates의 파일들을 복사하고 Topic 정보를 직접 주입해야 합니다.
@@ -623,13 +625,13 @@ CUA_VL은 **글로벌 학습자 모두가 사용**할 수 있는 방법론입니
 ## 📚 더 알아보기
 
 ### 상세 문서
-- [CUA_VL README.md](README.md): 방법론 전체 설명
+- [VibeLearn AI README.md](README.md): 방법론 전체 설명
 - [topic_starter.md](templates/topic_starter.md): Topic 시작 템플릿
 - [roadmap_prompt_template.md](templates/roadmap_prompt_template.md): Roadmap 생성 가이드
 - [daily_learning_prompt.md](templates/daily_learning_prompt.md): 매일 학습 가이드
 
 ### 예시 (참고)
-- `CUA_VL_Development/`: CUA_VL 자체 개발 과정 (메타 학습)
+- `VibeLearn AI_Development/`: VibeLearn AI 자체 개발 과정 (메타 학습)
 - 각 Topic 폴더: 실제 학습 결과물
 
 ---
@@ -650,7 +652,7 @@ CUA_VL은 **글로벌 학습자 모두가 사용**할 수 있는 방법론입니
 
 ## 🎉 시작할 준비 되셨나요?
 
-1. ✅ CUA_VL 복사 완료
+1. ✅ VibeLearn AI 복사 완료
 2. ✅ README.md 읽고 방법론 이해
 3. ✅ 이 가이드로 빠른 시작 방법 파악
 4. 🚀 **이제 topic_starter.md를 작성하고 첫 Topic을 시작하세요!**
@@ -663,4 +665,4 @@ CUA_VL은 **글로벌 학습자 모두가 사용**할 수 있는 방법론입니
 
 **버전**: 2.0
 **최종 업데이트**: 2025-12-28
-**Created by**: CUA_VL Methodology
+**Created by**: VibeLearn AI Methodology

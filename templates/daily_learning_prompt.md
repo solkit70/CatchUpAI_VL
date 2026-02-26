@@ -1,8 +1,8 @@
-# CUA_VL Daily Learning 프롬프트
+﻿# VibeLearn AI Daily Learning 프롬프트
 
 **버전**: 2.0
 **생성일**: 2025-12-28
-**방법론**: VibeLearn AI (CUA_VL)
+**방법론**: VibeLearn AI
 
 ---
 
@@ -86,7 +86,7 @@
 
 ## [2단계] AI에게 요청할 작업
 
-위 정보를 바탕으로 **CUA_VL 방법론**에 맞는 오늘의 학습 계획을 수립해주세요.
+위 정보를 바탕으로 **VibeLearn AI 방법론**에 맞는 오늘의 학습 계획을 수립해주세요.
 
 ---
 
@@ -449,7 +449,7 @@
 ---
 
 **작성자**: {이름}
-**방법론**: CUA_VL (VibeLearn AI)
+**방법론**: VibeLearn AI
 ```
 
 ---
@@ -687,4 +687,4 @@ graph TD
 
 **Template 버전**: 2.0
 **생성일**: 2025-12-28
-**방법론**: CUA_VL (VibeLearn AI)
+**방법론**: VibeLearn AI

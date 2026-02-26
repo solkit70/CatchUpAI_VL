@@ -1,4 +1,6 @@
-# VibeLearn AI (CUA_VL)
+﻿# VibeLearn AI
+
+🌐 **Language / 언어**: [한국어](README.md) | [English](README.en.md)
 
 **Version**: 2.0
 **Date**: 2025-12-28
@@ -10,7 +12,7 @@
 
 ## 📚 개요 (Overview)
 
-**VibeLearn AI (CUA_VL)**는 AI를 활용하여 새로운 기술, 프레임워크, 프로젝트를 체계적으로 학습하고, 그 과정에서 생성된 산출물을 다른 학습자들이 활용할 수 있는 고품질 교과서로 만드는 학습 방법론입니다.
+**VibeLearn AI**는 AI를 활용하여 새로운 기술, 프레임워크, 프로젝트를 체계적으로 학습하고, 그 과정에서 생성된 산출물을 다른 학습자들이 활용할 수 있는 고품질 교과서로 만드는 학습 방법론입니다.
 
 ### 핵심 철학
 
@@ -47,17 +49,17 @@
 
 ## 🏗️ 방법론 구조
 
-### CUA_VL 전체 구조
+### VibeLearn AI 전체 구조
 
 ```
-CUA_VL/
+VibeLearn AI/
 ├── README.md                    # 방법론 설명서 (이 파일)
 ├── GETTING_STARTED.md          # 빠른 시작 가이드
 ├── templates/                  # 템플릿 파일들
 │   ├── topic_starter.md        # Topic 시작 템플릿
 │   ├── roadmap_prompt_template.md
 │   └── daily_learning_prompt.md
-├── CUA_VL_Development/         # CUA_VL 자체 개발 기록
+├── VibeLearn AI_Development/         # VibeLearn AI 자체 개발 기록
 │   └── vl_worklog/
 └── [Topic 폴더들]/             # 각 학습 Topic
     ├── topic_info.md
@@ -299,7 +301,7 @@ graph TD
 - **소요 시간**: 30-60분
 - **내용**:
   - 전체 학습 여정 통계
-  - CUA_VL 방법론 효과성 평가
+  - VibeLearn AI 방법론 효과성 평가
   - Topic별 특수성 및 인사이트
   - 방법론 개선 사항 (다음 Topic에 적용)
   - 산출물의 교과서 품질 평가
@@ -307,7 +309,7 @@ graph TD
 ### 회고의 가치
 - **메타 인지**: 학습 방법 자체를 개선
 - **패턴 인식**: 반복되는 문제/성공 패턴 발견
-- **방법론 진화**: 데이터 기반 CUA_VL 개선
+- **방법론 진화**: 데이터 기반 VibeLearn AI 개선
 - **동기 부여**: 성취와 성장 가시화
 
 ---
@@ -467,7 +469,7 @@ Self-Assessment 실습 문제는 다음 원칙을 따름:
 
 | 폴더 유형 | 규칙 | 예시 |
 |----------|------|------|
-| CUA_VL 전용 폴더 | `vl_` 접두사 + 소문자 | `vl_prompts/`, `vl_roadmap/`, `vl_worklog/` |
+| VibeLearn AI 전용 폴더 | `vl_` 접두사 + 소문자 | `vl_prompts/`, `vl_roadmap/`, `vl_worklog/` |
 | 산출물 폴더 | `NN-TopicName/` | `01-Setup/`, `02-Basics/` |
 | 하위 폴더 | 소문자, 하이픈 | `concepts/`, `troubleshooting/` |
 
@@ -598,7 +600,7 @@ Self-Assessment 실습 문제는 다음 원칙을 따름:
 # Git 설정 (선택)
 git init
 git add .
-git commit -m "Initial CUA_VL structure"
+git commit -m "Initial VibeLearn AI structure"
 
 # .gitignore 설정
 echo ".env" >> .gitignore
@@ -626,12 +628,12 @@ echo "*.pyc" >> .gitignore
 |------|----------|
 | 이해도 | Self-Assessment 점수 (⭐ 4개 이상) |
 | 산출물 품질 | 다른 학습자가 활용 가능한 수준 |
-| 방법론 숙달 | CUA_VL 프로세스 자연스럽게 적용 |
+| 방법론 숙달 | VibeLearn AI 프로세스 자연스럽게 적용 |
 | 실용성 | 학습 내용을 실제 업무에 적용 가능 |
 
 ---
 
-## 🌟 CUA_VL의 장점
+## 🌟 VibeLearn AI의 장점
 
 ### 1. 학습자 관점
 - ✅ **구조화된 학습**: 명확한 단계와 프로세스
@@ -690,7 +692,7 @@ echo "*.pyc" >> .gitignore
 - [x] GETTING_STARTED.md 빠른 시작 가이드
 - [x] Topic별 독립 폴더 구조
 - [ ] 자동화 스크립트 개발 (선택 사항)
-- [ ] CUA_VL CLI 도구 (향후)
+- [ ] VibeLearn AI CLI 도구 (향후)
 - [ ] 웹 기반 대시보드 (향후)
 
 ### 커뮤니티

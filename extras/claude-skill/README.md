@@ -1,4 +1,4 @@
-# CUA_VL Skill - Claude 사용자를 위한 선택적 확장
+﻿# VibeLearn AI Skill - Claude 사용자를 위한 선택적 확장
 
 **버전**: 1.1
 **생성일**: 2026-01-25
@@ -10,10 +10,10 @@
 
 이 폴더는 **Claude 사용자**를 위한 **선택적** 확장 기능입니다.
 
-CUA_VL Skill을 설치하면 폴더 자동 생성, 파일 탐색 등의 자동화 기능을 사용할 수 있습니다.
+VibeLearn AI Skill을 설치하면 폴더 자동 생성, 파일 탐색 등의 자동화 기능을 사용할 수 있습니다.
 
 > **중요**: 이 Skill은 **선택 사항**입니다.
-> CUA_VL 방법론은 프롬프트 기반으로 **모든 AI 도구**에서 사용 가능합니다.
+> VibeLearn AI 방법론은 프롬프트 기반으로 **모든 AI 도구**에서 사용 가능합니다.
 > Skill 없이도 `templates/workflow_guide.md`를 참고하여 동일한 학습을 진행할 수 있습니다.
 
 ---
@@ -72,11 +72,11 @@ cp extras/claude-skill/SKILL.md ~/.claude/skills/cua-vl/
 
 ### Step 3: SKILL.md 경로 설정
 
-SKILL.md 파일을 열고 `{CUA_VL_ROOT}`를 실제 경로로 변경하세요:
+SKILL.md 파일을 열고 `{VibeLearn AI_ROOT}`를 실제 경로로 변경하세요:
 
 ```markdown
 # 변경 전
-파일: {CUA_VL_ROOT}/templates/topic_starter.md
+파일: {VibeLearn AI_ROOT}/templates/topic_starter.md
 
 # 변경 후 (예시)
 파일: C:\Projects\VibeLearn-AI\templates\topic_starter.md
@@ -94,7 +94,7 @@ SKILL.md 파일을 열고 `{CUA_VL_ROOT}`를 실제 경로로 변경하세요:
 Claude에게 다음과 같이 물어보세요:
 
 ```
-"CUA_VL Skill이 설치되어 있나요?"
+"VibeLearn AI Skill이 설치되어 있나요?"
 ```
 
 또는 직접 명령어 실행:
@@ -120,7 +120,7 @@ Claude에게 다음과 같이 물어보세요:
 ```
 사용자: "Docker 학습을 위한 새 Topic을 시작하고 싶어"
 
-CUA_VL Skill:
+VibeLearn AI Skill:
 1. "어떤 Topic을 시작하시겠습니까?"
 2. [사용자: Docker-Fundamentals]
 3. ✅ 폴더 자동 생성
@@ -149,7 +149,7 @@ CUA_VL Skill:
 
 **확인 사항**:
 1. `~/.claude/skills/cua-vl/SKILL.md` 파일이 존재하는지 확인
-2. SKILL.md의 `{CUA_VL_ROOT}` 경로가 올바른지 확인
+2. SKILL.md의 `{VibeLearn AI_ROOT}` 경로가 올바른지 확인
 3. Claude 재시작 시도
 
 **해결책**:
@@ -161,16 +161,16 @@ CUA_VL Skill:
 **원인**: 경로 설정 오류 또는 권한 문제
 
 **해결책**:
-1. SKILL.md의 `{CUA_VL_ROOT}` 경로 확인
+1. SKILL.md의 `{VibeLearn AI_ROOT}` 경로 확인
 2. 해당 경로에 쓰기 권한이 있는지 확인
 3. 수동으로 폴더 생성 후 재시도
 
 ### Q3: 템플릿 파일을 찾을 수 없어요
 
-**원인**: CUA_VL Repository 경로 오류
+**원인**: VibeLearn AI Repository 경로 오류
 
 **해결책**:
-1. SKILL.md의 모든 `{CUA_VL_ROOT}` 경로 확인
+1. SKILL.md의 모든 `{VibeLearn AI_ROOT}` 경로 확인
 2. `templates/` 폴더가 존재하는지 확인
 3. 경로 수정 후 Claude 재시작
 
@@ -200,7 +200,7 @@ extras/claude-skill/
 
 1. 최신 VibeLearn-AI Repository 다운로드
 2. `extras/claude-skill/SKILL.md`를 `~/.claude/skills/cua-vl/`에 복사
-3. `{CUA_VL_ROOT}` 경로 재설정
+3. `{VibeLearn AI_ROOT}` 경로 재설정
 4. Claude 재시작
 
 ---

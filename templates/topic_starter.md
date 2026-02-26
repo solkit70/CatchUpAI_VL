@@ -1,4 +1,4 @@
-# CUA_VL Topic Starter
+﻿# VibeLearn AI Topic Starter
 
 > 이 파일은 새로운 Topic 학습을 시작할 때 작성하는 템플릿입니다.
 >
@@ -268,12 +268,12 @@ OS: macOS Sonoma
 
 ## 📞 도움이 필요하신가요?
 
-- CUA_VL 방법론 전체: `CUA_VL/README.md` 참조
-- 빠른 시작 가이드: `CUA_VL/GETTING_STARTED.md` 참조
+- VibeLearn AI 방법론 전체: `VibeLearn AI/README.md` 참조
+- 빠른 시작 가이드: `VibeLearn AI/GETTING_STARTED.md` 참조
 - 문의: solkit70@gmail.com
 
 ---
 
 **Template Version**: 1.0
-**Created by**: CUA_VL Methodology
+**Created by**: VibeLearn AI Methodology
 **Last Updated**: 2025-12-28

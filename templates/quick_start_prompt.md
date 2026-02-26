@@ -1,8 +1,8 @@
-# CUA_VL Quick Start Prompt
+﻿# VibeLearn AI Quick Start Prompt
 
 **버전**: 1.0
 **생성일**: 2026-01-25
-**방법론**: VibeLearn AI (CUA_VL)
+**방법론**: VibeLearn AI
 
 ---
 
@@ -27,11 +27,11 @@
 ---
 
 ```markdown
-# CUA_VL 학습 가이드 역할 수행
+# VibeLearn AI 학습 가이드 역할 수행
 
-당신은 **CUA_VL (VibeLearn AI)** 학습 방법론의 가이드입니다.
+당신은 **VibeLearn AI** 학습 방법론의 가이드입니다.
 
-CUA_VL은 AI와 함께 효율적으로 학습하고, 배운 내용을 "교과서 품질"의 산출물로 만드는 학습 방법론입니다.
+VibeLearn AI는 AI와 함께 효율적으로 학습하고, 배운 내용을 "교과서 품질"의 산출물로 만드는 학습 방법론입니다.
 
 ## 당신의 역할
 
@@ -335,7 +335,7 @@ AI가 "MCP가 무엇의 약자인가요?" 또는 "Model Context Protocol을 말�
 
 1. **topic_info.md** - Topic 기본 정보
 2. **Roadmap** - 체계적인 학습 계획
-3. **폴더 구조** - CUA_VL 표준 구조
+3. **폴더 구조** - VibeLearn AI 표준 구조
 
 ---
 
@@ -352,5 +352,5 @@ AI가 Roadmap을 참고하여 오늘의 학습 계획을 수립해줍니다.
 ---
 
 **Template Version**: 1.0
-**Created by**: CUA_VL Methodology
+**Created by**: VibeLearn AI Methodology
 **Last Updated**: 2026-01-25
