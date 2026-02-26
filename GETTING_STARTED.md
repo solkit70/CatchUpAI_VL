@@ -641,7 +641,7 @@ VibeLearn AI는 **글로벌 학습자 모두가 사용**할 수 있는 방법론
 ### 문의 및 피드백
 - **Email**: solkit70@gmail.com
 - **YouTube**: https://www.youtube.com/@catchupai/
-- **GitHub**: https://github.com/solkit70/MCP_Basic_Higher_Models_GC.git
+- **Website**: https://www.catchupai.net
 
 ### 기여하기
 - 개선 제안: GitHub Issues

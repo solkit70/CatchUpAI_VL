@@ -633,7 +633,7 @@ VibeLearn AI is a methodology that can be used by **all global learners**!
 ### Inquiries and Feedback
 -   **Email**: solkit70@gmail.com
 -   **YouTube**: https://www.youtube.com/@catchupai/
--   **GitHub**: https://github.com/solkit70/MCP_Basic_Higher_Models_GC.git
+-   **Website**: https://www.catchupai.net
 
 ### Contributing
 -   Improvement suggestions: GitHub Issues
