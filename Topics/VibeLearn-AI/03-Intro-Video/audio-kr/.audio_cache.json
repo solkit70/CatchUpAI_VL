@@ -1,0 +1,122 @@
+{
+  "slide_0": {
+    "hash": "974732ac96e3b6e37ca97aa264cd04b1",
+    "voice": "nova",
+    "model": "gpt-4o-mini-tts"
+  },
+  "slide_1": {
+    "hash": "9c08b841a354736ba4f824b1d2338966",
+    "voice": "nova",
+    "model": "gpt-4o-mini-tts"
+  },
+  "slide_2": {
+    "hash": "3264e738f200474075ff9afe37183add",
+    "voice": "nova",
+    "model": "gpt-4o-mini-tts"
+  },
+  "slide_3": {
+    "hash": "ca7c496707d2313d95a6df8fa8ec2e44",
+    "voice": "nova",
+    "model": "gpt-4o-mini-tts"
+  },
+  "slide_4": {
+    "hash": "0ffe9f3a6f7de7a834600eeae953b07e",
+    "voice": "nova",
+    "model": "gpt-4o-mini-tts"
+  },
+  "slide_5": {
+    "hash": "fedcf440234b4b6c9d4a887c38d5831d",
+    "voice": "nova",
+    "model": "gpt-4o-mini-tts"
+  },
+  "slide_6": {
+    "hash": "a0d1dc2527a28909c28808f702589c29",
+    "voice": "nova",
+    "model": "gpt-4o-mini-tts"
+  },
+  "slide_7": {
+    "hash": "c1db5ebd9c91b76e362670afc4e8927f",
+    "voice": "nova",
+    "model": "gpt-4o-mini-tts"
+  },
+  "slide_8": {
+    "hash": "c8bf97ea96dab07235d11d2c545cc0d7",
+    "voice": "nova",
+    "model": "gpt-4o-mini-tts"
+  },
+  "slide_9": {
+    "hash": "85deb23573d7395ee9e62c1f195db242",
+    "voice": "nova",
+    "model": "gpt-4o-mini-tts"
+  },
+  "slide_10": {
+    "hash": "7d8c050d1ccd0ea6dfde095a07616cc6",
+    "voice": "nova",
+    "model": "gpt-4o-mini-tts"
+  },
+  "slide_11": {
+    "hash": "b047970d745dfb237548149a226fe255",
+    "voice": "nova",
+    "model": "gpt-4o-mini-tts"
+  },
+  "slide_12": {
+    "hash": "96fde3146081b402543fb2b54b9d6f10",
+    "voice": "nova",
+    "model": "gpt-4o-mini-tts"
+  },
+  "slide_13": {
+    "hash": "a0daf6ecdffcddfc6d239955ea2c7647",
+    "voice": "nova",
+    "model": "gpt-4o-mini-tts"
+  },
+  "slide_14": {
+    "hash": "06e90ab68683cb688f434182ca48332d",
+    "voice": "nova",
+    "model": "gpt-4o-mini-tts"
+  },
+  "slide_15": {
+    "hash": "2b80d9cbbf96f2d830443aaa735a456d",
+    "voice": "nova",
+    "model": "gpt-4o-mini-tts"
+  },
+  "slide_16": {
+    "hash": "62cf7ace138a4fae0ceee034cfbad235",
+    "voice": "nova",
+    "model": "gpt-4o-mini-tts"
+  },
+  "slide_17": {
+    "hash": "53011d2b21d4d92c199f3da7b69fad30",
+    "voice": "nova",
+    "model": "gpt-4o-mini-tts"
+  },
+  "slide_18": {
+    "hash": "42dc5c92fa1a002330c118452c0dd292",
+    "voice": "nova",
+    "model": "gpt-4o-mini-tts"
+  },
+  "slide_19": {
+    "hash": "f82798cf9cf5d9ea471caf03417a58b0",
+    "voice": "nova",
+    "model": "gpt-4o-mini-tts"
+  },
+  "slide_20": {
+    "hash": "fa465518e2d6c54a5526e6e14dff3239",
+    "voice": "nova",
+    "model": "gpt-4o-mini-tts"
+  },
+  "slide_21": {
+    "hash": "320bdd48d243420cf5244534cebbbbd1",
+    "voice": "nova",
+    "model": "gpt-4o-mini-tts"
+  },
+  "slide_22": {
+    "hash": "87eab26a809bba969501220c80a50474",
+    "voice": "nova",
+    "model": "gpt-4o-mini-tts"
+  },
+  "slide_23": {
+    "hash": "7bc484ad506aa72534968b402a19cfd5",
+    "voice": "nova",
+    "model": "gpt-4o-mini-tts"
+  }
+}
