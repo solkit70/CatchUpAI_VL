@@ -19,9 +19,9 @@
 - 실시간 학습 지원: 막힐 때 즉시 질문 → 즉각 답변
 
 **권장 AI 도구** (파일을 직접 읽고 쓸 수 있는 것):
-- Claude Code (VS Code Extension) — 가장 권장
-- Cursor — AI 통합 에디터
-- GitHub Copilot (VS Code)
+- **VS Code + GitHub Copilot** — 가장 보편적, VS Code에 Copilot 확장 설치
+- **VS Code + Claude Code** (Extension) — Claude 기반, 강력한 파일 조작 능력
+- **Cursor** — AI 통합 에디터 (VS Code 기반)
 
 > 웹 기반 AI(ChatGPT 웹, Claude.ai)는 파일을 직접 읽고 쓸 수 없어서 복사/붙여넣기가 필요하고 비효율적입니다.
 

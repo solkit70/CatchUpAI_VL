@@ -149,7 +149,7 @@ VibeLearn AI는:
 기존 AI 활용의 문제는 "복사/붙여넣기 방식의 비효율"입니다.
 
 VibeLearn AI는:
-- Claude Code, Cursor 등 CLI 환경 AI가 파일을 직접 읽고 씀
+- VS Code + GitHub Copilot, Claude Code, Cursor 등 AI가 파일을 직접 읽고 씀
 - Roadmap → WorkLog → 산출물이 모두 같은 환경에서 자동 연결
 - AI가 이전 학습 내용을 기억하고 이어서 진행
 

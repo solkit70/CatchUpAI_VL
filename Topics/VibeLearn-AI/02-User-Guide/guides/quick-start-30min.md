@@ -10,7 +10,7 @@
 
 | 필요 | 있나요? |
 |------|---------|
-| AI 도구 (Claude Code, Cursor 등) | ✅/❌ |
+| AI 도구 (Claude Code, Cursor, VS Code + Copilot 등) | ✅/❌ |
 | 배우고 싶은 주제 (아무거나) | ✅/❌ |
 | GitHub 계정 (선택 — 없어도 됨) | ✅/❌ |
 
@@ -50,9 +50,14 @@ VibeLearn-AI/
 
 ## Step 2: AI 도구에서 폴더 열기 (2분)
 
-**Claude Code (VS Code Extension)**:
+**VS Code + GitHub Copilot** (가장 보편적):
 1. VS Code에서 `VibeLearn-AI/` 폴더 열기
-2. Claude Code 패널 활성화
+2. GitHub Copilot 확장 설치 확인 (Extensions에서 "GitHub Copilot" 검색)
+3. Copilot Chat 패널 (`Ctrl+Alt+I`) 열기
+
+**VS Code + Claude Code** (Extension):
+1. VS Code에서 `VibeLearn-AI/` 폴더 열기
+2. Claude Code 확장 패널 활성화
 
 **Cursor**:
 1. Cursor에서 `VibeLearn-AI/` 폴더 열기
@@ -164,8 +169,8 @@ AI가:
 ## 자주 막히는 곳 & 해결책
 
 ### "AI가 폴더를 만들지 못해요"
-- Claude Code나 Cursor처럼 파일 시스템 접근이 가능한 AI가 필요합니다
-- ChatGPT 웹은 파일을 직접 생성하지 못합니다 → CLI AI 도구 사용 필요
+- VS Code + GitHub Copilot, Claude Code, Cursor처럼 파일 시스템 접근이 가능한 AI 도구가 필요합니다
+- ChatGPT 웹은 파일을 직접 생성하지 못합니다 → 에디터 통합 AI 도구 사용 필요
 
 ### "Roadmap이 너무 길어요"
 - "M1만 먼저 시작하자" → 처음 모듈만 집중하세요

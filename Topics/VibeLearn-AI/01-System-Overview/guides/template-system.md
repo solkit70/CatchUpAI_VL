@@ -211,7 +211,7 @@ A: templates/ 폴더의 파일은 수정하지 않는 것을 권장합니다. �
 A: `templates/` 폴더에 `.en.md` 버전이 있습니다. `roadmap_prompt_template.en.md`, `daily_learning_prompt.en.md` 등을 사용하세요.
 
 **Q: AI가 템플릿 파일을 직접 읽나요?**
-A: Claude Code나 Cursor처럼 파일을 읽을 수 있는 AI라면 "파일명을 읽어줘"라고 하면 됩니다. 읽을 수 없는 AI(ChatGPT 웹)라면 파일 내용을 복사해서 붙여넣어야 합니다. CLI 환경 AI 사용을 강력히 권장합니다.
+A: VS Code + GitHub Copilot, Claude Code, Cursor처럼 파일을 읽을 수 있는 AI 도구라면 "파일명을 읽어줘"라고 하면 됩니다. 읽을 수 없는 AI(ChatGPT 웹)라면 파일 내용을 복사해서 붙여넣어야 합니다. 에디터 통합 AI 도구 사용을 강력히 권장합니다.
 
 ---
 
