@@ -44,13 +44,11 @@ VibeLearn AI의 가장 강력한 특징은 **누구나 같은 방법으로 시�
 
 **사용 방법**:
 ```
-Option A (AI와 대화):
-  "Python을 배우고 싶어. topic_starter.md 작성을 도와줘" → AI가 질문하며 자동 완성
-
-Option B (직접 작성):
-  cp templates/topic_starter.md Python-Basics_topic_starter.md
-  → 파일 열어서 직접 채우기
+"Python 기초를 배우고 싶어." → AI가 topic_starter.md 기반으로 질문하며 자동 수집
+→ 수집 완료 후 AI가 topic_info.md 생성 + 폴더 구조 자동 설정
 ```
+
+사용자가 직접 파일을 열거나 수정할 필요 없음. AI가 대화를 통해 모든 정보를 수집하고 자동으로 처리합니다.
 
 **수집하는 정보**:
 - Topic 이름, 설명, 학습 목적
@@ -60,7 +58,7 @@ Option B (직접 작성):
 - 사전 지식 (필수/권장)
 - 참조 자료
 
-**다음 단계**: 완성된 내용을 `topic_info.md`로 저장 → AI에게 폴더 구조 생성 요청
+**다음 단계**: AI가 자동으로 topic_info.md 생성 → 폴더 구조 설정 → Roadmap 생성으로 이어짐
 
 ---
 
@@ -70,11 +68,11 @@ Option B (직접 작성):
 
 **사용 방법**:
 ```
-1. vl_prompts/roadmap_prompt.md 열기 (이미 Topic 정보가 주입됨)
-2. AI에게 파일 전달:
-   "vl_prompts/roadmap_prompt.md를 읽고 학습 로드맵을 생성해주세요"
-3. AI가 생성한 Roadmap → vl_roadmap/ 폴더에 저장
+Topic 설정 완료 후 AI가 자동으로 Roadmap 생성을 진행합니다.
+별도로 파일을 열거나 명령을 입력할 필요 없음.
 ```
+
+> 내부 동작: AI가 vl_prompts/roadmap_prompt.md(Topic 정보가 주입된 파일)를 읽고 최적화된 Roadmap을 생성하여 vl_roadmap/ 폴더에 저장합니다.
 
 **주입되는 Topic 정보**:
 - Topic 이름 및 설명
@@ -101,9 +99,8 @@ Option B (직접 작성):
 
 **사용 방법**:
 ```
-매일 학습 시작 시:
-"daily_learning_prompt.md를 읽고 오늘의 학습을 도와주세요.
-현재 상황: M1 진행 중, 첫 세션, 3시간 가용"
+매일 학습 시작 시: "오늘 학습을 시작해줘." 한 마디면 충분
+→ AI가 Roadmap + WorkLog를 읽고 현재 진도 파악 → 오늘의 계획 수립
 ```
 
 **AI가 하는 일** (5단계 프로세스):
@@ -186,19 +183,18 @@ AI에게 전달 → Topic에 최적화된 Roadmap 생성
 ## 템플릿 사용 체크리스트
 
 ### Phase 1 시작 전
-- [ ] `topic_starter.md` 기반으로 `topic_info.md` 작성
-- [ ] AI에게 폴더 구조 생성 요청
-- [ ] `vl_prompts/roadmap_prompt.md` 생성 확인
+- [ ] AI에게 "Python 기초를 배우고 싶어." 라고 말하기
+- [ ] AI가 질문에 답하며 Topic 정보 제공
+- [ ] AI가 자동 생성한 폴더 구조 확인
 
 ### Phase 2 시작 전
-- [ ] `vl_prompts/roadmap_prompt.md` 읽기
-- [ ] AI에게 Roadmap 생성 요청
-- [ ] `vl_roadmap/YYYYMMDD_RoadMap_{Topic}.md` 저장 확인
+- [ ] Phase 1 완료 (AI가 자동으로 Roadmap 생성 진행)
+- [ ] 생성된 Roadmap 검토 및 승인
 
 ### Phase 3 매일
-- [ ] `vl_prompts/daily_learning_prompt.md` 읽기 (AI가 자동)
-- [ ] 현재 상황 정보 제공 (모듈, 가용 시간, 최근 WorkLog)
-- [ ] 오늘의 계획 승인 후 시작
+- [ ] AI에게 "오늘 학습을 시작해줘." 라고 말하기
+- [ ] AI가 제시한 오늘의 계획 확인 후 승인
+- [ ] 학습 진행 및 WorkLog 확인
 
 ---
 

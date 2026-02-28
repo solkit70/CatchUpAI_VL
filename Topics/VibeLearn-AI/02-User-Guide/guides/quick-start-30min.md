@@ -1,8 +1,20 @@
 # VibeLearn AI — 30분 Quick Start 가이드
 
 **작성일**: 2026-02-26
-**대상**: VibeLearn AI를 처음 접하는 사람 (GitHub 경험 있다고 가정)
+**대상**: VibeLearn AI를 처음 접하는 사람
 **목표**: 이 가이드를 따라하면 30분 안에 첫 학습 세션을 시작할 수 있다
+
+---
+
+## 핵심 메시지
+
+> **이 방법론을 배울 필요가 없습니다.**
+> "Python 기초를 배우고 싶어"라고 말하는 것만으로 충분합니다.
+> AI가 나머지를 알아서 처리합니다.
+
+**설계 원칙**: VibeLearn AI는 처음 사용자의 진입 장벽을 최소화하도록 설계되었습니다.
+만약 AI가 자동으로 처리하지 않는다면, 설계대로 작동하지 않는 것입니다 →
+[Issues 리포트](https://github.com/solkit70/VibeLearn-AI/issues)로 알려주세요.
 
 ---
 
@@ -10,7 +22,7 @@
 
 | 필요 | 있나요? |
 |------|---------|
-| AI 도구 (Claude Code, Cursor, VS Code + Copilot 등) | ✅/❌ |
+| AI 도구 (VS Code + Copilot, Claude Code, Cursor 등) | ✅/❌ |
 | 배우고 싶은 주제 (아무거나) | ✅/❌ |
 | GitHub 계정 (선택 — 없어도 됨) | ✅/❌ |
 
@@ -38,7 +50,7 @@ cd VibeLearn-AI
 다음 파일들이 있어야 합니다:
 ```
 VibeLearn-AI/
-├── README.md         ← 방법론 전체 설명
+├── README.md
 ├── GETTING_STARTED.md
 └── templates/
     ├── topic_starter.md
@@ -48,7 +60,7 @@ VibeLearn-AI/
 
 ---
 
-## Step 2: AI 도구에서 폴더 열기 (2분)
+## Step 2: AI 도구에서 `VibeLearn-AI/` 폴더 열기 (2분)
 
 **VS Code + GitHub Copilot** (가장 보편적):
 1. VS Code에서 `VibeLearn-AI/` 폴더 열기
@@ -70,67 +82,27 @@ claude
 
 ---
 
-## Step 3: 배우고 싶은 주제 말하기 (3분)
+## Step 3: 배우고 싶은 주제 말하기 (20분)
 
-AI에게 다음을 말하세요:
-
-```
-"[주제]를 배우고 싶어.
-VibeLearn AI 방법론으로 시작을 도와줘.
-
-현재 위치: [VibeLearn-AI 폴더 경로]
-예상 기간: [기간]"
-```
-
-**실제 예시**:
-```
-"Python 기초를 배우고 싶어.
-VibeLearn AI 방법론으로 시작을 도와줘.
-
-현재 위치: ~/VibeLearn-AI
-예상 기간: 2주"
-```
-
-**AI가 하는 일**:
-- 몇 가지 질문으로 학습 정보 수집 (목표, 환경 등)
-- `Topics/Python-Basics/` 폴더 구조 자동 생성
-- `topic_info.md` 작성
-- 다음 단계 안내
-
----
-
-## Step 4: Roadmap 생성 (10분)
-
-AI가 폴더를 만들면, 이어서 말하세요:
+AI에게 이렇게 말하세요:
 
 ```
-"Roadmap을 생성해줘."
+"Python 기초를 배우고 싶어."
 ```
 
-AI가 자동으로:
-1. `Topics/Python-Basics/vl_prompts/roadmap_prompt.md` 읽기
-2. 학습 기간 적정성 검토 + 피드백
-3. 모듈별 Roadmap 생성
-4. `vl_roadmap/20260226_RoadMap_Python-Basics.md` 저장
+**이게 전부입니다.** 나머지는 AI가 알아서 합니다:
 
-**소요 시간**: 약 5-10분
+1. 몇 가지 질문으로 학습 정보 수집 (목표, 기간, 환경 등)
+2. `Topics/Python-Basics/` 폴더 구조 자동 생성
+3. Roadmap 자동 생성 → `vl_roadmap/` 저장
 
----
-
-## Step 5: 첫 학습 세션 시작 (10분)
-
-Roadmap이 완성되면:
+AI가 모든 설정을 마치면 이렇게 말하세요:
 
 ```
-"M1 학습을 시작해줘.
-사용 가능한 시간: 2시간"
+"M1 학습을 시작해줘."
 ```
 
-AI가:
-1. M1 Roadmap 내용 확인
-2. 오늘의 학습 계획 수립
-3. 계획 제시 → 당신의 승인 대기
-4. 승인 후 → `vl_worklog/20260226_M1_Python-Basics.md` 생성하며 학습 시작
+AI가 첫 번째 모듈 계획을 수립하고 학습을 시작합니다. 가용 시간이나 다른 정보가 필요하면 AI가 직접 물어봅니다.
 
 ---
 
@@ -139,30 +111,22 @@ AI가:
 ```
 00:00 ─── Step 1: 저장소 받기 (5분)
 00:05 ─── Step 2: AI 도구에서 폴더 열기 (2분)
-00:07 ─── Step 3: 주제 말하기 → 폴더 생성 (3분)
-00:10 ─── Step 4: Roadmap 생성 (10분)
-00:20 ─── Step 5: 첫 학습 계획 수립 (10분)
-00:30 ─── 첫 학습 세션 시작! 🎉
+00:07 ─── Step 3: "Python 기초를 배우고 싶어." 한 마디 (20분)
+           └── AI가 자동으로: 질문 수집 → 폴더 생성 → Roadmap 생성
+00:27 ─── "M1 학습을 시작해줘." → 첫 학습 세션 시작! 🎉
 ```
 
 ---
 
-## 다음 학습부터는 이렇게 시작하세요
+## 다음 날부터는 이렇게만 하세요
 
-매일 학습 시작 시:
+매일 AI 도구를 열고 `VibeLearn-AI/` 폴더에서:
 
 ```
-"오늘 학습을 시작해줘.
-Topic: Python-Basics
-현재 모듈: M2
-가용 시간: 1.5시간
-최근 WorkLog: vl_worklog/20260226_M1_Python-Basics.md"
+"오늘 학습을 시작해줘."
 ```
 
-AI가:
-1. Roadmap + 이전 WorkLog 읽기
-2. 오늘의 계획 수립
-3. 계획 승인 후 학습 시작
+AI가 Roadmap과 이전 WorkLog를 읽어 어디까지 왔는지 파악하고, 자동으로 이어서 진행합니다. 다른 정보를 입력할 필요가 없습니다.
 
 ---
 
@@ -172,25 +136,37 @@ AI가:
 - VS Code + GitHub Copilot, Claude Code, Cursor처럼 파일 시스템 접근이 가능한 AI 도구가 필요합니다
 - ChatGPT 웹은 파일을 직접 생성하지 못합니다 → 에디터 통합 AI 도구 사용 필요
 
-### "Roadmap이 너무 길어요"
-- "M1만 먼저 시작하자" → 처음 모듈만 집중하세요
-- 모든 모듈을 처음부터 완벽히 이해할 필요 없습니다
-
 ### "WorkLog를 어디에 써야 하나요?"
-- AI가 자동으로 만들어줍니다
-- 직접 편집하고 싶으면 VS Code에서 `vl_worklog/` 폴더의 파일을 열어 수정하세요
+- AI가 자동으로 만들어줍니다. 직접 쓸 필요 없습니다
 
 ### "내 진도가 맞는지 모르겠어요"
-- Roadmap의 DoD(Definition of Done) 체크리스트를 확인하세요
-- 체크가 다 되면 다음 모듈로 이동
+- AI에게 "지금까지 어디까지 했어?"라고 물어보세요. 알아서 파악해줍니다
+
+---
+
+## 익숙해지면: 품질 높이는 팁
+
+처음에는 짧은 한 마디로 시작하는 것이 최선입니다.
+VibeLearn AI에 익숙해지면 더 상세한 Context를 제공하여 품질을 높일 수 있습니다.
+
+```
+# 기본 (처음 사용자)
+"Python 기초를 배우고 싶어."
+
+# 고급 (익숙해진 후)
+"Python 기초를 배우고 싶어.
+배경: JavaScript 경험 2년, 데이터 분석 목적, 3주 가용, 매일 2시간."
+```
+
+더 많은 Context → AI가 더 정확한 Roadmap + 맞춤 학습 계획 생성
 
 ---
 
 ## 더 자세히 알고 싶다면
 
-- [VibeLearn AI란?](../../01-System-Overview/concepts/what-is-vibelearn-ai.md) — 시스템 전체 개념
-- [4단계 워크플로우](../../01-System-Overview/concepts/workflow-diagram.md) — 전체 프로세스 이해
-- [템플릿 시스템 가이드](../../01-System-Overview/guides/template-system.md) — 각 파일의 역할
+- [VibeLearn AI란?](../../01-System-Overview/concepts/what-is-vibelearn-ai.md)
+- [4단계 워크플로우](../../01-System-Overview/concepts/workflow-diagram.md)
+- [FAQ](faq.md)
 - [GETTING_STARTED.md](../../../../GETTING_STARTED.md) — 공식 상세 가이드
 
 ---
