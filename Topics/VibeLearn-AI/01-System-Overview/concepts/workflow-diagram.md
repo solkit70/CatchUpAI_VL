@@ -1,4 +1,6 @@
 # VibeLearn AI — 4단계 워크플로우 다이어그램
+> **[-> English Version](workflow-diagram.en.md)**
+
 
 **작성일**: 2026-02-26
 **모듈**: M1 - 시스템 분석 & 개념 정립

@@ -1,4 +1,6 @@
 # VibeLearn AI — 템플릿 시스템 완전 가이드
+> **[-> English Version](template-system.en.md)**
+
 
 **작성일**: 2026-02-26
 **모듈**: M1 - 시스템 분석 & 개념 정립

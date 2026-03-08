@@ -1,4 +1,6 @@
 # VibeLearn AI — 핵심 용어 사전 (Key Concepts)
+> **[-> English Version](key-concepts.en.md)**
+
 
 **작성일**: 2026-02-26
 **모듈**: M1 - 시스템 분석 & 개념 정립

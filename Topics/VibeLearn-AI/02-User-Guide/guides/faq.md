@@ -1,4 +1,6 @@
 # VibeLearn AI — FAQ & 트러블슈팅
+> **[-> English Version](faq.en.md)**
+
 
 **작성일**: 2026-02-26
 **대상**: VibeLearn AI를 처음 사용하거나 막힌 부분이 있는 사람

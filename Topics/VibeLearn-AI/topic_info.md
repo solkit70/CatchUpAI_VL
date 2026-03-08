@@ -1,4 +1,6 @@
 # VibeLearn AI Topic 정보
+> **[-> English Version](topic_info.en.md)**
+
 
 **방법론**: VibeLearn AI v2.0
 **생성일**: 2026-02-26

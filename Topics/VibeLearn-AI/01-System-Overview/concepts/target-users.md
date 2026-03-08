@@ -1,4 +1,6 @@
 # VibeLearn AI — 타겟 사용자 페르소나 & 차별화 분석
+> **[-> English Version](target-users.en.md)**
+
 
 **작성일**: 2026-02-26
 **모듈**: M1 - 시스템 분석 & 개념 정립

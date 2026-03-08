@@ -1,4 +1,6 @@
 # 케이스 스터디: Clearly-BRD-PRD
+> **[-> English Version](clearly-case.en.md)**
+
 
 > **"VibeLearn AI로 배운 예시 — Clearly 앱으로 BRD/PRD 작성하기"**
 

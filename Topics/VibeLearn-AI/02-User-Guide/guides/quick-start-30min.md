@@ -1,4 +1,6 @@
 # VibeLearn AI — 30분 Quick Start 가이드
+> **[-> English Version](quick-start-30min.en.md)**
+
 
 **작성일**: 2026-02-26
 **대상**: VibeLearn AI를 처음 접하는 사람
