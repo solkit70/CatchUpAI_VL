@@ -2,6 +2,20 @@
 
 M1~M5에서 배운 기술을 통합하여 "VibeLearn AI 소개" 유튜브 영상을 완성한 Capstone 프로젝트입니다.
 
+## 📖 학습 순서
+
+이 폴더를 처음 여는 분은 아래 순서대로 읽으세요.
+
+| 순서 | 문서 | 설명 |
+|------|------|------|
+| 1 | [concepts/video-production-flow.md](concepts/video-production-flow.md) | 영상 기획→제작→렌더링 전체 플로우 |
+| 2 | [guides/storyboard.md](guides/storyboard.md) | 장면별 스토리보드 (5개 장면 구성) |
+| 최종 | `my-first-video/out/VibeLearnIntro_final.mp4` | 완성된 46초 소개 영상 |
+
+**이전 모듈**: [05-Rendering](../05-Rendering/) | **다음 모듈**: 없음 (Capstone 완료)
+
+---
+
 ## 영상 정보
 
 | 항목 | 내용 |

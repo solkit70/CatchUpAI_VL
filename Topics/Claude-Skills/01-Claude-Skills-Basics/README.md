@@ -7,6 +7,22 @@
 
 ---
 
+## 📖 학습 순서
+
+이 폴더를 처음 여는 분은 아래 순서대로 읽으세요.
+
+| 순서 | 문서 | 설명 |
+|------|------|------|
+| 1 | [concepts/claude-skills-overview.md](concepts/claude-skills-overview.md) | Claude Skills 전체 개념 정리 (정의, 구조, 작동 방식) |
+| 2 | [references/useful-links.md](references/useful-links.md) | 공식 문서 및 참조 링크 모음 |
+| 3 | [examples/hello-skill/SKILL.md](examples/hello-skill/SKILL.md) | Hello World Skill 정의 파일 (첫 Skill 실습) |
+| 4 | [examples/hello-skill/README.md](examples/hello-skill/README.md) | Hello World Skill 학습 가이드 (219줄 상세 설명) |
+| 5 | [guides/cua-vl-skill-vs-repo.md](guides/cua-vl-skill-vs-repo.md) | CUA_VL Skill vs Repository 비교 분석 (최종 결론 도출) |
+
+**이전 모듈**: 없음 (첫 번째 모듈) | **다음 모듈**: [02-Skill-A-CUA-VL](../02-Skill-A-CUA-VL/)
+
+---
+
 ## 📚 모듈 개요
 
 이 모듈에서는 Claude Skills의 기본 개념을 이해하고, Skill의 구조와 작동 원리를 학습합니다. 또한 CUA_VL 방법론을 Claude Skill로 만들 것인지 GitHub Repository로 유지할 것인지 판단하는 기초 지식을 습득합니다.

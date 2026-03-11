@@ -6,6 +6,22 @@
 
 ---
 
+## 📖 학습 순서
+
+이 폴더를 처음 여는 분은 아래 순서대로 읽으세요.
+
+| 순서 | 문서 | 설명 |
+|------|------|------|
+| 1 | [concepts/what-is-clearly.md](concepts/what-is-clearly.md) | Clearly란 무엇인가 (목적, 핵심 기능, 워크플로우) |
+| 2 | [concepts/brd-vs-prd.md](concepts/brd-vs-prd.md) | BRD vs PRD 비교 (차이점, 사용 시점) |
+| 3 | [concepts/vibe-coding-role.md](concepts/vibe-coding-role.md) | Vibe Coding에서 요구사항 문서의 역할 |
+| 4 | [guides/clearly-quick-start.md](guides/clearly-quick-start.md) | Clearly 빠른 시작 가이드 (첫 BRD 생성까지) |
+| 5 | [guides/clearly-usage-guide.md](guides/clearly-usage-guide.md) | 단계별 사용법 상세 가이드 및 팁 |
+
+**이전 모듈**: 없음 (첫 번째 모듈) | **다음 모듈**: [02-CatchUpAI-BRD-PRD](../02-CatchUpAI-BRD-PRD/)
+
+---
+
 ## 📚 학습 목표
 
 - [x] Clearly 앱의 목적과 핵심 가치를 설명할 수 있다

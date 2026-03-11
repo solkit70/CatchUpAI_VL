@@ -2,6 +2,20 @@
 
 Remotion Agent Skills를 활용하여 자연어 프롬프트로 영상을 생성하고, 반복 개선 워크플로우를 학습한 모듈입니다.
 
+## 📖 학습 순서
+
+이 폴더를 처음 여는 분은 아래 순서대로 읽으세요.
+
+| 순서 | 문서 | 설명 |
+|------|------|------|
+| 1 | [concepts/skills-overview.md](concepts/skills-overview.md) | Remotion Agent Skills 개념 및 아키텍처 |
+| 2 | [concepts/prompt-tips.md](concepts/prompt-tips.md) | 효과적인 프롬프트 작성법 (AI 영상 생성 최적화) |
+| 3 | [guides/skills-workflow.md](guides/skills-workflow.md) | Skills 워크플로우 가이드 (기본 생성 → 반복 개선) |
+
+**이전 모듈**: [03-Motion-Graphics](../03-Motion-Graphics/) | **다음 모듈**: [05-Rendering](../05-Rendering/)
+
+---
+
 ## 학습 요약
 
 | 항목 | 내용 |

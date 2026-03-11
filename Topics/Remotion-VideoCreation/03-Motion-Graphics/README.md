@@ -1,5 +1,22 @@
 # M3: 모션그래픽 컴포넌트
 
+## 📖 학습 순서
+
+이 폴더를 처음 여는 분은 아래 순서대로 읽으세요.
+
+| 순서 | 문서 | 설명 |
+|------|------|------|
+| 1 | [concepts/reusable-components.md](concepts/reusable-components.md) | 재사용 가능한 컴포넌트 설계 (Zod 스키마, Props 패턴) |
+| 2 | [concepts/css-in-js-for-video.md](concepts/css-in-js-for-video.md) | 영상에서의 CSS 스타일링 방법 |
+| 3 | [guides/motion-patterns.md](guides/motion-patterns.md) | 자주 쓰는 모션 패턴 모음 (frame-delay, SVG 게이지 등) |
+| 4 | [examples/title-card/README.md](examples/title-card/README.md) | TitleCard 컴포넌트 예시 |
+| 5 | [examples/counter-infographic/README.md](examples/counter-infographic/README.md) | CounterInfoGraphic 컴포넌트 예시 |
+| 6 | [examples/sequential-list/README.md](examples/sequential-list/README.md) | SequentialList 컴포넌트 예시 |
+
+**이전 모듈**: [02-Core-Basics](../02-Core-Basics/) | **다음 모듈**: [04-Skills](../04-Skills/)
+
+---
+
 ## 개요
 
 Remotion으로 재사용 가능한 모션그래픽 컴포넌트 3종을 제작합니다.

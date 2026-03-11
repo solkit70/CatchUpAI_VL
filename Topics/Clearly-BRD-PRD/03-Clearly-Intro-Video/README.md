@@ -7,6 +7,23 @@
 
 ---
 
+## 📖 학습 순서
+
+이 폴더를 처음 여는 분은 아래 순서대로 읽으세요.
+
+| 순서 | 문서 | 설명 |
+|------|------|------|
+| 1 | [clearly-intro-script-kr.md](clearly-intro-script-kr.md) | KR 영상 스크립트 원본 (나레이션 포함, 27 슬라이드) |
+| 2 | [clearly-intro-script-kr - slides.md](clearly-intro-script-kr%20-%20slides.md) | KR Deckset 슬라이드 파일 (TTS 소스) |
+| 3 | [clearly-intro-script-en.md](clearly-intro-script-en.md) | EN 영상 스크립트 원본 |
+| 4 | [clearly-intro-script-en - slides.md](clearly-intro-script-en%20-%20slides.md) | EN Deckset 슬라이드 파일 |
+| 5 | [remotion-kr-plan.md](remotion-kr-plan.md) | Remotion을 활용한 KR 영상 제작 계획 |
+| 최종 | `clearly-intro-kr.mp4` / `clearly-intro-en.mp4` | 완성된 KR/EN 소개 영상 |
+
+**이전 모듈**: [02-CatchUpAI-BRD-PRD](../02-CatchUpAI-BRD-PRD/) | **다음 모듈**: 없음 (마지막 모듈)
+
+---
+
 ## 개요
 
 M1 (Clearly 개념 학습), M2 (BRD/PRD 실습)에서 얻은 모든 학습 산출물을 활용하여 **Clearly 앱을 소개하는 YouTube 영상**을 제작합니다.

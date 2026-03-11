@@ -2,6 +2,20 @@
 
 Remotion CLI를 사용하여 영상을 MP4로 렌더링하고, YouTube 업로드에 최적화된 설정을 학습한 모듈입니다.
 
+## 📖 학습 순서
+
+이 폴더를 처음 여는 분은 아래 순서대로 읽으세요.
+
+| 순서 | 문서 | 설명 |
+|------|------|------|
+| 1 | [concepts/rendering-basics.md](concepts/rendering-basics.md) | CRF, 비트레이트, 코덱 개념 (품질 vs 파일 크기) |
+| 2 | [guides/youtube-render-settings.md](guides/youtube-render-settings.md) | YouTube 최적 렌더링 설정 (8Mbps, H.264) |
+| 3 | [examples/render-comparison/comparison-notes.md](examples/render-comparison/comparison-notes.md) | 품질별 렌더링 비교 메모 (실제 테스트 결과) |
+
+**이전 모듈**: [04-Skills](../04-Skills/) | **다음 모듈**: [06-YouTube-Project](../06-YouTube-Project/)
+
+---
+
 ## 학습 요약
 
 | 항목 | 내용 |

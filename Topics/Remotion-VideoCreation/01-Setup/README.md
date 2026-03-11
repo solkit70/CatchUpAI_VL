@@ -1,5 +1,18 @@
 # M1 - 환경 설정 & 첫 영상
 
+## 📖 학습 순서
+
+이 폴더를 처음 여는 분은 아래 순서대로 읽으세요.
+
+| 순서 | 문서 | 설명 |
+|------|------|------|
+| 1 | [concepts/remotion-overview.md](concepts/remotion-overview.md) | Remotion 개념 개요 (React로 영상 만들기) |
+| 2 | [guides/setup-guide.md](guides/setup-guide.md) | 환경 설정 가이드 (Node.js, 프로젝트 생성, Studio 실행) |
+
+**이전 모듈**: 없음 (첫 번째 모듈) | **다음 모듈**: [02-Core-Basics](../02-Core-Basics/)
+
+---
+
 ## 개요
 Remotion 개발 환경을 구축하고, Hello World 템플릿을 수정하여 첫 영상을 만드는 모듈입니다.
 

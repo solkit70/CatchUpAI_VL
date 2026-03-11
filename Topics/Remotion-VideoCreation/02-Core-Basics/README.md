@@ -6,6 +6,19 @@
 
 ---
 
+## 📖 학습 순서
+
+이 폴더를 처음 여는 분은 아래 순서대로 읽으세요.
+
+| 순서 | 문서 | 설명 |
+|------|------|------|
+| 1 | [concepts/animation-basics.md](concepts/animation-basics.md) | 핵심 애니메이션 API 개념 (interpolate, spring, Sequence) |
+| 2 | [guides/animation-cheatsheet.md](guides/animation-cheatsheet.md) | 애니메이션 치트시트 (자주 쓰는 패턴 모음) |
+
+**이전 모듈**: [01-Setup](../01-Setup/) | **다음 모듈**: [03-Motion-Graphics](../03-Motion-Graphics/)
+
+---
+
 ## 학습 내용 요약
 
 Remotion Core의 3대 핵심 API를 실습을 통해 학습했습니다:

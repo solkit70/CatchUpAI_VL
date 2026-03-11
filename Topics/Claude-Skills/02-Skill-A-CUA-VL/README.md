@@ -8,6 +8,21 @@
 
 ---
 
+## 📖 학습 순서
+
+이 폴더를 처음 여는 분은 아래 순서대로 읽으세요.
+
+| 순서 | 문서 | 설명 |
+|------|------|------|
+| 1 | [concepts/cua-vl-skill-design.md](concepts/cua-vl-skill-design.md) | CUA_VL Skill 설계 문서 (아키텍처, 기능 정의) |
+| 2 | [examples/cua-vl-skill/SKILL.md](examples/cua-vl-skill/SKILL.md) | 실제 Skill 코드 (400+ 줄) |
+| 3 | [examples/cua-vl-skill/README.md](examples/cua-vl-skill/README.md) | Skill 사용 가이드 |
+| 4 | [guides/user-guide.md](guides/user-guide.md) | 사용자 가이드 (일반 사용자용) |
+
+**이전 모듈**: [01-Claude-Skills-Basics](../01-Claude-Skills-Basics/) | **다음 모듈**: [03-Skill-B-YouTube-MD](../03-Skill-B-YouTube-MD/)
+
+---
+
 ## 📌 모듈 개요
 
 이 모듈에서는 **CUA_VL 학습 방법론을 지원하는 Claude Skill**을 설계하고 구현했습니다.

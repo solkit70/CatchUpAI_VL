@@ -7,6 +7,21 @@
 
 ---
 
+## 📖 학습 순서
+
+이 폴더를 처음 여는 분은 아래 순서대로 읽으세요.
+
+| 순서 | 문서 | 설명 |
+|------|------|------|
+| 1 | [guides/user-guide.md](guides/user-guide.md) | 사용 가이드 (환경 설정, 사용법 전체) |
+| 2 | [examples/youtube-transcript-test.py](examples/youtube-transcript-test.py) | 자막 추출 테스트 스크립트 (YouTube API 사용법) |
+| 3 | [examples/md-generator.py](examples/md-generator.py) | MD 생성 메인 스크립트 (Claude API + 자막 파싱) |
+| 4 | [examples/youtube-to-md-skill/SKILL.md](examples/youtube-to-md-skill/SKILL.md) | Claude Skill 정의 (자동화 Skill 완성본) |
+
+**이전 모듈**: [02-Skill-A-CUA-VL](../02-Skill-A-CUA-VL/) | **다음 모듈**: [04-Skill-C-Video-Edit](../04-Skill-C-Video-Edit/)
+
+---
+
 ## 📚 모듈 개요
 
 이 모듈에서는 YouTube 영상을 구조화된 마크다운 문서로 자동 변환하는 Skill을 개발했습니다. AI Memory 360 Tour 행사 준비를 위한 실전 프로젝트로, YouTube 자막 추출, AI 요약, 마크다운 생성을 자동화했습니다.

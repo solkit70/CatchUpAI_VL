@@ -7,6 +7,23 @@
 
 ---
 
+## 📖 학습 순서
+
+이 폴더를 처음 여는 분은 아래 순서대로 읽으세요.
+
+| 순서 | 문서 | 설명 |
+|------|------|------|
+| 1 | [notes/wizard-experience.md](notes/wizard-experience.md) | AI Wizard 사용 경험 상세 기록 (3 Session 과정) |
+| 2 | [brd/catchupai-2026-brd-v3.md](brd/catchupai-2026-brd-v3.md) | BRD 최종본 v3 (Catch Up AI 2026 홈페이지) |
+| 3 | [prd/catchupai-2026-prd-v2.md](prd/catchupai-2026-prd-v2.md) | PRD 최종본 v2 (12개 섹션, 상세 사양) |
+| 4 | [claude-code-output/REFERENCE_DOCUMENT.md](claude-code-output/REFERENCE_DOCUMENT.md) | BRD/PRD 통합 참조 문서 (Claude Code Output) |
+| 5 | [claude-code-output/CLAUDE.md](claude-code-output/CLAUDE.md) | Claude Code 프로젝트 지시사항 (자동 생성) |
+| 6 | [notes/clearly-bug-report.md](notes/clearly-bug-report.md) | Clearly 앱 버그 리포트 4건 (실사용 QA 기록) |
+
+**이전 모듈**: [01-Clearly-Overview](../01-Clearly-Overview/) | **다음 모듈**: [03-Clearly-Intro-Video](../03-Clearly-Intro-Video/)
+
+---
+
 ## 개요
 
 Clearly 앱(https://www.clearlyreqs.com/)의 AI Wizard를 활용하여 "Catch Up AI 2026 Homepage" 프로젝트의 BRD(Business Requirements Document)와 PRD(Product Requirements Document)를 생성하고, Choose Output Tool(Claude Code)까지 전체 워크플로우를 완료한 실습 기록입니다.

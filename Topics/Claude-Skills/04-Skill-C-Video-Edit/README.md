@@ -7,6 +7,24 @@
 
 ---
 
+## 📖 학습 순서
+
+이 폴더를 처음 여는 분은 아래 순서대로 읽으세요.
+
+| 순서 | 문서 | 설명 |
+|------|------|------|
+| 1 | [examples/silence-detection.py](examples/silence-detection.py) | 무음 구간 감지 스크립트 (pydub 기초) |
+| 2 | [examples/silence-remover.py](examples/silence-remover.py) | 무음 구간 제거 스크립트 |
+| 3 | [examples/filler-detection.py](examples/filler-detection.py) | 필러 단어 감지 스크립트 (Whisper 사용) |
+| 4 | [examples/video-editor.py](examples/video-editor.py) | 통합 편집 스크립트 (무음 + 필러 동시 제거) |
+| 5 | [examples/video-edit-skill/SKILL.md](examples/video-edit-skill/SKILL.md) | Claude Skill 정의 (자동화 완성본) |
+| 6 | [AI4PKM_Video_Cleaning/SKILL.md](AI4PKM_Video_Cleaning/SKILL.md) | 프로덕션 수준 Skill (실제 배포용) |
+| 7 | [Practice_Review/](Practice_Review/) | 실습 워크로그 및 비교 분석 문서 모음 |
+
+**이전 모듈**: [03-Skill-B-YouTube-MD](../03-Skill-B-YouTube-MD/) | **다음 모듈**: [05-Integration-Deploy](../05-Integration-Deploy/)
+
+---
+
 ## 📚 모듈 개요
 
 이 모듈에서는 영상/오디오 파일에서 무음 구간과 필러 단어를 자동으로 제거하는 Skill을 개발합니다.
