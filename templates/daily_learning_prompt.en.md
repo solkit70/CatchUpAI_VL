@@ -224,7 +224,13 @@ Based on the information above, please create today's learning plan according to
 
 **Tasks**:
 1.  Organize output folders.
-2.  Write/update README.md.
+2.  **Write/update module README.md** — must include:
+    -   Module header (number, title, status, estimated learning time)
+    -   All documents in this folder listed **in learning order** with numbers
+    -   **Relative path links** for each document (e.g., `[concepts/overview.md](concepts/overview.md)`)
+    -   A 1-line description per document (what the learner will learn)
+    -   Links to previous/next module
+    -   Update README.md whenever a new document is added
 3.  Finalize WorkLog.
 4.  Write Daily Retrospective.
 
@@ -268,7 +274,7 @@ Based on the information above, please create today's learning plan according to
 **Outputs**:
 - [ ] Create {File 1}
 - [ ] Write {File 2}
-- [ ] Update README.md
+- [ ] Update README.md (document list in learning order + links included)
 
 **Documentation**:
 - [ ] Write WorkLog

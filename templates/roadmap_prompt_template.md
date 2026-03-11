@@ -273,7 +273,13 @@ AI 시대에 맞는 평가 기준 (3-5문항):
 ##### 5. 산출물 중심
 - 매 모듈마다 폴더 생성 (`01-xxx/`, `02-xxx/`)
 - **"교과서 품질"**: 다른 학습자가 이것만으로 학습 가능한 수준
-- README.md는 반드시 포함 (개요, 사용법, 예제)
+- **README.md는 반드시 포함** — 아래 내용을 갖춰야 함:
+  - 모듈 번호/제목/상태/예상 학습 시간 헤더
+  - 이 폴더의 모든 문서를 **학습 순서대로** 번호 매겨 나열
+  - 각 문서에 **상대 경로 링크** (예: `[concepts/overview.md](concepts/overview.md)`)
+  - 각 문서마다 1줄 설명 (무엇을 배우는 문서인지)
+  - 이전/다음 모듈 링크
+  - **처음 이 폴더를 여는 사람이 README만 보고 순서대로 학습 가능한 수준**
 
 ##### 6. 환경 고려
 - 사용자가 입력한 OS/도구에 맞는 명령어 사용
@@ -480,7 +486,7 @@ WorkLog 내에 작성:
 #### 산출물
 ```
 01-{모듈명}/
-├── README.md
+├── README.md              ← 학습 순서 안내 + 전체 문서 링크 (필수)
 ├── concepts/
 │   └── concept1.md
 ├── examples/
@@ -488,6 +494,23 @@ WorkLog 내에 작성:
 └── guides/
     └── guide1.md
 ```
+
+> **README.md 작성 기준**: 이 폴더를 처음 여는 학습자가 README만 보고
+> 어떤 문서를 어떤 순서로 읽어야 하는지 즉시 알 수 있어야 합니다.
+>
+> **필수 포함 내용**:
+> 1. 모듈 헤더 (번호, 제목, 상태, 예상 학습 시간)
+> 2. 학습 순서대로 번호 매긴 문서 목록 + 상대 경로 링크 + 1줄 설명
+> 3. 이전/다음 모듈 링크
+>
+> **예시**:
+> ```markdown
+> ## 📚 학습 순서
+> 1. [concepts/overview.md](concepts/overview.md) — 전체 개념 개요
+> 2. [concepts/detail.md](concepts/detail.md) — 핵심 개념 상세
+> 3. [examples/hello.py](examples/hello.py) — 첫 번째 실습
+> 4. [guides/setup.md](guides/setup.md) — 환경 설정 가이드
+> ```
 
 #### Definition of Done
 - [ ] 항목 1

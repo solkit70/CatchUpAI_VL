@@ -83,6 +83,13 @@ Provide a general response in the following situations (VibeLearn AI inactive):
 2.  **Textbook-Quality Outputs**: Create an `NN-ModuleName/` folder for each module
     -   Minimum: README.md, concepts/, examples/
     -   At a level that another learner can follow immediately
+    -   **Required README.md contents** (always include when creating a module folder):
+        -   Module number/title/status/estimated learning time header
+        -   All documents in this folder listed **in learning order** with numbers
+        -   **Relative path links** for each document (e.g., `[concepts/overview.md](concepts/overview.md)`)
+        -   A 1-line description per document (what the learner will learn)
+        -   Links to previous/next module
+        -   At a level where someone opening this folder for the first time can follow the learning order just by reading the README
 3.  **AI-Era Evaluation Criteria**: Conceptual understanding + ability to effectively instruct an AI > memorization
 4.  **Record Every Session**: Write WorkLog in real-time, complete Daily Retrospective every day
 5.  **Naming Conventions**:

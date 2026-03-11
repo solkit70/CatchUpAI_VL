@@ -273,7 +273,13 @@ When designing practical exercises, you **must** adhere to the following princip
 ##### 5. Output-centric
 -   Create a folder for each module (`01-xxx/`, `02-xxx/`).
 -   **"Textbook quality"**: At a level that another learner can learn from this alone.
--   README.md must be included (overview, usage, examples).
+-   **README.md must be included** — it must contain the following:
+    -   Module number/title/status/estimated learning time header
+    -   All documents in this folder listed **in learning order** with numbers
+    -   **Relative path links** for each document (e.g., `[concepts/overview.md](concepts/overview.md)`)
+    -   A 1-line description per document (what the learner will learn)
+    -   Links to previous/next module
+    -   **At a level where someone opening this folder for the first time can follow the learning order just by reading the README**
 
 ##### 6. Consider the Environment
 -   Use commands appropriate for the OS/tools entered by the user.
@@ -480,7 +486,7 @@ Generate the roadmap in the following Markdown format and save it to `vl_roadmap
 #### Outputs
 ```
 01-{ModuleName}/
-├── README.md
+├── README.md              ← Learning order guide + links to all documents (required)
 ├── concepts/
 │   └── concept1.md
 ├── examples/
@@ -488,6 +494,23 @@ Generate the roadmap in the following Markdown format and save it to `vl_roadmap
 └── guides/
     └── guide1.md
 ```
+
+> **README.md writing standard**: A learner opening this folder for the first time should immediately know
+> which documents to read and in what order, just by reading the README.
+>
+> **Required contents**:
+> 1. Module header (number, title, status, estimated learning time)
+> 2. Numbered document list in learning order + relative path links + 1-line descriptions
+> 3. Links to previous/next module
+>
+> **Example**:
+> ```markdown
+> ## 📚 Learning Order
+> 1. [concepts/overview.md](concepts/overview.md) — Overview of all concepts
+> 2. [concepts/detail.md](concepts/detail.md) — Core concept details
+> 3. [examples/hello.py](examples/hello.py) — First practice exercise
+> 4. [guides/setup.md](guides/setup.md) — Environment setup guide
+> ```
 
 #### Definition of Done
 - [ ] Item 1
