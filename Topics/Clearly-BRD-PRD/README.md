@@ -99,7 +99,7 @@ Clearly-BRD-PRD/
 |------|------|------|
 | 🇰🇷 한국어 | [AI가 질문 몇 가지로 BRD/PRD를 만들어준다? \| Clearly 앱 실사용 후기](https://youtu.be/crK2aO_uXkQ?si=pPe0YaNHMnTte_b7) | 16:28 |
 | 🇺🇸 영어 | [AI Writes Your BRD & PRD in Minutes? \| Honest Clearly App Review](https://youtu.be/KwQOpU__BKo?si=J2A_irhEPO_tCYPf) | 13:48 |
-
+ 
 ---
 
 ## 핵심 인사이트

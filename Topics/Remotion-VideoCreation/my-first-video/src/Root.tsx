@@ -17,6 +17,10 @@ import { ClearlyIntroKr } from "./clearly-kr/ClearlyIntroKr";
 import { TOTAL_FRAMES as KR_TOTAL_FRAMES } from "./clearly-kr/slideData";
 import { ClearlyIntroEn } from "./clearly-en/ClearlyIntroEn";
 import { TOTAL_FRAMES as EN_TOTAL_FRAMES } from "./clearly-en/slideData";
+import { VibeLearnIntroKR } from "./vibelearn-kr/VibeLearnIntroKR";
+import { TOTAL_FRAMES as VL_KR_TOTAL_FRAMES } from "./vibelearn-kr/data";
+import { VibeLearnIntroKRv2 } from "./vibelearn-kr-v2/VibeLearnIntroKRv2";
+import { TOTAL_FRAMES as VL_KR_V2_TOTAL_FRAMES } from "./vibelearn-kr-v2/data";
 
 // Each <Composition> is an entry in the sidebar!
 
@@ -275,6 +279,23 @@ export const RemotionRoot: React.FC = () => {
         id="ClearlyIntroEn"
         component={ClearlyIntroEn}
         durationInFrames={EN_TOTAL_FRAMES}
+        fps={30}
+        width={1920}
+        height={1080}
+      />
+      <Composition
+        id="VibeLearnIntroKR"
+        component={VibeLearnIntroKR}
+        durationInFrames={VL_KR_TOTAL_FRAMES}
+        fps={30}
+        width={1920}
+        height={1080}
+      />
+      {/* VibeLearn AI KR v2 — 더 동적인 효과 버전 */}
+      <Composition
+        id="VibeLearnIntroKRv2"
+        component={VibeLearnIntroKRv2}
+        durationInFrames={VL_KR_V2_TOTAL_FRAMES}
         fps={30}
         width={1920}
         height={1080}

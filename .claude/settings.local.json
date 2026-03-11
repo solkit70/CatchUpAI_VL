@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ffprobe:*)",
+      "Bash(python:*)",
+      "Bash(ls -lh \"/c/AI_study/2026/Changsoo_Vault/Ingest/CatchUpAI_VL/Topics/Clearly-BRD-PRD/03-Clearly-Intro-Video/\"*.mp4)",
+      "Bash(git push origin main)"
+    ]
+  }
+}
