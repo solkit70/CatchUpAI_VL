@@ -1,1 +1,26 @@
+# Embedded git repositories (submodules not intended)
+Topics/Claude-Skills/temp-claude-obsidian-skills/
 
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Node.js
+node_modules/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# Environment variables
+.env
+.env.local
+
+# Video output files (large binaries)
+*.mp4
+
+# IDE
+.idea/
