@@ -184,11 +184,12 @@
 
 #### 학습 목표
 
+- [ ] **[신규] 겨울 후 스프링클러 첫 가동 절차를 순서대로 수행할 수 있다** (밸브 개방 → 컨트롤러 ON → 수동 테스트)
 - [ ] ESP-ME3 컨트롤러의 모든 다이얼 위치와 기능을 설명할 수 있다
 - [ ] Programs A/B/C/D를 목적에 맞게 분리하여 설정할 수 있다
 - [ ] Seasonal Adjust를 계절에 맞게 조정할 수 있다 (5~200%)
-- [ ] Advanced Cycles 기능으로 경사지 유출을 방지할 수 있다
-- [ ] LNK WiFi 모듈 연결 방법을 알고 스마트 기기와 연동할 수 있다
+- [ ] Special Features(저장/복원, Interstation Delay, Bypass 등) 를 다이얼+버튼 조작으로 설정할 수 있다
+- [ ] LNK WiFi 모듈 연결 방법을 알고 스마트 기기와 연동할 수 있다 (Cycle+Soak은 App 전용 기능)
 
 #### 주요 개념
 
@@ -200,13 +201,37 @@
 
 2. **Seasonal Adjust**: 기준(100%) 대비 % 조정. 봄 100%, 여름 130-150%, 가을 60-80%, 겨울 OFF. 전체 프로그램에 일괄 적용.
 
-3. **Advanced Cycles (사이클 분할)**: 1회 긴 관수 → N회 짧은 관수로 분할. 예: 20분 → 4×5분 (10분 침투 후 재관수). 경사지 유출 방지 핵심.
+3. **Cycle+Soak (사이클 분할)**: 경사지 유출 방지를 위한 짧은 관수 반복 기능. **주의**: ESP-ME3 컨트롤러 자체에는 이 기능이 없음 — Rain Bird App + LNK2 WiFi 모듈 연결 후 앱에서만 설정 가능. 컨트롤러 단독 사용 시 Start Time을 여러 개 설정하여 유사 효과 구현 (예: A프로그램에 3개 start time으로 짧은 관수 반복).
 
 4. **Start Times vs. Run Times**: Start Time = 관수 시작 시각 (프로그램당 최대 6개 설정 가능). Run Time = 각 스테이션별 관수 시간 (1-240분).
 
 5. **수동 테스트 모드**: Manual Watering 다이얼 위치 — 모든 스테이션을 순서대로 테스트. 설치 후 커버리지 확인에 필수.
 
+6. **Special Features (특수 기능)**: 다이얼을 적절한 위치로 돌리고 **두 화살표 버튼을 동시에 3초간 누른 후 손을 떼면** 진입. 포함 기능:
+   - **Save Programming**: 현재 스케줄을 비휘발성 메모리에 저장
+   - **Restore Programming**: 저장된 스케줄 복원 (실수로 설정 변경 시 복구)
+   - **Set Interstation Delay**: 스테이션 전환 시 지연 시간 설정 (기본값 0)
+   - **Rain Sensor Bypass by Station**: 스테이션별 우량 센서 무시 설정
+   - **Flow Sensor Bypass by Station**: 스테이션별 유량 센서 무시 설정
+   - **Set Master Valve by Station**: 스테이션별 마스터 밸브 제어 여부 설정
+   - **Reset to Factory Defaults**: 공장 초기화 (초기값: Program A, 오전 8시 시작, 스테이션 1-4 런타임 10분)
+
+7. **Delay Watering**: AUTO 다이얼 위치 + 버튼 조작으로 최대 14일까지 관수 지연 설정. 비가 올 때 간편하게 사용.
+
 #### 실습 과제
+
+**실습 0: 시스템 첫 가동 절차** ⭐⭐ ← 반드시 가장 먼저
+- **목적**: 겨울 동안 OFF였던 스프링클러를 안전하게 첫 가동
+- **배경**: 2025년 10월 입주 → 겨울 내내 미사용 → 2026년 3월 봄 첫 가동
+- **단계**:
+  1. 집 오리엔테이션 영상 재시청 → 메인 밸브 위치 및 조작법 확인
+  2. 메인 밸브(또는 backflow preventer 앞 밸브) 위치 파악 + 사진 촬영
+  3. 밸브를 1/4씩 천천히 열기 (water hammer 방지) → 누수 없는지 확인
+  4. 컨트롤러 전원 ON → 날짜/시간 확인
+  5. 스테이션 1개만 수동 2분 테스트 → 물 정상 나오는지 확인
+- **예상 시간**: 30분
+- **검증**: 물이 정상 출수 확인, 밸브 위치 사진 보관, 누수 없음 확인
+- **참조**: `concepts/first-startup-guide.md`, `outdoor-tasks-20260311.md` Task 0
 
 **실습 1: 컨트롤러 완전 매핑 — 현재 설정 읽기** ⭐
 - **목적**: 현재 시스템 상태를 정확히 파악하고 문서화
@@ -226,9 +251,10 @@
   2. 현재 스테이션 런타임이 적절한지 평가 (Precipitation Rate 고려)
   3. Water Days 설정: 비 있는 날 고려 (3월은 주 2-3회)
   4. Seasonal Adjust를 100%로 설정 (봄 기준)
-  5. Advanced Cycles 설정: 경사진 구역에 2-cycle 적용
-  6. 실제 컨트롤러에서 설정 변경 후 사진 촬영
-  7. `02-Sprinkler-Master/spring-schedule-2026.md` 작성
+  5. Delay Watering 설정 테스트: AUTO 다이얼로 1일 지연 설정 후 확인
+  6. Special Features 진입 확인: 다이얼 돌리고 두 버튼 동시 3초 누르기 연습 (Save Programming 위치까지)
+  7. 실제 컨트롤러에서 설정 변경 후 사진 촬영
+  8. `02-Sprinkler-Master/spring-schedule-2026.md` 작성
 - **예상 시간**: 120분
 - **검증**: 실제 설정 변경 완료, 설정 전/후 사진 촬영, 문서 완성
 
@@ -255,7 +281,8 @@
 │   ├── esp-me3-complete-guide.md      # 컨트롤러 완전 가이드 (다이얼별 설명)
 │   ├── program-strategy.md            # A/B/C/D 프로그램 분리 전략
 │   ├── seasonal-adjust-guide.md       # 월별 Seasonal Adjust 권장값
-│   └── advanced-cycles-guide.md       # Advanced Cycles 설정 방법 + 언제 쓰는가
+│   ├── special-features-guide.md      # Special Features 진입법 + 7가지 기능 가이드
+│   └── cycle-soak-and-delay.md        # Cycle+Soak (App 전용) + Delay Watering 설명
 ├── cheatsheet/
 │   └── esp-me3-quick-reference.md     # 빠른 참조 치트시트 (1페이지)
 └── photos/
@@ -264,12 +291,15 @@
 
 #### Definition of Done
 
+- [ ] **[신규] 첫 가동 완료**: 메인 밸브 개방 + 컨트롤러 ON + 스테이션 1 수동 테스트 성공
 - [ ] 현재 설정 완전 문서화 (스테이션 1-22 런타임, 모든 프로그램)
 - [ ] 봄 스케줄 설정 완료 (Seasonal Adjust, Water Days, Run Times)
-- [ ] Advanced Cycles 경사지 구역에 적용
+- [ ] Special Features 진입 방법 숙지 (다이얼 + 두 버튼 3초) 및 Save Programming 실행
+- [ ] Delay Watering 설정 테스트 (1일 이상)
 - [ ] 수동 테스트로 모든 스테이션 점검 완료
-- [ ] `esp-me3-quick-reference.md` 치트시트 완성
+- [ ] `esp-me3-quick-reference.md` 치트시트 완성 (Special Features 포함)
 - [ ] `concepts/seasonal-adjust-guide.md` (12개월 권장값 포함) 작성
+- [ ] `concepts/special-features-guide.md` 작성 (Save/Restore, Interstation Delay 등)
 - [ ] README.md 작성
 - [ ] WorkLog 작성 완료
 
@@ -278,6 +308,8 @@
 **개념 이해** (5분):
 - [ ] ESP-ME3 다이얼 7-8개 위치와 기능을 설명 가능
 - [ ] Seasonal Adjust를 여름 기준으로 몇 %로 설정해야 하는지 판단 가능
+- [ ] Cycle+Soak은 컨트롤러에서 직접 설정 불가하며 Rain Bird App + LNK2 필요함을 설명 가능
+- [ ] Special Features 진입 방법(다이얼 + 두 버튼 3초)을 설명 가능
 
 **실무 활용** (5분):
 - [ ] 혼자서 Program A의 Water Days를 변경할 수 있다
@@ -300,8 +332,16 @@
 
 - [Rain Bird ESP-ME3 공식 페이지](https://www.rainbird.com/products/esp-me3-series-controllers): 매뉴얼 다운로드
 - [Rain Bird LNK WiFi Module 가이드](https://www.rainbird.com): 스마트 홈 연동
-- 로컬 자료: `C:\AI_study\2026\Materials\PNW-lawn-care\Sprinkler_Rain-Bird\IMG_4408.JPEG` (Quick Reference)
-- 로컬 자료: `IMG_4409.JPEG`, `IMG_4410.JPEG` (Programming Charts)
+- 로컬 사진: `C:\AI_study\2026\Materials\PNW-lawn-care\Sprinkler_Rain-Bird\IMG_4408.JPEG` (Quick Reference)
+- 로컬 사진: `IMG_4409.JPEG`, `IMG_4410.JPEG` (Programming Charts)
+- PDF (vl_materials): `d41274_15ja20_esp-me3-user-manual-advanced-dom_en-en.pdf` — **메인 사용자 매뉴얼** (핵심)
+- PDF (vl_materials): `man_ESP-ME3_SpecialFeatures_en-es-fr.pdf` — **Special Features 카드** (다이얼+버튼 조작법)
+- PDF (vl_materials): `man_ESP-ME3_QuickReference_en-es-fr.pdf` — **빠른 참조 카드** (다이얼 위치 한눈에)
+- PDF (vl_materials): `d42294_smart_home_integration.pdf` — **스마트홈 연동 가이드** (LNK2 + Alexa/Google)
+- PDF (vl_materials): `d41298_-_esp-me3_-_tech_spec_-_en.pdf` — 기술 사양서 (입출력 전기 스펙)
+- PDF (vl_materials): `d41296_-_esp-me3_-_sell_sheet_-_en.pdf` — 제품 소개서
+- PDF (vl_materials): `d42495_-_esp-2wire_-_compatible_flow_sensors_document-_pdf_digital.pdf` — 호환 플로우 센서 목록
+- PDF (vl_materials): `C_ESP4ME3.pdf` — 컴팩트 참조 가이드 (모듈 옵션 다이어그램)
 
 ---
 

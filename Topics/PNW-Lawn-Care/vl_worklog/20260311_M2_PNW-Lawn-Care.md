@@ -11,10 +11,12 @@
 
 - [x] Programs A/B/C/D 전략 이해 → `concepts/program-strategy.md`
 - [x] Seasonal Adjust 계절별 가이드 → `concepts/seasonal-adjust-guide.md`
-- [x] Advanced Cycles 이해 → `concepts/advanced-cycles-guide.md`
+- [x] Advanced Cycles/Cycle+Soak 이해 → `concepts/advanced-cycles-guide.md` *(2026-03-12 수정: Cycle+Soak은 App+LNK2 전용임을 확인)*
 - [x] 야외 실습 가이드 작성 → `outdoor-tasks-20260311.md`
 - [x] 현재 설정 감사 템플릿 → `current-settings-audit.md`
-- [ ] 야외 실습 수행 → **날 밝으면 수행 예정**
+- [x] **[2026-03-12 추가] 첫 가동 가이드** → `concepts/first-startup-guide.md`
+- [ ] 야외 실습 수행 → **⚠️ Task 0(첫 가동)부터 수행 필수**
+  - [ ] **Task 0**: 오리엔테이션 영상 확인 → 메인 밸브 개방 → 컨트롤러 ON → 스테이션 1 테스트
   - [ ] 잔디 면적 걸음 측정
   - [ ] 컨트롤러 현재 설정 읽기
   - [ ] 모든 스테이션 수동 테스트
@@ -69,7 +71,8 @@
 ### Insights
 - **Start Time 1개 규칙**: 가장 흔한 실수 예방 — 이것만 기억해도 절반은 성공
 - **A→B 순차 실행**: 수압 분산 = 커버리지 품질 유지
-- **Advanced Cycles**: 앞마당 경사지에 특히 중요 (유출 방지)
+- **Cycle+Soak**: 컨트롤러 자체에는 없고 Rain Bird App + LNK2 WiFi 모듈 필요 (중요 수정)
+- **⚠️ [2026-03-12 추가] 첫 가동 컨텍스트**: 2025년 10월 입주, 겨울 5-6개월 동안 스프링클러 OFF 상태 유지. 3월이 이 집에서 첫 가동. 집 오리엔테이션 영상에 밸브 위치 정보 있음 — 야외 실습 전에 반드시 영상 먼저 확인!
 
 ### 야외 실습 후 할 일
 - [ ] `current-settings-audit.md` 완성
@@ -81,11 +84,12 @@
 
 ## 📎 현재까지 산출물
 
-- `02-Sprinkler-Master/README.md`
-- `02-Sprinkler-Master/outdoor-tasks-20260311.md`
+- `02-Sprinkler-Master/README.md` *(2026-03-12 Step 0 추가)*
+- `02-Sprinkler-Master/outdoor-tasks-20260311.md` *(2026-03-12 Task 0 첫 가동 추가)*
 - `02-Sprinkler-Master/current-settings-audit.md` (템플릿)
 - `02-Sprinkler-Master/concepts/program-strategy.md`
 - `02-Sprinkler-Master/concepts/seasonal-adjust-guide.md`
-- `02-Sprinkler-Master/concepts/advanced-cycles-guide.md`
+- `02-Sprinkler-Master/concepts/advanced-cycles-guide.md` *(주의: Cycle+Soak은 App 전용임을 추가 확인 필요)*
+- `02-Sprinkler-Master/concepts/first-startup-guide.md` ✅ **2026-03-12 신규 추가**
 
 **방법론**: VibeLearn AI

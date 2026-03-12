@@ -27,6 +27,20 @@ Seasonal Adjust % 하나로 전체 관수량 조정.
 
 ## 📚 학습 순서 (이 순서대로 읽으세요)
 
+### ⚠️ Step 0. 시스템 첫 가동 — 이것부터 (처음 켜는 경우 필수)
+
+> **해당 상황**: 입주 후 처음 사용하거나, 겨울 동안 OFF로 유지했다가 봄에 재가동하는 경우.
+> 이 집은 2025년 10월 입주 후 겨울 내내 스프링클러 OFF → **2026년 3월이 첫 가동**.
+
+0. [concepts/first-startup-guide.md](concepts/first-startup-guide.md) ⭐⭐
+   - 오리엔테이션 영상에서 밸브 찾기, 메인 밸브 위치 및 천천히 여는 법
+   - Backflow preventer 확인, 컨트롤러 전원 ON, 첫 수동 테스트 순서
+   - **이 가이드를 완료한 후에 Step 1로 진행하세요**
+
+> [outdoor-tasks-20260311.md](outdoor-tasks-20260311.md) **Task 0** 체크리스트도 함께 사용하세요.
+
+---
+
 ### Step 1. 배경 지식 — 컨트롤러 전체 기능 파악
 
 > 먼저 ESP-ME3의 모든 기능을 빠르게 훑어봅니다.
@@ -101,9 +115,10 @@ Seasonal Adjust % 하나로 전체 관수량 조정.
 
 | 단계 | 내용 | 상태 |
 |------|------|------|
+| **Step 0** | **시스템 첫 가동** (오리엔테이션 영상 → 밸브 개방 → 첫 테스트) | ⏳ 미수행 |
 | Step 1 | 배경 지식 (quick-reference, complete-guide) | ✅ 완료 |
 | Step 2 | 전략 문서 3개 (program, seasonal, cycles) | ✅ 완료 |
-| Step 3 | 야외 실습 수행 | ⏳ 날 밝으면 |
+| Step 3 | 야외 실습 수행 | ⏳ Step 0 이후 |
 | Step 3 | current-settings-audit 완성 | ⏳ 야외 후 |
 | Step 4 | spring-schedule-2026 작성 + 실제 설정 | ⏳ 야외 후 |
 | Step 4 | station-test-log 작성 | ⏳ 야외 후 |
@@ -119,7 +134,7 @@ Seasonal Adjust % 하나로 전체 관수량 조정.
 | Program A Water Days | **월/수/금** |
 | Program B Start Time | **5:30 AM** |
 | Program C Start Time | **7:00 AM** |
-| 앞마당 경사 구역 | **Advanced Cycles** 10분×3 |
+| 앞마당 경사 구역 | **Multiple Start Times** 10분×3 (컨트롤러 단독) 또는 **Cycle+Soak** (App+LNK2 연결 시) |
 
 ---
 
