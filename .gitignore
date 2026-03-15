@@ -1,6 +1,9 @@
 # Embedded git repositories (submodules not intended)
 Topics/Claude-Skills/temp-claude-obsidian-skills/
 
+# AI in Action Live - 방송 콘텐츠 (로컬 전용, GitHub 제외)
+Topics/AI-in-Action-Live/
+
 # OS generated files
 .DS_Store
 Thumbs.db
