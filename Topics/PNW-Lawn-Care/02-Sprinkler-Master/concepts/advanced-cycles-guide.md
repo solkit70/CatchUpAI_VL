@@ -31,14 +31,32 @@ Advanced:   [=10분=] 대기15분 [=10분=] 대기15분 [=10분=]
 
 ## 설정 방법
 
+> ### ⚠️ 중요: Cycle+Soak은 컨트롤러 자체에서 설정 불가
+>
+> ESP-ME3 컨트롤러 다이얼에는 Cycle+Soak 옵션이 없습니다.
+> **Rain Bird App (iOS/Android) + LNK2 WiFi 모듈**이 있어야만 사용할 수 있습니다.
+
+### App을 통한 설정 방법 (LNK2 모듈 연결 후)
+
 ```
-1. 다이얼 → Run Times
-2. 프로그램 선택 (A)
-3. 스테이션 번호 이동
-4. Run Time 입력 후 CYCLE 옵션 선택
-5. Cycle 횟수 입력 (예: 3)
-6. Soak 시간 입력 (예: 15분)
+1. iPhone/Android에서 Rain Bird App 실행
+2. 연결된 ESP-ME3 컨트롤러 선택
+3. Zones 탭 → 해당 Zone 선택
+4. Advanced Settings → Cycle+Soak 활성화
+5. Cycle Time(1회 관수 시간) 입력 (예: 10분)
+6. Soak Time(흡수 대기 시간) 입력 (예: 15분)
+7. 저장 → 컨트롤러에 자동 적용
 ```
+
+### LNK2 WiFi 모듈이 없다면? (수동 대안)
+
+같은 프로그램의 **Start Time을 2개** 설정하여 유사 효과:
+```
+Program A Start Time 1: 5:00 AM (Run Time 10분)
+Program A Start Time 2: 5:30 AM (Run Time 10분)
+→ 30분 간격 2회 관수 = 수동 Cycle+Soak 효과
+```
+ESP-ME3는 프로그램당 최대 6개 Start Time 지원 — 이 방법으로 LNK2 없이도 구현 가능.
 
 ---
 

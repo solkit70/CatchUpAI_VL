@@ -88,7 +88,7 @@ Pre-emergent와 Overseeding은 **동시에 할 수 없다**.
 ### Scotts Turf Builder Halts Crabgrass Preventer with Lawn Food
 - **형태**: Granular (spreader 사용)
 - **커버리지**: 5,000 sq ft / 포대
-- **내 마당**: 13,000 sq ft → **3포대 필요**
+- **내 마당**: 약 9,000 sq ft (측정치: 8,921 sq ft) → **2포대 필요** (기존 13,000 sq ft 예측에서 하향 조정)
 - **구매처**: Home Depot, Lowe's, Amazon
 - **활성 성분**: Pendimethalin (일반적) or Prodiamine
 

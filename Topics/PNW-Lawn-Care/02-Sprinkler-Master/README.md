@@ -95,8 +95,10 @@ Seasonal Adjust % 하나로 전체 관수량 조정.
 
 > 실습 결과를 문서로 정리하고 최적 봄 스케줄을 확정합니다.
 
-8. spring-schedule-2026.md *(작성 예정)*
-   - 봄 스케줄 설정 전/후 비교, 실제 적용된 설정값
+8. [spring-schedule-2026.md](spring-schedule-2026.md)
+   - 실측 면적(8,713 sq ft) 기반 봄 스케줄 초안
+   - Program A/B/C 설정값, 타임라인, 계절별 조정 계획
+   - ⏳ 야외 실습 후 실제 스테이션 번호 기입 예정
 
 9. station-test-log.md *(작성 예정)*
    - 스테이션별 테스트 결과, 이상 발견 내용
@@ -120,7 +122,7 @@ Seasonal Adjust % 하나로 전체 관수량 조정.
 | Step 2 | 전략 문서 3개 (program, seasonal, cycles) | ✅ 완료 |
 | Step 3 | 야외 실습 수행 | ⏳ Step 0 이후 |
 | Step 3 | current-settings-audit 완성 | ⏳ 야외 후 |
-| Step 4 | spring-schedule-2026 작성 + 실제 설정 | ⏳ 야외 후 |
+| Step 4 | spring-schedule-2026 **초안 완성** (실측 면적 기반) | ✅ 초안 완료, 야외 후 확정 |
 | Step 4 | station-test-log 작성 | ⏳ 야외 후 |
 
 ---
