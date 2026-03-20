@@ -35,6 +35,38 @@ VibeLearn AI_v2.0/
 1. **README.md 먼저 읽기** - VibeLearn AI 방법론의 철학과 전체 구조 이해
 2. **이 가이드(GETTING_STARTED.md)로 실습** - 단계별로 따라하며 학습 시작
 
+#### 📦 이 레포를 클론한 경우 추가 설정
+
+> GitHub에서 이 레포를 클론하여 사용하는 경우, 아래 설정을 최초 1회 실행하세요.
+> 단순히 템플릿 파일만 다운로드하여 사용하는 경우에는 건너뛰어도 됩니다.
+
+**1. Pre-commit Hook 설치** (최초 1회)
+
+`git commit` 시 시스템 프롬프트 파일(CLAUDE.md 등)을 자동으로 동기화하고 품질을 검증합니다.
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts/install-hooks.ps1
+```
+
+**2. Python 의존성 설치**
+
+```powershell
+pip install -r requirements.txt
+```
+
+**3. Claude API 키 설정** (선택사항 — CLAUDE.md 자동 번역 기능)
+
+설정하면 `CLAUDE.md` 수정 후 커밋 시 `CLAUDE.en.md`가 자동으로 번역됩니다.
+설정하지 않아도 hook의 sync/validate 기능은 정상 작동합니다.
+
+```powershell
+# 현재 세션에만 적용
+$env:ANTHROPIC_API_KEY = "sk-ant-..."
+
+# 영구 설정 (Windows 사용자 환경변수)
+[System.Environment]::SetEnvironmentVariable("ANTHROPIC_API_KEY", "sk-ant-...", "User")
+```
+
 ---
 
 ### Step 1: 학습 준비

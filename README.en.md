@@ -608,6 +608,28 @@ echo "__pycache__/" >> .gitignore
 echo "*.pyc" >> .gitignore
 ```
 
+### 🔧 Initial Setup After Cloning (if cloned from GitHub)
+
+If you cloned this repo to contribute or customize it, run the following once after cloning.
+
+**Install the Pre-commit Hook**: Automatically syncs and validates system prompts on every `git commit`
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts/install-hooks.ps1
+```
+
+**Install Python Dependencies**: Required for the CLAUDE.md auto-translation feature
+```powershell
+pip install -r requirements.txt
+```
+
+**Set Your Claude API Key** (optional): When set, changes to CLAUDE.md are auto-translated into CLAUDE.en.md on commit
+```powershell
+$env:ANTHROPIC_API_KEY = "sk-ant-..."
+# Permanent: [System.Environment]::SetEnvironmentVariable("ANTHROPIC_API_KEY", "sk-ant-...", "User")
+```
+
+> The hook's sync and validate features work fine without the API key.
+
 ---
 
 ## 📊 Success Metrics

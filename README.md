@@ -608,6 +608,28 @@ echo "__pycache__/" >> .gitignore
 echo "*.pyc" >> .gitignore
 ```
 
+### 🔧 클론 후 초기 설정 (GitHub에서 클론한 경우)
+
+이 레포를 클론하여 직접 개선하거나 기여하려면 아래 설정을 최초 1회 실행하세요.
+
+**Pre-commit Hook 설치**: `git commit` 시 자동 동기화 및 품질 검증 실행
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts/install-hooks.ps1
+```
+
+**Python 의존성 설치**: CLAUDE.md 자동 번역 기능에 필요
+```powershell
+pip install -r requirements.txt
+```
+
+**Claude API 키 설정** (선택사항): 설정 시 CLAUDE.md 변경이 CLAUDE.en.md에 자동 반영
+```powershell
+$env:ANTHROPIC_API_KEY = "sk-ant-..."
+# 영구 설정: [System.Environment]::SetEnvironmentVariable("ANTHROPIC_API_KEY", "sk-ant-...", "User")
+```
+
+> API 키 없이도 hook의 sync/validate 기능은 정상 작동합니다.
+
 ---
 
 ## 📊 성공 지표 (Success Metrics)
