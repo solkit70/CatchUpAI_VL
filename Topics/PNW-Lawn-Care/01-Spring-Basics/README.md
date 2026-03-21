@@ -72,6 +72,11 @@ Pre-emergent 후에는 8-10주 Overseeding 불가!
    - 걸음으로 잔디 면적 측정하는 방법 포함
    - 이번 주 구매 목록 (Pre-emergent 2포대)
 
+7. [shopping-list-20260321.md](shopping-list-20260321.md)
+   - 2026-03-21 기준 최신 쇼핑 리스트 + 작업 일정
+   - Iron(즉시 녹화) + Pre-emergent + 봄 비료 + Spreader 품목별 가격
+   - 3월 21일 ~ 5월까지 단계별 작업 일정 포함
+
 ---
 
 ## 📊 내 마당 현황 요약
