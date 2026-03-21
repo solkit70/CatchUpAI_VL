@@ -1,0 +1,6 @@
+# CatchUpAI_VL - Python dependencies
+# Used by: scripts/translate-claude.py (auto-translation via Claude API)
+#
+# Install: pip install -r requirements.txt
+
+anthropic>=0.40.0

@@ -1,0 +1,49 @@
+#!/bin/bash
+# pre-commit hook for CatchUpAI_VL
+# Automates: CLAUDE.md translation → sync → validate
+#
+# Installation: run scripts/install-hooks.ps1 (once)
+# Source file location: scripts/pre-commit (tracked by git)
+
+REPO_ROOT=$(git rev-parse --show-toplevel)
+cd "$REPO_ROOT"
+
+# ─────────────────────────────────────────────────────────────
+# Step 1: CLAUDE.md 변경 감지 → Claude API로 CLAUDE.en.md 자동 번역
+# ─────────────────────────────────────────────────────────────
+if git diff --cached --name-only | grep -q "^CLAUDE\.md$"; then
+    echo "🌐 CLAUDE.md changed — auto-translating to CLAUDE.en.md..."
+    python scripts/translate-claude.py
+    if [ $? -eq 0 ]; then
+        git add CLAUDE.en.md
+        echo "   ✅ CLAUDE.en.md updated and staged."
+    else
+        echo "   ⚠️  Translation skipped. CLAUDE.en.md may need manual update."
+        echo "      (Set ANTHROPIC_API_KEY or run: pip install anthropic)"
+    fi
+fi
+
+# ─────────────────────────────────────────────────────────────
+# Step 2: 항상 sync 실행 (CLAUDE* → GEMINI*, AGENTS*)
+# ─────────────────────────────────────────────────────────────
+echo "🔄 Syncing system prompts..."
+powershell -ExecutionPolicy Bypass -File scripts/sync-prompts.ps1
+if [ $? -ne 0 ]; then
+    echo "❌ sync-prompts failed. Commit aborted."
+    exit 1
+fi
+git add GEMINI.md AGENTS.md GEMINI.en.md AGENTS.en.md
+
+# ─────────────────────────────────────────────────────────────
+# Step 3: 항상 validate 실행
+# ─────────────────────────────────────────────────────────────
+echo "✅ Validating localization..."
+powershell -ExecutionPolicy Bypass -File scripts/validate-localization.ps1
+if [ $? -ne 0 ]; then
+    echo "❌ Validation failed. Commit aborted."
+    echo "   Fix the issues above and try again."
+    exit 1
+fi
+
+echo "✅ All checks passed. Proceeding with commit."
+exit 0
