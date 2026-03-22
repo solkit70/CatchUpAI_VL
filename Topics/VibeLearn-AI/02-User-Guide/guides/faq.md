@@ -201,6 +201,55 @@ GitHub 있으면:
 
 ---
 
+### Q13. GitHub에서 클론 후 뭘 해야 하나요?
+
+**A**: 3단계 초기 설정이 필요합니다.
+
+```bash
+# 1. git hook 설치 (자동화 파이프라인 활성화)
+powershell -ExecutionPolicy Bypass -File scripts/install-hooks.ps1
+
+# 2. Python 패키지 설치
+pip install -r requirements.txt
+
+# 3. (선택) ANTHROPIC_API_KEY 설정 - 자동 번역 기능 사용 시
+$env:ANTHROPIC_API_KEY = "sk-ant-..."
+```
+
+이 설정을 하지 않아도 기본 학습 기능은 사용 가능합니다. 단, git commit 시 자동화 파이프라인(번역/동기화/검증)이 작동하지 않습니다.
+
+---
+
+### Q14. 번역이 자동으로 되나요?
+
+**A**: git commit 시 자동으로 번역됩니다 — 단, ANTHROPIC_API_KEY가 설정된 경우.
+
+작동 방식:
+1. `git commit` 실행 → pre-commit hook 자동 시작
+2. `CLAUDE.md`가 변경된 경우 → `translate-claude.py`가 Claude API를 호출하여 번역
+3. 번역 결과를 `CLAUDE.en.md`에 저장
+4. commit 완료
+
+**번역 실패 시**: 경고 메시지만 출력되고 commit은 계속 진행됩니다 (비블로킹 설계).
+API 키가 없거나 크레딧이 없어도 commit 자체는 막히지 않습니다.
+
+---
+
+### Q15. ANTHROPIC_API_KEY가 없으면 어떻게 되나요?
+
+**A**: 번역만 건너뛰고, commit은 정상적으로 완료됩니다.
+
+| 상황 | 결과 |
+|------|------|
+| API 키 있음, 번역 성공 | `CLAUDE.en.md` 자동 업데이트 + commit 완료 |
+| API 키 없음 또는 실패 | ⚠️ 경고 메시지 출력 → commit 계속 진행 |
+| sync/validate 실패 | ❌ commit 중단 (API 키와 무관) |
+
+번역 기능은 편의 기능이므로 학습 진행에는 영향 없습니다.
+영어 버전 문서가 필요하다면 수동으로 번역하거나 나중에 API 키를 설정하면 됩니다.
+
+---
+
 ## 트러블슈팅
 
 ---

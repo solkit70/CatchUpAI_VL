@@ -60,6 +60,21 @@ VibeLearn-AI/
     └── daily_learning_prompt.md
 ```
 
+### Step 1.5: Post-Clone Initial Setup (3 min, GitHub clone only)
+
+```bash
+# 1. Install git hooks (activate automation pipeline on commit)
+powershell -ExecutionPolicy Bypass -File scripts/install-hooks.ps1
+
+# 2. Install Python packages
+pip install -r requirements.txt
+
+# 3. (Optional) Set auto-translation API key
+$env:ANTHROPIC_API_KEY = "sk-ant-..."
+```
+
+> Skip this step if you downloaded via ZIP.
+
 ---
 
 ## Step 2: Open `VibeLearn-AI/` Folder in Your AI Tool (2 min)
@@ -112,10 +127,11 @@ AI creates the first module plan and begins learning. If it needs available time
 
 ```
 00:00 ─── Step 1: Get repository (5 min)
-00:05 ─── Step 2: Open folder in AI tool (2 min)
-00:07 ─── Step 3: "I want to learn Python basics." (20 min)
+00:05 ─── Step 1.5: Post-clone setup (3 min, clone only)
+00:08 ─── Step 2: Open folder in AI tool (2 min)
+00:10 ─── Step 3: "I want to learn Python basics." (20 min)
            └── AI automatically: collects questions → creates folders → generates Roadmap
-00:27 ─── "Start M1 learning." → First learning session begins! 🎉
+00:30 ─── "Start M1 learning." → First learning session begins! 🎉
 ```
 
 ---

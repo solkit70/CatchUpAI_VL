@@ -180,6 +180,14 @@ Pass to AI → generates Roadmap optimized for this Topic
 - vl_prompts/ is for this Topic only → optimized for this Topic
 - In a new chat session, passing vl_prompts/ to AI → context immediately restored
 
+> ⚠️ **Injection Method (must follow)**
+> - Copy the template file **entirely as-is**
+> - Fill in only the placeholders in the `[Step 1] Topic Info` section (`{TOPIC_NAME}`, `{DURATION}`, `{LEARNING_GOALS}`, etc.) with actual values from `topic_info.md`
+> - Keep all other sections (`[Step 2]`, `[Step 3]`, etc.) **completely unchanged** (no arbitrary abbreviation)
+>
+> **Why it matters**: If AI arbitrarily abbreviates [Step 2]/[Step 3], the quality of Roadmap/WorkLog generation degrades.
+> Real bug that occurred: 652-line template → AI abbreviated to 176 lines (27%), causing degraded output quality.
+
 ---
 
 ## Template Usage Checklist

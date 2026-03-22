@@ -132,6 +132,8 @@ Phase 4: Completion & Retrospective (once per Topic)
 
 **Role**: AI collaboration interface — provides consistent guidance even in new chat sessions
 
+> ⚠️ **Creation Rule**: When generating these files from a template, fill in only the `[Step 1]` placeholders and keep all other sections (`[Step 2]`, `[Step 3]`, etc.) **completely unchanged**. Arbitrary abbreviation degrades AI guide quality.
+
 ---
 
 ### vl_worklog/ Folder
@@ -211,6 +213,53 @@ Phase 4: Completion & Retrospective (once per Topic)
 | Large | Core architecture change | Separate update session |
 | Medium | New feature added | Process before current day's learning |
 | Small | Documentation update | Note only in WorkLog |
+
+---
+
+### Automation System
+
+**Definition**: A quality management pipeline that runs automatically on every git commit
+
+**Components**:
+| File | Role |
+|------|------|
+| `scripts/pre-commit` | git hook — shell script that runs automatically on commit |
+| `scripts/translate-claude.py` | Auto-translates CLAUDE.md → CLAUDE.en.md (uses Claude API) |
+| `scripts/install-hooks.ps1` | One-click PowerShell script to install hooks after cloning |
+| `requirements.txt` | Python packages (`anthropic>=0.40.0`) |
+
+**Workflow**:
+```
+git commit
+    ↓
+pre-commit hook starts automatically
+    ↓
+CLAUDE.md changed? → run translate-claude.py (calls Claude API)
+    ↓
+sync-prompts.ps1 → copies CLAUDE.md to GEMINI.md + AGENTS.md
+    ↓
+validate-localization.ps1 → quality check
+    ↓
+Pass → commit complete / Fail → commit aborted
+```
+
+**Design Principles**:
+- **Translation failure**: Warning only, commit continues (non-blocking) — commit works even without API key
+- **sync/validate failure**: Commit aborted (blocking) — quality standards enforced
+
+**Post-clone Setup**:
+```bash
+# 1. Install hooks
+powershell -ExecutionPolicy Bypass -File scripts/install-hooks.ps1
+
+# 2. Install packages
+pip install -r requirements.txt
+
+# 3. (Optional) Set API key - for auto-translation
+$env:ANTHROPIC_API_KEY = "sk-ant-..."
+```
+
+**Role**: Eliminates manual translation/sync/validation effort → all quality checks automated with a single commit
 
 ---
 

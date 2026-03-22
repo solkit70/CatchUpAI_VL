@@ -60,6 +60,21 @@ VibeLearn-AI/
     └── daily_learning_prompt.md
 ```
 
+### Step 1.5: 클론 후 초기 설정 (3분, GitHub 클론 시만 해당)
+
+```bash
+# 1. git hook 설치 (commit 시 자동화 파이프라인 활성화)
+powershell -ExecutionPolicy Bypass -File scripts/install-hooks.ps1
+
+# 2. Python 패키지 설치
+pip install -r requirements.txt
+
+# 3. (선택) 자동 번역 API 키 설정
+$env:ANTHROPIC_API_KEY = "sk-ant-..."
+```
+
+> ZIP 다운로드로 받은 경우에는 이 단계를 건너뛰어도 됩니다.
+
 ---
 
 ## Step 2: AI 도구에서 `VibeLearn-AI/` 폴더 열기 (2분)
@@ -112,10 +127,11 @@ AI가 첫 번째 모듈 계획을 수립하고 학습을 시작합니다. 가용
 
 ```
 00:00 ─── Step 1: 저장소 받기 (5분)
-00:05 ─── Step 2: AI 도구에서 폴더 열기 (2분)
-00:07 ─── Step 3: "Python 기초를 배우고 싶어." 한 마디 (20분)
+00:05 ─── Step 1.5: 클론 후 초기 설정 (3분, 클론 시만)
+00:08 ─── Step 2: AI 도구에서 폴더 열기 (2분)
+00:10 ─── Step 3: "Python 기초를 배우고 싶어." 한 마디 (20분)
            └── AI가 자동으로: 질문 수집 → 폴더 생성 → Roadmap 생성
-00:27 ─── "M1 학습을 시작해줘." → 첫 학습 세션 시작! 🎉
+00:30 ─── "M1 학습을 시작해줘." → 첫 학습 세션 시작! 🎉
 ```
 
 ---

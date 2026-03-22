@@ -132,6 +132,8 @@ Phase 4: 완료 & 회고 (Topic당 1회)
 
 **역할**: AI와의 협업 인터페이스 — 새 대화 세션에서도 일관된 가이드 제공
 
+> ⚠️ **생성 규칙**: 템플릿에서 이 파일을 생성할 때 `[1단계]` 플레이스홀더만 채우고, `[2단계]`, `[3단계]` 등 나머지 섹션은 **수정 없이 전체 유지**해야 합니다. 임의 축약 시 AI 가이드 품질이 저하됩니다.
+
 ---
 
 ### vl_worklog/ 폴더
@@ -211,6 +213,53 @@ Phase 4: 완료 & 회고 (Topic당 1회)
 | 대규모 | 핵심 아키텍처 변경 | 별도 업데이트 세션 |
 | 중간 | 새 기능 추가 | 당일 학습 전 처리 |
 | 소규모 | 문서 업데이트 | WorkLog에 메모만 |
+
+---
+
+### 자동화 시스템 (Automation System)
+
+**정의**: git commit 시 자동으로 실행되는 품질 관리 파이프라인
+
+**구성 요소**:
+| 파일 | 역할 |
+|------|------|
+| `scripts/pre-commit` | git hook — commit 시 자동 실행되는 셸 스크립트 |
+| `scripts/translate-claude.py` | CLAUDE.md → CLAUDE.en.md 자동 번역 (Claude API 사용) |
+| `scripts/install-hooks.ps1` | 클론 후 hook을 설치하는 원클릭 PowerShell 스크립트 |
+| `requirements.txt` | Python 패키지 목록 (`anthropic>=0.40.0`) |
+
+**작동 흐름**:
+```
+git commit 실행
+    ↓
+pre-commit hook 자동 시작
+    ↓
+CLAUDE.md 변경됨? → translate-claude.py 실행 (Claude API 호출)
+    ↓
+sync-prompts.ps1 → CLAUDE.md를 GEMINI.md + AGENTS.md에 복사
+    ↓
+validate-localization.ps1 → 품질 체크
+    ↓
+통과 → commit 완료 / 실패 → commit 중단
+```
+
+**설계 원칙**:
+- **번역 실패**: 경고만 출력, commit 계속 진행 (비블로킹) — API 키 없어도 commit 가능
+- **sync/validate 실패**: commit 중단 (블로킹) — 품질 기준 강제
+
+**클론 후 초기 설정**:
+```bash
+# 1. hook 설치
+powershell -ExecutionPolicy Bypass -File scripts/install-hooks.ps1
+
+# 2. 패키지 설치
+pip install -r requirements.txt
+
+# 3. (선택) API 키 설정 - 자동 번역 기능용
+$env:ANTHROPIC_API_KEY = "sk-ant-..."
+```
+
+**역할**: 사람이 수동으로 번역/동기화/검증하는 수고를 제거 → commit 한 번으로 모든 품질 체크 자동화
 
 ---
 

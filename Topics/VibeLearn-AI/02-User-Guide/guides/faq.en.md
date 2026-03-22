@@ -201,6 +201,55 @@ Detailed guide: Refer to the CVL section in [key-concepts.en.md](../../01-System
 
 ---
 
+### Q13. What do I need to do after cloning from GitHub?
+
+**A**: You need a 3-step initial setup.
+
+```bash
+# 1. Install git hooks (activate automation pipeline)
+powershell -ExecutionPolicy Bypass -File scripts/install-hooks.ps1
+
+# 2. Install Python packages
+pip install -r requirements.txt
+
+# 3. (Optional) Set ANTHROPIC_API_KEY - for auto-translation feature
+$env:ANTHROPIC_API_KEY = "sk-ant-..."
+```
+
+Basic learning features work without this setup. However, the automation pipeline (translation/sync/validation) won't run on git commit.
+
+---
+
+### Q14. Is translation automatic?
+
+**A**: Yes, it translates automatically on git commit — provided `ANTHROPIC_API_KEY` is set.
+
+How it works:
+1. `git commit` runs → pre-commit hook starts automatically
+2. If `CLAUDE.md` was changed → `translate-claude.py` calls Claude API to translate
+3. Translation result saved to `CLAUDE.en.md`
+4. Commit completes
+
+**If translation fails**: Only a warning message is shown and commit continues (non-blocking design).
+Commit is not blocked even if you have no API key or no credits.
+
+---
+
+### Q15. What happens if I don't have ANTHROPIC_API_KEY?
+
+**A**: Only translation is skipped — commit completes normally.
+
+| Situation | Result |
+|-----------|--------|
+| API key present, translation succeeds | `CLAUDE.en.md` auto-updated + commit complete |
+| No API key or failure | ⚠️ Warning message → commit continues |
+| sync/validate fails | ❌ Commit aborted (unrelated to API key) |
+
+Translation is a convenience feature and doesn't affect learning progress.
+If you need English docs, translate manually or set up the API key later.
+
+---
+
 ## Troubleshooting
 
 ---
