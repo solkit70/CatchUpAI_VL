@@ -1,9 +1,9 @@
 # 2026 봄 쇼핑 리스트 & 작업 일정
 
-**작성일**: 2026-03-21
+**작성일**: 2026-03-21 (최종 확정: 2026-03-23)
 **위치**: Tehaleh, WA
 **면적**: 앞마당 2,265 sq ft / 뒷마당 6,448 sq ft / 합계 8,713 sq ft
-**구매처**: Home Depot 또는 Lowe's
+**2026 봄 핵심 원칙: 비용 절감 최우선** (부부 합의)
 
 ---
 
@@ -12,72 +12,59 @@
 - 앞마당 상태: **C+** (황갈색 주조 — 겨울 휴면 회복 중)
 - 뒷마당 상태: **B+** (전반적 녹색 — 양호)
 - 옆집: 전문 업체 방문 후 선명한 녹색 유지 중
-- 목표: Iron으로 앞마당 즉시 녹화 + Pre-emergent로 잡초 예방 + 비료로 장기 유지
+- **2026 봄 목표**: Pre-emergent + 봄 비료로 잡초 예방 및 장기 성장 — **필수 작업만, 비용 최소화**
 
 ---
 
-## 🛒 구매 목록
+## 🛒 최종 구매 결과 (2026-03-23 확정)
 
-### 품목 1: Liquid Iron — 앞마당 즉시 녹화용
+### ✅ 구매 완료: Scotts Turf Builder Halts with Lawn Food (2-in-1)
 | 항목 | 내용 |
 |------|------|
-| 제품명 | **Pennington UltraGreen Liquid Iron** 또는 **Ironite Liquid Iron** |
-| 규격 | 32 oz (hose-end sprayer 타입 권장) |
-| 커버리지 | 약 2,500 sq ft |
-| 수량 | **1병** |
-| 예상 가격 | $12–18 |
-| 효과 | 24–48시간 내 녹색, 4–6주 지속 |
-| 비고 | 호스에 바로 연결, 별도 Spreader 불필요 |
+| 제품명 | **Scotts Turf Builder Halts Crabgrass Preventer with Lawn Food** |
+| 규격 | 5,000 sq ft / 13.35 lb |
+| 수량 | **2포대** ($19.97 × 2 = **$39.94**) |
+| 구매처 | **Amazon** (-52% 할인, Amazon's Choice) |
+| 평점 | 4.5★ (6,851개), 월 10K+ 판매 |
+| 역할 | Pre-emergent (잡초 씨앗 차단) + 봄 비료 (영양 공급) **2-in-1** |
+| 커버리지 | 10,000 sq ft → 8,713 sq ft 충분히 커버 |
+
+> ✅ **이 한 가지로 Pre-emergent + 봄 비료 두 가지 작업 완료** — 별도 봄 비료 불필요
+> ⚠️ Overseeding(씨앗 파종) 계획 있다면 사용 금지
 
 ---
 
-### 품목 2: Pre-emergent — 앞뒤마당 잡초 예방
-| 항목 | 내용 |
-|------|------|
-| 제품명 | **Scotts Halts Crabgrass Preventer** |
-| 규격 | 5,000 sq ft 커버/포대 |
-| 수량 | **2포대** (10,000 sq ft → 8,713 sq ft 충분히 커버) |
-| 예상 가격 | $15–20/포대, 합계 **$30–40** |
-| 비고 | Granular 타입 — Spreader로 살포 |
+### ❌ 구매 안 함: Liquid Iron (앞마당 즉시 녹화)
+| 항목 | 결정 | 이유 |
+|------|------|------|
+| IRONITE Liquid RTS | **구매 안 함** | 급하게 녹색으로 만들 필요 없음, 비용 절감 우선 |
 
-> **Pre-emergent란?** 잡초 씨앗이 땅 위로 싹을 틔우기(emerge) 전에 미리 막는 예방약.
-> 지금 $35 투자로 여름 내내 잡초 뽑는 수고를 방지.
+> 💡 **결정 배경**: Iron은 색만 빠르게 바꾸는 단기 효과. 비료에 의한 자연스러운 녹화로도 충분히 만족.
+> 옆집처럼 즉시 녹색을 원하면 내년 고려.
 
 ---
 
-### 품목 3: 봄 비료 — Pre-emergent 후 4–6주 후 살포
-| 항목 | 내용 |
-|------|------|
-| 제품명 | **Scotts Turf Builder Spring & Summer** (Slow-release) |
-| 규격 | 12,000–15,000 sq ft 커버 대용량 포대 |
-| 수량 | **1포대** |
-| 예상 가격 | $45–55 |
-| 효과 | 8–12주 지속, 뿌리부터 녹색 성장 촉진 |
-| 비고 | Slow-release = 타는 사고(Burn) 위험 없음 |
+### ❌ 구매 안 함: Spreader (살포기)
+| 항목 | 결정 | 이유 |
+|------|------|------|
+| Broadcast Spreader | **구매 안 함** | 연 1~2회 사용에 $53 투자 대비 효용 낮음, 손 살포로 대체 |
+
+> 💡 **결정 배경**: Spreader는 자주 쓸 때 장점이 있음. 처음 해보는 해에는 손으로 골고루 뿌리는 방식으로 진행.
+> 내년에 잔디 관리가 정착되면 재고려 가능.
 
 ---
 
-### 품목 4: Spreader — Pre-emergent + 비료 살포 도구
-| 항목 | 내용 |
-|------|------|
-| 제품명 | **Scotts EdgeGuard Mini Broadcast Spreader** |
-| 수량 | **1개** |
-| 예상 가격 | $30–45 |
-| 비고 | Pre-emergent + 봄 비료 + 가을 비료 매년 재사용 |
+## 💰 실제 지출 비용
 
----
+| 품목 | 금액 | 상태 |
+|------|------|------|
+| Scotts Turf Builder Halts 5,000 sq ft × 2포대 | **$39.94** | ✅ Amazon 주문 완료 |
+| ~~Liquid Iron~~ | ~~$17~~ | ❌ 구매 안 함 (비용 절감) |
+| ~~Spreader~~ | ~~$53~~ | ❌ 구매 안 함 (손 살포로 대체) |
+| **실제 총액** | **$39.94** | |
 
-## 💰 예상 총 비용
-
-| 품목 | 예상 가격 |
-|------|---------|
-| Liquid Iron 1병 | $12–18 |
-| Pre-emergent 2포대 | $30–40 |
-| 봄 비료 1포대 | $45–55 |
-| Spreader 1개 | $30–45 |
-| **합계** | **$117–158** |
-
-> Spreader는 매년 재사용 가능한 장비 — 일회성 투자
+> 3/21 최초 예상($117–158) 대비 **~$75–115 절감**
+> **2026 봄 핵심 원칙 달성: 비용 최소화로 필수 작업만 진행**
 
 ---
 
@@ -92,13 +79,14 @@
 └── ☔ 비 — 기다림 (Liquid Iron은 살포 완료 상태)
 
 3월 26–27일 (비 지나고 후)
-├── 🌱 Pre-emergent 살포 → 앞뒤마당 전체 (Spreader 사용)
+├── 🌱 Scotts Turf Builder Halts (2-in-1) 살포 → 앞뒤마당 전체 (손으로 골고루 살포)
+│     Pre-emergent + 봄 비료 동시 처리 — 한 번 살포로 완료
 │     앞마당(2,265 sq ft) → 뒷마당(6,448 sq ft) 순서
 └── 💧 살포 후 ESP-ME3 스프링클러 15분 가동 (활성화)
 
-4월 5–10일
-├── 🌿 봄 비료 살포 → 앞뒤마당 전체 (같은 Spreader)
-└── 💧 살포 후 물주기
+4월 이후
+└── 봄 비료는 Turf Builder Halts에 이미 포함 → 별도 비료 살포 불필요
+    (5월에 2차 비료 추가 고려 가능, but optional)
 
 5월 이후
 ├── ✂️ 잔디 높이 4인치 도달 시 첫 깎기 (목표 높이 3–3.5인치)
@@ -107,13 +95,11 @@
 
 ---
 
-## ✅ 매장 방문 시 확인사항
+## ✅ 최종 구매 체크리스트 (2026-03-23 완료)
 
-- [ ] Liquid Iron 가격 확인 (Pennington 또는 Ironite 브랜드)
-- [ ] Pre-emergent 2포대 가격 확인 (Scotts Halts)
-- [ ] 봄 비료 1포대 가격 확인 (Scotts Turf Builder Spring)
-- [ ] Spreader 가격 확인 (Scotts EdgeGuard Mini)
-- [ ] 재고 없을 경우 Pennington 동일 제품 대체 가능
+- [x] Scotts Turf Builder Halts 5,000 sq ft × 2포대 **Amazon 주문 완료** ($39.94)
+- [x] ~~IRONITE Liquid Iron~~ — **구매 안 함** (비용 절감 원칙, 급한 녹화 불필요)
+- [x] ~~Spreader~~ — **구매 안 함** (연 1~2회 사용에 $53 투자 부적합, 손 살포로 진행)
 
 ---
 
@@ -130,5 +116,5 @@
 
 ---
 
-**다음 업데이트**: 매장 가격 확인 후 실제 구매 내역 기록
-**참조**: [spring-checklist-2026.md](spring-checklist-2026.md), [concepts/fertilizer-guide.md](concepts/fertilizer-guide.md)
+**상태**: 구매 완료 ✅ → 다음 단계: 3/26~27 살포 실행
+**참조**: [guides/pre-emergent-guide.md](guides/pre-emergent-guide.md), [guides/amazon-product-guide-20260323.md](guides/amazon-product-guide-20260323.md)

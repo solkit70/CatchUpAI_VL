@@ -110,14 +110,13 @@ Lowe's 매장에 Scotts "One Simple Lawn Care Program" 안내판 있음:
 
 ---
 
-### 3. Scotts Turf Builder with Halts — 15,000 sq ft (40.05 lb)
+### 3. Scotts Turf Builder with Halts — 14,000 sq ft
 
 | 구매처 | 가격 | 비고 |
 |--------|------|------|
-| Lowe's (매장) | 미확인 (별도 확인 필요) | 매장 재고 확인 요망 |
-| Amazon | **~$68/포대** (2-pack $136) | [Amazon](https://www.amazon.com/Scotts-31115-Crabgrass-Preventer-B000OWC0KW/dp/B000OWC0KW) |
-| Walmart | 재고 있음, 가격 미확인 | [Walmart](https://www.walmart.com/ip/Scotts-Turf-Builder-Halts-Crabgrass-Preventer-with-Lawn-Food-40-05-lb/20713587) |
-| **결론** | ⚠️ **5,000 sq ft × 2포대가 더 경제적** | 15,000 sq ft는 6,000 sq ft 남아 버려짐 |
+| Lowe's (매장) | 미확인 | 매장 재고 확인 요망 |
+| Amazon | **~$55.92/포대** | [Amazon](https://www.amazon.com/Scotts-Builder-Halts-Crabgrass-Preventer/dp/B0DJCGF56D) |
+| **결론** | ⚠️ **5,000 sq ft × 2포대 ($39.94)가 더 경제적** | 14,000 sq ft 1포대는 잔여 ~5,300 sq ft → 다음 시즌 재사용 가능 |
 
 ---
 
@@ -149,7 +148,7 @@ Lowe's 매장에 Scotts "One Simple Lawn Care Program" 안내판 있음:
 | 제품 | Lowe's | Walmart | Amazon | 최저가 |
 |------|--------|---------|--------|--------|
 | IRONITE Liquid 32oz | $16.98 | $17.05~17.56 | $15~18 | **Lowe's** ✅ |
-| Scotts Halts 5,000 sq ft | $29.99/포대 | $40/포대 | **~$22/포대** | **Amazon** 💰 |
+| Scotts Halts 5,000 sq ft | $29.99/포대 | $40/포대 | **$19.97/포대 (-52%)** | **Amazon** 💰 |
 | Scotts Halts 15,000 sq ft | 미확인 | 미확인 | ~$68/포대 | 5,000×2가 유리 |
 | Scotts WIZZ (소형) | $29 | $26 | ~$25 | **Walmart/Amazon** |
 | Sta-Green Broadcast | $53 | 유사 | 유사 | **Lowe's** ✅ (즉시) |
@@ -161,7 +160,7 @@ Lowe's 매장에 Scotts "One Simple Lawn Care Program" 안내판 있음:
 #### 시나리오 A: Amazon Prime 있는 경우 (오늘 주문 → 23일 도착)
 ```
 Amazon 주문:
-  Scotts Halts 5,000 sq ft × 2포대   ~$44
+  Scotts Turf Builder Halts 5,000 sq ft × 2포대   $39.94
   (WIZZ 소형은 8,700 sq ft에 부족)
 
 Lowe's 즉시 구매:
@@ -195,10 +194,10 @@ Lowe's:
 | 품목 | 권장 제품 | 구매처 | 실제 가격 |
 |------|---------|--------|---------|
 | **Iron (앞마당 녹화)** | IRONITE Liquid RTS 32oz | **Lowe's 즉시** | $16.98 |
-| **Pre-emergent + 봄 비료** | Scotts Turf Builder with Halts 5,000 sq ft × 2포대 | **Amazon 오늘 주문** | ~$44 |
+| **Pre-emergent + 봄 비료** | Scotts Turf Builder with Halts 5,000 sq ft × 2포대 | **Amazon 오늘 주문** | **$39.94** |
 | **Spreader** | Sta-Green Broadcast (바퀴형) | **Lowe's 즉시** | $53.00 |
 
-**예상 총액**: **~$114** (Amazon 활용 시)
+**예상 총액**: **~$110** (Amazon 활용 시)
 
 ---
 
