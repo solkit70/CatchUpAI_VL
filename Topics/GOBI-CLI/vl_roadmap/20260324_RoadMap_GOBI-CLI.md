@@ -162,7 +162,7 @@ gobi space --help
 ### 9. 참조 자료
 
 - **GitHub**: [https://github.com/gobi-ai/gobi-cli](https://github.com/gobi-ai/gobi-cli)
-- **Gobi 플랫폼**: [https://joingobi.com](https://joingobi.com)
+- **Gobi 플랫폼**: [https://www.gobispace.com](https://www.gobispace.com)
 - **설치 명령어**: `npm install -g @gobi-ai/cli`
 - **Node.js 공식**: [https://nodejs.org](https://nodejs.org) (버전 확인용)
 

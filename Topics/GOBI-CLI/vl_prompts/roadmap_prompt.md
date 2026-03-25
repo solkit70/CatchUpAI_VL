@@ -54,7 +54,7 @@ Gobi 협업 지식 플랫폼의 CLI 도구를 마스터하여 brain 검색, 세�
 - npm (전역 패키지 관리)
 - VS Code + Claude Code
 - GOBI CLI: npm install -g @gobi-ai/cli
-- GOBI 계정: joingobi.com (있음)
+- GOBI 계정: gobispace.com (있음)
 ```
 
 **사전 지식**:
@@ -86,7 +86,7 @@ Gobi 협업 지식 플랫폼의 CLI 도구를 마스터하여 brain 검색, 세�
 ```
 - GitHub 저장소: https://github.com/gobi-ai/gobi-cli
 - 설치 명령어: npm install -g @gobi-ai/cli
-- Gobi 플랫폼: https://joingobi.com
+- Gobi 플랫폼: https://www.gobispace.com
 ```
 
 **vl_materials/ 폴더**:

@@ -130,6 +130,36 @@ Topics/GOBI-CLI/
 
 ---
 
+## 🐛 이슈 로그
+
+### 이슈 1: GOBI 플랫폼 URL 변경 — 개발자 전달 필요
+
+**발견일**: 2026-03-24
+
+**내용**:
+GOBI 플랫폼의 공식 URL이 변경되었습니다.
+
+| 구분 | URL |
+|------|-----|
+| 변경 전 (구) | https://joingobi.com |
+| 변경 후 (신) | https://www.gobispace.com |
+
+**영향 범위** (GOBI-CLI Topic 내 5곳 수정 완료):
+- `topic_info.md`
+- `vl_prompts/roadmap_prompt.md` (2곳)
+- `vl_roadmap/20260324_RoadMap_GOBI-CLI.md`
+- `vl_worklog/20260324_M1_Day1_GOBI-CLI.md`
+
+**개발자 전달 사항** ⚠️:
+GitHub 저장소 (`https://github.com/gobi-ai/gobi-cli`) 내 다음 파일들도 확인 및 업데이트 필요:
+- `README.md` 또는 설치 가이드에 `joingobi.com` 언급이 있을 경우 `www.gobispace.com`으로 수정 요청
+- CLI 소스코드 내 하드코딩된 URL 확인 필요 (`grep -r "joingobi.com" .`)
+- NPM 패키지 페이지 description/homepage URL 확인
+
+**현재 상태**: 로컬 산출물 수정 완료, git push 전 개발자 확인 대기 중
+
+---
+
 ## 📎 참조 및 산출물
 
 **생성된 파일/폴더**:
@@ -140,7 +170,7 @@ Topics/GOBI-CLI/
 
 **참조 자료**:
 - [GOBI CLI GitHub](https://github.com/gobi-ai/gobi-cli): 공식 소스코드
-- [Gobi 플랫폼](https://joingobi.com): 서비스 접속
+- [Gobi 플랫폼](https://www.gobispace.com): 서비스 접속
 
 **다음 세션 준비사항**:
 - 터미널(PowerShell 또는 Git Bash) 준비

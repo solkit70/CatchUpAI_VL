@@ -52,7 +52,7 @@
 - npm (전역 패키지 관리)
 - VS Code + Claude Code
 - GOBI CLI: `npm install -g @gobi-ai/cli`
-- GOBI 계정: joingobi.com (있음 ✅)
+- GOBI 계정: gobispace.com (있음 ✅)
 
 **사전 지식**:
 - 필수: 터미널/CLI 기본 사용 경험, npm 사용 경험
@@ -64,7 +64,7 @@
 
 - **GitHub 저장소**: https://github.com/gobi-ai/gobi-cli
 - **설치 명령어**: `npm install -g @gobi-ai/cli`
-- **Gobi 플랫폼**: https://joingobi.com
+- **Gobi 플랫폼**: https://www.gobispace.com
 - **Homebrew 설치 (macOS)**: `brew tap gobi-ai/tap && brew install gobi`
 
 ---
