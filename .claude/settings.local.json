@@ -5,7 +5,10 @@
       "Bash(python:*)",
       "Bash(ls -lh \"/c/AI_study/2026/Changsoo_Vault/Ingest/CatchUpAI_VL/Topics/Clearly-BRD-PRD/03-Clearly-Intro-Video/\"*.mp4)",
       "Bash(git push origin main)",
-      "Bash(find \"C:\\\\AI_study\\\\2026\\\\Changsoo_Vault\\\\Ingest\\\\CatchUpAI_VL\\\\Topics\\\\Beyoulifeupwithus\" -type f -exec wc -l {} +)"
+      "Bash(find \"C:\\\\AI_study\\\\2026\\\\Changsoo_Vault\\\\Ingest\\\\CatchUpAI_VL\\\\Topics\\\\Beyoulifeupwithus\" -type f -exec wc -l {} +)",
+      "Read(//c/AI_study/2026/BeYouLifeUpWithUs/Utah_Project/Transcript/**)",
+      "Read(//c/AI_study/2026/BeYouLifeUpWithUs/vl_prompts/**)",
+      "Bash(gobi --version)"
     ]
   }
 }
