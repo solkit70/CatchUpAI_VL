@@ -45,6 +45,28 @@
 
 ---
 
+## 🎬 집 오리엔테이션 영상 Transcript (2026-03-30 추가)
+
+> **출처**: 입주 시 집 담당자(Justin)가 집 각 구역을 설명한 영상/오디오 녹화 transcript
+> **위치**: `house-walkthrough/` 폴더
+
+| 파일 | 원본 | 핵심 내용 (스프링클러/잔디 관련) |
+|------|------|-------------------------------|
+| `154th-St-1-transcript.md` | 154th St 1.m4a | **야외 관개 밸브 박스 위치** (초록색 Green Box), winterize 방법, yard drains, 전체 집 시스템 워크스루 |
+| `154th-St-2-transcript.md` | 154th St 2.m4a | 뒷마당 **yard drains 4개** 위치, 스프링클러 헤드 커버리지 방향, 경사면 drainage |
+| `154th-St-7-transcript.md` | 154th St 7.m4a | **관개 컨트롤러 박스** 위치+조작 (AUTO 전환), backflow test (매년 County 의무), winterize 연락처 (조경사) |
+| `IMG_6130-transcript.md` | IMG_6130.MOV | 154th St 7과 동일 내용 (컨트롤러 박스 설명 단편) |
+| `IMG_6128-transcript.md` | IMG_6128.MOV | 스프링클러 여분 부품 위치, 실내 수도 차단 밸브 winterize 방법 |
+
+### 📍 핵심 발견 사항 (transcript에서 추출)
+
+- **관개 밸브 박스**: 야드 내 **초록색 박스** (Green Box) — 2개 이상 존재 (부지 경계선 근처에도 1개)
+- **컨트롤러**: 현재 **OFF** 상태 → 봄 가동 시 **AUTO**로 전환
+- **Backflow 테스트**: 매년 County 의무 — 조경사(Yard Works Inc., 253-177-8238) 연락
+- **Winterize 문서**: Megan에게 요청 가능
+
+---
+
 ## 기타 파일
 
 | 파일 | 내용 |
