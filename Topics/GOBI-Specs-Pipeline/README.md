@@ -69,6 +69,7 @@ Vibe Guiding 프롬프트 + gobi-ai/docs
 - [integration-options.md](03-Capstone/integration-options.md) — 4가지 통합 옵션 비교 분석
 - [**vibe-guiding-strategy-proposal.md**](03-Capstone/vibe-guiding-strategy-proposal.md) — GOBI 팀 공유용 전략 제안서 ⭐
 - [topic-retrospective.md](03-Capstone/topic-retrospective.md) — Topic 전체 회고
+- [**gobi-team-alignment.md**](03-Capstone/gobi-team-alignment.md) — GOBI 팀 피드백 & 프로젝트 방향 정렬 (Greg 확인 사항) ⭐
 
 ---
 

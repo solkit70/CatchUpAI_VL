@@ -76,6 +76,41 @@ flowchart TD
 
 ---
 
+---
+
+## ⚡ 업데이트: Greg의 자동화 파이프라인 개발 중 (2026-04-07)
+
+> M1 분석 당시 "수동 변환" 단계였던 specs → docs 변환을 **Greg이 GitHub Actions + Claude API로 자동화하는 작업을 진행 중**임을 확인.
+
+```mermaid
+flowchart TD
+    A["gobi-monorepo/specs\n변경 push"]
+    B["GitHub Action 트리거"]
+    C["Claude API\n(spec → user-facing MDX 변환)"]
+    D["gobi-ai/docs에\n.mdx 자동 커밋"]
+    E["Mintlify auto-deploy"]
+    F["docs.gobihq.com"]
+
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+    E --> F
+
+    style C fill:#b3e5fc,stroke:#0288d1
+    style B fill:#c8e6c9
+```
+
+**Spec → Doc 페이지 매핑** (Greg 구상, Mika 확인 예정):
+- `05-second-brain-agent.md` → Desktop
+- `09-spaces.md` → Personal Space + Community Space
+- `07-capture.md` → Mobile
+- `20-terminal.md` → CLI
+
+**Vibe Guiding 함의**: GOBI 팀이 수동 갭을 자체 해결 중 → Vibe Guiding은 이 자동화 파이프라인 위에서 SPECS_TO_GUIDE 레이어로 추가 가치 제공 가능.
+
+---
+
 ## CODE_TO_SPECS vs SPECS_TO_GUIDE
 
 ```
