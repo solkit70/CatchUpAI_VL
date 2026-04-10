@@ -77,6 +77,10 @@ Pre-emergent 후에는 8-10주 Overseeding 불가!
    - Iron(즉시 녹화) + Pre-emergent + 봄 비료 + Spreader 품목별 가격
    - 3월 21일 ~ 5월까지 단계별 작업 일정 포함
 
+8. [guides/mowing-best-practices.md](guides/mowing-best-practices.md)
+   - PNW 봄철 잔디 깎기 최적 시간대 및 1/3 원칙
+   - 깎기 전후 물 주기 전략 및 장비 점검 가이드
+
 ---
 
 ## 📊 내 마당 현황 요약
