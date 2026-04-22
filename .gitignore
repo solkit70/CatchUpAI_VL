@@ -11,6 +11,12 @@ Topics/Material_For_Topics/
 # Remotion - 로컬 프로젝트 빌드 폴더 제외
 Topics/Remotion-VideoCreation/my-first-video/
 
+# Local planning file - GitHub 제외
+Topics/PNW-Lawn-Care/05-Tehaleh-HOA-Event/video-slide-plan.md
+
+# CMDS System Files - 로컬 전용 (GitHub 제외)
+Topics/CMDS-System-Files/
+
 # GOBI Vibe Guiding - GitHub 포함
 
 # OS generated files

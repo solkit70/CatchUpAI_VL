@@ -1,0 +1,245 @@
+{
+  "source": "C:\\AI_study\\2026\\Changsoo_Vault\\Ingest\\Transcripts\\2026-04-15_HOA_LawnCare\\17681 Cascadia Blvd E - transcript.json",
+  "threshold": 0.6,
+  "total_segments": 1401,
+  "suggestions": [
+    {
+      "timestamp": 70.86000061035156,
+      "confidence": 0.6080001831054688,
+      "reason": "Long pause (3.1s)",
+      "context": " Okay, so if you go stand at the roundabout at the top of the hill as you come into the neighborhood",
+      "pattern_type": "pause"
+    },
+    {
+      "timestamp": 179.3800048828125,
+      "confidence": 0.6419998168945312,
+      "reason": "Long pause (3.4s)",
+      "context": " Yeah, so same thing as I have in Kentucky bluegrass.",
+      "pattern_type": "pause"
+    },
+    {
+      "timestamp": 656.4500122070312,
+      "confidence": 0.622003173828125,
+      "reason": "Long pause (3.2s)",
+      "context": " I'm guessing based off of the laughter that I think we know the answer.",
+      "pattern_type": "pause"
+    },
+    {
+      "timestamp": 744.72998046875,
+      "confidence": 0.85,
+      "reason": "Long pause (6.2s)",
+      "context": " Any other questions on drainage?",
+      "pattern_type": "pause"
+    },
+    {
+      "timestamp": 865.5900268554688,
+      "confidence": 0.66800537109375,
+      "reason": "Long pause (3.7s)",
+      "context": " I don't know if that matters.",
+      "pattern_type": "pause"
+    },
+    {
+      "timestamp": 923.420000076294,
+      "confidence": 0.6760000228881836,
+      "reason": "Long pause (3.8s)",
+      "context": " But you do have the right acidity, the right pH level.",
+      "pattern_type": "pause"
+    },
+    {
+      "timestamp": 1019.1399993896484,
+      "confidence": 0.6860000610351562,
+      "reason": "Long pause (3.9s)",
+      "context": " from their sewer lines and converts it into compost.",
+      "pattern_type": "pause"
+    },
+    {
+      "timestamp": 1123.8399963378906,
+      "confidence": 0.6399993896484375,
+      "reason": "Long pause (3.4s)",
+      "context": " Things that really hurt your soil, though,",
+      "pattern_type": "pause"
+    },
+    {
+      "timestamp": 1421.1599731445312,
+      "confidence": 0.703997802734375,
+      "reason": "Long pause (4.0s)",
+      "context": " You can also overwater your grass",
+      "pattern_type": "pause"
+    },
+    {
+      "timestamp": 1461.780029296875,
+      "confidence": 0.85,
+      "reason": "Long pause (5.8s)",
+      "context": " Okay, there's really,",
+      "pattern_type": "pause"
+    },
+    {
+      "timestamp": 2018.759994506836,
+      "confidence": 0.6599990844726562,
+      "reason": "Long pause (3.6s)",
+      "context": " And, I'm watering three to five times a day.",
+      "pattern_type": "pause"
+    },
+    {
+      "timestamp": 2236.220001220703,
+      "confidence": 0.7040008544921875,
+      "reason": "Long pause (4.0s)",
+      "context": " Who asked the height question?",
+      "pattern_type": "pause"
+    },
+    {
+      "timestamp": 2399.2999877929688,
+      "confidence": 0.85,
+      "reason": "Long pause (5.7s)",
+      "context": " You'll see that we try to do – we basically – my crews, they'll have an oven.",
+      "pattern_type": "pause"
+    },
+    {
+      "timestamp": 2450.719970703125,
+      "confidence": 0.6399963378906249,
+      "reason": "Long pause (3.4s)",
+      "context": " But this is at the lower – these don't have lines",
+      "pattern_type": "pause"
+    },
+    {
+      "timestamp": 2519.1599731445312,
+      "confidence": 0.729998779296875,
+      "reason": "Long pause (4.3s)",
+      "context": " Okay, bagging and mulching.",
+      "pattern_type": "pause"
+    },
+    {
+      "timestamp": 2678.5,
+      "confidence": 0.696002197265625,
+      "reason": "Long pause (4.0s)",
+      "context": " Yeah, so you want to do those things.",
+      "pattern_type": "pause"
+    },
+    {
+      "timestamp": 2813.319999694824,
+      "confidence": 0.7419998168945312,
+      "reason": "Long pause (4.4s)",
+      "context": " Keep your blade sharp. If you ever noticed on your uh after you cut it kind of looks",
+      "pattern_type": "pause"
+    },
+    {
+      "timestamp": 2917.960006713867,
+      "confidence": 0.85,
+      "reason": "Long pause (6.1s)",
+      "context": " So much information. I will be offended if you guys have to go",
+      "pattern_type": "pause"
+    },
+    {
+      "timestamp": 3018.9100036621094,
+      "confidence": 0.6300018310546874,
+      "reason": "Long pause (3.3s)",
+      "context": " So those kinds of fertilizers you'll see on there somewhere. I know I have three numbers and that's",
+      "pattern_type": "pause"
+    },
+    {
+      "timestamp": 3071.290008544922,
+      "confidence": 0.682000732421875,
+      "reason": "Long pause (3.8s)",
+      "context": " application here soon. It's a 30-04, so that's a percentage of this. So 30% of this",
+      "pattern_type": "pause"
+    },
+    {
+      "timestamp": 3160.8900146484375,
+      "confidence": 0.85,
+      "reason": "Long pause (6.3s)",
+      "context": " So iron is just for rust, right? So we don't use iron. Iron is, it does, it is a quick",
+      "pattern_type": "pause"
+    },
+    {
+      "timestamp": 3210.010009765625,
+      "confidence": 0.8180023193359375,
+      "reason": "Long pause (5.2s)",
+      "context": " So the water-related, I always tell my customers it's safe after we put down fertilizer,",
+      "pattern_type": "pause"
+    },
+    {
+      "timestamp": 3341.8900146484375,
+      "confidence": 0.6619995117187499,
+      "reason": "Long pause (3.6s)",
+      "context": " Can I ask you a question? Yeah. We have three dogs, so my wife said I can have the front one with t",
+      "pattern_type": "pause"
+    },
+    {
+      "timestamp": 3444.3699951171875,
+      "confidence": 0.71199951171875,
+      "reason": "Long pause (4.1s)",
+      "context": " We've talked about a lot of this stuff that hurts this early.",
+      "pattern_type": "pause"
+    },
+    {
+      "timestamp": 3589.8099975585938,
+      "confidence": 0.85,
+      "reason": "Long pause (5.9s)",
+      "context": " So, our process, the way that we do it is actually backwards to this slide.",
+      "pattern_type": "pause"
+    },
+    {
+      "timestamp": 3853.979995727539,
+      "confidence": 0.644000244140625,
+      "reason": "Long pause (3.4s)",
+      "context": " It doesn't skip over the nice clay that's super healthy.",
+      "pattern_type": "pause"
+    },
+    {
+      "timestamp": 3964.3999938964844,
+      "confidence": 0.7540008544921875,
+      "reason": "Long pause (4.5s)",
+      "context": " The watering is what's really important after you over-seed.",
+      "pattern_type": "pause"
+    },
+    {
+      "timestamp": 4061.1400146484375,
+      "confidence": 0.6060028076171875,
+      "reason": "Long pause (3.1s)",
+      "context": " So, this is a lot of stuff that we already talked about.",
+      "pattern_type": "pause"
+    },
+    {
+      "timestamp": 4144.340026855469,
+      "confidence": 0.60400390625,
+      "reason": "Long pause (3.0s)",
+      "context": " So, these, the process of detaching,",
+      "pattern_type": "pause"
+    },
+    {
+      "timestamp": 4190.419982910156,
+      "confidence": 0.6099975585937499,
+      "reason": "Long pause (3.1s)",
+      "context": " Okay, let's go.",
+      "pattern_type": "pause"
+    },
+    {
+      "timestamp": 4391.059997558594,
+      "confidence": 0.61400146484375,
+      "reason": "Long pause (3.1s)",
+      "context": " Okay.",
+      "pattern_type": "pause"
+    },
+    {
+      "timestamp": 4435.0999755859375,
+      "confidence": 0.6199951171875,
+      "reason": "Long pause (3.2s)",
+      "context": " Okay, so,",
+      "pattern_type": "pause"
+    },
+    {
+      "timestamp": 4686.419998168945,
+      "confidence": 0.6459991455078125,
+      "reason": "Long pause (3.5s)",
+      "context": " I'll get it to you.",
+      "pattern_type": "pause"
+    },
+    {
+      "timestamp": 4848.160003662109,
+      "confidence": 0.6059997558593749,
+      "reason": "Long pause (3.1s)",
+      "context": " It could be 10 times a year if you're doing just small doses at a time.",
+      "pattern_type": "pause"
+    }
+  ]
+}
