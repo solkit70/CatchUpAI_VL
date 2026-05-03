@@ -751,8 +751,8 @@ Vibe-Guiding-VSCode/
 
 | 모듈 | 시작일 | 종료일 | 상태 | DoD 달성률 | 비고 |
 |------|--------|--------|------|-----------|------|
-| M1 | | | 대기 | 0% | Source Map부터 시작 |
-| M2 | | | 대기 | 0% | M1 POC 대상 확정 후 진행 |
+| M1 | 2026-05-03 | 2026-05-03 | 완료 | 100% | POC 대상: GOBI CLI |
+| M2 | | | 대기 | 0% | 다음 세션 시작 |
 | M3 | | | 대기 | 0% | Sample Manual 최소 1개 필요 |
 | M4 | | | 대기 | 0% | 실제 Python POC 개발 |
 | M5 | | | 대기 | 0% | 3개 GOBI 시나리오 검증 |
@@ -773,7 +773,7 @@ Vibe-Guiding-VSCode/
 - [ ] Topic Retrospective 작성
 - [ ] Self-Assessment 평균 4점 이상
 
-## 첫 번째 Daily Learning 시작 정보
+## 다음 Daily Learning 시작 정보
 
 다음 세션은 `vl_prompts/daily_learning_prompt.md`를 사용해 시작한다.
 
@@ -781,8 +781,9 @@ Vibe-Guiding-VSCode/
 Topic 이름: Vibe-Guiding-VSCode
 Topic 폴더 경로: C:\AI_study\2026\Changsoo_Vault\Ingest\CatchUpAI_VL\Topics\Vibe-Guiding-VSCode\
 Roadmap 파일 경로: vl_roadmap/20260426_RoadMap_Vibe-Guiding-VSCode.md
-현재 진행 중인 모듈: M1 - Vibe Guiding 개념과 Source Map
-가장 최근 WorkLog 파일: 없음 - 첫 학습 세션
+현재 진행 중인 모듈: M2 - Two-Component Architecture 설계
+가장 최근 WorkLog 파일: vl_worklog/20260503_M1_Retrospective.md
+이전 세션의 Tomorrow's focus: GOBI-CLI Topic을 Continuous Vibe Learning 프로세스로 New 버전에 맞게 업데이트한 뒤, M1 문서의 GOBI CLI 관련 전제와 참조 자료를 보정하고 M2 Architecture Design 시작. 관련 문서 작성이 모두 완료되면 GitHub에 push.
 사용 가능한 시간: 사용자가 세션 시작 시 입력
 ```
 
