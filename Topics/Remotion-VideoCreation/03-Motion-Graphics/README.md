@@ -12,6 +12,9 @@
 | 4 | [examples/title-card/README.md](examples/title-card/README.md) | TitleCard 컴포넌트 예시 |
 | 5 | [examples/counter-infographic/README.md](examples/counter-infographic/README.md) | CounterInfoGraphic 컴포넌트 예시 |
 | 6 | [examples/sequential-list/README.md](examples/sequential-list/README.md) | SequentialList 컴포넌트 예시 |
+| 7 | [concepts/transitions.md](concepts/transitions.md) | TransitionSeries — 슬라이드 전환 효과 완전 가이드 ✨NEW |
+| 8 | [concepts/text-animations.md](concepts/text-animations.md) | 텍스트 애니메이션 — 타이프라이터·워드 하이라이트 ✨NEW |
+| 9 | [guides/fonts-guide.md](guides/fonts-guide.md) | 폰트 로딩 — Google Fonts + 한국어 폰트 ✨NEW |
 
 **이전 모듈**: [02-Core-Basics](../02-Core-Basics/) | **다음 모듈**: [04-Skills](../04-Skills/)
 
@@ -72,6 +75,32 @@ const itemSpring = spring({
 ### 4. SVG 원형 프로그래스바
 
 `stroke-dasharray` + `stroke-dashoffset`으로 원형 게이지 애니메이션 구현.
+
+## ✨ 추가된 기능 (2026-04 업데이트)
+
+### @remotion/transitions — 씬 전환 효과
+`TransitionSeries`로 슬라이드 간 fade·slide·wipe·flip·clockWipe 전환을 선언적으로 추가.
+이미 Live6/Live7 하이라이트에서 실제 사용 중:
+
+```tsx
+<TransitionSeries>
+  <TransitionSeries.Sequence durationInFrames={90}><SceneA /></TransitionSeries.Sequence>
+  <TransitionSeries.Transition
+    presentation={fade()}
+    timing={linearTiming({ durationInFrames: 18 })}
+  />
+  <TransitionSeries.Sequence durationInFrames={90}><SceneB /></TransitionSeries.Sequence>
+</TransitionSeries>
+```
+→ 상세: [concepts/transitions.md](concepts/transitions.md)
+
+### 텍스트 애니메이션 — 타이프라이터 & 워드 하이라이트
+`useCurrentFrame()`으로 문자열을 잘라 타이프라이터 효과 구현:
+→ 상세: [concepts/text-animations.md](concepts/text-animations.md)
+
+### 폰트 로딩 — Google Fonts + 한국어 (Noto Sans KR 등)
+`@remotion/google-fonts`로 렌더링 전 폰트를 안전하게 로드:
+→ 상세: [guides/fonts-guide.md](guides/fonts-guide.md)
 
 ## 폴더 구조
 

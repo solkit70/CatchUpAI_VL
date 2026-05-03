@@ -14,6 +14,7 @@
 |------|------|------|
 | 1 | [concepts/animation-basics.md](concepts/animation-basics.md) | 핵심 애니메이션 API 개념 (interpolate, spring, Sequence) |
 | 2 | [guides/animation-cheatsheet.md](guides/animation-cheatsheet.md) | 애니메이션 치트시트 (자주 쓰는 패턴 모음) |
+| 3 | [concepts/calculate-metadata.md](concepts/calculate-metadata.md) | calculateMetadata — 동적 영상 길이·Props 설정 ✨NEW |
 
 **이전 모듈**: [01-Setup](../01-Setup/) | **다음 모듈**: [03-Motion-Graphics](../03-Motion-Graphics/)
 
@@ -57,6 +58,22 @@ Remotion Core의 3대 핵심 API를 실습을 통해 학습했습니다:
 | `interpolate()` | 정밀한 값 변환 | 선형적, 입출력 범위 직접 지정 |
 | `spring()` | 자연스러운 모션 | 물리 기반, 0→1 변화, 파라미터 조절 |
 | `Sequence` | 장면 시간 배치 | from으로 시작 시점, 자식은 로컬 시간 |
+| `calculateMetadata` | 동적 Composition 설정 | 오디오 길이 자동 계산, 외부 데이터 로딩 |
+| `useDelayRender` | 비동기 렌더링 대기 | 데이터 로딩 완료 후 렌더링 시작 |
+
+## ✨ 추가된 개념 (2026-04 업데이트)
+
+### calculateMetadata
+Composition이 렌더링되기 전에 실행되는 비동기 함수. 오디오 파일 길이를 읽어 영상 길이를 자동으로 맞추는 데 활용:
+
+```tsx
+const calculateMetadata: CalculateMetadataFunction<Props> = async ({ props }) => {
+  const dur = await getAudioDurationInSeconds(staticFile(props.audioSrc));
+  return { durationInFrames: Math.ceil(dur * 30) + 36 }; // +1.2s 패딩
+};
+```
+
+→ 상세 가이드: [concepts/calculate-metadata.md](concepts/calculate-metadata.md)
 
 ## 참조 자료
 

@@ -18,8 +18,10 @@ Remotion 개발 환경을 구축하고, Hello World 템플릿을 수정하여 �
 
 ## 환경
 - Node.js: v22.15.0
-- Remotion: template-helloworld (최신)
+- Remotion: **4.0.452** (2026-04-26 업그레이드)
 - OS: Windows
+
+> **버전 히스토리**: 초기 설치 4.0.0 → 4.0.419 (학습 기간) → **4.0.452** (현재)
 
 ## 학습 내용
 

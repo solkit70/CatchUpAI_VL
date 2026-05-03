@@ -1,8 +1,8 @@
 # GOBI CLI — Quick Reference Card
 
-> **버전**: GOBI CLI v0.6.15
-> **작성일**: 2026-03-29
-> **상태**: 전체 명령어 참조 (M1~M4 완성)
+> **버전**: GOBI CLI v0.6.15 (CVL 업데이트 완료)
+> **작성일**: 2026-04-24
+> **상태**: 전체 명령어 참조 (v0.6.15 최신화)
 
 ---
 
@@ -23,6 +23,35 @@ gobi init                # Vault 선택 + BRAIN.md 생성 (인터랙티브 필�
 ```
 
 > `.gobi/settings.yaml`에 `vaultSlug` 저장됨
+
+---
+
+## 동기화 (Sync) 🆕
+
+```bash
+# 로컬 <-> 서버 양방향 동기화
+gobi sync
+
+# 정교한 옵션
+gobi sync --upload-only      # 로컬 변경사항만 업로드
+gobi sync --download-only    # 서버 변경사항만 다운로드
+gobi sync --dry-run          # 변경 예정 사항 미리보기
+gobi sync --full             # 전체 재검사 (캐시 무시)
+gobi sync --path "app/home.html"  # 특정 파일/폴더만 동기화
+gobi sync --conflict server  # 충돌 시 서버 버전 우선 (ask|server|client|skip)
+```
+
+---
+
+## 지각 (Sense) 🆕
+
+```bash
+# 활동 기록 조회 (활동 시간, 종류 등)
+gobi sense activities --limit 10
+
+# 전사 기록 조회 (녹음/회의 전사 텍스트)
+gobi sense transcriptions --limit 5
+```
 
 ---
 

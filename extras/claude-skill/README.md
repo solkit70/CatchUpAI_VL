@@ -1,4 +1,4 @@
-﻿# VibeLearn AI Skill - Claude 사용자를 위한 선택적 확장
+# VibeLearn AI Skill - Claude 사용자를 위한 선택적 확장
 
 **버전**: 1.1
 **생성일**: 2026-01-25

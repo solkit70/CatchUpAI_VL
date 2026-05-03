@@ -1,0 +1,27 @@
+{
+  "os": {
+    "system": "Windows",
+    "release": "11",
+    "version": "10.0.26200"
+  },
+  "tools": {
+    "python": "3.12.8",
+    "node": "v20.12.2",
+    "gobi_cli": null
+  },
+  "gobi_settings": {
+    "vaultSlug": "changsoo_vault-df7y0c",
+    "selectedSpaceSlug": "gobi",
+    "voiceSettings": {
+      "primaryLanguage": "ko",
+      "secondaryLanguage": "en",
+      "micGain": 0.2,
+      "systemPromptFile": "_Settings_/Prompts/Real-time Voice Assistant (RVA).md",
+      "llmConfig": {
+        "cli": {
+          "claudePath": "C:\\Users\\dougg\\AppData\\Roaming\\npm\\claude.cmd"
+        }
+      }
+    }
+  }
+}

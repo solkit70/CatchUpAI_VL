@@ -1,8 +1,8 @@
 # GOBI CLI — Quick Reference Card
 
-> **Version**: GOBI CLI v0.6.15
-> **Written**: 2026-03-29
-> **Status**: Full command reference (M1~M4 complete)
+> **Version**: GOBI CLI v0.6.15 (CVL Updated)
+> **Written**: 2026-04-24
+> **Status**: Full command reference (Latest for v0.6.15)
 
 ---
 
@@ -23,6 +23,35 @@ gobi init                # select vault + create BRAIN.md (interactive required)
 ```
 
 > Config saved to `.gobi/settings.yaml` with `vaultSlug`
+
+---
+
+## Sync 🆕
+
+```bash
+# Local <-> Server bidirectional sync
+gobi sync
+
+# Advanced Options
+gobi sync --upload-only      # only upload local changes
+gobi sync --download-only    # only download server changes
+gobi sync --dry-run          # preview changes without applying
+gobi sync --full             # ignore cache, re-check all files
+gobi sync --path "app/home.html"  # sync specific file/folder
+gobi sync --conflict server  # resolve conflicts using server version
+```
+
+---
+
+## Sense 🆕
+
+```bash
+# Activity records (time, type, etc.)
+gobi sense activities --limit 10
+
+# Transcription records (voice/meeting transcripts)
+gobi sense transcriptions --limit 5
+```
 
 ---
 

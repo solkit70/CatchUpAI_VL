@@ -143,6 +143,25 @@ VibeLearn AI v2.0 방법론으로 체계적으로 정리했습니다. 💪"
 
 ---
 
+### Step 6: 로컬 파일 동기화 (Webdrive Sync) 🆕
+
+학습 산출물 폴더 전체를 Gobi 서버(Webdrive)에 안전하게 백업하고 동기화합니다.
+
+```bash
+gobi sync \
+  --path "Topics/GOBI-CLI" \
+  --upload-only
+
+# 결과:
+# Syncing...
+# [Upload] Topics/GOBI-CLI/topic_info.md
+# [Upload] Topics/GOBI-CLI/04-Capstone/guides/complete-workflow.md
+# ...
+# Sync completed successfully ✅
+```
+
+---
+
 ## 전체 워크플로우 요약
 
 ```
@@ -151,9 +170,10 @@ VibeLearn AI v2.0 방법론으로 체계적으로 정리했습니다. 💪"
 3. gobi brain ask --vault-slug   → AI 질의 (Session 생성)
 4. gobi space create-thread      → 팀 공유 Thread 게시
 5. gobi brain post-update        → Brain Feed 업데이트
+6. gobi sync                     → 로컬-서버 파일 동기화
 ```
 
-**5개 명령어, 5단계로 완성되는 GOBI CLI 핵심 워크플로우** ✅
+**6개 명령어, 6단계로 완성되는 GOBI CLI 핵심 워크플로우** ✅
 
 ---
 

@@ -1,4 +1,4 @@
-# VibeLearn AI Roadmap 생성 프롬프트
+﻿# VibeLearn AI Roadmap 생성 프롬프트
 
 **버전**: 2.0
 **생성일**: 2025-12-28
@@ -26,38 +26,52 @@
 
 ### 기본 정보
 
-**Topic 이름**: `{TOPIC_NAME}`
+**Topic 이름**: `Vibe-Guiding-VSCode`
 
 **Topic 설명**:
 ```
-{TOPIC_DESCRIPTION}
+VibeLearn AI 학습 방법론을 사용해 Vibe Guiding의 철학, 아키텍처, GOBI 적용 전략을 학습하고, VS Code 개발 환경에서 직접 POC를 구현하면서 Vibe Manual, CVL, 사용자 컨텍스트 수집, Triggering, Retrieval, Guide Response 생성을 실습하는 개발 중심 Topic.
 ```
 
 **학습 목적**:
 ```
-{LEARNING_GOALS}
+1. Vibe Guiding을 VibeLearn AI로 만든 최신 매뉴얼을 사용자 상황에 맞게 활성화하는 시스템으로 이해한다.
+2. GOBI 시스템을 대상으로 Vibe Manual/CVL 컴포넌트와 Guiding Engine 컴포넌트를 분리해 설계한다.
+3. VS Code에서 실행 가능한 최소 POC를 개발해 사용자 컨텍스트 수집 -> Trigger 판정 -> 문서 검색 -> 맞춤 안내 생성을 검증한다.
+4. 이후 GOBI Desktop/Applet/CLI에 통합할 수 있는 실전 개발 기반을 만든다.
 ```
 
-**예상 학습 기간**: `{DURATION}`
+**예상 학습 기간**: `4-6주, 총 30-45시간`
 
 ---
 
 ### 환경 및 사전 지식
 
-**운영 체제**: `{OS}`
+**운영 체제**: `Windows 11`
 
 **주요 도구 및 기술 스택**:
 ```
-{TECH_STACK}
+- VS Code
+- Claude Code 또는 Codex
+- Python 3.12+
+- Markdown 기반 VibeLearn AI Topic 구조
+- GOBI Desktop / GOBI CLI / GOBI Space
+- GitHub 리포지토리 및 docs/specs 자료
 ```
 
 **사전 지식**:
 ```
 필수:
-{PREREQUISITES_REQUIRED}
+- VibeLearn AI의 Topic -> Roadmap -> Daily Learning -> WorkLog 흐름
+- GOBI 생태계의 기본 구성
+- Python 파일/JSON/Markdown 처리
+- VS Code 기본 사용
 
 권장:
-{PREREQUISITES_RECOMMENDED}
+- VS Code 확장 또는 로컬 CLI 도구 개발 경험
+- Retrieval/RAG 기본 개념
+- 제품 매뉴얼과 사용자 온보딩 설계 경험
+- GOBI CLI 사용 경험
 ```
 
 ---
@@ -66,17 +80,30 @@
 
 **학습 목표** (달성하고 싶은 것):
 ```
-{LEARNING_OBJECTIVES}
+- [ ] Vibe Guiding의 핵심 개념을 Vibe Learning, Vibe Manual, CVL, Triggering, User Context, Guide Response로 나누어 설명할 수 있다.
+- [ ] GOBI 문서/스펙/소스/기존 테스트 기록을 바탕으로 AI-optimized Vibe Manual 구조를 설계할 수 있다.
+- [ ] VS Code에서 실행 가능한 사용자 상태 수집기와 Guiding Engine POC를 구현할 수 있다.
+- [ ] 최신 매뉴얼 기반 Retrieval과 사용자 맥락 기반 응답 조립을 분리해서 설계할 수 있다.
+- [ ] 실제 GOBI 사용 흐름에서 발생한 실패/혼란 상황을 Triggering 테스트 케이스로 바꿀 수 있다.
 ```
 
 **참조 자료**:
 ```
-{REFERENCE_MATERIALS}
+- Topics/Material_For_Topics/Idea/Vibe_Guiding/VibeGuiding_BrainDump.md
+- Topics/GOBI-Guiding/2026-04-03 GOBI Vibe Guiding 시스템 맵.md
+- Topics/GOBI-Guiding/2026-04-05 Vibe Guiding 구현 계획.md
+- Topics/GOBI-Specs-Pipeline/04-Reviews-and-Opinions/2026-04-09 - Proposal - Vibe Guiding Architecture for Gobi.md
+- Topics/GOBI-Guiding/2026-04-13 Gobi Desktop Vibe Guiding 기능 수준 테스트.md
+- Topics/GOBI-CLI/
+- Topics/Clearly-BRD-PRD/
+- Substack: https://substack.com/home/post/p-193035543
+- Substack: https://substack.com/home/post/p-182036138
+- Substack: https://substack.com/home/post/p-193863653
 ```
 
 **vl_materials/ 폴더**:
 ```
-{MATERIALS_FOLDER_INFO}
+vl_materials/에는 Substack 본문 캡처, GOBI 공식 docs/specs export, 테스트 로그, 샘플 user_context JSON, Trigger 시나리오 자료를 저장한다.
 ```
 
 ---
@@ -91,7 +118,7 @@
 
 **로드맵 생성 전 반드시 수행:**
 
-사용자가 입력한 학습 기간 `{DURATION}`이 해당 Topic에 적절한지 분석하고 피드백을 제공하세요.
+사용자가 입력한 학습 기간 `4-6주, 총 30-45시간`이 해당 Topic에 적절한지 분석하고 피드백을 제공하세요.
 
 #### 분석 기준:
 1. **Topic 복잡도 평가**
@@ -113,7 +140,7 @@
 ```markdown
 ## 📊 학습 기간 적정성 분석
 
-**사용자 입력 기간**: {DURATION}
+**사용자 입력 기간**: 4-6주, 총 30-45시간
 **Topic 복잡도**: [간단/중간/복잡]
 **권장 기간**: [X주 또는 Y일]
 
@@ -433,7 +460,7 @@ WorkLog 내에 작성:
 {입력한 기간}
 
 ### 학습 환경
-- OS: {OS}
+- OS: Windows 11
 - 도구: {기술 스택}
 - 사전 지식: {Prerequisites}
 
@@ -649,3 +676,4 @@ WorkLog 내에 작성:
 **Template 버전**: 2.0
 **생성일**: 2025-12-28
 **방법론**: VibeLearn AI
+
