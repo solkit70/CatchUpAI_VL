@@ -66,6 +66,38 @@ style={{
 - `interpolate`/`spring` 값을 style에 바인딩하여 애니메이션 구현
 - transform, opacity, width, height 등 거의 모든 CSS 속성 애니메이션 가능
 
+### 5. CSS filter — drop-shadow (4.0.455+) 🆕
+
+v4.0.455부터 `drop-shadow` CSS filter가 정식 지원됩니다.
+`box-shadow`와 달리 **투명 PNG의 실제 모양을 따라** 그림자가 생성됩니다.
+
+```tsx
+// 텍스트 또는 이미지에 drop-shadow 적용
+style={{
+  filter: 'drop-shadow(4px 8px 16px rgba(0, 0, 0, 0.5))',
+}}
+
+// 애니메이션: 그림자 점점 나타나기
+const shadowBlur = interpolate(frame, [0, 30], [0, 16]);
+style={{
+  filter: `drop-shadow(4px 8px ${shadowBlur}px rgba(0,0,0,0.5))`,
+}}
+```
+
+**drop-shadow vs box-shadow:**
+
+| | `box-shadow` | `drop-shadow` filter |
+|--|-------------|---------------------|
+| 대상 | 요소의 사각형 박스 | 요소의 실제 모양 (투명 제외) |
+| 투명 PNG | 사각형 그림자 | 이미지 실루엣 그림자 |
+| 성능 | 빠름 | 약간 느림 |
+| 3D transform 조합 | 제한 | 4.0.455+: precompose 자동 적용 |
+
+> **HTML-in-Canvas와 조합**: `drop-shadow` + 3D scale 변환 사용 시 자동으로
+> precompose 처리되어 정확한 렌더링이 보장됩니다 (4.0.455+).
+
+---
+
 ## 웹 vs 영상 CSS 차이점
 
 | 항목 | 웹 CSS | 영상 CSS (Remotion) |
@@ -75,3 +107,4 @@ style={{
 | 반응형 | media query | width/height 고정 (1920x1080) |
 | 폰트 | @font-face | 번들에 포함 필요 |
 | 단위 | rem, %, vh 등 | px 고정 권장 |
+| CSS filter | 브라우저 지원 범위 | drop-shadow 4.0.455+ 정식 지원 |

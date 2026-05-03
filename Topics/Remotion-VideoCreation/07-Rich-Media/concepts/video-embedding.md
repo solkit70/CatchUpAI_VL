@@ -40,6 +40,47 @@ const { fps } = useVideoConfig();
 > `from` + `durationInFrames`는 `<Sequence>`를 대체하는 간편 표기법입니다.
 > 기존 코드에서 `<Sequence from={...}><Video .../></Sequence>` 패턴도 계속 사용 가능합니다.
 
+### ✨ 4.0.456: `<Video>` / `<Audio>` — True Sequence 동작
+
+v4.0.456부터 `<Video>`와 `<Audio>`는 `<Sequence>`와 동일하게 **타임라인을 상속**합니다.
+`from` prop을 사용하면 부모 Sequence의 타임라인을 기준으로 정확히 오프셋이 계산됩니다.
+
+```tsx
+// 4.0.456 이전: from은 컴포지션 절대 프레임 기준
+// 4.0.456 이후: from은 부모 Sequence의 상대 프레임 기준 (Sequence와 동일)
+<Sequence from={60}>
+  <Video
+    src={staticFile('clips/intro.mp4')}
+    from={30}   // 부모 Sequence 안에서 30프레임 후 시작 (= 컴포지션 90프레임)
+  />
+</Sequence>
+```
+
+> 기존에 `<Sequence>` 없이 `from` prop만 사용하던 코드는 영향 없음.
+> `<Sequence>` 안에 중첩하는 경우 동작이 변경될 수 있으므로 확인 필요.
+
+---
+
+## HLS 스트리밍 지원 (4.0.454+) 🆕
+
+`.m3u8` URL을 `<Video>`에 직접 전달하면 HLS 스트리밍을 재생할 수 있습니다.
+
+```tsx
+import { Video } from 'remotion';
+
+export const HlsPlayer: React.FC = () => (
+  <Video src="https://example.com/stream.m3u8" />
+);
+```
+
+**HLS 지원 사항:**
+- `@remotion/hls` 별도 패키지 불필요 — `remotion`에 내장
+- 마스터 플레이리스트에서 **최고 화질 트랙 자동 선택**
+- 화질 트랙 수동 지정 미지원 (자동만 가능)
+- **VOD 전용** — 라이브 HLS 스트림은 지원하지 않음
+
+> Studio 미리보기 및 렌더링 모두 동일하게 동작합니다.
+
 ---
 
 ## 기본 사용

@@ -132,6 +132,59 @@ export const BulletSlide: React.FC<Props> = ({ data }) => {
 
 > **권장**: 기존 프로젝트는 `Sequence` 방식을 유지. 신규 컴포넌트에서는 `from` prop 방식이 더 간결합니다.
 
+### ✨ 4.0.456: `<Audio>` — True Sequence 동작
+
+v4.0.456부터 `<Audio>`도 `<Video>`와 함께 **true Sequence**로 동작합니다.
+`from` prop이 부모 Sequence의 상대 프레임을 기준으로 계산됩니다.
+
+```tsx
+// 4.0.456+: Sequence 안에서 from은 상대 오프셋
+<Sequence from={90}>
+  <Audio
+    src={staticFile(data.audioSrc)}
+    from={24}   // 부모 Sequence 기준 24프레임 후 = 컴포지션 114프레임
+  />
+</Sequence>
+```
+
+> 기존에 최상위에서 `<Audio from={...}>`만 사용하는 경우 동작 변경 없음.
+
+### ✨ 4.0.453: Player `initialVolume` prop
+
+`<Player>` 컴포넌트에 초기 볼륨을 지정할 수 있습니다:
+
+```tsx
+import { Player } from '@remotion/player';
+
+<Player
+  component={MyComposition}
+  initialVolume={0.5}   // 0~1 사이 초기 볼륨 (기본값 1)
+  durationInFrames={300}
+  fps={30}
+  compositionWidth={1920}
+  compositionHeight={1080}
+/>
+```
+
+> 웹 임베드 플레이어에서 자동재생 정책 우회용으로 유용합니다.
+
+### ✨ 4.0.453: 오디오 재생 순서 보장
+
+여러 `<Audio>` 태그가 동시에 시작할 때 재생 순서가 일관되게 보장됩니다.
+이전 버전에서 타이밍이 미세하게 어긋나던 현상이 수정되었습니다.
+
+또한 4.0.455부터 **음소거된 Player는 AudioContext 활성화를 기다리지 않아** 초기 로딩이 빨라졌습니다:
+
+```tsx
+// muted 플레이어: AudioContext 대기 없이 즉시 재생 시작
+<Player
+  component={MyComposition}
+  muted
+  autoPlay
+  ...
+/>
+```
+
 ### 패딩 계산
 
 ```
