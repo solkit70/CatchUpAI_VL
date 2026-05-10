@@ -753,7 +753,7 @@ Vibe-Guiding-VSCode/
 |------|--------|--------|------|-----------|------|
 | M1 | 2026-05-03 | 2026-05-03 | 완료 | 100% | POC 대상: GOBI CLI |
 | M2 | 2026-05-10 | 2026-05-10 | 완료 | 100% | GOBI CLI v2.0.12 기준 Two-Component Architecture 정리 |
-| M3 | | | 대기 | 0% | Sample Manual 최소 1개 필요 |
+| M3 | 2026-05-10 | 2026-05-10 | 완료 | 100% | Vibe Manual Schema, Retrieval Metadata, CVL Rules, Sample Manual 작성 |
 | M4 | | | 대기 | 0% | 실제 Python POC 개발 |
 | M5 | | | 대기 | 0% | 3개 GOBI 시나리오 검증 |
 | M6 | | | 대기 | 0% | Capstone Demo 준비 |
@@ -781,9 +781,9 @@ Vibe-Guiding-VSCode/
 Topic 이름: Vibe-Guiding-VSCode
 Topic 폴더 경로: C:\AI_study\2026\Changsoo_Vault\Ingest\CatchUpAI_VL\Topics\Vibe-Guiding-VSCode\
 Roadmap 파일 경로: vl_roadmap/20260426_RoadMap_Vibe-Guiding-VSCode.md
-현재 진행 중인 모듈: M3 - Vibe Manual과 CVL 설계
-가장 최근 WorkLog 파일: vl_worklog/20260510_M2_Vibe-Guiding-VSCode.md
-이전 세션의 Tomorrow's focus: M3 시작. `03-Vibe-Manual-CVL/` 폴더를 만들고, GOBI CLI v2.0.12 문서를 기준으로 `manual_index.json` 스키마와 `trigger_rules.json` 초안을 설계한다.
+현재 진행 중인 모듈: M4 - Guiding Engine POC 개발
+가장 최근 WorkLog 파일: vl_worklog/20260510_M3_Vibe-Guiding-VSCode.md
+이전 세션의 Tomorrow's focus: M4 시작. `04-Guiding-Engine-POC/` 폴더를 만들고 `manual_index.json`, `trigger_rules.json`, `user_context.sample.json` 3개, rule-based `guide_response.md` 생성 흐름을 설계한다.
 사용 가능한 시간: 사용자가 세션 시작 시 입력
 ```
 

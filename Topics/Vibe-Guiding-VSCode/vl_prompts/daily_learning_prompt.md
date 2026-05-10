@@ -48,21 +48,21 @@ vl_roadmap/20260426_RoadMap_Vibe-Guiding-VSCode.md
 
 **현재 진행 중인 모듈**:
 ```
-M3 - Vibe Manual과 CVL 설계
+M4 - Guiding Engine POC 개발
 ```
 
 **가장 최근 WorkLog 파일**:
 ```
-vl_worklog/20260510_M2_Vibe-Guiding-VSCode.md
+vl_worklog/20260510_M3_Vibe-Guiding-VSCode.md
 ```
 
 **이전 세션의 "Tomorrow's focus"** (있다면):
 ```
-- M3 시작: `03-Vibe-Manual-CVL/` 생성
-- GOBI CLI v2.0.12 문서를 기준으로 `manual_index.json` 스키마 설계
-- `trigger_rules.json` 초안 작성
-- M4 POC에서 사용할 샘플 `user_context.json` 후보 정의
-- Vibe Manual/CVL 컴포넌트가 Guiding Engine에 제공할 최소 index 계약 정리
+- M4 시작: `04-Guiding-Engine-POC/` 생성
+- `manual_index.json` 실제 파일 작성
+- `trigger_rules.json` 작성
+- `user_context.sample.json` 3개 작성
+- rule-based `guide_response.md` 생성 흐름 설계
 ```
 
 ---
