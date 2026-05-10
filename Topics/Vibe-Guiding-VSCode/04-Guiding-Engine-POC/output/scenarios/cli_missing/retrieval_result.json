@@ -1,0 +1,202 @@
+{
+  "selected_manual": {
+    "manual_id": "gobi-cli-install",
+    "title": "Install and verify GOBI CLI",
+    "source_path": "Topics/GOBI-CLI/01-Setup-Auth/concepts/installation-guide.md",
+    "product": "GOBI CLI",
+    "version_scope": "v2.0.12+",
+    "guide_type": "install",
+    "user_goals": [
+      "GOBI CLI 설치",
+      "gobi 명령어 사용",
+      "CLI 버전 확인"
+    ],
+    "problem_signals": [
+      "cli_missing"
+    ],
+    "commands": [
+      "npm install -g @gobi-ai/cli",
+      "gobi --version"
+    ],
+    "deprecated_terms": [],
+    "replacement_terms": {},
+    "completion_signal": "`gobi --version` prints a GOBI CLI version such as 2.0.12.",
+    "fallbacks": [
+      "Open a new terminal after installing.",
+      "Check Node/npm installation and PATH."
+    ],
+    "priority": 100,
+    "score": 200
+  },
+  "candidates": [
+    {
+      "manual_id": "gobi-cli-install",
+      "title": "Install and verify GOBI CLI",
+      "source_path": "Topics/GOBI-CLI/01-Setup-Auth/concepts/installation-guide.md",
+      "product": "GOBI CLI",
+      "version_scope": "v2.0.12+",
+      "guide_type": "install",
+      "user_goals": [
+        "GOBI CLI 설치",
+        "gobi 명령어 사용",
+        "CLI 버전 확인"
+      ],
+      "problem_signals": [
+        "cli_missing"
+      ],
+      "commands": [
+        "npm install -g @gobi-ai/cli",
+        "gobi --version"
+      ],
+      "deprecated_terms": [],
+      "replacement_terms": {},
+      "completion_signal": "`gobi --version` prints a GOBI CLI version such as 2.0.12.",
+      "fallbacks": [
+        "Open a new terminal after installing.",
+        "Check Node/npm installation and PATH."
+      ],
+      "priority": 100,
+      "score": 200
+    },
+    {
+      "manual_id": "gobi-cli-auth-status",
+      "title": "Authenticate GOBI CLI",
+      "source_path": "Topics/GOBI-CLI/01-Setup-Auth/concepts/installation-guide.md",
+      "product": "GOBI CLI",
+      "version_scope": "v2.0.12+",
+      "guide_type": "auth",
+      "user_goals": [
+        "GOBI CLI 로그인",
+        "인증 상태 확인"
+      ],
+      "problem_signals": [
+        "auth_required"
+      ],
+      "commands": [
+        "gobi auth login",
+        "gobi auth status"
+      ],
+      "deprecated_terms": [],
+      "replacement_terms": {},
+      "completion_signal": "`gobi auth status` shows an authenticated user.",
+      "fallbacks": [
+        "Run `gobi auth login` again.",
+        "Complete the device-code flow in the browser."
+      ],
+      "priority": 95,
+      "score": 95
+    },
+    {
+      "manual_id": "gobi-cli-space-create-post",
+      "title": "Create a Space Post with GOBI CLI",
+      "source_path": "Topics/Vibe-Guiding-VSCode/03-Vibe-Manual-CVL/sample-manual/gobi-cli-getting-started.md",
+      "product": "GOBI CLI",
+      "version_scope": "v2.0.12+",
+      "guide_type": "space_post",
+      "user_goals": [
+        "Space에 글 올리기",
+        "Post 만들기",
+        "Thread 만들기"
+      ],
+      "problem_signals": [
+        "space_post_blocked",
+        "old_thread_command_used"
+      ],
+      "commands": [
+        "gobi space list",
+        "gobi space create-post",
+        "gobi space get-post"
+      ],
+      "deprecated_terms": [
+        "thread",
+        "create-thread",
+        "list-threads",
+        "get-thread"
+      ],
+      "replacement_terms": {
+        "thread": "post",
+        "create-thread": "create-post",
+        "list-threads": "list-posts",
+        "get-thread": "get-post"
+      },
+      "completion_signal": "`gobi space create-post` returns a post id and `gobi space get-post <id>` can retrieve it.",
+      "fallbacks": [
+        "Run `gobi space list` to confirm the slug.",
+        "Run `gobi auth status` if the command returns an auth error."
+      ],
+      "priority": 90,
+      "score": 90
+    },
+    {
+      "manual_id": "gobi-cli-vault-publish",
+      "title": "Publish PUBLISH.md to a Vault",
+      "source_path": "Topics/GOBI-CLI/02-Brain-Session/guides/brain-publish-guide.md",
+      "product": "GOBI CLI",
+      "version_scope": "v2.0.12+",
+      "guide_type": "vault_publish",
+      "user_goals": [
+        "Vault 발행",
+        "PUBLISH.md 업로드",
+        "BRAIN.md 전환"
+      ],
+      "problem_signals": [
+        "vault_publish_blocked"
+      ],
+      "commands": [
+        "gobi vault init",
+        "gobi vault publish",
+        "gobi vault status"
+      ],
+      "deprecated_terms": [
+        "BRAIN.md",
+        "gobi brain publish"
+      ],
+      "replacement_terms": {
+        "BRAIN.md": "PUBLISH.md",
+        "gobi brain publish": "gobi vault publish"
+      },
+      "completion_signal": "`gobi vault status` shows the publish state for PUBLISH.md.",
+      "fallbacks": [
+        "Confirm `.gobi/settings.yaml` exists.",
+        "Run `gobi vault init` interactively if the vault is not configured."
+      ],
+      "priority": 80,
+      "score": 80
+    },
+    {
+      "manual_id": "gobi-cli-session-reply",
+      "title": "Continue a GOBI Session",
+      "source_path": "Topics/GOBI-CLI/02-Brain-Session/guides/session-management.md",
+      "product": "GOBI CLI",
+      "version_scope": "v2.0.12+",
+      "guide_type": "session",
+      "user_goals": [
+        "Session 이어가기",
+        "AI 대화 답장"
+      ],
+      "problem_signals": [
+        "session_reply_blocked"
+      ],
+      "commands": [
+        "gobi session list",
+        "gobi session get",
+        "gobi session create-reply"
+      ],
+      "deprecated_terms": [
+        "session reply"
+      ],
+      "replacement_terms": {
+        "session reply": "session create-reply"
+      },
+      "completion_signal": "`gobi session get <id>` shows the new reply after `create-reply`.",
+      "fallbacks": [
+        "Confirm the session id with `gobi session list`.",
+        "Use `--content`, not `--message`."
+      ],
+      "priority": 70,
+      "score": 70
+    }
+  ],
+  "index_version": "0.1",
+  "source_version": "GOBI CLI v2.0.12"
+}

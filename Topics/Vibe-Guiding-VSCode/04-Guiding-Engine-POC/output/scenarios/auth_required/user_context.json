@@ -1,0 +1,17 @@
+{
+  "id": "auth_required",
+  "os": "Windows 11",
+  "user_level": "beginner",
+  "gobi_cli_version": "2.0.12",
+  "auth_status": "logged_out",
+  "active_space": null,
+  "available_commands": [
+    "auth",
+    "vault",
+    "space"
+  ],
+  "problem_signal": {
+    "type": "auth_required",
+    "message": "gobi auth status 결과 로그인이 되어 있지 않습니다."
+  }
+}

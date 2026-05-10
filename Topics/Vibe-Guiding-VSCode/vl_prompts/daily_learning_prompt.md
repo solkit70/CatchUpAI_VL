@@ -48,21 +48,22 @@ vl_roadmap/20260426_RoadMap_Vibe-Guiding-VSCode.md
 
 **현재 진행 중인 모듈**:
 ```
-M4 - Guiding Engine POC 개발
+M5 - GOBI 시나리오 검증
 ```
 
 **가장 최근 WorkLog 파일**:
 ```
-vl_worklog/20260510_M3_Vibe-Guiding-VSCode.md
+vl_worklog/20260510_M4_Vibe-Guiding-VSCode.md
 ```
 
 **이전 세션의 "Tomorrow's focus"** (있다면):
 ```
-- M4 시작: `04-Guiding-Engine-POC/` 생성
-- `manual_index.json` 실제 파일 작성
-- `trigger_rules.json` 작성
-- `user_context.sample.json` 3개 작성
-- rule-based `guide_response.md` 생성 흐름 설계
+- M5 시작: `05-GOBI-Scenario-Tests/` 생성
+- guide quality checklist 작성
+- GOBI CLI auth 시나리오 작성 및 M4 POC 출력으로 검증
+- Space Post 시나리오 작성 및 M4 POC 출력으로 검증
+- version mismatch 시나리오 작성
+- 실패 원인을 manual, trigger, retrieval, compose 중 하나로 분류하는 표 작성
 ```
 
 ---

@@ -1,0 +1,23 @@
+[
+  {
+    "id": "cli_missing",
+    "passed": true,
+    "selected_rule": "cli_missing",
+    "selected_manual": "gobi-cli-install",
+    "expected_manual": "gobi-cli-install"
+  },
+  {
+    "id": "auth_required",
+    "passed": true,
+    "selected_rule": "auth_required",
+    "selected_manual": "gobi-cli-auth-status",
+    "expected_manual": "gobi-cli-auth-status"
+  },
+  {
+    "id": "space_post_blocked",
+    "passed": true,
+    "selected_rule": "old_thread_command_used",
+    "selected_manual": "gobi-cli-space-create-post",
+    "expected_manual": "gobi-cli-space-create-post"
+  }
+]

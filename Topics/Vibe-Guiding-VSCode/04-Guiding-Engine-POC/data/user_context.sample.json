@@ -1,0 +1,12 @@
+{
+  "os": "Windows 11",
+  "user_level": "beginner",
+  "gobi_cli_version": "2.0.12",
+  "auth_status": "authenticated",
+  "active_space": "changbal",
+  "available_commands": ["auth", "vault", "space", "global", "session"],
+  "problem_signal": {
+    "type": "space_post_blocked",
+    "message": "Space에 글을 올리고 싶은데 Thread 생성 명령어만 기억납니다."
+  }
+}

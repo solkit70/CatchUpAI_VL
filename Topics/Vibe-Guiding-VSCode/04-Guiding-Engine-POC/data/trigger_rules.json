@@ -1,0 +1,44 @@
+{
+  "rules": [
+    {
+      "id": "cli_missing",
+      "priority": 100,
+      "match_types": ["cli_missing"],
+      "keywords": ["gobi 명령", "command not found", "not recognized", "찾을 수 없습니다"],
+      "guide_type": "install",
+      "reason": "GOBI CLI가 설치되어 있지 않거나 PATH에 반영되지 않았습니다."
+    },
+    {
+      "id": "auth_required",
+      "priority": 90,
+      "match_types": ["auth_required"],
+      "keywords": ["auth", "login", "로그인", "인증", "logged out"],
+      "guide_type": "auth",
+      "reason": "GOBI CLI 인증 상태가 작업을 진행하기에 충분하지 않습니다."
+    },
+    {
+      "id": "old_thread_command_used",
+      "priority": 85,
+      "match_types": ["old_thread_command_used", "space_post_blocked"],
+      "keywords": ["thread", "create-thread", "list-threads", "get-thread", "Thread"],
+      "guide_type": "space_post",
+      "reason": "GOBI CLI v2.0.12에서는 Thread 명령어가 Post 명령어로 변경되었습니다."
+    },
+    {
+      "id": "space_post_blocked",
+      "priority": 80,
+      "match_types": ["space_post_blocked"],
+      "keywords": ["space", "post", "글", "게시", "create-post"],
+      "guide_type": "space_post",
+      "reason": "Space에 Post를 작성하는 절차 안내가 필요합니다."
+    },
+    {
+      "id": "vault_publish_blocked",
+      "priority": 70,
+      "match_types": ["vault_publish_blocked"],
+      "keywords": ["publish", "PUBLISH.md", "BRAIN.md", "vault publish"],
+      "guide_type": "vault_publish",
+      "reason": "Vault 발행 또는 PUBLISH.md 전환 안내가 필요합니다."
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "id": "space_post_blocked",
+  "os": "Windows 11",
+  "user_level": "intermediate",
+  "gobi_cli_version": "2.0.12",
+  "auth_status": "authenticated",
+  "active_space": "changbal",
+  "available_commands": [
+    "auth",
+    "vault",
+    "space",
+    "global",
+    "session"
+  ],
+  "problem_signal": {
+    "type": "space_post_blocked",
+    "message": "예전 create-thread 명령어로 Space에 글을 만들려고 했는데 실패했습니다."
+  }
+}

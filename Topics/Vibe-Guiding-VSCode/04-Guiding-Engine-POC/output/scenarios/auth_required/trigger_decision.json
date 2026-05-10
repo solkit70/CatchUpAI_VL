@@ -1,0 +1,44 @@
+{
+  "problem_signal": {
+    "type": "auth_required",
+    "message": "gobi auth status 결과 로그인이 되어 있지 않습니다."
+  },
+  "selected_rule": {
+    "rule_id": "auth_required",
+    "guide_type": "auth",
+    "reason": "GOBI CLI 인증 상태가 작업을 진행하기에 충분하지 않습니다.",
+    "score": 205
+  },
+  "candidates": [
+    {
+      "rule_id": "auth_required",
+      "guide_type": "auth",
+      "reason": "GOBI CLI 인증 상태가 작업을 진행하기에 충분하지 않습니다.",
+      "score": 205
+    },
+    {
+      "rule_id": "cli_missing",
+      "guide_type": "install",
+      "reason": "GOBI CLI가 설치되어 있지 않거나 PATH에 반영되지 않았습니다.",
+      "score": 100
+    },
+    {
+      "rule_id": "old_thread_command_used",
+      "guide_type": "space_post",
+      "reason": "GOBI CLI v2.0.12에서는 Thread 명령어가 Post 명령어로 변경되었습니다.",
+      "score": 85
+    },
+    {
+      "rule_id": "space_post_blocked",
+      "guide_type": "space_post",
+      "reason": "Space에 Post를 작성하는 절차 안내가 필요합니다.",
+      "score": 80
+    },
+    {
+      "rule_id": "vault_publish_blocked",
+      "guide_type": "vault_publish",
+      "reason": "Vault 발행 또는 PUBLISH.md 전환 안내가 필요합니다.",
+      "score": 70
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+[
+  {
+    "id": "cli_missing",
+    "os": "Windows 11",
+    "user_level": "beginner",
+    "gobi_cli_version": null,
+    "auth_status": "unknown",
+    "active_space": null,
+    "available_commands": [],
+    "problem_signal": {
+      "type": "cli_missing",
+      "message": "gobi 명령을 찾을 수 없습니다."
+    }
+  },
+  {
+    "id": "auth_required",
+    "os": "Windows 11",
+    "user_level": "beginner",
+    "gobi_cli_version": "2.0.12",
+    "auth_status": "logged_out",
+    "active_space": null,
+    "available_commands": ["auth", "vault", "space"],
+    "problem_signal": {
+      "type": "auth_required",
+      "message": "gobi auth status 결과 로그인이 되어 있지 않습니다."
+    }
+  },
+  {
+    "id": "space_post_blocked",
+    "os": "Windows 11",
+    "user_level": "intermediate",
+    "gobi_cli_version": "2.0.12",
+    "auth_status": "authenticated",
+    "active_space": "changbal",
+    "available_commands": ["auth", "vault", "space", "global", "session"],
+    "problem_signal": {
+      "type": "space_post_blocked",
+      "message": "예전 create-thread 명령어로 Space에 글을 만들려고 했는데 실패했습니다."
+    }
+  }
+]

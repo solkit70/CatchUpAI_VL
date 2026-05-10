@@ -1,0 +1,13 @@
+{
+  "id": "cli_missing",
+  "os": "Windows 11",
+  "user_level": "beginner",
+  "gobi_cli_version": null,
+  "auth_status": "unknown",
+  "active_space": null,
+  "available_commands": [],
+  "problem_signal": {
+    "type": "cli_missing",
+    "message": "gobi 명령을 찾을 수 없습니다."
+  }
+}
