@@ -1,15 +1,25 @@
 # GOBI CLI — Space 탐색 가이드
 
-> **모듈**: M3 — Space & Thread 협업 기능
+> **모듈**: M3 — Space & Post 협업 기능
 > **작성일**: 2026-03-29
-> **버전**: GOBI CLI v0.6.15
+> **CVL 업데이트**: 2026-05-10 (v2.0.12 — Thread→Post 전면 변경, 신규 명령어 반영)
+> **버전**: GOBI CLI v2.0.12
+
+> ⚠️ **v2.0 Breaking Change**: `Thread` → `Post` 전면 명칭 변경
+> - `list-threads` → `list-posts`
+> - `get-thread` → `get-post`
+> - `create-thread` → `create-post`
+> - `edit-thread` → `edit-post`
+> - `delete-thread` → `delete-post`
 
 ---
 
 ## Space란?
 
-Vault 내 **팀 협업 공간**입니다. 관련 Brain과 Thread를 묶는 단위로,
-GitHub Repository 또는 Slack 채널에 비유할 수 있습니다.
+팀 협업 커뮤니티 공간입니다. **Post(포스트)와 Reply(답글)**로 소통하며,
+GitHub Issues 또는 Slack 채널에 비유할 수 있습니다.
+
+> **v2.0 변경**: `Thread` → `Post` (명칭 전면 변경)
 
 ---
 
@@ -19,10 +29,10 @@ GitHub Repository 또는 Slack 채널에 비유할 수 있습니다.
 
 ```bash
 gobi space list
-gobi space list --json
+gobi --json space list
 ```
 
-### 실습 결과 (2026-03-29)
+### 실습 결과 (2026-03-29 기록, v2.0에서도 동일)
 
 ```
 Spaces (3):
@@ -66,27 +76,39 @@ gobi space warp changbal
 Space를 선택하지 않아도 `--space-slug`를 각 명령어에 직접 지정 가능:
 
 ```bash
-gobi space list-threads --space-slug changbal
-gobi space create-thread --space-slug gobi --title "제목"
+gobi space list-posts --space-slug changbal
+gobi space create-post --space-slug gobi --title "제목"
 ```
 
 ---
 
-## gobi space list-threads
+## gobi space feed
 
-Space의 Thread 목록을 조회합니다.
+Space의 **통합 피드**를 최신순으로 조회합니다. (v2.0 신규)
 
 ```bash
-gobi space list-threads --space-slug <slug>
-gobi space list-threads --space-slug <slug> --limit 5
-gobi space list-threads --space-slug <slug> --json
+gobi space feed
+gobi --json space feed
+gobi space feed --space-slug changbal
+```
+
+---
+
+## gobi space list-posts
+
+Space의 Post 목록을 조회합니다. (구 `list-threads`)
+
+```bash
+gobi space list-posts --space-slug <slug>
+gobi space list-posts --space-slug <slug> --limit 5
+gobi --json space list-posts --space-slug <slug>
 ```
 
 ### 일반 출력 vs JSON 출력 비교
 
 **일반 출력:**
 ```
-Threads (9 items):
+Posts (9 items):
 - [123] "직장 생활을 계속 하는게 나을까요?" by Changsoo Park (2 replies)
 - [214] "[TMI] 오늘 발표 중 가장 쓸데없지만..." by Minsuk Kang (1 replies)
 ```
@@ -101,7 +123,7 @@ Threads (9 items):
     {"name": "AI", "slug": "ai"}
   ],
   "replyCount": 2,
-  "primaryVault": {...},      ← 작성자의 Brain 정보
+  "primaryVault": {...},      ← 작성자의 Vault 정보
   "editedAt": null,
   "createdAt": "2026-03-16T..."
 }
@@ -111,28 +133,28 @@ Threads (9 items):
 
 ```bash
 # 다음 페이지 (cursor 값은 이전 응답의 마지막 항목 날짜)
-gobi space list-threads --space-slug gobi \
+gobi space list-posts --space-slug gobi \
   --cursor "2026-03-28T00:27:27.492Z"
 ```
 
 ---
 
-## gobi space get-thread
+## gobi space get-post
 
-특정 Thread의 내용과 모든 Reply를 조회합니다.
+특정 Post의 내용과 모든 Reply를 조회합니다. (구 `get-thread`)
 
 ```bash
-gobi space get-thread <threadId> --space-slug <slug>
-gobi space get-thread <threadId> --space-slug <slug> --limit 10
+gobi space get-post <postId> --space-slug <slug>
+gobi space get-post <postId> --space-slug <slug> --limit 10
 ```
 
-### 실습 결과
+### 실습 결과 (v0.6.x 기록 — 명령어만 변경됨)
 
 ```bash
-gobi space get-thread 123 --space-slug changbal
+gobi space get-post 123 --space-slug changbal
 
 # 출력:
-# Thread: 지금의 직장 생활을 계속 하는게 나을까요?
+# Post: 지금의 직장 생활을 계속 하는게 나을까요?
 # By: Changsoo Park on 2026-03-16T20:22:21.752Z
 #
 # [본문 내용]
@@ -144,6 +166,42 @@ gobi space get-thread 123 --space-slug changbal
 
 ---
 
+## gobi space list-topics
+
+Space에서 사용되는 **토픽 태그 목록**을 조회합니다. (v2.0 신규)
+
+```bash
+gobi --json space list-topics --space-slug changbal
+```
+
+---
+
+## gobi space list-topic-posts
+
+특정 토픽의 Post 목록을 조회합니다. (v2.0 신규)
+
+```bash
+gobi --json space list-topic-posts <topicSlug> --space-slug changbal
+```
+
+---
+
+## v0.6.x → v2.0 명령어 변환표
+
+| 구 명령어 (v0.6.x) | 새 명령어 (v2.0) |
+|-------------------|----------------|
+| `space list-threads` | `space list-posts` |
+| `space get-thread <id>` | `space get-post <id>` |
+| `space create-thread` | `space create-post` |
+| `space edit-thread <id>` | `space edit-post <id>` |
+| `space delete-thread <id>` | `space delete-post <id>` |
+| (없음) | `space feed` (신규) |
+| (없음) | `space list-topics` (신규) |
+| (없음) | `space list-topic-posts <slug>` (신규) |
+
+---
+
 > **다음 문서**: [thread-management.md](thread-management.md)
 > **작성자**: Changsoo (Claude Code 활용)
 > **방법론**: VibeLearn AI v2.0
+> **CVL 기준**: v2.0.12 (2026-05-10)

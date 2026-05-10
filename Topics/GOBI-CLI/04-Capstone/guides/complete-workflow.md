@@ -2,7 +2,8 @@
 
 > **모듈**: M4 — 실전 워크플로우 + 교과서 완성 (Capstone)
 > **작성일**: 2026-03-29
-> **버전**: GOBI CLI v0.6.15
+> **CVL 업데이트**: 2026-05-10 (v2.0.12 — 명령어 전면 업데이트)
+> **버전**: GOBI CLI v2.0.12
 
 ---
 
@@ -11,15 +12,18 @@
 M1~M3에서 배운 모든 명령어를 실전 시나리오로 연결한 End-to-End 흐름입니다.
 
 ```
-인증 확인 → Brain 검색/질의 → Space Thread 생성 → Brain 업데이트 게시
-     ↓              ↓                  ↓                    ↓
- auth status   brain search        create-thread        post-update
-               brain ask           create-reply         list-updates
+인증 확인 → 글로벌 피드 탐색 → Session 확인 → Space Post 생성 → Global 업데이트 게시
+     ↓              ↓                ↓                ↓                    ↓
+ auth status   global feed      session list      create-post        global create-post
+               space feed       session get       create-reply       vault sync
 ```
+
+> **v2.0 변경**: `brain search/ask` → CLI 제거됨 (웹 UI 이용)
+> 워크플로우 Step 2는 `global feed` / `space feed`로 대체
 
 ---
 
-## 시나리오: "학습 완료 알림 + 팀 공유" 워크플로우
+## 시나리오: "학습 완료 알림 + 팀 공유" 워크플로우 (v2.0)
 
 ### Step 1: 인증 상태 확인
 
@@ -32,76 +36,70 @@ gobi auth status
 # Vault: gobi-cli-study
 ```
 
-**M4 실습 결과**: 인증 정상 ✅
+**v2.0**: 인증 정상 ✅
 
 ---
 
-### Step 2: Brain 검색으로 관련 지식 자원 확인
+### Step 2: 글로벌/Space 피드로 관련 지식 자원 확인
+
+> ⚠️ **v2.0 변경**: `gobi brain search`는 CLI에서 제거됨 → `global feed` 또는 `space feed` 사용
 
 ```bash
-gobi brain search --query "GOBI CLI"
+# 글로벌 피드 확인 (커뮤니티 전체 포스트)
+gobi --json global feed
 
-# 결과:
-# Brain Search Results:
-# 1. [gobi-cli-study] GOBI CLI Study Brain  ← 우리 Brain!
-#    Similarity: 0.911
-#    By: Changsoo Park
-#    Tags: gobi-cli, learning, vibelearn-ai, cli-tool
-#
-# 2. [gobi-brain] Gobi Brain
-#    Similarity: 0.743
-#
-# 3. [changbal-brain] Changbal Brain
-#    Similarity: 0.512
+# 특정 Space 피드 확인
+gobi --json space feed --space-slug changbal
+
+# Space 토픽별 탐색 (v2.0 신규)
+gobi --json space list-topics --space-slug changbal
+gobi --json space list-topic-posts ai --space-slug changbal
 ```
 
-**핵심 발견**: 우리가 publish한 `gobi-cli-study` Brain이 **similarity 0.911**로 1위 ✅
-→ BRAIN.md 내용이 정확히 인덱싱되었음을 확인
+**활용**: 피드에서 관련 포스트를 찾아 컨텍스트 파악 후 후속 작업 진행
 
 ---
 
-### Step 3: Brain에 질의 (AI 대화 세션 생성)
+### Step 3: Session 확인 및 대화 이어가기
+
+> ⚠️ **v2.0 변경**: `gobi brain ask`는 CLI에서 제거됨 (웹 UI에서 새 Session 시작)
+> ✅ `session list/get`은 v2.0에서 **정상 작동** (v0.6.15 HTTP 404 이슈 해결됨)
 
 ```bash
-gobi brain ask \
-  --vault-slug gobi-cli-study \
-  --question "What GOBI CLI commands are covered in this brain?" \
-  --json
+# Session 목록 확인
+gobi --json session list
 
-# 응답:
+# Session 내용 확인
+gobi --json session get 9b73ebfd-f32b-4171-b411-25c56f507ab1
+
+# 대화 이어가기 (구 session reply)
+gobi session create-reply 9b73ebfd-f32b-4171-b411-25c56f507ab1 \
+  --content "GOBI CLI v2.0의 주요 변경사항을 요약해줘"
+
+# 응답 예시:
 # {
-#   "id": 679,
-#   "sessionId": "uuid-...",
-#   "answer": "This brain covers the following GOBI CLI commands:
-#     1. gobi auth (login/status/logout)
-#     2. gobi brain (search/ask/publish/post-update...)
-#     3. gobi space (list/warp/list-threads/get-thread/create-thread...)
-#     4. gobi session (list/get/reply - v0.6.15 issues noted)
-#     ...",
-#   "vaultSlug": "gobi-cli-study",
-#   "createdAt": "2026-03-29T..."
+#   "sessionId": "9b73ebfd-...",
+#   "answer": "v2.0의 주요 변경: vault 명령 그룹 신설, Thread→Post 변경...",
+#   "createdAt": "2026-05-10T..."
 # }
 ```
 
-**결과**: Session 679 생성 ✅ — Brain이 M1~M3 내용을 정확히 답변
-
-> **참고**: `session list/get/reply`는 v0.6.15에서 HTTP 404 이슈. Brain ask로 생성된 세션은
-> gobispace.com 웹에서 확인 가능.
+**결과**: Session 대화 이어가기 ✅
 
 ---
 
-### Step 4: Space에 학습 완료 Thread 게시
+### Step 4: Space에 학습 완료 Post 게시 (구 Thread)
 
 ```bash
-gobi space create-thread \
+gobi space create-post \
   --space-slug changbal \
-  --title "GOBI CLI M4 Capstone: End-to-End 워크플로우 완성" \
-  --content "M1~M4 Capstone까지 GOBI CLI 전체 학습 완료했습니다. 🎉
+  --title "GOBI CLI M4 Capstone: End-to-End 워크플로우 완성 (v2.0)" \
+  --content "M1~M4 Capstone까지 GOBI CLI v2.0 전체 학습 완료했습니다. 🎉
 
 학습 내용:
-- M1: 설치/인증/핵심 개념 (Vault/Space/Brain/Thread/Session)
-- M2: Brain 검색, BRAIN.md 발행, Brain Updates CRUD
-- M3: Space/Thread CRUD 전체 (8개 명령어)
+- M1: 설치/인증/핵심 개념 (Vault/Space/Session/Saved/Draft/Media/Sense)
+- M2: Vault Publish, Global Posts, Session 관리
+- M3: Space/Post CRUD 전체 (Thread→Post 변경 반영)
 - M4: End-to-End 워크플로우 + Quick Reference 완성
 
 전체 산출물: https://github.com/solkit70/CatchUpAI_VL/tree/main/Topics/GOBI-CLI
@@ -112,43 +110,43 @@ VibeLearn AI v2.0 방법론으로 학습 — 누구나 이 자료를 참고하�
 # 응답:
 # {
 #   "id": 735,
-#   "title": "GOBI CLI M4 Capstone: End-to-End 워크플로우 완성",
+#   "title": "GOBI CLI M4 Capstone: End-to-End 워크플로우 완성 (v2.0)",
 #   "replyCount": 0,
-#   "createdAt": "2026-03-29T..."
+#   "createdAt": "2026-05-10T..."
 # }
 ```
 
-**결과**: Thread 735 생성 ✅
+**결과**: Post 생성 ✅
 
 ---
 
-### Step 5: Brain Update로 완료 소식 전파
+### Step 5: Global Create-Post로 완료 소식 전파 (구 Brain Update)
 
 ```bash
-gobi brain post-update \
+gobi global create-post \
   --vault-slug gobi-cli-study \
-  --content "🎓 GOBI CLI 학습 M4 Capstone 완료!
-
-M1~M4 전체 모듈 완료:
+  --title "🎓 GOBI CLI v2.0 학습 완료!" \
+  --content "M1~M4 전체 모듈 완료:
 ✅ M1: 설치/인증/핵심 개념
-✅ M2: Brain & Session 마스터
-✅ M3: Space & Thread 협업
+✅ M2: Vault Publish, Global Posts, Session
+✅ M3: Space & Post 협업 (Thread→Post 변경)
 ✅ M4: 실전 워크플로우 + Quick Reference
 
-학습 산출물은 GitHub에서 누구나 열람 가능합니다.
 VibeLearn AI v2.0 방법론으로 체계적으로 정리했습니다. 💪"
 
-# 결과: Update posted successfully ✅
+# 결과: Post created successfully ✅
 ```
+
+> **v2.0 변경**: `gobi brain post-update` → `gobi global create-post`
 
 ---
 
-### Step 6: 로컬 파일 동기화 (Webdrive Sync) 🆕
+### Step 6: 로컬 파일 동기화 (Vault Sync)
 
 학습 산출물 폴더 전체를 Gobi 서버(Webdrive)에 안전하게 백업하고 동기화합니다.
 
 ```bash
-gobi sync \
+gobi vault sync \
   --path "Topics/GOBI-CLI" \
   --upload-only
 
@@ -160,24 +158,26 @@ gobi sync \
 # Sync completed successfully ✅
 ```
 
+> **v2.0 변경**: `gobi sync` → `gobi vault sync`
+
 ---
 
 ## 전체 워크플로우 요약
 
 ```
-1. gobi auth status              → 인증 확인
-2. gobi brain search --query ... → 관련 Brain 탐색
-3. gobi brain ask --vault-slug   → AI 질의 (Session 생성)
-4. gobi space create-thread      → 팀 공유 Thread 게시
-5. gobi brain post-update        → Brain Feed 업데이트
-6. gobi sync                     → 로컬-서버 파일 동기화
+1. gobi auth status                   → 인증 확인
+2. gobi global feed / space feed      → 관련 지식 탐색 (구 brain search)
+3. gobi session list/get/create-reply → Session 확인 및 대화 (구 brain ask)
+4. gobi space create-post             → 팀 공유 Post 게시 (구 create-thread)
+5. gobi global create-post            → Global 업데이트 게시 (구 brain post-update)
+6. gobi vault sync                    → 로컬-서버 파일 동기화 (구 gobi sync)
 ```
 
-**6개 명령어, 6단계로 완성되는 GOBI CLI 핵심 워크플로우** ✅
+**6개 단계로 완성되는 GOBI CLI v2.0 핵심 워크플로우** ✅
 
 ---
 
-## 자동화 스크립트 예시
+## 자동화 스크립트 예시 (v2.0)
 
 반복 작업을 쉘 스크립트로 자동화할 수 있습니다:
 
@@ -195,15 +195,20 @@ echo "=== GOBI Daily Check: $DATE ==="
 echo "[1] 인증 상태:"
 gobi auth status
 
-# 2. 최신 Brain Updates 확인
+# 2. 최신 Global Posts 확인 (구 Brain Updates)
 echo ""
-echo "[2] 최신 Brain Updates:"
-gobi brain list-updates --vault-slug $VAULT --limit 3
+echo "[2] 최신 Global Posts:"
+gobi global list-posts --mine --limit 3
 
-# 3. 오늘의 Thread 확인
+# 3. 오늘의 Space Posts 확인 (구 Threads)
 echo ""
-echo "[3] 최신 Threads:"
-gobi space list-threads --space-slug $SPACE --limit 5
+echo "[3] 최신 Space Posts:"
+gobi space list-posts --space-slug $SPACE --limit 5
+
+# 4. 내 Session 목록
+echo ""
+echo "[4] 최근 Sessions:"
+gobi session list --limit 3
 
 echo ""
 echo "=== Done ==="
@@ -211,13 +216,16 @@ echo "=== Done ==="
 
 ---
 
-## 트러블슈팅 핵심
+## 트러블슈팅 핵심 (v2.0 기준)
 
 | 증상 | 원인 | 해결 |
 |------|------|------|
-| `session list/get/reply` → HTTP 404 | v0.6.15 서버 엔드포인트 미매칭 | 웹(gobispace.com)에서 확인 |
-| `gobi init` → "User force closed the prompt" | 비인터랙티브 환경 | 인터랙티브 터미널에서 직접 실행 |
-| Brain search 결과 유사도 낮음 | 언어 불일치 (한글 Brain에 영어 쿼리) | 쿼리 언어를 Brain 언어와 맞춤 |
+| `gobi brain search` → command not found | v2.0에서 CLI 제거됨 | 웹 UI(gobispace.com) 또는 `global feed` 사용 |
+| `gobi brain ask` → command not found | v2.0에서 CLI 제거됨 | 웹 UI에서 새 Session 시작 후 `session list`로 확인 |
+| `gobi session reply` → 오류 | v2.0에서 명령어 변경됨 | `gobi session create-reply` 사용 |
+| `gobi sync` → command not found | v2.0에서 명령어 변경됨 | `gobi vault sync` 사용 |
+| `gobi init` → command not found | v2.0에서 명령어 변경됨 | `gobi vault init` 사용 |
+| `gobi vault init` → 입력 없음 | 완전 인터랙티브 명령어 | 인터랙티브 터미널에서 직접 실행 |
 | `--space-slug` 없이 실행 오류 | `gobi space warp` 미실행 | 각 명령어에 `--space-slug` 직접 지정 |
 
 ---
@@ -225,3 +233,4 @@ echo "=== Done ==="
 > **다음 문서**: [quick-reference.md](quick-reference.md)
 > **작성자**: Changsoo (Claude Code 활용)
 > **방법론**: VibeLearn AI v2.0
+> **CVL 기준**: v2.0.12 (2026-05-10)

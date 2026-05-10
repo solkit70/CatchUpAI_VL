@@ -1,24 +1,30 @@
-# GOBI CLI — Brain Publish & Updates 가이드
+# GOBI CLI — Vault Publish & Global Posts 가이드
 
-> **모듈**: M2 — Brain & Session 명령어 마스터
+> **모듈**: M2 — Vault & Global & Session
 > **작성일**: 2026-03-29
-> **버전**: GOBI CLI v0.6.15
+> **CVL 업데이트**: 2026-05-10 (v2.0.12 — brain → vault/global 재편)
+> **버전**: GOBI CLI v2.0.12
+
+> ⚠️ **v2.0 Breaking Change**: `gobi brain` 명령어 그룹이 해체됨
+> - `gobi brain publish` → `gobi vault publish`
+> - `gobi brain post-update` 등 → `gobi global create-post` 등
+> - `BRAIN.md` → `PUBLISH.md`
 
 ---
 
-## 1. BRAIN.md 구조
+## 1. PUBLISH.md 구조
 
-`gobi init`으로 자동 생성되는 파일. vault 루트에 위치해야 합니다.
+`gobi vault init`으로 자동 생성. vault 루트에 위치해야 합니다. (구 BRAIN.md와 동일한 frontmatter 구조)
 
 ### Frontmatter 필드
 
 ```markdown
 ---
-title: vault 이름              # 필수: Brain 제목
+title: vault 이름              # 필수: vault 제목
 tags: ["태그1", "태그2"]       # 선택: 검색 태그
-description: 설명 텍스트       # 선택: Brain 소개
+description: 설명 텍스트       # 선택: vault 소개
 thumbnail:                     # 선택: 썸네일 URL
-prompt: AI 지시 프롬프트       # 선택: Brain AI에게 역할 부여
+prompt: AI 지시 프롬프트       # 선택: AI에게 역할 부여
 ---
 ```
 
@@ -28,135 +34,162 @@ prompt: AI 지시 프롬프트       # 선택: Brain AI에게 역할 부여
 ---
 title: gobi-cli-study
 tags: ["gobi-cli", "learning", "vibelearn-ai"]
-description: GOBI CLI 학습 지식 저장소
+description: GOBI CLI v2.0 학습 지식 저장소
 thumbnail:
 prompt: You are a GOBI CLI learning assistant. Help users understand CLI commands with examples.
 ---
 
-# Brain 제목
+# Vault 소개
 
 ## Overview
-Brain 소개 내용
+GOBI CLI v2.0 학습 산출물 저장소
 
 ## Key Topics
-- 주요 주제 1
-- 주요 주제 2
-
-## Resources
-- [링크 이름](URL)
+- v2.0 명령어 체계 (vault, global, saved, draft, media, sense)
+- CVL (Continuous Vibe Learning) 프로세스
 ```
 
 ---
 
-## 2. gobi brain publish
+## 2. gobi vault publish
 
-BRAIN.md를 플랫폼에 업로드합니다.
+PUBLISH.md를 플랫폼에 업로드합니다. (구 `gobi brain publish`)
 
 ```bash
-# 현재 디렉토리의 BRAIN.md 발행
-gobi brain publish
+# 현재 디렉토리의 PUBLISH.md 발행
+gobi vault publish
 
-# 실습 결과:
-# Published BRAIN.md to vault "gobi-cli-study"
+# 결과:
+# Published PUBLISH.md to vault "gobi-cli-study"
 ```
 
 **전제 조건**:
-- 현재 디렉토리에 BRAIN.md 존재
-- `.gobi/settings.yaml`에 vaultSlug 설정됨 (`gobi init` 완료)
+- 현재 디렉토리에 `PUBLISH.md` 존재
+- `.gobi/settings.yaml`에 `vaultSlug` 설정됨 (`gobi vault init` 완료)
 
 ---
 
-## 3. gobi brain unpublish
+## 3. gobi vault unpublish
 
 ```bash
-gobi brain unpublish
-# vault에서 BRAIN.md 삭제
+gobi vault unpublish
+# vault에서 PUBLISH.md 삭제
 ```
 
 ---
 
-## 4. brain updates CRUD
+## 4. gobi vault status
 
-Brain Updates는 **팀에게 진행 상황을 공유**하는 알림/피드 기능입니다.
-
-### Create (post-update)
+vault 발행 상태를 확인합니다.
 
 ```bash
-gobi brain post-update \
+gobi --json vault status
+
+# 결과:
+# {
+#   "success": true,
+#   "data": {
+#     "isPublished": true,
+#     "fileCount": 342,
+#     "profileUrl": "https://gobispace.com/vault/gobi-cli-study"
+#   }
+# }
+```
+
+---
+
+## 5. Global Posts (구 Brain Updates)
+
+팀에게 진행 상황을 공유하는 기능. `gobi brain post-update` 등이 `gobi global *`으로 이전됨.
+
+### Create (`global create-post`)
+
+```bash
+gobi global create-post \
   --title "업데이트 제목" \
   --content "마크다운 내용"
 
-# 특정 vault 지정 시:
-gobi brain post-update \
-  --vault-slug <slug> \
-  --title "제목" \
-  --content "내용"
+# vault와 연결:
+gobi global create-post \
+  --vault-slug gobi-cli-study \
+  --title "GOBI CLI v2.0 CVL 완료 🎉" \
+  --content "v0.6.x → v2.0.12 업데이트: vault/global/saved/draft/media 신규 그룹 추가"
 
 # 응답:
-# Brain update posted!
-#   ID: 256
-#   Title: GOBI CLI 학습 시작 🚀
-#   Vault: gobi-cli-study
-#   Created: 2026-03-29T13:31:02.477Z
+# {
+#   "id": 256,
+#   "title": "GOBI CLI v2.0 CVL 완료 🎉",
+#   "createdAt": "2026-05-10T..."
+# }
 ```
 
-### Read (list-updates)
+### Read (`global list-posts`)
 
 ```bash
-gobi brain list-updates
+# 내 포스트만 보기 (구 brain list-updates)
+gobi --json global list-posts --mine
 
-# 출력 예시:
-# Brain updates (20 items):
-# - [256] "GOBI CLI 학습 시작 🚀" by Changsoo Park (vault: gobi-cli-study)
-# - [254] "..." by Minsuk Kang (vault: brave-path-zr962w)
-# ...
+# 전체 글로벌 피드
+gobi --json global feed
 ```
 
-> list-updates는 **전체 사용자의 업데이트**를 보여줍니다 (타임라인 피드).
-
-### Update (edit-update)
+### Update (`global edit-post`)
 
 ```bash
-gobi brain edit-update <updateId> \
+gobi global edit-post <postId> \
   --content "수정된 내용"
 
 # --title도 수정 가능:
-gobi brain edit-update <updateId> \
+gobi global edit-post <postId> \
   --title "새 제목" \
   --content "새 내용"
 ```
 
-### Delete (delete-update)
+### Delete (`global delete-post`)
 
 ```bash
-gobi brain delete-update <updateId>
-# Brain update 255 deleted.
+gobi global delete-post <postId>
 ```
 
-### CRUD 전체 흐름 요약
+### CRUD 전체 흐름
 
 ```
-post-update → ID 발급
-    ↓
-list-updates → ID 확인
-    ↓
-edit-update <id> --content "수정"
-    ↓
-delete-update <id>
+global create-post → ID 발급
+         ↓
+global list-posts --mine → ID 확인
+         ↓
+global edit-post <id> --content "수정"
+         ↓
+global delete-post <id>
 ```
 
 ---
 
-## 5. 핵심 차이점: publish vs post-update
+## 6. 핵심 차이점: vault publish vs global create-post
 
-| 기능 | publish | post-update |
-|------|---------|-------------|
-| **대상** | BRAIN.md 파일 전체 | 짧은 업데이트 텍스트 |
-| **목적** | Brain 지식 베이스 갱신 | 진행 상황 알림/공유 |
-| **빈도** | Brain 내용 변경 시 | 매일/작업 완료 시 |
-| **노출** | Brain 검색에 반영 | 팀 피드/타임라인 |
+| 기능 | vault publish | global create-post |
+|------|--------------|-------------------|
+| **대상** | PUBLISH.md 파일 전체 | 짧은 텍스트 포스트 |
+| **목적** | vault 프로필/지식 갱신 | 진행 상황 공유/피드 |
+| **빈도** | vault 내용 변경 시 | 매일/작업 완료 시 |
+| **노출** | vault 공개 프로필 | 글로벌 피드/개인 프로필 |
+| **구 명령어** | `brain publish` | `brain post-update` |
+
+---
+
+## 7. 구 명령어 매핑
+
+| 구 명령어 (≤v1.x) | 새 명령어 (v2.0+) |
+|-------------------|------------------|
+| `gobi brain publish` | `gobi vault publish` |
+| `gobi brain unpublish` | `gobi vault unpublish` |
+| `gobi brain post-update` | `gobi global create-post` |
+| `gobi brain list-updates` | `gobi global list-posts --mine` |
+| `gobi brain edit-update <id>` | `gobi global edit-post <id>` |
+| `gobi brain delete-update <id>` | `gobi global delete-post <id>` |
 
 ---
 
 > **작성자**: Changsoo (Claude Code 활용)
 > **방법론**: VibeLearn AI v2.0
+> **CVL 기준**: v2.0.12 (2026-05-10)

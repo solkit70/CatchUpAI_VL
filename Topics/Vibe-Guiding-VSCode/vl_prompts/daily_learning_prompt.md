@@ -48,24 +48,21 @@ vl_roadmap/20260426_RoadMap_Vibe-Guiding-VSCode.md
 
 **현재 진행 중인 모듈**:
 ```
-M2 - Two-Component Architecture 설계
+M3 - Vibe Manual과 CVL 설계
 ```
 
 **가장 최근 WorkLog 파일**:
 ```
-vl_worklog/20260503_M1_Retrospective.md
+vl_worklog/20260510_M2_Vibe-Guiding-VSCode.md
 ```
 
 **이전 세션의 "Tomorrow's focus"** (있다면):
 ```
-- M2 시작: `02-Architecture-Design/` 생성
-- 단, M2 시작 전에 GOBI-CLI Topic을 Continuous Vibe Learning 프로세스로 New 버전에 맞게 업데이트
-- GOBI-CLI 업데이트 완료 후 M1 문서 중 GOBI CLI 관련 전제와 참조 자료 업데이트
-- `component-responsibilities.md` 작성
-- `architecture-diagrams.md` 작성
-- `poc-boundary.md` 작성
-- GOBI CLI 기준으로 Vibe Manual/CVL 컴포넌트와 Guiding Engine 컴포넌트 분리
-- 관련 문서 작성이 모두 완료되면 GitHub에 push
+- M3 시작: `03-Vibe-Manual-CVL/` 생성
+- GOBI CLI v2.0.12 문서를 기준으로 `manual_index.json` 스키마 설계
+- `trigger_rules.json` 초안 작성
+- M4 POC에서 사용할 샘플 `user_context.json` 후보 정의
+- Vibe Manual/CVL 컴포넌트가 Guiding Engine에 제공할 최소 index 계약 정리
 ```
 
 ---
