@@ -83,6 +83,46 @@
       "score": 265
     },
     {
+      "manual_id": "gobi-cli-environment-version-check",
+      "title": "Check CLI Environment and Version Before Guiding",
+      "source_path": "Topics/GOBI-CLI/01-Setup-Auth/concepts/installation-guide.md",
+      "product": "GOBI CLI",
+      "version_scope": "v2.0.12+ with Node.js 18+",
+      "guide_type": "environment_check",
+      "user_goals": [
+        "환경 점검",
+        "버전 확인",
+        "Node/npm/GOBI CLI 확인"
+      ],
+      "problem_signals": [
+        "version_mismatch",
+        "environment_mismatch"
+      ],
+      "commands": [
+        "node --version",
+        "npm --version",
+        "gobi --version",
+        "gobi --help"
+      ],
+      "deprecated_terms": [
+        "gobi init",
+        "BRAIN.md",
+        "thread"
+      ],
+      "replacement_terms": {
+        "gobi init": "gobi vault init",
+        "BRAIN.md": "PUBLISH.md",
+        "thread": "post"
+      },
+      "completion_signal": "`node --version`, `npm --version`, and `gobi --version` match the manual's supported environment before the user follows product steps.",
+      "fallbacks": [
+        "If `gobi --version` is below 2.0.12, avoid v2-only commands until the CLI is updated.",
+        "If Node.js is below 18, update Node before reinstalling GOBI CLI."
+      ],
+      "priority": 72,
+      "score": 117
+    },
+    {
       "manual_id": "gobi-cli-install",
       "title": "Install and verify GOBI CLI",
       "source_path": "Topics/GOBI-CLI/01-Setup-Auth/concepts/installation-guide.md",
@@ -174,39 +214,6 @@
       ],
       "priority": 80,
       "score": 95
-    },
-    {
-      "manual_id": "gobi-cli-session-reply",
-      "title": "Continue a GOBI Session",
-      "source_path": "Topics/GOBI-CLI/02-Brain-Session/guides/session-management.md",
-      "product": "GOBI CLI",
-      "version_scope": "v2.0.12+",
-      "guide_type": "session",
-      "user_goals": [
-        "Session 이어가기",
-        "AI 대화 답장"
-      ],
-      "problem_signals": [
-        "session_reply_blocked"
-      ],
-      "commands": [
-        "gobi session list",
-        "gobi session get",
-        "gobi session create-reply"
-      ],
-      "deprecated_terms": [
-        "session reply"
-      ],
-      "replacement_terms": {
-        "session reply": "session create-reply"
-      },
-      "completion_signal": "`gobi session get <id>` shows the new reply after `create-reply`.",
-      "fallbacks": [
-        "Confirm the session id with `gobi session list`.",
-        "Use `--content`, not `--message`."
-      ],
-      "priority": 70,
-      "score": 85
     }
   ],
   "index_version": "0.1",

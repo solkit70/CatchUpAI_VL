@@ -37,6 +37,18 @@ def command_steps(manual: dict, context: dict) -> list[str]:
             "`gobi session create-reply <sessionId> --content \"답장 내용\"`을 실행합니다.",
             "`gobi session get <sessionId>`로 새 답장이 보이는지 확인합니다.",
         ]
+    if guide_type == "desktop_applet":
+        return [
+            "먼저 GOBI Desktop 버전, Vault Path, Applet 경로, 현재 보이는 Settings 메뉴명을 확인합니다.",
+            "확인되지 않은 메뉴 이름이나 버튼 위치는 단정하지 말고, 사용자가 보는 화면 기준으로 다음 단계를 좁힙니다.",
+            "Applet 경로가 확인되면 custom homepage 파일 위치와 적용 절차를 같은 경로 기준으로 안내합니다.",
+        ]
+    if guide_type == "environment_check":
+        return [
+            "`node --version`, `npm --version`, `gobi --version`을 먼저 실행해 현재 환경을 확인합니다.",
+            "GOBI CLI가 2.0.12 미만이면 `npm install -g @gobi-ai/cli`로 업데이트한 뒤 새 터미널을 엽니다.",
+            "업데이트 전에는 v2.0.12 전용 명령어를 단정하지 말고, `gobi --help`에 실제 표시되는 명령어를 기준으로 안내합니다.",
+        ]
     return ["Quick Reference에서 현재 작업에 맞는 명령어 그룹을 확인합니다."]
 
 

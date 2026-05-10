@@ -19,5 +19,19 @@
     "selected_rule": "old_thread_command_used",
     "selected_manual": "gobi-cli-space-create-post",
     "expected_manual": "gobi-cli-space-create-post"
+  },
+  {
+    "id": "desktop_custom_homepage_blocked",
+    "passed": true,
+    "selected_rule": "desktop_applet_context_missing",
+    "selected_manual": "gobi-desktop-applet-context-check",
+    "expected_manual": "gobi-desktop-applet-context-check"
+  },
+  {
+    "id": "version_mismatch",
+    "passed": true,
+    "selected_rule": "environment_version_mismatch",
+    "selected_manual": "gobi-cli-environment-version-check",
+    "expected_manual": "gobi-cli-environment-version-check"
   }
 ]

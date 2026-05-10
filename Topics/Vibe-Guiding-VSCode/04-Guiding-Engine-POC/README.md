@@ -62,10 +62,10 @@ python src/compose_guide.py
    선택된 manual과 context를 바탕으로 `guide_response.md`를 생성한다.
 
 8. [tests/test_scenarios.md](tests/test_scenarios.md)  
-   최소 3개 테스트 시나리오와 기대 결과를 정리한다.
+   기본 3개 시나리오와 M5에서 확장한 2개 시나리오의 기대 결과를 정리한다.
 
 9. [tests/run_scenarios.py](tests/run_scenarios.py)  
-   `data/test_contexts.json`의 3개 시나리오를 실행하고 `output/scenarios/`와 `output/test_results.json`을 생성한다.
+   `data/test_contexts.json`의 5개 시나리오를 실행하고 `output/scenarios/`와 `output/test_results.json`을 생성한다.
 
 ## 현재 DoD 진행
 
@@ -76,6 +76,7 @@ python src/compose_guide.py
 - [x] `guide_response.md` 자동 생성 성공
 - [x] 최소 3개 테스트 시나리오 정의
 - [x] 최소 3개 테스트 시나리오 실행 성공
+- [x] M5 검증용 Desktop/Applet, Version mismatch 시나리오 확장
 - [x] `04-Guiding-Engine-POC/README.md` 작성
 - [x] WorkLog 작성 및 Daily Retrospective 완료
 

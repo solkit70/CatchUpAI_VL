@@ -37,5 +37,44 @@
       "type": "space_post_blocked",
       "message": "예전 create-thread 명령어로 Space에 글을 만들려고 했는데 실패했습니다."
     }
+  },
+  {
+    "id": "desktop_custom_homepage_blocked",
+    "os": "Windows 11",
+    "user_level": "intermediate",
+    "gobi_cli_version": "2.0.12",
+    "auth_status": "authenticated",
+    "active_space": null,
+    "available_commands": ["auth", "vault", "space"],
+    "desktop_context": {
+      "app": "GOBI Desktop",
+      "known_version": "unknown",
+      "vault_path": "unknown",
+      "applet_path": "unknown",
+      "visible_settings_menu": "unknown"
+    },
+    "problem_signal": {
+      "type": "desktop_custom_homepage_blocked",
+      "message": "GOBI Desktop에서 custom homepage applet을 만들고 싶은데 현재 메뉴와 Applet 경로를 모르겠습니다."
+    }
+  },
+  {
+    "id": "version_mismatch",
+    "os": "Windows 11",
+    "user_level": "beginner",
+    "gobi_cli_version": "0.6.15",
+    "auth_status": "authenticated",
+    "active_space": "changbal",
+    "available_commands": ["auth", "brain", "space"],
+    "environment": {
+      "node_version": "16.20.0",
+      "npm_version": "8.19.4",
+      "manual_expected_gobi_cli": "2.0.12",
+      "manual_expected_node": "18+"
+    },
+    "problem_signal": {
+      "type": "version_mismatch",
+      "message": "매뉴얼은 GOBI CLI 2.0.12 기준인데 제 환경은 node 16과 gobi 0.6.15라 명령어가 다르게 보입니다."
+    }
   }
 ]

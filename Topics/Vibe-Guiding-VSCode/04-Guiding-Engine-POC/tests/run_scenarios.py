@@ -18,6 +18,8 @@ def expected_manual(scenario_id: str) -> str:
         "cli_missing": "gobi-cli-install",
         "auth_required": "gobi-cli-auth-status",
         "space_post_blocked": "gobi-cli-space-create-post",
+        "desktop_custom_homepage_blocked": "gobi-desktop-applet-context-check",
+        "version_mismatch": "gobi-cli-environment-version-check",
     }[scenario_id]
 
 

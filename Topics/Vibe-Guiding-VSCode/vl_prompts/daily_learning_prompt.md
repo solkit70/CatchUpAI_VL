@@ -48,22 +48,20 @@ vl_roadmap/20260426_RoadMap_Vibe-Guiding-VSCode.md
 
 **현재 진행 중인 모듈**:
 ```
-M5 - GOBI 시나리오 검증
+M6 - 통합 계획과 Demo Capstone
 ```
 
 **가장 최근 WorkLog 파일**:
 ```
-vl_worklog/20260510_M4_Vibe-Guiding-VSCode.md
+vl_worklog/20260510_M5_Vibe-Guiding-VSCode.md
 ```
 
 **이전 세션의 "Tomorrow's focus"** (있다면):
 ```
-- M5 시작: `05-GOBI-Scenario-Tests/` 생성
-- guide quality checklist 작성
-- GOBI CLI auth 시나리오 작성 및 M4 POC 출력으로 검증
-- Space Post 시나리오 작성 및 M4 POC 출력으로 검증
-- version mismatch 시나리오 작성
-- 실패 원인을 manual, trigger, retrieval, compose 중 하나로 분류하는 표 작성
+- M6 시작: `06-Integration-Demo/` 생성
+- 통합 후보 비교: VS Code CLI, VS Code Extension, GOBI Desktop Applet, GOBI CLI command, docs companion
+- 5분 demo flow 작성
+- MVP backlog와 GOBI 팀 협업 노트 작성
 ```
 
 ---

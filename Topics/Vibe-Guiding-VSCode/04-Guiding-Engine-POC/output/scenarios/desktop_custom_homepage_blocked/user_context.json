@@ -1,0 +1,24 @@
+{
+  "id": "desktop_custom_homepage_blocked",
+  "os": "Windows 11",
+  "user_level": "intermediate",
+  "gobi_cli_version": "2.0.12",
+  "auth_status": "authenticated",
+  "active_space": null,
+  "available_commands": [
+    "auth",
+    "vault",
+    "space"
+  ],
+  "desktop_context": {
+    "app": "GOBI Desktop",
+    "known_version": "unknown",
+    "vault_path": "unknown",
+    "applet_path": "unknown",
+    "visible_settings_menu": "unknown"
+  },
+  "problem_signal": {
+    "type": "desktop_custom_homepage_blocked",
+    "message": "GOBI Desktop에서 custom homepage applet을 만들고 싶은데 현재 메뉴와 Applet 경로를 모르겠습니다."
+  }
+}

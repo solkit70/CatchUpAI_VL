@@ -11,7 +11,7 @@ sources:
 
 ## 테스트 목적
 
-M4 POC가 최소 3개 problem signal에 대해 적절한 trigger rule, manual entry, guide response를 생성하는지 확인한다.
+M4 POC가 기본 3개 problem signal에 대해 적절한 trigger rule, manual entry, guide response를 생성하는지 확인한다. M5에서는 같은 runner를 확장해 Desktop/Applet context missing과 version mismatch 시나리오까지 함께 검증한다.
 
 ## 시나리오 목록
 
@@ -20,6 +20,8 @@ M4 POC가 최소 3개 problem signal에 대해 적절한 trigger rule, manual en
 | `cli_missing` | `gobi` 명령을 찾을 수 없음 | `cli_missing` | `gobi-cli-install` | `npm install -g @gobi-ai/cli`, `gobi --version` 포함 |
 | `auth_required` | 인증 상태가 logged out | `auth_required` | `gobi-cli-auth-status` | `gobi auth login`, `gobi auth status` 포함 |
 | `space_post_blocked` | `create-thread` 사용 또는 Space Post 작성 막힘 | `old_thread_command_used` 또는 `space_post_blocked` | `gobi-cli-space-create-post` | `create-thread -> create-post` 변환과 `gobi space create-post` 포함 |
+| `desktop_custom_homepage_blocked` | Desktop Applet 경로와 메뉴를 모름 | `desktop_applet_context_missing` | `gobi-desktop-applet-context-check` | 확인되지 않은 메뉴를 단정하지 않고 Desktop 버전, Vault Path, Applet 경로 확인을 먼저 제시 |
+| `version_mismatch` | 매뉴얼 기준 버전과 사용자 환경이 다름 | `environment_version_mismatch` | `gobi-cli-environment-version-check` | `node --version`, `npm --version`, `gobi --version` 확인을 제품 단계보다 먼저 제시 |
 
 ## 수동 테스트 방법
 

@@ -39,6 +39,22 @@
       "keywords": ["publish", "PUBLISH.md", "BRAIN.md", "vault publish"],
       "guide_type": "vault_publish",
       "reason": "Vault 발행 또는 PUBLISH.md 전환 안내가 필요합니다."
+    },
+    {
+      "id": "desktop_applet_context_missing",
+      "priority": 65,
+      "match_types": ["desktop_applet_context_missing", "desktop_custom_homepage_blocked"],
+      "keywords": ["custom homepage", "applet", "vault path", "설정", "메뉴", "홈페이지"],
+      "guide_type": "desktop_applet",
+      "reason": "GOBI Desktop Applet 안내 전에 실제 앱 버전, Vault Path, Applet 경로를 확인해야 합니다."
+    },
+    {
+      "id": "environment_version_mismatch",
+      "priority": 60,
+      "match_types": ["version_mismatch", "environment_mismatch"],
+      "keywords": ["version", "버전", "node", "npm", "2.0.12", "mismatch", "환경"],
+      "guide_type": "environment_check",
+      "reason": "사용자 환경과 매뉴얼 기준 버전이 다를 수 있으므로 먼저 버전과 실행 환경을 확인해야 합니다."
     }
   ]
 }

@@ -1,34 +1,85 @@
 {
   "selected_manual": {
-    "manual_id": "gobi-cli-install",
-    "title": "Install and verify GOBI CLI",
+    "manual_id": "gobi-cli-environment-version-check",
+    "title": "Check CLI Environment and Version Before Guiding",
     "source_path": "Topics/GOBI-CLI/01-Setup-Auth/concepts/installation-guide.md",
     "product": "GOBI CLI",
-    "version_scope": "v2.0.12+",
-    "guide_type": "install",
+    "version_scope": "v2.0.12+ with Node.js 18+",
+    "guide_type": "environment_check",
     "user_goals": [
-      "GOBI CLI 설치",
-      "gobi 명령어 사용",
-      "CLI 버전 확인"
+      "환경 점검",
+      "버전 확인",
+      "Node/npm/GOBI CLI 확인"
     ],
     "problem_signals": [
-      "cli_missing"
+      "version_mismatch",
+      "environment_mismatch"
     ],
     "commands": [
-      "npm install -g @gobi-ai/cli",
-      "gobi --version"
+      "node --version",
+      "npm --version",
+      "gobi --version",
+      "gobi --help"
     ],
-    "deprecated_terms": [],
-    "replacement_terms": {},
-    "completion_signal": "`gobi --version` prints a GOBI CLI version such as 2.0.12.",
+    "deprecated_terms": [
+      "gobi init",
+      "BRAIN.md",
+      "thread"
+    ],
+    "replacement_terms": {
+      "gobi init": "gobi vault init",
+      "BRAIN.md": "PUBLISH.md",
+      "thread": "post"
+    },
+    "completion_signal": "`node --version`, `npm --version`, and `gobi --version` match the manual's supported environment before the user follows product steps.",
     "fallbacks": [
-      "Open a new terminal after installing.",
-      "Check Node/npm installation and PATH."
+      "If `gobi --version` is below 2.0.12, avoid v2-only commands until the CLI is updated.",
+      "If Node.js is below 18, update Node before reinstalling GOBI CLI."
     ],
-    "priority": 100,
-    "score": 200
+    "priority": 72,
+    "score": 187
   },
   "candidates": [
+    {
+      "manual_id": "gobi-cli-environment-version-check",
+      "title": "Check CLI Environment and Version Before Guiding",
+      "source_path": "Topics/GOBI-CLI/01-Setup-Auth/concepts/installation-guide.md",
+      "product": "GOBI CLI",
+      "version_scope": "v2.0.12+ with Node.js 18+",
+      "guide_type": "environment_check",
+      "user_goals": [
+        "환경 점검",
+        "버전 확인",
+        "Node/npm/GOBI CLI 확인"
+      ],
+      "problem_signals": [
+        "version_mismatch",
+        "environment_mismatch"
+      ],
+      "commands": [
+        "node --version",
+        "npm --version",
+        "gobi --version",
+        "gobi --help"
+      ],
+      "deprecated_terms": [
+        "gobi init",
+        "BRAIN.md",
+        "thread"
+      ],
+      "replacement_terms": {
+        "gobi init": "gobi vault init",
+        "BRAIN.md": "PUBLISH.md",
+        "thread": "post"
+      },
+      "completion_signal": "`node --version`, `npm --version`, and `gobi --version` match the manual's supported environment before the user follows product steps.",
+      "fallbacks": [
+        "If `gobi --version` is below 2.0.12, avoid v2-only commands until the CLI is updated.",
+        "If Node.js is below 18, update Node before reinstalling GOBI CLI."
+      ],
+      "priority": 72,
+      "score": 187
+    },
     {
       "manual_id": "gobi-cli-install",
       "title": "Install and verify GOBI CLI",
@@ -56,7 +107,7 @@
         "Check Node/npm installation and PATH."
       ],
       "priority": 100,
-      "score": 200
+      "score": 115
     },
     {
       "manual_id": "gobi-cli-auth-status",
@@ -84,7 +135,7 @@
         "Complete the device-code flow in the browser."
       ],
       "priority": 95,
-      "score": 95
+      "score": 110
     },
     {
       "manual_id": "gobi-cli-space-create-post",
@@ -125,7 +176,7 @@
         "Run `gobi auth status` if the command returns an auth error."
       ],
       "priority": 90,
-      "score": 90
+      "score": 105
     },
     {
       "manual_id": "gobi-cli-vault-publish",
@@ -161,35 +212,7 @@
         "Run `gobi vault init` interactively if the vault is not configured."
       ],
       "priority": 80,
-      "score": 80
-    },
-    {
-      "manual_id": "gobi-desktop-applet-context-check",
-      "title": "Check GOBI Desktop Applet Context Before Guiding",
-      "source_path": "Topics/GOBI-Guiding/2026-04-13 Gobi Desktop Vibe Guiding 기능 수준 테스트.md",
-      "product": "GOBI Desktop",
-      "version_scope": "current app state required",
-      "guide_type": "desktop_applet",
-      "user_goals": [
-        "Custom Homepage 만들기",
-        "Applet 설정",
-        "Vault Path 확인",
-        "홈페이지 적용"
-      ],
-      "problem_signals": [
-        "desktop_applet_context_missing",
-        "desktop_custom_homepage_blocked"
-      ],
-      "commands": [],
-      "deprecated_terms": [],
-      "replacement_terms": {},
-      "completion_signal": "The user has confirmed the Desktop version, Vault Path, Applet path, and the exact visible menu before following setup steps.",
-      "fallbacks": [
-        "Do not name a menu that has not been confirmed in the user's UI.",
-        "Ask the user to capture the visible settings screen if the Applet path is unknown."
-      ],
-      "priority": 75,
-      "score": 75
+      "score": 95
     }
   ],
   "index_version": "0.1",

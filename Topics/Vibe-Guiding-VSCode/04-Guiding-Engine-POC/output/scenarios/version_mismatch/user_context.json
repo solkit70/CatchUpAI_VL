@@ -1,0 +1,23 @@
+{
+  "id": "version_mismatch",
+  "os": "Windows 11",
+  "user_level": "beginner",
+  "gobi_cli_version": "0.6.15",
+  "auth_status": "authenticated",
+  "active_space": "changbal",
+  "available_commands": [
+    "auth",
+    "brain",
+    "space"
+  ],
+  "environment": {
+    "node_version": "16.20.0",
+    "npm_version": "8.19.4",
+    "manual_expected_gobi_cli": "2.0.12",
+    "manual_expected_node": "18+"
+  },
+  "problem_signal": {
+    "type": "version_mismatch",
+    "message": "매뉴얼은 GOBI CLI 2.0.12 기준인데 제 환경은 node 16과 gobi 0.6.15라 명령어가 다르게 보입니다."
+  }
+}

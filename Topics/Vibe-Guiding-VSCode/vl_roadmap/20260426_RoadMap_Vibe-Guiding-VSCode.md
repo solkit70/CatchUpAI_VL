@@ -755,7 +755,7 @@ Vibe-Guiding-VSCode/
 | M2 | 2026-05-10 | 2026-05-10 | 완료 | 100% | GOBI CLI v2.0.12 기준 Two-Component Architecture 정리 |
 | M3 | 2026-05-10 | 2026-05-10 | 완료 | 100% | Vibe Manual Schema, Retrieval Metadata, CVL Rules, Sample Manual 작성 |
 | M4 | 2026-05-10 | 2026-05-10 | 완료 | 100% | 파일 기반 Guiding Engine POC, 3개 시나리오 통과 |
-| M5 | | | 대기 | 0% | 3개 GOBI 시나리오 검증 |
+| M5 | 2026-05-10 | 2026-05-10 | 완료 | 100% | 5개 GOBI 시나리오 검증, guide quality checklist, 실패 원인 분류 |
 | M6 | | | 대기 | 0% | Capstone Demo 준비 |
 
 **범례**:
@@ -781,9 +781,9 @@ Vibe-Guiding-VSCode/
 Topic 이름: Vibe-Guiding-VSCode
 Topic 폴더 경로: C:\AI_study\2026\Changsoo_Vault\Ingest\CatchUpAI_VL\Topics\Vibe-Guiding-VSCode\
 Roadmap 파일 경로: vl_roadmap/20260426_RoadMap_Vibe-Guiding-VSCode.md
-현재 진행 중인 모듈: M5 - GOBI 시나리오 검증
-가장 최근 WorkLog 파일: vl_worklog/20260510_M4_Vibe-Guiding-VSCode.md
-이전 세션의 Tomorrow's focus: M5 시작. `05-GOBI-Scenario-Tests/` 폴더를 만들고 guide quality checklist, GOBI CLI auth, Space Post, version mismatch 시나리오를 작성한다.
+현재 진행 중인 모듈: M6 - 통합 계획과 Demo Capstone
+가장 최근 WorkLog 파일: vl_worklog/20260510_M5_Vibe-Guiding-VSCode.md
+이전 세션의 Tomorrow's focus: M6 시작. `06-Integration-Demo/` 폴더를 만들고 통합 후보 비교, 5분 demo flow, MVP backlog, GOBI 팀 협업 노트를 작성한다.
 사용 가능한 시간: 사용자가 세션 시작 시 입력
 ```
 

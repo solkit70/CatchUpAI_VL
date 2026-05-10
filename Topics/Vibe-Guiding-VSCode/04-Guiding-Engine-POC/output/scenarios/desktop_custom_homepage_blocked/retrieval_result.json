@@ -1,34 +1,61 @@
 {
   "selected_manual": {
-    "manual_id": "gobi-cli-install",
-    "title": "Install and verify GOBI CLI",
-    "source_path": "Topics/GOBI-CLI/01-Setup-Auth/concepts/installation-guide.md",
-    "product": "GOBI CLI",
-    "version_scope": "v2.0.12+",
-    "guide_type": "install",
+    "manual_id": "gobi-desktop-applet-context-check",
+    "title": "Check GOBI Desktop Applet Context Before Guiding",
+    "source_path": "Topics/GOBI-Guiding/2026-04-13 Gobi Desktop Vibe Guiding 기능 수준 테스트.md",
+    "product": "GOBI Desktop",
+    "version_scope": "current app state required",
+    "guide_type": "desktop_applet",
     "user_goals": [
-      "GOBI CLI 설치",
-      "gobi 명령어 사용",
-      "CLI 버전 확인"
+      "Custom Homepage 만들기",
+      "Applet 설정",
+      "Vault Path 확인",
+      "홈페이지 적용"
     ],
     "problem_signals": [
-      "cli_missing"
+      "desktop_applet_context_missing",
+      "desktop_custom_homepage_blocked"
     ],
-    "commands": [
-      "npm install -g @gobi-ai/cli",
-      "gobi --version"
-    ],
+    "commands": [],
     "deprecated_terms": [],
     "replacement_terms": {},
-    "completion_signal": "`gobi --version` prints a GOBI CLI version such as 2.0.12.",
+    "completion_signal": "The user has confirmed the Desktop version, Vault Path, Applet path, and the exact visible menu before following setup steps.",
     "fallbacks": [
-      "Open a new terminal after installing.",
-      "Check Node/npm installation and PATH."
+      "Do not name a menu that has not been confirmed in the user's UI.",
+      "Ask the user to capture the visible settings screen if the Applet path is unknown."
     ],
-    "priority": 100,
-    "score": 200
+    "priority": 75,
+    "score": 175
   },
   "candidates": [
+    {
+      "manual_id": "gobi-desktop-applet-context-check",
+      "title": "Check GOBI Desktop Applet Context Before Guiding",
+      "source_path": "Topics/GOBI-Guiding/2026-04-13 Gobi Desktop Vibe Guiding 기능 수준 테스트.md",
+      "product": "GOBI Desktop",
+      "version_scope": "current app state required",
+      "guide_type": "desktop_applet",
+      "user_goals": [
+        "Custom Homepage 만들기",
+        "Applet 설정",
+        "Vault Path 확인",
+        "홈페이지 적용"
+      ],
+      "problem_signals": [
+        "desktop_applet_context_missing",
+        "desktop_custom_homepage_blocked"
+      ],
+      "commands": [],
+      "deprecated_terms": [],
+      "replacement_terms": {},
+      "completion_signal": "The user has confirmed the Desktop version, Vault Path, Applet path, and the exact visible menu before following setup steps.",
+      "fallbacks": [
+        "Do not name a menu that has not been confirmed in the user's UI.",
+        "Ask the user to capture the visible settings screen if the Applet path is unknown."
+      ],
+      "priority": 75,
+      "score": 175
+    },
     {
       "manual_id": "gobi-cli-install",
       "title": "Install and verify GOBI CLI",
@@ -56,7 +83,7 @@
         "Check Node/npm installation and PATH."
       ],
       "priority": 100,
-      "score": 200
+      "score": 115
     },
     {
       "manual_id": "gobi-cli-auth-status",
@@ -84,7 +111,7 @@
         "Complete the device-code flow in the browser."
       ],
       "priority": 95,
-      "score": 95
+      "score": 110
     },
     {
       "manual_id": "gobi-cli-space-create-post",
@@ -125,7 +152,7 @@
         "Run `gobi auth status` if the command returns an auth error."
       ],
       "priority": 90,
-      "score": 90
+      "score": 105
     },
     {
       "manual_id": "gobi-cli-vault-publish",
@@ -161,35 +188,7 @@
         "Run `gobi vault init` interactively if the vault is not configured."
       ],
       "priority": 80,
-      "score": 80
-    },
-    {
-      "manual_id": "gobi-desktop-applet-context-check",
-      "title": "Check GOBI Desktop Applet Context Before Guiding",
-      "source_path": "Topics/GOBI-Guiding/2026-04-13 Gobi Desktop Vibe Guiding 기능 수준 테스트.md",
-      "product": "GOBI Desktop",
-      "version_scope": "current app state required",
-      "guide_type": "desktop_applet",
-      "user_goals": [
-        "Custom Homepage 만들기",
-        "Applet 설정",
-        "Vault Path 확인",
-        "홈페이지 적용"
-      ],
-      "problem_signals": [
-        "desktop_applet_context_missing",
-        "desktop_custom_homepage_blocked"
-      ],
-      "commands": [],
-      "deprecated_terms": [],
-      "replacement_terms": {},
-      "completion_signal": "The user has confirmed the Desktop version, Vault Path, Applet path, and the exact visible menu before following setup steps.",
-      "fallbacks": [
-        "Do not name a menu that has not been confirmed in the user's UI.",
-        "Ask the user to capture the visible settings screen if the Applet path is unknown."
-      ],
-      "priority": 75,
-      "score": 75
+      "score": 95
     }
   ],
   "index_version": "0.1",

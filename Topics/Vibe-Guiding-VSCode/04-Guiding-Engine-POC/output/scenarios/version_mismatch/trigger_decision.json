@@ -1,0 +1,44 @@
+{
+  "problem_signal": {
+    "type": "version_mismatch",
+    "message": "매뉴얼은 GOBI CLI 2.0.12 기준인데 제 환경은 node 16과 gobi 0.6.15라 명령어가 다르게 보입니다."
+  },
+  "selected_rule": {
+    "rule_id": "environment_version_mismatch",
+    "guide_type": "environment_check",
+    "reason": "사용자 환경과 매뉴얼 기준 버전이 다를 수 있으므로 먼저 버전과 실행 환경을 확인해야 합니다.",
+    "score": 180
+  },
+  "candidates": [
+    {
+      "rule_id": "environment_version_mismatch",
+      "guide_type": "environment_check",
+      "reason": "사용자 환경과 매뉴얼 기준 버전이 다를 수 있으므로 먼저 버전과 실행 환경을 확인해야 합니다.",
+      "score": 180
+    },
+    {
+      "rule_id": "cli_missing",
+      "guide_type": "install",
+      "reason": "GOBI CLI가 설치되어 있지 않거나 PATH에 반영되지 않았습니다.",
+      "score": 100
+    },
+    {
+      "rule_id": "auth_required",
+      "guide_type": "auth",
+      "reason": "GOBI CLI 인증 상태가 작업을 진행하기에 충분하지 않습니다.",
+      "score": 90
+    },
+    {
+      "rule_id": "old_thread_command_used",
+      "guide_type": "space_post",
+      "reason": "GOBI CLI v2.0.12에서는 Thread 명령어가 Post 명령어로 변경되었습니다.",
+      "score": 85
+    },
+    {
+      "rule_id": "space_post_blocked",
+      "guide_type": "space_post",
+      "reason": "Space에 Post를 작성하는 절차 안내가 필요합니다.",
+      "score": 80
+    }
+  ]
+}
