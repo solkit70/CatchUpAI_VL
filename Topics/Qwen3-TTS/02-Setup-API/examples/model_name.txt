@@ -1,0 +1,14 @@
+# Qwen3-TTS 유효 모델명 (2026-05-24 확인)
+# 출처: https://www.alibabacloud.com/help/en/model-studio/qwen-tts
+
+# 일반 합성 (M2에서 사용)
+STANDARD:        qwen3-tts-flash
+INSTRUCT:        qwen3-tts-instruct-flash
+INSTRUCT_SNAP:   qwen3-tts-instruct-flash-2026-01-26
+
+# 보이스 클론 / 음색 디자인 (M3에서 사용)
+VOICE_CLONE:     qwen3-tts-vc-2026-01-22
+VOICE_DESIGN:    qwen3-tts-vd-2026-01-26
+
+# M2 hello_qwen.py 에서 사용할 모델
+ACTIVE: qwen3-tts-instruct-flash
