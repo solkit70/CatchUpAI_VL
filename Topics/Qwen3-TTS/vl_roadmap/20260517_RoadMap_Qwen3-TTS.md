@@ -53,8 +53,9 @@ Qwen3-TTS는 알리바바 Qwen 팀의 최신 오픈소스 TTS 모델군입니다
 | M1 | 개요 및 DashScope 아키텍처 | Qwen3-TTS, API 구조 | 3h | ✅ 완료 |
 | M2 | DashScope API & 환경 구축 | Intl API, API Harness | 3h | ✅ 완료 (2026-05-24) |
 | M3 | 보이스 클론 & 품질 검증 하네스 | Voice Clone, Benchmarking | 5h | ✅ 완료 (2026-05-24) |
-| M4 | Qwen3-TTS Harness Skill 개발 | Integration Harness, Robustness | 6h | ⏳ 대기 |
-| M5 | Remotion 통합 & 성능 하네스 | Capstone, Production, Latency | 5h | ⏳ 대기 |
+| M3+ | 목소리 튜닝 & 여성 VD 등록 | Voice Tuning, Female VD | (추가) | ✅ 완료 (2026-05-26) changsoo_final.wav 4/5 |
+| M4 | Qwen3-TTS Harness Skill 개발 | Integration Harness, Robustness | 6h | ✅ 완료 (2026-05-26) gen_audio_qwen.py |
+| M5 | Remotion 통합 & 성능 하네스 | Capstone, Production, Latency | 5h | ✅ 완료 (2026-05-27) Live #11 YouTube 업로드 |
 
 ---
 
