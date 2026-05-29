@@ -3,8 +3,8 @@
 > **Topic**: GOBI-CLI
 > **방법론**: VibeLearn AI v2.0
 > **최초 완료일**: 2026-03-29
-> **CVL 업데이트**: 2026-05-10 (GOBI CLI v2.0.12 반영)
-> **상태**: 완료, CVL 최신화 진행 중
+> **CVL 업데이트**: 2026-05-29 (GOBI CLI v2.0.19 반영)
+> **상태**: 완료, CVL 최신화 완료
 
 ## 이 Topic에 대하여
 
@@ -73,6 +73,7 @@ Sense                   # 활동/전사 데이터
 
 ## CVL WorkLog
 
+- [vl_worklog/20260529_CVL_GOBI-CLI.md](vl_worklog/20260529_CVL_GOBI-CLI.md) — GOBI CLI v2.0.19 업데이트 동기화 (vault CRUD + 미디어 첨부)
 - [vl_worklog/20260510_CVL_GOBI-CLI.md](vl_worklog/20260510_CVL_GOBI-CLI.md) — GOBI CLI v2.0.12 업데이트 동기화
 - [vl_worklog/20260424_CVL_GOBI-CLI.md](vl_worklog/20260424_CVL_GOBI-CLI.md) — 이전 CVL 기록
 

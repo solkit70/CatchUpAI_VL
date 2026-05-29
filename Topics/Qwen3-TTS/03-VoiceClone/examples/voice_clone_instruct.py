@@ -24,7 +24,9 @@ sys.stdout.reconfigure(encoding="utf-8")
 dashscope.base_http_api_url = "https://dashscope-intl.aliyuncs.com/api/v1"
 ENROLL_URL    = "https://dashscope-intl.aliyuncs.com/api/v1/services/audio/tts/customization"
 INSTRUCT_MODEL = "qwen3-tts-instruct-flash-2026-01-26"
-PREFERRED_NAME = "changsoo-instruct"
+# instruct 모델은 enrollment target으로 미지원 → M3에서 발급받은 VC voice_id 재사용
+VC_MODEL       = "qwen3-tts-vc-2026-01-22"
+PREFERRED_NAME = "changsoo"
 OUT_DIR        = Path(__file__).parent
 
 CLONE_TEXT = (
@@ -52,7 +54,8 @@ INSTRUCTION_VARIANTS = [
 ]
 
 
-def enroll_voice_instruct(sample_path: str) -> str:
+def enroll_voice_vc(sample_path: str) -> str:
+    """VC 모델로 등록 (instruct 모델은 enrollment 미지원)."""
     path = Path(sample_path)
     mime = "audio/mpeg" if path.suffix.lower() == ".mp3" else "audio/wav"
     b64  = base64.b64encode(path.read_bytes()).decode()
@@ -61,7 +64,7 @@ def enroll_voice_instruct(sample_path: str) -> str:
         "model": "qwen-voice-enrollment",
         "input": {
             "action": "create",
-            "target_model": INSTRUCT_MODEL,
+            "target_model": VC_MODEL,
             "preferred_name": PREFERRED_NAME,
             "audio": {"data": f"data:{mime};base64,{b64}"},
         },
@@ -71,7 +74,7 @@ def enroll_voice_instruct(sample_path: str) -> str:
         "Content-Type": "application/json",
     }
 
-    print(f"[등록] {path.name} → target_model: {INSTRUCT_MODEL}")
+    print(f"[등록] {path.name} → target_model: {VC_MODEL}")
     t = time.time()
     resp = requests.post(ENROLL_URL, json=payload, headers=headers, timeout=60)
     elapsed = round(time.time() - t, 2)
@@ -109,7 +112,10 @@ def synthesize_with_instructions(voice_id: str, instructions: str, out_name: str
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--sample", required=True)
+    # --sample: 새 등록용 mp3. --voice-id: 기존 voice_id 직접 지정 (재등록 불필요)
+    parser.add_argument("--sample", default=None)
+    parser.add_argument("--voice-id", default=None,
+                        help="기존 VC voice_id 직접 지정 (등록 생략)")
     args = parser.parse_args()
 
     if not os.environ.get("DASHSCOPE_API_KEY"):
@@ -119,9 +125,17 @@ def main():
     print("Qwen3-TTS Voice Clone + Instructions 튜닝")
     print("=" * 55 + "\n")
 
-    voice_id = enroll_voice_instruct(args.sample)
+    if args.voice_id:
+        voice_id = args.voice_id
+        print(f"[기존 voice_id 사용] {voice_id}\n")
+    elif args.sample:
+        voice_id = enroll_voice_vc(args.sample)
+    else:
+        raise ValueError("--sample 또는 --voice-id 중 하나를 지정해야 합니다.")
 
-    print(f"3종 instructions 비교 실험 (voice_id: {voice_id})\n")
+    print(f"3종 instructions 비교 실험")
+    print(f"  합성 모델: {INSTRUCT_MODEL}")
+    print(f"  voice_id : {voice_id}\n")
     for v in INSTRUCTION_VARIANTS:
         print(f"[{v['label']}]")
         synthesize_with_instructions(voice_id, v["instructions"], v["out"])

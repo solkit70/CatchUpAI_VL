@@ -1,9 +1,9 @@
 # GOBI CLI — Quick Reference Card
 
-> **버전**: GOBI CLI v2.0.12
+> **버전**: GOBI CLI v2.0.19
 > **작성일**: 2026-04-24
-> **CVL 업데이트**: 2026-05-10 (v0.6.15 → v2.0.12 전면 재작성)
-> **상태**: 전체 명령어 참조 (v2.0.12 최신화)
+> **CVL 업데이트**: 2026-05-29 (v2.0.12 → v2.0.19 vault CRUD + 미디어 첨부 추가)
+> **상태**: 전체 명령어 참조 (v2.0.19 최신화)
 
 ---
 
@@ -23,6 +23,10 @@ gobi auth logout         # 로그아웃
 
 ```bash
 gobi vault init               # Vault 초기화 + PUBLISH.md 생성 (인터랙티브)
+gobi vault create <slug>      # 새 Vault 생성 (--name으로 표시 이름 지정) 🆕 v2.0.19
+gobi vault rename <newName>   # Vault 이름 변경 (표시 이름만, PUBLISH.md title 무관) 🆕 v2.0.19
+gobi vault delete <slug>      # Vault 삭제 ⚠️ 비가역적, 콘텐츠 먼저 정리 필요 🆕 v2.0.19
+gobi vault set-primary <slug> # Primary Vault 설정 🆕 v2.0.19
 gobi vault list               # 내 Vault 목록
 gobi vault publish            # PUBLISH.md 발행 (구 brain publish)
 gobi vault unpublish          # 발행 취소 (구 brain unpublish)
@@ -32,6 +36,7 @@ gobi vault sync               # 로컬 ↔ 서버 동기화 (구 gobi sync)
 
 > `.gobi/settings.yaml`에 `vaultSlug` 저장됨
 > **v2.0 변경**: `gobi init` → `gobi vault init` / `BRAIN.md` → `PUBLISH.md` / `gobi sync` → `gobi vault sync`
+> **v2.0.19 추가**: vault create / rename / delete / set-primary
 
 ### Vault Sync 옵션
 
@@ -51,11 +56,19 @@ gobi vault sync --conflict server   # 충돌 시 서버 우선 (ask|server|clien
 gobi global feed                       # 공개 글로벌 피드 조회
 gobi global create-post \
   --title "제목" --content "내용"      # 개인 포스트 작성 (구 brain post-update)
+gobi global create-post \
+  --attach photo.png                   # 이미지 첨부 (최대 4장, 5MB) 🆕 v2.0.19
+gobi global create-post \
+  --repost-post-id <id>               # 기존 포스트 리포스트 🆕 v2.0.19
+gobi global create-post \
+  --draft-id <id>                      # draft → post 변환 🆕 v2.0.19
 gobi global list-posts --mine          # 내 포스트 목록 (구 brain list-updates)
 gobi global edit-post <id> \
   --content "수정 내용"                # 포스트 수정 (구 brain edit-update)
 gobi global delete-post <id>           # 포스트 삭제 (구 brain delete-update)
 ```
+
+> **v2.0.19 추가**: `--attach` (미디어 첨부) / `--repost-post-id` (리포스트) / `--draft-id` / `--auto-attachments` / `--rich-text`
 
 ---
 

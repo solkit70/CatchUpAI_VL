@@ -109,7 +109,8 @@ def synthesize_clone(voice_id: str, text: str, out_name: str = "clone_result.wav
 # ── Main ──────────────────────────────────────────────────────────────────
 def main():
     parser = argparse.ArgumentParser(description="Qwen3-TTS 보이스 클론")
-    parser.add_argument("--sample", required=True, help="참조 음성 파일 경로 (mp3/wav)")
+    parser.add_argument("--sample", default=None, help="참조 음성 파일 경로 (mp3/wav)")
+    parser.add_argument("--voice-id", default=None, help="기존 voice_id 직접 지정 (등록 생략)")
     parser.add_argument("--text", default=CLONE_TEXT, help="합성할 텍스트")
     parser.add_argument("--out", default="clone_result.wav", help="출력 파일명")
     args = parser.parse_args()
@@ -121,7 +122,14 @@ def main():
     print("Qwen3-TTS Voice Clone")
     print("=" * 50)
 
-    voice_id = enroll_voice(args.sample)
+    if args.voice_id:
+        voice_id = args.voice_id
+        print(f"[기존 voice_id 사용] {voice_id}")
+    elif args.sample:
+        voice_id = enroll_voice(args.sample)
+    else:
+        raise ValueError("--sample 또는 --voice-id 중 하나를 지정해야 합니다.")
+
     out_path = synthesize_clone(voice_id, args.text, args.out)
 
     print(f"\n완료! 출력 파일: {out_path}")
