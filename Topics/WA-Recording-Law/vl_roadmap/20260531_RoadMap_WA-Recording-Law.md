@@ -41,8 +41,9 @@
 | M3 | 공공장소 vs 사적 공간 기준 | ⭐⭐ | 20분 | 03-Public-vs-Private/ |
 | M4 | 시나리오별 합법·불법 판단 실습 | ⭐⭐⭐ | 45분 | 04-Scenarios/ |
 | M5 | 실무 가이드라인 작성 (Capstone) | ⭐⭐ | 20분 | 05-Guidelines/ |
+| M6 | AI 기술 발전과 법적 지형 변화 (Research) | ⭐⭐⭐ | 90분 | 06-AI-Tech-Law/ |
 
-**총 예상 시간**: 약 2시간 20분
+**총 예상 시간**: 약 4시간 (M1-M5 완료, M6 추가)
 
 ---
 
@@ -460,6 +461,128 @@ RCW 9.73.030 금지 대상:
 
 ---
 
+---
+
+### M6 — AI 기술 발전과 법적 지형 변화 (Research Module)
+
+**난이도**: ⭐⭐⭐
+**예상 시간**: 90분
+**산출물 폴더**: `06-AI-Tech-Law/`
+**전제**: M1-M5 완료 (2026-05-31). Final Retrospective의 "향후 심화 학습 주제" 중 "AI 생성 콘텐츠 관련 신규 연방법 동향"을 이어받음.
+
+#### 학습 목표
+
+- [ ] AI 상시 녹음 기기(Limitless, Meta AI Glasses 등)의 현행법 충돌 지점을 파악할 수 있다
+- [ ] AI 음성 복제(TTS/voice cloning)가 녹음법·퍼소낼리티 권리에 미치는 영향을 설명할 수 있다
+- [ ] AI 미팅 봇 사용 시 동의 문제와 실무 대응 방법을 설명할 수 있다
+- [ ] 연방 및 WA 주 레벨의 AI 관련 입법 개정 동향을 파악할 수 있다
+- [ ] 기기 제조사(Meta 등)와 시민사회(EFF, ACLU)의 입장 차이를 비교 설명할 수 있다
+- [ ] 기업 로비 전략과 실제 입법 영향을 연결하여 설명할 수 있다
+
+#### 주요 개념
+
+1. **Ambient Recording의 진화**: Limitless AI, Meta Ray-Ban, Bee AI wearable 등 상시 녹음 기기의 법적 회색지대
+2. **Voice Cloning Legal Risk**: AI TTS/음성 복제와 퍼소낼리티 권리(RCW 63.60), 녹음법 교차 적용
+3. **AI Meeting Bot Controversy**: Otter.ai, Fireflies, Zoom AI의 동의 고지 설계 문제
+4. **Legislative Reform**: NO FAKES Act, DEFIANCE Act, ECPA 개정안, WA 주 AI 법안
+5. **Industry vs Civil Society**: 빅테크 로비(CCIA, TechNet) vs. EFF·ACLU 프라이버시 옹호 대립 구도
+
+#### 이해관계자 지형도
+
+```
+[기술 현황]           [법적 갈등]              [입장 대립]
+A (AI 기기)  ──┐
+B (음성복제) ──┤→  D (입법 개정 전쟁)  ←──  E (기업: 완화 로비)
+C (미팅봇)  ──┘                        ←──  F (시민사회: 강화 요구)
+```
+
+#### 실습 과제
+
+**실습 1: Web Research — A-F 6개 영역** ⭐⭐⭐
+- **목적**: 현행 법률 체계에 AI 기술 맥락을 추가하여 연구를 완성
+- **상세 연구 계획**: `vl_materials/m6-research-brief.md` 참조 (검색어, 핵심 질문, 예상 출처 포함)
+- **예상 시간**: 60분
+
+**실습 2: 파일 생성 — 06-AI-Tech-Law/** ⭐⭐
+- **목적**: Research 결과를 구조화된 지식 파일로 저장
+- **단계**:
+  1. `06-AI-Tech-Law/` 폴더 생성
+  2. A-F 각 영역별 파일 작성 (아래 산출물 참조)
+  3. `README.md` 작성 (파일 간 연결 및 학습 순서)
+- **예상 시간**: 20분
+
+**실습 3: 기존 파일 업데이트** ⭐⭐
+- **목적**: M6 내용을 기존 연구와 통합
+- **대상 파일 3개**:
+  1. `WA-Recording-Law-Study.md` → `## 10. AI 기술 발전과 법적 지형 변화` 섹션 추가
+  2. `05-Guidelines/creator-legal-guide.md` → AI 음성 복제 및 AI 미팅 봇 관련 가이드 보강
+  3. `vl_roadmap/20260531_RoadMap_WA-Recording-Law.md` → 진행 상황 표 업데이트
+- **예상 시간**: 10분
+
+#### 산출물
+
+```
+06-AI-Tech-Law/
+├── README.md                    ← 모듈 개요 + 파일 간 연결
+├── ai-ambient-recorders.md      ← A: AI 상시 녹음 기기 현황 + 법적 지형
+├── voice-cloning-law.md         ← B: 음성 복제 법·논란 (gen_audio.py 연결)
+├── ai-meeting-bots.md           ← C: AI 미팅 봇 동의 문제
+├── legislative-reform.md        ← D: 연방·WA 주 입법 개정 동향
+├── industry-positions.md        ← E: 기업 입장 & 로비 전략
+└── civil-society-research.md    ← F: 학계·시민사회 입장
+```
+
+**기존 파일 업데이트 (3개)**:
+- `WA-Recording-Law-Study.md` (섹션 10 추가)
+- `05-Guidelines/creator-legal-guide.md` (AI 관련 가이드 보강)
+- 이 Roadmap 파일 (진행 상황 표 업데이트)
+
+#### README.md 학습 순서
+
+```
+1. ai-ambient-recorders.md  — 기술 현황 파악
+2. voice-cloning-law.md     — 음성 복제 법적 이슈
+3. ai-meeting-bots.md       — AI 봇 동의 문제
+4. legislative-reform.md    — 입법 동향 (D)
+5. industry-positions.md    — 기업 입장 (E)
+6. civil-society-research.md — 학계·시민사회 (F)
+```
+
+#### Definition of Done
+
+- [ ] 6개 Research 파일 모두 생성 (최소 각 400자 이상)
+- [ ] WA-Recording-Law-Study.md 섹션 10 추가
+- [ ] creator-legal-guide.md AI 가이드 보강
+- [ ] README.md 작성 (파일 간 연결 포함)
+- [ ] WorkLog 작성
+- [ ] Final Retrospective 업데이트 (M6 완료 내용 추가)
+
+#### Self-Assessment
+
+**개념 이해**:
+- [ ] "AI 기기 제조사가 로비를 통해 어떤 방향의 입법을 지지하는가"를 설명할 수 있다
+- [ ] AI 음성 복제로 만든 콘텐츠가 워싱턴 주법상 어떤 위험을 갖는지 설명할 수 있다
+
+**실무 활용**:
+- [ ] gen_audio.py 같은 TTS 음성 클론 프로젝트에서 법적으로 주의해야 할 점을 나열할 수 있다
+- [ ] AI 미팅 봇(Otter.ai 등) 사용 시 WA 주에서 안전한 고지 방법을 설명할 수 있다
+
+#### 예상 시간 배분
+
+- 실습 1 (Research): 60분
+- 실습 2 (파일 생성): 20분
+- 실습 3 (기존 파일 업데이트): 10분
+- **합계**: 90분
+
+#### 참조 자료
+
+- `vl_materials/m6-research-brief.md` — 상세 연구 계획 (검색어, 핵심 질문)
+- `vl_materials/additional-legal-references.md` — 기존 추가 참고자료
+- `05-Guidelines/creator-legal-guide.md` — 업데이트 대상 파일
+- `WA-Recording-Law-Study.md` — 업데이트 대상 파일
+
+---
+
 ## 📝 WorkLog 작성 가이드
 
 **파일명 규칙**: `vl_worklog/YYYYMMDD_MX_WA-Recording-Law.md`
@@ -517,11 +640,12 @@ WA-Recording-Law/
 
 | 모듈 | 시작 | 종료 | 상태 | DoD | 비고 |
 |------|------|------|------|-----|------|
-| M1 — 법률 기초 | | | ⏳ | 0% | |
-| M2 — RCW 핵심 조항 | | | ⏳ | 0% | |
-| M3 — 공공/사적 공간 | | | ⏳ | 0% | |
-| M4 — 시나리오 실습 | | | ⏳ | 0% | 핵심 모듈 |
-| M5 — 가이드라인 | | | ⏳ | 0% | Capstone |
+| M1 — 법률 기초 | 2026-05-31 | 2026-05-31 | ✅ | 100% | |
+| M2 — RCW 핵심 조항 | 2026-05-31 | 2026-05-31 | ✅ | 100% | |
+| M3 — 공공/사적 공간 | 2026-05-31 | 2026-05-31 | ✅ | 100% | |
+| M4 — 시나리오 실습 | 2026-05-31 | 2026-05-31 | ✅ | 100% | 핵심 모듈 |
+| M5 — 가이드라인 | 2026-05-31 | 2026-05-31 | ✅ | 100% | Capstone |
+| M6 — AI 기술·법 동향 | | | ⏳ | 0% | Research Module |
 
 **범례**: ⏳ 대기 / 🔄 진행 중 / ✅ 완료
 
@@ -529,11 +653,15 @@ WA-Recording-Law/
 
 ## 🎯 전체 성공 기준
 
-- [ ] 학습 목표 7개 모두 달성
-- [ ] M4 시나리오 6개 모두 정확히 판단
-- [ ] 나만의 1페이지 가이드라인 완성
-- [ ] 고지 문구 3가지 버전 준비
-- [ ] Topic Retrospective 작성
+- [x] 학습 목표 7개 모두 달성 (M1-M5, 2026-05-31)
+- [x] M4 시나리오 6개 모두 정확히 판단
+- [x] 나만의 1페이지 가이드라인 완성
+- [x] 고지 문구 3가지 버전 준비
+- [x] Topic Retrospective 작성
+- [ ] M6 AI 기술·법 동향 Research 완료
+- [ ] M6 산출물 6개 파일 생성
+- [ ] 기존 파일 3개 업데이트 (Study.md, creator-legal-guide.md, Roadmap)
+- [ ] M6 WorkLog 및 Final Retrospective 업데이트
 
 ---
 

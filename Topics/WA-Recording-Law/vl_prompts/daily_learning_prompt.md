@@ -92,9 +92,12 @@ vl_roadmap/20260531_RoadMap_WA-Recording-Law.md
 
 #### 1.1 Roadmap 분석
 1. `vl_roadmap/20260531_RoadMap_WA-Recording-Law.md` 읽기
-2. 전체 모듈 구조 파악 (M1~M5)
+2. 전체 모듈 구조 파악 (M1~M6)
+   - M1-M5: 완료 (2026-05-31)
+   - M6: AI 기술 발전과 법적 지형 변화 (Research Module, 미완료)
 3. 사용자가 지정한 현재 모듈 확인
 4. 해당 모듈의 학습 목표·실습·DoD 추출
+5. **M6인 경우**: `vl_materials/m6-research-brief.md` 추가 읽기 (상세 연구 계획 포함)
 
 #### 1.2 이전 WorkLog 분석 (있는 경우)
 1. 사용자가 지정한 WorkLog 파일 읽기
@@ -107,7 +110,7 @@ vl_roadmap/20260531_RoadMap_WA-Recording-Law.md
 ## 📊 현재 학습 상태
 
 **Topic**: WA-Recording-Law
-**전체 진행률**: M{X} / M5 (XX%)
+**전체 진행률**: M{X} / M6 (XX%)
 **현재 모듈**: M{X} - {모듈명}
 **모듈 DoD 달성률**: X/Y (XX%)
 
@@ -309,6 +312,15 @@ vl_roadmap/20260531_RoadMap_WA-Recording-Law.md
 ℹ️ 첫 학습 세션 — M1부터 시작합니다.
 사전 학습 문서(WA-Recording-Law-Study.md)가 있으므로
 개념 파악은 빠르게, 실습(빈칸·퀴즈)에 집중합니다.
+시작하시겠습니까?
+```
+
+### M6 세션 (Research Module)
+```
+🔍 M6 Research 세션 — AI 기술 발전과 법적 지형 변화
+M1-M5가 완료된 상태에서 시작합니다.
+먼저 vl_materials/m6-research-brief.md를 읽어 연구 계획을 확인합니다.
+A-F 6개 영역을 Web Search로 조사하고 06-AI-Tech-Law/ 폴더에 파일을 생성합니다.
 시작하시겠습니까?
 ```
 
