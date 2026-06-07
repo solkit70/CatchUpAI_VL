@@ -109,4 +109,16 @@
 - 추가 시나리오 발견 시 가이드에 추가
 
 ---
+
+## 📁 사후 보완 기록 (2026-06-07)
+
+**발견**: `03-Public-vs-Private/` 폴더가 누락된 것을 확인.
+
+**원인**: 2026-05-31 세션에서 M3를 M2와 합산해 진행하면서, 내용은 `02-RCW-Analysis/concepts/public-vs-private.md`에 저장했지만 M3 전용 폴더를 별도 생성하지 않음. M2 README에 "M2 + M3" 제목으로 기록됨.
+
+**보완 조치**:
+- `03-Public-vs-Private/README.md` 생성 — M2 합산 세션 이력 설명 + 링크
+- `03-Public-vs-Private/concepts/location-classification.md` 생성 — Roadmap 스펙 7개 장소 분류표 + 30초 판단 체크리스트
+
+---
 **방법론**: VibeLearn AI

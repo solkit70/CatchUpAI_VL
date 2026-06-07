@@ -64,9 +64,32 @@
 ## 📌 향후 심화 학습 주제
 
 - 캘리포니아 등 다른 All-party consent 주의 법률 비교
-- AI 생성 콘텐츠 관련 신규 연방법 동향 (No Fakes Act 등)
+- ~~AI 생성 콘텐츠 관련 신규 연방법 동향 (No Fakes Act 등)~~ → **✅ M6 완료 (2026-06-07)**
 - 미국 이외 국가 (한국 등) 녹음법 비교
 
 ---
 
-**방법론**: VibeLearn AI | **완료일**: 2026-05-31
+## 📂 M6 추가 산출물 (2026-06-07)
+
+| 파일 | 내용 |
+|------|------|
+| `06-AI-Tech-Law/README.md` | M6 모듈 개요 + 이해관계자 지형도 |
+| `06-AI-Tech-Law/ai-ambient-recorders.md` | Meta Ray-Ban 집단 소송, Limitless 위험 분석 |
+| `06-AI-Tech-Law/voice-cloning-law.md` | NO FAKES Act, WA SB 5886, RCW 63.60 |
+| `06-AI-Tech-Law/ai-meeting-bots.md` | Otter.ai/Fireflies 소송, 3단계 고지 절차 |
+| `06-AI-Tech-Law/legislative-reform.md` | 연방·WA 주 2025-2026 법안 현황표 |
+| `06-AI-Tech-Law/industry-positions.md` | Meta 전략, CCIA 로비 분석 |
+| `06-AI-Tech-Law/civil-society-research.md` | EFF·ACLU 입장, 기업 vs 시민사회 구도 |
+| `WA-Recording-Law-Study.md` 섹션 9 추가 | AI 기술 발전과 법적 지형 변화 (5개 소섹션) |
+| `creator-legal-guide.md` Q10-Q12 추가 | AI TTS, AI 봇, 딥페이크 판단 가이드 |
+
+### M6 핵심 발견
+
+1. **WA SB 5886 (2026.06.11 발효)**: AI 딥페이크가 RCW 63.60 퍼소낼리티 권리 침해에 명시 포함
+2. **TAKE IT DOWN Act (2025.05.19 서명)**: 비동의 성적 딥페이크 = 연방 범죄
+3. **AI 봇 소송 현실화**: Otter.ai(연방 집단 소송) + Fireflies(BIPA) — AI가 대화 "당사자"인지 "도청자"인지 법원이 판단 중
+4. **입법 방향 = 명확화**: 금지가 아닌 "고지·동의·데이터 범위 명확화"로 수렴
+
+---
+
+**방법론**: VibeLearn AI | **완료일**: 2026-05-31 | **M6 추가**: 2026-06-07

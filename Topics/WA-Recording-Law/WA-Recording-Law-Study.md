@@ -288,14 +288,50 @@ A: 해당 주의 법률이 적용됩니다. 예: 캘리포니아도 all-party co
 
 ---
 
-## 9. 참고 자료
+## 9. AI 기술 발전과 법적 지형 변화
+
+> **배경**: M1-M5 학습(2026-05-31) 이후, AI 기술이 기존 녹음법과 어떻게 충돌·진화하는지 심화 연구 (M6, 2026-06-07).
+
+### 9-1. AI 상시 녹음 기기의 등장
+
+Limitless AI(펜던트), Meta Ray-Ban Smart Glasses, Bee AI 등 **상시 녹음 웨어러블** 기기가 급속히 보급되고 있다. 2025년 메타 레이밴은 7백만 대가 판매됐다. 이 기기들은 일반 안경처럼 보이도록 설계되어 피촬영자가 인식하기 어려우며, 소형 표시등이 유일한 고지 수단이다. WA 주 all-party consent 원칙상, 타인과의 대화를 이 기기로 녹음하려면 **사전 동의가 필수**다. 메타는 2025년 4월 개인정보 정책을 개정해 AI 기능을 기본 활성화하고 클라우드 저장 거부 옵션을 제거해 논란이 됐다. 2026년 3월에는 케냐 하청업체 직원들이 녹화 영상을 AI 훈련에 사용했다는 집단 소송이 제기됐다.
+
+### 9-2. AI 음성 복제와 퍼소낼리티 권리
+
+AI TTS(Qwen3-TTS, ElevenLabs 등)를 이용한 음성 복제는 **두 가지 법률 층위**를 통과해야 한다. 녹음법(RCW 9.73)은 수집 단계를, 퍼소낼리티 권리법(RCW 63.60)은 이용·배포 단계를 각각 규율한다. **자기 목소리를 자기가 복제하는 것은 합법**이지만, 타인의 목소리를 동의 없이 복제하는 것은 RCW 63.60 위반이며 최소 $1,500 손해배상 대상이다. WA 주는 2026년 3월 SB 5886을 통해 퍼소낼리티 권리법을 AI 딥페이크에도 명시적으로 적용하는 개정을 완료했다(2026.06.11 발효). 연방 차원에서는 NO FAKES Act(H.R.2794/S.1367)가 2025년 4월 재발의되어 상원 사법위원회에 계류 중이다.
+
+### 9-3. AI 미팅 봇과 동의 문제
+
+Otter.ai, Fireflies.ai 같은 AI 미팅 봇은 회의에 자동 참가해 녹음·전사한다. 2025-2026년 두 건의 주요 소송이 제기됐다. Otter.ai는 계정도 없는 외부 참가자의 통화를 무단 녹음했다는 연방 집단 소송(캘리포니아 북부 연방법원)을, Fireflies.ai는 참가자의 성문(voiceprint)을 무단 생성했다는 Illinois BIPA 소송(2025.12.18)을 각각 직면하고 있다. WA 주에서 AI 봇을 안전하게 사용하려면 캘린더 초대, 미팅 시작 시 구두 안내, 채팅 공지의 **3단계 고지**가 권장된다.
+
+### 9-4. 입법 개정 움직임
+
+| 법률/법안 | 상태 | 핵심 내용 |
+|---------|------|---------|
+| TAKE IT DOWN Act | ✅ 발효 (2025.05.19) | 비동의 성적 딥페이크 → 연방 범죄; 플랫폼 48시간 삭제 의무 |
+| DEFIANCE Act | ✅ 상원 통과 (2026.01) | 비동의 딥페이크 민사 소송, 최대 $150,000 배상 |
+| NO FAKES Act | 🔄 진행 중 | 연방 퍼소낼리티 권리; AI 음성·외모 복제 동의 요건 |
+| WA SB 5886 | ✅ 발효 (2026.06.11) | RCW 63.60 확장 — AI 딥페이크 명시 포함 |
+| WA HB 1672 | ✅ 발효 (2026.07.01) | 고용주 전자 모니터링 사전 서면 고지 의무 |
+
+### 9-5. 이해관계자 지형도
+
+기업(Meta, OpenAI, Google)과 시민사회(EFF, ACLU)는 AI 녹음 규제의 방향을 두고 대립한다. 기업들은 연방 단일 기준을 선호하며 "기술 혁신 저해"를 이유로 강한 주별 규제에 반대한다. EFF는 NO FAKES Act의 DMCA식 통지-삭제 조항이 합법적 표현물을 삭제하는 데 악용될 수 있다고 반대하며, ACLU는 AI 기반 감시가 공공장소에서 표현의 자유를 위축시킨다고 경고한다. **공통 방향은 "금지"가 아닌 "고지·동의·데이터 범위 명확화"**로 수렴하고 있다.
+
+---
+
+## 10. 참고 자료
 
 - **주요 법령**: [RCW 9.73 — Washington Privacy Act](https://app.leg.wa.gov/RCW/default.aspx?cite=9.73)
 - **기자 녹음 가이드 (워싱턴)**: [RCFP — Washington](https://www.rcfp.org/reporters-recording-guide/washington/)
 - **RCW 9.73.030** (핵심 조항): [링크](https://app.leg.wa.gov/RCW/default.aspx?cite=9.73.030)
 - **RCW 9.73.060** (민사 손해배상): [링크](https://app.leg.wa.gov/RCW/default.aspx?cite=9.73.060)
 - **RCW 9.73.080** (형사 처벌): [링크](https://app.leg.wa.gov/RCW/default.aspx?cite=9.73.080)
+- **WA SB 5886** (AI 딥페이크 퍼소낼리티): [Cooley 분석](https://www.cooley.com/news/insight/2026/2026-04-06-washington-state-expands-personality-rights-law-to-cover-ai-generated-deepfakes)
+- **NO FAKES Act** (H.R.2794): [Congress.gov](https://www.congress.gov/bill/119th-congress/house-bill/2794/text)
+- **TAKE IT DOWN Act**: [Congress.gov](https://www.congress.gov/bill/119th-congress/senate-bill/146)
+- **RCW 63.60** (퍼소낼리티 권리): [링크](https://app.leg.wa.gov/rcw/default.aspx?cite=63.60)
 
 > ⚠️ **면책 고지**: 이 문서는 학습 목적으로 작성된 것으로 법률 조언이 아닙니다. 실제 법적 판단이 필요한 경우 워싱턴 주 변호사와 상담하세요.
 
-*Claude Code가 VibeLearn AI 방식으로 작성했습니다 (2026-05-31).*
+*Claude Code가 VibeLearn AI 방식으로 작성했습니다 (2026-05-31 초안 / 2026-06-07 M6 업데이트).*
