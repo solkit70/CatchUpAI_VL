@@ -251,6 +251,7 @@ vl_worklog/
 - [ ] 경쟁, 독점, 비밀, 기술 정체론, 민주주의 회의론, 불멸 추구를 하나의 세계관으로 연결할 수 있다.
 - [ ] 각 핵심 명제를 원문 인용과 함께 설명할 수 있다.
 - [ ] 피터 틸식 contrarian thinking의 장점과 위험을 구분할 수 있다.
+- [ ] 민주주의와 자본주의에 대한 피터 틸의 세계관을 정리하고, 페이팔 사단의 미래 비전을 하나의 프레임으로 통합할 수 있다.
 
 #### 주요 개념
 
@@ -258,6 +259,8 @@ vl_worklog/
 2. **Secrets**: 아직 발견되지 않았거나 말해지지 않은 중요한 진실.
 3. **Technological stagnation**: 디지털 혁신과 원자 세계 혁신의 불균형에 대한 문제의식.
 4. **Contrarian thinking**: 모두가 동의하지 않는 중요한 진실을 찾는 사고방식.
+5. **민주주의와 자본주의 세계관**: 틸의 민주주의 회의론(대중 민주주의 불신)과 독점적 자본주의 옹호 — 두 입장이 어떻게 연결되는지.
+6. **미래 비전**: 불멸 추구, 장수 기술, 우주 개척, 기술 가속주의 등 틸과 페이팔 사단이 그리는 세계의 미래.
 
 #### 실습 과제
 
@@ -294,7 +297,8 @@ vl_worklog/
 01-Worldview-Reconstruction/
 ├── README.md
 ├── core-claims.md
-└── thiel-worldview-map.md
+├── thiel-worldview-map.md
+└── democracy-capitalism-future-vision.md
 
 vl_worklog/
 └── YYYYMMDD_M3_Peter-Thiel-Vision.md
@@ -305,6 +309,7 @@ vl_worklog/
 - [ ] 핵심 명제 5개 이상 정리
 - [ ] 원문 인용과 해석 포함
 - [ ] 세계관 관계 맵 작성
+- [ ] 민주주의·자본주의 세계관 및 미래 비전 문서 작성
 - [ ] README 작성
 - [ ] WorkLog 작성 완료
 - [ ] Daily Retrospective 작성
@@ -350,6 +355,8 @@ vl_worklog/
 2. **Defense AI**: AI 기술과 국방 산업의 결합.
 3. **Network power**: 창업자·투자자 네트워크가 산업과 정치 영향력으로 확장되는 방식.
 4. **Public-private power shift**: 공공 권한이 민간 기술 기업으로 이동하는 현상.
+5. **DOGE와 정부 효율화**: 트럼프 2기에서 페이팔 사단이 주도하는 정부 효율부(DOGE)의 역할과 기술 엘리트의 정부 개입.
+6. **트럼프 2기 권력 구조**: 머스크·틸·JD 밴스 등 페이팔 사단이 트럼프 2기 행정부에서 맡은 구체적 역할과 영향력.
 
 #### 실습 과제
 
@@ -387,7 +394,8 @@ vl_worklog/
 ├── README.md
 ├── palantir-and-surveillance.md
 ├── anduril-and-defense-ai.md
-└── paypal-mafia-and-power-network.md
+├── paypal-mafia-and-power-network.md
+└── trump-admin-and-doge.md
 
 vl_worklog/
 └── YYYYMMDD_M4_Peter-Thiel-Vision.md
@@ -398,6 +406,7 @@ vl_worklog/
 - [ ] Palantir 분석 작성
 - [ ] Anduril/국방 AI 분석 작성
 - [ ] PayPal Mafia/네트워크 권력 분석 작성
+- [ ] DOGE·트럼프 2기 행정부 역할 분석 작성
 - [ ] 철학과 실제 제도화 연결
 - [ ] README 작성
 - [ ] WorkLog 작성 완료
