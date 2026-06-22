@@ -27,7 +27,7 @@ Topic 이름: Tehaleh-Community-Video
 학습 목적:
 - 창발 발표 오프닝 데모 영상 제작 ("AI로 이렇게 뚝딱 만들 수 있습니다" 증명)
 - Tehaleh 커뮤니티를 시애틀/벨뷰 IT 종사자·은퇴 예정자에게 소개
-- Remotion + edge-tts + gpt-image-2 통합 영상 제작 워크플로우 습득
+- Remotion + Qwen3-TTS + AI 이미지 통합 영상 제작 워크플로우 습득
 ```
 
 ### 예상 학습 기간
@@ -44,12 +44,12 @@ Topic 이름: Tehaleh-Community-Video
 **이 Topic을 완료했을 때 달성하고 싶은 구체적 목표**
 
 ```
-- [ ] Tehaleh 리서치 자료를 수집·구조화하여 tehaleh-research.md를 완성할 수 있다
-- [ ] 영상 슬라이드 플랜(15-18장)을 video-slide-plan.md로 작성할 수 있다
-- [ ] gpt-image-2 이미지 프롬프트를 image-prompts.md로 작성할 수 있다
-- [ ] Remotion 컴포넌트(TehalehIntro0619)를 AI 도움으로 개발할 수 있다
-- [ ] edge-tts로 한국어 나레이션 오디오를 생성할 수 있다
-- [ ] MP4 영상(1920×1080)을 최종 렌더링할 수 있다
+- [x] Tehaleh 리서치 자료를 수집·구조화하여 tehaleh-research.md를 완성할 수 있다
+- [x] 영상 슬라이드 플랜(15장)을 video-slide-plan.md로 작성할 수 있다
+- [x] AI 이미지 프롬프트를 image-prompts.md로 작성할 수 있다
+- [x] 한국어·영어 Remotion 컴포넌트를 AI 도움으로 개발할 수 있다
+- [x] Edge-TTS 초벌과 Qwen3-TTS 한국어·영어 최종 나레이션을 생성할 수 있다
+- [x] 한국어·영어 MP4 영상(1920×1080)을 최종 렌더링하고 YouTube에 배포할 수 있다
 ```
 
 ---
@@ -152,15 +152,17 @@ OS: Windows 11
 ### 영상 기술 사양
 ```
 - Video ID: tehaleh-intro-0619
-- Composition ID: TehalehIntro0619
-- 배경 스타일: ANIMATED_DARK
-- TTS: edge-tts ko-KR-SunHiNeural
-- 이미지: gpt-image-2
-- 해상도: 1920×1080
+- Composition ID: TehalehIntro0619, TehalehIntroEn
+- 배경 스타일: LIGHT_PNW (밝은 forest green·sky blue·warm sunlight)
+- TTS: Qwen3-TTS 한국어·영어 (Edge-TTS 초벌 검증)
+- 이미지: 직접 촬영 사진 + AI 생성 이미지
+- 해상도: 1920×1080, 30fps
+- 배포: YouTube 한국어·영어 공개 완료
 ```
 
 ---
 
 **Template Version**: 1.0
 **Created**: 2026-06-21
+**Completed**: 2026-06-22
 **방법론**: VibeLearn AI

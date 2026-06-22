@@ -20,10 +20,13 @@ tags:
 
 | 항목 | 상태 | 설명 |
 |------|------|------|
-| Tehaleh 소개 영상 MP4 | 🔄 Qwen3-TTS 후 렌더링 필요 | tehaleh-intro-0619 최종본 |
-| YouTube 업로드 | ⏳ 업로드 대기 | 발표 전 업로드 + 링크 확보 |
-| YouTube 썸네일 | ⏳ 제작 대기 | 1280×720, 한국어 제목 |
+| Tehaleh 소개 영상 MP4 | ✅ 한국어·영어 렌더링 완료 | `tehaleh-intro-0619.mp4`, `tehaleh-intro-0619-en.mp4` |
+| YouTube 업로드 | ✅ 한국어·영어 완료 | [한국어 영상](https://youtu.be/Cucvcz9bVPU) · [영어 영상](https://youtu.be/YygPvJbKPvU) |
+| YouTube 배포 메타데이터 | ✅ 준비 완료 | 제목, Description, Chapter, 태그 |
+| YouTube 썸네일 | 🔄 프롬프트 준비 완료 | 1280×720, `TEHALEH` 포함 한국어 문구 |
 | 사전 링크 공지 | ⏳ 발표 D-1 | 참가자에게 링크 공유 |
+
+YouTube 제목, Description, Chapter, 태그, 썸네일 문구와 이미지 생성 프롬프트의 단일 관리 위치는 [[20260621_M1-M4_Tehaleh-Community-Video#YouTube 업로드 메타데이터|Tehaleh 영상 YouTube 업로드 메타데이터]]이다. 이후 배포 문안의 변경과 최종 공개 URL도 이 섹션에 기록하고, 발표에서는 결과물뿐 아니라 메타데이터와 썸네일을 만드는 Distribution 단계까지 제작 사례로 사용한다.
 
 ### 5단계 클립 — S3~S7용 (사용자 편집 예정)
 
@@ -84,11 +87,12 @@ tags:
 
 ### D-3 (2026-06-23까지)
 - [ ] 5개 클립 편집 완료 (`clip_01` ~ `clip_05`)
-- [ ] Tehaleh 영상 Qwen3-TTS 최종 오디오 교체 완료
-- [ ] Tehaleh 영상 최종 MP4 렌더링 완료
+- [x] Tehaleh 영상 Qwen3-TTS 한국어·영어 최종 오디오 교체 완료
+- [x] Tehaleh 영상 한국어·영어 최종 MP4 렌더링 완료
 
 ### D-2 (2026-06-24까지)
-- [ ] YouTube 업로드 + 썸네일 업로드
+- [x] 한국어·영어 YouTube 업로드
+- [ ] 한국어·영어 커스텀 썸네일 적용 최종 확인
 - [ ] 발표 슬라이드 (Google Slides / PPT) 제작 시작
 - [ ] S15 Mermaid 다이어그램 이미지 추출
 

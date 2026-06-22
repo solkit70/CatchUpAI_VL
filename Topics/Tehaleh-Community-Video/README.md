@@ -1,6 +1,8 @@
 ---
 title: Tehaleh-Community-Video
 created: 2026-06-22 12:17:07
+completed: 2026-06-22
+status: completed
 methodology: VibeLearn AI
 tags:
   - cua-vl
@@ -35,12 +37,26 @@ Tehaleh 지역 소개 영상을 AI와 Remotion으로 제작한 전 과정을 기
 
 영상은 실제 거주자의 관점에서 워싱턴주 Tehaleh 커뮤니티를 소개한다. Post & Pour에서 직접 촬영한 레이니어 산 사진, 커뮤니티 시설과 트레일, 주택 가격, 재택·하이브리드 근무, 은퇴 생활과 인근 한인 생활권을 다루며 한국어와 영어 두 버전으로 완성했다. 발표에서는 이 결과물을 AI 콘텐츠 제작 워크플로우의 실증 사례이자 오프닝 데모로 사용한다.
 
+## 최종 산출물
+
+| 산출물 | 상태 | 위치 |
+|--------|------|------|
+| 한국어 영상 | 공개 완료 | [YouTube](https://youtu.be/Cucvcz9bVPU) |
+| 영어 영상 | 공개 완료 | [YouTube](https://youtu.be/YygPvJbKPvU) |
+| 한국어 로컬 렌더 | 완료 | `out/tehaleh-intro-0619.mp4` |
+| 영어 로컬 렌더 | 완료 | `out/tehaleh-intro-0619-en.mp4` |
+| YouTube 배포 메타데이터 | 완료 | [WorkLog의 YouTube 업로드 메타데이터](vl_worklog/20260621_M1-M4_Tehaleh-Community-Video.md#youtube-업로드-메타데이터) |
+| Topic Final Retrospective | 완료 | [20260622 Final Retrospective](vl_worklog/20260622_Tehaleh-Community-Video_Final_Retrospective.md) |
+
+로컬 렌더는 1920×1080, 30fps로 검증했다. 초기 90~150초 길이 목표는 리서치 내용과 실제 거주 경험을 충분히 전달하기 위해 확장했으며, 이 범위 변경과 품질 평가는 Final Retrospective에 기록했다.
+
 ## 시작하기
 
 1. [topic_starter.md](topic_starter.md) — Topic 목적, 학습 목표와 제작 범위
 2. [vl_materials/tehaleh-research.md](vl_materials/tehaleh-research.md) — Tehaleh 지역 리서치
 3. [vl_roadmap/20260621_RoadMap_Tehaleh-Community-Video.md](vl_roadmap/20260621_RoadMap_Tehaleh-Community-Video.md) — 영상 제작 로드맵
 4. [vl_worklog/20260621_M1-M4_Tehaleh-Community-Video.md](vl_worklog/20260621_M1-M4_Tehaleh-Community-Video.md) — 제작 과정, 최종 렌더 정보와 YouTube 메타데이터
+5. [vl_worklog/20260622_Tehaleh-Community-Video_Final_Retrospective.md](vl_worklog/20260622_Tehaleh-Community-Video_Final_Retrospective.md) — Topic 완료 평가, Self-Assessment와 다음 프로젝트 개선안
 
 ## 제작 위치
 

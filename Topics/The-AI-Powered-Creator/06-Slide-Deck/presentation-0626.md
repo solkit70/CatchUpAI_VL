@@ -68,16 +68,12 @@ Catch Up AI · 솔킷
 
 > 발표 전에 링크를 공유드렸습니다. 보셨나요?
 
-<!-- S1: YouTube 완성본 재생 또는 썸네일 이미지 삽입 -->
-<!-- HTML 내보내기 후 아래 태그 활성화: -->
-<!-- <video src="../../../Ingest/CatchUpAI_VL/Topics/Tehaleh-Community-Video/output/tehaleh-intro-0619.mp4" controls></video> -->
-
-![bg right:40% blur:1px](https://via.placeholder.com/480x270/22C55E/ffffff?text=Tehaleh+Intro)
+![bg right:40%](https://img.youtube.com/vi/Cucvcz9bVPU/maxresdefault.jpg)
 
 **Tehaleh — 워싱턴주 Pierce County**
 AI가 만든 동네 소개 영상
 
-<!-- 완성본 링크: YouTube 업로드 후 QR 코드 또는 URL 표시 -->
+[한국어 영상](https://youtu.be/Cucvcz9bVPU) · [English Version](https://youtu.be/YygPvJbKPvU)
 
 ---
 

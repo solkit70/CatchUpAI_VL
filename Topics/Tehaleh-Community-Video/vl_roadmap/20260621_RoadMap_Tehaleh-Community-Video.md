@@ -27,12 +27,12 @@ Tehaleh 지역 소개 영상을 AI(Remotion)로 제작하는 전 과정 학습 �
 
 ### 학습 목표
 
-- [ ] Tehaleh 리서치 자료를 수집·구조화하여 tehaleh-research.md를 완성할 수 있다
-- [ ] 영상 슬라이드 플랜(15-18장)을 video-slide-plan.md로 작성할 수 있다
-- [ ] gpt-image-2 이미지 프롬프트를 image-prompts.md로 작성할 수 있다
-- [ ] Remotion 컴포넌트(TehalehIntro0619)를 AI 도움으로 개발할 수 있다
-- [ ] edge-tts로 한국어 나레이션 오디오를 생성할 수 있다
-- [ ] MP4 영상(1920×1080)을 최종 렌더링할 수 있다
+- [x] Tehaleh 리서치 자료를 수집·구조화하여 tehaleh-research.md를 완성할 수 있다
+- [x] 영상 슬라이드 플랜(15장)을 video-slide-plan.md로 작성할 수 있다
+- [x] AI 이미지 프롬프트를 image-prompts.md로 작성할 수 있다
+- [x] 한국어·영어 Remotion 컴포넌트를 AI 도움으로 개발할 수 있다
+- [x] Edge-TTS 초벌과 Qwen3-TTS 최종 나레이션 오디오를 생성할 수 있다
+- [x] 한국어·영어 MP4 영상(1920×1080)을 최종 렌더링할 수 있다
 
 ### 예상 학습 기간
 
@@ -71,9 +71,9 @@ Tehaleh 지역 소개 영상을 AI(Remotion)로 제작하는 전 과정 학습 �
 
 #### 학습 목표
 
-- [ ] Tehaleh 위치, 규모, 개발사 등 기본 정보를 정확하게 수집할 수 있다
-- [ ] IT 종사자·은퇴자 관점에서 Tehaleh의 장점을 구조화하여 설명할 수 있다
-- [ ] 한인/아시안 커뮤니티 접근성 정보를 포함한 tehaleh-research.md를 완성할 수 있다
+- [x] Tehaleh 위치, 규모, 개발사 등 기본 정보를 정확하게 수집할 수 있다
+- [x] IT 종사자·은퇴자 관점에서 Tehaleh의 장점을 구조화하여 설명할 수 있다
+- [x] 한인/아시안 커뮤니티 접근성 정보를 포함한 tehaleh-research.md를 완성할 수 있다
 
 #### 주요 개념
 
@@ -131,25 +131,25 @@ tehaleh-research.md 구조:
 
 #### Definition of Done
 
-- [ ] tehaleh-research.md 6개 섹션 모두 작성 완료
-- [ ] 기본 정보: 위치, 규모, 개발사, 공식 사이트 포함
-- [ ] 위치 섹션: Seattle·Bellevue·SeaTac 거리/시간 포함
-- [ ] IT 관점·은퇴자 관점 각 3개 이상 포인트
-- [ ] 출처 목록에 URL 3개 이상
-- [ ] WorkLog(20260621_M1_Tehaleh-Community-Video.md) 작성 완료
+- [x] tehaleh-research.md 6개 섹션 모두 작성 완료
+- [x] 기본 정보: 위치, 규모, 개발사, 공식 사이트 포함
+- [x] 위치 섹션: Seattle·Bellevue·SeaTac 거리/시간 포함
+- [x] IT 관점·은퇴자 관점 각 3개 이상 포인트
+- [x] 출처 목록에 URL 3개 이상
+- [x] 통합 WorkLog(20260621_M1-M4_Tehaleh-Community-Video.md) 작성 완료
 
 #### Self-Assessment
 
 **개념 이해**:
-- [ ] Tehaleh의 위치를 Seattle/Bellevue 대비 시간·거리로 설명할 수 있다
-- [ ] IT 종사자에게 좋은 이유 3가지를 즉시 말할 수 있다
+- [x] Tehaleh의 위치를 Seattle/Bellevue 대비 시간·거리로 설명할 수 있다
+- [x] IT 종사자에게 좋은 이유 3가지를 즉시 말할 수 있다
 
 **실무 활용**:
-- [ ] 리서치 결과를 영상 슬라이드 구성에 바로 연결할 수 있다
-- [ ] AI에게 추가 정보 검색을 효과적으로 요청할 수 있다
+- [x] 리서치 결과를 영상 슬라이드 구성에 바로 연결할 수 있다
+- [x] AI에게 추가 정보 검색을 효과적으로 요청할 수 있다
 
 **문제 해결**:
-- [ ] 정보가 부족할 때 대체 검색어를 생성할 수 있다
+- [x] 정보가 부족할 때 대체 검색어를 생성할 수 있다
 
 #### 예상 시간 배분
 
@@ -174,9 +174,9 @@ tehaleh-research.md 구조:
 
 #### 학습 목표
 
-- [ ] Tehaleh 소개 영상의 15-18장 슬라이드 구성을 video-slide-plan.md로 작성할 수 있다
-- [ ] 각 슬라이드에 타입·내용·나레이션·시각 자료·시간을 명시할 수 있다
-- [ ] gpt-image-2용 이미지 프롬프트를 image-prompts.md로 작성할 수 있다
+- [x] Tehaleh 소개 영상의 15장 슬라이드 구성을 video-slide-plan.md로 작성할 수 있다
+- [x] 각 슬라이드에 타입·내용·나레이션·시각 자료·시간을 명시할 수 있다
+- [x] AI 이미지 프롬프트를 image-prompts.md로 작성할 수 있다
 
 #### 주요 개념
 
@@ -234,22 +234,22 @@ public/tehaleh-intro-0619/      ← Remotion 프로젝트 public 폴더
 
 #### Definition of Done
 
-- [ ] video-slide-plan.md: 15장 이상 슬라이드, 각 슬라이드 5개 필드 완성
-- [ ] S0(타이틀)과 S마지막(아웃트로)에 거주자 직접 촬영 사진 지정
-- [ ] 모든 슬라이드에 한국어 나레이션 스크립트 작성
-- [ ] image-prompts.md: AI 이미지 필요 슬라이드별 영어 프롬프트 완성
-- [ ] 총 예상 영상 시간 ~90-150초 범위
-- [ ] WorkLog 업데이트 완료
+- [x] video-slide-plan.md: 15장 슬라이드, 각 슬라이드 필수 필드 완성
+- [x] S0(타이틀)과 S14(아웃트로)에 거주자 직접 촬영 사진 지정
+- [x] 모든 슬라이드에 한국어·영어 나레이션 스크립트 작성
+- [x] image-prompts.md: AI 이미지 필요 슬라이드별 영어 프롬프트 완성
+- [x] 영상 길이 Scope Change 승인 — 정보형 영상으로 확장
+- [x] 통합 WorkLog 업데이트 완료
 
 #### Self-Assessment
 
 **개념 이해**:
-- [ ] 슬라이드 타입(TITLE, SECTION, BULLET 등)의 차이를 설명할 수 있다
-- [ ] video-slide-plan.md가 Remotion data.ts의 원천임을 설명할 수 있다
+- [x] 슬라이드 타입(TITLE, SECTION, BULLET 등)의 차이를 설명할 수 있다
+- [x] video-slide-plan.md가 Remotion data.ts의 원천임을 설명할 수 있다
 
 **실무 활용**:
-- [ ] AI에게 나레이션 스크립트 개선을 효과적으로 요청할 수 있다
-- [ ] gpt-image-2 프롬프트의 "no text" 규칙이 왜 필요한지 설명할 수 있다
+- [x] AI에게 나레이션 스크립트 개선을 효과적으로 요청할 수 있다
+- [x] 이미지 생성 프롬프트에서 불필요한 텍스트를 제한해야 하는 이유를 설명할 수 있다
 
 #### 예상 시간 배분
 
@@ -274,16 +274,16 @@ public/tehaleh-intro-0619/      ← Remotion 프로젝트 public 폴더
 
 #### 학습 목표
 
-- [ ] video-slide-plan.md를 기반으로 data.ts 슬라이드 데이터를 작성할 수 있다
-- [ ] TehalehIntro0619.tsx 메인 컴포넌트를 AI 도움으로 개발할 수 있다
-- [ ] 각 슬라이드 타입별 컴포넌트(TitleSlide, BulletSlide 등)를 구현할 수 있다
-- [ ] ANIMATED_DARK 배경 스타일을 적용할 수 있다
+- [x] video-slide-plan.md를 기반으로 data.ts 슬라이드 데이터를 작성할 수 있다
+- [x] 한국어·영어 Tehaleh 메인 컴포넌트를 AI 도움으로 개발할 수 있다
+- [x] 각 슬라이드 타입별 컴포넌트(TitleSlide, BulletSlide 등)를 구현할 수 있다
+- [x] 콘텐츠에 맞는 밝은 LIGHT_PNW 배경 스타일을 적용할 수 있다
 
 #### 주요 개념
 
 1. **Composition 구조**: Remotion에서 `<Composition>`은 VideoID·너비·높이·fps·durationInFrames를 등록하는 단위. Root.tsx에서 등록 필요
 2. **슬라이드 타입 컴포넌트**: 각 `[TYPE]`마다 별도 .tsx 파일 — TitleSlide, SectionSlide, BulletSlide, StatSlide, QuoteSlide, OutroSlide
-3. **ANIMATED_DARK 배경**: 기존 Remotion-VideoCreation 프로젝트에서 재사용 가능한 배경 스타일
+3. **LIGHT_PNW 배경**: 초기 ANIMATED_DARK 시안을 콘텐츠 정서에 맞는 밝은 PNW 자연 스타일로 개선
 4. **data.ts 패턴**: 슬라이드 데이터를 타입 안전하게 정의하는 TypeScript 파일 — AI에게 video-slide-plan.md를 주면 자동 생성 가능
 
 #### 실습 과제
@@ -301,7 +301,7 @@ public/tehaleh-intro-0619/      ← Remotion 프로젝트 public 폴더
 **실습 2: 슬라이드 컴포넌트 개발** ⭐⭐⭐
 - **목적**: 각 슬라이드 타입을 React 컴포넌트로 구현
 - **단계**:
-  1. AI에게 `slides/TitleSlide.tsx` 생성 요청 (ANIMATED_DARK 배경 포함)
+  1. AI에게 `slides/TitleSlide.tsx` 생성 요청 (LIGHT_PNW 배경 포함)
   2. `slides/SectionSlide.tsx`, `slides/BulletSlide.tsx` 생성
   3. `slides/StatSlide.tsx`, `slides/QuoteSlide.tsx`, `slides/OutroSlide.tsx` 생성
   4. `TehalehIntro0619.tsx` 메인 컴포넌트 생성 (data.ts 슬라이드 배열을 순회)
@@ -339,26 +339,26 @@ src/tehaleh-intro-0619/
 
 #### Definition of Done
 
-- [ ] data.ts 생성 완료 (모든 슬라이드 데이터 포함)
-- [ ] 6개 슬라이드 컴포넌트 모두 구현
-- [ ] TehalehIntro0619.tsx 메인 컴포넌트 완성
-- [ ] Root.tsx에 Composition 등록 완료
-- [ ] `npx remotion preview`에서 에러 없이 미리보기 성공
-- [ ] 거주자 사진(mt-rainier-personal.jpg)이 S0·S14에 표시됨
-- [ ] WorkLog 업데이트 완료
+- [x] 한국어·영어 data.ts 생성 완료 (모든 슬라이드 데이터 포함)
+- [x] 6개 슬라이드 컴포넌트 모두 구현
+- [x] TehalehIntro0619.tsx와 TehalehIntroEn.tsx 메인 컴포넌트 완성
+- [x] Root.tsx에 한국어·영어 Composition 등록 완료
+- [x] Remotion Studio에서 에러 없이 미리보기 성공
+- [x] 거주자 사진이 S0·S5·S13·S14에 표시됨
+- [x] 통합 WorkLog 업데이트 완료
 
 #### Self-Assessment
 
 **개념 이해**:
-- [ ] Remotion Composition과 Sequence의 차이를 설명할 수 있다
-- [ ] ANIMATED_DARK 배경 스타일이 어떻게 적용되는지 설명할 수 있다
+- [x] Remotion Composition과 Sequence의 차이를 설명할 수 있다
+- [x] LIGHT_PNW 배경과 슬라이드별 accent 색상의 적용 방식을 설명할 수 있다
 
 **실무 활용**:
-- [ ] AI에게 컴포넌트 수정을 효과적으로 요청할 수 있다 ("S5 슬라이드에서 이미지가 너무 크다" 등)
-- [ ] 타입 에러 발생 시 AI에게 정확한 에러 메시지를 전달하여 해결 요청 가능
+- [x] AI에게 컴포넌트 수정을 효과적으로 요청할 수 있다 (레이아웃·이미지 전환·색상 등)
+- [x] 타입 에러 발생 시 정확한 에러 메시지를 전달하여 해결 요청 가능
 
 **문제 해결**:
-- [ ] Remotion 미리보기 에러 발생 시 브라우저 콘솔 확인 방법을 안다
+- [x] Remotion 미리보기 에러 발생 시 브라우저 콘솔과 TypeScript 로그를 확인할 수 있다
 
 #### 예상 시간 배분
 
@@ -380,13 +380,13 @@ src/tehaleh-intro-0619/
 
 **난이도**: ⭐⭐
 **예상 시간**: ~1.5시간
-**산출물 폴더**: `04-AudioRender/`
+**산출물 위치**: `Topics/Remotion-VideoCreation/my-first-video/` (로컬 Remotion 프로젝트, Git 제외)
 
 #### 학습 목표
 
-- [ ] edge-tts(ko-KR-SunHiNeural)로 슬라이드별 한국어 나레이션 오디오를 생성할 수 있다
-- [ ] 오디오 파일을 Remotion 컴포넌트에 통합할 수 있다
-- [ ] `npx remotion render`로 최종 MP4 영상을 렌더링할 수 있다
+- [x] edge-tts 초벌과 Qwen3-TTS 최종 음성으로 슬라이드별 나레이션 오디오를 생성할 수 있다
+- [x] 오디오 파일을 Remotion 컴포넌트에 통합할 수 있다
+- [x] `npx remotion render`로 한국어·영어 최종 MP4 영상을 렌더링할 수 있다
 
 #### 주요 개념
 
@@ -433,34 +433,32 @@ public/tehaleh-intro-0619/
     └── (슬라이드별 오디오)
 
 out/
-└── tehaleh-intro-0619.mp4   ← 최종 산출물 🎬
-
-04-AudioRender/
-└── README.md
+├── tehaleh-intro-0619.mp4
+└── tehaleh-intro-0619-en.mp4
 ```
 
 #### Definition of Done
 
-- [ ] 슬라이드별 한국어 TTS 오디오(.mp3) 생성 완료
-- [ ] 오디오가 Remotion 컴포넌트에 통합됨
-- [ ] `out/tehaleh-intro-0619.mp4` 파일 생성 완료
-- [ ] 영상 해상도 1920×1080 확인
-- [ ] 총 영상 길이 ~90-150초 범위
-- [ ] 음성·영상 동기화 정상
-- [ ] Topic Retrospective 작성 완료
+- [x] 슬라이드별 한국어·영어 Qwen3-TTS 오디오(.mp3) 생성 완료
+- [x] 오디오가 한국어·영어 Remotion 컴포넌트에 통합됨
+- [x] `out/tehaleh-intro-0619.mp4`, `out/tehaleh-intro-0619-en.mp4` 생성 완료
+- [x] 영상 해상도 1920×1080, 30fps 확인
+- [x] 영상 길이 범위 변경 승인 — 설명과 사례 확장으로 초기 90~150초 목표를 초과했으며, 정보형 영상 품질을 우선해 최종 범위로 수용
+- [x] 음성·영상 동기화 확인 후 한국어·영어 YouTube 업로드 완료
+- [x] Topic Final Retrospective 작성 완료
 
 #### Self-Assessment
 
 **개념 이해**:
-- [ ] edge-tts gen_audio.py 스크립트의 입력/출력 구조를 설명할 수 있다
-- [ ] Remotion render 명령어의 파라미터(Root, CompositionID, 출력경로)를 설명할 수 있다
+- [x] edge-tts와 Qwen3-TTS 생성 스크립트의 입력/출력 구조를 설명할 수 있다
+- [x] Remotion render 명령어의 Composition ID와 출력 경로를 설명할 수 있다
 
 **실무 활용**:
-- [ ] 다음 Remotion 영상 프로젝트에서 동일 워크플로우를 독립적으로 실행할 수 있다
-- [ ] 오디오 품질이 낮을 때 TTS 설정 조정 방법을 안다 (Qwen3-TTS 교체 등)
+- [x] 다음 Remotion 영상 프로젝트에서 동일 워크플로우를 독립적으로 실행할 수 있다
+- [x] 오디오 품질이 낮을 때 발음 표기와 Qwen3-TTS 설정을 조정하는 방법을 안다
 
 **문제 해결**:
-- [ ] 렌더링 실패 시 에러 메시지로 원인을 파악할 수 있다
+- [x] 렌더링·TypeScript·오디오 타이밍 문제를 로그와 미리보기로 진단할 수 있다
 
 #### 예상 시간 배분
 
@@ -578,7 +576,7 @@ Ingest/CatchUpAI_VL/Topics/Remotion-VideoCreation/my-first-video/
 | M1 | 2026-06-21 | 2026-06-21 | ✅ | 100% | tehaleh-research.md 완성 |
 | M2 | 2026-06-21 | 2026-06-21 | ✅ | 100% | video-slide-plan.md + image-prompts.md 완성 |
 | M3 | 2026-06-21 | 2026-06-21 | ✅ | 100% | data.ts + TehalehIntro0619.tsx + Root.tsx 완성 |
-| M4 | 2026-06-21 | | 🔄 | 43% | edge-tts 15개 완료, MP4 렌더링 Qwen3-TTS 승인 후 |
+| M4 | 2026-06-21 | 2026-06-22 | ✅ | 100% | Qwen3-TTS 한영 음성·MP4 렌더·YouTube 배포 완료 |
 
 **범례**:
 - ⏳ 대기
@@ -590,13 +588,13 @@ Ingest/CatchUpAI_VL/Topics/Remotion-VideoCreation/my-first-video/
 ## 🎯 성공 기준
 
 전체 Topic 완료 기준:
-- [ ] 4개 모듈 모두 완료 (DoD 100%)
-- [ ] tehaleh-research.md (vl_materials/) 완성
-- [ ] video-slide-plan.md 완성 (15장 이상)
-- [ ] TehalehIntro0619 Remotion 컴포넌트 완성
-- [ ] `out/tehaleh-intro-0619.mp4` 최종 렌더링 완료
-- [ ] Topic Retrospective 작성 완료
-- [ ] 창발 발표(2026-06-26) 데모로 활용 가능한 품질
+- [x] 4개 모듈 모두 완료 (DoD 100%, 영상 길이 범위 변경 승인 포함)
+- [x] tehaleh-research.md (vl_materials/) 완성
+- [x] video-slide-plan.md 완성 (15장)
+- [x] 한국어·영어 Tehaleh Remotion 컴포넌트 완성
+- [x] 한국어·영어 MP4 최종 렌더링 완료
+- [x] Topic Final Retrospective 작성 완료
+- [x] 창발 발표(2026-06-26) 데모로 활용 가능한 품질 및 YouTube 링크 확보
 
 ---
 

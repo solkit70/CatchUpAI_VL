@@ -93,14 +93,14 @@
 
 **생성 파일**:
 - `src/tehaleh-intro-0619/data.ts` — SLIDES 배열(15개), COLORS, getSlideDurationSec(), TOTAL_FRAMES
-- `src/tehaleh-intro-0619/TehalehIntro0619.tsx` — 6개 슬라이드 컴포넌트 + ANIMATED_DARK Bg + TransitionSeries 메인 컴포지션
+- `src/tehaleh-intro-0619/TehalehIntro0619.tsx` — 6개 슬라이드 컴포넌트 + TransitionSeries 메인 컴포지션 (초기 ANIMATED_DARK → 최종 LIGHT_PNW)
 - `src/Root.tsx` — TehalehIntro0619 Composition 등록
 
 **핵심 기술 결정사항**:
 
 | 항목 | 결정 | 이유 |
 |------|------|------|
-| 배경 스타일 | ANIMATED_DARK (120 stars, hexagon, neon flow, ripple) | PNW 자연 + 테크 분위기 |
+| 배경 스타일 | 초기 ANIMATED_DARK → 최종 LIGHT_PNW | 살기 좋은 자연 커뮤니티의 밝은 분위기 반영 |
 | 색상 | primary `#22C55E` (forest green), accent `#F59E0B` (mountain gold) | PNW 자연 색 |
 | TransitionSeries | content: fade 18f / section: slide-from-right 24f | 섹션 전환을 더 역동적으로 |
 | 슬라이드 파일 구조 | 단일 .tsx 파일 (6개 컴포넌트 통합) | 15장 규모에서 관리 단순화 |
@@ -209,14 +209,15 @@
 ### M4 DoD
 - [x] 슬라이드별 한국어 TTS 오디오(.mp3) 15개 생성
 - [x] AUDIO_DURATIONS 실측값 업데이트, AUDIO_READY = true
-- [x] gen_audio_qwen.py 작성 (Qwen3-TTS 준비)
-- [ ] Remotion Studio 미리보기 — **사용자 직접 진행 필요** (`npx remotion studio`)
-- [ ] Qwen3-TTS 최종 오디오 교체 — 미리보기 승인 후
-- [ ] `out/tehaleh-intro-0619.mp4` 렌더링 — Qwen3-TTS 승인 후
-- [ ] 음성·영상 동기화 확인
-- [ ] Topic Retrospective 작성
+- [x] 한국어·영어 gen_audio_qwen.py 작성 및 Qwen3-TTS 최종 오디오 생성
+- [x] Remotion Studio에서 레이아웃·사진 전환·오디오 타이밍 미리보기
+- [x] Qwen3-TTS 최종 오디오 교체 및 발음 보정
+- [x] 한국어·영어 MP4 렌더링 (1920×1080, 30fps)
+- [x] 음성·영상 동기화 확인 및 편집본 Chapter 타임코드 반영
+- [x] 한국어·영어 YouTube 업로드와 배포 메타데이터 작성
+- [x] Topic Final Retrospective 작성
 
-**M4 완료율**: 3/7 (43%) 🔄 — MP4 렌더링 Qwen3-TTS 승인 대기 중
+**M4 완료율**: 10/10 (100%) ✅ — 한국어·영어 제작·렌더링·배포 완료
 
 ---
 
@@ -225,7 +226,7 @@
 ### What went well (잘된 점)
 - VibeLearn AI로 Roadmap 작성 8분 — 방송 실시간 시연으로 "AI 뚝딱" 증명
 - M1~M3 전 과정을 1일 세션에서 완료 (TypeScript 오류 포함 디버깅 완결)
-- ANIMATED_DARK 배경을 PNW 색상(forest green + mountain gold)으로 커스터마이즈해 개성 있는 비주얼 달성
+- 초기 ANIMATED_DARK 시안을 검토한 뒤 밝은 LIGHT_PNW 배경으로 개선해 영상 내용과 시각 분위기를 일치시킴
 - gen_audio.py 동시 실행으로 15개 오디오 병렬 생성 (순차 대비 시간 절약)
 - Qwen3-TTS용 gen_audio_qwen.py도 함께 준비 — 발표 전까지 실행 가능 상태
 
@@ -254,6 +255,8 @@
 
 이 영상은 `The-AI-Powered-Creator` 발표의 실제 AI 콘텐츠 제작 사례이자 `Tehaleh-Community-Video` Topic의 최종 산출물이다. 아래 메타데이터는 2026-06-22에 완료된 한국어·영어 렌더 파일을 기준으로 작성했으며, 주택 매물 수와 가격은 영상에 명시된 것처럼 2026-06-21 Homes.com 조회 결과이므로 업로드 후에도 기준일을 삭제하지 않는다.
 
+이 섹션을 YouTube 배포 자료의 단일 관리 위치로 사용한다. 이후 확정하거나 수정하는 한국어·영어 제목, Description, Chapter, 태그, 썸네일 문구와 이미지 생성 프롬프트도 여기에 통합하며, `The-AI-Powered-Creator` 발표에서는 이 기록을 AI 콘텐츠 제작과 Distribution 과정의 실제 사례로 활용한다.
+
 ### 최종 렌더 파일
 
 | 언어 | 파일 | 재생 시간 | 크기 | 렌더 완료 |
@@ -261,12 +264,19 @@
 | 한국어 | `out/tehaleh-intro-0619.mp4` | 4:51.8 | 84,891,137 bytes | 2026-06-22 09:25 |
 | 영어 | `out/tehaleh-intro-0619-en.mp4` | 4:14.3 | 75,101,950 bytes | 2026-06-22 09:45 |
 
+### YouTube 공개 URL
+
+| 언어 | 상태 | URL |
+|------|------|-----|
+| 한국어 | ✅ 업로드 완료 | https://youtu.be/Cucvcz9bVPU |
+| 영어 | ✅ 업로드 완료 | https://youtu.be/YygPvJbKPvU |
+
 ### 한국어 버전
 
 **제목**
 
 ```text
-시애틀에서 45분, 레이니어 산이 보이는 동네 | Tehaleh 실제 거주 이야기
+AI in Action - 시애틀 45분, 창밖에 레이니어 산이 보이는 동네 Tehaleh | 40마일 트레일의 자연 속 커뮤니티
 ```
 
 **설명**
@@ -274,25 +284,45 @@
 ```text
 시애틀에서 자동차로 약 45분 거리에 있는 워싱턴주 Tehaleh 커뮤니티를 실제 거주자의 시선으로 소개합니다.
 
-Post & Pour에서 직접 촬영한 레이니어 산 풍경부터 40마일 이상의 트레일, 재택·하이브리드 근무 환경, 주택 가격, 액티브한 은퇴 생활과 인근 한인 생활권까지 살펴봅니다. 대중교통을 이용하면 인근 Sumner역에서 Seattle King Street역까지 Sounder 열차로 약 50분이며, 자동차 이동 시간은 교통 상황에 따라 달라질 수 있습니다.
+Post & Pour에서 직접 촬영한 레이니어 산 풍경부터 40마일 이상의 트레일, 커뮤니티 시설, 주택 가격, 재택·하이브리드 근무 환경, 액티브한 은퇴 생활과 인근 한인 생활권까지 살펴봅니다.
 
-주택 매물 수와 가격은 2026년 6월 21일 Homes.com 조회 기준이며 이후 변동될 수 있습니다. 워싱턴주는 개인 소득세가 없지만 다른 주세와 지방세는 적용될 수 있습니다.
+대중교통을 이용하면 인근 Sumner역에서 Seattle King Street역까지 Sounder 열차로 약 50분이 소요됩니다. 자동차 이동 시간은 교통 상황에 따라 달라질 수 있습니다.
+
+영상에 표시된 주택 매물 수와 가격 범위는 2026년 6월 21일 Homes.com 조회 기준이며 이후 변동될 수 있습니다. 워싱턴주는 개인 소득세가 없지만 다른 주세와 지방세는 적용될 수 있습니다.
+
+이 영상은 창발 Product Group의 온라인 이벤트 ‘The AI Powered Creator’ 발표에서 소개할 실제 AI 콘텐츠 제작 사례로 만들었습니다. 리서치, 구성, 이미지, 나레이션과 영상 제작에 AI와 Remotion을 활용했습니다.
+
+📌 Chapters
 
 00:00 레이니어 산이 보이는 Tehaleh
 00:10 Tehaleh는 어떤 곳인가요?
 00:46 커뮤니티 시설과 The Retreat
-01:19 Post & Pour와 직접 촬영한 풍경
-02:14 주택 가격 비교
-02:33 재택·하이브리드 근무
-03:34 액티브한 은퇴 생활과 한인 생활권
-04:07 실제 거주자의 이야기
-04:19 마무리
+01:16 Post & Pour와 직접 촬영한 풍경
+02:06 Tehaleh 주택 가격
+02:24 재택근무와 하이브리드 출퇴근
+03:19 액티브한 은퇴 생활과 한인 생활권
+03:49 실제 거주자의 이야기
+04:00 Tehaleh 소개 마무리
 
-정보 및 출처
-Tehaleh: https://www.tehaleh.com/
-Sound Transit S Line: https://www.soundtransit.org/ride-with-us/routes-schedules/s-line
-Washington Department of Revenue: https://dor.wa.gov/taxes-rates/income-tax
-Homes.com 조회 자료: https://www.homes.com/new-homes/community/tehaleh/nzs6j72t4358j/
+🔗 정보 및 출처
+
+Tehaleh
+https://www.tehaleh.com/
+
+Sound Transit S Line
+https://www.soundtransit.org/ride-with-us/routes-schedules/s-line
+
+Washington Department of Revenue
+https://dor.wa.gov/taxes-rates/income-tax
+
+Homes.com 조회 자료
+https://www.homes.com/new-homes/community/tehaleh/nzs6j72t4358j/
+
+창발 Product Group — The AI Powered Creator
+https://www.changbal.org/en/event-info/product-geulub-the-ai-powered-creator
+
+영상 제작 과정 및 자료 — CatchUpAI_VL GitHub
+https://github.com/solkit70/CatchUpAI_VL/tree/main/Topics/Tehaleh-Community-Video
 
 #Tehaleh #MountRainier #WashingtonState
 ```
@@ -300,14 +330,83 @@ Homes.com 조회 자료: https://www.homes.com/new-homes/community/tehaleh/nzs6j
 **태그**
 
 ```text
-Tehaleh, 테할레, 워싱턴주, 시애틀 근교, 레이니어 산, Mount Rainier, Bonney Lake, Pierce County, Post and Pour, 미국 생활, 미국 주택, 시애틀 부동산, 워싱턴주 부동산, 재택근무, 하이브리드 근무, 은퇴 생활, 한인 생활, PNW
+AI in Action, Tehaleh, 테할레, Tehaleh Washington, Tehaleh community, Bonney Lake, Pierce County, Mount Rainier, Mt Rainier, 레이니어 산, 워싱턴주, 시애틀 근교, 시애틀 생활, 미국 생활, 미국 주택, 워싱턴주 부동산, 시애틀 부동산, 마스터 플랜 커뮤니티, Post & Pour, Pacific Northwest, PNW living, 재택근무, 하이브리드 근무, 은퇴 생활, 55+ community, 한인 생활, Remotion, AI 영상 제작
 ```
 
 **썸네일 문구**
 
 ```text
+TEHALEH
 시애틀 45분
 레이니어가 보이는 동네
+```
+
+#### 썸네일 이미지 생성 프롬프트
+
+참고 이미지로 `public/tehaleh-intro-0619/images/mt-rainier-personal_2.jpg`를 ChatGPT 또는 Gemini에 첨부한다.
+
+**초안 — 레이니어 산과 생활 환경 강조**
+
+```text
+첨부한 레이니어 산 사진을 기반으로 한국어 YouTube 영상용 썸네일을 만들어 주세요.
+
+주제: 시애틀 근교 Tehaleh 커뮤니티에서 레이니어 산을 바라보며 사는 삶
+화면 비율: 16:9
+해상도: 1280×720
+스타일: 밝고 깨끗하며 고급스러운 부동산·라이프스타일 다큐멘터리
+분위기: 맑은 날의 워싱턴주, 살기 좋은 자연 친화적 커뮤니티, 따뜻하고 희망적인 느낌
+
+구성:
+- 레이니어 산을 화면의 가장 중요한 시각 요소로 크게 표현
+- 첨부 사진의 실제 풍경과 자연스러운 원근감을 유지
+- 하늘과 산의 디테일을 선명하게 보정
+- 주택이나 커뮤니티 풍경은 과장하지 말고 실제 PNW 지역처럼 자연스럽게 표현
+- 왼쪽 또는 오른쪽에 제목을 넣을 수 있는 충분한 여백 확보
+- 모바일 화면에서도 한눈에 읽히는 강한 대비와 단순한 구성
+- 복잡한 장식, 어두운 배경, 과도한 HDR 효과는 사용하지 않기
+
+썸네일 문구를 정확히 다음 두 줄로 표시:
+“시애틀 45분”
+“레이니어가 보이는 동네”
+
+텍스트 디자인:
+- 첫째 줄은 흰색 또는 밝은 크림색
+- 둘째 줄의 “레이니어”는 따뜻한 노란색으로 강조
+- 굵고 현대적인 한글 산세리프 글꼴
+- 검은색 반투명 배경 또는 부드러운 그림자를 사용해 가독성 확보
+- 글자가 잘리거나 산을 가리지 않도록 안전 여백 유지
+
+사람, 로고, 워터마크, 지도 아이콘, 불필요한 작은 글자, 잘못된 한글은 추가하지 마세요.
+```
+
+**최종 권장안 — Tehaleh 이름 강조**
+
+```text
+첨부한 레이니어 산 사진을 기반으로 Tehaleh 커뮤니티를 소개하는 한국어 YouTube 썸네일을 만들어 주세요.
+
+비율과 해상도: 16:9, 1280×720
+스타일: 밝고 세련된 부동산·라이프스타일 다큐멘터리
+분위기: 자연 친화적이고 살기 좋은 워싱턴주 커뮤니티
+
+첨부 사진의 레이니어 산을 크고 선명하게 보여주고, 실제 풍경과 자연스러운 원근감을 유지하세요. 제목을 위한 여백을 확보하고 모바일에서도 잘 보이는 단순하고 강한 구도로 디자인하세요.
+
+다음 문구를 정확히 세 줄로 표시하세요:
+
+“TEHALEH”
+“시애틀 45분”
+“레이니어가 보이는 동네”
+
+텍스트 디자인:
+- “TEHALEH”를 가장 크고 강하게 표시
+- TEHALEH는 흰색 대문자와 넓은 자간 사용
+- “시애틀 45분”은 작은 보조 제목으로 배치
+- “레이니어가 보이는 동네”에서 “레이니어”를 따뜻한 노란색으로 강조
+- 굵고 현대적인 산세리프 글꼴 사용
+- 반투명 어두운 그라데이션이나 부드러운 그림자로 가독성 확보
+- 텍스트가 산 정상이나 주요 풍경을 가리지 않도록 배치
+- 화면 가장자리에서 충분한 안전 여백 유지
+
+어두운 전체 배경, 과도한 HDR, 가짜 도시 스카이라인, 사람, 로고, 워터마크, 지도 아이콘, 불필요한 작은 글자는 추가하지 마세요.
 ```
 
 ### English Version
@@ -315,32 +414,52 @@ Tehaleh, 테할레, 워싱턴주, 시애틀 근교, 레이니어 산, Mount Rain
 **Title**
 
 ```text
-Living 45 Minutes from Seattle with a Mt. Rainier View | Tehaleh
+AI in Action - 45 Minutes from Seattle: Live with Mt. Rainier in Tehaleh | 40 Miles of Trails
 ```
 
 **Description**
 
 ```text
-Take a resident's look at Tehaleh, a master-planned community about a 45-minute drive from Seattle, Washington.
+Discover Tehaleh, a nature-oriented community about a 45-minute drive from Seattle, Washington, through the eyes of someone who lives there.
 
-This video covers the Mt. Rainier views I photographed from Post & Pour, more than 40 miles of trails, remote and hybrid work, home prices, active retirement, and nearby Korean amenities. For transit commuters, the Sounder trip from nearby Sumner Station to Seattle King Street Station takes about 50 minutes. Driving times vary with traffic.
+This video explores the Mt. Rainier views I photographed from Post & Pour, more than 40 miles of trails, community amenities, home prices, remote and hybrid work, active retirement, and nearby Korean amenities.
+
+For transit commuters, the Sounder trip from nearby Sumner Station to Seattle King Street Station takes about 50 minutes. Driving times to Seattle and Bellevue vary depending on traffic.
 
 The listing count and price range shown in the video reflect a Homes.com lookup on June 21, 2026 and may change. Washington has no individual state income tax, although other state and local taxes may apply.
 
-00:00 Tehaleh and Mt. Rainier
-00:10 What is Tehaleh?
-00:38 Community amenities and The Retreat
-01:04 Post & Pour and my Mt. Rainier photos
-01:50 Home price comparison
-02:08 Remote and hybrid work
-02:58 Active retirement and nearby Korean amenities
-03:34 A resident's perspective and closing
+This video was created as a real-world AI content production example for the Changbal Product Group online event, “The AI Powered Creator.” AI and Remotion were used throughout the research, planning, visual design, narration, and video production process.
 
-Information and sources
-Tehaleh: https://www.tehaleh.com/
-Sound Transit S Line: https://www.soundtransit.org/ride-with-us/routes-schedules/s-line
-Washington Department of Revenue: https://dor.wa.gov/taxes-rates/income-tax
-Homes.com lookup: https://www.homes.com/new-homes/community/tehaleh/nzs6j72t4358j/
+📌 Chapters
+
+00:00 Tehaleh and Mt. Rainier
+00:14 What is Tehaleh?
+00:43 Community amenities and The Retreat
+01:09 Post & Pour and my Mt. Rainier photos
+01:55 Home price comparison
+02:17 Remote and hybrid work
+03:02 Active retirement and nearby Korean amenities
+03:39 A resident's perspective and closing
+
+🔗 Information and sources
+
+Tehaleh
+https://www.tehaleh.com/
+
+Sound Transit S Line
+https://www.soundtransit.org/ride-with-us/routes-schedules/s-line
+
+Washington Department of Revenue
+https://dor.wa.gov/taxes-rates/income-tax
+
+Homes.com lookup
+https://www.homes.com/new-homes/community/tehaleh/nzs6j72t4358j/
+
+Changbal Product Group — The AI Powered Creator
+https://www.changbal.org/en/event-info/product-geulub-the-ai-powered-creator
+
+Production process and project materials — CatchUpAI_VL GitHub
+https://github.com/solkit70/CatchUpAI_VL/tree/main/Topics/Tehaleh-Community-Video
 
 #Tehaleh #MountRainier #WashingtonState
 ```
@@ -348,14 +467,54 @@ Homes.com lookup: https://www.homes.com/new-homes/community/tehaleh/nzs6j72t4358
 **Tags**
 
 ```text
-Tehaleh, Mount Rainier, Washington State, Seattle suburbs, Bonney Lake, Pierce County, Post and Pour, Pacific Northwest, PNW living, Washington real estate, Seattle real estate, master planned community, remote work, hybrid work, active retirement, Korean community
+AI in Action, Tehaleh, Tehaleh Washington, Tehaleh community, living in Tehaleh, Mount Rainier, Mt Rainier, Washington State, Seattle suburbs, Bonney Lake, Pierce County, Post & Pour, Pacific Northwest, PNW living, Washington real estate, Seattle real estate, master planned community, 40 miles of trails, remote work, hybrid work, active retirement, 55+ community, Korean community, Remotion, AI video production
 ```
 
 **Thumbnail Copy**
 
 ```text
+TEHALEH
 45 MIN FROM SEATTLE
 LIVE WITH MT. RAINIER
+```
+
+#### English Thumbnail Image Prompt
+
+Attach `public/tehaleh-intro-0619/images/mt-rainier-personal_2.jpg` as the reference image in ChatGPT or Gemini.
+
+```text
+Create a high-impact YouTube thumbnail for an English-language video introducing the Tehaleh community in Washington State. Use the attached original Mt. Rainier photograph as the primary visual reference.
+
+Canvas and format:
+- 16:9 aspect ratio
+- 1280×720 pixels
+- Designed specifically for a YouTube thumbnail
+- Keep all important text within safe margins for mobile and TV displays
+
+Visual direction:
+- Make Mt. Rainier the dominant visual element and keep its shape, perspective, and surrounding landscape faithful to the reference photograph
+- Enhance the sky, mountain detail, and natural colors without creating an unrealistic HDR effect
+- Convey a bright, welcoming, premium Pacific Northwest lifestyle
+- Suggest a desirable nature-oriented residential community without adding fake landmarks, luxury mansions, or a Seattle skyline
+- Use a clean, simple composition that remains understandable at small thumbnail size
+- Reserve clear negative space on the left or right for text
+- Add a subtle dark gradient or soft shadow behind the text for strong readability while keeping the overall image bright
+
+Display exactly these three lines of text:
+“TEHALEH”
+“45 MIN FROM SEATTLE”
+“LIVE WITH MT. RAINIER”
+
+Text design:
+- Make “TEHALEH” the largest and most prominent line
+- Use bold, modern, condensed sans-serif typography
+- Set “TEHALEH” in white uppercase letters with slightly expanded letter spacing
+- Use “45 MIN FROM SEATTLE” as a smaller location hook
+- Highlight “MT. RAINIER” in warm golden yellow while keeping the rest of the third line white
+- Maintain strong contrast and avoid covering the mountain summit
+- Check every word carefully and reproduce the English text exactly as written
+
+Do not add people, logos, watermarks, maps, location pins, unrelated icons, tiny text, misspelled words, dark overall color grading, excessive saturation, or artificial city scenery.
 ```
 
 ### 공통 업로드 설정
@@ -389,6 +548,7 @@ LIVE WITH MT. RAINIER
 | `Root.tsx` | `src/` | ✅ (TehalehIntro0619 등록) |
 | `tehaleh-intro-0619.mp4` | `out/` | ✅ 한국어 최종 렌더 |
 | `tehaleh-intro-0619-en.mp4` | `out/` | ✅ 영어 최종 렌더 |
+| `20260622_Tehaleh-Community-Video_Final_Retrospective.md` | `vl_worklog/` | ✅ Topic 완료 회고 |
 
 **이미지 파일** (public/tehaleh-intro-0619/images/):
 - `mt-rainier-personal.jpg`, `mt-rainier-personal_2.jpg` (직접 촬영)
@@ -397,18 +557,20 @@ LIVE WITH MT. RAINIER
 - `slide_s8_home_office_Gemini.png`
 - `slide_s11_senior_hiking_Gemini.png`
 
-**다음 세션 명령어 (준비완료)**:
+**재현 명령어**:
 ```
 # Remotion Studio 미리보기
 cd C:\AI_study\2026\Changsoo_Vault\Ingest\CatchUpAI_VL\Topics\Remotion-VideoCreation\my-first-video
 npx remotion studio
 
-# Qwen3-TTS (승인 후)
+# Qwen3-TTS 재생성
 $env:DASHSCOPE_API_KEY = "your-key"
 python public/tehaleh-intro-0619/gen_audio_qwen.py
+python public/tehaleh-intro-0619-en/gen_audio_qwen.py
 
-# MP4 렌더링 (Qwen3-TTS 승인 후)
-npx remotion render TehalehIntro0619 tehaleh-intro-0619.mp4
+# MP4 재렌더링
+npx remotion render TehalehIntro0619 out/tehaleh-intro-0619.mp4
+npx remotion render TehalehIntroEn out/tehaleh-intro-0619-en.mp4
 ```
 
 ---
