@@ -1,53 +1,55 @@
-# VibeLearn AI Topic Starter — Tehaleh-Community-Video
+# VibeLearn AI Topic Starter
+
+> 이 파일은 새로운 Topic 학습을 시작할 때 작성하는 템플릿입니다.
 
 ---
 
 ## 📌 Topic 기본 정보
 
 ### Topic 이름
+**형식**: 영문, 하이픈 또는 언더스코어 사용 (공백 없음)
 
 ```
 Topic 이름: Tehaleh-Community-Video
 ```
 
 ### Topic 설명
+**목적**: 이 Topic이 무엇인지 한두 문장으로 설명
 
 ```
-설명: 창발 Product Group 발표(2026-06-26) 오프닝 데모 영상 제작 Topic이다.
-"AI로 이렇게 뚝딱 만들 수 있습니다"를 실증하기 위해, 사용자가 실제 거주 중인
-Tehaleh 커뮤니티 소개 영상(2~3분)을 Remotion으로 제작하는 전 과정을 기록한다.
-Phase 1(리서치) → Phase 2(슬라이드 플랜) → Phase 3(Remotion 영상) 3단계로 진행한다.
+설명: Tehaleh 지역 소개 영상을 AI(Remotion)로 제작하는 전 과정 학습 및 실습 — 창발 발표 오프닝 데모 "AI로 이렇게 뚝딱 만들 수 있습니다"의 실제 사례
 ```
 
 ### 학습 목적
+**왜 이것을 배우는가?**
 
 ```
 학습 목적:
-- VibeLearn AI 방법론을 사용해 영상 제작 A to Z 과정을 체계적으로 기록한다.
-- Tehaleh에 대한 정보를 AI 웹 검색으로 수집·구조화하는 리서치 역량을 쌓는다.
-- video-slide-plan.md 작성 → Remotion 컴포넌트 개발 → MP4 렌더링 파이프라인을 완성한다.
-- 발표 데모 녹화를 통해 "기록 + AI → 즉석 콘텐츠" 공식을 실제로 증명한다.
+- 창발 발표 오프닝 데모 영상 제작 ("AI로 이렇게 뚝딱 만들 수 있습니다" 증명)
+- Tehaleh 커뮤니티를 시애틀/벨뷰 IT 종사자·은퇴 예정자에게 소개
+- Remotion + edge-tts + gpt-image-2 통합 영상 제작 워크플로우 습득
 ```
 
 ### 예상 학습 기간
+**현실적으로 예상되는 기간**
 
 ```
-예상 기간: 3~5시간 (1~2 세션)
+예상 기간: 1일 (집중 세션, ~6-8시간)
 ```
 
 ---
 
 ## 🎯 학습 목표
 
+**이 Topic을 완료했을 때 달성하고 싶은 구체적 목표**
+
 ```
-- [ ] Tehaleh 기본 정보, 위치, IT 종사자·은퇴자 관점 리서치 문서 완성 (tehaleh-research.md)
-- [ ] video-slide-plan.md (15~18슬라이드, ~150초) 확정 및 나레이션 스크립트 작성
-- [ ] image-prompts.md 작성 완료 (AI 생성 이미지 프롬프트, no-text 규칙 적용)
-- [ ] Remotion 컴포넌트 개발 완료 (TehalehIntro0619.tsx + 슬라이드 6종)
-- [ ] edge-tts 오디오 생성 완료 (gen_audio.py, ko-KR-SunHiNeural, 1.10x)
-- [ ] Qwen3-TTS 리뷰 후 최종 오디오 결정
-- [ ] MP4 렌더링 완료 (tehaleh-intro-0619.mp4, 2~3분)
-- [ ] 발표 데모 녹화 완료 (스크린 녹화 → 3~5분 편집본)
+- [ ] Tehaleh 리서치 자료를 수집·구조화하여 tehaleh-research.md를 완성할 수 있다
+- [ ] 영상 슬라이드 플랜(15-18장)을 video-slide-plan.md로 작성할 수 있다
+- [ ] gpt-image-2 이미지 프롬프트를 image-prompts.md로 작성할 수 있다
+- [ ] Remotion 컴포넌트(TehalehIntro0619)를 AI 도움으로 개발할 수 있다
+- [ ] edge-tts로 한국어 나레이션 오디오를 생성할 수 있다
+- [ ] MP4 영상(1920×1080)을 최종 렌더링할 수 있다
 ```
 
 ---
@@ -55,56 +57,56 @@ Phase 1(리서치) → Phase 2(슬라이드 플랜) → Phase 3(Remotion 영상)
 ## 🛠️ 학습 환경
 
 ### 운영 체제
-
 ```
 OS: Windows 11
 ```
 
 ### 주요 도구 및 기술 스택
+**이 Topic 학습에 필요한 도구들**
 
 ```
-- Claude Code (AI 에이전트, VS Code 확장)
-- Remotion (C:\AI_study\2026\Changsoo_Vault\Ingest\CatchUpAI_VL\Topics\Remotion-VideoCreation\my-first-video\)
-- edge-tts + gen_audio.py (TTS 초벌)
-- Qwen3-TTS + gen_audio_qwen.py (TTS 최종)
-- gpt-image-2 (AI 이미지 생성)
-- OBS 또는 Windows 게임바 Win+G (스크린 녹화)
-- PowerShell / VS Code
+- Remotion (TypeScript/React 기반 영상 제작 프레임워크)
+- edge-tts (ko-KR-SunHiNeural 한국어 TTS)
+- gpt-image-2 (OpenAI 이미지 생성 API)
+- Node.js 18+
+- Python 3 (gen_audio.py 오디오 생성 스크립트)
+- VS Code
 ```
 
-### 사전 지식
+### 사전 지식 (Prerequisites)
 
 ```
 필수:
-- Remotion 영상 제작 파이프라인 경험 (membership-promo-0614, live13-0607-summary 등)
-- Tehaleh 실제 거주 경험 (정보 제공자 = 사용자 본인)
-- edge-tts gen_audio.py 사용 경험
+- Remotion 기초 (컴포지션, 슬라이드 타입 이해)
+- edge-tts 사용법 (gen_audio.py 실행 경험)
 
 권장:
-- ANIMATED_DARK 배경 테마 사용 경험
-- gpt-image-2 이미지 생성 경험
-- effects-library.md 참조 경험
+- gpt-image-2 API 사용법
+- TypeScript/React 기초
 ```
 
 ---
 
 ## 📚 참조 자료
 
-### 내부 자료
-
+### 핵심 파일
 ```
-- vl_prompts/tehaleh-video-prompt.md — 메인 실행 프롬프트 (Phase 1~3 전체)
-- Ingest/CatchUpAI_VL/Topics/Remotion-VideoCreation/my-first-video/ — Remotion 프로젝트
-- Ingest/CatchUpAI_VL/Topics/Remotion-VideoCreation/my-first-video/src/membership-promo-0614/ — 재활용 참조 컴포넌트
-- _Settings_/Skills/remotion-video/SKILL.md — Remotion 워크플로우 가이드
-- _Settings_/Skills/remotion-video/effects-library.md — 효과 라이브러리
-- Ingest/CatchUpAI_VL/Topics/The-AI-Powered-Creator/ — 부모 발표 Topic
+- 기존 프롬프트: Ingest/CatchUpAI_VL/Topics/Material_For_Topics/Idea/Tehaleh-Community-Video/tehaleh-video-prompt.md
+- Remotion 프로젝트: Ingest/CatchUpAI_VL/Topics/Remotion-VideoCreation/my-first-video/
+- Video ID: tehaleh-intro-0619
+- Composition ID: TehalehIntro0619
+```
+
+### 공식 사이트
+```
+- Tehaleh 공식 웹사이트: https://tehaleh.com
+- Newland Communities: https://newlandcommunities.com
 ```
 
 ### vl_materials/ 폴더에 추가할 자료
-
 ```
-- tehaleh-research.md: Phase 1 리서치 결과 (위치·편의시설·IT종사자·은퇴자·한인커뮤니티)
+- tehaleh-research.md (Phase 1 리서치 결과 — AI가 생성)
+- mt-rainier-personal.jpg (사용자 직접 촬영 사진 — public/tehaleh-intro-0619/images/ 경로로 별도 저장)
 ```
 
 ---
@@ -112,31 +114,53 @@ OS: Windows 11
 ## 🎓 학습 접근 방식
 
 ### 선호하는 학습 스타일
-
 ```
-- [x] 실습 중심, 필요한 이론만 (영상 제작 실습 프로젝트)
+- [x] 실습 중심, 필요한 이론만 (권장)
 ```
 
 ### 시간 투자 계획
-
 ```
-- 총 학습 시간: 3~5시간
-- 1회당 학습 시간: 2~3시간
-- 특이사항: 발표 전(2026-06-26) 완료 필요
+- 총 학습 시간: 6-8시간 (1일 집중)
+- 1회당 학습 시간: 전일 집중 세션
 ```
 
 ### 특별히 집중하고 싶은 영역
-
 ```
-- Phase 1 리서치 품질 (실제 거주 경험 + AI 검색 정보 결합)
-- Phase 3 Remotion 시각 효과 (effects-library.md 최대 활용)
-- 스크린 녹화 → 3~5분 편집 가능한 장면 구성
+- 실제 완성 MP4 영상 결과물 도출
+- Remotion 통합 워크플로우 전 과정 경험
+- 창발 발표 데모로 활용 가능한 품질 달성
 ```
 
 ---
 
-## 🚀 다음 단계
+## 📋 프로젝트 컨텍스트
 
-1. `vl_prompts/roadmap_prompt.md` 생성 (이 파일 정보로 플레이스홀더 채움)
-2. `roadmap_prompt.md`를 AI에게 전달 → Roadmap 생성
-3. `daily_learning_prompt.md`로 매일 학습 세션 진행
+### 발표 정보
+```
+- 행사: 창발 Product Group 2026-06-26
+- 목적: "AI로 뚝딱 만들기" 오프닝 데모
+- 대상: 시애틀/벨뷰 IT 종사자·은퇴 예정자
+- 주제: Tehaleh 커뮤니티 소개
+```
+
+### 핵심 비주얼
+```
+- Mt. Rainier 거주자 직접 촬영 사진 (타이틀·아웃트로 슬라이드)
+- 경로: public/tehaleh-intro-0619/images/mt-rainier-personal.jpg
+```
+
+### 영상 기술 사양
+```
+- Video ID: tehaleh-intro-0619
+- Composition ID: TehalehIntro0619
+- 배경 스타일: ANIMATED_DARK
+- TTS: edge-tts ko-KR-SunHiNeural
+- 이미지: gpt-image-2
+- 해상도: 1920×1080
+```
+
+---
+
+**Template Version**: 1.0
+**Created**: 2026-06-21
+**방법론**: VibeLearn AI

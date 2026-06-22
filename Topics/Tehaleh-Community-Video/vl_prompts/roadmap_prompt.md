@@ -1,25 +1,28 @@
 # VibeLearn AI Roadmap 생성 프롬프트
 
 **버전**: 2.0
-**생성일**: 2026-06-21
+**생성일**: 2025-12-28
 **방법론**: VibeLearn AI
-**템플릿 출처**: `Ingest/CatchUpAI_VL/templates/roadmap_prompt_template.md`
 
 ---
 
 ## 📌 사용 방법
 
-이 프롬프트는 Topic 정보를 바탕으로 학습 로드맵을 자동 생성합니다.
+이 프롬프트는 `topic_starter.md`에서 입력한 Topic 정보를 바탕으로 학습 로드맵을 자동 생성합니다.
 
 **사용 절차**:
-1. Topic 정보가 이미 주입된 상태
-2. 이 파일 전체를 AI에게 전달
-3. AI가 VibeLearn AI 표준 로드맵 생성
-4. 생성된 로드맵을 `vl_roadmap/YYYYMMDD_RoadMap_{Topic}.md`에 저장
+1. Topic 폴더가 생성되면 이 파일이 `[TopicName]/vl_prompts/`에 복사됨
+2. Topic 정보가 이미 주입된 상태
+3. 이 파일 전체를 AI에게 전달
+4. AI가 VibeLearn AI 표준 로드맵 생성
+5. 생성된 로드맵을 `vl_roadmap/YYYYMMDD_RoadMap_{Topic}.md`에 저장
 
 ---
 
 ## [1단계] Topic 정보 (자동 주입됨)
+
+> **주의**: 이 섹션은 `topic_starter.md`의 정보로 자동으로 채워집니다.
+> 수정이 필요하면 `topic_starter.md` 파일을 편집하세요.
 
 ### 기본 정보
 
@@ -27,21 +30,17 @@
 
 **Topic 설명**:
 ```
-창발 Product Group 발표(2026-06-26) 오프닝 데모 영상 제작 Topic이다.
-"AI로 이렇게 뚝딱 만들 수 있습니다"를 실증하기 위해, 사용자가 실제 거주 중인
-Tehaleh 커뮤니티 소개 영상(2~3분)을 Remotion으로 제작하는 전 과정을 기록한다.
-Phase 1(리서치) → Phase 2(슬라이드 플랜) → Phase 3(Remotion 영상) 3단계로 진행한다.
+Tehaleh 지역 소개 영상을 AI(Remotion)로 제작하는 전 과정 학습 및 실습 — 창발 발표 오프닝 데모 "AI로 이렇게 뚝딱 만들 수 있습니다"의 실제 사례
 ```
 
 **학습 목적**:
 ```
-- VibeLearn AI 방법론을 사용해 영상 제작 A to Z 과정을 체계적으로 기록한다.
-- Tehaleh에 대한 정보를 AI 웹 검색으로 수집·구조화하는 리서치 역량을 쌓는다.
-- video-slide-plan.md 작성 → Remotion 컴포넌트 개발 → MP4 렌더링 파이프라인을 완성한다.
-- 발표 데모 녹화를 통해 "기록 + AI → 즉석 콘텐츠" 공식을 실제로 증명한다.
+- 창발 발표 오프닝 데모 영상 제작 ("AI로 이렇게 뚝딱 만들 수 있습니다" 증명)
+- Tehaleh 커뮤니티를 시애틀/벨뷰 IT 종사자·은퇴 예정자에게 소개
+- Remotion + edge-tts + gpt-image-2 통합 영상 제작 워크플로우 습득
 ```
 
-**예상 학습 기간**: `3~5시간 (1~2 세션)`
+**예상 학습 기간**: `1일 (집중 세션, ~6-8시간)`
 
 ---
 
@@ -51,25 +50,23 @@ Phase 1(리서치) → Phase 2(슬라이드 플랜) → Phase 3(Remotion 영상)
 
 **주요 도구 및 기술 스택**:
 ```
-- Claude Code (AI 에이전트)
-- Remotion (Ingest/CatchUpAI_VL/Topics/Remotion-VideoCreation/my-first-video/)
-- edge-tts / Qwen3-TTS (gen_audio.py)
-- gpt-image-2 (이미지 생성)
-- OBS 또는 Windows 게임바 (스크린 녹화)
-- PowerShell / VS Code
+- Remotion (TypeScript/React 기반 영상 제작 프레임워크)
+- edge-tts (ko-KR-SunHiNeural 한국어 TTS)
+- gpt-image-2 (OpenAI 이미지 생성 API)
+- Node.js 18+
+- Python 3 (gen_audio.py 오디오 생성 스크립트)
+- VS Code
 ```
 
 **사전 지식**:
 ```
 필수:
-- Remotion 영상 제작 파이프라인 경험 (membership-promo-0614 등 기존 영상 참조)
-- Tehaleh 실제 거주 경험 (정보 제공자 = 사용자 본인)
-- edge-tts gen_audio.py 사용 경험
+- Remotion 기초 (컴포지션, 슬라이드 타입 이해)
+- edge-tts 사용법 (gen_audio.py 실행 경험)
 
 권장:
-- ANIMATED_DARK 배경 테마 사용 경험
-- gpt-image-2 이미지 생성 경험
-- Remotion effects-library.md 참조 경험
+- gpt-image-2 API 사용법
+- TypeScript/React 기초
 ```
 
 ---
@@ -78,41 +75,26 @@ Phase 1(리서치) → Phase 2(슬라이드 플랜) → Phase 3(Remotion 영상)
 
 **학습 목표** (달성하고 싶은 것):
 ```
-- [ ] Tehaleh 기본 정보, 위치, IT 종사자·은퇴자 관점 리서치 문서 완성
-- [ ] video-slide-plan.md (15~18슬라이드, ~150초) 확정
-- [ ] image-prompts.md 작성 완료 (AI 생성 이미지 프롬프트)
-- [ ] Remotion 컴포넌트 개발 완료 (TehalehIntro0619.tsx)
-- [ ] edge-tts 오디오 생성 완료 (gen_audio.py)
-- [ ] Qwen3-TTS 리뷰 후 최종 오디오 결정
-- [ ] MP4 렌더링 완료 (tehaleh-intro-0619.mp4)
-- [ ] 발표 데모 녹화 완료 (3~5분 편집본)
+- [ ] Tehaleh 리서치 자료를 수집·구조화하여 tehaleh-research.md를 완성할 수 있다
+- [ ] 영상 슬라이드 플랜(15-18장)을 video-slide-plan.md로 작성할 수 있다
+- [ ] gpt-image-2 이미지 프롬프트를 image-prompts.md로 작성할 수 있다
+- [ ] Remotion 컴포넌트(TehalehIntro0619)를 AI 도움으로 개발할 수 있다
+- [ ] edge-tts로 한국어 나레이션 오디오를 생성할 수 있다
+- [ ] MP4 영상(1920×1080)을 최종 렌더링할 수 있다
 ```
 
 **참조 자료**:
 ```
-- vl_prompts/tehaleh-video-prompt.md — 메인 실행 프롬프트 (Phase 1~3 전체)
-- Ingest/CatchUpAI_VL/Topics/Remotion-VideoCreation/my-first-video/ — Remotion 프로젝트
-- Ingest/CatchUpAI_VL/Topics/Remotion-VideoCreation/my-first-video/src/membership-promo-0614/ — 재활용 컴포넌트
-- _Settings_/Skills/remotion-video/SKILL.md — Remotion 워크플로우 가이드
-- _Settings_/Skills/remotion-video/effects-library.md — 효과 라이브러리
+- 기존 프롬프트: Ingest/CatchUpAI_VL/Topics/Material_For_Topics/Idea/Tehaleh-Community-Video/tehaleh-video-prompt.md
+- Remotion 프로젝트: Ingest/CatchUpAI_VL/Topics/Remotion-VideoCreation/my-first-video/
+- Tehaleh 공식 웹사이트: https://tehaleh.com
+- Newland Communities: https://newlandcommunities.com
 ```
 
 **vl_materials/ 폴더**:
 ```
-- tehaleh-research.md: Tehaleh 기본 정보·위치·커뮤니티·IT종사자·은퇴자·한인커뮤니티 리서치
-```
-
-**Remotion 산출물 경로**:
-```
-Video ID: tehaleh-intro-0619
-Composition ID: TehalehIntro0619
-배경 스타일: ANIMATED_DARK
-TTS: edge-tts ko-KR-SunHiNeural → Qwen3-TTS 교체 여부 결정
-슬라이드 플랜: public/tehaleh-intro-0619/video-slide-plan.md
-오디오: public/tehaleh-intro-0619/audio/
-이미지: public/tehaleh-intro-0619/images/
-컴포넌트: src/tehaleh-intro-0619/
-렌더링: out/tehaleh-intro-0619.mp4
+- tehaleh-research.md (Phase 1 리서치 결과 — AI가 웹 검색으로 생성)
+- 사용자 직접 촬영 사진은 public/tehaleh-intro-0619/images/ 경로에 별도 저장
 ```
 
 ---
@@ -125,21 +107,49 @@ TTS: edge-tts ko-KR-SunHiNeural → Qwen3-TTS 교체 여부 결정
 
 ### 🔍 STEP 1: 학습 기간 적정성 검토 (필수)
 
-사용자가 입력한 학습 기간 `3~5시간`이 해당 Topic에 적절한지 분석하고 피드백을 제공하세요.
+**로드맵 생성 전 반드시 수행:**
+
+사용자가 입력한 학습 기간 `1일 (집중 세션, ~6-8시간)`이 해당 Topic에 적절한지 분석하고 피드백을 제공하세요.
 
 #### 분석 기준:
-1. **Topic 복잡도 평가** — 기술 학습이 아닌 영상 제작 실습 프로젝트
-2. **사전 지식 고려** — Remotion 파이프라인 기존 경험 보유
-3. **학습 목표 범위** — 완성 영상(MP4) 산출물 중심
+1. **Topic 복잡도 평가**
+   - 간단 (예: CLI 도구, 기본 개념): 3-7일 적정
+   - 중간 (예: 프레임워크, 라이브러리): 2-4주 적정
+   - 복잡 (예: 대규모 시스템, 다중 기술): 1-3개월 적정
 
-피드백 형식:
+2. **사전 지식 고려**
+   - 사전 지식이 충분: 기간 단축 가능
+   - 사전 지식 부족: 기간 연장 필요
+
+3. **학습 목표 범위**
+   - 기본 이해 수준: 짧은 기간
+   - 실무 적용 수준: 중간 기간
+   - 전문가 수준: 긴 기간
+
+#### 피드백 형식:
+
 ```markdown
 ## 📊 학습 기간 적정성 분석
-**사용자 입력 기간**: 3~5시간
+
+**사용자 입력 기간**: 1일 (집중 세션, ~6-8시간)
 **Topic 복잡도**: [간단/중간/복잡]
-**권장 기간**: [X시간]
-**분석 결과**: ...
-**조치 제안**: ...
+**권장 기간**: [X주 또는 Y일]
+
+**분석 결과**:
+- ✅ **적정함**: 입력하신 기간이 이 Topic 학습에 적합합니다.
+- ⚠️ **너무 짧음**: 이 Topic은 일반적으로 [권장 기간]이 필요합니다. 현재 기간으로는 핵심만 빠르게 학습하게 됩니다.
+- ⚠️ **너무 김**: 이 Topic은 보통 [권장 기간]이면 충분합니다. 여유 있게 학습하거나 심화 내용까지 다룰 수 있습니다.
+
+**조치 제안**:
+- [적정함인 경우] 계획대로 진행합니다.
+- [너무 짧은 경우] 1) 기간 연장 권장 또는 2) 학습 범위 축소 (기본만)
+- [너무 긴 경우] 1) 기간 단축 또는 2) 심화 내용 추가
+
+**사용자 확인 필요**:
+위 분석 결과를 확인하시고 다음 중 선택해주세요:
+1. "그대로 진행" - 입력한 기간으로 진행
+2. "기간 조정" - 권장 기간으로 변경
+3. "범위 조정" - 기간은 유지하되 학습 범위 조정
 ```
 
 **중요**: 사용자가 확인하고 최종 결정할 때까지 로드맵 생성을 중단하고 대기하세요.
@@ -152,98 +162,283 @@ TTS: edge-tts ko-KR-SunHiNeural → Qwen3-TTS 교체 여부 결정
 
 #### 전체 구조
 
-이 Topic은 영상 제작 실습 프로젝트이므로 모듈 = 제작 Phase:
-- **M0**: Topic 셋업
-- **M1**: Tehaleh 리서치 (Phase 1)
-- **M2**: 영상 슬라이드 플랜 (Phase 2)
-- **M3**: 이미지 프롬프트 작성 (Phase 3a)
-- **M4**: Remotion 컴포넌트 개발 (Phase 3b~c)
-- **M5**: 오디오 생성 및 리뷰 (Phase 3d~e)
-- **M6**: MP4 렌더링 및 완성 (Phase 3f)
+**학습 기간**: `1일 (집중 세션, ~6-8시간)`에 맞춰 조정
+- 3일 이하: 3-5개 모듈
 
-#### 각 모듈 필수 포함 사항 (9가지)
+**모듈 구성 원칙**:
+- 각 모듈은 독립적으로 완료 가능한 단위
+- 난이도는 점진적 상승 (Basics → Intermediate → Advanced)
+- 마지막 모듈은 Capstone 프로젝트 (통합 실습)
 
-1. 모듈 기본 정보 (난이도, 예상 시간, 산출물 폴더)
-2. 학습 목표 3-5개 (체크리스트, 검증 가능)
-3. 주요 개념 3-5개 (정의 + 설명)
-4. 실습 과제 2-3개 (목적·단계·시간·검증 방법 포함)
-5. 산출물 (폴더 구조, 필수 파일)
-6. Definition of Done (체크리스트 5-8개)
-7. Self-Assessment (개념 이해·실무 활용 각 2-3문항)
-8. 예상 시간 배분 (버퍼 20% 포함)
-9. 참조 자료 (경로 또는 링크)
+**명명 규칙**:
+- 모듈: `M1`, `M2`, `M3`, ...
+- 산출물 폴더: `01-{TopicName}/`, `02-{TopicName}/`, ...
 
-#### 실습 설계 원칙
+---
 
-- 실습 우선 (70-80% 실습, 20-30% 이론)
-- 검증 가능한 결과 (파일 생성, 렌더링 성공 등)
-- Windows 환경 명령어 사용 (PowerShell)
-- 기존 컴포넌트 재활용 패턴 명시
+#### 각 모듈 필수 포함 사항
+
+각 모듈은 다음 9가지 항목을 반드시 포함해야 합니다:
+
+##### 1. 모듈 기본 정보
+```markdown
+### MX - {모듈명}
+
+**난이도**: ⭐/⭐⭐/⭐⭐⭐ (1-3)
+**예상 시간**: X시간
+**산출물 폴더**: `0X-{모듈명}/`
+```
+
+##### 2. 학습 목표 (3-5개)
+- 검증 가능하게 작성 ("~을 이해한다" X, "~을 구현할 수 있다" O)
+- 체크리스트 형식 `- [ ]`
+- 구체적이고 측정 가능한 목표
+
+##### 3. 주요 개념
+- 핵심 용어 정의 (3-5개)
+- 각 개념에 대한 1-2문장 설명
+- 오해하기 쉬운 포인트 명시
+
+##### 4. 실습 과제 (2-3개)
+각 실습마다:
+- **과제명**: 명확한 이름
+- **목적**: 왜 이 실습을 하는가
+- **단계**: 구체적인 실행 단계 (1, 2, 3, ...)
+- **예상 시간**: X분
+- **난이도**: ⭐/⭐⭐/⭐⭐⭐
+- **검증 방법**: 성공 여부를 어떻게 확인하는가
+
+##### 5. 산출물
+- 생성할 폴더 구조
+- 필수 파일 목록 (README.md, 코드, 문서 등)
+- 권장 하위 폴더 (`concepts/`, `examples/`, `guides/`, `troubleshooting/`)
+
+##### 6. Definition of Done (완료 기준)
+체크리스트 형식으로 5-8개:
+```markdown
+- [ ] 모든 학습 목표 달성
+- [ ] 실습 과제 X개 완료
+- [ ] 핵심 명령어/API Y개 실행 성공
+- [ ] 산출물 폴더 생성 및 README 작성
+- [ ] WorkLog 작성 완료
+- [ ] Daily Retrospective 작성
+```
+
+##### 7. Self-Assessment (자가 평가)
+AI 시대에 맞는 평가 기준 (3-5문항):
+```markdown
+**개념 이해** (5분):
+- [ ] 이 기술/기능이 무엇인지 1-2문장으로 설명 가능
+- [ ] 왜 필요한지 예시와 함께 설명 가능
+
+**실무 활용** (5분):
+- [ ] AI에게 이 기술을 사용한 작업 요청 가능
+- [ ] AI가 생성한 코드의 품질 판단 가능
+
+**문제 해결** (5분):
+- [ ] 문제 발생 시 AI에게 디버깅 방향 제시 가능
+```
+
+##### 8. 예상 시간 배분
+```markdown
+- 개념 학습: X분 (20-30%)
+- 실습 1: X분
+- 실습 2: X분
+- 문서화: X분
+- **합계**: X시간 (버퍼 20% 포함)
+```
+
+##### 9. 참조 자료
+- 공식 문서 링크 (필수)
+- 튜토리얼/예제 (권장)
+- 각 링크마다 1줄 설명
+
+---
+
+#### 실습 설계 원칙 (중요!)
+
+실습 과제를 설계할 때 다음 원칙을 **반드시** 준수하세요:
+
+##### 1. 실습 우선
+- 이론 설명: 20-30%
+- 실습 시간: 70-80%
+- "개념 설명 → 즉시 실습" 패턴 반복
+
+##### 2. 점진적 복잡도
+- 실습 1: 간단 (⭐) - "Hello World" 수준
+- 실습 2: 중간 (⭐⭐) - 실용적 기능
+- 실습 3: 고급 (⭐⭐⭐) - 선택사항, 심화
+
+##### 3. 검증 가능성
+- 모든 실습은 실행 결과로 성공 여부 확인 가능
+- 예: "로그 출력", "파일 생성", "API 응답 성공"
+- 명확한 성공 기준 제시
+
+##### 4. AI 시대 학습 범위
+**인간이 알아야 할 것**:
+- 개념적 이해 (무엇, 왜, 언제)
+- 아키텍처 및 구조
+- AI에게 효과적으로 지시하는 방법
+- 기본 사용 패턴 (3-5개 핵심 기능)
+
+**암기 불필요**:
+- 상세 API 파라미터 목록
+- 모든 옵션과 플래그
+- 내부 구현 디테일
+
+##### 5. 산출물 중심
+- 매 모듈마다 폴더 생성 (`01-xxx/`, `02-xxx/`)
+- **"교과서 품질"**: 다른 학습자가 이것만으로 학습 가능한 수준
+- **README.md는 반드시 포함**
+
+##### 6. 환경 고려
+- Windows: PowerShell 명령어
+- 경로 표기도 OS에 맞게 조정
+
+---
 
 #### VibeLearn AI 방법론 통합
 
-로드맵에 다음 항목을 포함:
-- WorkLog 작성 가이드 (`vl_worklog/YYYYMMDD_MX_Tehaleh-Community-Video.md`)
-- Retrospective 가이드 (Daily / Module / Topic 3단계)
-- 전체 폴더 구조
-- 학습 진행 상황 추적 테이블 (M0~M6)
-- 성공 기준 (전체 Topic 완료 기준)
+로드맵에 다음 VibeLearn AI 요소들을 통합하세요:
+
+##### 1. WorkLog 가이드
+```markdown
+## WorkLog 작성 가이드
+
+각 학습 세션마다 WorkLog를 작성하여 진행 상황을 추적합니다.
+
+**파일명 규칙**: `vl_worklog/YYYYMMDD_MX_{Topic}.md`
+- 예: `vl_worklog/20260621_M1_Tehaleh-Community-Video.md`
+
+**WorkLog 필수 섹션**:
+1. 오늘의 학습 목표 (체크리스트)
+2. 진행 내용 (실습별 상세 기록)
+3. 문제 해결 로그
+4. DoD 체크리스트 (모듈 완료 기준)
+5. Daily Retrospective
+6. 참조 및 산출물
+```
+
+##### 2. Retrospective 가이드
+```markdown
+## Retrospective 가이드
+
+### Daily Retrospective (매일, 5-10분)
+WorkLog 내에 작성:
+- What went well?
+- What could be improved?
+- Insights
+- Tomorrow's focus
+
+### Module Retrospective (모듈 완료 시, 15-20분)
+`vl_worklog/YYYYMMDD_MX_Retrospective.md`:
+- 계획 대비 실제 비교
+- 핵심 학습 내용
+- 발생한 문제와 해결
+- Roadmap 정확도 평가
+- 다음 모듈 준비사항
+
+### Topic Retrospective (전체 완료 시, 30-60분)
+`vl_worklog/YYYYMMDD_Tehaleh-Community-Video_Final_Retrospective.md`:
+- 전체 학습 여정 통계
+- VibeLearn AI 방법론 효과성 평가
+- 산출물 품질 평가
+- 향후 학습 개선 사항
+```
 
 ---
 
 ## [3단계] 출력 형식
 
-다음 형식으로 로드맵을 생성하고 아래 경로에 저장:
-```
-vl_roadmap/20260621_RoadMap_Tehaleh-Community-Video.md
-```
-
-절대 경로:
-```
-C:\AI_study\2026\Changsoo_Vault\Ingest\CatchUpAI_VL\Topics\Tehaleh-Community-Video\vl_roadmap\20260621_RoadMap_Tehaleh-Community-Video.md
-```
+다음 Markdown 형식으로 로드맵을 생성하고 `vl_roadmap/YYYYMMDD_RoadMap_Tehaleh-Community-Video.md`에 저장하세요.
 
 ### 로드맵 템플릿 구조
 
 ```markdown
 # Tehaleh-Community-Video 학습 로드맵
 
-**생성일**: 2026-06-21
+**생성일**: YYYY-MM-DD
 **방법론**: VibeLearn AI
 **버전**: 1.0
 
-## 학습 기간 적정성 분석
-## 학습 개요
-  ### Topic 소개
-  ### 학습 목표
-  ### 예상 학습 기간
-  ### 학습 환경
-## 전체 로드맵 구조 (표)
-## 모듈별 상세 계획
-  ### M0 ~ M6 (각 9가지 항목 포함)
-## WorkLog 작성 가이드
-## Retrospective 가이드
-## 전체 폴더 구조
-## 학습 진행 상황 추적 테이블
-## 성공 기준
+---
+
+## 📚 학습 개요
+
+### Topic 소개
+{Topic 설명}
+
+### 학습 목표
+{topic_starter.md의 학습 목표}
+
+### 예상 학습 기간
+1일 (집중 세션, ~6-8시간)
+
+### 학습 환경
+- OS: Windows 11
+- 도구: Remotion, edge-tts, gpt-image-2, Node.js 18+, Python 3
+- 사전 지식: Remotion 기초, edge-tts 사용법
+
+---
+
+## 🗺️ 전체 로드맵 구조
+
+| 모듈 | 모듈명 | 난이도 | 예상 시간 | 산출물 폴더 |
+|------|--------|--------|----------|------------|
+| M1 | Tehaleh 리서치 | ⭐ | ~2h | 01-Research/ |
+| M2 | 슬라이드 플랜 | ⭐⭐ | ~1h | 02-SlidePlan/ |
+| M3 | Remotion 개발 | ⭐⭐⭐ | ~3h | 03-RemotionDev/ |
+| M4 | 오디오·렌더링 | ⭐⭐ | ~1.5h | 04-AudioRender/ |
+
+**총 예상 시간**: ~7.5시간 (버퍼 포함)
+
+---
+
+## 📖 모듈별 상세 계획
+
+{각 M1-M4 모듈 9개 항목 포함}
+
+---
+
+## 📝 WorkLog 작성 가이드
+## 🔍 Retrospective 가이드
+## 📂 전체 폴더 구조
+## 📊 학습 진행 상황 추적
+## 🎯 성공 기준
 ```
 
 ---
 
 ## ✅ 로드맵 품질 체크리스트
 
-- [ ] 학습 기간에 맞는 모듈 개수 (7개: M0~M6)
-- [ ] 각 모듈 9가지 필수 항목 모두 포함
-- [ ] WorkLog 가이드 포함
-- [ ] Retrospective 가이드 (3단계) 포함
-- [ ] 학습 진행 상황 추적 테이블 포함
-- [ ] 성공 기준 포함
-- [ ] vl_roadmap/ 경로에 저장 완료
-- [ ] 사용자 검토 요청
+생성된 로드맵이 다음 기준을 충족하는지 확인하세요:
+
+### 구조
+- [ ] 학습 기간에 맞는 적절한 모듈 개수 (1일 → 3-5개)
+- [ ] 점진적 난이도 상승 (Basics → Advanced)
+- [ ] 마지막 Capstone 모듈 포함
+- [ ] 각 모듈의 독립성 확보
+
+### 각 모듈
+- [ ] 학습 목표 3-5개 (검증 가능)
+- [ ] 주요 개념 3-5개 (명확한 정의)
+- [ ] 실습 과제 2-3개 (구체적 단계)
+- [ ] 산출물 구조 명시
+- [ ] DoD 체크리스트 5-8개
+- [ ] Self-Assessment 3-5문항
+- [ ] 시간 배분 명시 (버퍼 포함)
+- [ ] 참조 자료 링크
+- [ ] 9가지 필수 항목 모두 포함
+
+### VibeLearn AI 통합
+- [ ] WorkLog 가이드
+- [ ] Retrospective 가이드 (3단계)
+- [ ] 폴더 구조 명시
+- [ ] 진행 상황 추적 테이블
 
 ---
 
 **생성자**: Claude with VibeLearn AI
 **Template 버전**: 2.0
-**생성일**: 2026-06-21
+**생성일**: 2025-12-28
 **방법론**: VibeLearn AI
