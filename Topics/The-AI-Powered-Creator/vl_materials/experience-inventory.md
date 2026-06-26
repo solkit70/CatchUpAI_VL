@@ -85,7 +85,26 @@ tags:
 
 ---
 
-## 4개 사례 비교 매트릭스
+## Case 5: Tehaleh 소개 영상 — KR/EN 이중 언어 + YouTube
+
+**슬라이드 핵심 한 줄**: "36분 만에 부동산 영상을 만든다 — 기록이 없었다면 불가능했다"
+
+| 단계 | 내용 |
+|------|------|
+| **기록 원천** | VibeLearn AI WorkLog (Tehaleh Topic) + Rundown + 개인 사진 (Mt. Rainier, Post & Pour) |
+| **Context** | tehaleh-research.md (지역 정보 6개 섹션) + video-slide-plan.md (15장 슬라이드 기획) |
+| **AI 협업** | Claude Code → Remotion 컴포넌트 생성 → Qwen3-TTS 음성 합성 (창수 클론 + 여성 3종) → 렌더링 |
+| **산출물** | `tehaleh-intro-0619.mp4` (한국어 81MB) + `tehaleh-intro-0619-en.mp4` (영어 71MB) |
+| **배포** | YouTube 한국어·영어 동시 업로드 (2026-06-22) |
+
+**발표 포인트**:
+- 오프닝에서 직접 재생하는 바로 그 영상 — "이게 36분 만에 만들어진 영상입니다"
+- 리서치 → 기획 → 코딩 → 음성 → 렌더링 → YouTube: 전 과정이 기록 기반
+- 한국어·영어 이중 언어 영상: 기록 구조가 있어서 영어 버전 추가가 2시간 내 완료됨
+
+---
+
+## 5개 사례 비교 매트릭스
 
 | 사례 | 기록 도구 | AI 도구 | 최종 산출물 | 배포 채널 |
 |------|----------|---------|-----------|---------|
@@ -93,6 +112,7 @@ tags:
 | Case 2: 미팅 → 문서 | Zoom 녹화 + Whisper | Claude Code | GitHub 문서 | GitHub + Slack |
 | Case 3: WorkLog → 연속성 | VibeLearn AI WorkLog | Claude Code | 발표 자료 | 창발 발표 |
 | Case 4: 세션 → 콘텐츠 | 세션 녹화 + Transcript | Claude Code | YouTube 영상 | YouTube |
+| Case 5: Tehaleh 영상 | WorkLog + 개인 사진 | Claude Code + Remotion + Qwen3-TTS | KR/EN MP4 | YouTube (이중 언어) |
 
 ---
 

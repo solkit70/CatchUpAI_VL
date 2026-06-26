@@ -52,8 +52,9 @@
 | M5 | AI 콘텐츠 제작 워크플로우 사례 정리 | ⭐⭐ | 2.5h | `05-Content-Workflow/` |
 | M6 | 슬라이드 초안과 발표 노트 작성 | ⭐⭐⭐ | 3h | `06-Slide-Deck/` |
 | M7 | 리허설, 배포, 후속 콘텐츠 패키지 | ⭐⭐ | 2h | `07-Delivery-and-Distribution/` |
+| M8 | YouTube 채널 성장 데이터 분석 | ⭐⭐ | 2h | `vl_materials/youtube-analytics/` |
 
-**총 예상 시간**: 15시간. 필요하면 M5-M7을 압축해 12시간 내로 조정한다.
+**총 예상 시간**: 17시간. 필요하면 M5-M7을 압축해 조정한다.
 
 ## 모듈별 상세 계획
 
@@ -713,6 +714,112 @@ vl_materials/
 - M6 `demo-assets.md`
 - Catch Up AI 기존 SNS/YouTube 배포 기록
 
+### M8 - YouTube 채널 성장 데이터 분석
+
+**난이도**: ⭐⭐
+**예상 시간**: 2h
+**산출물 폴더**: `vl_materials/youtube-analytics/`
+
+#### 학습 목표
+
+- [ ] Catch Up AI 채널의 성장 궤적을 데이터 기반으로 시기별로 설명할 수 있다.
+- [ ] 채널이 활성화된 시기, 피크, 성장세가 꺾인 시점을 수치로 근거를 댈 수 있다.
+- [ ] 각 시기에 주로 다루었던 영상 주제와 형식을 정리할 수 있다.
+- [ ] 발표 슬라이드 "솔직한 고백" 섹션을 데이터로 보완할 수 있다.
+
+#### 주요 개념
+
+1. **Channel Growth Phases**: 시작 → 활성화 → 피크 → 성장세 둔화의 4단계 궤적.
+2. **Content-Performance Correlation**: 특정 주제/형식이 성장이나 이탈에 영향을 준 패턴.
+3. **Data-Backed Narrative**: 수치 데이터로 뒷받침된 채널 운영 스토리.
+
+#### 원본 데이터 위치
+
+```text
+vl_materials/youtube-analytics/
+├── IMG_4417.PNG ~ IMG_4424.PNG   ← YouTube Studio 스크린샷 (8장)
+├── ViewsByContens/
+│   ├── Chart data.csv            ← 영상별 조회수 시계열
+│   ├── Table data.csv            ← 영상별 조회수 합계
+│   └── Totals.csv
+├── WatchHoursByContents/
+│   ├── Chart data.csv
+│   ├── Table data.csv
+│   └── Totals.csv
+├── SubscribersByContents/
+│   ├── Chart data.csv
+│   ├── Table data.csv
+│   └── Totals.csv
+└── RevenuebyContents/
+    ├── Chart data.csv
+    ├── Table data.csv
+    └── Totals.csv
+```
+
+#### 실습 과제
+
+**실습 1: 채널 시작 ~ 현재 성장 궤적 정리** ⭐⭐
+- **목적**: 수치 기반으로 채널 역사를 4단계로 나눈다.
+- **단계**:
+  1. `ViewsByContens/Chart data.csv`와 `SubscribersByContents/Chart data.csv`를 읽어 월별 추이를 파악한다.
+  2. 채널 시작 시점, 활성화 시작 시점, 피크 시점, 성장세 둔화 시점을 찾는다.
+  3. 각 시기의 주요 지표(조회수, 구독자, 시청 시간)를 정리한다.
+- **예상 시간**: 50분
+- **검증**: 4개 성장 단계가 날짜와 수치로 정의되어 있다.
+
+**실습 2: 시기별 영상 주제·형식 매핑** ⭐⭐
+- **목적**: 성장/이탈이 어떤 콘텐츠와 연관되었는지 파악한다.
+- **단계**:
+  1. `ViewsByContens/Table data.csv`에서 조회수 상위 영상 목록을 추출한다.
+  2. 각 영상을 실습 1에서 정의한 시기에 배치한다.
+  3. 시기별 주제(Deep Learning, LangChain, Vibe Coding, PKM 등)와 형식(튜토리얼, 라이브, 요약 영상)을 정리한다.
+- **예상 시간**: 40분
+- **검증**: 각 성장 단계마다 대표 주제와 형식이 2개 이상 정리되어 있다.
+
+**실습 3: 발표용 분석 문서 작성** ⭐
+- **목적**: 분석 결과를 발표 자료로 즉시 활용 가능하게 만든다.
+- **단계**:
+  1. 성장 궤적 요약 (표 또는 타임라인)을 작성한다.
+  2. "솔직한 고백" 슬라이드에 추가할 수치 근거 문장 3개를 작성한다.
+  3. `vl_materials/youtube-channel-growth-analysis.md`에 저장한다.
+- **예상 시간**: 30분
+- **검증**: 발표 슬라이드에 바로 인용 가능한 수치 문장이 포함되어 있다.
+
+#### 산출물
+
+```text
+vl_materials/
+└── youtube-channel-growth-analysis.md
+
+vl_materials/youtube-analytics/
+└── (원본 데이터 — 읽기 전용)
+```
+
+#### Definition of Done
+
+- [ ] 채널 시작 시점 확인
+- [ ] 활성화 시작 시점 확인
+- [ ] 피크 시점과 지표 확인
+- [ ] 성장세 둔화 시점 확인
+- [ ] 시기별 주요 영상 주제/형식 정리
+- [ ] 발표용 분석 문서 작성
+- [ ] WorkLog 작성 완료
+
+#### 예상 시간 배분
+
+- 실습 1 (궤적 분석): 50분
+- 실습 2 (주제/형식 매핑): 40분
+- 실습 3 (발표용 문서): 30분
+- **합계**: 2h
+
+#### 참조 자료
+
+- `vl_materials/youtube-analytics/` — 원본 YouTube Studio 데이터
+- `vl_materials/youtube-studio-channel-performance-20260622.md` — 기존 분석 문서
+- `03-Channel-Topic-Evolution/channel-topic-evolution.md` — M3 채널 Topic 변화 정리
+
+---
+
 ## WorkLog 작성 가이드
 
 각 학습 세션마다 WorkLog를 작성하여 진행 상황을 추적한다.
@@ -780,7 +887,7 @@ The-AI-Powered-Creator/
 
 ## 학습 진행 상황 추적
 
-**D-5 현황** (2026-06-21 기준) — Live #15 방송 후 M4~M6 대폭 진행
+**D-4 현황** (2026-06-22 기준)
 
 | 모듈 | 시작일 | 종료일 | 상태 | DoD 달성률 | 비고 |
 |------|--------|--------|------|------------|------|
@@ -788,10 +895,11 @@ The-AI-Powered-Creator/
 | M1 | 2026-06-19 | 2026-06-19 | ✅ 완료 | 100% | audience-brief.md, README.md 완성 |
 | M2 | 2026-06-19 | 2026-06-19 | ✅ 완료 | 100% | records-as-creator-context.md, Live#12/#13/#14 인용 완성 |
 | M3 | 2026-06-19 | 2026-06-19 | ✅ 완료 | 100% | channel-topic-evolution.md, 6단계 타임라인 완성 |
-| M4 | 2026-06-19 | 2026-06-21 | ✅ 완료 | 90% | presentation-structure.md **v2.0** 완성 (README 미작성) |
-| M5 | 2026-06-21 | | 🔄 진행 중 | 50% | ai-creator-workflow.md 완성, README 미작성 |
-| M6 | 2026-06-21 | | 🔄 진행 중 | 85% | slide-draft.md + demo-assets.md + **presentation-0626.md(Marp)** 완성 |
-| M7 | | | ⏳ 대기 | 0% | 6/24~25 예정 (리허설 + 배포 계획) |
+| M4 | 2026-06-19 | 2026-06-22 | ✅ 완료 | 100% | presentation-structure.md v2.0 + README.md 완성 |
+| M5 | 2026-06-21 | 2026-06-22 | ✅ 완료 | 100% | ai-creator-workflow.md + README.md + Case 5(Tehaleh) 추가 완성 |
+| M6 | 2026-06-21 | 2026-06-22 | ✅ 완료 | 100% | slide-draft.md + demo-assets.md + presentation-0626.md + README.md + **5개 클립 저장 완료** |
+| M7 | 2026-06-22 | | 🔄 진행 중 | 50% | rehearsal-checklist.md + post-event-content-package.md 완성 / final-plan + retrospective D-1 예정 |
+| M8 | 2026-06-24 | 2026-06-24 | ✅ 완료 | 100% | youtube-channel-growth-analysis.md 작성 완료 |
 
 ### D-7 압축 일정
 
