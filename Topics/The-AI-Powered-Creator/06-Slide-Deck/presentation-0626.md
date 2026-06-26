@@ -837,6 +837,7 @@ AI 크리에이터의 경쟁력은 기록에서 시작된다
 🛠️ **Utah Project** — 비개발자 Vibe Coding 앱 개발 Guide
 🏠 **Channel Membership** — Members Only 선공개 콘텐츠 (시애틀 AI 생태계)
 📧 **1:1 세션** — AI4PKM / VibeLearn AI 상담
+📂 <a href="https://github.com/solkit70/CatchUpAI_VL/tree/main/Topics/The-AI-Powered-Creator/06-Slide-Deck" target="_blank" rel="noopener" style="color:#F59E0B;text-decoration:none;font-weight:bold;">이 슬라이드 보기</a>
 
 </div>
 
