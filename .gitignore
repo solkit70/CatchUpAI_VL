@@ -39,6 +39,7 @@ venv/
 
 # Video output files (large binaries)
 *.mp4
+!Topics/The-AI-Powered-Creator/06-Slide-Deck/clips/*.mp4
 
 # IDE
 .idea/
