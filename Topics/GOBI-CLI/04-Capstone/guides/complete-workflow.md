@@ -2,8 +2,8 @@
 
 > **모듈**: M4 — 실전 워크플로우 + 교과서 완성 (Capstone)
 > **작성일**: 2026-03-29
-> **CVL 업데이트**: 2026-05-10 (v2.0.12 — 명령어 전면 업데이트)
-> **버전**: GOBI CLI v2.0.12
+> **CVL 업데이트**: 2026-06-27 (v2.0.35 — session CLI 제거, space search/채널/personal 반영)
+> **버전**: GOBI CLI v2.0.35
 
 ---
 
@@ -12,14 +12,16 @@
 M1~M3에서 배운 모든 명령어를 실전 시나리오로 연결한 End-to-End 흐름입니다.
 
 ```
-인증 확인 → 글로벌 피드 탐색 → Session 확인 → Space Post 생성 → Global 업데이트 게시
+인증 확인 → 피드/검색 탐색 → 개인 메모 작성 → Space Post 생성 → Global 업데이트 게시
      ↓              ↓                ↓                ↓                    ↓
- auth status   global feed      session list      create-post        global create-post
-               space feed       session get       create-reply       vault sync
+ auth status   global feed      personal          create-post        global create-post
+               space feed       create-post       create-reply       vault sync
+               search-posts
 ```
 
 > **v2.0 변경**: `brain search/ask` → CLI 제거됨 (웹 UI 이용)
-> 워크플로우 Step 2는 `global feed` / `space feed`로 대체
+> **v2.0.35 변경**: `session` 전체 CLI 제거됨 → 1:1 AI 대화는 웹 UI에서만 가능
+> Step 3는 session 대신 `personal create-post`(프라이빗 메모)로 대체
 
 ---
 
@@ -60,31 +62,28 @@ gobi --json space list-topic-posts ai --space-slug changbal
 
 ---
 
-### Step 3: Session 확인 및 대화 이어가기
+### Step 3: 프라이빗 메모 작성 (구 Session 대화)
 
-> ⚠️ **v2.0 변경**: `gobi brain ask`는 CLI에서 제거됨 (웹 UI에서 새 Session 시작)
-> ✅ `session list/get`은 v2.0에서 **정상 작동** (v0.6.15 HTTP 404 이슈 해결됨)
+> ⚠️ **v2.0.35 변경**: `gobi session` 전체가 CLI에서 **제거됨**
+> 1:1 AI 대화는 웹 UI(gobispace.com)에서만 가능
+> CLI에서 개인 메모/스크래치패드는 `gobi personal`로 대체
 
 ```bash
-# Session 목록 확인
-gobi --json session list
+# 프라이빗 메모 작성 (나만 볼 수 있는 포스트)
+gobi personal create-post \
+  --content "GOBI CLI v2.0.35 학습 메모: session 제거됨, personal/artifact 신규 추가"
 
-# Session 내용 확인
-gobi --json session get 9b73ebfd-f32b-4171-b411-25c56f507ab1
+# 프라이빗 피드 확인
+gobi --json personal feed
 
-# 대화 이어가기 (구 session reply)
-gobi session create-reply 9b73ebfd-f32b-4171-b411-25c56f507ab1 \
-  --content "GOBI CLI v2.0의 주요 변경사항을 요약해줘"
-
-# 응답 예시:
-# {
-#   "sessionId": "9b73ebfd-...",
-#   "answer": "v2.0의 주요 변경: vault 명령 그룹 신설, Thread→Post 변경...",
-#   "createdAt": "2026-05-10T..."
-# }
+# 프라이빗 포스트 검색 (from:/topic: 연산자 지원)
+gobi personal search-posts "session 대안"
 ```
 
-**결과**: Session 대화 이어가기 ✅
+> 💡 **session 대신 personal 활용 팁**: 학습 중 떠오른 생각이나 실험 결과를
+> `personal create-post`로 기록해두면 개인 지식베이스 역할을 한다.
+
+**결과**: 프라이빗 메모 작성 ✅
 
 ---
 
@@ -167,17 +166,21 @@ gobi vault sync \
 ```
 1. gobi auth status                   → 인증 확인
 2. gobi global feed / space feed      → 관련 지식 탐색 (구 brain search)
-3. gobi session list/get/create-reply → Session 확인 및 대화 (구 brain ask)
+   gobi space search-posts <query>    → 키워드 검색 (🆕 v2.0.35)
+3. gobi personal create-post          → 프라이빗 메모 작성 (구 session / saved)
 4. gobi space create-post             → 팀 공유 Post 게시 (구 create-thread)
 5. gobi global create-post            → Global 업데이트 게시 (구 brain post-update)
 6. gobi vault sync                    → 로컬-서버 파일 동기화 (구 gobi sync)
 ```
 
-**6개 단계로 완성되는 GOBI CLI v2.0 핵심 워크플로우** ✅
+**6개 단계로 완성되는 GOBI CLI v2.0.35 핵심 워크플로우** ✅
+
+> ⚠️ **v2.0.35 Breaking**: 이전 워크플로우의 Step 3 `session list/create-reply`는
+> CLI에서 제거됨. 1:1 AI 대화는 웹 UI에서 직접 진행.
 
 ---
 
-## 자동화 스크립트 예시 (v2.0)
+## 자동화 스크립트 예시 (v2.0.35)
 
 반복 작업을 쉘 스크립트로 자동화할 수 있습니다:
 
@@ -195,34 +198,42 @@ echo "=== GOBI Daily Check: $DATE ==="
 echo "[1] 인증 상태:"
 gobi auth status
 
-# 2. 최신 Global Posts 확인 (구 Brain Updates)
+# 2. 최신 Global Posts 확인
 echo ""
 echo "[2] 최신 Global Posts:"
 gobi global list-posts --mine --limit 3
 
-# 3. 오늘의 Space Posts 확인 (구 Threads)
+# 3. 오늘의 Space Posts 확인
 echo ""
 echo "[3] 최신 Space Posts:"
 gobi space list-posts --space-slug $SPACE --limit 5
 
-# 4. 내 Session 목록
+# 4. 프라이빗 메모 확인 (구 Session / Saved — v2.0.35에서 session/saved 제거됨)
 echo ""
-echo "[4] 최근 Sessions:"
-gobi session list --limit 3
+echo "[4] 내 프라이빗 메모:"
+gobi personal list-posts --limit 3
 
 echo ""
 echo "=== Done ==="
 ```
 
+> ⚠️ **v2.0.35 변경**: 이전 스크립트의 `gobi session list` 항목은 제거됨.
+> `gobi personal list-posts`로 대체.
+
 ---
 
-## 트러블슈팅 핵심 (v2.0 기준)
+## 트러블슈팅 핵심 (v2.0.35 기준)
 
 | 증상 | 원인 | 해결 |
 |------|------|------|
-| `gobi brain search` → command not found | v2.0에서 CLI 제거됨 | 웹 UI(gobispace.com) 또는 `global feed` 사용 |
-| `gobi brain ask` → command not found | v2.0에서 CLI 제거됨 | 웹 UI에서 새 Session 시작 후 `session list`로 확인 |
-| `gobi session reply` → 오류 | v2.0에서 명령어 변경됨 | `gobi session create-reply` 사용 |
+| `gobi session list` → command not found | v2.0.35에서 CLI 전체 제거됨 | 웹 UI(gobispace.com)에서 1:1 대화 |
+| `gobi session create-reply` → command not found | v2.0.35에서 CLI 전체 제거됨 | 웹 UI 이용 |
+| `gobi saved create-note` → command not found | v2.0.35에서 CLI 전체 제거됨 | `gobi personal create-post` 사용 |
+| `gobi draft list` → command not found | v2.0.35에서 CLI 전체 제거됨 | 웹 UI 이용 |
+| `gobi vault set-primary` → command not found | v2.0.35에서 제거됨 | 웹 UI에서 설정 |
+| `gobi brain search` → command not found | v2.0에서 CLI 제거됨 | `space search-posts <query>` 사용 |
+| `gobi brain ask` → command not found | v2.0에서 CLI 제거됨 | 웹 UI에서 새 대화 시작 |
+| `gobi session reply` → 오류 | v2.0.19까지는 `create-reply`로 변경, v2.0.35에서 완전 제거 | 웹 UI 이용 |
 | `gobi sync` → command not found | v2.0에서 명령어 변경됨 | `gobi vault sync` 사용 |
 | `gobi init` → command not found | v2.0에서 명령어 변경됨 | `gobi vault init` 사용 |
 | `gobi vault init` → 입력 없음 | 완전 인터랙티브 명령어 | 인터랙티브 터미널에서 직접 실행 |
@@ -233,4 +244,4 @@ echo "=== Done ==="
 > **다음 문서**: [quick-reference.md](quick-reference.md)
 > **작성자**: Changsoo (Claude Code 활용)
 > **방법론**: VibeLearn AI v2.0
-> **CVL 기준**: v2.0.12 (2026-05-10)
+> **CVL 기준**: v2.0.35 (2026-06-27)

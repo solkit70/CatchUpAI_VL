@@ -42,16 +42,17 @@
 
 ## 전체 로드맵 구조
 
-| 모듈 | 모듈명 | 난이도 | 예상 시간 | 산출물 폴더 |
-|------|--------|--------|-----------|-------------|
-| M1 | 로컬 자료 맵 작성 | ⭐ | 2h | `vl_materials/` |
-| M2 | 웹 리서치 맵과 출처 체계 구축 | ⭐⭐ | 3h | `vl_materials/` |
-| M3 | 피터 틸 세계관 재구성 | ⭐⭐ | 2.5h | `01-Worldview-Reconstruction/` |
-| M4 | 사업·권력 네트워크 분석 | ⭐⭐⭐ | 3h | `02-Business-and-Power-Network/` |
-| M5 | 비판 프레임과 한국 AI 적용 | ⭐⭐⭐ | 3h | `03-Critical-Debates/`, `04-Korea-AI-Implications/` |
-| M6 | Capstone 에세이 리서치 종합 | ⭐⭐⭐ | 2h | `05-Capstone-Essay/` |
+| 모듈 | 모듈명 | 상태 | 난이도 | 예상 시간 | 산출물 폴더 |
+|------|--------|------|--------|-----------|-------------|
+| M1 | 로컬 자료 맵 작성 | ⏭ 건너뜀 | ⭐ | 2h | `vl_materials/` |
+| M2 | 웹 리서치 맵과 출처 체계 구축 | ⏭ 건너뜀 | ⭐⭐ | 3h | `vl_materials/` |
+| M3 | 피터 틸 세계관 재구성 | ✅ 완료 (6/14~6/19) | ⭐⭐ | 2.5h | `01-Worldview-Reconstruction/` |
+| M4 | 사업·권력 네트워크 분석 | ✅ 완료 (6/19) | ⭐⭐⭐ | 3h | `02-Business-and-Power-Network/` |
+| M5 | 비판 프레임 + 찬반 매트릭스 | 🔶 부분 완료 | ⭐⭐⭐ | 3h | `03-Critical-Debates/` |
+| **M5.5** | **본인 AI 세계관 정리 & 피터 틸 비전 평가** | **⏳ 다음 작업** | ⭐⭐⭐ | 3h | `04-Alternative-Vision/` |
+| M6 | Capstone 에세이 리서치 종합 | ⏳ 대기 | ⭐⭐⭐ | 2h | `05-Capstone-Essay/` |
 
-**총 예상 시간**: 15.5시간
+**총 예상 시간**: 18.5시간 (M5.5 추가로 +3h)
 
 ## 모듈별 상세 계획
 
@@ -530,6 +531,91 @@ vl_worklog/
 - `01-Worldview-Reconstruction/core-claims.md`: 핵심 주장
 - `02-Business-and-Power-Network/README.md`: 실제 제도화 사례
 - 한국 AI/스타트업 관련 내부 노트: 한국 적용성 검토용
+
+---
+
+### M5.5 - 본인 AI 세계관 정리 & 피터 틸 비전 평가 ← **다음 작업**
+
+**추가일**: 2026-06-27
+**난이도**: ⭐⭐⭐
+**예상 시간**: 3h
+**산출물 폴더**: `04-Alternative-Vision/`
+
+#### 배경 및 목적
+
+에세이 4부(글쓴이 관점)를 쓰기 전, 본인의 AI 시대 세계관을 영상 기록에서 직접 끌어낸다. 피터 틸의 세계관(M3/M4)과 비판 프레임(M5)을 이미 정리한 상태에서, "그렇다면 나는 어떤 세계관을 가지고 있는가?"를 체계적으로 정리하는 작업이다.
+
+**소스**: AI & Humanity 플레이리스트 11개 영상 전사 (이미 확보)
+- `Ingest/YouTube/playlists/ai-humanity/_index.md` 참조
+
+#### 학습 목표
+
+- [ ] AI & Humanity 11개 영상 전사에서 본인의 핵심 주장 5개 이상 추출할 수 있다.
+- [ ] 정치·사회·AI 관련 본인의 일관된 관점을 하나의 문서로 정리할 수 있다.
+- [ ] 본인 세계관과 피터 틸 세계관의 공통점·차이점을 비교 정리할 수 있다.
+- [ ] 피터 틸 비전의 유효성과 한계를 본인 관점에서 평가할 수 있다.
+
+#### 주요 개념
+
+1. **본인 세계관 축**: 11개 영상에서 반복되는 핵심 입장 (AI와 인간, 노동, 민주주의, 창의성)
+2. **대안 비전**: 틸의 엘리트·독점 비전 대신 개인 역량 확장 모델
+3. **Catch Up AI 철학**: VibeLearn AI, Vibe Guiding이 그 대안의 실천적 증거
+
+#### 11개 영상 주제 분류
+
+| 주제 | 영상 | 핵심 질문 |
+|------|------|---------|
+| 인간의 가치·무가치함 | 모두가 자신의 무가치함과 싸우고 있다 (KR+EN) | AI 시대에 인간은 더 쓸모없어지는가? |
+| AI를 향한 사회적 시각 | 시애틀 사람들은 AI를 어떻게 느낄까 (KR+EN) | 사람들은 AI를 어떻게 받아들이는가? |
+| 휴먼터치와 AI | 스타벅스는 왜 바리스타를 더 고용했나 (KR+EN) | AI가 강해질수록 휴먼터치는 왜 더 가치 있어지는가? |
+| 노동의 의미 재정의 | 역사 속 "일 안 하면 쓸모없다" (KR+EN) | "일"이란 무엇인가, AI 시대에 노동은 어떻게 바뀌는가? |
+| 정치·거버넌스와 AI | 계엄과 AI : 계엄 하의 경찰청장 | AI가 정치적 판단을 도운다면 어떻게 되는가? |
+| AI 시대 인간 창의성 | GenAI 가 까발린 Human Creativity의 하찮음 | 인간 창의성은 AI에게 대체되는가? |
+| 디지털 혁명과 아날로그 | AI: The Analog Revolution | AI 혁명의 본질은 무엇인가? |
+
+#### 실습 과제
+
+**실습 1: 영상 전사 핵심 추출 (2h)**
+- 11개 영상 전사에서 정치·사회·AI 관련 본인의 핵심 발언 추출
+- 주제별로 분류 (인간 가치, 노동, 민주주의, 창의성, AI 역할)
+- 반복되는 입장과 일관된 논리 파악
+- 산출물: `04-Alternative-Vision/my-worldview-from-videos.md`
+
+**실습 2: 본인 세계관 vs 피터 틸 비교 정리 (1h)**
+- M3 `core-claims.md`, `thiel-worldview-map.md`와 대조
+- 공통점: "AI는 변화를 가속한다" 등
+- 차이점: 누가 AI 시대의 주역인가, 독점 vs 개방, 엘리트 vs 개인
+- 산출물: `04-Alternative-Vision/thiel-vs-my-worldview.md`
+
+#### 산출물
+
+```text
+04-Alternative-Vision/
+├── alternative-vision-draft.md      ← 기존 초안 (AI 작성, 본인 보완 필요)
+├── my-worldview-from-videos.md      ← 새로 작성 (영상 전사 기반)
+└── thiel-vs-my-worldview.md         ← 새로 작성 (비교 정리)
+
+vl_worklog/
+└── YYYYMMDD_M5.5_Peter-Thiel-Vision.md
+```
+
+#### Definition of Done
+
+- [ ] 11개 영상 전사 검토 완료
+- [ ] 본인 핵심 주장 5개 이상 추출 + 근거 인용 포함
+- [ ] `my-worldview-from-videos.md` 작성
+- [ ] `thiel-vs-my-worldview.md` 비교 작성 (M3 산출물과 대조)
+- [ ] `alternative-vision-draft.md` 본인 관점으로 보완
+- [ ] WorkLog 작성
+
+#### 소스 자료
+
+- `Ingest/YouTube/playlists/ai-humanity/_index.md` — 11개 영상 목록
+- `01-Worldview-Reconstruction/core-claims.md` — 틸 핵심 주장 (비교 기준)
+- `01-Worldview-Reconstruction/thiel-worldview-map.md` — 틸 세계관 맵
+- `03-Critical-Debates/claim-counterclaim-matrix.md` — 찬반 매트릭스
+
+---
 
 ### M6 - Capstone 에세이 리서치 종합
 
