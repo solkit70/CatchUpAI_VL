@@ -16,7 +16,17 @@ tags:
 
 ## 채널별 재사용 계획
 
-### 1. YouTube — 발표 요약 영상 (Remotion)
+### 1. YouTube — 발표 풀버전 업로드 ✅ 완료
+
+> **2026-07-02 업로드 완료**: https://youtu.be/cmC1GFARQus
+
+**제목**: AI로 유튜브 영상을 36분 만에 만드는 법 | 기록이 AI를 강하게 만든다 The AI Powered Creator (창발 발표 풀버전)
+
+**상세 메타데이터 (Description · Tags · 챕터)**: [youtube-upload-0702.md](youtube-upload-0702.md)
+
+---
+
+### 1-B. YouTube — 발표 요약 영상 (Remotion) ← 미완
 
 **제목 후보**:
 - "AI 크리에이터의 경쟁력은 기록에서 시작된다 | 창발 발표 요약"

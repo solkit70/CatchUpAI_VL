@@ -33,6 +33,21 @@ tags:
 
 > 이번 창발 프로덕 그룹 모임에서는 베테랑 엔지니어에서 AI 엔지니어로, 그리고 이제는 AI 크리에이터(유튜브/블로그)로 계시는 창수님을 모셨습니다! AI를 도구 삼아 직접 AI 콘텐츠를 기획하고 제작해 온 창수님만의 리얼한 경험담을 이번 기회에 꼭 만나보세요.
 
+## YouTube 업로드 완료
+
+> 발표 풀버전 영상을 편집하여 2026-07-02 YouTube에 업로드했다.
+
+| 항목 | 내용 |
+|------|------|
+| **YouTube 링크** | https://youtu.be/cmC1GFARQus |
+| **제목** | AI로 유튜브 영상을 36분 만에 만드는 법 \| 기록이 AI를 강하게 만든다 The AI Powered Creator (창발 발표 풀버전) |
+| **업로드 날짜** | 2026-07-02 |
+| **영상 길이** | 38분 32초 |
+
+상세 메타데이터 (제목·Description·Tags·챕터): [07-Delivery-and-Distribution/youtube-upload-0702.md](07-Delivery-and-Distribution/youtube-upload-0702.md)
+
+---
+
 ## 발표용 샘플 영상
 
 발표에서 AI 콘텐츠 제작 과정을 보여주기 위해 Tehaleh 커뮤니티 소개 영상을 한국어와 영어로 제작했다. 영상의 기획, 지역 리서치, Remotion 구현, 이미지 구성, Qwen3-TTS 나레이션, 렌더링과 YouTube 업로드 메타데이터 준비 과정은 별도 Topic인 [Tehaleh-Community-Video](../Tehaleh-Community-Video/README.md)에 기록되어 있다. 이 영상은 “AI로 콘텐츠를 뚝딱 만든다”는 결과만 보여주는 것이 아니라, 기록과 Context를 바탕으로 AI와 협업하는 실제 제작 과정을 설명하는 발표 사례다.
@@ -48,13 +63,13 @@ tags:
 
 | 모듈 | 내용 | 상태 | 산출물 폴더 |
 |------|------|------|-------------|
-| M1 | 발표 맥락과 청중 정의 | ⏳ 대기 | `01-Context-and-Audience/`, `vl_materials/` |
-| M2 | 기록은 AI Powered Creator의 핵심 자산 | ⏳ 대기 | `02-Records-as-Context/`, `vl_materials/` |
-| M3 | Catch Up AI 채널 Topic 변화 리서치 | ⏳ 대기 | `03-Channel-Topic-Evolution/`, `vl_materials/` |
-| M4 | 핵심 메시지와 발표 구조 설계 | ⏳ 대기 | `04-Core-Message/`, `vl_materials/` |
-| M5 | AI 콘텐츠 제작 워크플로우 사례 정리 | ⏳ 대기 | `05-Content-Workflow/` |
-| M6 | 슬라이드 초안과 발표 노트 작성 | ⏳ 대기 | `06-Slide-Deck/` |
-| M7 | 리허설, 배포, 후속 콘텐츠 패키지 | ⏳ 대기 | `07-Delivery-and-Distribution/` |
+| M1 | 발표 맥락과 청중 정의 | ✅ 완료 | `01-Context-and-Audience/`, `vl_materials/` |
+| M2 | 기록은 AI Powered Creator의 핵심 자산 | ✅ 완료 | `02-Records-as-Context/`, `vl_materials/` |
+| M3 | Catch Up AI 채널 Topic 변화 리서치 | ✅ 완료 | `03-Channel-Topic-Evolution/`, `vl_materials/` |
+| M4 | 핵심 메시지와 발표 구조 설계 | ✅ 완료 | `04-Core-Message/`, `vl_materials/` |
+| M5 | AI 콘텐츠 제작 워크플로우 사례 정리 | ✅ 완료 | `05-Content-Workflow/` |
+| M6 | 슬라이드 초안과 발표 노트 작성 | ✅ 완료 (발표 2026-06-26) | `06-Slide-Deck/` |
+| M7 | 리허설, 배포, 후속 콘텐츠 패키지 | ✅ 완료 (YouTube 업로드 2026-07-02) | `07-Delivery-and-Distribution/` |
 
 ## 폴더 구조
 
