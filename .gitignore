@@ -43,3 +43,6 @@ venv/
 
 # IDE
 .idea/
+
+# Private content (private: true frontmatter) - never push
+Topics/Peter-Thiel-Vision/vl_materials/essay-braindump-20260703.md
