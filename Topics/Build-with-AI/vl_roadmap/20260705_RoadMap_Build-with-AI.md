@@ -38,9 +38,12 @@ tags:
 
 Build-with-AI는 송재희님의 Build with AI 12부작 자료를 학습하고, Catch Up AI / Builders Lounge 관점에서 "AI로 데모는 만들었는데 왜 서비스는 안 되는가"라는 영상 산출물로 전환하는 Topic이다. 핵심 연구 축은 비개발자 빌더, 문제 구조화, 데이터/워크플로 병목, 에이전트/바이브 코딩, 데모에서 프로덕션으로 넘어가는 기준이다.
 
+> **🔄 순서 재구성 (2026-07-05)**: 원래 계획은 처음부터 "영상으로 쓸 수 있는가"를 기준으로 원문을 분류하는 순서였다. 사용자 피드백에 따라 **원문을 실제로 읽고 이해하는 것을 최우선**으로 바꾼다. 영상 관련 산출물(Source Map, Angle, Script, Slide, Package)은 그 이해에서 자연스럽게 나오는 결과물이며, 학습 → 산출물 → 영상 제작 순서로 진행한다. M1의 첫 실습이 "완독 및 이해"로 바뀐 것이 이 재구성의 핵심이다.
+
 ### 학습 목표
 
-- Build with AI 12부작의 전체 구조와 핵심 메시지를 Source Map으로 정리한다.
+- Build with AI 완전판을 실제로 읽고, 각 파트의 핵심 주장을 자신의 언어로 설명할 수 있다 (최우선 목표).
+- 그 이해를 바탕으로 Build with AI 12부작의 전체 구조와 핵심 메시지를 Source Map으로 정리한다.
 - Builders Lounge Product Discovery 및 Bila AI Agent 프로젝트와 연결되는 영상 논지를 도출한다.
 - 첫 영상의 타깃 시청자, 후킹 질문, 스토리라인, 시각 자료 후보를 정리한다.
 - 후속 영상 제작을 위한 브리프와 스크립트 초안을 만든다.
@@ -59,27 +62,29 @@ Build-with-AI는 송재희님의 Build with AI 12부작 자료를 학습하고, 
 
 | 모듈 | 모듈명 | 난이도 | 예상 시간 | 산출물 폴더 |
 |---|---|---|---:|---|
-| M1 | Source Map and Thesis Extraction | ⭐ | 1.5h | `01-Source-Map/` |
+| M1 | Build with AI 완독·이해 → Source Map/Thesis | ⭐ | 2h | `01-Source-Map/` |
 | M2 | Audience and Product Discovery Angle | ⭐⭐ | 1.25h | `02-Video-Angle/` |
 | M3 | Script Starter and Narrative Design | ⭐⭐ | 1.5h | `03-Video-Starter/` |
 | M4 | Slide Plan and Visual Asset Map | ⭐⭐ | 1.25h | `04-Slide-Plan/` |
 | M5 | Capstone Video Production Package | ⭐⭐⭐ | 1.5h | `05-Production-Package/` |
 
-**총 예상 시간**: 7시간 (버퍼 포함)
+**총 예상 시간**: 7.5시간 (버퍼 포함, M1 완독 시간 추가로 +0.5h)
 
 ## 📖 모듈별 상세 계획
 
-### M1 - Source Map and Thesis Extraction
+### M1 - Build with AI 완독·이해 → Source Map/Thesis
 
 **난이도**: ⭐
-**예상 시간**: 1.5h
+**예상 시간**: 2h
 **산출물 폴더**: `01-Source-Map/`
+
+> **재구성 안내**: 실습1이 "영상 분류"에서 "완독 및 이해"로 바뀌었다. 영상 매핑(실습2)은 실습1의 이해가 끝난 뒤에만 진행하며, 원문을 다시 읽지 않고 실습1 노트를 근거로 정리한다.
 
 #### 학습 목표
 
-- [ ] Build with AI 12부작을 영상 전환 가능한 메시지 단위로 분류한다.
-- [ ] "데모에서 서비스로 넘어가는 벽"을 설명하는 핵심 thesis를 1-2개 도출한다.
-- [ ] Build with AI와 Builders Lounge / Bila AI Agent의 연결 지점을 출처 기반으로 표시한다.
+- [ ] Build with AI 완전판(`build-with-ai-complete-ko.pdf`)을 실제로 읽고, 각 파트의 핵심 주장을 자신의 언어로 설명할 수 있다.
+- [ ] "데모에서 서비스로 넘어가는 벽"이 왜 생기는지 원문 근거로 설명할 수 있다.
+- [ ] (이해 완료 후) 읽으며 남긴 노트를 Source Map과 핵심 thesis로 정리한다.
 
 #### 주요 개념
 
@@ -90,62 +95,67 @@ Build-with-AI는 송재희님의 Build with AI 12부작 자료를 학습하고, 
 
 #### 실습 과제
 
-**실습 1: 12-Part Source Map 정리** ⭐
-- **목적**: 원본 자료를 영상에서 사용할 수 있는 메시지 단위로 바꾼다.
+**실습 1: Build with AI 완독 및 이해 노트 작성** ⭐ (최우선, 신규)
+- **목적**: 원문을 실제로 읽고 이해한다. 이 단계에서는 영상 활용 여부를 판단하지 않는다.
 - **단계**:
-  1. Build with AI source note와 ePub/PDF 목차를 확인한다.
-  2. 12개 파트를 `source role`과 `video use`로 분류한다.
-  3. 영상에서 중심으로 쓸 파트와 배경으로만 쓸 파트를 구분한다.
-- **예상 시간**: 45분
-- **검증**: `01-Source-Map/build-with-ai-source-map.md`에 12개 파트가 모두 포함된다.
+  1. `build-with-ai-complete-ko.pdf`(또는 `.epub`)를 처음부터 끝까지 읽는다. 필요하면 하위 챕터(`prompt-patterns-ko.pdf`, `ai-lego-stack-ko.pdf`, `trust-tier-ko.pdf`, `data-readiness-ko.pdf`)도 참고한다.
+  2. **한국어 표현이 어색하거나 의미가 모호한 부분은 영어 원문(`build-with-ai-complete-en.pdf` + 하위 챕터 EN 4종)을 함께 대조해서 정확한 의미를 확인한다.** 한국어판은 영어 원문의 번역본으로 보이며, 번역 과정에서 뉘앙스가 달라진 부분이 있을 수 있다.
+  3. 각 파트를 읽으며 핵심 주장을 1-2문장으로 **자신의 언어**로 적는다.
+  4. 이해가 안 되거나 모호한 부분은 표시해두고, 다 읽은 뒤 다시 확인한다.
+- **예상 시간**: 75분
+- **검증**: 12개 파트 모두에 대해 "내 언어로 된 핵심 주장"이 `reading-notes.md`에 있다 (아직 영상 분류 없음). 한/영 대조가 필요했던 부분은 어느 표현을 기준으로 삼았는지 노트에 남긴다.
 
-**실습 2: Core Thesis 추출** ⭐⭐
-- **목적**: 영상 전체를 관통할 한 문장 메시지를 만든다.
+**실습 2: 이해 노트 → Source Map/Thesis 정리** ⭐⭐ (실습1 완료 후에만 진행)
+- **목적**: 실습1에서 쌓인 이해를 영상 매핑과 핵심 thesis로 정리한다. 원문을 다시 읽는 작업이 아니라 이해를 정리하는 산출물 작업이다.
 - **단계**:
-  1. `데모`, `서비스`, `문제 구조화`, `데이터`, `검증` 키워드로 핵심 문장을 만든다.
-  2. Builders Lounge와 Bila AI Agent 연결 문장을 1개 작성한다.
-  3. 원본 출처 링크를 문장 옆에 표시한다.
-- **예상 시간**: 30분
-- **검증**: 영상 제목 후보와 thesis가 Source Map에 명시된다.
+  1. `reading-notes.md`를 기준으로 12개 파트를 `source role`/`video use`로 분류한다.
+  2. `데모`, `서비스`, `문제 구조화`, `데이터`, `검증` 키워드로 핵심 thesis 문장을 만든다.
+  3. Builders Lounge/Bila AI Agent 연결 문장 1개를 작성하고 출처를 표시한다.
+- **예상 시간**: 35분
+- **검증**: `01-Source-Map/build-with-ai-source-map.md`에 12개 파트 매핑 + thesis가 포함된다.
 
 #### 산출물
 
 ```text
 01-Source-Map/
 ├── README.md
-└── build-with-ai-source-map.md
+├── reading-notes.md              ← 신규: 실습1 완독·이해 노트 (파트별 핵심 주장)
+└── build-with-ai-source-map.md   ← 실습2: 영상 매핑 + thesis (이해 노트 기반)
 ```
 
 #### Definition of Done
 
-- [ ] 12개 파트가 모두 맵핑되었다.
-- [ ] 각 파트의 영상 활용 방식이 정리되었다.
+- [ ] Build with AI 완전판을 실제로 완독했다.
+- [ ] 12개 파트 각각의 핵심 주장을 자신의 언어로 설명할 수 있다 (`reading-notes.md`).
+- [ ] 이해 노트를 바탕으로 12개 파트가 모두 영상 관점으로 매핑되었다.
 - [ ] 핵심 thesis가 1개 이상 도출되었다.
 - [ ] Builders Lounge / Bila AI Agent 연결 지점이 출처 기반으로 정리되었다.
-- [ ] README.md가 학습 순서를 안내한다.
+- [ ] README.md가 학습 순서(읽기 노트 → Source Map)를 안내한다.
 - [ ] WorkLog에 M1 진행 내용이 기록되었다.
 
 #### Self-Assessment
 
 **개념 이해**:
-- [ ] Build with AI의 핵심을 2문장으로 설명할 수 있다.
-- [ ] 데모와 서비스의 차이를 예시로 설명할 수 있다.
+- [ ] Build with AI 12개 파트 각각을 원문을 다시 보지 않고 한두 문장으로 설명할 수 있다.
+- [ ] 데모와 서비스의 차이를 이 책의 논거로 설명할 수 있다.
 
 **실무 활용**:
-- [ ] AI에게 Source Map 기반 영상 브리프 작성을 요청할 수 있다.
-- [ ] 원문 요약과 영상 논지 추출의 차이를 판단할 수 있다.
+- [ ] 이해한 내용을 바탕으로 AI에게 Source Map 정리를 요청할 수 있다.
+- [ ] 원문 이해와 영상용 요약의 차이를 구분해서 설명할 수 있다.
 
 #### 예상 시간 배분
 
-- 개념 학습: 25분
-- 실습 1: 45분
-- 실습 2: 30분
+- 완독 및 이해 노트 (실습1): 75분
+- Source Map/Thesis 정리 (실습2): 35분
 - 문서화/버퍼: 20분
-- **합계**: 1.5h
+- **합계**: 2.2h → 약 2h (원문 분량에 따라 다음 세션으로 이어질 수 있음)
 
 #### 참조 자료
 
-- [[Initiatives/Builders Lounge/builders/Song-Jae-hee-Build-with-AI/2026-06-29 Build with AI source note#Summary|Build with AI source note]]: 기존 정리와 Live #17 실험 angle 확인.
+- `materials/build-with-ai-complete-ko.pdf` / `.epub`: **완전판 원문 (1차 자료, 실습1에서 직접 읽는 대상)**
+- `materials/build-with-ai-complete-en.pdf`: **영어 원문 (한국어판이 어색하거나 모호할 때 대조용)** — 한국어판은 이 영어 원문의 번역본으로 보임
+- `materials/ai-lego-stack-ko.pdf` / `ai-lego-stack.pdf`, `prompt-patterns-ko.pdf` / `prompt-patterns.pdf`, `trust-tier-ko.pdf` / `trust-tier.pdf`, `data-readiness-ko.pdf` / `data-readiness.pdf`: 하위 챕터 한/영 쌍 (필요 시 보충 및 대조)
+- [[Initiatives/Builders Lounge/builders/Song-Jae-hee-Build-with-AI/2026-06-29 Build with AI source note#Summary|Build with AI source note]]: 기존 정리 (참고용, 직접 읽기를 대체하지 않음).
 - [[Initiatives/Builders Lounge/README#멤버 목록|Builders Lounge README]]: Builders Lounge 맥락 확인.
 
 ### M2 - Audience and Product Discovery Angle
@@ -525,6 +535,7 @@ Build-with-AI/
 ├── vl_materials/
 ├── 01-Source-Map/
 │   ├── README.md
+│   ├── reading-notes.md
 │   └── build-with-ai-source-map.md
 ├── 02-Video-Angle/
 │   ├── README.md
