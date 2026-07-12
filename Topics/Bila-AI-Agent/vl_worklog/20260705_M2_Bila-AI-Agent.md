@@ -209,6 +209,134 @@ GitHub 연결 기능의 리트리버가 레포 전체를 재귀적으로 색인�
 
 Live #17 방송 중 실험② 세션을 여기서 마무리한다. GitHub 레포 연결과 Q&A 참조 문제를 3단계로 진단·해결한 것이 핵심 성과이며, Google Drive 연결과 Phase 1 최종 검증은 다음 세션에서 이어간다.
 
+---
+
+## 세션 2 (2026-07-12) — 프롬프트 되돌리기 재개, 새 발견
+
+### 🚩 정정 사항 — System Prompt 필드는 하나뿐 (mention/chat 별도 아님)
+
+**증상**: M1(6/28)·M2(7/5) 워크로그에 "GobiSpace는 mention/chat 별도 시스템 프롬프트를 지원 — 확인됨"이라고 기록돼 있었으나, 오늘 실제 어드민 화면(Settings → Agents)을 확인한 결과 **System prompt 입력 필드가 하나뿐**이다. 사용자가 이전에 mention용/chat용으로 별도 텍스트를 준비했지만 적용할 별도 필드 자체가 없다.
+
+**추가 확인**: Language 드롭다운도 이전 기록("Korean 고정")과 달리 현재 **"Auto"**로 표시됨 — "Auto: mirrors the caller's language"라는 설명 텍스트 확인.
+
+**해석**: M1 당시 "별도 프롬프트 확인됨"이라고 판단한 근거가 실제 UI 확인이 아니라 mention 응답과 chat 응답의 톤 차이를 프롬프트 분리로 오인했을 가능성이 있다. 혹은 그 사이 GOBI 플랫폼이 필드를 단일화했을 수도 있다 — 원인은 불확실하나, **현재 어드민 화면 기준으로 정정**한다.
+
+**조치**: mention용/chat용으로 나눴던 v2 프롬프트를 하나의 필드에 맞는 통합판(v2.1)으로 병합. 아래 "다음 세션 계획"에 통합 프롬프트 텍스트 기록.
+
+**M4 요구사항 후보 추가**: ④ mention 컨텍스트(짧고 공식적)와 chat 컨텍스트(길고 대화형)에 각각 최적화된 응답을 하나의 프롬프트로 지시해야 하는 제약 — 필드가 분리되면 더 정교한 톤 제어가 가능해짐.
+
+### System Prompt v2.1 적용 완료 (2026-07-12)
+
+단일 필드에 mention/chat 통합 텍스트로 교체, Language를 Auto → **Korean**으로 변경. 사용자 확인 완료.
+
+### 실습2: Google Drive 연결 (2026-07-12)
+
+**목적**: 실제 BL 회의록 폴더 대신, 연결 메커니즘 자체를 먼저 검증하기 위해 기존 테스트 폴더 사용.
+
+**진행 중 발견 — Google OAuth 미검증 앱 경고**: Drive 연결 시도 시 "Google hasn't verified this app" 경고 화면 노출 (개발자: `mika@joingobi.com`, GOBI 자체 도메인 — 앱은 GOBI 본인 것이나 Google 앱 검증(CASA 등)이 아직 완료되지 않은 상태로 추정). "Advanced → Go to GobiSpace (unsafe)"로 우회 진행. 🚩 **M4 요구사항 후보**: 신규 멤버가 Drive 연결 시 이 경고를 보고 이탈할 수 있음 — Google 앱 검증 진행 여부 강민석님께 확인 필요.
+
+**연결 결과**:
+| 항목 | 확인 결과 |
+|------|---------|
+| 계정 | solkit70@gmail.com |
+| 연결 폴더 | My Drive / 2025 Vibe Coding Bootcamp (테스트용, 실제 BL 회의록 아님) |
+| 방식 | GobiSpace 자체 Drive 폴더 Picker (Choose a folder → 폴더 탐색 → "Use 폴더명") |
+| 폴더 단위 연결 | ✅ 확인됨 — 전체 드라이브 아닌 특정 폴더만 선택 가능 |
+
+**다음 단계**: 프롬프트에 이 Drive 폴더를 데이터 소스로 명시(v2.2) → 폴더 내용 기반 질문으로 실제 검색 여부 검증 → 검증되면 실제 BL 회의록 폴더로 교체 재연결.
+
+### v2.2 프롬프트 적용 + 검증 테스트 1차 결과 (2026-07-12)
+
+System Prompt에 Google Drive 폴더를 데이터 소스 ③으로 명시(v2.2) 후 검증용 마커 파일(`vl_materials/drive-test-marker.md`, 테스트 코드 `DRIVE-TEST-7749`)을 Drive "2025 Vibe Coding Bootcamp" 폴더에 업로드하고 질문.
+
+**질문**: "2025 Vibe Coding Bootcamp 폴더 테스트 문서에 적힌 테스트 코드가 뭐예요?"
+
+**결과**: ❌ 실패 — "구글 드라이브의 '2025 Vibe Coding Bootcamp' 폴더를 확인했으나, 현재 접근 가능한 파일이 없습니다"
+
+**호출된 도구**: `Glob "/gdrive/2025 Vibe Coding Bootcamp/**/*"` — GitHub 때와 달리 Drive 전용 검색 도구는 정상 호출됨(이슈1과 다른 패턴). 다만 결과가 0건.
+
+### 🚩 이슈 3: Google Drive 폴더 선택이 저장되지 않음 (UI 버그 추정) — 근본 원인 확정
+
+**증상**: Settings → Agents → Google Drive 섹션에서 "Choose a folder" → Picker에서 "My Drive / 2025 Vibe Coding Bootcamp" 탐색 → **"Use '2025 Vibe Coding Bootcamp'"** 버튼 클릭까지는 정상 진행되나, 이 섹션에는 GitHub 섹션과 달리 **별도의 명시적 Save/Attached 상태 표시가 없음**. Agents 탭을 벗어났다가 재진입하면 Google Drive 섹션이 다시 **"Pick a Drive folder" 초기 상태**로 돌아가 있고, 선택했던 폴더 정보가 사라져 있음.
+
+**연관성**: 위 검증 테스트에서 Bila의 Glob 도구가 정상 호출됐음에도 파일을 0건 찾은 것은, 애초에 폴더 연결 자체가 백엔드에 저장되지 않았기 때문일 가능성이 높다. 즉 사용자 눈에는 "폴더 선택 완료"로 보였지만 실제로는 연결이 성립하지 않은 상태에서 질문했을 수 있다.
+
+**상태**: GOBI 개발자 리포트 작성 완료(아래), 강민석님 공유 대기. Google Drive 연결 재시도 및 재검증은 리포트 회신 후 진행.
+
+---
+
+## 🚩 GOBI 개발자 리포트 #2 — Google Drive 폴더 선택이 저장되지 않음
+
+**작성일**: 2026-07-12 | **작성자**: 박창수(Changsoo Park) | **수신**: 강민석님 (GOBI 개발자) | **관련 모듈**: Bila-AI-Agent M2
+
+### 요약
+
+Changbal 스페이스 Agents 설정에서 Google Drive 폴더를 선택("Use [폴더명]" 클릭)해도 GitHub 섹션과 같은 명시적 저장/연결 상태 표시가 없고, 설정 페이지를 벗어났다가 재진입하면 폴더 선택이 초기화된다. 이 상태에서 Bila에게 해당 폴더 내용을 질문하면 도구(Glob)는 정상 호출되지만 파일을 하나도 찾지 못한다 — 연결이 실제로 저장되지 않은 것으로 추정된다.
+
+### 환경 정보
+
+| 항목 | 내용 |
+|------|------|
+| Space | Changbal (창발) |
+| 계정 | solkit70@gmail.com |
+| 대상 폴더 | My Drive / 2025 Vibe Coding Bootcamp (테스트용) |
+| 위치 | Settings → Agents → Google Drive 섹션 |
+
+### 재현 절차
+
+1. Settings → Agents → Google Drive 섹션 → **"Choose a folder"** 클릭
+2. Picker에서 "My Drive / 2025 Vibe Coding Bootcamp" 탐색 → **"Use '2025 Vibe Coding Bootcamp'"** 클릭
+3. 화면상 선택이 완료된 것처럼 보이나, GitHub 섹션의 "Attached [레포명]" 같은 확정 상태 표시가 없고 별도 Save 버튼도 없음
+4. Settings → Agents 탭을 벗어났다가 다시 진입
+5. Google Drive 섹션이 다시 **"Pick a Drive folder"** 초기 화면으로 돌아가 있음 — 3단계에서 선택한 폴더 정보가 사라짐
+6. 이 상태에서 검증용 마커 파일(`drive-test-marker.md`, 테스트 코드 `DRIVE-TEST-7749`)을 해당 폴더에 업로드하고 Bila에게 "테스트 코드가 뭐예요?" 질문
+7. **결과**: `Glob "/gdrive/2025 Vibe Coding Bootcamp/**/*"` 도구는 호출되나 "접근 가능한 파일이 없습니다" 응답
+
+### 기대 동작 vs 실제 동작
+
+| 구분 | 내용 |
+|------|------|
+| 기대 | 폴더 선택("Use") 후 GitHub처럼 연결 상태가 저장되고 재방문 시에도 유지되어야 함 |
+| 실제 | 재진입 시 선택이 초기화된 것처럼 보이고, 실제로 Bila도 해당 폴더의 파일을 전혀 찾지 못함(신규 업로드 파일 포함 0건) |
+
+### 가설
+
+1. 폴더 선택 시 백엔드 저장 API 호출이 누락되거나 실패하는 UI 버그
+2. 또는 실제로는 저장되지만 재방문 시 현재 연결 상태를 불러오는 조회 로직이 없어 UI만 초기화되어 보이는 표시 버그(이 경우 Glob 0건은 별도 원인 — 인덱싱 지연 등)
+
+### 요청 사항
+
+1. 폴더 선택 후 GitHub 섹션과 동일하게 "Attached [폴더명]" 형태의 명시적 저장 확인 UI 추가
+2. 현재 Changbal 스페이스에 실제로 Drive 폴더 연결이 저장되어 있는지 백엔드 확인 부탁드립니다
+3. 저장이 안 되고 있는 게 맞다면 수정 일정 공유 부탁드립니다 — M2 Phase 1 최종 검증(실습3)이 이 연결에 의존하고 있어 확인 전까지는 진행이 어렵습니다
+
+### 참고 자료
+
+- 전체 실험 기록: `Ingest/CatchUpAI_VL/Topics/Bila-AI-Agent/vl_worklog/20260705_M2_Bila-AI-Agent.md`
+- 테스트 마커 파일: `Ingest/CatchUpAI_VL/Topics/Bila-AI-Agent/vl_materials/drive-test-marker.md`
+
+## DoD 체크리스트 (M2) — 2026-07-12 세션2 종료 시점
+
+- [x] GitHub 레포 연결 완료 (7/5 완료 유지)
+- [x] 연결 후 기록 참조 답변 확인 (7/5 완료 유지)
+- [x] 시스템 프롬프트 v3 → v2.1(통합) → v2.2(Drive 추가) 정리, Language Auto → Korean 변경 적용
+- [ ] Google Drive 회의록 폴더 연결 완료 → ❌ 블로킹 — 폴더 선택이 저장되지 않는 버그(이슈3) 발견, GOBI 리포트 #2 작성 후 강민석님 Slack 전달 대기
+- [ ] Phase 1 최종 테스트: 10개 질문 중 7개 이상 적절한 답변 → 이슈3 해결 후 진행
+- [ ] 데이터 연결 전후 비교 문서 작성 → 이슈3 해결 후 진행
+
+**세션2 요약**: 6개 DoD 중 3개 완료(프롬프트 정리), 나머지 3개는 Google Drive 연결 버그(이슈3)로 블로킹. 다만 이 버그 자체가 M4 GOBI 요구사항의 세 번째 핵심 소재가 됐다 — GitHub 이슈1·2에 이어 "Attach/연결 UI가 실제 저장·검색 경로와 분리되어 있다"는 패턴이 Drive에서도 반복 확인됨.
+
+## Daily Retrospective — 세션2 (2026-07-12)
+
+- **What went well?**: 시스템 프롬프트 필드 구조에 대한 오기록(mention/chat 별도 → 실제로는 단일 필드)을 사용자의 실제 화면 확인으로 즉시 바로잡았다. Drive 연결 검증도 GitHub 때와 동일한 "정답이 명확한 마커 테스트" 방법론(drive-test-marker.md, DRIVE-TEST-7749)을 재사용해 빠르게 문제를 좁혔다.
+- **What could be improved?**: M1 시점 문서화("mention/chat 별도 프롬프트 확인됨")가 실제 UI 확인 없이 추정으로 기록됐던 것으로 보인다 — 앞으로는 "확인됨"이라고 쓸 때 실제 스크린샷·재현 여부를 명시하는 습관이 필요하다.
+- **Insights**: GitHub(이슈1·2)와 Drive(이슈3)에서 반복되는 패턴 — GobiSpace의 "연결 UI"와 "실제 검색에 쓰이는 백엔드 상태"가 눈에 보이는 것보다 훨씬 느슨하게 연결되어 있다. 이건 M4에서 개별 이슈가 아니라 "연결 상태 신뢰성" 자체를 하나의 요구사항 카테고리로 묶어 제출할 근거가 된다.
+- **Tomorrow's focus**: GOBI 리포트 #2(Drive 폴더 미저장)를 Slack으로 강민석님께 전달 → 회신 확인 → 재연결 및 재검증 → Phase 1 최종 10문항 테스트 → 데이터 연결 전후 비교 문서 작성
+
+## 오늘 세션 종료 (2026-07-12, M2 세션2)
+
+시스템 프롬프트를 단일 필드 구조에 맞게 통합·정리(v2.1→v2.2)했고, Google Drive 연결을 시도하는 과정에서 폴더 선택이 저장되지 않는 버그(이슈3)를 발견해 GOBI 리포트로 정리했다. Phase 1 최종 검증은 이 버그 해결 이후로 이월한다.
+
 ## 참조 및 산출물
 
 - Roadmap: [[Ingest/CatchUpAI_VL/Topics/Bila-AI-Agent/vl_roadmap/20260628_RoadMap_Bila-AI-Agent]]

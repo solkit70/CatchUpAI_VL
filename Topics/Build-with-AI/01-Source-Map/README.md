@@ -17,12 +17,12 @@ Source Map을 읽기 전에 먼저 [source-materials.md](source-materials.md)를
 ## Learning Order
 
 1. [source-materials.md](source-materials.md) — Build with AI 설명, 공식 다운로드 정보, `vl_materials/` 원본 파일 위치, 읽기 순서 확인.
-2. [reading-notes.md](reading-notes.md) — Build with AI 완전판을 Part 0~12까지 읽고, 각 파트의 핵심 주장과 개인 해석을 정리한 M1 실습1 산출물.
-3. [build-with-ai-source-map.md](build-with-ai-source-map.md) — 읽기 노트를 바탕으로 첫 영상 thesis, Part별 영상 활용 방식, Builders Lounge/Bila AI Agent 연결을 정리한 M1 실습2 산출물.
+2. [reading-notes.md](reading-notes.md) — AI가 Build with AI 완전판과 사용자의 기존 문서를 바탕으로 Part 0~12의 핵심 주장과 해석을 정리한 M1 실습1 초안. 사용자가 직접 읽고 자신의 생각/동의/반박/수정 사항을 정리해야 최종 학습 노트가 된다.
+3. [build-with-ai-source-map.md](build-with-ai-source-map.md) — 읽기 노트를 바탕으로 첫 영상 thesis, Part별 영상 활용 방식, Builders Lounge/Bila AI Agent 연결을 정리한 M1 실습2 초안.
 
 ## Status
 
 - **M1 자료 안내**: 완료 — 원본 자료 위치와 공식 다운로드 정보 정리
-- **M1 실습1**: 완료 — Part 0~12 이해 노트 작성
-- **M1 실습2**: 완료 — Source Map/Thesis 업데이트
-- **다음 모듈**: [../02-Video-Angle/README.md](../02-Video-Angle/README.md)
+- **M1 실습1**: 사용자 검토 대기 — AI Reading notes 초안을 사용자가 직접 읽고 정리해야 함
+- **M1 실습2**: 초안 있음 — 사용자 검토 반영 후 Source Map/Thesis 확정
+- **다음 작업**: `reading-notes.md` 사용자 직접 읽기·정리 여부 확인

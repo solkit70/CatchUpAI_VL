@@ -48,7 +48,7 @@ vl_roadmap/20260705_RoadMap_Build-with-AI.md
 
 **현재 진행 중인 모듈**:
 ```
-M2 - Audience and Product Discovery Angle 정식 검토 대기
+M1 - Reading notes 사용자 직접 읽기·정리 확인
 ```
 
 **가장 최근 WorkLog 파일**:
@@ -58,7 +58,7 @@ vl_worklog/20260712_M1_Build-with-AI.md
 
 **이전 세션의 "Tomorrow's focus"** (있다면):
 ```
-M1의 원본 자료 안내(`01-Source-Map/source-materials.md`), 자료 완독, Source Map은 완료되었다. M2/M3 산출물은 승인 전 선행 초안이므로 정식 완료로 계산하지 않는다. 다음 세션은 M2 오늘 학습 계획을 먼저 제시하고 사용자 승인 후 `02-Video-Angle/first-video-angle.md` 초안을 검토/수정한다.
+`01-Source-Map/reading-notes.md`는 AI가 원본 자료와 사용자의 기존 문서를 바탕으로 정리한 초안이다. 다음 세션은 M2로 바로 가지 않고, 먼저 사용자가 이 Reading notes를 직접 읽고 자신의 생각/동의/반박/수정 사항을 정리했는지 확인한다. 아직 완료되지 않았다면 오늘의 학습 계획은 Reading notes 검토와 사용자 생각 반영을 M1 마무리 작업으로 잡는다. 사용자가 직접 읽고 정리했음을 확인한 뒤에만 M1 Source Map/Thesis를 확정하고, 그 다음 M2 학습 계획 승인으로 넘어간다.
 ```
 
 ---
@@ -72,7 +72,7 @@ M1의 원본 자료 안내(`01-Source-Map/source-materials.md`), 자료 완독, 
 
 **오늘의 상태/제약사항** (있다면):
 ```
-먼저 `01-Source-Map/source-materials.md`에서 원본 자료와 다운로드 위치를 확인한다. 실제 PDF/EPUB/치트시트는 `vl_materials/`의 Topic 내부 복사본을 우선 사용하고, 확인되지 않은 내용은 추정하지 않는다. 어떤 모듈도 오늘 학습 계획 승인 없이 실행하지 않는다.
+먼저 `01-Source-Map/source-materials.md`에서 원본 자료와 다운로드 위치를 확인한다. 실제 PDF/EPUB/치트시트는 `vl_materials/`의 Topic 내부 복사본을 우선 사용하고, 확인되지 않은 내용은 추정하지 않는다. `01-Source-Map/reading-notes.md`는 AI 정리 초안으로 취급하며, 사용자가 직접 읽고 정리했는지 확인하기 전에는 M1을 최종 완료로 보지 않는다. 어떤 모듈도 오늘 학습 계획 승인 없이 실행하지 않는다.
 ```
 
 ---

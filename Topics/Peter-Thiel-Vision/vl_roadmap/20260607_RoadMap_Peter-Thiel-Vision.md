@@ -887,7 +887,7 @@ Peter-Thiel-Vision/
 | M5 | 2026-06-14 | | 🔄 진행 중 | 1/5 | claim-counterclaim-matrix 완료, README 등 미완 |
 | M5.5 | 2026-06-28 | | 🔄 진행 중 | 3/5 | alternative-vision-draft, my-worldview, thiel-vs-my-worldview 작성 |
 | **M5.6** | — | — | **⏳ 다음 작업** | 0% | 플라톤 철인정치 + 봉건제→자본주의 리서치 필요 |
-| M6 | 2026-06-14 | | 🔄 진행 중 | 1/6 | essay-outline 완료, 종합 문서 미완 |
+| M6 | 2026-06-14 | | 🔄 진행 중 | 2/6 | essay-outline 3부·에필로그 채움(2026-07-12), 종합 문서 미완 |
 
 **범례**:
 - ⏳ 대기

@@ -14,7 +14,9 @@ tags:
 **모듈**: M1 - Build with AI 완독·이해 → Source Map/Thesis
 **학습 시간**: Live18 방송 중 시작, 이후 독립 학습 세션으로 계속 진행
 **방법론**: VibeLearn AI
-**절차 상태**: 2026-07-12 06:30 사후 절차 복구 및 M1 검토 완료
+**절차 상태**: 2026-07-12 06:30 사후 절차 복구, 2026-07-12 사용자 Reading notes 검토 게이트 추가
+
+> **중요 정정**: `01-Source-Map/reading-notes.md`는 AI가 원본 자료와 사용자의 기존 문서를 바탕으로 정리한 초안이다. 사용자가 이 문서를 직접 읽고 자신의 생각/동의/반박/수정 사항을 정리하기 전에는 M1을 최종 완료로 처리하지 않는다.
 
 ## 오늘의 학습 목표
 
@@ -25,6 +27,7 @@ tags:
 - [x] Part 0, 2부, 4~12부 이해 노트 보강
 - [x] `reading-notes.md` 기준으로 Source Map/Thesis 업데이트
 - [x] `01-Source-Map/README.md` 학습 순서 업데이트
+- [ ] 사용자가 `reading-notes.md`를 직접 읽고 자신의 생각으로 정리했는지 확인
 
 ## 진행 내용
 
@@ -107,16 +110,17 @@ PDF 텍스트 추출 도구는 없었지만, EPUB은 XHTML 구조라 3부 텍스
 
 Roadmap M1 Definition of Done:
 
-- [x] Build with AI 완전판을 실제로 완독했다.
+- [x] AI가 Build with AI 완전판을 읽고 Reading notes 초안을 작성했다.
 - [x] `source-materials.md`에 원본 자료 설명, 공식 다운로드 위치, `vl_materials/` 파일 목록이 정리되었다.
-- [x] Part 0~12 각각의 핵심 주장을 자신의 언어로 설명할 수 있다 (`reading-notes.md`).
+- [x] Part 0~12 각각의 핵심 주장이 `reading-notes.md`에 정리되었다.
+- [ ] 사용자가 `reading-notes.md`를 직접 읽고 자신의 생각/동의/반박/수정 사항을 반영했다.
 - [x] 이해 노트를 바탕으로 Part 0~12가 모두 영상 관점으로 매핑되었다.
 - [x] 핵심 thesis가 1개 이상 도출되었다.
 - [x] Builders Lounge / Bila AI Agent 연결 지점이 출처 기반으로 정리되었다.
 - [x] README.md가 학습 순서(읽기 노트 → Source Map)를 안내한다.
 - [x] WorkLog에 M1 진행 내용이 기록되었다.
 
-**현재 완료율**: 8/8 (100%)
+**현재 완료율**: 8/9 (사용자 직접 읽기·정리 확인 전)
 
 ## Daily Retrospective
 
@@ -146,8 +150,9 @@ Roadmap M1 Definition of Done:
 ### Tomorrow's focus
 
 - M2 `Audience and Product Discovery Angle`로 바로 실행하지 않는다.
-- 먼저 M2용 오늘의 학습 계획을 제시하고 사용자 승인을 받은 뒤 진행한다.
-- 기존 `02-Video-Angle/first-video-angle.md`는 승인 전 선행 초안으로 보고, M1 Source Map 기준으로 검토/수정해야 정식 M2 산출물로 인정한다.
+- 다음 세션은 먼저 사용자가 `01-Source-Map/reading-notes.md`를 직접 읽고 자신의 생각으로 정리했는지 확인한다.
+- 아직 정리하지 않았다면 M1 마무리 학습 계획을 제시하고 승인받은 뒤, Reading notes에 대한 사용자 생각/수정/반박을 반영한다.
+- 이 확인이 끝난 뒤에만 M1을 최종 완료 처리하고, 그 다음 M2용 오늘의 학습 계획을 제시한다.
 
 ## 참조 및 산출물
 
