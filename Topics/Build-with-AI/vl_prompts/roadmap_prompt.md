@@ -80,11 +80,13 @@ Ingest/CatchUpAI_VL/Topics/Material_For_Topics/Bila_AI_Agent/bila_agent_project_
 Ingest/CatchUpAI_VL/Topics/Material_For_Topics/Bila_AI_Agent/system_prompt_chat.md
 Ingest/CatchUpAI_VL/Topics/Material_For_Topics/Bila_AI_Agent/gobi_space_settings.md
 Build with AI ePub/PDF source materials in the Builders Lounge material set
+Ingest/CatchUpAI_VL/Topics/Build-with-AI/vl_materials/
+Ingest/CatchUpAI_VL/Topics/Build-with-AI/01-Source-Map/source-materials.md
 ```
 
 **vl_materials/ 폴더**:
 ```
-이번 Topic에서 직접 생성한 연구 산출물은 01-Source-Map, 02-Video-Angle, 03-Video-Starter 폴더에 둔다. 원본 대용량 자료는 기존 Builders Lounge 및 Material_For_Topics 경로를 원본 출처로 유지한다.
+원본 PDF/EPUB/치트시트 자료는 이 Topic의 `vl_materials/`에 복사해 보관한다. 원본 자료의 설명, 다운로드 위치, 학습 순서는 M1 산출물 `01-Source-Map/source-materials.md`에 둔다. 이번 Topic에서 직접 생성한 연구 산출물은 01-Source-Map, 02-Video-Angle, 03-Video-Starter 폴더에 둔다.
 ```
 
 ---

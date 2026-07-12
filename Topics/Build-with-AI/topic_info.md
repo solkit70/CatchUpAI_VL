@@ -12,6 +12,8 @@ tags:
 
 Build with AI는 송재희님의 12부작 자료를 학습하고, 그 내용을 Catch Up AI / Builders Lounge 영상 산출물로 전환하기 위한 VibeLearn AI Topic이다. 이번 연구의 중심 질문은 "AI로 데모는 만들었는데 왜 서비스는 안 되는가"이며, 코딩 능력보다 문제 구조화, 사용자 정의, 데이터/워크플로 준비, 검증 경계, 프로덕션 기준이 더 큰 병목이라는 관점을 검토한다.
 
+학습의 첫 단계는 영상 기획이 아니라 원본 자료 확인이다. `01-Source-Map/source-materials.md`에서 공식 사이트, 다운로드 페이지, Topic 안의 로컬 PDF/EPUB/치트시트 위치를 먼저 확인한 뒤 Part 0~12 읽기 노트로 넘어간다.
+
 ## Learning Purpose
 
 이번 Topic의 목적은 Build with AI 자료를 단순 요약하는 것이 아니라 영상 제작 가능한 논지로 바꾸는 것이다. 특히 [[Initiatives/Builders Lounge/builders/Song-Jae-hee-Build-with-AI/2026-06-29 Build with AI source note#Live #17 Experiment Angle|Build with AI source note]]의 문제의식을 바탕으로, Builders Lounge의 Product Discovery 흐름과 [[Ingest/CatchUpAI_VL/Topics/Material_For_Topics/Bila_AI_Agent/bila_agent_project_plan#Bila AI Agent 프로젝트 플랜|Bila AI Agent 구축 플랜]]이 어떻게 연결될 수 있는지 정리한다.
@@ -20,6 +22,7 @@ Build with AI는 송재희님의 12부작 자료를 학습하고, 그 내용을 
 
 | Output | Purpose | Location |
 |---|---|---|
+| Source Materials Index | Build with AI 설명, 공식 다운로드 위치, 로컬 원본 파일 목록, 읽기 순서 안내 | `01-Source-Map/source-materials.md` |
 | Source Map | 12부작 구조와 영상 전환 가능한 핵심 메시지 정리 | `01-Source-Map/` |
 | Video Angle | 첫 영상의 타깃, 논지, 흐름 확정 | `02-Video-Angle/` |
 | Video Brief | 영상 제작 착수용 브리프와 스크립트 스타터 | `03-Video-Starter/` |
@@ -27,6 +30,7 @@ Build with AI는 송재희님의 12부작 자료를 학습하고, 그 내용을 
 
 ## Source Materials
 
+- [[Ingest/CatchUpAI_VL/Topics/Build-with-AI/01-Source-Map/source-materials#Purpose|Build with AI 원본 자료 안내]]
 - [[Initiatives/Builders Lounge/README#멤버 목록|Builders Lounge README]]
 - [[Initiatives/Builders Lounge/builders/Song-Jae-hee-Build-with-AI/2026-06-29 Build with AI source note#Summary|Build with AI source note]]
 - [[Ingest/CatchUpAI_VL/Topics/Material_For_Topics/Bila_AI_Agent/bila_agent_project_plan#Bila AI Agent 프로젝트 플랜|Bila AI Agent 구축 플랜]]

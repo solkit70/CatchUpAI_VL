@@ -108,7 +108,8 @@ OS: Windows 11 / Obsidian Vault
 ### 튜토리얼 및 강의
 
 ```text
-- Build with AI ePub/PDF source materials: AI/Initiatives/Builders Lounge/builders/Song-Jae-hee-Build-with-AI/materials/
+- Build with AI ePub/PDF source materials: Ingest/CatchUpAI_VL/Topics/Build-with-AI/vl_materials/
+- Build with AI 원본 자료 안내: Ingest/CatchUpAI_VL/Topics/Build-with-AI/01-Source-Map/source-materials.md
 ```
 
 ### 관련 GitHub 저장소
@@ -123,7 +124,8 @@ OS: Windows 11 / Obsidian Vault
 
 ```text
 vl_materials/ 폴더에 추가할 자료:
-- 원본 대용량 자료는 기존 Builders Lounge 및 Material_For_Topics 경로를 원본 출처로 유지한다.
+- 원본 PDF/EPUB/치트시트 자료는 이 Topic의 `vl_materials/`에 복사해 보관한다.
+- 원본 자료의 설명, 다운로드 위치, 학습 순서는 M1 산출물 `01-Source-Map/source-materials.md`에 둔다.
 - 이번 Topic에서 생성한 연구 산출물은 01-Source-Map, 02-Video-Angle, 03-Video-Starter, 04-Slide-Plan, 05-Production-Package에 둔다.
 ```
 
@@ -190,7 +192,7 @@ vl_materials/ 폴더에 추가할 자료:
 - 구체적으로: Build with AI 전체 요약이 아니라 첫 영상으로 전환할 angle을 만든다.
 - 검증 가능하게: Source Map, Video Angle, Video Brief, Slide Plan, Production Package를 산출물로 남긴다.
 - 현실적으로: 완성 영상 렌더링은 별도 제작 단계로 분리한다.
-- 참조 자료 포함: 기존 Vault 문서와 Build with AI 원본 자료를 출처로 유지한다.
+- 참조 자료 포함: Build with AI 원본 자료는 `vl_materials/`에 보관하고, M1 산출물에서 출처와 학습 순서를 설명한다.
 
 ### ❌ Don'ts (지양)
 

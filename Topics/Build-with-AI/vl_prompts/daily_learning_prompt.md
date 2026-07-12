@@ -48,17 +48,17 @@ vl_roadmap/20260705_RoadMap_Build-with-AI.md
 
 **현재 진행 중인 모듈**:
 ```
-M1-M3 - Source Map, Video Angle, Video Starter 초안 작성
+M2 - Audience and Product Discovery Angle 정식 검토 대기
 ```
 
 **가장 최근 WorkLog 파일**:
 ```
-vl_worklog/20260705_M1_Build-with-AI.md
+vl_worklog/20260712_M1_Build-with-AI.md
 ```
 
 **이전 세션의 "Tomorrow's focus"** (있다면):
 ```
-사용자가 first-video-angle.md와 video-brief.md를 리뷰한 뒤, 승인된 방향에 맞춰 영상 스크립트 초안과 슬라이드 플랜을 작성한다.
+M1의 원본 자료 안내(`01-Source-Map/source-materials.md`), 자료 완독, Source Map은 완료되었다. M2/M3 산출물은 승인 전 선행 초안이므로 정식 완료로 계산하지 않는다. 다음 세션은 M2 오늘 학습 계획을 먼저 제시하고 사용자 승인 후 `02-Video-Angle/first-video-angle.md` 초안을 검토/수정한다.
 ```
 
 ---
@@ -67,12 +67,12 @@ vl_worklog/20260705_M1_Build-with-AI.md
 
 **사용 가능한 시간**:
 ```
-1-2시간 단위로 영상 기획과 스크립트 작업을 진행
+1-2시간 단위로 학습 계획 승인 후 진행
 ```
 
 **오늘의 상태/제약사항** (있다면):
 ```
-이미 확보된 로컬 자료를 우선 사용하고, 확인되지 않은 내용은 추정하지 않는다.
+먼저 `01-Source-Map/source-materials.md`에서 원본 자료와 다운로드 위치를 확인한다. 실제 PDF/EPUB/치트시트는 `vl_materials/`의 Topic 내부 복사본을 우선 사용하고, 확인되지 않은 내용은 추정하지 않는다. 어떤 모듈도 오늘 학습 계획 승인 없이 실행하지 않는다.
 ```
 
 ---

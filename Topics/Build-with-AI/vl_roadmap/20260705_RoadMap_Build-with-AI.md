@@ -42,6 +42,7 @@ Build-with-AI는 송재희님의 Build with AI 12부작 자료를 학습하고, 
 
 ### 학습 목표
 
+- Build with AI가 어떤 자료인지, 공식 다운로드 위치와 로컬 원본 파일 위치를 먼저 확인한다.
 - Build with AI 완전판을 실제로 읽고, 각 파트의 핵심 주장을 자신의 언어로 설명할 수 있다 (최우선 목표).
 - 그 이해를 바탕으로 Build with AI 12부작의 전체 구조와 핵심 메시지를 Source Map으로 정리한다.
 - Builders Lounge Product Discovery 및 Bila AI Agent 프로젝트와 연결되는 영상 논지를 도출한다.
@@ -62,26 +63,27 @@ Build-with-AI는 송재희님의 Build with AI 12부작 자료를 학습하고, 
 
 | 모듈 | 모듈명 | 난이도 | 예상 시간 | 산출물 폴더 |
 |---|---|---|---:|---|
-| M1 | Build with AI 완독·이해 → Source Map/Thesis | ⭐ | 2h | `01-Source-Map/` |
+| M1 | Build with AI 원본 자료 확인·완독·이해 → Source Map/Thesis | ⭐ | 2.5h | `01-Source-Map/` |
 | M2 | Audience and Product Discovery Angle | ⭐⭐ | 1.25h | `02-Video-Angle/` |
 | M3 | Script Starter and Narrative Design | ⭐⭐ | 1.5h | `03-Video-Starter/` |
 | M4 | Slide Plan and Visual Asset Map | ⭐⭐ | 1.25h | `04-Slide-Plan/` |
 | M5 | Capstone Video Production Package | ⭐⭐⭐ | 1.5h | `05-Production-Package/` |
 
-**총 예상 시간**: 7.5시간 (버퍼 포함, M1 완독 시간 추가로 +0.5h)
+**총 예상 시간**: 8시간 (M1 원본 자료 확인 0.5h 포함, 버퍼 포함)
 
 ## 📖 모듈별 상세 계획
 
-### M1 - Build with AI 완독·이해 → Source Map/Thesis
+### M1 - Build with AI 원본 자료 확인·완독·이해 → Source Map/Thesis
 
 **난이도**: ⭐
-**예상 시간**: 2h
+**예상 시간**: 2.5h
 **산출물 폴더**: `01-Source-Map/`
 
 > **재구성 안내**: 실습1이 "영상 분류"에서 "완독 및 이해"로 바뀌었다. 영상 매핑(실습2)은 실습1의 이해가 끝난 뒤에만 진행하며, 원문을 다시 읽지 않고 실습1 노트를 근거로 정리한다.
 
 #### 학습 목표
 
+- [ ] Build with AI가 어떤 자료인지, 공식 다운로드 위치와 Topic 안의 로컬 PDF/EPUB/치트시트 위치를 설명할 수 있다.
 - [ ] Build with AI 완전판(`build-with-ai-complete-ko.pdf`)을 실제로 읽고, 각 파트의 핵심 주장을 자신의 언어로 설명할 수 있다.
 - [ ] "데모에서 서비스로 넘어가는 벽"이 왜 생기는지 원문 근거로 설명할 수 있다.
 - [ ] (이해 완료 후) 읽으며 남긴 노트를 Source Map과 핵심 thesis로 정리한다.
@@ -92,13 +94,24 @@ Build-with-AI는 송재희님의 Build with AI 12부작 자료를 학습하고, 
 2. **AI 레고 스택**: 여러 AI 도구와 데이터, 자동화 도구를 조합해 작업 흐름을 만드는 관점이다. 단일 도구의 기능보다 조합 구조가 중요하다.
 3. **데모-서비스 간극**: 통제된 입력에서 작동하는 데모와 실제 사용자/데이터/운영 책임을 견디는 서비스 사이의 차이다.
 4. **검증 경계**: AI가 만든 결과를 어디까지 자동 처리하고 어디서 사람이 확인해야 하는지 정하는 기준이다.
+5. **Source Orientation**: 학습 전에 원본 자료의 성격, 공식 배포 위치, 로컬 보관 위치, 보조 자료의 역할을 확인하는 단계다.
 
 #### 실습 과제
 
-**실습 1: Build with AI 완독 및 이해 노트 작성** ⭐ (최우선, 신규)
+**실습 0: 원본 자료 확인 및 학습 입구 정리** ⭐ (최우선)
+- **목적**: Build with AI가 어떤 자료인지, 원본은 어디에 있는지, 어떤 순서로 읽을지 먼저 정리한다.
+- **단계**:
+  1. `01-Source-Map/source-materials.md`에서 Build with AI 설명, 공식 홈, 다운로드 페이지를 확인한다.
+  2. `vl_materials/` 안의 완전판 PDF/EPUB과 치트시트 4종 한/영 자료를 확인한다.
+  3. 주 학습 자료는 `build-with-ai-complete-ko.pdf` 또는 `.epub`, 대조 자료는 `build-with-ai-complete-en.pdf`로 정한다.
+  4. 치트시트는 본문 학습 뒤 복습/도식 후보로 사용한다고 기록한다.
+- **예상 시간**: 30분
+- **검증**: `01-Source-Map/source-materials.md`에 Build with AI 설명, 공식 다운로드 정보, 로컬 원본 파일 목록, 학습 순서가 있다.
+
+**실습 1: Build with AI 완독 및 이해 노트 작성** ⭐ (최우선)
 - **목적**: 원문을 실제로 읽고 이해한다. 이 단계에서는 영상 활용 여부를 판단하지 않는다.
 - **단계**:
-  1. `build-with-ai-complete-ko.pdf`(또는 `.epub`)를 처음부터 끝까지 읽는다. 필요하면 하위 챕터(`prompt-patterns-ko.pdf`, `ai-lego-stack-ko.pdf`, `trust-tier-ko.pdf`, `data-readiness-ko.pdf`)도 참고한다.
+  1. `vl_materials/build-with-ai-complete-ko.pdf`(또는 `.epub`)를 처음부터 끝까지 읽는다. 필요하면 하위 챕터(`prompt-patterns-ko.pdf`, `ai-lego-stack-ko.pdf`, `trust-tier-ko.pdf`, `data-readiness-ko.pdf`)도 참고한다.
   2. **한국어 표현이 어색하거나 의미가 모호한 부분은 영어 원문(`build-with-ai-complete-en.pdf` + 하위 챕터 EN 4종)을 함께 대조해서 정확한 의미를 확인한다.** 한국어판은 영어 원문의 번역본으로 보이며, 번역 과정에서 뉘앙스가 달라진 부분이 있을 수 있다.
   3. 각 파트를 읽으며 핵심 주장을 1-2문장으로 **자신의 언어**로 적는다.
   4. 이해가 안 되거나 모호한 부분은 표시해두고, 다 읽은 뒤 다시 확인한다.
@@ -119,6 +132,7 @@ Build-with-AI는 송재희님의 Build with AI 12부작 자료를 학습하고, 
 ```text
 01-Source-Map/
 ├── README.md
+├── source-materials.md           ← 실습0: 원본 자료 안내 + 다운로드/보관 위치 + 학습 순서
 ├── reading-notes.md              ← 신규: 실습1 완독·이해 노트 (파트별 핵심 주장)
 └── build-with-ai-source-map.md   ← 실습2: 영상 매핑 + thesis (이해 노트 기반)
 ```
@@ -126,6 +140,7 @@ Build-with-AI는 송재희님의 Build with AI 12부작 자료를 학습하고, 
 #### Definition of Done
 
 - [ ] Build with AI 완전판을 실제로 완독했다.
+- [ ] `source-materials.md`에 원본 자료 설명, 공식 다운로드 위치, `vl_materials/` 파일 목록이 정리되었다.
 - [ ] 12개 파트 각각의 핵심 주장을 자신의 언어로 설명할 수 있다 (`reading-notes.md`).
 - [ ] 이해 노트를 바탕으로 12개 파트가 모두 영상 관점으로 매핑되었다.
 - [ ] 핵심 thesis가 1개 이상 도출되었다.
@@ -145,16 +160,18 @@ Build-with-AI는 송재희님의 Build with AI 12부작 자료를 학습하고, 
 
 #### 예상 시간 배분
 
+- 원본 자료 확인 및 학습 입구 정리 (실습0): 30분
 - 완독 및 이해 노트 (실습1): 75분
 - Source Map/Thesis 정리 (실습2): 35분
 - 문서화/버퍼: 20분
-- **합계**: 2.2h → 약 2h (원문 분량에 따라 다음 세션으로 이어질 수 있음)
+- **합계**: 2.7h → 약 2.5h (원문 분량에 따라 다음 세션으로 이어질 수 있음)
 
 #### 참조 자료
 
-- `materials/build-with-ai-complete-ko.pdf` / `.epub`: **완전판 원문 (1차 자료, 실습1에서 직접 읽는 대상)**
-- `materials/build-with-ai-complete-en.pdf`: **영어 원문 (한국어판이 어색하거나 모호할 때 대조용)** — 한국어판은 이 영어 원문의 번역본으로 보임
-- `materials/ai-lego-stack-ko.pdf` / `ai-lego-stack.pdf`, `prompt-patterns-ko.pdf` / `prompt-patterns.pdf`, `trust-tier-ko.pdf` / `trust-tier.pdf`, `data-readiness-ko.pdf` / `data-readiness.pdf`: 하위 챕터 한/영 쌍 (필요 시 보충 및 대조)
+- `01-Source-Map/source-materials.md`: Build with AI 설명, 공식 다운로드, 로컬 원본 파일 목록, 학습 순서.
+- `vl_materials/build-with-ai-complete-ko.pdf` / `.epub`: **완전판 원문 (1차 자료, 실습1에서 직접 읽는 대상)**
+- `vl_materials/build-with-ai-complete-en.pdf`: **영어 원문 (한국어판이 어색하거나 모호할 때 대조용)** — 한국어판은 이 영어 원문의 번역본으로 보임
+- `vl_materials/ai-lego-stack-ko.pdf` / `ai-lego-stack.pdf`, `prompt-patterns-ko.pdf` / `prompt-patterns.pdf`, `trust-tier-ko.pdf` / `trust-tier.pdf`, `data-readiness-ko.pdf` / `data-readiness.pdf`: 하위 챕터 한/영 쌍 (필요 시 보충 및 대조)
 - [[Initiatives/Builders Lounge/builders/Song-Jae-hee-Build-with-AI/2026-06-29 Build with AI source note#Summary|Build with AI source note]]: 기존 정리 (참고용, 직접 읽기를 대체하지 않음).
 - [[Initiatives/Builders Lounge/README#멤버 목록|Builders Lounge README]]: Builders Lounge 맥락 확인.
 
@@ -533,8 +550,13 @@ Build-with-AI/
 ├── vl_worklog/
 │   └── 20260705_M1_Build-with-AI.md
 ├── vl_materials/
+│   ├── build-with-ai-complete-ko.pdf
+│   ├── build-with-ai-complete-ko.epub
+│   ├── build-with-ai-complete-en.pdf
+│   └── ... 치트시트 PDF
 ├── 01-Source-Map/
 │   ├── README.md
+│   ├── source-materials.md
 │   ├── reading-notes.md
 │   └── build-with-ai-source-map.md
 ├── 02-Video-Angle/
@@ -554,18 +576,20 @@ Build-with-AI/
 ## 📊 학습 진행 상황 추적
 
 > **재시작 안내**: 기존 M1~M3 산출물은 이 Roadmap이 정식 생성·검토되기 전에 만들어진 것으로, VibeLearn AI의 "Roadmap 승인 → 일일 학습 계획 승인 → 실행" 절차를 따르지 않았다. 이 Roadmap 승인 이후 M1부터 정식 절차로 다시 진행하기로 했으므로, 아래 추적표는 재시작 시점 기준 ⏳ 대기로 초기화한다.
+> **절차 복구 기록 (2026-07-12 06:30)**: 2026-07-12 세션에서 M1~M3 산출물이 작성되었으나, 일일 학습 시작 시 "오늘의 학습 계획 제시 → 사용자 승인 → 실행" 게이트가 생략되었다. 사용자 지시에 따라 사후 복구를 진행했으며, M1은 자료 완독·이해 중심 산출물로 검토 완료하고, M2/M3는 정식 완료가 아니라 기존 초안/검토 대기로 분리한다. 다음 학습부터는 각 모듈 실행 전에 반드시 오늘 학습 계획 승인을 먼저 받는다.
 
 | 모듈 | 시작일 | 종료일 | 상태 | DoD 달성률 | 비고 |
 |---|---|---|---|---:|---|
-| M1 | | | ⏳ | 0% | 재시작 대기 — 기존 산출물은 참고용, 정식 절차로 재작성 |
-| M2 | | | ⏳ | 0% | 재시작 대기 |
-| M3 | | | ⏳ | 0% | 재시작 대기 |
+| M1 | 2026-07-12 | 2026-07-12 | ✅ | 100% | 사후 절차 복구 및 검토 완료 — `source-materials.md` + Part 0~12 reading notes + Source Map/Thesis는 자료 공부 산출물로 인정 |
+| M2 | | | 📝 | 0% | 승인 전 선행 초안 있음 — `02-Video-Angle/first-video-angle.md`와 WorkLog는 다음 M2 학습 계획 승인 후 검토/수정해야 정식 완료 처리 |
+| M3 | | | 📝 | 0% | 승인 전 선행 초안 있음 — `03-Video-Starter/video-brief.md`와 WorkLog는 M2 정식 완료 후 별도 M3 학습 계획 승인 필요 |
 | M4 | | | ⏳ | 0% | |
 | M5 | | | ⏳ | 0% | |
 
 **범례**:
 - ⏳ 대기
 - 🔄 진행 중
+- 📝 초안/검토 대기
 - ✅ 완료
 
 ## 🎯 성공 기준
