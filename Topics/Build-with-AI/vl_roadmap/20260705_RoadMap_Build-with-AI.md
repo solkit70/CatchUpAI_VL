@@ -61,13 +61,13 @@ Build-with-AI는 송재희님의 Build with AI 12부작 자료를 학습하고, 
 
 ## 🗺️ 전체 로드맵 구조
 
-| 모듈 | 모듈명 | 난이도 | 예상 시간 | 산출물 폴더 |
-|---|---|---|---:|---|
-| M1 | Build with AI 원본 자료 확인·완독·이해 → Source Map/Thesis | ⭐ | 2.5h | `01-Source-Map/` |
-| M2 | Audience and Product Discovery Angle | ⭐⭐ | 1.25h | `02-Video-Angle/` |
-| M3 | Script Starter and Narrative Design | ⭐⭐ | 1.5h | `03-Video-Starter/` |
-| M4 | Slide Plan and Visual Asset Map | ⭐⭐ | 1.25h | `04-Slide-Plan/` |
-| M5 | Capstone Video Production Package | ⭐⭐⭐ | 1.5h | `05-Production-Package/` |
+| 모듈  | 모듈명                                              | 난이도 | 예상 시간 | 산출물 폴더                   |
+| --- | ------------------------------------------------ | --- | ----: | ------------------------ |
+| M1  | Build with AI 원본 자료 확인·완독·이해 → Source Map/Thesis | ⭐   |  2.5h | `01-Source-Map/`         |
+| M2  | Audience and Product Discovery Angle             | ⭐⭐  | 1.25h | `02-Video-Angle/`        |
+| M3  | Script Starter and Narrative Design              | ⭐⭐  |  1.5h | `03-Video-Starter/`      |
+| M4  | Slide Plan and Visual Asset Map                  | ⭐⭐  | 1.25h | `04-Slide-Plan/`         |
+| M5  | Capstone Video Production Package                | ⭐⭐⭐ |  1.5h | `05-Production-Package/` |
 
 **총 예상 시간**: 8시간 (M1 원본 자료 확인 0.5h 포함, 버퍼 포함)
 
@@ -583,17 +583,19 @@ Build-with-AI/
 
 | 모듈 | 시작일 | 종료일 | 상태 | DoD 달성률 | 비고 |
 |---|---|---|---|---:|---|
-| M1 | 2026-07-12 | | 🔄 | 8/9 | AI 정리 초안 완료 — `source-materials.md` + Part 0~12 reading notes + Source Map/Thesis 있음. 사용자 직접 읽기·정리 확인 후 최종 완료 처리 |
-| M2 | | | 📝 | 0% | 승인 전 선행 초안 있음 — `02-Video-Angle/first-video-angle.md`와 WorkLog는 다음 M2 학습 계획 승인 후 검토/수정해야 정식 완료 처리 |
-| M3 | | | 📝 | 0% | 승인 전 선행 초안 있음 — `03-Video-Starter/video-brief.md`와 WorkLog는 M2 정식 완료 후 별도 M3 학습 계획 승인 필요 |
-| M4 | | | ⏳ | 0% | |
-| M5 | | | ⏳ | 0% | |
+| M1 | 2026-07-12 | 2026-07-19 | ✅ | 9/9 | 사용자 직접 리뷰 반영 완료 — `source-materials.md` + Part 0~12 reading notes + Source Map/Thesis 확정 |
+| M2 | 2026-07-19 | 2026-07-19 | ✅ | 6/6 | 사용자 피드백 반영 완료 — Build with AI 전체 소개 + 사용자 해석 + 실제 경험 예시를 모두 포함하는 통합 angle로 `first-video-angle.md` 재확정 |
+| M3 | 2026-07-19 | 2026-07-19 | ✅ | 6/6 | 사용자 승인 후 정식 검토 완료 — 통합 소개형 angle을 `video-brief.md`의 opening script와 explanation blocks로 전환 |
+| M4 | 2026-07-19 | 2026-07-19 | ✅ | 6/6 | 사용자 승인 후 정식 완료 — M3 brief를 `04-Slide-Plan/slide-plan.md`의 장면/슬라이드 계획과 asset map으로 변환 |
+| M5 | 2026-07-19 | 2026-07-19 | ✅ | 6/6 | 사용자 승인 후 정식 완료 — M1-M4 산출물을 `05-Production-Package/production-package.md`로 통합 |
 
 **범례**:
 - ⏳ 대기
 - 🔄 진행 중
 - 📝 초안/검토 대기
 - ✅ 완료
+
+**Topic 진행 상태 (2026-07-19)**: M1-M5 완료. 첫 영상 제작 착수 패키지까지 완료되었으며, 다음 단계는 사용자 리뷰 후 실제 스크립트/슬라이드/영상 제작이다.
 
 ## 🎯 성공 기준
 

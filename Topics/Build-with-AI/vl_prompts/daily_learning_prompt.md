@@ -48,17 +48,17 @@ vl_roadmap/20260705_RoadMap_Build-with-AI.md
 
 **현재 진행 중인 모듈**:
 ```
-M1 - Reading notes 사용자 직접 읽기·정리 확인
+Topic Review / Video Production Handoff
 ```
 
 **가장 최근 WorkLog 파일**:
 ```
-vl_worklog/20260712_M1_Build-with-AI.md
+vl_worklog/20260719_M5_Build-with-AI.md
 ```
 
 **이전 세션의 "Tomorrow's focus"** (있다면):
 ```
-`01-Source-Map/reading-notes.md`는 AI가 원본 자료와 사용자의 기존 문서를 바탕으로 정리한 초안이다. 다음 세션은 M2로 바로 가지 않고, 먼저 사용자가 이 Reading notes를 직접 읽고 자신의 생각/동의/반박/수정 사항을 정리했는지 확인한다. 아직 완료되지 않았다면 오늘의 학습 계획은 Reading notes 검토와 사용자 생각 반영을 M1 마무리 작업으로 잡는다. 사용자가 직접 읽고 정리했음을 확인한 뒤에만 M1 Source Map/Thesis를 확정하고, 그 다음 M2 학습 계획 승인으로 넘어간다.
+M5는 2026-07-19에 완료 처리되었다. `05-Production-Package/production-package.md`에서 M1-M4 핵심 산출물을 하나의 영상 제작 착수 패키지로 통합했다. 현재 Topic은 첫 영상 제작 패키지까지 완료되었으며, 다음 세션은 사용자 리뷰와 실제 영상 제작 handoff 단계다. 먼저 production package의 review request 3개(제목 방향, 영상 범위, 사례 사용 방식)에 대한 사용자 결정을 확인한 뒤, 승인되면 공식 화면 캡처, 도식 제작, Part별 한 줄 표 제작, 전체 스크립트 초안 작성으로 넘어간다.
 ```
 
 ---
@@ -72,7 +72,7 @@ vl_worklog/20260712_M1_Build-with-AI.md
 
 **오늘의 상태/제약사항** (있다면):
 ```
-먼저 `01-Source-Map/source-materials.md`에서 원본 자료와 다운로드 위치를 확인한다. 실제 PDF/EPUB/치트시트는 `vl_materials/`의 Topic 내부 복사본을 우선 사용하고, 확인되지 않은 내용은 추정하지 않는다. `01-Source-Map/reading-notes.md`는 AI 정리 초안으로 취급하며, 사용자가 직접 읽고 정리했는지 확인하기 전에는 M1을 최종 완료로 보지 않는다. 어떤 모듈도 오늘 학습 계획 승인 없이 실행하지 않는다.
+M1-M5 완료 산출물을 기준으로 사용자 리뷰 또는 실제 영상 제작 handoff를 진행한다. 핵심 기준 문서는 `05-Production-Package/production-package.md`다. 실제 PDF/EPUB/치트시트는 `vl_materials/`의 Topic 내부 복사본을 우선 사용하고, 확인되지 않은 내용은 추정하지 않는다. Build with AI 공식 자료는 송재희님 자료로 명확히 출처 표시해야 하며, 내부 Vault 자료나 개인 프로젝트 화면은 공개 가능 여부 확인 전에는 실제 화면으로 사용하지 않는다. 어떤 제작 작업도 사용자 승인 없이 실행하지 않는다.
 ```
 
 ---

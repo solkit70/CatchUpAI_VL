@@ -8,18 +8,18 @@ tags:
 
 ## Purpose
 
-이 폴더는 Build with AI 연구 결과를 실제 영상 제작으로 넘기기 위한 브리프, 스크립트 스타터, 시각 자료 후보를 보관한다. 현재 문서는 승인 전 선행 초안이며, M2가 정식 승인/완료된 뒤 별도 M3 학습 계획을 사용자에게 승인받아야 정식 산출물로 전환할 수 있다.
+이 폴더는 Build with AI 연구 결과를 실제 영상 제작으로 넘기기 위한 브리프, 스크립트 스타터, 시각 자료 후보를 보관한다. 2026-07-19에 M3 진행 승인 후 `video-brief.md`를 정식 검토·수정했으며, M2에서 확정한 통합 소개형 angle을 opening script와 explanation blocks로 전환했다.
 
 ## Learning Order
 
 1. [../01-Source-Map/source-materials.md](../01-Source-Map/source-materials.md) — M1 원본 자료 안내, 다운로드 위치, `vl_materials/` 파일 목록 확인.
 2. [../01-Source-Map/build-with-ai-source-map.md](../01-Source-Map/build-with-ai-source-map.md) — M1 thesis와 source mapping 확인.
-3. [../02-Video-Angle/first-video-angle.md](../02-Video-Angle/first-video-angle.md) — M2 angle 초안 확인. 정식 M3 전에 M2 승인 필요.
-4. [video-brief.md](video-brief.md) — Working title, video promise, opening script starter, explanation blocks, narrative beats, visual beats를 정리한 M3 초안.
+3. [../02-Video-Angle/first-video-angle.md](../02-Video-Angle/first-video-angle.md) — M2 통합 소개형 angle 확인.
+4. [video-brief.md](video-brief.md) — Working title, video promise, opening script starter, explanation blocks, narrative beats, visual beats를 정리한 M3 산출물.
 
 ## Status
 
-- **M3 상태**: 초안/검토 대기 — 사용자 승인 전 작성됨
-- **M3 실습1**: 초안 있음 — 30~60초 opening script starter 작성
-- **M3 실습2**: 초안 있음 — 5개 이하 explanation block과 source connection 정리
-- **다음 단계**: M2 정식 승인/완료 후 M3 오늘 학습 계획을 별도로 제시
+- **M3 상태**: 완료
+- **M3 실습1**: 완료 — 통합 소개형 opening script starter 작성
+- **M3 실습2**: 완료 — 5개 이하 explanation block과 source connection 정리
+- **다음 단계**: M4 `Slide Plan and Visual Asset Map` 학습 계획 수립 및 승인

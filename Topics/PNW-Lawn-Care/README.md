@@ -35,6 +35,10 @@
 | 3 | [M3: 여름 관리 + 문제 진단](03-Summer-Troubleshoot/README.md) | 휴면 vs. 고사 구분, 잔디 문제 진단, 여름 관수 스케줄 | ✅ 완료 |
 | 4 | [M4: 연간 계획 + Topic 마무리](04-Annual-Plan/README.md) | 가을 관리, 연간 캘린더, Winterizing, 자기 평가 | ✅ 완료 |
 
+## 🧾 실제 관리 기록
+
+- [2026 실행 로그](maintenance-log-2026.md) — 주간 일정 관리와 WorkLog에 흩어져 있던 제초제, 비료, 잔디깎이, Dethatching, 스프링클러 세팅, 상태 관찰 기록을 날짜순으로 통합.
+
 ---
 
 ## 🌿 핵심 교훈 4가지
