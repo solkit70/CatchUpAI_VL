@@ -682,13 +682,13 @@ vl_materials/
 
 #### Definition of Done
 
-- [ ] 리허설 체크리스트 작성
-- [ ] Q&A 예상 질문 작성
-- [ ] 후속 콘텐츠 패키지 설계
-- [ ] 최종 발표 계획 작성
-- [ ] Topic Retrospective 작성
-- [ ] M7 README 작성
-- [ ] WorkLog 작성 완료
+- [x] 리허설 체크리스트 작성
+- [x] Q&A 예상 질문 작성
+- [x] 후속 콘텐츠 패키지 설계
+- [x] YouTube 업로드 메타데이터 작성
+- [x] SNS 홍보 패키지 작성
+- [x] M7 README 작성
+- [x] WorkLog 작성 완료
 
 #### Self-Assessment
 
@@ -898,7 +898,7 @@ The-AI-Powered-Creator/
 | M4 | 2026-06-19 | 2026-06-22 | ✅ 완료 | 100% | presentation-structure.md v2.0 + README.md 완성 |
 | M5 | 2026-06-21 | 2026-06-22 | ✅ 완료 | 100% | ai-creator-workflow.md + README.md + Case 5(Tehaleh) 추가 완성 |
 | M6 | 2026-06-21 | 2026-06-22 | ✅ 완료 | 100% | slide-draft.md + demo-assets.md + presentation-0626.md + README.md + **5개 클립 저장 완료** |
-| M7 | 2026-06-22 | | 🔄 진행 중 | 50% | rehearsal-checklist.md + post-event-content-package.md 완성 / final-plan + retrospective D-1 예정 |
+| M7 | 2026-06-22 | 2026-07-02 | ✅ 완료 | 100% | rehearsal-checklist.md + post-event-content-package.md + YouTube 업로드 + SNS 홍보 패키지 완료 |
 | M8 | 2026-06-24 | 2026-06-24 | ✅ 완료 | 100% | youtube-channel-growth-analysis.md 작성 완료 |
 
 ### D-7 압축 일정
@@ -921,15 +921,15 @@ The-AI-Powered-Creator/
 ## 성공 기준
 
 전체 Topic 완료 기준:
-- [ ] 모든 모듈 완료
-- [ ] 발표 핵심 메시지 확정
-- [ ] 기록 thesis 정리
-- [ ] Catch Up AI 채널 Topic 변화 분석 정리
-- [ ] 12-15장 슬라이드 초안 작성
-- [ ] 발표자 노트와 데모 배치표 작성
-- [ ] 리허설 체크리스트 작성
-- [ ] 발표 후 재사용 콘텐츠 패키지 작성
-- [ ] Topic Retrospective 작성
+- [x] 모든 모듈 완료
+- [x] 발표 핵심 메시지 확정
+- [x] 기록 thesis 정리
+- [x] Catch Up AI 채널 Topic 변화 분석 정리
+- [x] 12-15장 슬라이드 초안 작성
+- [x] 발표자 노트와 데모 배치표 작성
+- [x] 리허설 체크리스트 작성
+- [x] 발표 후 재사용 콘텐츠 패키지 작성
+- [x] Topic Retrospective 작성
 
 ## 로드맵 품질 체크
 

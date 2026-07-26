@@ -1,8 +1,8 @@
 # Seattle Tech Week 2026 - 최종 참가 계획
 
 **작성일**: 2026-07-19  
-**최종 업데이트**: 2026-07-25  
-**상태**: 참가 계획 확정 + Google Calendar 등록 완료 + 오프라인 우선 기준 반영 + Luma 전체 행사 수 재확인 + Good to Great 등록 미승인 반영  
+**최종 업데이트**: 2026-07-26  
+**상태**: 참가 계획 확정 + Google Calendar 등록 완료 + 오프라인 우선 기준 반영 + Luma 전체 행사 수 재확인 + Good to Great 및 OpenAI Builder Lounge 등록 미승인 반영 + 사용자 Luma 취소 8건 반영 + 7/27은 AI Startup Secret Sauce 단독 참석으로 최종 확정 (나머지 4개 불참/취소) + 7/28은 벨뷰 저녁 행사(AI With Agency, TwelveLabs + Qdrant)에만 집중, 시애틀 주간 2건 취소 + 7/29는 Seattle AI Summit·You Vibe-Coded·Omnigent 취소 반영, Startup425 Demo Day만 참석 유지 + 기존 일정(AI4PKM x CMDS 격주 미팅, Lee & Park Meeting)은 Tech Week 계획과 무관해 문서에서 제거  
 **기준 문서**: `../02-Curation/shortlist.md`, `../02-Curation/priority-review.md`
 
 ## M3 판단
@@ -17,7 +17,24 @@
 
 ## 2026-07-25 Luma 상태 업데이트
 
-사용자가 `Good to Great with AI Agents: Coffee & Panel with Seattle's best AI entrepreneurs | Lightspeed AI`의 상태가 **Registration not accepted**라고 알려 주었다. 이 행사는 더 이상 7/28 오전 참석 후보로 보지 않고, AI agent 제품화 관점의 관심 참고 후보로만 남긴다. Google Calendar의 해당 이벤트도 `[Not Accepted]` 제목과 투명 일정으로 업데이트했다.
+Gmail에서 2026-07-25 전후 Luma/Seattle Tech Week 관련 메일 5건을 확인했다. `Good to Great with AI Agents: Coffee & Panel with Seattle's best AI entrepreneurs | Lightspeed AI`는 **Registration not accepted**로 확인되었고, 이 행사는 더 이상 7/28 오전 참석 후보로 보지 않고 AI agent 제품화 관점의 관심 참고 후보로만 남긴다. Google Calendar의 해당 이벤트도 `[Not Accepted]` 제목과 투명 일정으로 업데이트했다.
+
+같은 검색에서 `OpenAI Builder Lounge #SeattleTechWeek`도 **Registration not accepted** 메일을 받았음을 확인했다(2026-07-25 21:36 PDT). 이 행사는 7/30 최우선 네트워킹 후보였지만, 이제 Pending Approval이 아니라 미승인/불참 후보로 처리한다. `Preparing to Thrive`는 승인 메일이 다시 확인되었지만 이미 Approved로 문서에 반영되어 있어 상태 변경은 없다. `Creativity, Intent, and the Future of AI`는 추가 좌석 확보와 waitlist 일부 수용 예정 안내였고, 개인 승인 메일은 아니므로 Waiting List 상태를 유지한다.
+
+## 2026-07-26 사용자 Luma 취소 반영
+
+Gmail에서 `You marked yourself as not going to...` 형식의 Luma 취소 확인 메일 8건을 확인했다. 이 메일들은 주최측 취소나 승인 거절이 아니라, 사용자가 직접 참석하지 않음으로 표시했고 Luma가 host에게 알렸으며 calendar removal attachment를 포함한 상태다.
+
+- AEO: Optimize your business for AI Search (7/27, 2026-07-26 08:21 PDT)
+- STW: Stories from Build-Fail-Build (7/27, 2026-07-26 08:21 PDT)
+- Agentic Commerce ASO (7/27, 2026-07-26 08:21 PDT)
+- Automating Your Workflow Correctly (7/28, 2026-07-26 08:20 PDT)
+- Built to Last? AI, Startups and Data (7/28, 2026-07-26 08:22 PDT)
+- Seattle AI Summit - The Infrastructure Era (7/29, 2026-07-26 08:48 PDT)
+- You Vibe-Coded an App, Now What? (7/29, 2026-07-26 08:53 PDT)
+- Technical Talk: An Omnigent Deep Dive / Patio Social (7/29, 2026-07-26 08:56 PDT)
+
+따라서 이 8개는 단순한 내부 불참 판단이 아니라 Luma RSVP 자체가 **Marked as Not Going**으로 바뀐 항목으로 기록한다. 특히 `Seattle AI Summit - The Infrastructure Era`는 이전 문서에서 Attend였지만, 취소 확인 메일을 기준으로 실제 참석 후보에서 제외한다.
 
 ## 2026-07-23 승인 이메일 반영
 
@@ -35,9 +52,9 @@ Luma에서 아래 11개 행사의 승인 이메일을 받아 Pending Approval �
 - Preparing to Thrive (7/31)
 - Building AI You Can Stand Behind (7/31)
 
-아래 6개 행사도 같은 날 승인 이메일을 받았지만, 원래 무료/즉시 등록형이라 이미 "신청 완료"·Attend 상태였다 — 상태 변경 없이 승인 확인만 기록한다: AI Startup Secret Sauce, Automating Your Workflow Correctly, Seattle AI Summit - The Infrastructure Era, Startup425 AI Accelerator Demo Day, ACM Data Conclave, AI & the Future of Consumer Experiences.
+아래 6개 행사도 같은 날 승인 이메일을 받았지만, 원래 무료/즉시 등록형이라 이미 "신청 완료"·Attend 상태였다 — 이 시점에는 상태 변경 없이 승인 확인만 기록했다: AI Startup Secret Sauce, Automating Your Workflow Correctly, Seattle AI Summit - The Infrastructure Era, Startup425 AI Accelerator Demo Day, ACM Data Conclave, AI & the Future of Consumer Experiences. 이후 2026-07-26 Gmail 확인 기준으로 Automating Your Workflow Correctly와 Seattle AI Summit은 사용자가 Marked as Not Going 처리했다.
 
-새로 Approved된 항목 중 같은 날 다른 Approved/Attend 항목과 시간이 겹치는 경우가 여러 건 생겼다(7/28 저녁 AI With Agency ↔ TwelveLabs + Qdrant, 7/29 오전 You Vibe-Coded ↔ Seattle AI Summit, 7/30 오후 How AI Gets Built at Ai2 ↔ ACM Data Conclave, 7/31 오전 Founder Fundamentals ↔ Preparing to Thrive, 7/31 오후 Building AI You Can Stand Behind ↔ Consumer Experiences). 실제 참석은 각 항목의 날짜별 운영 메모에 표시된 대로 겹치는 시간대에서 선택이 필요하다.
+새로 Approved된 항목 중 같은 날 다른 Approved/Attend 항목과 시간이 겹치는 경우가 여러 건 생겼다(7/28 저녁 AI With Agency ↔ TwelveLabs + Qdrant, 7/30 오후 How AI Gets Built at Ai2 ↔ ACM Data Conclave, 7/31 오전 Founder Fundamentals ↔ Preparing to Thrive, 7/31 오후 Building AI You Can Stand Behind ↔ Consumer Experiences). 7/29 오전 You Vibe-Coded ↔ Seattle AI Summit 충돌은 이후 둘 다 Marked as Not Going으로 정리되어 더 이상 실제 참석 충돌이 아니다. 실제 참석은 각 항목의 날짜별 운영 메모에 표시된 대로 겹치는 시간대에서 선택이 필요하다.
 
 **Google Calendar 반영**: 이번 세션에서는 Google Calendar 도구가 연결되어 있지 않아 캘린더 이벤트를 직접 업데이트하지 못했다. 문서상 상태는 모두 Approved로 반영했으니, 캘린더 도구가 연결되면 위 11개 이벤트를 tentative → confirmed(busy)로, Ai2 이벤트는 제목도 함께 갱신해야 한다.
 
@@ -45,46 +62,44 @@ Luma에서 아래 11개 행사의 승인 이메일을 받아 Pending Approval �
 
 ### 7/27 Mon
 
-| 결정 | 시간 | 이벤트 | 상태 | 비용 | 장소/형식 | Calendar | Luma |
-|---|---:|---|---|---|---|---|---|
-| Attend | 1:00 PM-3:00 PM | AEO: Optimize your business for AI Search | Approved | 확인 필요 | Seattle, Register to See Address | [Calendar](https://www.google.com/calendar/event?eid=Zjc2aXY2dmwzOWtyZmlmNnVpc2UyOWtyNm8gc29sa2l0NzBAbQ) | [Luma](https://luma.com/02ar1zge) |
-| Attend | 2:00 PM-3:00 PM | STW: Stories from Build-Fail-Build | Approved | 가격 표시 없음 | Seattle, Register to See Address | [Calendar](https://www.google.com/calendar/event?eid=c2RyYTRpYWozbG0yZG9zanVhbTg1bjR2NGMgc29sa2l0NzBAbQ) | [Luma](https://luma.com/jommk2wc) |
-| Attend | 3:00 PM-5:00 PM | Agentic Commerce ASO | Approved | 가격 표시 없음 | Seattle, Register to See Address | [Calendar](https://www.google.com/calendar/event?eid=dGVnbnU0Z2FuaDQ1cjFxNzNlM2VtcnIzbWcgc29sa2l0NzBAbQ) | [Luma](https://luma.com/8024ch9r) |
-| Attend | 5:00 PM-7:00 PM | AI Startup Secret Sauce | Registered | Free | Bellevue City Hall | [Calendar](https://www.google.com/calendar/event?eid=Z2FsM25zNnMydDMxbzJqNGEzNGVwMW1jcm8gc29sa2l0NzBAbQ) | [Luma](https://luma.com/njfn4ugt) |
-| Waitlist | 6:00 PM-8:00 PM | Creativity, Intent, and the Future of AI | Waiting List | 확인 필요 | Art Love Salon | [Calendar](https://www.google.com/calendar/event?eid=bjZjZjBjcGo1bGJqZjBpazh1dWw4MmVlYjggc29sa2l0NzBAbQ) | [Luma](https://luma.com/khxpsau5) |
+| 결정      |              시간 | 이벤트                                       | 상태                   | 비용       | 장소/형식                                          | Calendar                                                                                                 | Luma                              |
+| ------- | --------------: | ----------------------------------------- | -------------------- | -------- | ---------------------------------------------- | -------------------------------------------------------------------------------------------------------- | --------------------------------- |
+| Exclude | 1:00 PM-3:00 PM | AEO: Optimize your business for AI Search | Marked as Not Going | 확인 필요    | 2505 3rd Ave #324, Seattle, United States      | [Calendar](https://www.google.com/calendar/event?eid=Zjc2aXY2dmwzOWtyZmlmNnVpc2UyOWtyNm8gc29sa2l0NzBAbQ) | [Luma](https://luma.com/02ar1zge) |
+| Exclude | 2:00 PM-3:00 PM | STW: Stories from Build-Fail-Build        | Marked as Not Going | 가격 표시 없음 | 1932 1st Ave suite 210, Seattle, WA 98101, USA | [Calendar](https://www.google.com/calendar/event?eid=c2RyYTRpYWozbG0yZG9zanVhbTg1bjR2NGMgc29sa2l0NzBAbQ) | [Luma](https://luma.com/jommk2wc) |
+| Exclude | 3:00 PM-5:00 PM | Agentic Commerce ASO                      | Marked as Not Going | 가격 표시 없음 | 2505 3rd Ave #324, Seattle, United States      | [Calendar](https://www.google.com/calendar/event?eid=dGVnbnU0Z2FuaDQ1cjFxNzNlM2VtcnIzbWcgc29sa2l0NzBAbQ) | [Luma](https://luma.com/8024ch9r) |
+| Attend  | 5:00 PM-7:00 PM | AI Startup Secret Sauce                   | Registered           | Free     | Bellevue City Hall                             | [Calendar](https://www.google.com/calendar/event?eid=Z2FsM25zNnMydDMxbzJqNGEzNGVwMW1jcm8gc29sa2l0NzBAbQ) | [Luma](https://luma.com/njfn4ugt) |
+| Exclude | 6:00 PM-8:00 PM | Creativity, Intent, and the Future of AI  | Waiting List (불참 결정) | 확인 필요    | Art Love Salon                                 | [Calendar](https://www.google.com/calendar/event?eid=bjZjZjBjcGo1bGJqZjBpazh1dWw4MmVlYjggc29sa2l0NzBAbQ) | [Luma](https://luma.com/khxpsau5) |
 
 ### 7/28 Tue
 
-| 결정 | 시간 | 이벤트 | 상태 | 비용 | 장소/형식 | Calendar | Luma |
-|---|---:|---|---|---|---|---|---|
-| Attend | 9:00 AM-10:30 AM | Automating Your Workflow Correctly | 신청 완료 | 가격 표시 없음 | thinkspace SEATTLE | [Calendar](https://www.google.com/calendar/event?eid=ZHQxYnRxMXNqbGpiaXY3MGU3ODZxdjYycGcgc29sa2l0NzBAbQ) | [Luma](https://luma.com/xkkbxh0u) |
-| Exclude | 9:30 AM-11:30 AM | Good to Great with AI Agents | Registration not accepted | 가격 표시 없음 | Seattle, Register to See Address | [Calendar](https://www.google.com/calendar/event?eid=YzEwZmIwcWM1anUzdTU0dXZvYjBudmQycGsgc29sa2l0NzBAbQ) | [Luma](https://luma.com/4uddde71) |
-| Pending | 12:30 PM-4:00 PM | Building Enduring AI Products in a Shifting Market | Pending Approval | 가격 표시 없음 | Seattle, Register to See Address | [Calendar](https://www.google.com/calendar/event?eid=bGg1dXNxdXZzbDBxam9zbHI3Y2p2cGcxamMgc29sa2l0NzBAbQ) | [Luma](https://luma.com/seattle-u6gi) |
-| Attend | 3:00 PM-4:00 PM | Built to Last? AI, Startups and Data | Approved | 확인 필요 | PitchBook | [Calendar](https://www.google.com/calendar/event?eid=aG4xbTVwYTBuYWc0Z2J0Nmt0cG91MThnNm8gc29sa2l0NzBAbQ) | [Luma](https://luma.com/7wo9san2) |
-| Waitlist | 4:00 PM-5:30 PM | AI for Impact | Waitlist | 확인 필요 | Salesforce Seattle Office | [Calendar](https://www.google.com/calendar/event?eid=OGFtcTdhMHRvMWhjOTY5ZWVicjdja3YyaWsgc29sa2l0NzBAbQ) | [Luma](https://luma.com/vmk774sy) |
-| Pending | 4:00 PM-6:00 PM | Your AI Strategy Is a People Strategy | Pending Approval | 가격 표시 없음 | Seattle, Register to See Address | [Calendar](https://www.google.com/calendar/event?eid=M2toZXJ2aWZhcmlwb3FvNjJmZzNjMTJnOG8gc29sa2l0NzBAbQ) | [Luma](https://luma.com/so0ufkgy) |
-| Existing | 5:00 PM-6:00 PM | AI4PKM x CMDS 격주 미팅 | Existing calendar event | N/A | Online/Meeting | Existing | N/A |
-| Attend | 5:30 PM-7:30 PM | AI With Agency | Approved | 가격 표시 없음 | Bellevue, exact address later | [Calendar](https://www.google.com/calendar/event?eid=NGRmYTB2azc0cDdqNGphaXRiOTI4ZmcwYzggc29sa2l0NzBAbQ) | [Luma](https://luma.com/xysigza0) |
-| Attend | 5:30 PM-9:00 PM | TwelveLabs + Qdrant AI Memory | Approved | 가격 표시 없음 | Bellevue, Register to See Address | [Calendar](https://www.google.com/calendar/event?eid=MzZvamY2MG12ZWxiMjFjMTFzcGJiMnNlNG8gc29sa2l0NzBAbQ) | [Luma](https://luma.com/kyksgkak) |
+| 결정       |               시간 | 이벤트                                                | 상태                        | 비용       | 장소/형식                                                                            | Calendar                                                                                                 | Luma                                  |
+| -------- | ---------------: | -------------------------------------------------- | ------------------------- | -------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | ------------------------------------- |
+| Exclude  | 9:00 AM-10:30 AM | Automating Your Workflow Correctly                 | Marked as Not Going     | 가격 표시 없음 | thinkspace SEATTLE                                                               | [Calendar](https://www.google.com/calendar/event?eid=ZHQxYnRxMXNqbGpiaXY3MGU3ODZxdjYycGcgc29sa2l0NzBAbQ) | [Luma](https://luma.com/xkkbxh0u)     |
+| Exclude  | 9:30 AM-11:30 AM | Good to Great with AI Agents                       | Registration not accepted | 가격 표시 없음 | Seattle, Register to See Address                                                 | [Calendar](https://www.google.com/calendar/event?eid=YzEwZmIwcWM1anUzdTU0dXZvYjBudmQycGsgc29sa2l0NzBAbQ) | [Luma](https://luma.com/4uddde71)     |
+| Pending  | 12:30 PM-4:00 PM | Building Enduring AI Products in a Shifting Market | Pending Approval          | 가격 표시 없음 | Seattle, Register to See Address                                                 | [Calendar](https://www.google.com/calendar/event?eid=bGg1dXNxdXZzbDBxam9zbHI3Y2p2cGcxamMgc29sa2l0NzBAbQ) | [Luma](https://luma.com/seattle-u6gi) |
+| Exclude  |  3:00 PM-4:00 PM | Built to Last? AI, Startups and Data               | Marked as Not Going          | 확인 필요    | PitchBook, Seattle, WA                                                           | [Calendar](https://www.google.com/calendar/event?eid=aG4xbTVwYTBuYWc0Z2J0Nmt0cG91MThnNm8gc29sa2l0NzBAbQ) | [Luma](https://luma.com/7wo9san2)     |
+| Waitlist |  4:00 PM-5:30 PM | AI for Impact                                      | Waitlist                  | 확인 필요    | Salesforce Seattle Office                                                        | [Calendar](https://www.google.com/calendar/event?eid=OGFtcTdhMHRvMWhjOTY5ZWVicjdja3YyaWsgc29sa2l0NzBAbQ) | [Luma](https://luma.com/vmk774sy)     |
+| Pending  |  4:00 PM-6:00 PM | Your AI Strategy Is a People Strategy              | Pending Approval          | 가격 표시 없음 | Seattle, Register to See Address                                                 | [Calendar](https://www.google.com/calendar/event?eid=M2toZXJ2aWZhcmlwb3FvNjJmZzNjMTJnOG8gc29sa2l0NzBAbQ) | [Luma](https://luma.com/so0ufkgy)     |
+| Attend   |  5:30 PM-7:30 PM | AI With Agency                                     | Approved                  | 가격 표시 없음 | Key Center, 601 108th Ave NE Unit 1000, Bellevue, WA 98004 (추정, SAP America Inc) | [Calendar](https://www.google.com/calendar/event?eid=NGRmYTB2azc0cDdqNGphaXRiOTI4ZmcwYzggc29sa2l0NzBAbQ) | [Luma](https://luma.com/xysigza0)     |
+| Attend   |  5:30 PM-9:00 PM | TwelveLabs + Qdrant AI Memory                      | Approved                  | 가격 표시 없음 | Union AI HQ, Bellevue, WA                                                        | [Calendar](https://www.google.com/calendar/event?eid=MzZvamY2MG12ZWxiMjFjMTFzcGJiMnNlNG8gc29sa2l0NzBAbQ) | [Luma](https://luma.com/kyksgkak)     |
 
 ### 7/29 Wed
 
 | 결정 | 시간 | 이벤트 | 상태 | 비용 | 장소/형식 | Calendar | Luma |
 |---|---:|---|---|---|---|---|---|
-| Attend | 9:00 AM-6:00 PM | Seattle AI Summit - The Infrastructure Era | 신청 완료 | Name your own price / suggested price | 10455 NE 5th Pl, Bellevue | [Calendar](https://www.google.com/calendar/event?eid=X2Nscjc4YmFlNnQ2NmFvcGo2NTQ2Z2pqcWVkMTc0aDIwY2xyNmFyamtlY242b3Q5ZWRsZ2cgc29sa2l0NzBAbQ) | [Luma](https://luma.com/yra9zj02) |
-| Attend | 9:00 AM-12:00 PM | You Vibe-Coded an App, Now What? | Approved | 가격 표시 없음 | AI House | [Calendar](https://www.google.com/calendar/event?eid=cWFuZDlsdTUwc3NrcWdxdDYydjFicmJlMDQgc29sa2l0NzBAbQ) | [Luma](https://luma.com/stw2026) |
-| Attend | 12:00 PM-1:30 PM | Technical Talk: An Omnigent Deep Dive / Patio Social | 신청 완료 | 가격 표시 없음 | Databricks Seattle | [Calendar](https://www.google.com/calendar/event?eid=OGdnZzJucTBscWQ5cHI5Mzdmazd0MzI1bHMgc29sa2l0NzBAbQ) | [Luma](https://luma.com/tech_workshop_Omnigent) |
+| Exclude | 9:00 AM-6:00 PM | Seattle AI Summit - The Infrastructure Era | Marked as Not Going | Name your own price / suggested price | 10455 NE 5th Pl, Bellevue | [Calendar](https://www.google.com/calendar/event?eid=X2Nscjc4YmFlNnQ2NmFvcGo2NTQ2Z2pqcWVkMTc0aDIwY2xyNmFyamtlY242b3Q5ZWRsZ2cgc29sa2l0NzBAbQ) | [Luma](https://luma.com/yra9zj02) |
+| Exclude | 9:00 AM-12:00 PM | You Vibe-Coded an App, Now What? | Marked as Not Going | 가격 표시 없음 | AI House | [Calendar](https://www.google.com/calendar/event?eid=cWFuZDlsdTUwc3NrcWdxdDYydjFicmJlMDQgc29sa2l0NzBAbQ) | [Luma](https://luma.com/stw2026) |
+| Exclude | 12:00 PM-1:30 PM | Technical Talk: An Omnigent Deep Dive / Patio Social | Marked as Not Going | 가격 표시 없음 | Databricks Seattle | [Calendar](https://www.google.com/calendar/event?eid=OGdnZzJucTBscWQ5cHI5Mzdmazd0MzI1bHMgc29sa2l0NzBAbQ) | [Luma](https://luma.com/tech_workshop_Omnigent) |
 | Attend | 6:00 PM-8:00 PM | Startup425 AI Accelerator Demo Day | 신청 완료 | 가격 표시 없음 | Bellevue City Hall | [Calendar](https://www.google.com/calendar/event?eid=Y2hhNHYxYnY4ZmVjMzk5MnZtNDg5a2JmbXMgc29sa2l0NzBAbQ) | [Luma](https://luma.com/49ctfw1f) |
 
 ### 7/30 Thu
 
-| 결정 | 시간 | 이벤트 | 상태 | 비용 | 장소/형식 | Calendar | Luma |
-|---|---:|---|---|---|---|---|---|
-| Existing | 10:00 AM-11:30 AM | Lee & Park Meeting | Existing calendar event / movable | N/A | Existing | Existing | N/A |
-| Attend | 2:00 PM-3:45 PM | ACM Data Conclave | 신청 완료 | 가격 표시 없음 | Bellevue, Everest Reception Hall | [Calendar](https://www.google.com/calendar/event?eid=OWt0cDBudTg1MTVidm9qdHBlYWt2dDdzcTQgc29sa2l0NzBAbQ) | [Luma](https://luma.com/f3rma403) |
-| Attend | 3:00 PM-4:00 PM | How AI Gets Built at Ai2 \| AI Research Talk | Approved | 가격 표시 없음 | Ai2 Office, Seattle | [Calendar](https://www.google.com/calendar/event?eid=bWlybHFzNDljODNtNW1xZjZmaDc3MmxyajQgc29sa2l0NzBAbQ) | [Luma](https://luma.com/cp10n5uk) |
-| Pending | 4:00 PM-7:00 PM | OpenAI Builder Lounge #SeattleTechWeek | Pending Approval | 가격 표시 없음 | Bellevue, Register to See Address | [Calendar](https://www.google.com/calendar/event?eid=M2w0MWJnbzlrcmtjNGVwdmFoN3BlNHFmYTAgc29sa2l0NzBAbQ) | [Luma](https://luma.com/openai-builderlounge-seattle-jul30-2026) |
-| Pending | 6:30 PM-9:30 PM | Seattle World Models Carnival | Pending Approval | 확인 필요 | Downtown Bellevue, Register to See Address | [Calendar](https://www.google.com/calendar/event?eid=bGx0dDhlMXJ0YWJrZmFkNGRnNDE2dGw5OGcgc29sa2l0NzBAbQ) | [Luma](https://luma.com/g4vycfcb) |
+| 결정       |                시간 | 이벤트                                          | 상태                                | 비용       | 장소/형식                                      | Calendar                                                                                                 | Luma                                                             |
+| -------- | ----------------: | -------------------------------------------- | --------------------------------- | -------- | ------------------------------------------ | -------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
+| Attend   |   2:00 PM-3:45 PM | ACM Data Conclave                            | 신청 완료                             | 가격 표시 없음 | Bellevue, Everest Reception Hall           | [Calendar](https://www.google.com/calendar/event?eid=OWt0cDBudTg1MTVidm9qdHBlYWt2dDdzcTQgc29sa2l0NzBAbQ) | [Luma](https://luma.com/f3rma403)                                |
+| Attend   |   3:00 PM-4:00 PM | How AI Gets Built at Ai2 \| AI Research Talk | Approved                          | 가격 표시 없음 | Ai2 Office, Seattle                        | [Calendar](https://www.google.com/calendar/event?eid=bWlybHFzNDljODNtNW1xZjZmaDc3MmxyajQgc29sa2l0NzBAbQ) | [Luma](https://luma.com/cp10n5uk)                                |
+| Exclude  |   4:00 PM-7:00 PM | OpenAI Builder Lounge #SeattleTechWeek       | Registration not accepted         | 가격 표시 없음 | Bellevue, Register to See Address          | [Calendar](https://www.google.com/calendar/event?eid=M2w0MWJnbzlrcmtjNGVwdmFoN3BlNHFmYTAgc29sa2l0NzBAbQ) | [Luma](https://luma.com/openai-builderlounge-seattle-jul30-2026) |
+| Pending  |   6:30 PM-9:30 PM | Seattle World Models Carnival                | Pending Approval                  | 확인 필요    | Downtown Bellevue, Register to See Address | [Calendar](https://www.google.com/calendar/event?eid=bGx0dDhlMXJ0YWJrZmFkNGRnNDE2dGw5OGcgc29sa2l0NzBAbQ) | [Luma](https://luma.com/g4vycfcb)                                |
 
 ### 7/31 Fri
 
@@ -101,82 +116,79 @@ Luma에서 아래 11개 행사의 승인 이메일을 받아 Pending Approval �
 
 ### 7/27 Mon
 
-- **1:00 PM-3:00 PM — [Approved] AEO: Optimize your business for AI Search**
-  - 이유: Agentic Commerce ASO와 같은 Aizii.ai/TF Labs 흐름으로, AI 검색 최적화에서 AI 거래 최적화로 이어지는 전 단계를 볼 수 있다.
-  - 상태: Approved (2026-07-23 승인 이메일 수신). Busy 일정으로 변경했다.
-- **2:00 PM-3:00 PM — [Approved] STW: Stories from Build-Fail-Build**
-  - 이유: AI 창업자의 실패/재시도 이야기라 Builders Lounge와 창업 관점에서 의미가 있다.
-  - 상태: Approved (2026-07-23 승인 이메일 수신). Busy 일정으로 변경했다.
-- **3:00 PM-5:00 PM — [Approved] Agentic Commerce ASO**
-  - 이유: AI Agent가 실제 거래·구매·결제 흐름으로 이어지는 지점을 관찰할 수 있다.
-  - 상태: Approved (2026-07-23 승인 이메일 수신). Busy 일정으로 변경했다.
+- **1:00 PM-3:00 PM — [Exclude] AEO: Optimize your business for AI Search**
+  - 이유: Agentic Commerce ASO와 세트로 볼 계획이었으나 ASO를 불참으로 정하며 연결 근거가 약해졌고, 이날은 AI Startup Secret Sauce 하나만 참석하기로 정리 (2026-07-26).
+  - 상태: Approved였으나 사용자가 Luma에서 Marked as Not Going 처리(2026-07-26 Gmail 확인). Calendar removal attachment 포함. 장소(참고): 2505 3rd Ave #324, Seattle, United States.
+- **2:00 PM-3:00 PM — [Exclude] STW: Stories from Build-Fail-Build**
+  - 이유: Babak Parviz 등 연사와 창업자 스토리텔링이라는 매력은 있었으나, 이날은 무리하지 않고 AI Startup Secret Sauce 하나만 참석하기로 정리 (2026-07-26).
+  - 상태: Approved였으나 사용자가 Luma에서 Marked as Not Going 처리(2026-07-26 Gmail 확인). Calendar removal attachment 포함. 장소(참고): 1932 1st Ave suite 210, Seattle, WA 98101, USA.
+- **3:00 PM-5:00 PM — [Exclude] Agentic Commerce ASO**
+  - 이유: AI Agent가 실제 거래·구매·결제 흐름으로 이어지는 지점을 관찰할 수 있어 관심은 있었으나, 5:00 PM Bellevue City Hall(AI Startup Secret Sauce) 참석을 확정하면서 Seattle→Bellevue 이동시간을 확보할 수 없어 불참 결정 (2026-07-26).
+  - 상태: Approved였으나 사용자가 Luma에서 Marked as Not Going 처리(2026-07-26 Gmail 확인). Calendar removal attachment 포함.
 - **5:00 PM-7:00 PM — AI Startup Secret Sauce**
   - 이유: Eastside AI startup 네트워킹이며 BigHug, Builders Lounge, Startup425 네트워크와 연결된다.
-  - 상태: 신청 완료. 실제 busy 일정으로 등록했다.
-- **6:00 PM-8:00 PM — [Waitlist] Creativity, Intent, and the Future of AI**
-  - 이유: AI와 창작/인간 의도 주제라 관심이 있지만, AI Startup Secret Sauce와 충돌한다.
-  - 상태: Waiting List 등록 완료. 투명 일정으로 등록했다.
+  - 상태: 신청 완료, **참석 확정 (2026-07-26)**. 실제 busy 일정으로 등록했다.
+- **6:00 PM-8:00 PM — [Exclude] Creativity, Intent, and the Future of AI**
+  - 이유: AI와 창작/인간 의도 주제라 관심이 있지만, AI Startup Secret Sauce와 시간이 겹쳐 원래도 선택이 필요했던 항목 — Bellevue 참석을 확정하면서 최종적으로 불참 결정 (2026-07-26).
+  - 상태: Waiting List였으나 불참 결정. 투명 일정으로 변경 필요.
 
 ### 7/28 Tue
 
-- **9:00 AM-10:30 AM — Automating Your Workflow Correctly**
-  - 이유: AI workflow 자동화가 실제 팀에서 유지되려면 context layer가 필요하다는 주제가 Bila AI/업무 자동화와 맞다.
-  - 상태: 신청 완료. 실제 busy 일정으로 등록했다.
+- **9:00 AM-10:30 AM — [Exclude] Automating Your Workflow Correctly**
+  - 이유: AI workflow 자동화가 실제 팀에서 유지되려면 context layer가 필요하다는 주제가 Bila AI/업무 자동화와 맞아 신청까지 했었으나, 이날은 벨뷰 저녁 행사(AI With Agency / TwelveLabs + Qdrant)에만 집중하기로 하고 시애틀 주간 행사는 불참 결정 (2026-07-26).
+  - 상태: 신청 완료였으나 사용자가 Luma에서 Marked as Not Going 처리(2026-07-26 Gmail 확인). Calendar removal attachment 포함.
 - **9:30 AM-11:30 AM — [Not Accepted] Good to Great with AI Agents**
   - 이유: AI agent를 production/reliability/product lesson 관점에서 다룬다.
   - 상태: Registration not accepted(2026-07-25 사용자 업데이트). Google Calendar에는 투명 참고 일정으로만 남겼고 실제 참석 후보에서는 제외한다.
 - **12:30 PM-4:00 PM — [Pending Approval] Building Enduring AI Products**
   - 이유: AWS, OpenAI, Madrona 조합이며 evals, reliability, portability, 모델 성능 변화 속에서의 차별화가 핵심이다.
   - 상태: Pending Approval. 투명 일정으로 등록했다.
-- **3:00 PM-4:00 PM — [Approved] Built to Last?**
-  - 이유: AI hype와 지속 가능한 AI 사업을 구분하는 관점이다.
-  - 상태: Approved (2026-07-23 승인 이메일 수신). Busy 일정으로 변경했다. Building Enduring(아직 Pending)과 주제/시간이 겹치므로 실제 참석은 이쪽 우선.
+- **3:00 PM-4:00 PM — [Exclude] Built to Last?**
+  - 이유: AI hype와 지속 가능한 AI 사업을 구분하는 관점이라 Building Enduring 대비 우선이었으나, 이날은 벨뷰 저녁 행사에만 집중하기로 하며 시애틀 주간 행사는 불참 결정 (2026-07-26).
+  - 상태: Approved (2026-07-23 승인 이메일 수신)였으나 사용자가 Luma에서 Marked as Not Going 처리(2026-07-26 Gmail 확인). Calendar removal attachment 포함.
 - **4:00 PM-5:30 PM — [Waitlist] AI for Impact**
   - 이유: Responsible AI, governance, social impact. BigHug/grant/social impact 관점에서 의미가 있다.
   - 상태: Waitlist. 투명 일정으로 등록했다.
 - **4:00 PM-6:00 PM — [Pending Approval] Your AI Strategy Is a People Strategy**
   - 이유: AI adoption을 사람/팀 역량으로 보는 행사라 Builders Lounge/교육 운영과 연결 가능하다.
   - 상태: Pending Approval. 투명 일정으로 등록했다.
-- **5:00 PM-6:00 PM — AI4PKM x CMDS 격주 미팅**
-  - 기존 캘린더 일정. Tech Week 일정과 충돌 없음.
 - **5:30 PM-7:30 PM — [Approved] AI With Agency**
   - 이유: Agentic AI, autonomous enterprise, startup spotlight가 핵심이다.
-  - 상태: Approved (2026-07-23 승인 이메일 수신). Busy 일정으로 변경했다. TwelveLabs + Qdrant(같은 5:30 PM 시작, 역시 Approved)와 겹치므로 실제 참석 선택 필요.
+  - 상태: Approved (2026-07-23 승인 이메일 수신). **참석 확정 (Attend, 2026-07-26)** — 다만 정확한 장소는 행사 이틀 전에 공개된다고 함(추정: Key Center, SAP America). 벨뷰는 주차 여유가 있어 TwelveLabs + Qdrant와 함께 둘 다 Attend로 두고, 장소 공개 후 당일 현장 판단으로 실제 참석 여부 결정.
 - **5:30 PM-9:00 PM — [Approved] TwelveLabs + Qdrant**
   - 이유: AI memory, video intelligence, retrieval, agents가 Catch Up AI 영상/지식 검색/agent memory와 연결된다.
-  - 상태: Approved (2026-07-23 승인 이메일 수신). Busy 일정으로 변경했다. AI With Agency(같은 5:30 PM 시작, 역시 Approved)와 겹치므로 실제 참석 선택 필요.
+  - 상태: Approved (2026-07-23 승인 이메일 수신). **참석 확정 (Attend, 2026-07-26)** — 두 벨뷰 행사 중 우선 순위가 더 높음. Union AI HQ. AI With Agency 장소가 확정되면 그날 두 행사 사이 이동/선택을 현장에서 결정.
 
 ### 7/29 Wed
 
-- **9:00 AM-6:00 PM — Seattle AI Summit - The Infrastructure Era**
+- **9:00 AM-6:00 PM — [Exclude] Seattle AI Summit - The Infrastructure Era**
   - 이유: Bellevue 기반 flagship AI 행사이며 infrastructure, enterprise AI, consumer AI, startup pitch를 넓게 볼 수 있다.
-  - 상태: 신청 완료. 실제 busy 일정으로 등록했다.
-- **9:00 AM-12:00 PM — [Approved] You Vibe-Coded an App, Now What?**
-  - 이유: Build with AI 영상과 VibeCoding-Onboarding-Program의 핵심 질문과 직접 연결된다.
-  - 상태: Approved (2026-07-23 승인 이메일 수신). Busy 일정으로 변경했다. Seattle AI Summit 오전 구간(9 AM-6 PM)과 겹치므로 실제 참석 시간대 선택 필요.
-- **12:00 PM-1:30 PM — Databricks Omnigent Deep Dive**
-  - 상태: 신청 완료. 실제 busy 일정으로 등록했다. Seattle AI Summit 중간 시간과 겹치므로 실제 이동 여부를 결정해야 한다.
+  - 상태: 신청 완료였으나 사용자가 Luma에서 Marked as Not Going 처리(2026-07-26 Gmail 확인). 이전에는 Attend였지만 실제 참석 후보에서 제외한다.
+- **9:00 AM-12:00 PM — [Exclude] You Vibe-Coded an App, Now What?**
+  - 이유: Build with AI 영상과 VibeCoding-Onboarding-Program의 핵심 질문과 직접 연결돼 관심은 있었으나, 이후 사용자가 Luma에서 참석하지 않음으로 처리했다. 7/29는 Seattle AI Summit도 함께 취소되어 저녁 Startup425 Demo Day만 참석 후보로 남긴다.
+  - 상태: Approved였으나 사용자가 Luma에서 Marked as Not Going 처리(2026-07-26 Gmail 확인). Calendar removal attachment 포함.
+- **12:00 PM-1:30 PM — [Exclude] Databricks Omnigent Deep Dive**
+  - 이유: 같은 벨뷰 집중 방침에 따라 불참 결정 (2026-07-26, 사용자 확인 완료).
+  - 상태: 신청 완료였으나 사용자가 Luma에서 Marked as Not Going 처리(2026-07-26 Gmail 확인). Calendar removal attachment 포함.
 - **6:00 PM-8:00 PM — Startup425 AI Accelerator Demo Day**
   - 이유: Bellevue City Hall에서 비기술 창업자들이 AI 도구로 MVP를 만든 사례를 볼 수 있다. Builders Lounge, BigHug, 비개발자 AI 제품화 관점과 강하게 연결된다.
   - 상태: 신청 완료. 실제 busy 일정으로 등록했다.
 
 ### 7/30 Thu
 
-- **10:00 AM-11:30 AM — Lee & Park Meeting**
-  - 기존 캘린더 일정. 다만 사용자가 연기 가능하다고 했으므로, 같은 시간대에 더 높은 가치의 오프라인 AI 행사가 확정되면 연기 후보로 본다.
 - **2:00 PM-3:45 PM — ACM Data Conclave**
   - 이유: Bellevue 오프라인 AI/data 행사라 같은 시간대 온라인 AI Agents보다 사용자 기준에 더 맞는다.
   - 상태: 신청 완료. 실제 busy 일정으로 등록했다.
-  - 메모: 공개 아젠다는 4:45 PM까지 이어지지만, OpenAI Builder Lounge 이동을 위해 핵심 구간 중심으로 3:45 PM까지 캘린더를 잡았다.
+  - 메모: 공개 아젠다는 4:45 PM까지 이어지지만, 기존에는 OpenAI Builder Lounge 이동을 위해 핵심 구간 중심으로 3:45 PM까지 캘린더를 잡았다. OpenAI Builder Lounge가 미승인으로 바뀌었으므로 ACM Data Conclave 후반부 참석 가능성을 다시 열어 둔다.
 - **3:00 PM-4:00 PM — [Approved] How AI Gets Built at Ai2 \| AI Research Talk**
   - 이유: Ai2의 open models, post-training, evaluation, AI research lifecycle을 직접 볼 수 있어 기술 학습 가치는 높다.
-  - 상태: Approved (2026-07-23 승인 이메일 수신). 행사명이 "AI Research Panel & Networking"에서 "AI Research Talk"로 변경됨. Busy 일정으로 변경했다. ACM Data Conclave(2:00-3:45 PM)와 겹치고 OpenAI Builder Lounge(4 PM 시작, 아직 Pending)와 동선이 빡빡하므로 실제 참석 여부는 계속 검토.
-- **4:00 PM-7:00 PM — [Pending Approval] OpenAI Builder Lounge**
+  - 상태: Approved (2026-07-23 승인 이메일 수신). 행사명이 "AI Research Panel & Networking"에서 "AI Research Talk"로 변경됨. Busy 일정으로 변경했다. ACM Data Conclave(2:00-3:45 PM)와 겹치므로 실제 참석 여부는 계속 검토.
+- **4:00 PM-7:00 PM — [Not Accepted] OpenAI Builder Lounge**
   - 이유: Codex coworking, OpenAI Applications CTO AMA, open demos, founder/developer dinner가 포함된 최우선 네트워킹 후보.
-  - 상태: Pending Approval. 승인 전까지는 투명 일정으로 관리한다.
+  - 상태: Registration not accepted(2026-07-25 Gmail 확인). 실제 참석 후보에서 제외하고, 캘린더에는 제거 또는 투명 참고 일정으로만 남긴다.
 - **6:30 PM-9:30 PM — [Pending Approval] Seattle World Models Carnival**
   - 이유: video generation, world models, simulation, evaluation 주제가 영상 제작/Remotion/Qwen3-TTS 관심과 연결된다.
-  - 상태: Pending Approval. OpenAI Builder Lounge와 겹치지만 9:30 PM까지 이어지므로 후반부 백업으로 둔다.
+  - 상태: Pending Approval. 9:30 PM까지 이어지므로 7/30 저녁 후반부 백업으로 둔다.
 
 ### 7/31 Fri
 
@@ -205,7 +217,17 @@ Luma에서 아래 11개 행사의 승인 이메일을 받아 Pending Approval �
 |---|---|---|
 | Calendar Removed | AI Agents as Force Multipliers | Virtual 행사라 Google Calendar에서 제거했다. 주제 참고용 Luma 후보로만 남긴다. |
 | Exclude | Good to Great with AI Agents | Registration not accepted. AI agent 제품화 관점의 관심 참고 후보로만 남긴다. |
+| Exclude | OpenAI Builder Lounge #SeattleTechWeek | Registration not accepted(2026-07-25 Gmail 확인). 최우선 후보였지만 실제 참석 후보에서 제외한다. |
 | Exclude | Applied AI Pitch Night | 7/29 저녁은 Open 상태의 Startup425 Demo Day를 우선 |
+| Exclude | Agentic Commerce ASO (7/27) | Approved였으나, 5:00 PM Bellevue City Hall(AI Startup Secret Sauce) 참석 확정으로 Seattle→Bellevue 이동시간 확보 불가. Luma에서 Marked as Not Going 처리(2026-07-26 Gmail 확인) |
+| Exclude | Creativity, Intent, and the Future of AI (7/27) | Waiting List였으나, 같은 이유로 AI Startup Secret Sauce와 시간이 겹쳐 불참 결정 (2026-07-26) |
+| Exclude | AEO: Optimize your business for AI Search (7/27) | Approved였으나, 무리하지 않고 이날은 AI Startup Secret Sauce 하나만 참석하기로 결정. Luma에서 Marked as Not Going 처리(2026-07-26 Gmail 확인) |
+| Exclude | STW: Stories from Build-Fail-Build (7/27) | Approved였으나, 같은 이유로 이날은 AI Startup Secret Sauce 하나만 참석하기로 결정. Luma에서 Marked as Not Going 처리(2026-07-26 Gmail 확인) |
+| Exclude | Automating Your Workflow Correctly (7/28) | 신청 완료였으나, 이날은 벨뷰 저녁 행사(AI With Agency / TwelveLabs + Qdrant)에만 집중하기로 결정. Luma에서 Marked as Not Going 처리(2026-07-26 Gmail 확인) |
+| Exclude | Built to Last? AI, Startups and Data (7/28) | Approved였으나, 같은 이유로 벨뷰 저녁 행사에만 집중하기로 결정. Luma에서 Marked as Not Going 처리(2026-07-26 Gmail 확인) |
+| Exclude | Seattle AI Summit - The Infrastructure Era (7/29) | 신청 완료였으나 Luma에서 Marked as Not Going 처리(2026-07-26 Gmail 확인). 7/29 낮 일정에서 제외 |
+| Exclude | You Vibe-Coded an App, Now What? (7/29) | Approved였으나 Luma에서 Marked as Not Going 처리(2026-07-26 Gmail 확인) |
+| Exclude | Databricks Omnigent Deep Dive (7/29) | 신청 완료였으나 Luma에서 Marked as Not Going 처리(2026-07-26 Gmail 확인) |
 | Conflict (결정 필요) | Building AI You Can Stand Behind | Approved(2026-07-23). 7/31 오후 Consumer Experiences(3:30-6:00 PM)와 30분 겹치므로 실제 참석 시간 조정 필요 |
 | Interest Only | The Global AI Conversation | 온라인 보조 후보이나 이번 주 캘린더에는 넣지 않음 |
 
@@ -217,39 +239,39 @@ Luma에서 아래 11개 행사의 승인 이메일을 받아 Pending Approval �
 
 | 상태 | 이벤트 | 링크 |
 |---|---|---|
-| 승인 완료 | Agentic Commerce ASO | [Luma](https://luma.com/8024ch9r) |
-| 승인 완료 | STW: Stories from Build-Fail-Build | [Luma](https://luma.com/jommk2wc) |
+| Marked as Not Going | Agentic Commerce ASO | [Luma](https://luma.com/8024ch9r) |
+| Marked as Not Going | STW: Stories from Build-Fail-Build | [Luma](https://luma.com/jommk2wc) |
 | 신청 완료 | AI Startup Secret Sauce | [Luma](https://luma.com/njfn4ugt) |
 | Waiting List 등록 완료 | Creativity, Intent, and the Future of AI | [Luma](https://luma.com/khxpsau5) |
-| 승인 완료 | AEO: Optimize your business for AI Search | [Luma](https://luma.com/02ar1zge) |
+| Marked as Not Going | AEO: Optimize your business for AI Search | [Luma](https://luma.com/02ar1zge) |
 
 ### 7/28 Tue
 
 | 상태 | 이벤트 | 링크 |
 |---|---|---|
-| 신청 완료 | Automating Your Workflow Correctly | [Luma](https://luma.com/xkkbxh0u) |
+| Marked as Not Going | Automating Your Workflow Correctly | [Luma](https://luma.com/xkkbxh0u) |
 | Pending Approval | Building Enduring AI Products | [Luma](https://luma.com/seattle-u6gi) |
 | Registration not accepted | Good to Great with AI Agents | [Luma](https://luma.com/4uddde71) |
 | 승인 완료 | AI With Agency | [Luma](https://luma.com/xysigza0) |
 | 승인 완료 | TwelveLabs + Qdrant | [Luma](https://luma.com/kyksgkak) |
 | Pending Approval | Your AI Strategy Is a People Strategy | [Luma](https://luma.com/so0ufkgy) |
-| 승인 완료 | Built to Last? AI, Startups and Data | [Luma](https://luma.com/7wo9san2) |
+| Marked as Not Going | Built to Last? AI, Startups and Data | [Luma](https://luma.com/7wo9san2) |
 | Waitlist | AI for Impact | [Luma](https://luma.com/vmk774sy) |
 
 ### 7/29 Wed
 
 | 상태 | 이벤트 | 링크 |
 |---|---|---|
-| 신청 완료 | Seattle AI Summit - The Infrastructure Era | [Luma](https://luma.com/yra9zj02) |
-| 승인 완료 | You Vibe-Coded an App, Now What? | [Luma](https://luma.com/stw2026) |
-| 신청 완료 | Databricks Omnigent Deep Dive | [Luma](https://luma.com/tech_workshop_Omnigent) |
+| Marked as Not Going | Seattle AI Summit - The Infrastructure Era | [Luma](https://luma.com/yra9zj02) |
+| Marked as Not Going | You Vibe-Coded an App, Now What? | [Luma](https://luma.com/stw2026) |
+| Marked as Not Going | Databricks Omnigent Deep Dive | [Luma](https://luma.com/tech_workshop_Omnigent) |
 | 신청 완료 | Startup425 AI Accelerator Demo Day | [Luma](https://luma.com/49ctfw1f) |
 
 ### 7/30 Thu
 
 | 상태 | 이벤트 | 링크 |
 |---|---|---|
-| Pending Approval | OpenAI Builder Lounge #SeattleTechWeek | [Luma](https://luma.com/openai-builderlounge-seattle-jul30-2026) |
+| Registration not accepted | OpenAI Builder Lounge #SeattleTechWeek | [Luma](https://luma.com/openai-builderlounge-seattle-jul30-2026) |
 | Pending Approval | Seattle World Models Carnival | [Luma](https://luma.com/g4vycfcb) |
 | 신청 완료 | ACM Data Conclave | [Luma](https://luma.com/f3rma403) |
 | 승인 완료 | How AI Gets Built at Ai2 \| AI Research Talk | [Luma](https://luma.com/cp10n5uk) |
@@ -267,10 +289,9 @@ Luma에서 아래 11개 행사의 승인 이메일을 받아 Pending Approval �
 
 ### 남은 신청/확인 필요
 
-1. [OpenAI Builder Lounge](https://luma.com/openai-builderlounge-seattle-jul30-2026) — Pending Approval
-2. [Seattle World Models Carnival](https://luma.com/g4vycfcb) — Pending Approval
-3. [Claude Code Workshop](https://luma.com/claude-eulw) — Pending Approval
-4. [Aging in the Era of AI](https://luma.com/p9gkeexu) — Pending Approval
+1. [Seattle World Models Carnival](https://luma.com/g4vycfcb) — Pending Approval
+2. [Claude Code Workshop](https://luma.com/claude-eulw) — Pending Approval
+3. [Aging in the Era of AI](https://luma.com/p9gkeexu) — Pending Approval
 
 ## M3 DoD 체크
 

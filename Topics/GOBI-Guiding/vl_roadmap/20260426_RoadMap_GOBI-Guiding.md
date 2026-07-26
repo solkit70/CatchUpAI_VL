@@ -11,6 +11,13 @@ tags:
 
 # Vibe Guiding 실전 개발 로드맵 (Roadmap)
 
+> ⏸️ **상태: 중단 (2026-07-26 기준)** — GOBI Desktop 자체의 성능이 아직 이 작업을 진행할 수 있는
+> 수준으로 성숙하지 않아 M1(2026-05-03) 이후 중단됐다. 실패나 포기가 아니라 **외부 플랫폼(GOBI
+> Desktop) 성숙도에 막힌 대기 상태**다. GOBI Desktop 성능이 개선되면 재개 검토. 같은 "Vibe
+> Guiding" 개념을 VS Code + Codex 조합으로 별도 진행 중인 작업은
+> [[Ingest/CatchUpAI_VL/Topics/Vibe-Guiding-VSCode/vl_roadmap/20260426_RoadMap_Vibe-Guiding-VSCode|Vibe-Guiding-VSCode]]
+> 참고 — 그쪽은 계속 진행 중이며 이 Topic과는 별개다.
+
 Vibe Guiding은 사용자의 작업 컨텍스트와 시스템 상태를 실시간으로 파악하여, **VibeLearn AI로 구축된 최신 지식 베이스**로부터 최적의 안내를 추출하여 제공하는 초개인화 에이전트 시스템입니다.
 
 ## 🎯 핵심 비전

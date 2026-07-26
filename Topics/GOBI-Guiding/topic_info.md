@@ -2,7 +2,7 @@
 
 **방법론**: VibeLearn AI v2.0
 **생성일**: 2026-04-26
-**상태**: 🔄 진행 중
+**상태**: ⏸️ 중단 (2026-07-26) — GOBI Desktop 자체 성능이 아직 이 작업을 지원할 수준으로 성숙하지 않아 M1(2026-05-03) 이후 대기 중. GOBI Desktop 성능 개선 시 재개 검토. 같은 개념을 VS Code + Codex로 진행 중인 별개 Topic은 [[Ingest/CatchUpAI_VL/Topics/Vibe-Guiding-VSCode/topic_info|Vibe-Guiding-VSCode]] 참고.
 
 ---
 
