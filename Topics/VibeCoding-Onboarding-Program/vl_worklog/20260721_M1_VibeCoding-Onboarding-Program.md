@@ -38,6 +38,25 @@ Roadmap(v2.0, 5모듈), daily_learning_prompt를 전면 재작성했다. 로드�
 - 나레이션 추가는 Qwen3-TTS 교체 전이므로 지금 결정하면 재생성 1회로 반영 가능함을 명시
 - → `01-Application-Form/video-cta.md`
 
+### 4. 2026-08-02 업데이트 — NGO·비영리·시민단체 실무자 신청 옵션 추가
+
+**목적**:
+기존 시니어/비개발자 대상 바이브 코딩 온보딩 신청 Form을 NGO·비영리·시민단체 실무자까지 받을 수 있도록 확장했다.
+
+**변경 내용**:
+- Form 설명에 NGO·비영리·시민단체 실무자 대상 문구 추가
+- Section 1에 신청 목적 문항 추가
+  - 시니어 개인 프로젝트 / Senior personal project
+  - NGO·비영리·시민단체 실무 / NGO, nonprofit, or community organization work
+  - 소규모 비즈니스 / Small business
+  - 기타 / Other
+- Section 3 설명에 앱뿐 아니라 업무 도구, 문서 정리, 행사/프로젝트 지원 시스템 예시 추가
+- 기존 국가 분기 유지 확인: 미국은 Section 2, 한국/기타는 Section 3
+
+**결과**:
+- Google Form Preview 테스트 정상 진행 확인
+- 문항 구조와 배포 상태를 `01-Application-Form/form-questions.md`, `01-Application-Form/form-link.md`에 반영
+
 ---
 
 ## 🐛 문제 해결 로그
