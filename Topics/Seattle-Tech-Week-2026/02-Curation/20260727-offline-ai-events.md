@@ -3,7 +3,7 @@
 **작성일**: 2026-07-23  
 **목적**: 2026-07-27 월요일 Seattle Tech Week AI 관련 행사 중 오프라인 행사만 따로 모아, 하나씩 보면서 실제 참가 여부를 다시 결정한다.  
 **기준**: 오프라인 우선, AI 직접성, Build with AI/Catch Up AI/Bila AI/BigHug/Builders Lounge 연결성, 실제 등록 가능성, 이동 동선.  
-**현재 결론**: Agentic Commerce ASO, AEO, AI Startup Secret Sauce, STW Build-Fail-Build, Creativity/Intent/Future of AI를 7/27 관심 행사로 확정했다. Agentic Commerce ASO와 STW Build-Fail-Build는 Pending Approval, AI Startup Secret Sauce는 신청 완료, Creativity/Intent/Future of AI는 Waiting List 등록 완료 상태다.
+**현재 결론**: Agentic Commerce ASO, AEO, AI Startup Secret Sauce, STW Build-Fail-Build, Creativity/Intent/Future of AI를 7/27 관심 행사로 확정했다. 이후 실제 참석은 Bellevue City Hall의 AI Startup Secret Sauce로 정리되었고, 현장에서 한국에서 온 42 Network/42 Seoul 계열 학생들을 만난 기록은 `../03-Schedule/final.md`의 `2026-07-27 현장 참석 메모`에 반영했다.
 
 ## 현재 캘린더 등록 상태
 
@@ -16,6 +16,12 @@
 | 6:00 PM-8:00 PM | Creativity, Intent, and the Future of AI | Waiting List 등록 완료 | [Calendar](https://www.google.com/calendar/event?eid=bjZjZjBjcGo1bGJqZjBpazh1dWw4MmVlYjggc29sa2l0NzBAbQ) | [Luma](https://luma.com/khxpsau5) |
 
 Pending Approval과 Waiting List 행사는 Google Calendar에서 투명 일정으로 등록했다. AI Startup Secret Sauce는 신청 완료라 실제 busy 일정으로 등록했다.
+
+## 실제 참석 후 메모
+
+2026-07-27에는 Bellevue City Hall의 `AI Startup Secret Sauce with Startup425 and Level UP`에 실제 참석했다. 현장에서 한국에서 온 학생들을 만났고, 이들은 자신들이 `42`라는 교육기관에서 왔다고 소개했다. 후속 확인 결과 42는 2013년 파리에서 시작된 글로벌 무료 IT 교육 네트워크인 [42 Network](https://www.42network.org/)이며, 한국 연결점은 [42 Seoul](https://www.42network.org/campus/42-seoul/)로 보인다.
+
+42 Network는 등록금 없는 IT 교육 네트워크이고, 강의·교수·교재 중심이 아니라 프로젝트 기반 peer-learning으로 소프트웨어 개발자를 길러내는 모델을 쓴다. 이 만남은 Startup425 행사가 Eastside AI 창업 생태계뿐 아니라 한국의 실험적 개발자 교육 커뮤니티와도 연결될 수 있음을 보여주는 사례로 기록한다.
 
 ## 전체 오프라인 AI 후보
 
