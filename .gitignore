@@ -46,3 +46,11 @@ venv/
 
 # Private content (private: true frontmatter) - never push
 Topics/Peter-Thiel-Vision/vl_materials/essay-braindump-20260703.md
+
+# FedWay 광복절 2026 — 유족 동의 전 민감 자료 (로컬 전용, GitHub 제외)
+# 실존 독립유공자를 AI로 재현한 영상·사진과 한인회 내부 프로그램 초안.
+# 유족 동의 절차가 끝난 뒤 공개 여부를 다시 판단한다.
+Topics/FedWay-Liberation-Day-2026/vl_materials/honorees/restored/
+Topics/FedWay-Liberation-Day-2026/vl_materials/honorees/*.jpg
+Topics/FedWay-Liberation-Day-2026/vl_materials/honorees/*.png
+Topics/FedWay-Liberation-Day-2026/vl_materials/*.pdf
