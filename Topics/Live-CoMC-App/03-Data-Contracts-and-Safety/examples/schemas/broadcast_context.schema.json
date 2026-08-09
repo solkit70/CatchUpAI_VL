@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://live-comc-app/schemas/broadcast_context.schema.json",
+  "title": "broadcast_context",
+  "description": "파이프라인 ⑤ 컨텍스트 조립 단계의 출력. LLM(⑥)에 넘길 발화 허용 범위 + 근거 풀. 금칙 섹션은 이 단계 이전에 이미 제거된 상태여야 한다.",
+  "type": "object",
+  "properties": {
+    "current_part_id": {
+      "type": "string",
+      "description": "현재 진행 중인 파트 id (rundown_index.parts[].id 참조)"
+    },
+    "coverage_state": {
+      "type": "string",
+      "enum": ["defined", "directive", "undefined"],
+      "description": "현재 파트의 커버리지 상태. undefined면 컨텍스트를 조립하지 않고 HITL로 되묻는다"
+    },
+    "coverage_items": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "발화 허용 화이트리스트. LLM은 이 범위 밖 주제를 생성하면 안 된다"
+    },
+    "evidence_pool": {
+      "type": "array",
+      "description": "claim_map의 evidence_quote가 반드시 이 안에서 나와야 하는 근거 문자열 풀",
+      "items": {
+        "type": "object",
+        "properties": {
+          "path": { "type": "string", "description": "근거 문서 볼트 경로" },
+          "quote": { "type": "string", "description": "인용 가능한 원문 문자열" }
+        },
+        "required": ["path", "quote"],
+        "additionalProperties": false
+      }
+    },
+    "status_map": {
+      "type": "object",
+      "description": "참조 문서별 최신성/상태 플래그 (예: {'rundown':'final','dashboard':'stale'})",
+      "additionalProperties": { "type": "string" }
+    },
+    "forbidden_removed": {
+      "type": "boolean",
+      "description": "excluded_sections가 이 컨텍스트에서 실제로 제거되었음을 단언하는 불변식 플래그 (true 강제)",
+      "const": true
+    },
+    "assembled_at": { "type": "string", "format": "date-time" }
+  },
+  "required": ["current_part_id", "coverage_state", "coverage_items", "evidence_pool", "forbidden_removed"],
+  "additionalProperties": false
+}

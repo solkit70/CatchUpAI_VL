@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://live-comc-app/schemas/output.schema.json",
+  "title": "output",
+  "description": "파이프라인 ⑧ 화면 오버레이 + ⑨ TTS 재생의 동시 출력 봉투. 둘 다 verdict.final_text에서 나오므로 한 계약(overlay+spoken)으로 묶어 7종을 유지한다. (설계 결정: 파이프라인 다이어그램의 '동시 출력' 반영)",
+  "type": "object",
+  "properties": {
+    "overlay": {
+      "type": "object",
+      "description": "⑧ OBS Browser Source가 폴링하는 화면 텍스트",
+      "properties": {
+        "text": { "type": "string", "description": "화면에 표시할 최종 텍스트 (= verdict.final_text)" },
+        "part_id": { "type": "string", "description": "현재 파트 id" },
+        "updated_at": { "type": "string", "format": "date-time" }
+      },
+      "required": ["text", "updated_at"],
+      "additionalProperties": false
+    },
+    "spoken": {
+      "type": "object",
+      "description": "⑨ TTS 재생 결과",
+      "properties": {
+        "text": { "type": "string", "description": "TTS로 발화할 텍스트 (= verdict.final_text)" },
+        "voice": { "type": "string", "description": "선택된 TTS 보이스 id (예: ko-KR-SunHiNeural)" },
+        "audio_path": {
+          "type": ["string", "null"],
+          "description": "생성된 오디오 파일 경로. 스트리밍/미생성이면 null"
+        },
+        "spoken_at": { "type": "string", "format": "date-time" }
+      },
+      "required": ["text", "voice"],
+      "additionalProperties": false
+    },
+    "source_verdict_pass": {
+      "type": "boolean",
+      "description": "이 출력을 만든 verdict.pass 값 — pass=false여도 kept_sentences 기반 부분 발화일 수 있음을 추적"
+    }
+  },
+  "required": ["overlay", "spoken", "source_verdict_pass"],
+  "additionalProperties": false
+}

@@ -1,0 +1,110 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://live-comc-app/schemas/rundown_index.schema.json",
+  "title": "rundown_index",
+  "description": "M1 파싱 계약의 직접 출력. Rundown .md 한 편을 파트/커버리지/금칙 섹션으로 구조화한 결과 (파이프라인 소스 데이터).",
+  "type": "object",
+  "properties": {
+    "source_path": {
+      "type": "string",
+      "description": "파싱한 Rundown .md의 볼트 상대 경로 (.canvas는 파싱 대상 아님)"
+    },
+    "frontmatter_status": {
+      "type": "string",
+      "description": "frontmatter status 원문 (예: '✅ 최종본 (2026-07-26)')"
+    },
+    "is_final": {
+      "type": "boolean",
+      "description": "status가 '최종본'으로 판정되면 true → 방송 투입 가능 1차 신호"
+    },
+    "parts": {
+      "type": "array",
+      "description": "## N부: 제목 (시간) 헤딩으로 구분된 방송 구간 목록",
+      "items": { "$ref": "#/$defs/part" }
+    },
+    "excluded_sections": {
+      "type": "array",
+      "description": "안전장치 1층에서 컨텍스트 진입 자체를 차단하는 금칙 섹션 (M1 forbidden-sections)",
+      "items": {
+        "type": "object",
+        "properties": {
+          "heading": { "type": "string", "description": "섹션 헤딩 원문" },
+          "reason": {
+            "type": "string",
+            "enum": ["unscheduled", "on_hold", "candidate", "sensitive_draft"],
+            "description": "배제 근거 태그 (미편성/보류/후보/미공개초안)"
+          }
+        },
+        "required": ["heading", "reason"],
+        "additionalProperties": false
+      }
+    },
+    "conditional_sections": {
+      "type": "array",
+      "description": "완전 금칙이 아니라 조건부 발화 허용 섹션 (예: '### 대기 목록 (시간이 남으면)')",
+      "items": {
+        "type": "object",
+        "properties": {
+          "heading": { "type": "string" },
+          "condition": {
+            "type": "string",
+            "description": "조건 문자열 원문 보존 (예: '시간이 남으면') — M8에서 기계 규칙으로 변환"
+          }
+        },
+        "required": ["heading", "condition"],
+        "additionalProperties": false
+      }
+    },
+    "parsed_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "파싱 시각"
+    }
+  },
+  "required": ["source_path", "is_final", "parts", "excluded_sections", "conditional_sections"],
+  "additionalProperties": false,
+  "$defs": {
+    "part": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "파트 번호 원본 문자열 그대로 보존 (예: '1', '4.5')"
+        },
+        "sort_key": {
+          "type": "number",
+          "description": "정렬용 float (예: 4.5). id를 수치화한 값"
+        },
+        "title": { "type": "string", "description": "파트 제목" },
+        "time_raw": {
+          "type": ["string", "null"],
+          "description": "괄호 안 시간 표기 원문 (예: '20분', '시간 미정', '나머지 시간 전부'). 미정이면 null 가능"
+        },
+        "time_minutes": {
+          "type": ["integer", "null"],
+          "description": "분 단위 정수로 파싱된 값. 파싱 불가('시간 미정' 등)면 null"
+        },
+        "is_remainder": {
+          "type": "boolean",
+          "description": "'나머지 시간 전부' 형태면 true → 이후 파트 시각 추정에서 특수 처리"
+        },
+        "coverage_state": {
+          "type": "string",
+          "enum": ["defined", "directive", "undefined"],
+          "description": "커버리지 줄 상태 3분류 (M1 case-table 케이스 6/7/8)"
+        },
+        "coverage_items": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "①②③... 발화 허용 화이트리스트 항목. undefined면 빈 배열"
+        },
+        "directive_note": {
+          "type": ["string", "null"],
+          "description": "커버리지 줄 끝 운영 지시문 (발화 대상 제외). directive 상태에서만 값 존재"
+        }
+      },
+      "required": ["id", "sort_key", "title", "is_remainder", "coverage_state", "coverage_items"],
+      "additionalProperties": false
+    }
+  }
+}

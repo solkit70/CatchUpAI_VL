@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://live-comc-app/schemas/answer_draft.schema.json",
+  "title": "answer_draft",
+  "description": "파이프라인 ⑥ LLM 응답 출력. 문장 배열 + 문장별 근거(claim_map)를 Structured Output으로 강제. 3사 프로바이더가 어댑터를 거쳐 모두 이 스키마로 정규화된다.",
+  "type": "object",
+  "properties": {
+    "provider": {
+      "type": "string",
+      "enum": ["openai", "claude", "gemini"],
+      "description": "이 초안을 생성한 프로바이더"
+    },
+    "sentences": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1,
+      "description": "발화 후보 문장 배열 (순서 보존). claim_map의 sentence_idx가 이 배열을 가리킨다"
+    },
+    "claim_map": {
+      "type": "array",
+      "description": "문장별 근거 강제. 안전장치의 근간. sentences의 모든 인덱스를 커버해야 검증 통과",
+      "items": {
+        "type": "object",
+        "properties": {
+          "sentence_idx": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "sentences 배열의 인덱스"
+          },
+          "evidence_path": {
+            "type": "string",
+            "description": "근거 문서 경로 (broadcast_context.evidence_pool[].path 중 하나)"
+          },
+          "evidence_quote": {
+            "type": "string",
+            "minLength": 1,
+            "description": "근거 원문 인용. ⑦ 게이트가 evidence_pool 안 실제 존재 여부를 문자열 대조로 검사"
+          }
+        },
+        "required": ["sentence_idx", "evidence_path", "evidence_quote"],
+        "additionalProperties": false
+      }
+    },
+    "coverage_state": {
+      "type": "string",
+      "enum": ["defined", "directive"],
+      "description": "이 초안 생성 시점의 커버리지 상태. undefined면 애초에 ⑥에 도달하지 못하므로 여기서는 defined/directive만 허용"
+    },
+    "length_sentences": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "문장 수. safety_policy 길이 하드컷(3/5/7) 검사 입력"
+    },
+    "created_at": { "type": "string", "format": "date-time" }
+  },
+  "required": ["provider", "sentences", "claim_map", "coverage_state", "length_sentences"],
+  "additionalProperties": false
+}

@@ -1,0 +1,31 @@
+{"event": "wake", "mode": "record", "model": "hey_jarvis", "score": 0.503, "clock_s": 12.16, "logged_at": "2026-08-09T07:18:58"}
+{"event": "wake", "mode": "record", "model": "alexa", "score": 0.982, "clock_s": 22.08, "logged_at": "2026-08-09T07:18:59"}
+{"event": "wake", "mode": "record", "model": "alexa", "score": 0.953, "clock_s": 26.08, "logged_at": "2026-08-09T07:18:59"}
+{"event": "wake", "mode": "record", "model": "alexa", "score": 0.718, "clock_s": 27.12, "logged_at": "2026-08-09T07:18:59"}
+{"event": "wake", "mode": "record", "model": "alexa", "score": 0.958, "clock_s": 28.16, "logged_at": "2026-08-09T07:18:59"}
+{"event": "wake", "mode": "record", "model": "alexa", "score": 0.999, "clock_s": 30.4, "logged_at": "2026-08-09T07:19:00"}
+{"event": "wake", "mode": "record", "model": "alexa", "score": 0.865, "clock_s": 32.48, "logged_at": "2026-08-09T07:19:00"}
+{"event": "wake", "mode": "record", "model": "alexa", "score": 0.911, "clock_s": 34.48, "logged_at": "2026-08-09T07:19:00"}
+{"event": "wake", "mode": "record", "model": "alexa", "score": 0.872, "clock_s": 38.0, "logged_at": "2026-08-09T07:19:00"}
+{"event": "wake", "mode": "record", "model": "alexa", "score": 0.985, "clock_s": 39.92, "logged_at": "2026-08-09T07:19:00"}
+{"event": "wake", "mode": "record", "model": "alexa", "score": 0.997, "clock_s": 42.08, "logged_at": "2026-08-09T07:19:00"}
+{"event": "wake", "mode": "record", "model": "alexa", "score": 0.943, "clock_s": 44.16, "logged_at": "2026-08-09T07:19:01"}
+{"event": "wake", "mode": "record", "model": "alexa", "score": 0.991, "clock_s": 46.08, "logged_at": "2026-08-09T07:19:01"}
+{"event": "wake", "mode": "record", "model": "hey_jarvis", "score": 0.99, "clock_s": 53.04, "logged_at": "2026-08-09T07:19:01"}
+{"event": "wake", "mode": "record", "model": "hey_mycroft", "score": 0.998, "clock_s": 59.76, "logged_at": "2026-08-09T07:19:02"}
+{"event": "wake", "mode": "record", "model": "hey_mycroft", "score": 0.873, "clock_s": 62.96, "logged_at": "2026-08-09T07:19:03"}
+{"event": "wake", "mode": "record", "model": "hey_mycroft", "score": 0.949, "clock_s": 69.84, "logged_at": "2026-08-09T07:19:03"}
+{"event": "wake", "mode": "record", "model": "hey_mycroft", "score": 0.899, "clock_s": 72.48, "logged_at": "2026-08-09T07:19:03"}
+{"event": "wake", "mode": "record", "model": "hey_mycroft", "score": 1.0, "clock_s": 75.44, "logged_at": "2026-08-09T07:19:03"}
+{"event": "wake", "mode": "record", "model": "hey_mycroft", "score": 0.993, "clock_s": 78.56, "logged_at": "2026-08-09T07:19:04"}
+{"event": "wake", "mode": "record", "model": "hey_mycroft", "score": 1.0, "clock_s": 83.2, "logged_at": "2026-08-09T07:19:04"}
+{"event": "wake", "mode": "record", "model": "hey_mycroft", "score": 0.93, "clock_s": 90.4, "logged_at": "2026-08-09T07:19:04"}
+{"event": "wake", "mode": "record", "model": "hey_mycroft", "score": 1.0, "clock_s": 93.12, "logged_at": "2026-08-09T07:19:05"}
+{"event": "summary", "mode": "record", "seconds": 100.0, "counts": {"hey_jarvis": 2, "alexa": 12, "hey_mycroft": 9}, "avg_proc_ms": 6.07, "logged_at": "2026-08-09T07:19:05"}
+{"event": "utterance", "start_s": 2.08, "end_s": 3.23, "duration_s": 1.15, "silence_ms": 800, "threshold": 0.5, "note": "실습2 정본(25s clean run)"}
+{"event": "utterance", "start_s": 7.23, "end_s": 8.1, "duration_s": 0.86, "silence_ms": 800, "threshold": 0.5, "note": "실습2 정본(25s clean run)"}
+{"event": "utterance", "start_s": 9.12, "end_s": 10.05, "duration_s": 0.93, "silence_ms": 800, "threshold": 0.5, "note": "실습2 정본(25s clean run)"}
+{"event": "utterance", "start_s": 13.02, "end_s": 13.82, "duration_s": 0.8, "silence_ms": 800, "threshold": 0.5, "note": "실습2 정본(25s clean run)"}
+{"event": "utterance", "start_s": 15.36, "end_s": 16.32, "duration_s": 0.96, "silence_ms": 800, "threshold": 0.5, "note": "실습2 정본(25s clean run)"}
+{"event": "utterance", "start_s": 17.92, "end_s": 19.94, "duration_s": 2.02, "silence_ms": 800, "threshold": 0.5, "note": "실습2 정본(25s clean run)"}
+{"event": "utterance", "start_s": 21.89, "end_s": 22.59, "duration_s": 0.7, "silence_ms": 800, "threshold": 0.5, "note": "실습2 정본(25s clean run)"}

@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://live-comc-app/schemas/intent.schema.json",
+  "title": "intent",
+  "description": "파이프라인 ④ Intent 분류 출력. STT 전사 텍스트를 의도/슬롯/모호성 플래그로 구조화.",
+  "type": "object",
+  "properties": {
+    "transcript": { "type": "string", "description": "③ STT 전사 텍스트 원문" },
+    "intent": {
+      "type": "string",
+      "enum": ["answer_question", "advance_part", "summarize_part", "repeat", "stop", "unknown"],
+      "description": "분류된 의도. unknown이면 HITL로 되묻는다"
+    },
+    "slots": {
+      "type": "object",
+      "description": "의도 실행에 필요한 인자 (예: part_id, topic)",
+      "properties": {
+        "part_id": { "type": "string" },
+        "topic": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "ambiguity_flags": {
+      "type": "array",
+      "description": "safety_policy 모호성 3규칙과 연동되는 플래그. 하나라도 있으면 생성 전 확인",
+      "items": {
+        "type": "string",
+        "enum": ["quantity_mismatch", "no_coverage", "completion_confusion"]
+      }
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1,
+      "description": "의도 분류 신뢰도"
+    },
+    "created_at": { "type": "string", "format": "date-time" }
+  },
+  "required": ["transcript", "intent", "slots", "ambiguity_flags"],
+  "additionalProperties": false
+}

@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://live-comc-app/schemas/verdict.schema.json",
+  "title": "verdict",
+  "description": "파이프라인 ⑦ 안전 검증 게이트 출력. 규칙 기반(LLM 자기평가 아님). 근거 없는 문장을 버리고 최종 발화 텍스트를 확정.",
+  "type": "object",
+  "properties": {
+    "pass": {
+      "type": "boolean",
+      "description": "전체 통과 여부. 하나라도 위반이 있으면 false지만 kept_sentences로 부분 발화는 가능"
+    },
+    "final_text": {
+      "type": "string",
+      "description": "검증 후 남은 문장으로 조립한 최종 발화 텍스트 (⑧ overlay·⑨ TTS 공통 입력)"
+    },
+    "kept_sentences": {
+      "type": "array",
+      "items": { "type": "integer", "minimum": 0 },
+      "description": "근거 검증을 통과해 발화에 포함된 문장 인덱스"
+    },
+    "dropped_sentences": {
+      "type": "array",
+      "description": "검증 탈락 문장과 사유",
+      "items": {
+        "type": "object",
+        "properties": {
+          "sentence_idx": { "type": "integer", "minimum": 0 },
+          "reason": {
+            "type": "string",
+            "enum": ["no_evidence", "evidence_not_found", "coverage_violation", "length_hardcut"],
+            "description": "탈락 사유: claim 없음/근거 문자열 미발견/화이트리스트 위반/길이 하드컷 초과"
+          }
+        },
+        "required": ["sentence_idx", "reason"],
+        "additionalProperties": false
+      }
+    },
+    "violations": {
+      "type": "array",
+      "description": "safety_policy 규칙 위반 기록 (rule_id 참조)",
+      "items": {
+        "type": "object",
+        "properties": {
+          "rule_id": { "type": "string", "description": "safety_policy.json의 규칙 ID" },
+          "detail": { "type": "string" }
+        },
+        "required": ["rule_id"],
+        "additionalProperties": false
+      }
+    },
+    "length_after": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "검증 후 최종 문장 수"
+    },
+    "verified_at": { "type": "string", "format": "date-time" }
+  },
+  "required": ["pass", "final_text", "kept_sentences", "dropped_sentences", "violations"],
+  "additionalProperties": false
+}
