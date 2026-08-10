@@ -8,6 +8,8 @@ tags:
   - setup
 ---
 
+> 🌐 **한국어** · [English](02-setup-claude.en.md)
+
 ## Claude 가입하고 Claude Code 설치하기
 
 이제 VS Code에 **AI를 붙입니다.** 두 가지를 합니다.

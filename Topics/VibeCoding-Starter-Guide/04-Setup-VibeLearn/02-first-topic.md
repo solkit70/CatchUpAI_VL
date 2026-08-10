@@ -8,6 +8,8 @@ tags:
   - vibelearn-ai
 ---
 
+> 🌐 **한국어** · [English](02-first-topic.en.md)
+
 ## 첫 Topic 시작하기
 
 이제 가장 놀라운 부분입니다. **한 문장이면 시작됩니다.**

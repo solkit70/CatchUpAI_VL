@@ -8,6 +8,8 @@ tags:
   - setup
 ---
 
+> 🌐 **한국어** · [English](03-setup-workspace.en.md)
+
 ## 작업 폴더 만들고 열기
 
 AI가 VS Code 안에 들어왔습니다. 이제 **어느 서랍에서 일할지** 알려 줄 차례입니다.

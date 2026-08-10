@@ -9,6 +9,8 @@ tags:
   - guidebook
 ---
 
+> 🌐 **한국어** · [English](01-participant-guidebook.en.md)
+
 ## 환영합니다
 
 **코딩을 몰라도 괜찮습니다. 컴퓨터가 익숙하지 않아도 괜찮습니다.**

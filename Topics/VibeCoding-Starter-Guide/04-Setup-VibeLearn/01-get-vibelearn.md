@@ -9,6 +9,8 @@ tags:
   - setup
 ---
 
+> 🌐 **한국어** · [English](01-get-vibelearn.en.md)
+
 ## VibeLearn AI 내려받기
 
 도구는 다 갖췄습니다. 이제 **VibeLearn AI**를 받습니다.

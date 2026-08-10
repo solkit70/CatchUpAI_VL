@@ -9,6 +9,8 @@ tags:
   - appendix
 ---
 
+> 🌐 **한국어** · [English](04-appendix-advanced.en.md)
+
 ## 부록 D — 조금 더 깊이
 
 **이 부록은 안 읽으셔도 됩니다.** 본문만 따라 하셔도 VibeLearn AI를 쓰시는 데 아무 지장이 없습니다.

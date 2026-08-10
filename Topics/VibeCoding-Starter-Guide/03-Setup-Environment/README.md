@@ -8,6 +8,8 @@ tags:
   - setup
 ---
 
+> 🌐 **한국어** · [English](README.en.md)
+
 ## M3 - 설치편① VS Code + Claude 구독 + Claude Code
 
 **모듈**: M3 / **상태**: ✅ 완료 (2026-08-10) / **예상 학습 시간**: 2.5시간
