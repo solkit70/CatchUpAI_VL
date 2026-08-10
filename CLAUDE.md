@@ -64,6 +64,13 @@ VibeLearn AI는 AI와 함께 체계적으로 학습하고, 학습 과정 자체�
    - 참조 자료
 3. `vl_roadmap/YYYYMMDD_RoadMap_{TopicName}.md`에 저장
 
+**Roadmap Prompt 실행 규칙 (필수)**:
+- Roadmap을 만들 때는 생성된 `vl_prompts/roadmap_prompt.md`를 단순 참고 자료로 보지 말고, 현재 작업의 실행 프롬프트로 취급한다.
+- Roadmap 생성 직전에 `vl_prompts/roadmap_prompt.md`를 전체 다시 읽고, `[2단계] AI에게 요청할 작업`을 위에서 아래로 순서대로 따른다.
+- `사용자 확인 필요`, `중단하고 대기`, `승인 후 진행` 같은 문구가 있으면 즉시 멈추고 사용자 응답을 기다린다.
+- 사용자 승인 전에는 `vl_roadmap/YYYYMMDD_RoadMap_{TopicName}.md`를 생성하지 않는다.
+- Roadmap 생성 전 `roadmap_prompt.md`에 `{PLACEHOLDER}` 또는 literal `` `n `` 같은 템플릿 주입 오류가 없는지 확인하고, 오류가 있으면 먼저 수정한다.
+
 ### Phase 3: 일일 학습 (반복 사이클)
 
 1. `vl_prompts/daily_learning_prompt.md`를 읽고, 그 안의 Step 1~5 프로세스에 따라 진행
