@@ -39,7 +39,8 @@ C:\AI_study\2026\Changsoo_Vault\Ingest\CatchUpAI_VL\Topics\Seattle-Tech-Week-202
 
 **Roadmap 파일 경로**:
 ```
-vl_roadmap/20260809_RoadMap_Seattle-Tech-Week-2026-Article-Writing.md
+vl_roadmap/20260812_RoadMap_Seattle-Tech-Week-2026-Article-Writing_v2.md
+(v1: vl_roadmap/20260809_RoadMap_Seattle-Tech-Week-2026-Article-Writing.md — M1~M4 배경 자료)
 ```
 
 ---
@@ -48,21 +49,22 @@ vl_roadmap/20260809_RoadMap_Seattle-Tech-Week-2026-Article-Writing.md
 
 **현재 진행 중인 모듈**:
 ```
-M1 - 외부 리서치와 소스 맵 작성
+M5 - 1차 자료 채굴 (Evidence Bank)
 ```
 
 **가장 최근 WorkLog 파일**:
 ```
-없음 - 첫 학습 세션
-또는
-[없음 - 첫 학습 세션]
+vl_worklog/20260812_M4_Seattle-Tech-Week-2026-Article-Writing.md
 ```
 
 **이전 세션의 "Tomorrow's focus"** (있다면):
 ```
-[이전 WorkLog에 기록된 다음 할 일]
-또는
-[없음]
+v1 M4 WorkLog의 다음 작업은 "기사 초안 v1 검토 후 2차 편집"이었으나,
+2026-08-12 사용자 판단으로 v2 재진행이 결정되어 무효화됨.
+
+v2 전환 사유: v1 초안이 현장 트랜스크립트 30개(8,703줄)를 한 줄도 인용하지 않고
+외부 2차 자료만으로 작성되어 기고 가치가 부족했음.
+→ M5에서 1차 자료 전량 채굴부터 다시 시작한다.
 ```
 
 ---
@@ -77,9 +79,13 @@ M1 - 외부 리서치와 소스 맵 작성
 
 **오늘의 상태/제약사항** (있다면):
 ```
-기사 초안 작성 금지 - 분석 리포트와 글감 카드 우선
-[예: 인터넷 불안정 - 오프라인 자료 위주]
-[없음]
+[v2 상시 제약]
+1. 트랜스크립트를 "요약"하지 않는다. 요약은 명제를 만들고, 명제가 v1 실패의 원인이었다.
+   채굴은 원문 보존이 원칙이다.
+2. 인용은 6요소(원문·한국어 번역·화자명·소속·타임스탬프·영상 링크)를 반드시 갖춘다.
+3. M5 완료 전에는 기사 문장을 쓰지 않는다. 자료를 열기 전에 구조를 확정하면 v1을 반복한다.
+4. 외부 2차 자료(GeekWire·Madrona·McKinsey·Gartner)로 내용을 메우지 않는다. 배경 위치에만 쓴다.
+5. 최종 산출물은 한인 매체 기고용 한국어 연재 2~3편. 편수는 M6에서 증거 강도로 확정한다.
 ```
 
 ---

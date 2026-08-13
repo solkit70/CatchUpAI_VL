@@ -1,4 +1,4 @@
-# Seattle-Tech-Week-2026-Article-Writing 학습 로드맵
+﻿# Seattle-Tech-Week-2026-Article-Writing 학습 로드맵
 
 **생성일**: 2026-08-09
 **방법론**: VibeLearn AI
@@ -32,16 +32,16 @@ Seattle Tech Week 2026에서 사용자가 직접 참가·녹화·편집·업로�
 
 | 모듈 | 모듈명 | 난이도 | 예상 시간 | 산출물 폴더 |
 |------|--------|--------|----------|------------|
-| M1 | Source Map & Research Refresh | ⭐⭐ | 4~5h | 01-Source-Map-Research/ |
-| M2 | Trend Analysis & Cross-Reading | ⭐⭐⭐ | 4~5h | 02-Trend-Analysis/ |
-| M3 | Participation Guide & Article Angles | ⭐⭐ | 2~3h | 03-Article-Planning/ |
-| M4 | Synthesis Report & Format Decision | ⭐⭐⭐ | 3~5h | 04-Synthesis-Report/ |
+| M1 | 소스 맵 및 리서치 갱신 | ⭐⭐ | 4~5h | 01-Source-Map-Research/ |
+| M2 | 트렌드 분석 및 교차 읽기 | ⭐⭐⭐ | 4~5h | 02-Trend-Analysis/ |
+| M3 | 참여 가이드 및 기사 각도 설계 | ⭐⭐ | 2~3h | 03-Article-Planning/ |
+| M4 | 종합 리포트 및 형식 결정 | ⭐⭐⭐ | 3~5h | 04-Synthesis-Report/ |
 
 **총 예상 시간**: 13~18시간
 
 ## 📖 모듈별 상세 계획
 
-### M1 - Source Map & Research Refresh
+### M1 - 소스 맵 및 리서치 갱신
 
 **난이도**: ⭐⭐
 **예상 시간**: 4~5h
@@ -55,10 +55,10 @@ Seattle Tech Week 2026에서 사용자가 직접 참가·녹화·편집·업로�
 
 #### 주요 개념
 
-1. **Source Map**: 기사 작성 전 근거 자료를 출처 유형별로 분류한 지도다.
-2. **Primary vs Secondary Source**: 공식 캘린더·사용자 현장 기록은 1차 자료에 가깝고, 기사·외부 영상은 해석이 포함된 2차 자료로 다룬다.
-3. **Trend Tagging**: 자료를 단순 목록이 아니라 반복되는 주제 축으로 분류하는 작업이다.
-4. **Verification Gap**: 아직 출처가 부족하거나 날짜·수치가 불확실한 항목이다.
+1. **소스 맵**: 기사 작성 전 근거 자료를 출처 유형별로 분류한 지도다.
+2. **1차 자료 vs 2차 자료**: 공식 캘린더·사용자 현장 기록은 1차 자료에 가깝고, 기사·외부 영상은 해석이 포함된 2차 자료로 다룬다.
+3. **트렌드 태깅**: 자료를 단순 목록이 아니라 반복되는 주제 축으로 분류하는 작업이다.
+4. **확인 필요 항목**: 아직 출처가 부족하거나 날짜·수치가 불확실한 항목이다.
 
 #### 실습 과제
 
@@ -95,9 +95,9 @@ Seattle Tech Week 2026에서 사용자가 직접 참가·녹화·편집·업로�
 01-Source-Map-Research/
 ├── README.md
 ├── source-maps/
-│   ├── official-and-articles.md
-│   ├── external-youtube.md
-│   └── catchupai-video-transcripts.md
+│   ├── 01-official-and-articles.md
+│   ├── 02-external-youtube.md
+│   └── 03-catchupai-video-transcripts.md
 └── verification-gaps.md
 ```
 
@@ -108,7 +108,7 @@ Seattle Tech Week 2026에서 사용자가 직접 참가·녹화·편집·업로�
 - [ ] 2027 일정 여부와 확인일이 기록됨
 - [ ] 확인 필요 항목이 `verification-gaps.md`에 분리됨
 - [ ] M1 WorkLog 작성 완료
-- [ ] Daily Retrospective 작성 완료
+- [ ] 일일 회고 작성 완료
 
 #### Self-Assessment
 
@@ -132,8 +132,8 @@ Seattle Tech Week 2026에서 사용자가 직접 참가·녹화·편집·업로�
 #### 참조 자료
 
 - `vl_prompts/roadmap_prompt.md`: Roadmap 생성 기준
-- `Topics/Material_For_Topics/Seattle-Tech-Week-2026/2026-08-08 Seattle Tech Week 2026 Live22 Learning Material.md`: 핵심 재료집
-- `Topics/Material_For_Topics/Seattle-Tech-Week-2026/2026-08-09 Seattle Tech Week Article VibeLearn Prompt.md`: 기사 작성 학습 프롬프트
+- `Topics/Materials_For_Topics/Seattle-Tech-Week-2026/2026-08-08 Seattle Tech Week 2026 Live22 Learning Material.md`: 핵심 재료집
+- `Topics/Materials_For_Topics/Seattle-Tech-Week-2026/2026-08-09 Seattle Tech Week Article VibeLearn Prompt.md`: 기사 작성 학습 프롬프트
 
 ### M2 - Trend Analysis & Cross-Reading
 
@@ -188,9 +188,9 @@ Seattle Tech Week 2026에서 사용자가 직접 참가·녹화·편집·업로�
 ```
 02-Trend-Analysis/
 ├── README.md
-├── trend-cards.md
-├── external-vs-field-comparison.md
-└── claim-candidates.md
+├── 01-trend-cards.md
+├── 02-external-vs-field-comparison.md
+└── 03-claim-candidates.md
 ```
 
 #### Definition of Done
@@ -200,7 +200,7 @@ Seattle Tech Week 2026에서 사용자가 직접 참가·녹화·편집·업로�
 - [ ] 핵심 주장 후보 5~7개 작성
 - [ ] 각 주장에 출처 또는 확인 필요 표시 포함
 - [ ] Builders Lounge/VibeLearn AI/Bila AI Agent/Live-CoMC-App 연결 인사이트 포함
-- [ ] M2 WorkLog 및 Daily Retrospective 작성
+- [ ] M2 WorkLog 및 일일 회고 작성
 
 #### Self-Assessment
 
@@ -256,7 +256,7 @@ Seattle Tech Week 2026에서 사용자가 직접 참가·녹화·편집·업로�
   2. 2026년 기준 host submission, calendar live, attendee registration open, 행사 시작 타임라인을 정리한다.
   3. 주최자 체크리스트와 참석자 체크리스트를 나눠 작성한다.
 - **예상 시간**: 60~90분
-- **검증**: `participation-guide-cards.md`에 날짜/채널/체크리스트/주의점이 들어 있다.
+- **검증**: `01-participation-guide-cards.md`에 날짜/채널/체크리스트/주의점이 들어 있다.
 
 **실습 2: 결과물 형식 비교표 작성** ⭐
 - **목적**: 기사 형식을 자료 분석 뒤 결정할 수 있게 기준을 만든다.
@@ -281,9 +281,9 @@ Seattle Tech Week 2026에서 사용자가 직접 참가·녹화·편집·업로�
 ```
 03-Article-Planning/
 ├── README.md
-├── participation-guide-cards.md
-├── format-comparison.md
-└── article-structure-candidates.md
+├── 01-participation-guide-cards.md
+├── 02-format-comparison.md
+└── 03-article-structure-candidates.md
 ```
 
 #### Definition of Done
@@ -293,7 +293,7 @@ Seattle Tech Week 2026에서 사용자가 직접 참가·녹화·편집·업로�
 - [ ] 기사 구조 후보 최소 3개 작성
 - [ ] 각 구조에 핵심 주장, 근거, 현장 장면, 독자, 위험 요소 포함
 - [ ] 최종 기사 초안은 작성하지 않음
-- [ ] M3 WorkLog 및 Daily Retrospective 작성
+- [ ] M3 WorkLog 및 일일 회고 작성
 
 #### Self-Assessment
 
@@ -424,20 +424,20 @@ Seattle Tech Week 2026에서 사용자가 직접 참가·녹화·편집·업로�
 2. 진행 내용
 3. 문제 해결 로그
 4. DoD 체크리스트
-5. Daily Retrospective
+5. 일일 회고
 6. 참조 및 산출물
 
 ## 🔍 Retrospective 가이드
 
-### Daily Retrospective
+### 일일 회고
 
 각 WorkLog 마지막에 5~10분 분량으로 작성한다.
-- What went well?
-- What could be improved?
-- Insights
-- Tomorrow's focus
+- 잘된 점
+- 개선할 점
+- 인사이트
+- 다음 집중 작업
 
-### Module Retrospective
+### 모듈 회고
 
 모듈 완료 시 `vl_worklog/YYYYMMDD_MX_Retrospective.md`에 작성한다.
 - 계획 대비 실제 비교
@@ -476,10 +476,10 @@ Seattle-Tech-Week-2026-Article-Writing/
 
 | 모듈 | 시작일 | 종료일 | 상태 | DoD 달성률 | 비고 |
 |------|--------|--------|------|-----------|------|
-| M1 | | | ⏳ | 0% | Source map + external research refresh |
-| M2 | | | ⏳ | 0% | Trend analysis + cross-reading |
-| M3 | | | ⏳ | 0% | Participation guide + article angles |
-| M4 | | | ⏳ | 0% | Analysis report + format decision |
+| M1 | 2026-08-10 | 2026-08-10 | ✅ | 100% | 소스 맵 및 외부 리서치 갱신 완료. 산출물: `01-Source-Map-Research/`, WorkLog: `vl_worklog/20260810_M1_Seattle-Tech-Week-2026-Article-Writing.md` |
+| M2 | 2026-08-10 | 2026-08-10 | ✅ | 100% | 트렌드 카드, 외부 자료 vs 현장 기록 비교표, 핵심 주장 후보 작성 완료. 산출물: `02-Trend-Analysis/`, WorkLog: `vl_worklog/20260810_M2_Seattle-Tech-Week-2026-Article-Writing.md` |
+| M3 | | | ⏳ | 0% | 참여 가이드 및 기사 각도 설계 |
+| M4 | | | ⏳ | 0% | 분석 리포트 및 형식 결정 |
 
 **범례**:
 - ⏳ 대기

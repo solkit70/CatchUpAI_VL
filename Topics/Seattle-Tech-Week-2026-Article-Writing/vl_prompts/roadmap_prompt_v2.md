@@ -1,4 +1,4 @@
-﻿# VibeLearn AI Roadmap 생성 프롬프트
+# VibeLearn AI Roadmap 생성 프롬프트
 
 **버전**: 2.0
 **생성일**: 2025-12-28
@@ -30,19 +30,27 @@
 
 **Topic 설명**:
 ```
-Seattle Tech Week 2026에서 사용자가 직접 참가·녹화·편집·업로드한 영상과 Transcript, 공개 기사, 공식 행사 페이지, 외부 YouTube 기록, 개인 Roundup/WorkLog를 함께 분석하여 시애틀 AI 생태계의 흐름을 기사형 콘텐츠로 정리한다. 바로 기사 초안으로 들어가지 않고, 먼저 외부 리서치와 로컬 자료를 교차 검증해 분석 리포트와 내년 참여/준비 가이드 글감 카드를 만든 뒤 최종 기사 형식을 결정한다.
+(v2 재진행) Seattle Tech Week 2026을 취재 기반 기사 연재로 완성하는 Topic이다.
+
+v1은 GeekWire·Madrona·McKinsey·Gartner 등 외부 2차 자료만으로 기사 초안을 만들었고, 사용자가 직접
+참석·녹화·업로드한 현장 트랜스크립트 30개(8,703줄)를 한 줄도 인용하지 않았다. 그 결과 현장에 가지
+않은 사람도 쓸 수 있는 문헌 리뷰가 되었고, 생동감과 기고 가치가 부족했다.
+
+v2의 전제는 명확하다. 이 기사의 유일한 차별점은 사용자가 그 자리에 있었다는 사실이다. 따라서 1차 자료
+(현장 트랜스크립트)를 전량 정독해 인용·장면·수치를 채굴하는 것이 출발점이며, 외부 자료는 전면이 아니라
+배경으로 강등한다. 최종 산출물은 한인 매체 기고용 한국어 연재 2~3편이다.
 ```
 
 **학습 목적**:
 ```
-- 외부 공식/기사/YouTube 자료와 사용자 직접 녹화 영상/Transcript를 교차 분석한다
-- Seattle Tech Week 2026의 AI 트렌드와 시애틀 생태계 특징을 분석한다
-- 기사 작성 전에 독립적인 분석 리포트를 완성한다
-- 2027년 참여/주최 준비 가이드를 글감 카드로 정리한다
-- 1회성 기사, 연재 기사, 영상 패키지 후보를 비교해 최종 방향을 제안한다
+- 현장 트랜스크립트 30개(8,703줄)를 전량 정독해 인용 가능한 발언·구체 수치·장면을 Evidence Bank로 구축한다
+- 외부 2차 자료를 기사의 전면이 아니라 배경 근거로 재배치한다
+- 현장 증거를 중심으로 한인 매체 기고용 한국어 연재 2~3편을 설계하고 집필한다
+- 모든 인용을 트랜스크립트 원문과 대조해 화자명·소속·수치의 정확성을 보장한다
+- v1이 실패한 원인(로드맵에 1차 자료 정독 과제가 없었음)을 방법론 차원에서 교정한다
 ```
 
-**예상 학습 기간**: `1.5~2주 (총 12~18시간)`
+**예상 학습 기간**: `1.5~2주 (총 13~16시간)`
 
 ---
 
@@ -52,24 +60,25 @@ Seattle Tech Week 2026에서 사용자가 직접 참가·녹화·편집·업로�
 
 **주요 도구 및 기술 스택**:
 ```
-- Codex CLI / VibeLearn AI 프로세스
+- Claude Code / VibeLearn AI 프로세스
 - 로컬 Obsidian Vault: C:\AI_study\2026\Changsoo_Vault
-- 웹 리서치: 공식 사이트, Luma, Madrona, GeekWire, AI2Work, Wilson Sonsini, Generative Human, Meetup
-- YouTube 리서치: 외부 Seattle Tech Week 2026 영상 + Catch Up AI 영상/Transcript
-- Markdown 기반 분석 리포트 및 기사 구조 설계
+- 1차 자료: Ingest/YouTube/videos/2026/ 내 현장 트랜스크립트 30개 (Whisper 전사, 타임스탬프·화자·소속 메타데이터 포함)
+- 기존 v1 산출물: 01-Source-Map-Research/ ~ 04-Synthesis-Report/ (배경 자료로 재사용)
+- Markdown 기반 Evidence Bank 및 기사 원고
 ```
 
 **사전 지식**:
 ```
 필수:
-- Seattle Tech Week 2026 기본 맥락
-- 사용자가 직접 참석·녹화한 행사 자료 위치
-- 기사형 콘텐츠 작성의 기본 구조
+- Seattle Tech Week 2026 현장 참석 경험 (사용자 본인)
+- 현장 트랜스크립트 30개의 위치와 메타데이터 구조
+- 기사형 콘텐츠의 기본 구조 (리드, 근거, 인용, 결론)
+- v1 초안의 한계에 대한 이해 (현장 자료 미사용)
 
 권장:
-- 시애틀 AI/스타트업 생태계 배경 이해
-- Builders Lounge, VibeLearn AI, Bila AI Agent, Live-CoMC-App 프로젝트 맥락
-- YouTube Transcript와 로컬 Roundup 문서 활용 경험
+- 한인 매체 기고문의 분량·문체 관행
+- 시애틀 AI/스타트업 생태계 배경
+- 인용 표기와 팩트체크 기본 원칙
 ```
 
 ---
@@ -78,45 +87,41 @@ Seattle Tech Week 2026에서 사용자가 직접 참가·녹화·편집·업로�
 
 **학습 목표** (달성하고 싶은 것):
 ```
-- [ ] 외부 공식/기사/YouTube 소스 맵 작성 및 트렌드 축 태깅
-- [ ] 사용자 직접 녹화 영상/Transcript와 외부 자료의 공통점·차이점 분석
-- [ ] Seattle Tech Week 2026 분석 리포트 완성
-- [ ] 2027년 참여/주최 준비 가이드 글감 카드 작성
-- [ ] 1회성 기사 vs 연재 기사 vs 기사+영상 패키지 판단 기준 수립
+- [ ] 현장 트랜스크립트 30개에서 인용 가능한 발언을 타임스탬프·화자·소속과 함께 추출할 수 있다
+- [ ] 추상적 주장 대신 구체적 장면과 수치로 트렌드를 입증할 수 있다
+- [ ] 외부 2차 자료를 현장 증거의 배경으로 배치하는 구조를 설계할 수 있다
+- [ ] 한인 매체 독자에게 맞는 연재 2~3편의 각 편 역할과 리드를 확정할 수 있다
+- [ ] 모든 인용을 원문 대조로 검증하고 기고 가능한 원고 패키지를 만들 수 있다
 ```
 
 **참조 자료**:
 ```
-- Ingest/CatchUpAI_VL/Topics/Materials_For_Topics/Seattle-Tech-Week-2026/2026-08-08 Seattle Tech Week 2026 Live22 Learning Material.md
-- Ingest/CatchUpAI_VL/Topics/Materials_For_Topics/Seattle-Tech-Week-2026/2026-08-09 Seattle Tech Week Article VibeLearn Prompt.md
-- Ingest/CatchUpAI_VL/Topics/Seattle-Tech-Week-2026/README.md
-- Ingest/CatchUpAI_VL/Topics/Seattle-Tech-Week-2026/03-Schedule/final.md
-- Ingest/CatchUpAI_VL/Topics/Seattle-Tech-Week-2026/04-Process-Notes/claude-code-to-codex-automation.md
-- AI/Roundup/2026-08-02 - Live22 Weekly Rundown.md
-- AI/Roundup/2026-08-02 - Weekly Progress and Planning.md
-- AI/Roundup/Weekly/2026-07-26~2026-08-02 - Claude Code.md
-- AI/Roundup/2026-08-05 - Daily Roundup.md
-- AI/Roundup/2026-08-06 - Daily Roundup.md
-- Journal/2026-08-07.md
-- AI/Research/2026-07-28 Seattle Tech Week 일정 수립 영상 유튜브 업로드 자료 (한국어·영어) by Claude Code.md
-- AI/Research/2026-08-04 Seattle Spark AI 밋업 영상 업로드 정보 by Claude Code.md
-- AI/Research/2026-08-05 AI Startup Secret Sauce 영상 업로드 정보 by Claude Code.md
-- AI/Research/2026-08-06 Startup425 Eastside Summit 3 영상 업로드 정보 by Claude Code.md
-- AI/Research/2026-08-06 Startup425 AI Demo Day 영상 업로드 정보 by Claude Code.md
-- AI/Research/2026-08-07 ACM Data Conclave 영상 업로드 정보 by Claude Code.md
-- AI/Research/2026-08-07 InformsCon 영상 업로드 정보 by Claude Code.md
-- AI/Research/2026-08-07 Biuty AI 영상 업로드 정보 by Claude Code.md
+**1차 자료 (최우선 — v1에서 미사용)**
+- Ingest/YouTube/videos/2026/ 내 Seattle Tech Week 현장 트랜스크립트 30개 (총 8,703줄)
+  - Seattle Spark + AI 4개 / AI Startup Secret Sauce 5개 / Startup425 Eastside Summit 3 5개
+  - Startup425 AI Demo Day 9개 / ACM Data Conclave 2개 / InformsCon 3개 / Biuty AI 1개
+  - 각 파일 frontmatter에 speaker, speaker_affiliation, event_name, event_date, event_location, event_url 포함
 - Ingest/YouTube/playlists/ai-startup-pitch-showcases-and-workshops/_index.md
-- 공식/외부 웹 소스: Seattle Tech Week, Luma, Madrona, GeekWire, AI2Work, Wilson Sonsini, Generative Human, Meetup, 외부 YouTube 영상
+
+**v1 산출물 (배경 자료로 재사용)**
+- 01-Source-Map-Research/ : 소스 맵과 verification-gaps
+- 02-Trend-Analysis/ : 트렌드 카드, 외부-현장 비교표, 주장 후보
+- 04-Synthesis-Report/01-seattle-tech-week-2026-analysis-report.md : 2023~2026 연대기 프레임 (유효)
+- 04-Synthesis-Report/05-main-analysis-article-draft.md : v1 초안 (재작성 대상)
+
+**외부 2차 자료 (배경으로 강등)**
+- GeekWire Seattle Tech Week tag: https://www.geekwire.com/tag/seattle-tech-week/
+- Madrona 연도별 회고 2023~2025
+- McKinsey AI transformation / trust 2026, Gartner 소비자 AI 조사 2026
 ```
 
 **vl_materials/ 폴더**:
 ```
-- 외부 공식/기사 소스 맵
-- 외부 YouTube 영상 소스 맵
-- 사용자 직접 녹화 영상/Transcript 소스 맵
-- 트렌드 축별 글감 카드
-- 2027년 참여/주최 준비 가이드 글감 카드
+vl_materials/ 에 다음을 축적한다.
+- evidence-index.md : 트랜스크립트 30개의 채굴 진행 상황 추적표
+- quote-bank.md : 인용 후보 원문(영어) + 한국어 번역 + 출처(영상 링크·타임스탬프)
+- numbers-bank.md : 구체 수치와 그 맥락
+- article-outlet-notes.md : 한인 매체 기고 규격 메모 (분량, 문체, 제목 관행)
 ```
 
 ---
@@ -131,7 +136,7 @@ Seattle Tech Week 2026에서 사용자가 직접 참가·녹화·편집·업로�
 
 **로드맵 생성 전 반드시 수행:**
 
-사용자가 입력한 학습 기간 `1.5~2주 (총 12~18시간)`이 해당 Topic에 적절한지 분석하고 피드백을 제공하세요.
+사용자가 입력한 학습 기간 `1.5~2주 (총 13~16시간)`이 해당 Topic에 적절한지 분석하고 피드백을 제공하세요.
 
 #### 분석 기준:
 1. **Topic 복잡도 평가**
@@ -153,7 +158,7 @@ Seattle Tech Week 2026에서 사용자가 직접 참가·녹화·편집·업로�
 ```markdown
 ## 📊 학습 기간 적정성 분석
 
-**사용자 입력 기간**: 1.5~2주 (총 12~18시간)
+**사용자 입력 기간**: 1.5~2주 (총 13~16시간)
 **Topic 복잡도**: [간단/중간/복잡]
 **권장 기간**: [X주 또는 Y일]
 
