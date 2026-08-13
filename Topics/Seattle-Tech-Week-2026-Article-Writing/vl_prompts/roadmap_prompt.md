@@ -1,4 +1,4 @@
-﻿# VibeLearn AI Roadmap 생성 프롬프트
+# VibeLearn AI Roadmap 생성 프롬프트
 
 **버전**: 2.0
 **생성일**: 2025-12-28

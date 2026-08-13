@@ -84,7 +84,7 @@ Phase 1 (기록 기반 Q&A) 구현 후 현재 플랫폼 한계를 파악해 GOBI
 
 **vl_materials/ 폴더**:
 ```
-실제 파일 위치: Ingest/CatchUpAI_VL/Topics/Material_For_Topics/Bila_AI_Agent/
+실제 파일 위치: Ingest/CatchUpAI_VL/Topics/Materials_For_Topics/Bila_AI_Agent/
 - system_prompt_mention.md
 - system_prompt_chat.md
 - gobi_space_settings.md

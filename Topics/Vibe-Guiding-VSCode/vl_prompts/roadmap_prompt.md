@@ -89,7 +89,7 @@ VibeLearn AI 학습 방법론을 사용해 Vibe Guiding의 철학, 아키텍처,
 
 **참조 자료**:
 ```
-- Topics/Material_For_Topics/Idea/Vibe_Guiding/VibeGuiding_BrainDump.md
+- Topics/Materials_For_Topics/Idea/Vibe_Guiding/VibeGuiding_BrainDump.md
 - Topics/GOBI-Guiding/2026-04-03 GOBI Vibe Guiding 시스템 맵.md
 - Topics/GOBI-Guiding/2026-04-05 Vibe Guiding 구현 계획.md
 - Topics/GOBI-Specs-Pipeline/04-Reviews-and-Opinions/2026-04-09 - Proposal - Vibe Guiding Architecture for Gobi.md

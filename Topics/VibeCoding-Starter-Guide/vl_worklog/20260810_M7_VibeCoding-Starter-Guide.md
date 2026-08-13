@@ -127,7 +127,7 @@ Topic은 완료됐다. 남은 것은 **실전 투입**이다.
 
 **참조 자료**
 - M1~M6 전체 산출물
-- `Topics/Material_For_Topics/AI-Guidance-Program/project-overview.md` — Level 1 정의
+- `Topics/Materials_For_Topics/AI-Guidance-Program/project-overview.md` — Level 1 정의
 - `Topics/VibeCoding-Onboarding-Program/01-Application-Form/form-questions.md` — 환영 인사
 
 **최종 검수 (자동 검사)**

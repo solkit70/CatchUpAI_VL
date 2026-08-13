@@ -65,7 +65,7 @@ OS: Windows 11
 - `gobi_space_settings.md` — GobiSpace Settings 탭 전체 기능 가이드
 - `bila_agent_project_plan.md` — 전체 프로젝트 플랜 (3단계 구현 로드맵 포함)
 
-> 위 파일 실제 위치: `Ingest/CatchUpAI_VL/Topics/Material_For_Topics/Bila_AI_Agent/`
+> 위 파일 실제 위치: `Ingest/CatchUpAI_VL/Topics/Materials_For_Topics/Bila_AI_Agent/`
 
 ### 원본 구상 문서
 - `AI/Initiatives/Builders Lounge/ideas/2026-05-30 Builders Lounge AI 코디네이터 구상.md`

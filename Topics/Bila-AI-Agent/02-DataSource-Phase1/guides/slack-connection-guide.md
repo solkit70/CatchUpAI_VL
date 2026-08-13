@@ -11,7 +11,7 @@ tags:
 
 This guide records the Slack connection flow for Bila AI Agent. Slack is a required Builders Lounge data source because most online Builders Lounge conversation happens in Slack. In GobiSpace, Slack is read-only: the agent can read messages from public channels where the Gobi Slack app has been invited, but the agent cannot post to Slack.
 
-Source context: [[Ingest/CatchUpAI_VL/Topics/Material_For_Topics/Bila_AI_Agent/gobi_space_settings#3-5. Slack 연동|Changbal Space settings - Slack]] and the user-provided screenshots from 2026-07-26.
+Source context: [[Ingest/CatchUpAI_VL/Topics/Materials_For_Topics/Bila_AI_Agent/gobi_space_settings#3-5. Slack 연동|Changbal Space settings - Slack]] and the user-provided screenshots from 2026-07-26.
 
 ## Target Environment
 

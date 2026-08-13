@@ -76,9 +76,9 @@ Source Map 1개, 영상 Angle 1개, 영상 Brief 1개, 첫 WorkLog 1개를 만�
 ```
 AI/Initiatives/Builders Lounge/README.md
 AI/Initiatives/Builders Lounge/builders/Song-Jae-hee-Build-with-AI/2026-06-29 Build with AI source note.md
-Ingest/CatchUpAI_VL/Topics/Material_For_Topics/Bila_AI_Agent/bila_agent_project_plan.md
-Ingest/CatchUpAI_VL/Topics/Material_For_Topics/Bila_AI_Agent/system_prompt_chat.md
-Ingest/CatchUpAI_VL/Topics/Material_For_Topics/Bila_AI_Agent/gobi_space_settings.md
+Ingest/CatchUpAI_VL/Topics/Materials_For_Topics/Bila_AI_Agent/bila_agent_project_plan.md
+Ingest/CatchUpAI_VL/Topics/Materials_For_Topics/Bila_AI_Agent/system_prompt_chat.md
+Ingest/CatchUpAI_VL/Topics/Materials_For_Topics/Bila_AI_Agent/gobi_space_settings.md
 Build with AI ePub/PDF source materials in the Builders Lounge material set
 Ingest/CatchUpAI_VL/Topics/Build-with-AI/vl_materials/
 Ingest/CatchUpAI_VL/Topics/Build-with-AI/01-Source-Map/source-materials.md

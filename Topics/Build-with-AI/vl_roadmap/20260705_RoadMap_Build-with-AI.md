@@ -253,7 +253,7 @@ Build-with-AI는 송재희님의 Build with AI 12부작 자료를 학습하고, 
 
 #### 참조 자료
 
-- [[Ingest/CatchUpAI_VL/Topics/Material_For_Topics/Bila_AI_Agent/bila_agent_project_plan#Phase 2 — 멤버 매칭 (Product 모니터링 & 자동 연결)|Bila AI Agent Phase 2]]: 커뮤니티 검증과 매칭 bridge 확인.
+- [[Ingest/CatchUpAI_VL/Topics/Materials_For_Topics/Bila_AI_Agent/bila_agent_project_plan#Phase 2 — 멤버 매칭 (Product 모니터링 & 자동 연결)|Bila AI Agent Phase 2]]: 커뮤니티 검증과 매칭 bridge 확인.
 - [[Initiatives/Builders Lounge/builders/Song-Jae-hee-Build-with-AI/2026-06-29 Build with AI source note#Live #17 Experiment Angle|Live #17 Experiment Angle]]: 최초 문제의식 확인.
 
 ### M3 - Script Starter and Narrative Design

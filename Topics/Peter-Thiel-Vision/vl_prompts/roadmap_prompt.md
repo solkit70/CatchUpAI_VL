@@ -90,7 +90,7 @@
 **참조 자료**:
 ```
 - [[Roundup/2026-05-19 - Live11 Weekly Rundown#4️⃣ 4부: 피터 틸이 꿈꾸는 세상 — 라이브 리서치 & 에세이 프리뷰|Live #11 Rundown 피터 틸 리서치 섹션]]
-- Ingest/CatchUpAI_VL/Topics/Material_For_Topics/Idea/Peter Thiel Vision Research (PTV).md
+- Ingest/CatchUpAI_VL/Topics/Materials_For_Topics/Idea/Peter Thiel Vision Research (PTV).md
 - `Zero to One`
 - Peter Thiel 인터뷰, 강연, 에세이
 - Palantir, Founders Fund, Anduril, SpaceX 관련 공식 자료와 분석

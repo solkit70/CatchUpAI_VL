@@ -30,7 +30,7 @@ Build with AI의 핵심 thesis는 **"AI 시대의 병목은 코딩이 아니라 
 | Part 4 | 실제 병목이 모델보다 데이터 품질과 맥락에 있음을 강조한다. | 서비스화 실패 원인 1: 데이터와 업무 맥락 부족. 사용자의 도메인 지식과 기록이 AI 결과물의 차이를 만든다는 메시지로 연결한다. |
 | Part 5 | 진짜 기술은 코딩이 아니라 문제를 정확히 정의하는 능력이라고 본다. | 첫 영상의 중심 thesis. `상황 / 사용자 / 제약 / 성공 조건` 프레임워크로 소개하되, 비개발자가 자기 언어로 문제를 설명하는 장면을 우선한다. |
 | Part 6 | 프롬프팅을 프로그래밍에 가까운 설계 행위로 본다. 역할, 작업, 맥락, 형식, 제약, 예시가 중요하다. | 지시문이 아니라 요구사항/검증 조건을 만드는 장면에 연결한다. "프롬프트 기술"보다 "생각을 정리해 AI에게 넘기는 법"으로 풀어낸다. |
-| Part 7 | AI Agent를 트리거, 도구, 결정, 목표를 가진 행동 시스템으로 설명한다. | [[Ingest/CatchUpAI_VL/Topics/Material_For_Topics/Bila_AI_Agent/bila_agent_project_plan#Bila AI Agent 프로젝트 플랜|Bila AI Agent]]는 후속 bridge로 남긴다. 첫 영상에서는 챗봇과 실제 행동 시스템의 차이를 쉬운 예로 설명한다. |
+| Part 7 | AI Agent를 트리거, 도구, 결정, 목표를 가진 행동 시스템으로 설명한다. | [[Ingest/CatchUpAI_VL/Topics/Materials_For_Topics/Bila_AI_Agent/bila_agent_project_plan#Bila AI Agent 프로젝트 플랜|Bila AI Agent]]는 후속 bridge로 남긴다. 첫 영상에서는 챗봇과 실제 행동 시스템의 차이를 쉬운 예로 설명한다. |
 | Part 8 | 바이브 코딩은 자연어로 구현을 지시하고 테스트·반복하는 프로세스라고 설명한다. | "말로 만들 수 있다"와 "막 만들면 된다"를 구분한다. 비개발자에게는 먼저 계획을 요청하고 작은 단위로 만들며 테스트하는 습관을 강조한다. |
 | Part 9 | 코드 어시스턴트가 코드 가시성, 유지보수성, 디버깅, 리뷰를 제공한다고 본다. | 비개발자도 구조를 이해해야 통제권이 생긴다는 메시지에 사용한다. AI는 만능 해결책이 아니라, 배우며 리드하거나 전문가 도움을 받을 때 강해진다는 현실을 넣는다. |
 | Part 10 | 데모와 프로덕션의 차이를 예측 불가능한 입력, 실제 사용자 데이터, 비용, 지연, 신뢰, 실패 대응으로 설명한다. | 첫 영상의 핵심 챕터. `나 혼자 쓸 앱`과 `다른 사람도 쓸 앱`의 차이를 이선생님 Voice Legacy 앱 배포 사례로 쉽게 보여준다. |
@@ -63,7 +63,7 @@ Build with AI의 핵심 thesis는 **"AI 시대의 병목은 코딩이 아니라 
 
 ## Builders Lounge Connection
 
-Build with AI는 비개발자 빌더가 데모를 만드는 방법에서 출발하지만, Builders Lounge 관점에서는 "각 빌더의 Product 상태를 어떻게 발견하고 서로 연결할 것인가"라는 운영 질문으로 확장된다. [[Ingest/CatchUpAI_VL/Topics/Material_For_Topics/Bila_AI_Agent/bila_agent_project_plan#Phase 2 — 멤버 매칭 (Product 모니터링 & 자동 연결)|Bila AI Agent]]는 멤버의 Product 상태 모니터링, 보완 관계 감지, 자동 연결 알림을 목표로 하므로 Build with AI의 문제 구조화 논지를 커뮤니티 운영 시스템으로 연결할 수 있다.
+Build with AI는 비개발자 빌더가 데모를 만드는 방법에서 출발하지만, Builders Lounge 관점에서는 "각 빌더의 Product 상태를 어떻게 발견하고 서로 연결할 것인가"라는 운영 질문으로 확장된다. [[Ingest/CatchUpAI_VL/Topics/Materials_For_Topics/Bila_AI_Agent/bila_agent_project_plan#Phase 2 — 멤버 매칭 (Product 모니터링 & 자동 연결)|Bila AI Agent]]는 멤버의 Product 상태 모니터링, 보완 관계 감지, 자동 연결 알림을 목표로 하므로 Build with AI의 문제 구조화 논지를 커뮤니티 운영 시스템으로 연결할 수 있다.
 
 다만 첫 영상에서는 Builders Lounge/Bila AI Agent를 중심 사례로 두지 않는다. 이번 영상의 대상은 더 넓고 쉬운 설명이 필요한 비개발자이므로, Builders Lounge는 "후속 질문" 또는 "커뮤니티 검증장" 정도로만 배치한다. 특히 Part 4와 Part 7은 후속 영상에서 더 중요하다. Part 4는 AI Agent의 성능이 모델보다 데이터와 맥락에 달려 있음을 보여주고, Part 7은 Agent가 단일 챗봇이 아니라 트리거·도구·결정·목적지를 가진 시스템임을 설명한다.
 

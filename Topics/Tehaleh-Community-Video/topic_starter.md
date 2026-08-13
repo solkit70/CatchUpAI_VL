@@ -91,7 +91,7 @@ OS: Windows 11
 
 ### 핵심 파일
 ```
-- 기존 프롬프트: Ingest/CatchUpAI_VL/Topics/Material_For_Topics/Idea/Tehaleh-Community-Video/tehaleh-video-prompt.md
+- 기존 프롬프트: Ingest/CatchUpAI_VL/Topics/Materials_For_Topics/Idea/Tehaleh-Community-Video/tehaleh-video-prompt.md
 - Remotion 프로젝트: Ingest/CatchUpAI_VL/Topics/Remotion-VideoCreation/my-first-video/
 - Video ID: tehaleh-intro-0619
 - Composition ID: TehalehIntro0619

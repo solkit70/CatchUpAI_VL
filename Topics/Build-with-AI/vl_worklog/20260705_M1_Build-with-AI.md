@@ -15,9 +15,9 @@ Build with AI Topic을 VibeLearn AI 구조로 시작했다. 이번 세션에서�
 
 - [[Initiatives/Builders Lounge/README#멤버 목록|Builders Lounge README]]
 - [[Initiatives/Builders Lounge/builders/Song-Jae-hee-Build-with-AI/2026-06-29 Build with AI source note#Summary|Build with AI source note]]
-- [[Ingest/CatchUpAI_VL/Topics/Material_For_Topics/Bila_AI_Agent/bila_agent_project_plan#Bila AI Agent 프로젝트 플랜|Bila AI Agent 구축 플랜]]
-- [[Ingest/CatchUpAI_VL/Topics/Material_For_Topics/Bila_AI_Agent/system_prompt_chat|Bila AI Agent system prompt source]]
-- [[Ingest/CatchUpAI_VL/Topics/Material_For_Topics/Bila_AI_Agent/gobi_space_settings#Changbal Space 설정 가이드|Gobi Space settings]]
+- [[Ingest/CatchUpAI_VL/Topics/Materials_For_Topics/Bila_AI_Agent/bila_agent_project_plan#Bila AI Agent 프로젝트 플랜|Bila AI Agent 구축 플랜]]
+- [[Ingest/CatchUpAI_VL/Topics/Materials_For_Topics/Bila_AI_Agent/system_prompt_chat|Bila AI Agent system prompt source]]
+- [[Ingest/CatchUpAI_VL/Topics/Materials_For_Topics/Bila_AI_Agent/gobi_space_settings#Changbal Space 설정 가이드|Gobi Space settings]]
 
 ## Completed
 

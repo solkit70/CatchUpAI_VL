@@ -153,10 +153,10 @@ GobiSpace Changbal 스페이스의 **Bila AI Agent**를 실제로 구축하는 �
 
 #### 참조 자료
 
-- `Material_For_Topics/Bila_AI_Agent/system_prompt_mention.md`: 강민석님 제공 원본 프롬프트 (@mention)
-- `Material_For_Topics/Bila_AI_Agent/system_prompt_chat.md`: 강민석님 제공 원본 프롬프트 (채팅)
-- `Material_For_Topics/Bila_AI_Agent/gobi_space_settings.md`: GobiSpace Settings 전체 가이드
-- `Material_For_Topics/Bila_AI_Agent/bila_agent_project_plan.md`: 전체 프로젝트 플랜 (Step 1 참조)
+- `Materials_For_Topics/Bila_AI_Agent/system_prompt_mention.md`: 강민석님 제공 원본 프롬프트 (@mention)
+- `Materials_For_Topics/Bila_AI_Agent/system_prompt_chat.md`: 강민석님 제공 원본 프롬프트 (채팅)
+- `Materials_For_Topics/Bila_AI_Agent/gobi_space_settings.md`: GobiSpace Settings 전체 가이드
+- `Materials_For_Topics/Bila_AI_Agent/bila_agent_project_plan.md`: 전체 프로젝트 플랜 (Step 1 참조)
 
 ---
 
@@ -258,7 +258,7 @@ GobiSpace Changbal 스페이스의 **Bila AI Agent**를 실제로 구축하는 �
 
 #### 참조 자료
 
-- `Material_For_Topics/Bila_AI_Agent/bila_agent_project_plan.md`: Step 2 (데이터 소스 연결) 참조
+- `Materials_For_Topics/Bila_AI_Agent/bila_agent_project_plan.md`: Step 2 (데이터 소스 연결) 참조
 - CMDS x GOBI Cohort AI (`gobispace.com/spaces/cmds-gobi-1`): 유사 구현 사례
 
 ---
@@ -348,8 +348,8 @@ GobiSpace Changbal 스페이스의 **Bila AI Agent**를 실제로 구축하는 �
 
 #### 참조 자료
 
-- `Material_For_Topics/Bila_AI_Agent/bila_agent_project_plan.md`: Phase 3 아키텍처 참조 (Section 2)
-- `Material_For_Topics/Bila_AI_Agent/gobi_space_settings.md`: Space 탭 채널 기능
+- `Materials_For_Topics/Bila_AI_Agent/bila_agent_project_plan.md`: Phase 3 아키텍처 참조 (Section 2)
+- `Materials_For_Topics/Bila_AI_Agent/gobi_space_settings.md`: Space 탭 채널 기능
 
 ---
 
@@ -450,7 +450,7 @@ GobiSpace Changbal 스페이스의 **Bila AI Agent**를 실제로 구축하는 �
 
 #### 참조 자료
 
-- `Material_For_Topics/Bila_AI_Agent/bila_agent_project_plan.md`: Section 5 (현재 불가능한 기능 & GOBI 요구사항 Draft)
+- `Materials_For_Topics/Bila_AI_Agent/bila_agent_project_plan.md`: Section 5 (현재 불가능한 기능 & GOBI 요구사항 Draft)
 - M1~M3 WorkLog: 실습 중 발견한 한계 사항들
 
 ---
@@ -515,7 +515,7 @@ Topics/Bila-AI-Agent/
 │   ├── 20260628_M2_Bila-AI-Agent.md
 │   └── ...
 ├── vl_materials/
-│   └── (Material_For_Topics/Bila_AI_Agent/ 참조)
+│   └── (Materials_For_Topics/Bila_AI_Agent/ 참조)
 ├── 01-Agents-Setup/
 ├── 02-DataSource-Phase1/
 ├── 03-Channel-Admin/

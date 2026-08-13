@@ -7,7 +7,7 @@ tags:
   - vibelearn-ai
   - gobi
 sources:
-  - "[[Ingest/CatchUpAI_VL/Topics/Material_For_Topics/Idea/Vibe_Guiding/VibeGuiding_BrainDump|VibeGuiding_BrainDump]]"
+  - "[[Ingest/CatchUpAI_VL/Topics/Materials_For_Topics/Idea/Vibe_Guiding/VibeGuiding_BrainDump|VibeGuiding_BrainDump]]"
   - "[[Ingest/CatchUpAI_VL/Topics/GOBI-Guiding/2026-04-05 Vibe Guiding 구현 계획#Context|2026-04-05 Vibe Guiding 구현 계획]]"
   - "[[Ingest/CatchUpAI_VL/Topics/GOBI-Guiding/2026-04-13 Gobi Desktop Vibe Guiding 기능 수준 테스트#2. 테스트 결과 및 분석|2026-04-13 Gobi Desktop Vibe Guiding 기능 수준 테스트]]"
 ---
@@ -18,7 +18,7 @@ Vibe Guiding은 Vibe Learning으로 만든 최신 매뉴얼을 사용자의 현�
 
 ## 3분 설명
 
-Vibe Learning은 특정 Topic에 대해 AI와 함께 학습하고 실습하면서 교과서 품질의 산출물을 만드는 방법론이다. [[Ingest/CatchUpAI_VL/Topics/Material_For_Topics/Idea/Vibe_Guiding/VibeGuiding_BrainDump|VibeGuiding_BrainDump]]에서는 이 산출물이 사람에게는 매뉴얼이 되고 AI에게는 잘 정리된 context가 된다는 점에서 Vibe Guiding의 출발점을 찾는다.
+Vibe Learning은 특정 Topic에 대해 AI와 함께 학습하고 실습하면서 교과서 품질의 산출물을 만드는 방법론이다. [[Ingest/CatchUpAI_VL/Topics/Materials_For_Topics/Idea/Vibe_Guiding/VibeGuiding_BrainDump|VibeGuiding_BrainDump]]에서는 이 산출물이 사람에게는 매뉴얼이 되고 AI에게는 잘 정리된 context가 된다는 점에서 Vibe Guiding의 출발점을 찾는다.
 
 Vibe Guiding은 이 매뉴얼을 정적인 문서로 남겨두지 않고, 특정 사용자의 현재 상황에서 필요한 부분만 꺼내 안내로 바꾸는 레이어다. 그래서 핵심 질문은 "무엇을 알고 있는가"가 아니라 "지금 이 사용자에게 무엇을 알려줘야 작업이 끝나는가"가 된다. [[Ingest/CatchUpAI_VL/Topics/GOBI-Guiding/2026-04-05 Vibe Guiding 구현 계획#2-1. Guiding 엔진 설계|Vibe Guiding 구현 계획]]은 이 구조를 User Context와 Vibe Manual이 결합되어 Just-in-time 맞춤 안내를 만드는 흐름으로 설명한다.
 

@@ -16,7 +16,7 @@ tags:
 |------|------|
 | 트리거 | 멤버가 포스트/댓글에 `@Bila AI` 멘션 (에이전트 표시 이름 기반, @changbal 아님) |
 | Phase | Phase 1 — 스페이스 포스트 기반 Q&A |
-| 원본 출처 | `Material_For_Topics/Bila_AI_Agent/system_prompt_mention.md` (강민석님 제공) |
+| 원본 출처 | `Materials_For_Topics/Bila_AI_Agent/system_prompt_mention.md` (강민석님 제공) |
 | 적용 위치 | GobiSpace → Changbal → Settings → Agents → mention용 System prompt 필드 |
 
 ---

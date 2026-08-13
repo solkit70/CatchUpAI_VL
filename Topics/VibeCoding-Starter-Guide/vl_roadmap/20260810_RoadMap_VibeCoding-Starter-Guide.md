@@ -44,7 +44,7 @@
 
 컴퓨터에 익숙하지 않은 사람도 따라할 수 있는 "바이브 코딩 + VibeLearn AI 시작·활용 가이드"를 만든다. 단순 설치 절차서가 아니라 도구 설명, 바이브 코딩의 의미, AI를 동료로 대하는 협업 방식, VibeLearn AI를 챗봇처럼 쓰지 않고 제대로 활용하는 법, 기록이 AI의 연료가 된다는 것, AI에게 계획부터 세우게 하라는 원칙까지 담는다. 설치 기본 경로는 **VS Code + Claude 유료 구독 + Claude Code 확장 + VibeLearn AI**로 고정한다.
 
-이 Topic의 산출물은 [AI 활용 가이드 프로그램](../Material_For_Topics/AI-Guidance-Program/project-overview.md)의 **Level 1 — Vibe Coding 입문** 매뉴얼로 그대로 쓰인다.
+이 Topic의 산출물은 [AI 활용 가이드 프로그램](../Materials_For_Topics/AI-Guidance-Program/project-overview.md)의 **Level 1 — Vibe Coding 입문** 매뉴얼로 그대로 쓰인다.
 
 ### 학습 목표
 
@@ -677,7 +677,7 @@
 
 #### 참조 자료
 - M1~M6 전체 산출물
-- `Topics/Material_For_Topics/AI-Guidance-Program/project-overview.md` — Level 1 정의
+- `Topics/Materials_For_Topics/AI-Guidance-Program/project-overview.md` — Level 1 정의
 - `Topics/VibeCoding-Onboarding-Program/01-Application-Form/form-questions.md` — 환영 인사
 
 ## 📝 WorkLog 작성 가이드

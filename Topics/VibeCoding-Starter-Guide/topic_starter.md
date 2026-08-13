@@ -134,8 +134,8 @@ OS: Windows 11 (집필 환경)
 ### 관련 내부 문서
 
 ```
-- 이번 Topic 진행 계획: Topics/Material_For_Topics/VibeCoding-Starter-Guide/20260810-topic-plan.md
-- AI 활용 가이드 프로그램 Level 1: Topics/Material_For_Topics/AI-Guidance-Program/project-overview.md
+- 이번 Topic 진행 계획: Topics/Materials_For_Topics/VibeCoding-Starter-Guide/20260810-topic-plan.md
+- AI 활용 가이드 프로그램 Level 1: Topics/Materials_For_Topics/AI-Guidance-Program/project-overview.md
 - 집필 원칙 원본: Topics/VibeCoding-Onboarding-Program/vl_roadmap/20260721_RoadMap_VibeCoding-Onboarding-Program.md
 - 설치 가이드 재사용: Topics/VibeLearn-AI/02-User-Guide/guides/quick-start-30min.md, faq.md
 - 정량 성공 사례: Topics/VibeLearn-AI/02-User-Guide/case-studies/clearly-case.md

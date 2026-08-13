@@ -85,7 +85,7 @@ Tehaleh 지역 소개 영상을 AI(Remotion)로 제작하는 전 과정 학습 �
 
 **참조 자료**:
 ```
-- 기존 프롬프트: Ingest/CatchUpAI_VL/Topics/Material_For_Topics/Idea/Tehaleh-Community-Video/tehaleh-video-prompt.md
+- 기존 프롬프트: Ingest/CatchUpAI_VL/Topics/Materials_For_Topics/Idea/Tehaleh-Community-Video/tehaleh-video-prompt.md
 - Remotion 프로젝트: Ingest/CatchUpAI_VL/Topics/Remotion-VideoCreation/my-first-video/
 - Tehaleh 공식 웹사이트: https://tehaleh.com
 - Newland Communities: https://newlandcommunities.com

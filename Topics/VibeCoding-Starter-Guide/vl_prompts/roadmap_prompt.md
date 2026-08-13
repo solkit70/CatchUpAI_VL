@@ -123,11 +123,11 @@
 - `Topics/VibeCoding-Onboarding-Program/vl_roadmap/20260721_RoadMap_VibeCoding-Onboarding-Program.md` — 집필 원칙 원본
 - `Topics/VibeCoding-Onboarding-Program/01-Application-Form/form-questions.md` — 환영 인사
 - `Topics/Builders-Lounge-AI-Guide-Presentation/04-Script-Rehearsal/full-script.md` — 박창수 말투
-- `Topics/Material_For_Topics/AI-Guidance-Program/project-overview.md` — 이 Topic의 산출물이 곧 Level 1 매뉴얼
+- `Topics/Materials_For_Topics/AI-Guidance-Program/project-overview.md` — 이 Topic의 산출물이 곧 Level 1 매뉴얼
 - `_Settings_/Skills/gobi-onboarding/SKILL.md` — 톤·용어표 패턴
 
 **이번 Topic 진행 계획**
-- `Topics/Material_For_Topics/VibeCoding-Starter-Guide/20260810-topic-plan.md` — 모듈 구성과 M5·M6 상세가 여기 있다
+- `Topics/Materials_For_Topics/VibeCoding-Starter-Guide/20260810-topic-plan.md` — 모듈 구성과 M5·M6 상세가 여기 있다
 
 **학생 세션 배경**
 - `Topics/FedWay-Liberation-Day-2026/vl_materials/20260809-tf-kakaotalk-program-cost-and-student-participation.md`

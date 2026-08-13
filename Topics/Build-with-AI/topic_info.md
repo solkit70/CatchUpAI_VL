@@ -16,7 +16,7 @@ Build with AI는 송재희님의 12부작 자료를 학습하고, 그 내용을 
 
 ## Learning Purpose
 
-이번 Topic의 목적은 Build with AI 자료를 단순 요약하는 것이 아니라 영상 제작 가능한 논지로 바꾸는 것이다. 특히 [[Initiatives/Builders Lounge/builders/Song-Jae-hee-Build-with-AI/2026-06-29 Build with AI source note#Live #17 Experiment Angle|Build with AI source note]]의 문제의식을 바탕으로, Builders Lounge의 Product Discovery 흐름과 [[Ingest/CatchUpAI_VL/Topics/Material_For_Topics/Bila_AI_Agent/bila_agent_project_plan#Bila AI Agent 프로젝트 플랜|Bila AI Agent 구축 플랜]]이 어떻게 연결될 수 있는지 정리한다.
+이번 Topic의 목적은 Build with AI 자료를 단순 요약하는 것이 아니라 영상 제작 가능한 논지로 바꾸는 것이다. 특히 [[Initiatives/Builders Lounge/builders/Song-Jae-hee-Build-with-AI/2026-06-29 Build with AI source note#Live #17 Experiment Angle|Build with AI source note]]의 문제의식을 바탕으로, Builders Lounge의 Product Discovery 흐름과 [[Ingest/CatchUpAI_VL/Topics/Materials_For_Topics/Bila_AI_Agent/bila_agent_project_plan#Bila AI Agent 프로젝트 플랜|Bila AI Agent 구축 플랜]]이 어떻게 연결될 수 있는지 정리한다.
 
 ## Target Outputs
 
@@ -33,9 +33,9 @@ Build with AI는 송재희님의 12부작 자료를 학습하고, 그 내용을 
 - [[Ingest/CatchUpAI_VL/Topics/Build-with-AI/01-Source-Map/source-materials#Purpose|Build with AI 원본 자료 안내]]
 - [[Initiatives/Builders Lounge/README#멤버 목록|Builders Lounge README]]
 - [[Initiatives/Builders Lounge/builders/Song-Jae-hee-Build-with-AI/2026-06-29 Build with AI source note#Summary|Build with AI source note]]
-- [[Ingest/CatchUpAI_VL/Topics/Material_For_Topics/Bila_AI_Agent/bila_agent_project_plan#Bila AI Agent 프로젝트 플랜|Bila AI Agent 구축 플랜]]
-- [[Ingest/CatchUpAI_VL/Topics/Material_For_Topics/Bila_AI_Agent/system_prompt_chat|Bila AI Agent system prompt source]]
-- [[Ingest/CatchUpAI_VL/Topics/Material_For_Topics/Bila_AI_Agent/gobi_space_settings#Changbal Space 설정 가이드|Gobi Space settings]]
+- [[Ingest/CatchUpAI_VL/Topics/Materials_For_Topics/Bila_AI_Agent/bila_agent_project_plan#Bila AI Agent 프로젝트 플랜|Bila AI Agent 구축 플랜]]
+- [[Ingest/CatchUpAI_VL/Topics/Materials_For_Topics/Bila_AI_Agent/system_prompt_chat|Bila AI Agent system prompt source]]
+- [[Ingest/CatchUpAI_VL/Topics/Materials_For_Topics/Bila_AI_Agent/gobi_space_settings#Changbal Space 설정 가이드|Gobi Space settings]]
 
 ## Learning Constraints
 

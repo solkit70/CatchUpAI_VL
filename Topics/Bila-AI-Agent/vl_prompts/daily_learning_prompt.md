@@ -27,7 +27,7 @@ vl_roadmap/20260628_RoadMap_Bila-AI-Agent.md
 
 **핵심 자료 폴더**:
 ```
-C:\AI_study\2026\Changsoo_Vault\Ingest\CatchUpAI_VL\Topics\Material_For_Topics\Bila_AI_Agent\
+C:\AI_study\2026\Changsoo_Vault\Ingest\CatchUpAI_VL\Topics\Materials_For_Topics\Bila_AI_Agent\
 - system_prompt_mention.md
 - system_prompt_chat.md
 - gobi_space_settings.md

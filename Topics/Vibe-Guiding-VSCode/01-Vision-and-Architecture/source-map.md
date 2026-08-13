@@ -7,7 +7,7 @@ tags:
   - vibelearn-ai
   - gobi
 sources:
-  - "[[Ingest/CatchUpAI_VL/Topics/Material_For_Topics/Idea/Vibe_Guiding/VibeGuiding_BrainDump|VibeGuiding_BrainDump]]"
+  - "[[Ingest/CatchUpAI_VL/Topics/Materials_For_Topics/Idea/Vibe_Guiding/VibeGuiding_BrainDump|VibeGuiding_BrainDump]]"
   - "[[Ingest/CatchUpAI_VL/Topics/GOBI-Guiding/2026-04-03 GOBI Vibe Guiding 시스템 맵#개요|2026-04-03 GOBI Vibe Guiding 시스템 맵]]"
   - "[[Ingest/CatchUpAI_VL/Topics/GOBI-Guiding/2026-04-05 Vibe Guiding 구현 계획#Context|2026-04-05 Vibe Guiding 구현 계획]]"
   - "[[Ingest/CatchUpAI_VL/Topics/GOBI-Specs-Pipeline/04-Reviews-and-Opinions/2026-04-09 - Proposal - Vibe Guiding Architecture for Gobi#1. 개요 (Overview)|2026-04-09 - Proposal - Vibe Guiding Architecture for Gobi]]"
@@ -20,7 +20,7 @@ sources:
 
 ## Source 1: VibeGuiding BrainDump
 
-**원본 링크**: [[Ingest/CatchUpAI_VL/Topics/Material_For_Topics/Idea/Vibe_Guiding/VibeGuiding_BrainDump|VibeGuiding_BrainDump]]
+**원본 링크**: [[Ingest/CatchUpAI_VL/Topics/Materials_For_Topics/Idea/Vibe_Guiding/VibeGuiding_BrainDump|VibeGuiding_BrainDump]]
 
 **이 Source의 역할**: Vibe Guiding의 원래 문제의식과 철학을 담은 1차 아이디어 문서다. 이 문서는 Vibe Guiding이 일반 챗봇이나 단순 문서 검색이 아니라, Vibe Learning으로 생성한 최신 매뉴얼을 사용자 상황에 맞게 활성화하는 시스템임을 정의한다.
 
@@ -101,7 +101,7 @@ Vibe Guiding은 Vibe Learning으로 생성한 최신 매뉴얼을 사용자 상�
 
 | 결정 항목 | 현재 판단 | 근거 Source | 다음 사용 모듈 |
 |---|---|---|---|
-| 핵심 구조 | Build the Brain / Activate the Brain 분리 | [[Ingest/CatchUpAI_VL/Topics/Material_For_Topics/Idea/Vibe_Guiding/VibeGuiding_BrainDump|BrainDump]], [[Ingest/CatchUpAI_VL/Topics/GOBI-Guiding/2026-04-05 Vibe Guiding 구현 계획#Context|구현 계획]] | M2 |
+| 핵심 구조 | Build the Brain / Activate the Brain 분리 | [[Ingest/CatchUpAI_VL/Topics/Materials_For_Topics/Idea/Vibe_Guiding/VibeGuiding_BrainDump|BrainDump]], [[Ingest/CatchUpAI_VL/Topics/GOBI-Guiding/2026-04-05 Vibe Guiding 구현 계획#Context|구현 계획]] | M2 |
 | POC 대상 범위 | 제품 통합 전 파일 기반 VS Code POC | [[Ingest/CatchUpAI_VL/Topics/GOBI-Specs-Pipeline/04-Reviews-and-Opinions/2026-04-09 - Proposal - Vibe Guiding Architecture for Gobi#5. 단계별 실행 계획|Architecture Proposal]] | M2, M4 |
 | 매뉴얼 필수 요소 | goal, steps, completion signal, known failures | [[Ingest/CatchUpAI_VL/Topics/GOBI-Guiding/2026-04-05 Vibe Guiding 구현 계획#1-3. Vibe Manual 설계 원칙|구현 계획]] | M3 |
 | Trigger 후보 | 컨텍스트 단절, 메뉴 환각, 버전/환경 불일치 | [[Ingest/CatchUpAI_VL/Topics/GOBI-Guiding/2026-04-13 Gobi Desktop Vibe Guiding 기능 수준 테스트#3. 향후 보완 및 개선 방향|기능 수준 테스트]] | M4, M5 |

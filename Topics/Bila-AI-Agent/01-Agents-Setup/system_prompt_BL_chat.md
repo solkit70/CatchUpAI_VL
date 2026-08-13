@@ -16,7 +16,7 @@ tags:
 |------|------|
 | 트리거 | 화면 우하단 말풍선 버튼 클릭 → 직접 채팅창 (@mention 불필요) |
 | Phase | Phase 1 — 스페이스 포스트 기반 Q&A |
-| 원본 출처 | `Material_For_Topics/Bila_AI_Agent/system_prompt_chat.md` (강민석님 제공) |
+| 원본 출처 | `Materials_For_Topics/Bila_AI_Agent/system_prompt_chat.md` (강민석님 제공) |
 | 적용 위치 | GobiSpace → Changbal → Settings → Agents → chat용 System prompt 필드 (mention과 별도) |
 
 ---
