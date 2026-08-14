@@ -52,11 +52,25 @@ OS: Windows 11
 
 ## 📚 참조 자료
 
-**1차 자료 (최우선 — v1에서 미사용)**
+**1차 자료 ① 현장 기록 (최우선 — v1에서 미사용)**
 - `Ingest/YouTube/videos/2026/` 내 Seattle Tech Week 현장 트랜스크립트 30개 (총 8,703줄)
   - Seattle Spark + AI 4개 / AI Startup Secret Sauce 5개 / Startup425 Eastside Summit 3 5개
   - Startup425 AI Demo Day 9개 / ACM Data Conclave 2개 / InformsCon 3개 / Biuty AI 1개
 - `Ingest/YouTube/playlists/ai-startup-pitch-showcases-and-workshops/_index.md`
+
+**1차 자료 ② 필자 관점 기록 (최우선 — M5c에서 추가, v2 초기 정의에서도 누락)**
+> ⚠️ **v2가 두 번째로 놓친 자료.** 트랜스크립트는 그 자리에서 오간 말을 담지만,
+> 그 말을 들으며 필자가 무엇을 중요하게 판단했는지는 담지 않는다.
+> 이 기사의 차별점이 "필자가 그 자리에 있었다"는 사실이라면,
+> **필자의 판단이 남은 곳도 1차 자료다.**
+
+- `Journal/2026-07-27` ~ `2026-08-01` — 행사 기간 Thoughts·Learnings (1인칭)
+- `AI/Roundup/2026-07-27` ~ `2026-07-31 - Daily Roundup` — User Reflection 및 Memorable Quotes 19건
+- `Ingest/CatchUpAI_VL/Topics/Seattle-Tech-Week-2026/` — 참가 계획 Topic
+  - `02-Curation/priority-review.md` — 필자의 행사 선별 기준
+  - `04-Process-Notes/claude-code-to-codex-automation.md` — Claude Code → Codex 자동화 회고
+  - `vl_worklog/20260723_Seattle-Tech-Week-2026_Final_Retrospective.md` — 준비 단계 회고
+- 채굴 결과: `05c-User-Perspective/01-user-perspective-mining.md` (U-01 ~ U-09)
 
 **v1 산출물 (배경 자료로 재사용)**
 - `01-Source-Map-Research/`, `02-Trend-Analysis/`
