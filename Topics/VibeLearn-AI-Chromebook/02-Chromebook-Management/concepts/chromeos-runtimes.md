@@ -1,6 +1,6 @@
 ---
 title: "ChromeOS의 3개 런타임과 관리 정책"
-created: 2026-08-16 23:55:00
+created: 2026-08-16 12:00:00
 tags:
   - chromeos
   - device-management

@@ -1,6 +1,6 @@
 ---
 title: "M2 · 학교 지급 Chromebook의 관리 실체"
-created: 2026-08-17 00:40:00
+created: 2026-08-16 12:40:00
 tags:
   - chromeos
   - device-management

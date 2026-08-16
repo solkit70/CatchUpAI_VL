@@ -33,18 +33,18 @@ Forward Deployed Engineer(FDE)는 고객 현장에 깊게 들어가 제품, 데�
 
 ### 전체 로드맵 구조
 
-| 모듈 | 모듈명 | 난이도 | 예상 시간 | 산출물 폴더 |
-|---|---|---:|---:|---|
-| M1 | FDE 기본 정의와 역사 | 1 | 3h | `01-FDE-Basics/` |
-| M2 | Palantir 모델과 FDE의 원형 | 2 | 3h | `02-Palantir-Origin/` |
-| M3 | 미국 AI 기업별 FDE 모델 비교 | 2 | 5h | `03-US-Company-Models/` |
-| M4 | FDE와 유사 직무 비교 | 2 | 4h | `04-Role-Taxonomy/` |
-| M5 | AI FDE 기술 스택과 실무 흐름 | 3 | 5h | `05-AI-FDE-Tech-Stack/` |
-| M6 | 미국 채용 공고 기반 역량 분석 | 3 | 5h | `06-US-Job-Market/` |
-| M7 | 학생/주니어 준비 로드맵 | 2 | 4h | `07-Junior-Track/` |
-| M8 | IT 시니어 커리어 전환 로드맵 | 2 | 4h | `08-Senior-Transition/` |
-| M9 | 비IT 배경자와 글로벌 Sub-study | 2 | 4h | `09-Non-IT-Global-Context/` |
-| M10 | 포트폴리오와 Remotion 영상화 Capstone | 3 | 6h | `10-Capstone-Video/` |
+| 모듈  | 모듈명                          | 난이도 | 예상 시간 | 산출물 폴더                      |
+| --- | ---------------------------- | --: | ----: | --------------------------- |
+| M1  | FDE 기본 정의와 역사                |   1 |    3h | `01-FDE-Basics/`            |
+| M2  | Palantir 모델과 FDE의 원형         |   2 |    3h | `02-Palantir-Origin/`       |
+| M3  | 미국 AI 기업별 FDE 모델 비교          |   2 |    5h | `03-US-Company-Models/`     |
+| M4  | FDE와 유사 직무 비교                |   2 |    4h | `04-Role-Taxonomy/`         |
+| M5  | AI FDE 기술 스택과 실무 흐름          |   3 |    5h | `05-AI-FDE-Tech-Stack/`     |
+| M6  | 미국 채용 공고 기반 역량 분석            |   3 |    5h | `06-US-Job-Market/`         |
+| M7  | 학생/주니어 준비 로드맵                |   2 |    4h | `07-Junior-Track/`          |
+| M8  | IT 시니어 커리어 전환 로드맵            |   2 |    4h | `08-Senior-Transition/`     |
+| M9  | 비IT 배경자와 글로벌 Sub-study       |   2 |    4h | `09-Non-IT-Global-Context/` |
+| M10 | 포트폴리오와 Remotion 영상화 Capstone |   3 |    6h | `10-Capstone-Video/`        |
 
 **총 예상 시간**: 43시간, 버퍼 포함
 
@@ -864,36 +864,30 @@ FDE-Forward-Deployed-Engineer/
 | M3 | 2026-08-16 | 2026-08-16 | 완료 | 100% | daily_learning_prompt 기준 재점검 및 기업별 archetype 실습 보강 완료 |
 | M4 | 2026-08-16 | 2026-08-16 | 완료 | 100% | daily_learning_prompt 기준 재점검 및 유사 직무 판별 실습 보강 완료 |
 | M5 | 2026-08-16 | 2026-08-16 | 완료 | 100% | daily_learning_prompt 기준 재점검 및 production lifecycle 실습 보강 완료 |
-| M6 | | | 대기 | 0% | |
-| M7 | | | 대기 | 0% | |
-| M8 | | | 대기 | 0% | |
-| M9 | | | 대기 | 0% | |
-| M10 | | | 대기 | 0% | |
+| M6 | 2026-08-16 | 2026-08-16 | 완료 | 100% | 사용자 승인 후 재진행. 미국 FDE/Applied AI 공고 분석, 공통 역량 top 10, 면접 루프 및 compensation/location notes 작성 완료 |
+| M7 | 2026-08-16 | 2026-08-16 | 완료 | 100% | 사용자 승인 후 진행. 주니어 역량 체크리스트, 6개월 포트폴리오 계획, 포트폴리오 프로젝트 3종 설계 완료 |
+| M8 | 2026-08-16 | 2026-08-16 | 완료 | 100% | 사용자 승인 후 진행. 시니어 출신별 전환표, 90일 준비 계획, senior FDE resume narrative 작성 완료 |
+| M9 | 2026-08-16 | 2026-08-16 | 완료 | 100% | 사용자 승인 후 진행. 비IT 배경자 진입 경로, 12개월 준비 계획, 미국/한국/일본/유럽 AX 문맥 비교 작성 완료 |
+| M10 | 2026-08-16 | 2026-08-16 | 완료 | 100% | 사용자 승인 후 진행. 포트폴리오 프로젝트 3개 spec, 최종 가이드 패키지, Remotion 영상 outline/script/storyboard, Topic Retrospective 작성 완료 |
 
 ## 성공 기준
 
-- [ ] 모든 모듈 완료
-- [ ] 최소 10개 산출물 폴더 생성
-- [ ] 기업별 FDE 모델 비교 리포트 완성
-- [ ] 미국 FDE 채용시장 분석표 완성
-- [ ] FDE 역량 매트릭스 완성
-- [ ] 학생/주니어, IT 시니어, 비IT 배경자 준비 가이드 완성
-- [ ] FDE 포트폴리오 프로젝트 가이드 완성
-- [ ] Remotion AI 영상 제작용 시리즈 outline, 대본, 스토리보드 완성
-- [ ] Topic Retrospective 작성
+- [x] 모든 모듈 완료
+- [x] 최소 10개 산출물 폴더 생성
+- [x] 기업별 FDE 모델 비교 리포트 완성
+- [x] 미국 FDE 채용시장 분석표 완성
+- [x] FDE 역량 매트릭스 완성
+- [x] 학생/주니어, IT 시니어, 비IT 배경자 준비 가이드 완성
+- [x] FDE 포트폴리오 프로젝트 가이드 완성
+- [x] Remotion AI 영상 제작용 시리즈 outline, 대본, 스토리보드 완성
+- [x] Topic Retrospective 작성
 
 ## 다음 학습 세션 제안
 
-첫 세션은 M1부터 시작한다. 목표는 "FDE를 정확히 정의하고, 왜 AI 시대에 다시 부상했는지 설명하는 2분 설명문"을 만드는 것이다. 첫 세션 예상 시간은 2-3시간이며, 산출물은 `01-FDE-Basics/concepts/fde-definition.md`, `01-FDE-Basics/concepts/fde-history-timeline.md`, `01-FDE-Basics/examples/two-minute-explanation.md`이다.
+FDE-Forward-Deployed-Engineer Topic의 M1-M10 학습은 완료되었다. 다음 작업은 Claude Code에게 `10-Capstone-Video/video/` 문서 3개를 넘겨 Remotion 영상 제작을 시작하거나, `10-Capstone-Video/examples/portfolio-project-specs.md`의 프로젝트 중 하나를 실제 구현하는 것이다.
 
 **생성자**: Codex with VibeLearn AI
 **Roadmap 버전**: 1.0
 **방법론 버전**: VibeLearn AI 2.0
-
-
-
-
-
-
 
 

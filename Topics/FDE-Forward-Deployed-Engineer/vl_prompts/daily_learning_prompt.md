@@ -48,21 +48,20 @@ vl_roadmap/20260816_RoadMap_FDE-Forward-Deployed-Engineer.md
 
 **현재 진행 중인 모듈**:
 ```
-M1 - FDE 기본 정의와 역사
+Topic 완료 - 후속 작업 선택
 ```
 
 **가장 최근 WorkLog 파일**:
 ```
-[없음 - 첫 학습 세션]
-또는
-[없음 - 첫 학습 세션]
+vl_worklog/20260816_M9_FDE-Forward-Deployed-Engineer.md
 ```
 
 **이전 세션의 "Tomorrow's focus"** (있다면):
 ```
-[이전 WorkLog에 기록된 다음 할 일]
-또는
-[없음]
+- M10 포트폴리오와 Remotion 영상화 Capstone을 작성한다.
+- FDE 포트폴리오 프로젝트 3개 spec을 만든다.
+- FDE 지원자 최종 가이드 패키지 목차와 Remotion 영상 6편 outline, episode script, visual storyboard를 작성한다.
+- Topic Retrospective를 검토하고 후속 작업을 선택한다.
 ```
 
 ---
