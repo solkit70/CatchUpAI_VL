@@ -50,11 +50,36 @@ def list_devices():
             print(f"  [{i}] {d['name']}  ({d['max_input_channels']}ch, {int(d['default_samplerate'])}Hz)")
 
 
+def resolve_device(spec):
+    """장치 번호 또는 이름 일부를 실제 인덱스로 해석한다.
+
+    ⚠ 이 환경에서 인덱스는 불안정하다. USB 마이크를 옮기거나 재열거될 때마다 밀리며,
+      같은 세션에서 연속 조회해도 달라졌다(2026-08-15: MV7 이 1→22→3→1).
+      30분짜리 측정을 엉뚱한 마이크로 날리지 않도록 이름으로 지정한다.
+    """
+    if spec is None:
+        return None
+    if isinstance(spec, int) or str(spec).isdigit():
+        return int(spec)
+    want = str(spec).lower()
+    for i, d in enumerate(sd.query_devices()):
+        if d["max_input_channels"] < 1 or want not in d["name"].lower():
+            continue
+        try:
+            sd.check_input_settings(device=i, samplerate=SR, channels=1, dtype="int16")
+        except Exception:
+            continue
+        print(f"  [장치] '{spec}' → [{i}] {d['name']}")
+        return i
+    raise SystemExit(f"'{spec}' 에 맞는 입력 장치를 {SR}Hz 로 열 수 없습니다. --list-devices 로 확인하세요.")
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--mode", choices=["record", "detect", "falsepos"], default="record")
     ap.add_argument("--seconds", type=float, default=120.0)
-    ap.add_argument("--device", type=int, default=None, help="입력 장치 번호(--list-devices로 확인)")
+    ap.add_argument("--device", default=None,
+                    help="입력 장치 번호 또는 이름 일부(예: MV7). 인덱스가 불안정하므로 이름 권장")
     ap.add_argument("--models", nargs="+", default=DEFAULT_MODELS)
     ap.add_argument("--threshold", type=float, default=0.5)
     ap.add_argument("--list-devices", action="store_true")
@@ -62,6 +87,8 @@ def main():
 
     if args.list_devices:
         list_devices(); return 0
+
+    args.device = resolve_device(args.device)   # 스트림 열기 직전에 해석
 
     # record 모드는 모델 로드 전에 녹음부터 시작해야 초반 발화가 유실되지 않는다.
     prerecorded = None
