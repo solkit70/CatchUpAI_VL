@@ -122,9 +122,14 @@ Every content document exists as a pair: `.md` (Korean) and `.en.md` (English).
 
 ## Watch the video
 
-A **~28-minute summary video** was produced from this material. If you want the whole picture before reading, the video is faster.
+A **summary video** was produced from this material. If you want the whole picture before reading, the video is faster.
 
-Each part of the video opens with a QR code linking to the matching module, and the video description lists the reference document for every slide.
+| Language | Length | Link |
+|---|---|---|
+| 🇺🇸 English | 27:11 | https://youtu.be/A6Yx6Wx22cA |
+| 🇰🇷 Korean | 28:01 | https://youtu.be/U0L2oyE6Ph4 |
+
+Both cuts follow the same structure — only the slides and narration differ by language. Each part opens with a QR code linking to the matching module, pointing to the documents in that cut’s language, and the description lists the reference document for every slide.
 
 That said, **checklists, self-assessments and resume worksheets don't work well in video** — they only exist in this repository. See the ⭐ items above.
 
