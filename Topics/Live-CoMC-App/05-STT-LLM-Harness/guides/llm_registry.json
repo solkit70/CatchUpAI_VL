@@ -1,0 +1,51 @@
+{
+  "_comment": [
+    "M5 LLM 프로바이더 레지스트리.",
+    "M3 llm-schema-normalization.md 원칙: 모델 ID는 설정값으로 주입하고 어댑터 코드에 하드코딩하지 않는다.",
+    "model_preferred 가 계정에서 사용 불가하면 llm_probe.py 가 model_prefix 로 실제 사용 가능한 모델을 찾아",
+    "resolved_model 에 기록한다. 추측한 모델 ID를 코드에 박아 두지 않기 위한 장치다.",
+    "API 키는 이 파일에 넣지 않는다. env_key 이름만 적고 값은 환경 변수에서 읽는다."
+  ],
+
+  "fallback_order": ["claude", "openai", "gemini"],
+  "_fallback_order_note": "M3 설계의 예시 순서(Claude → OpenAI → Gemini)를 그대로 따른다. session_state.active_provider 교체 순서이기도 하다.",
+
+  "providers": {
+    "claude": {
+      "enabled": true,
+      "env_key": "ANTHROPIC_API_KEY",
+      "sdk": "anthropic",
+      "model_preferred": "claude-opus-5",
+      "model_prefix": "claude-opus-",
+      "structured_output": "tool_use_strict",
+      "_so_note": "tools=[{name, strict:true, input_schema}] + tool_choice={type:'tool',name}. output_config.format 도 가능. 구 output_format 파라미터는 deprecated.",
+      "schema_unsupported_keywords": ["minimum", "maximum", "minLength", "maxLength", "minItems", "maxItems"],
+      "_schema_note": "Claude 구조화 출력은 수치·길이 제약을 미지원. 스키마를 다운그레이드해 보내고 최종 판정은 어댑터 뒤단 answer_draft.schema.json 재검증에서 한다."
+    },
+
+    "openai": {
+      "enabled": true,
+      "env_key": "OPENAI_API_KEY",
+      "sdk": "openai",
+      "model_preferred": "gpt-5",
+      "model_prefix": "gpt-",
+      "structured_output": "json_schema",
+      "_so_note": "response_format={type:'json_schema', json_schema:{name, schema, strict:true}}. strict 모드는 additionalProperties:false 와 전 필드 required 를 요구한다.",
+      "schema_unsupported_keywords": [],
+      "_schema_note": "JSON Schema 서브셋. additionalProperties:false 필수."
+    },
+
+    "gemini": {
+      "enabled": true,
+      "env_key": "GEMINI_API_KEY",
+      "sdk": "google-genai",
+      "model_preferred": "gemini-3.1-pro-preview",
+      "model_prefix": "gemini-",
+      "structured_output": "response_schema",
+      "_so_note": "generationConfig={responseMimeType:'application/json', responseSchema:<OpenAPI 서브셋>}",
+      "schema_unsupported_keywords": ["additionalProperties"],
+      "_schema_note": "OpenAPI 3.0 서브셋. additionalProperties 를 무시하고 필드 순서는 propertyOrdering 으로 다룬다.",
+      "_model_note": "2026-08-20: gemini-2.5 계열은 models.list() 에 나오지만 신규 사용자에게는 404. 목록에 있다고 호출 가능한 게 아니다."
+    }
+  }
+}

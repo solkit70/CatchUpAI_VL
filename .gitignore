@@ -57,3 +57,11 @@ Topics/FedWay-Liberation-Day-2026/vl_materials/honorees/restored/
 Topics/FedWay-Liberation-Day-2026/vl_materials/honorees/*.jpg
 Topics/FedWay-Liberation-Day-2026/vl_materials/honorees/*.png
 Topics/FedWay-Liberation-Day-2026/vl_materials/*.pdf
+
+# M5 녹음 원본 — 진행자 육성이라 공개 저장소에 올리지 않는다.
+# manifest.json(정답 문장 + peak 레벨)과 stt_result_*.json(측정 결과)은 추적한다.
+# 재현하려면 record_utterances.py 로 각자 녹음하면 된다.
+Topics/Live-CoMC-App/05-STT-LLM-Harness/examples/utterances/**/*.wav
+
+# 프리플라이트가 생성하는 런타임 상태 — 환경마다 다르므로 추적하지 않는다
+Topics/Live-CoMC-App/05-STT-LLM-Harness/guides/llm_registry.runtime.json
