@@ -8,6 +8,15 @@
 
 이 README는 한국어 원본 콘텐츠만 안내합니다. 영어 번역본은 별도 `_en.md` 파일과 영어 README에서 확인할 수 있습니다.
 
+## 영상
+
+이 Topic으로 제작해 공개한 영상입니다.
+
+| 버전 | 제목 | 링크 |
+|---|---|---|
+| 🇰🇷 한국어 | AI 녹음 기기, 써도 됩니까 — Limitless·Meta 안경·Otter.ai | https://youtu.be/mQHoEj0_1KE (12:04) |
+| 🇺🇸 English | Are AI Recording Devices Legal to Use | https://youtu.be/NCWlam9t9cY (11:23) |
+
 ## 핵심 학습 문서
 
 - [topic_info.md](topic_info.md) — 학습 목표, 범위, 참고 자료, 학습 환경을 정리한 토픽 기본 정보

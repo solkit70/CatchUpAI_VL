@@ -24,6 +24,17 @@
 
 ---
 
+## 🎬 영상
+
+이 Topic으로 제작해 공개한 영상 4편입니다.
+
+| 주제 | 버전 | 링크 |
+|---|---|---|
+| PNW 잔디 관리 + 초개인화 | 🇰🇷 한국어 | https://youtu.be/ZIhc46O6ZRw (5:35) |
+| PNW 잔디 관리 + 초개인화 | 🇺🇸 English | https://youtu.be/jLS0NKtstdI (4:30) |
+| Tehaleh HOA 강좌 현장 취재 | 🇰🇷 한국어 | https://youtu.be/EHLzj4dZlmo (8:12) |
+| Tehaleh HOA 강좌 현장 취재 | 🇺🇸 English | https://youtu.be/gpa3tBJxRM4 (8:21) |
+
 ## 📚 모듈 학습 순서
 
 처음 이 폴더를 여는 분은 아래 순서대로 진행하세요.

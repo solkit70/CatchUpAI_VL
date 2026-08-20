@@ -24,6 +24,17 @@ Seasonal lawn care tailored to the Pacific Northwest (PNW) climate and mastering
 
 ---
 
+## 🎬 Videos
+
+Four videos produced from this topic.
+
+| Subject | Language | Link |
+|---|---|---|
+| PNW lawn care + hyper-personalization | 🇰🇷 Korean | https://youtu.be/ZIhc46O6ZRw (5:35) |
+| PNW lawn care + hyper-personalization | 🇺🇸 English | https://youtu.be/jLS0NKtstdI (4:30) |
+| Tehaleh HOA class field report | 🇰🇷 Korean | https://youtu.be/EHLzj4dZlmo (8:12) |
+| Tehaleh HOA class field report | 🇺🇸 English | https://youtu.be/gpa3tBJxRM4 (8:21) |
+
 ## 📚 Module Learning Order
 
 If you're new to this folder, follow the order below.

@@ -3,6 +3,15 @@
 **상태**: M1~M3 완료, 최종 참가 계획 확정 + Google Calendar 등록 완료 + 2026-07-24 Luma 전체 행사 수 재확인 + 2026-07-25 Luma 상태 업데이트 반영  
 **핵심 문서**: [02-Curation/priority-review.md](02-Curation/priority-review.md), [02-Curation/shortlist.md](02-Curation/shortlist.md), [03-Schedule/final.md](03-Schedule/final.md), [04-Process-Notes/claude-code-to-codex-automation.md](04-Process-Notes/claude-code-to-codex-automation.md)
 
+## 🎬 영상
+
+이 Topic으로 제작해 공개한 영상입니다.
+
+| 버전 | 링크 |
+|---|---|
+| 🇰🇷 한국어 | https://youtu.be/EQ1I0YSfMvM |
+| 🇺🇸 English | https://youtu.be/OjSXw0_4ihY (6:59) |
+
 ## 지금 무엇을 보면 되나
 
 1. [02-Curation/priority-review.md](02-Curation/priority-review.md)를 먼저 본다. 날짜별 AI 행사, 온라인/오프라인 여부, 비용, 링크, 우선순위 판단이 한 표로 정리되어 있다.

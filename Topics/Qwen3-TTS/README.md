@@ -163,10 +163,12 @@ Voice Clone과 Voice Design 실험, 샘플 품질 튜닝, Remotion 영상 파이
 
 이 Topic의 최종 산출물은 클론 목소리로 제작된 YouTube 영상입니다.
 
-| 버전 | 링크 | 업로드 |
-|------|------|--------|
-| 한국어 | [youtu.be/ApWkZu0RcWE](https://youtu.be/ApWkZu0RcWE) | 2026-05-27 |
-| 영어 | [youtu.be/VL-S43gnhe0](https://youtu.be/VL-S43gnhe0) | 2026-05-27 |
+| 영상 | 버전 | 링크 | 업로드 |
+|------|------|------|--------|
+| 클론 목소리 첫 적용 (Live #11 요약) | 한국어 | [youtu.be/ApWkZu0RcWE](https://youtu.be/ApWkZu0RcWE) | 2026-05-27 |
+| 클론 목소리 첫 적용 (Live #11 요약) | 영어 | [youtu.be/VL-S43gnhe0](https://youtu.be/VL-S43gnhe0) | 2026-05-27 |
+| **Topic 전용 요약 — 「12일 기록」** | 한국어 | [youtu.be/2wk0_VQx9I8](https://youtu.be/2wk0_VQx9I8) (14:25) | 2026-06-02 |
+| **Topic 전용 요약 — 「12-Day Real Journey」** | 영어 | [youtu.be/WwgQDPXcHWs](https://youtu.be/WwgQDPXcHWs) (13:14) | 2026-06-02 |
 
 Remotion 영상 소스 코드:
 - 한국어: `Remotion-VideoCreation/my-first-video/src/qwen3tts-0529/`

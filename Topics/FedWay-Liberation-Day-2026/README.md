@@ -67,6 +67,14 @@ tags:
 - [vl_worklog/20260803_CVL_FedWay-Liberation-Day-2026.md](vl_worklog/20260803_CVL_FedWay-Liberation-Day-2026.md) - **파일럿 3인 콘텐츠 제작 세션(CVL)**. "박창수 초안"(노백린·류동열·김동협) 무료 버전 제작 과정과 립싱크 예상 소요 비용 정리.
 - [vl_worklog/20260805_CVL_FedWay-Liberation-Day-2026.md](vl_worklog/20260805_CVL_FedWay-Liberation-Day-2026.md) - **영상 확장 의사결정 세션(CVL)**. 이구님 답변을 반영해 현재 자료로 1차본을 완성하고, 추가 자료는 후속 수정하는 방향을 정리.
 
+## 🎬 공개 영상
+
+| 영상 | 링크 | 공개 |
+|---|---|---|
+| **다시 만나는 열두 분** — 독립유공자 12인 AI 재현 (기념식 상영본) | https://youtu.be/K8IYVPLrYZA | 2026-08-15 |
+| 박창수 초안 파일럿 3인 (노백린·류동열·김동협) | https://youtu.be/TJmPCu-gv0M | 2026-08-03 |
+| 이구님 미팅 — VibeLearn AI 실전 데모 | https://youtu.be/3wgTpWA55cY | 2026-08-08 |
+
 ## 현재 상태
 
 | 항목 | 상태 | 메모 |

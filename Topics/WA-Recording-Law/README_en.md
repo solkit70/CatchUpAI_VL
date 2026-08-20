@@ -8,6 +8,15 @@ This folder contains the English guide for the Korean study materials on Washing
 
 This README describes the English-facing structure. The original Korean content is available through [README.md](README.md), and translated English files use the `_en.md` suffix.
 
+## Videos
+
+Videos produced from this topic.
+
+| Language | Title | Link |
+|---|---|---|
+| 🇰🇷 Korean | AI 녹음 기기, 써도 됩니까 — Limitless·Meta glasses·Otter.ai | https://youtu.be/mQHoEj0_1KE (12:04) |
+| 🇺🇸 English | Are AI Recording Devices Legal to Use | https://youtu.be/NCWlam9t9cY (11:23) |
+
 ## Core Study Documents
 
 - [topic_info_en.md](topic_info_en.md) — Topic overview, learning goals, scope, references, and study environment

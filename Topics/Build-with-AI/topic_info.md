@@ -28,6 +28,13 @@ Build with AI는 송재희님의 12부작 자료를 학습하고, 그 내용을 
 | Video Brief | 영상 제작 착수용 브리프와 스크립트 스타터 | `03-Video-Starter/` |
 | WorkLog | VibeLearn AI 학습 진행 기록 | `vl_worklog/` |
 
+### 공개 영상
+
+| 버전 | 링크 |
+|---|---|
+| 🇰🇷 한국어 — Build with AI 쉽게 보기 | https://youtu.be/T9BCpJ_ffzQ |
+| 🇺🇸 English | https://youtu.be/bfpj7aetzhk |
+
 ## Source Materials
 
 - [[Ingest/CatchUpAI_VL/Topics/Build-with-AI/01-Source-Map/source-materials#Purpose|Build with AI 원본 자료 안내]]
