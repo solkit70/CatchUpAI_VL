@@ -1,0 +1,103 @@
+{
+  "_comment": [
+    "M6 TTS 프로바이더 레지스트리. M5 llm_registry.json 과 같은 역할이다.",
+    "모델 ID·보이스 ID를 어댑터 코드에 하드코딩하지 않기 위한 장치.",
+    "tts_probe.py 가 실제 합성으로 검증한 뒤 voice_registry.runtime.json 을 만든다.",
+    "API 키는 이 파일에 넣지 않는다. env_key 이름만 적고 값은 환경 변수에서 읽는다."
+  ],
+  "default_provider": "edge",
+  "_default_note": "실측 전 잠정값. 실습 2 결과로 확정한다.",
+  "degrade_to": "edge",
+  "_degrade_note": "서킷 브레이커가 상한 초과 시 강등하는 목적지. 무료여야 한다.",
+  "voice_policy": {
+    "avoid_cloned_voice": true,
+    "_why": [
+      "진행자 본인의 클론 보이스를 AI 기본 음성으로 쓰지 않는다.",
+      "시청자가 사람의 발화와 AI 발화를 구분할 수 없게 되기 때문이다.",
+      "M1 '커버리지 없으면 침묵' 원칙과 같은 뿌리다 — AI 발화는 AI 발화로 들려야 한다.",
+      "RemotionStudio 자산에 클론 보이스가 있지만 이 파이프라인의 기본값으로는 쓰지 않는다."
+    ],
+    "prefer_distinct_gender_from_host": true,
+    "_gender_note": "진행자가 남성이므로 AI 기본 음성은 여성으로 둔다. 가장 값싼 구분 신호다."
+  },
+  "shared_replacements": {
+    "_note": "발음 보정. RemotionStudio gen_audio_qwen.py 에서 실사용 검증된 항목만 옮겼다.",
+    "GOBI": "고비",
+    "Gobi": "고비",
+    "6월": "유월",
+    "10월": "시월"
+  },
+  "providers": {
+    "edge": {
+      "enabled": true,
+      "env_key": null,
+      "package": "edge_tts",
+      "model": "edge-tts",
+      "voice": "ko-KR-SunHiNeural",
+      "voice_alternatives": [
+        "ko-KR-InJoonNeural",
+        "ko-KR-HyunsuMultilingualNeural"
+      ],
+      "cost_per_1k_chars": 0.0,
+      "cost_confirmed": true,
+      "_cost_note": "무료. 이것이 확실하기 때문에 강등 목적지가 될 수 있다.",
+      "streaming": true
+    },
+    "openai": {
+      "enabled": true,
+      "env_key": "OPENAI_API_KEY",
+      "package": "openai",
+      "model": "gpt-4o-mini-tts",
+      "model_fallbacks": [
+        "tts-1-hd",
+        "tts-1"
+      ],
+      "voice": "nova",
+      "voice_alternatives": [
+        "shimmer",
+        "alloy",
+        "onyx"
+      ],
+      "cost_per_1k_chars": 0.0006,
+      "cost_confirmed": true,
+      "_cost_note": "gpt-4o-mini-tts 는 이중 요금이다: 텍스트 입력 $0.60/1M자 (= $0.0006/1k자, 여기 적은 값) + 오디오 출력 $12.00/1M 토큰. 음성 엔드포인트 응답은 오디오 토큰 수를 돌려주지 않으므로 문자 수만으로는 총비용이 확정되지 않는다. 이 값은 하한이며 서킷 브레이커는 과소 추정한다. 단일 문자 단가가 필요하면 tts-1($0.015/1k자) 또는 tts-1-hd($0.03/1k자)를 쓸 것. 출처: developers.openai.com/api/docs/pricing (2026-08-23 확인)",
+      "streaming": true,
+      "cost_incomplete": true,
+      "cost_alternatives": {
+        "tts-1": 0.015,
+        "tts-1-hd": 0.03
+      }
+    },
+    "qwen": {
+      "enabled": true,
+      "env_key": "DASHSCOPE_API_KEY",
+      "package": "dashscope",
+      "model": "qwen3-tts-flash",
+      "voice": "Cherry",
+      "voice_alternatives": [
+        "Serena",
+        "Sohee",
+        "Ethan"
+      ],
+      "language_type": "Korean",
+      "cost_per_1k_chars": null,
+      "cost_confirmed": false,
+      "_cost_note": "미확인. 3자 출처들이 $0.013~$0.028/1k자로 서로 다르게 적고 있어 어느 하나를 고를 근거가 없다. Alibaba Cloud Model Studio 콘솔의 공식 가격을 확인해 채울 것. 추측 단가를 넣으면 비용 리포트가 조용히 틀린다 (M5 원칙).",
+      "streaming": false,
+      "_streaming_note": "이 어댑터가 쓰는 HTTP 경로(MultiModalConversation, stream=False)는 오디오 바이트가 아니라 다운로드 URL 을 돌려준다. 그래서 합성이 끝나기 전에는 재생을 시작할 수 없다. 다만 이것은 Qwen 의 한계가 아니라 이 경로의 한계다 — DashScope 는 WebSocket 스트리밍 경로를 따로 제공하고 Flash 는 첫 패킷 300ms 수준으로 알려져 있다. 미검증이며 별도 과제다.",
+      "_endpoint_note": "국제 엔드포인트를 반드시 지정해야 한다 (dashscope-intl). 기본값은 중국 리전이다."
+    },
+    "elevenlabs": {
+      "enabled": true,
+      "env_key": "ELEVENLABS_API_KEY",
+      "package": null,
+      "model": "eleven_multilingual_v2",
+      "voice": "(voice_id 미정)",
+      "cost_per_1k_chars": null,
+      "cost_confirmed": false,
+      "streaming": true,
+      "_status": "미검증 — 2026-08-23 기준 이 환경에 키가 없다. 어댑터만 작성했고 실제 호출로 확인하지 못했다.",
+      "_voice_note": "ElevenLabs 는 사람이 읽는 이름이 아니라 voice_id 를 요구한다. 키가 생기면 목록을 조회해 채운다."
+    }
+  }
+}

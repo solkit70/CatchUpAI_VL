@@ -1,6 +1,6 @@
 # M5 — STT + 멀티 LLM 하네스
 
-**상태**: 실습 1~4 완료 · DoD 6/7
+**상태**: 실습 1~4 완료 · DoD 7/8 (1건 N/A) · 이월 해소됨(2026-08-23)
 **예상 학습 시간**: 8h
 **난이도**: ⭐⭐⭐
 
@@ -47,6 +47,9 @@ M3에서 설계만 해둔 3사 스키마 정규화를 코드로 옮기고, 한�
 
 10. [guides/stt-wer-report.md](guides/stt-wer-report.md)
     — 한국어 전사 정확도 실측 리포트. **이 모듈의 핵심 산출물**
+11. [guides/llm-latency-sweep.md](guides/llm-latency-sweep.md)
+    — LLM 지연 원인 분석. 2026-08-23 M6 세션에서 이월 과제로 처리했다.
+    지연은 추론 토큰이었고, effort 를 낮추면 15.2초 → 2.6초로 줄면서도 품질은 유지된다
 
 ---
 
@@ -71,6 +74,10 @@ python stt_probe.py --condition clean
 # 실습 2 — STT 3단 폴백
 python stt_probe.py --condition clean --force-fail t4o
 python stt_probe.py --condition clean --force-fail t4o,batch
+
+# 이월 과제 — 지연 원인 분석 (2026-08-23 추가)
+python llm_latency_sweep.py --repeats 2
+python llm_effort_quality.py --provider openai --levels minimal,low
 ```
 
 ---
@@ -83,7 +90,7 @@ python stt_probe.py --condition clean --force-fail t4o,batch
 | 2 | **CER 16.7% → 8.6%** (표기 허용 기준) | 영어 용어의 한글 표기를 오류로 세면 실패를 과장한다 |
 | 3 | **`gpt-live-transcribe` 는 파일 전사 불가** | Realtime 전용(404). Roadmap 1단계 모델을 교체 |
 | 4 | **`models.list()` ≠ 호출 가능** | 프리플라이트에 스모크 콜 필수 |
-| 5 | **LLM 지연 10.8~21.6초** | STT(1.2초)가 아니라 ⑥이 병목. M7 전제를 흔든다 |
+| 5 | **LLM 지연 10.8~21.6초** | STT(1.2초)가 아니라 ⑥이 병목. → **해소됨**: 원인은 추론 토큰이며 effort 를 낮추면 2.6초. [llm-latency-sweep.md](guides/llm-latency-sweep.md) |
 | 6 | **google-genai 클라이언트 재생성 시 사망** | 프로세스당 1개로 재사용해야 함 |
 
 상세는 [guides/stt-wer-report.md](guides/stt-wer-report.md) 와

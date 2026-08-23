@@ -21,6 +21,7 @@
 실행:
     python stt_probe.py --condition clean
     python stt_probe.py --condition bgm
+    python stt_probe.py --condition routed        # M6 라우팅 후 재측정
     python stt_probe.py --condition clean --force-fail t4o    # 폴백 검증
     python stt_probe.py --condition clean --tier local        # 특정 단계만
 
@@ -153,7 +154,9 @@ def transcribe_with_fallback(wav: Path, force_fail: set, only_tier: str | None):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--condition", default="clean", choices=["clean", "bgm"])
+    # routed: M6 라우팅 후 재측정. 결과는 stt_result_routed.json 으로 따로 쌓인다.
+    ap.add_argument("--condition", default="clean",
+                    choices=["clean", "bgm", "routed"])
     ap.add_argument("--force-fail", default="",
                     help="쉼표 구분. 예: live 또는 live,batch")
     ap.add_argument("--tier", choices=[t[0] for t in TIERS],

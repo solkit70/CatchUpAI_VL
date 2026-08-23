@@ -16,7 +16,7 @@ import os
 from google import genai
 from google.genai import types
 
-from .base import LLMProvider, provider_schema
+from .base import LLMProvider, native_effort, provider_schema
 
 # Gemini 가 무시하거나 거부하는 키워드
 DROP = ("additionalProperties", "$schema", "$id")
@@ -25,22 +25,25 @@ DROP = ("additionalProperties", "$schema", "$id")
 class GeminiProvider(LLMProvider):
     name = "gemini"
 
-    def __init__(self, model: str, cost_per_1k_tokens=None):
-        super().__init__(model, cost_per_1k_tokens)
+    def __init__(self, model: str, cost_per_1k_tokens=None, effort: str | None = None):
+        super().__init__(model, cost_per_1k_tokens, effort=effort)
         self.client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
 
     def _schema_for_provider(self) -> dict:
         return provider_schema(drop=DROP)
 
     def _call(self, system: str, user: str, schema: dict):
+        cfg = dict(system_instruction=system,
+                   response_mime_type="application/json",
+                   response_schema=schema)
+        eff = native_effort(self.name, self.effort)
+        if eff:
+            cfg["thinking_config"] = types.ThinkingConfig(thinking_level=eff)
+
         resp = self.client.models.generate_content(
             model=self.model,
             contents=user,
-            config=types.GenerateContentConfig(
-                system_instruction=system,
-                response_mime_type="application/json",
-                response_schema=schema,
-            ),
+            config=types.GenerateContentConfig(**cfg),
         )
 
         cands = getattr(resp, "candidates", None) or []
@@ -60,6 +63,10 @@ class GeminiProvider(LLMProvider):
             raise RuntimeError(f"JSON 파싱 실패: {e} / 앞부분={text[:120]!r}")
 
         um = getattr(resp, "usage_metadata", None)
+        # Gemini 는 사고 토큰을 thoughts_token_count 로 따로 보고한다.
+        # candidates_token_count 에 포함되지 않으므로 지연을 설명하려면 함께 봐야 한다.
         usage = {"input_tokens": getattr(um, "prompt_token_count", 0) or 0,
-                 "output_tokens": getattr(um, "candidates_token_count", 0) or 0}
+                 "output_tokens": getattr(um, "candidates_token_count", 0) or 0,
+                 "reasoning_tokens": getattr(um, "thoughts_token_count", None),
+                 "effort_sent": eff}
         return payload, usage

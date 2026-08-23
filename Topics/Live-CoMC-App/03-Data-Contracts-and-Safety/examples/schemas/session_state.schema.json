@@ -5,20 +5,52 @@
   "description": "3시간 방송 세션의 런타임 상태. wake 게이트, 활성 프로바이더, 남은 시간 등 파이프라인 전 단계가 공유하는 상태.",
   "type": "object",
   "properties": {
-    "session_id": { "type": "string", "description": "세션 고유 id" },
-    "started_at": { "type": "string", "format": "date-time" },
+    "session_id": {
+      "type": "string",
+      "description": "세션 고유 id"
+    },
+    "started_at": {
+      "type": "string",
+      "format": "date-time"
+    },
     "current_part_id": {
-      "type": ["string", "null"],
-      "description": "현재 파트 id. 방송 시작 전이면 null"
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "현재 파트 id — **권위값**. 핫키·음성 명령·클릭으로만 바뀐다. 시각 추정(suggested_part_id)이 이 값을 절대 덮어쓰지 않는다. 방송 중 응답에 쓰이는 것은 이 값 하나뿐이다. 방송 시작 전이면 null"
+    },
+    "suggested_part_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "시각 기반으로 추정한 파트 id — **표시 전용**. current_part_id 와 다르면 화면에 배지로만 알리고 자동 전환하지 않는다. 방송은 계획대로 흐르지 않으므로(1부가 20분 계획이어도 35분이 될 수 있다) 자동 전환하면 진행자는 1부를 말하는데 AI 는 2부 근거로 답하게 된다. 추정할 수 없으면 null — 틀린 추정을 표시하는 것보다 낫다. 2026-08-23 M7 실습 5에서 추가."
+    },
+    "suggested_confidence": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 1,
+      "description": "추정 신뢰도. 파트 시간이 '시간 미정'뿐이면 추정 자체가 불가능하므로 null. is_remainder 파트는 끝 시각을 계산할 수 없어 신뢰도를 낮춘다."
     },
     "wake_gate": {
       "type": "string",
-      "enum": ["open", "closed"],
+      "enum": [
+        "open",
+        "closed"
+      ],
       "description": "호출어 감지 게이트. TTS 재생 중에는 closed로 에코 루프 차단 (M4에서 구현)"
     },
     "active_provider": {
       "type": "string",
-      "enum": ["openai", "claude", "gemini"],
+      "enum": [
+        "openai",
+        "claude",
+        "gemini"
+      ],
       "description": "현재 선택된 LLM 프로바이더 (교체 가능)"
     },
     "trace_path": {
@@ -26,7 +58,10 @@
       "description": "session_trace.jsonl 경로 — 모든 단계가 append 기록"
     },
     "remaining_seconds": {
-      "type": ["integer", "null"],
+      "type": [
+        "integer",
+        "null"
+      ],
       "description": "현재 파트 잔여 시간(초). conditional_sections 편입 판정에 사용. 미정이면 null"
     },
     "hitl_pending": {
@@ -34,6 +69,13 @@
       "description": "진행자 결정 대기(Human-in-the-Loop) 상태 여부"
     }
   },
-  "required": ["session_id", "started_at", "wake_gate", "active_provider", "trace_path", "hitl_pending"],
+  "required": [
+    "session_id",
+    "started_at",
+    "wake_gate",
+    "active_provider",
+    "trace_path",
+    "hitl_pending"
+  ],
   "additionalProperties": false
 }

@@ -1,0 +1,12 @@
+{
+  "session_id": "live21-83ee4b38",
+  "started_at": "2026-08-23T13:47:43.299000+00:00",
+  "current_part_id": "3",
+  "suggested_part_id": null,
+  "suggested_confidence": null,
+  "wake_gate": "open",
+  "active_provider": "openai",
+  "trace_path": "Ingest/CatchUpAI_VL/Topics/Live-CoMC-App/07-CoMC-Engine-POC/output/session_trace.jsonl",
+  "remaining_seconds": null,
+  "hitl_pending": false
+}

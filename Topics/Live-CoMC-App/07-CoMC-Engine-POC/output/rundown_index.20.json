@@ -1,0 +1,91 @@
+{
+  "source_path": "Ingest/CatchUpAI_VL/Topics/Live-CoMC-App/07-CoMC-Engine-POC/data/rundown_samples/2026-07-19 - Live20 Weekly Rundown.md",
+  "is_final": false,
+  "parts": [
+    {
+      "id": "1",
+      "sort_key": 1.0,
+      "is_numbered": true,
+      "title": "지난 주 활동",
+      "time_raw": "시간 미정",
+      "time_minutes": null,
+      "is_remainder": false,
+      "coverage_state": "defined",
+      "coverage_items": [
+        "공부와 실험은 재미있었다",
+        "기록과 영상화는 재미없었고 시간이 더 걸렸다",
+        "그래서 재미없는 일을 AI 자동화 대상으로 삼았다"
+      ],
+      "directive_note": null
+    },
+    {
+      "id": "2",
+      "sort_key": 2.0,
+      "is_numbered": true,
+      "title": "오늘의 인사이트",
+      "time_raw": "시간 미정",
+      "time_minutes": null,
+      "is_remainder": false,
+      "coverage_state": "defined",
+      "coverage_items": [
+        "재미있는 일과 재미없는 일 분리하기",
+        "VibeLearn AI + AI4PKM 자동화 구조",
+        "Codex Win — 화면 읽기에서 데이터 흐름 찾기로",
+        "로드맵 우선 설계 — 시작은 신중하게, 재개는 간편하게"
+      ],
+      "directive_note": null
+    },
+    {
+      "id": "3",
+      "sort_key": 3.0,
+      "is_numbered": true,
+      "title": "내 주변 AI News",
+      "time_raw": "시간 미정",
+      "time_minutes": null,
+      "is_remainder": false,
+      "coverage_state": "defined",
+      "coverage_items": [
+        "Seattle Tech Week 2026",
+        "Spark + AI",
+        "이번 주 캘린더 고정 일정",
+        "페더럴웨이 한인회 광복절 기념식 AI 접목 논의"
+      ],
+      "directive_note": null
+    },
+    {
+      "id": "4",
+      "sort_key": 4.0,
+      "is_numbered": true,
+      "title": "오늘의 실험",
+      "time_raw": "시간 미정",
+      "time_minutes": null,
+      "is_remainder": false,
+      "coverage_state": "defined",
+      "coverage_items": [
+        "Seattle Tech Week 일정 관리 기록으로 영상 만들기",
+        "Databricks 녹화 영상에 Remotion으로 자막 입히기",
+        "광복절 기념식 AI 섹션 준비 — VibeLearn AI로 Research",
+        "Bila AI Agent M2 진행 상황"
+      ],
+      "directive_note": null
+    },
+    {
+      "id": "주간 영상",
+      "sort_key": 904.0,
+      "is_numbered": false,
+      "title": "주간 영상",
+      "time_raw": "시간 미정",
+      "time_minutes": null,
+      "is_remainder": false,
+      "coverage_state": "defined",
+      "coverage_items": [
+        "공부 기록을 영상으로 바꾸는 자동화",
+        "Seattle Tech Week 일정 수립 과정 영상"
+      ],
+      "directive_note": null
+    }
+  ],
+  "excluded_sections": [],
+  "conditional_sections": [],
+  "parsed_at": "2026-08-23T13:26:37.313519+00:00"
+}

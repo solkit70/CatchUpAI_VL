@@ -1,0 +1,497 @@
+{
+  "claude": {
+    "model": "claude-opus-5",
+    "levels": {
+      "(기본값)": {
+        "runs": [
+          {
+            "ok": true,
+            "latency_ms": 7587,
+            "input_tokens": 1585,
+            "output_tokens": 563,
+            "reasoning_tokens": null,
+            "effort_sent": null,
+            "est_cost_usd": null,
+            "sentences": 3,
+            "evidence_ok": true,
+            "problems": []
+          },
+          {
+            "ok": true,
+            "latency_ms": 6738,
+            "input_tokens": 1585,
+            "output_tokens": 568,
+            "reasoning_tokens": null,
+            "effort_sent": null,
+            "est_cost_usd": null,
+            "sentences": 3,
+            "evidence_ok": true,
+            "problems": []
+          }
+        ],
+        "summary": {
+          "n": 2,
+          "n_ok": 2,
+          "latency_med_ms": 7162,
+          "latency_min_ms": 6738,
+          "latency_max_ms": 7587,
+          "output_tokens_med": 566,
+          "reasoning_tokens_med": null,
+          "evidence_ok_all": true,
+          "schema_fail": 0,
+          "call_fail": 0
+        }
+      },
+      "low": {
+        "runs": [
+          {
+            "ok": true,
+            "latency_ms": 7176,
+            "input_tokens": 1585,
+            "output_tokens": 559,
+            "reasoning_tokens": null,
+            "effort_sent": "low",
+            "est_cost_usd": null,
+            "sentences": 3,
+            "evidence_ok": true,
+            "problems": []
+          },
+          {
+            "ok": true,
+            "latency_ms": 6901,
+            "input_tokens": 1585,
+            "output_tokens": 559,
+            "reasoning_tokens": null,
+            "effort_sent": "low",
+            "est_cost_usd": null,
+            "sentences": 3,
+            "evidence_ok": true,
+            "problems": []
+          }
+        ],
+        "summary": {
+          "n": 2,
+          "n_ok": 2,
+          "latency_med_ms": 7038,
+          "latency_min_ms": 6901,
+          "latency_max_ms": 7176,
+          "output_tokens_med": 559,
+          "reasoning_tokens_med": null,
+          "evidence_ok_all": true,
+          "schema_fail": 0,
+          "call_fail": 0
+        }
+      },
+      "medium": {
+        "runs": [
+          {
+            "ok": true,
+            "latency_ms": 7583,
+            "input_tokens": 1585,
+            "output_tokens": 558,
+            "reasoning_tokens": null,
+            "effort_sent": "medium",
+            "est_cost_usd": null,
+            "sentences": 3,
+            "evidence_ok": true,
+            "problems": []
+          },
+          {
+            "ok": true,
+            "latency_ms": 6840,
+            "input_tokens": 1585,
+            "output_tokens": 569,
+            "reasoning_tokens": null,
+            "effort_sent": "medium",
+            "est_cost_usd": null,
+            "sentences": 3,
+            "evidence_ok": true,
+            "problems": []
+          }
+        ],
+        "summary": {
+          "n": 2,
+          "n_ok": 2,
+          "latency_med_ms": 7212,
+          "latency_min_ms": 6840,
+          "latency_max_ms": 7583,
+          "output_tokens_med": 564,
+          "reasoning_tokens_med": null,
+          "evidence_ok_all": true,
+          "schema_fail": 0,
+          "call_fail": 0
+        }
+      },
+      "high": {
+        "runs": [
+          {
+            "ok": true,
+            "latency_ms": 7830,
+            "input_tokens": 1585,
+            "output_tokens": 561,
+            "reasoning_tokens": null,
+            "effort_sent": "high",
+            "est_cost_usd": null,
+            "sentences": 3,
+            "evidence_ok": true,
+            "problems": []
+          },
+          {
+            "ok": true,
+            "latency_ms": 7505,
+            "input_tokens": 1585,
+            "output_tokens": 569,
+            "reasoning_tokens": null,
+            "effort_sent": "high",
+            "est_cost_usd": null,
+            "sentences": 3,
+            "evidence_ok": true,
+            "problems": []
+          }
+        ],
+        "summary": {
+          "n": 2,
+          "n_ok": 2,
+          "latency_med_ms": 7668,
+          "latency_min_ms": 7505,
+          "latency_max_ms": 7830,
+          "output_tokens_med": 565,
+          "reasoning_tokens_med": null,
+          "evidence_ok_all": true,
+          "schema_fail": 0,
+          "call_fail": 0
+        }
+      }
+    }
+  },
+  "openai": {
+    "model": "gpt-5",
+    "levels": {
+      "(기본값)": {
+        "runs": [
+          {
+            "ok": true,
+            "latency_ms": 12230,
+            "input_tokens": 1129,
+            "output_tokens": 1441,
+            "reasoning_tokens": 1152,
+            "effort_sent": null,
+            "est_cost_usd": null,
+            "sentences": 3,
+            "evidence_ok": true,
+            "problems": []
+          },
+          {
+            "ok": true,
+            "latency_ms": 18111,
+            "input_tokens": 1129,
+            "output_tokens": 2015,
+            "reasoning_tokens": 1728,
+            "effort_sent": null,
+            "est_cost_usd": null,
+            "sentences": 3,
+            "evidence_ok": true,
+            "problems": []
+          }
+        ],
+        "summary": {
+          "n": 2,
+          "n_ok": 2,
+          "latency_med_ms": 15170,
+          "latency_min_ms": 12230,
+          "latency_max_ms": 18111,
+          "output_tokens_med": 1728,
+          "reasoning_tokens_med": 1440,
+          "evidence_ok_all": true,
+          "schema_fail": 0,
+          "call_fail": 0
+        }
+      },
+      "minimal": {
+        "runs": [
+          {
+            "ok": true,
+            "latency_ms": 2770,
+            "input_tokens": 1129,
+            "output_tokens": 291,
+            "reasoning_tokens": 0,
+            "effort_sent": "minimal",
+            "est_cost_usd": null,
+            "sentences": 3,
+            "evidence_ok": true,
+            "problems": []
+          },
+          {
+            "ok": true,
+            "latency_ms": 2348,
+            "input_tokens": 1129,
+            "output_tokens": 288,
+            "reasoning_tokens": 0,
+            "effort_sent": "minimal",
+            "est_cost_usd": null,
+            "sentences": 2,
+            "evidence_ok": true,
+            "problems": []
+          }
+        ],
+        "summary": {
+          "n": 2,
+          "n_ok": 2,
+          "latency_med_ms": 2559,
+          "latency_min_ms": 2348,
+          "latency_max_ms": 2770,
+          "output_tokens_med": 290,
+          "reasoning_tokens_med": 0,
+          "evidence_ok_all": true,
+          "schema_fail": 0,
+          "call_fail": 0
+        }
+      },
+      "low": {
+        "runs": [
+          {
+            "ok": true,
+            "latency_ms": 9696,
+            "input_tokens": 1129,
+            "output_tokens": 991,
+            "reasoning_tokens": 704,
+            "effort_sent": "low",
+            "est_cost_usd": null,
+            "sentences": 3,
+            "evidence_ok": true,
+            "problems": []
+          },
+          {
+            "ok": true,
+            "latency_ms": 11550,
+            "input_tokens": 1129,
+            "output_tokens": 995,
+            "reasoning_tokens": 704,
+            "effort_sent": "low",
+            "est_cost_usd": null,
+            "sentences": 3,
+            "evidence_ok": true,
+            "problems": []
+          }
+        ],
+        "summary": {
+          "n": 2,
+          "n_ok": 2,
+          "latency_med_ms": 10623,
+          "latency_min_ms": 9696,
+          "latency_max_ms": 11550,
+          "output_tokens_med": 993,
+          "reasoning_tokens_med": 704,
+          "evidence_ok_all": true,
+          "schema_fail": 0,
+          "call_fail": 0
+        }
+      },
+      "medium": {
+        "runs": [
+          {
+            "ok": true,
+            "latency_ms": 16435,
+            "input_tokens": 1129,
+            "output_tokens": 1762,
+            "reasoning_tokens": 1472,
+            "effort_sent": "medium",
+            "est_cost_usd": null,
+            "sentences": 3,
+            "evidence_ok": true,
+            "problems": []
+          },
+          {
+            "ok": true,
+            "latency_ms": 21645,
+            "input_tokens": 1129,
+            "output_tokens": 2210,
+            "reasoning_tokens": 1920,
+            "effort_sent": "medium",
+            "est_cost_usd": null,
+            "sentences": 3,
+            "evidence_ok": true,
+            "problems": []
+          }
+        ],
+        "summary": {
+          "n": 2,
+          "n_ok": 2,
+          "latency_med_ms": 19040,
+          "latency_min_ms": 16435,
+          "latency_max_ms": 21645,
+          "output_tokens_med": 1986,
+          "reasoning_tokens_med": 1696,
+          "evidence_ok_all": true,
+          "schema_fail": 0,
+          "call_fail": 0
+        }
+      },
+      "high": {
+        "runs": [
+          {
+            "ok": true,
+            "latency_ms": 28403,
+            "input_tokens": 1129,
+            "output_tokens": 3232,
+            "reasoning_tokens": 2944,
+            "effort_sent": "high",
+            "est_cost_usd": null,
+            "sentences": 3,
+            "evidence_ok": true,
+            "problems": []
+          },
+          {
+            "ok": true,
+            "latency_ms": 30970,
+            "input_tokens": 1129,
+            "output_tokens": 3679,
+            "reasoning_tokens": 3392,
+            "effort_sent": "high",
+            "est_cost_usd": null,
+            "sentences": 3,
+            "evidence_ok": true,
+            "problems": []
+          }
+        ],
+        "summary": {
+          "n": 2,
+          "n_ok": 2,
+          "latency_med_ms": 29686,
+          "latency_min_ms": 28403,
+          "latency_max_ms": 30970,
+          "output_tokens_med": 3456,
+          "reasoning_tokens_med": 3168,
+          "evidence_ok_all": true,
+          "schema_fail": 0,
+          "call_fail": 0
+        }
+      }
+    }
+  },
+  "gemini": {
+    "model": "gemini-3.1-pro-preview",
+    "levels": {
+      "(기본값)": {
+        "runs": [
+          {
+            "ok": true,
+            "latency_ms": 12425,
+            "input_tokens": 292,
+            "output_tokens": 310,
+            "reasoning_tokens": 1237,
+            "effort_sent": null,
+            "est_cost_usd": null,
+            "sentences": 3,
+            "evidence_ok": true,
+            "problems": []
+          },
+          {
+            "ok": true,
+            "latency_ms": 9810,
+            "input_tokens": 292,
+            "output_tokens": 312,
+            "reasoning_tokens": 1045,
+            "effort_sent": null,
+            "est_cost_usd": null,
+            "sentences": 3,
+            "evidence_ok": true,
+            "problems": []
+          }
+        ],
+        "summary": {
+          "n": 2,
+          "n_ok": 2,
+          "latency_med_ms": 11118,
+          "latency_min_ms": 9810,
+          "latency_max_ms": 12425,
+          "output_tokens_med": 311,
+          "reasoning_tokens_med": 1141,
+          "evidence_ok_all": true,
+          "schema_fail": 0,
+          "call_fail": 0
+        }
+      },
+      "low": {
+        "runs": [
+          {
+            "ok": true,
+            "latency_ms": 4597,
+            "input_tokens": 292,
+            "output_tokens": 328,
+            "reasoning_tokens": null,
+            "effort_sent": "low",
+            "est_cost_usd": null,
+            "sentences": 2,
+            "evidence_ok": true,
+            "problems": []
+          },
+          {
+            "ok": true,
+            "latency_ms": 3679,
+            "input_tokens": 292,
+            "output_tokens": 355,
+            "reasoning_tokens": null,
+            "effort_sent": "low",
+            "est_cost_usd": null,
+            "sentences": 3,
+            "evidence_ok": true,
+            "problems": []
+          }
+        ],
+        "summary": {
+          "n": 2,
+          "n_ok": 2,
+          "latency_med_ms": 4138,
+          "latency_min_ms": 3679,
+          "latency_max_ms": 4597,
+          "output_tokens_med": 342,
+          "reasoning_tokens_med": null,
+          "evidence_ok_all": true,
+          "schema_fail": 0,
+          "call_fail": 0
+        }
+      },
+      "high": {
+        "runs": [
+          {
+            "ok": true,
+            "latency_ms": 10836,
+            "input_tokens": 292,
+            "output_tokens": 316,
+            "reasoning_tokens": 1136,
+            "effort_sent": "high",
+            "est_cost_usd": null,
+            "sentences": 3,
+            "evidence_ok": true,
+            "problems": []
+          },
+          {
+            "ok": true,
+            "latency_ms": 15824,
+            "input_tokens": 292,
+            "output_tokens": 312,
+            "reasoning_tokens": 1852,
+            "effort_sent": "high",
+            "est_cost_usd": null,
+            "sentences": 3,
+            "evidence_ok": true,
+            "problems": []
+          }
+        ],
+        "summary": {
+          "n": 2,
+          "n_ok": 2,
+          "latency_med_ms": 13330,
+          "latency_min_ms": 10836,
+          "latency_max_ms": 15824,
+          "output_tokens_med": 314,
+          "reasoning_tokens_med": 1494,
+          "evidence_ok_all": true,
+          "schema_fail": 0,
+          "call_fail": 0
+        }
+      }
+    }
+  }
+}

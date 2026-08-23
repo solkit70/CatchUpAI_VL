@@ -136,8 +136,10 @@ SAMPLE_VERDICT = {
 SAMPLE_OUTPUT = {
     "overlay": {"text": "오늘 3부에서는 AI로 라이브 방송 보조 MC 앱을 만듭니다.",
                 "part_id": "3", "updated_at": "2026-08-09T05:45:00Z"},
+    # provider 는 2026-08-23 M7 착수 시 추가된 필수 필드다.
+    # M6 서킷 브레이커가 런타임에 프로바이더를 교체하므로 voice id 로 역추정하면 안 된다.
     "spoken": {"text": "오늘 3부에서는 AI로 라이브 방송 보조 MC 앱을 만듭니다.",
-               "voice": "ko-KR-SunHiNeural", "audio_path": None,
+               "provider": "edge", "voice": "ko-KR-SunHiNeural", "audio_path": None,
                "spoken_at": "2026-08-09T05:45:01Z"},
     "source_verdict_pass": False,
 }

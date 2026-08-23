@@ -1,0 +1,116 @@
+{
+  "version": "1.0",
+  "source": "_Settings_/Skills/live-broadcast/SKILL.md (v1.2.0)",
+  "generated_by": "M3 - 데이터 계약과 안전 정책 스펙",
+  "note": "SKILL.md의 사람이 읽는 원칙을 코드가 로드/집행할 수 있는 규칙으로 번역한다. M8 안전 검증 게이트가 이 파일을 그대로 로드한다.",
+
+  "principles": [
+    {
+      "id": "no_speculation",
+      "title": "절대 추측 금지",
+      "rule": "Rundown 문서 내 팩트(상태·타임스탬프·항목)만 사용한다. 근거가 없거나 모호하면 발화하지 않고 확인 질문을 던진다.",
+      "enforced_by": ["claim.evidence_required", "ambiguity.quantity_mismatch", "ambiguity.no_coverage"]
+    },
+    {
+      "id": "freshness",
+      "title": "최신성 보장",
+      "rule": "가장 최신 Rundown/Daily Roundup을 우선한다. 시스템 리마인더의 'Modified' 알림이 있으면 최우선 반영한다.",
+      "enforced_by": ["context.prefer_latest", "context.system_reminder_override"]
+    },
+    {
+      "id": "state_sync",
+      "title": "상태 동기화",
+      "rule": "완료된 항목을 '진행 예정'으로 처리하지 않는다. 상태 열을 발화 전에 확인한다.",
+      "enforced_by": ["ambiguity.completion_confusion"]
+    },
+    {
+      "id": "vault_not_today",
+      "title": "Vault에 있다 ≠ 오늘 방송에서 했다",
+      "rule": "Vault 어딘가에 기록된 과거 작업을 오늘 방송 중 완료한 것처럼 발화하지 않는다. '오늘 한 일'은 현재 세션에서 명시적으로 확인된 것만이다.",
+      "enforced_by": ["claim.evidence_required", "coverage.whitelist_only"]
+    }
+  ],
+
+  "ambiguity_rules": [
+    {
+      "id": "ambiguity.quantity_mismatch",
+      "when": "요청 수량(예: '3가지') != 현재 파트의 coverage_items 개수",
+      "signal": "intent.ambiguity_flags contains 'quantity_mismatch'",
+      "action": "hitl_ask",
+      "prompt": "어떤 항목을 다루실 건가요?",
+      "block_generation": true
+    },
+    {
+      "id": "ambiguity.no_coverage",
+      "when": "current part coverage_state == 'undefined' (커버리지 줄 없음)",
+      "signal": "intent.ambiguity_flags contains 'no_coverage'",
+      "action": "hitl_ask",
+      "prompt": "이 파트에서 다루실 항목이 어떤 것인지 알려주세요.",
+      "block_generation": true
+    },
+    {
+      "id": "ambiguity.completion_confusion",
+      "when": "완료된 항목을 진행 예정으로 착각한 요청",
+      "signal": "intent.ambiguity_flags contains 'completion_confusion'",
+      "action": "hitl_ask",
+      "prompt": "이미 완료된 항목입니다. 다시 설명할까요?",
+      "block_generation": true
+    }
+  ],
+
+  "length_hardcut": {
+    "unit": "sentences",
+    "levels": {
+      "brief": 3,
+      "default": 5,
+      "detailed": 7
+    },
+    "trigger_phrases": {
+      "brief": ["간략히 정리해줘", "간단히"],
+      "default": ["정리해줘"],
+      "detailed": ["상세히 정리해줘", "자세히"]
+    },
+    "on_exceed": "drop_trailing_sentences",
+    "verdict_reason": "length_hardcut"
+  },
+
+  "verification_rules": [
+    {
+      "id": "claim.evidence_required",
+      "stage": "verify",
+      "rule": "answer_draft.sentences의 모든 인덱스가 claim_map에 존재하고, 각 evidence_quote가 broadcast_context.evidence_pool 안 문자열의 부분 인용이어야 한다.",
+      "on_violation": "drop_sentence",
+      "verdict_reason": ["no_evidence", "evidence_not_found"],
+      "llm_self_eval": false
+    },
+    {
+      "id": "coverage.whitelist_only",
+      "stage": "verify",
+      "rule": "발화 문장은 현재 파트 coverage_items(화이트리스트) 범위 밖 주제를 담을 수 없다.",
+      "on_violation": "drop_sentence",
+      "verdict_reason": ["coverage_violation"],
+      "llm_self_eval": false
+    },
+    {
+      "id": "coverage.undefined_blocks",
+      "stage": "context",
+      "rule": "coverage_state == 'undefined'이면 컨텍스트 조립·LLM 호출을 하지 않고 HITL로 전환한다.",
+      "on_violation": "block_generation",
+      "llm_self_eval": false
+    },
+    {
+      "id": "forbidden.excluded_removed",
+      "stage": "context",
+      "rule": "rundown_index.excluded_sections는 broadcast_context 조립 시 이미 제거돼야 한다(forbidden_removed=true). 프롬프트에 '말하지 마'로 지시하지 않고 입력에서 제거한다.",
+      "on_violation": "block_generation",
+      "llm_self_eval": false
+    },
+    {
+      "id": "conditional.time_gated",
+      "stage": "context",
+      "rule": "conditional_sections는 current_part_id와 remaining_seconds 조건을 만족할 때만 화이트리스트에 편입한다. (M8에서 조건 파서 구현)",
+      "on_violation": "exclude_by_default",
+      "llm_self_eval": false
+    }
+  ]
+}

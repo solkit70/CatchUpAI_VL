@@ -9,26 +9,58 @@
       "type": "object",
       "description": "⑧ OBS Browser Source가 폴링하는 화면 텍스트",
       "properties": {
-        "text": { "type": "string", "description": "화면에 표시할 최종 텍스트 (= verdict.final_text)" },
-        "part_id": { "type": "string", "description": "현재 파트 id" },
-        "updated_at": { "type": "string", "format": "date-time" }
+        "text": {
+          "type": "string",
+          "description": "화면에 표시할 최종 텍스트 (= verdict.final_text)"
+        },
+        "part_id": {
+          "type": "string",
+          "description": "현재 파트 id"
+        },
+        "updated_at": {
+          "type": "string",
+          "format": "date-time"
+        }
       },
-      "required": ["text", "updated_at"],
+      "required": [
+        "text",
+        "updated_at"
+      ],
       "additionalProperties": false
     },
     "spoken": {
       "type": "object",
       "description": "⑨ TTS 재생 결과",
       "properties": {
-        "text": { "type": "string", "description": "TTS로 발화할 텍스트 (= verdict.final_text)" },
-        "voice": { "type": "string", "description": "선택된 TTS 보이스 id (예: ko-KR-SunHiNeural)" },
+        "text": {
+          "type": "string",
+          "description": "TTS로 발화할 텍스트 (= verdict.final_text)"
+        },
+        "provider": {
+          "type": "string",
+          "description": "이 발화를 합성한 TTS 프로바이더 (edge/openai/qwen/elevenlabs). voice id 로 역추정하지 않고 명시한다 — 서킷 브레이커가 런타임에 프로바이더를 교체하므로, 사후 분석 때 '어느 발화가 강등/승격 이후였는지'를 가르는 유일한 근거다. 2026-08-23 M7 착수 시 추가 (M3 설계 당시에는 프로바이더가 하나였다)."
+        },
+        "voice": {
+          "type": "string",
+          "description": "선택된 TTS 보이스 id (예: ko-KR-SunHiNeural)"
+        },
         "audio_path": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "description": "생성된 오디오 파일 경로. 스트리밍/미생성이면 null"
         },
-        "spoken_at": { "type": "string", "format": "date-time" }
+        "spoken_at": {
+          "type": "string",
+          "format": "date-time"
+        }
       },
-      "required": ["text", "voice"],
+      "required": [
+        "text",
+        "provider",
+        "voice"
+      ],
       "additionalProperties": false
     },
     "source_verdict_pass": {
@@ -36,6 +68,10 @@
       "description": "이 출력을 만든 verdict.pass 값 — pass=false여도 kept_sentences 기반 부분 발화일 수 있음을 추적"
     }
   },
-  "required": ["overlay", "spoken", "source_verdict_pass"],
+  "required": [
+    "overlay",
+    "spoken",
+    "source_verdict_pass"
+  ],
   "additionalProperties": false
 }

@@ -1,0 +1,68 @@
+{
+  "source_path": "Ingest/CatchUpAI_VL/Topics/Live-CoMC-App/07-CoMC-Engine-POC/data/rundown_samples/2026-07-26 - Live21 Weekly Rundown.md",
+  "is_final": true,
+  "parts": [
+    {
+      "id": "1",
+      "sort_key": 1.0,
+      "is_numbered": true,
+      "title": "지난 주 활동",
+      "time_raw": "20분",
+      "time_minutes": 20,
+      "is_remainder": false,
+      "coverage_state": "defined",
+      "coverage_items": [
+        "Seattle Tech Week 2026 5일 연속 참가(7/27~31)",
+        "유튜브 업로드 3건(Seattle Tech Week 일정 수립 KR/EN, NGO 실무자를 위한 AI 활용법)"
+      ],
+      "directive_note": null
+    },
+    {
+      "id": "2",
+      "sort_key": 2.0,
+      "is_numbered": true,
+      "title": "내 주변 AI News",
+      "time_raw": "10분",
+      "time_minutes": 10,
+      "is_remainder": false,
+      "coverage_state": "defined",
+      "coverage_items": [
+        "Builders Lounge 4차 모임(8/6) 일정·발표자 확정"
+      ],
+      "directive_note": null
+    },
+    {
+      "id": "3",
+      "sort_key": 3.0,
+      "is_numbered": true,
+      "title": "오늘의 실험",
+      "time_raw": "나머지 시간 전부",
+      "time_minutes": null,
+      "is_remainder": true,
+      "coverage_state": "directive",
+      "coverage_items": [
+        "AI로 라방 보조 MC 앱 만들기",
+        "기존 스킬을 OpenAI 신규 Transcribe 모델로 업데이트"
+      ],
+      "directive_note": "이 두 개를 메인으로 진행하고, 시간이 남으면 아래 대기 목록에서 이어간다"
+    }
+  ],
+  "excluded_sections": [
+    {
+      "heading": "보류된 인사이트 후보 (이번 방송 미편성)",
+      "reason": "unscheduled"
+    },
+    {
+      "heading": "주간 영상 후보 (이번 방송 코너 미편성)",
+      "reason": "unscheduled"
+    }
+  ],
+  "conditional_sections": [
+    {
+      "heading": "대기 목록 (시간이 남으면)",
+      "condition": "시간이 남으면"
+    }
+  ],
+  "parsed_at": "2026-08-23T13:47:41.508481+00:00",
+  "frontmatter_status": "📺 방송 완료 — 실험①②③ 전부 진행"
+}

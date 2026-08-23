@@ -6,10 +6,12 @@
     "resolved_model 에 기록한다. 추측한 모델 ID를 코드에 박아 두지 않기 위한 장치다.",
     "API 키는 이 파일에 넣지 않는다. env_key 이름만 적고 값은 환경 변수에서 읽는다."
   ],
-
-  "fallback_order": ["claude", "openai", "gemini"],
-  "_fallback_order_note": "M3 설계의 예시 순서(Claude → OpenAI → Gemini)를 그대로 따른다. session_state.active_provider 교체 순서이기도 하다.",
-
+  "fallback_order": [
+    "openai",
+    "gemini",
+    "claude"
+  ],
+  "_fallback_order_note": "2026-08-23 변경. M3 설계는 claude→openai→gemini 였으나 지연 실측이 그 전제를 뒤집었다. 튜닝된 상태의 최악값 기준: openai 2.8s < gemini 4.6s < claude 7.8s. 방송에서는 중앙값보다 최악값이 중요하다 — 한 번의 긴 침묵이 스무 번의 빠른 응답을 지운다. claude 는 effort 에 반응하지 않는 대신 편차가 가장 작아 마지막 보루로 둔다. 근거: guides/llm-latency-sweep.md",
   "providers": {
     "claude": {
       "enabled": true,
@@ -19,10 +21,18 @@
       "model_prefix": "claude-opus-",
       "structured_output": "tool_use_strict",
       "_so_note": "tools=[{name, strict:true, input_schema}] + tool_choice={type:'tool',name}. output_config.format 도 가능. 구 output_format 파라미터는 deprecated.",
-      "schema_unsupported_keywords": ["minimum", "maximum", "minLength", "maxLength", "minItems", "maxItems"],
-      "_schema_note": "Claude 구조화 출력은 수치·길이 제약을 미지원. 스키마를 다운그레이드해 보내고 최종 판정은 어댑터 뒤단 answer_draft.schema.json 재검증에서 한다."
+      "schema_unsupported_keywords": [
+        "minimum",
+        "maximum",
+        "minLength",
+        "maxLength",
+        "minItems",
+        "maxItems"
+      ],
+      "_schema_note": "Claude 구조화 출력은 수치·길이 제약을 미지원. 스키마를 다운그레이드해 보내고 최종 판정은 어댑터 뒤단 answer_draft.schema.json 재검증에서 한다.",
+      "default_effort": null,
+      "_effort_measured": "7.2s → 7.0s (변화 없음). Opus 5 는 thinking 이 기본 adaptive 라 이 과제에서 더 줄일 사고가 없다. thinking 을 끄는 선택지는 쓰지 않는다 — strict tool use 와 함께 쓰면 도구 호출이 tool_use 블록 대신 본문 텍스트로 새는 실패 모드가 있다."
     },
-
     "openai": {
       "enabled": true,
       "env_key": "OPENAI_API_KEY",
@@ -32,9 +42,10 @@
       "structured_output": "json_schema",
       "_so_note": "response_format={type:'json_schema', json_schema:{name, schema, strict:true}}. strict 모드는 additionalProperties:false 와 전 필드 required 를 요구한다.",
       "schema_unsupported_keywords": [],
-      "_schema_note": "JSON Schema 서브셋. additionalProperties:false 필수."
+      "_schema_note": "JSON Schema 서브셋. additionalProperties:false 필수.",
+      "default_effort": "minimal",
+      "_effort_measured": "15.2s → 2.6s (-83%), 추론 토큰 1440 → 0"
     },
-
     "gemini": {
       "enabled": true,
       "env_key": "GEMINI_API_KEY",
@@ -43,9 +54,14 @@
       "model_prefix": "gemini-",
       "structured_output": "response_schema",
       "_so_note": "generationConfig={responseMimeType:'application/json', responseSchema:<OpenAPI 서브셋>}",
-      "schema_unsupported_keywords": ["additionalProperties"],
+      "schema_unsupported_keywords": [
+        "additionalProperties"
+      ],
       "_schema_note": "OpenAPI 3.0 서브셋. additionalProperties 를 무시하고 필드 순서는 propertyOrdering 으로 다룬다.",
-      "_model_note": "2026-08-20: gemini-2.5 계열은 models.list() 에 나오지만 신규 사용자에게는 404. 목록에 있다고 호출 가능한 게 아니다."
+      "_model_note": "2026-08-20: gemini-2.5 계열은 models.list() 에 나오지만 신규 사용자에게는 404. 목록에 있다고 호출 가능한 게 아니다.",
+      "default_effort": "low",
+      "_effort_measured": "11.1s → 4.1s (-63%), 사고 토큰 1141 → 없음"
     }
-  }
+  },
+  "_effort_note": "default_effort 는 공통 척도(minimal/low/medium/high)다. 어댑터가 각 사 파라미터로 번역한다 (claude=output_config.effort / openai=reasoning_effort / gemini=thinking_level). null 이면 프로바이더 기본값을 쓴다. ⚠️ 이 값들은 쉬운 질문(근거 2건·커버리지 defined)으로만 검증됐다. 커버리지 미정·근거 충돌·안전 경계 같은 어려운 경로에서 추론 0으로도 계약이 유지되는지는 M8에서 확인해야 한다. 그때까지 minimal 은 잠정값이다."
 }

@@ -1,0 +1,93 @@
+{
+  "provider": "openai",
+  "rows": [
+    {
+      "condition": "근거 2건 / 3문장",
+      "evidence": 2,
+      "max_sentences": 3,
+      "latency_med_ms": 2124,
+      "latency_min_ms": 1952,
+      "latency_max_ms": 5097,
+      "usage": [
+        [
+          1239,
+          237
+        ],
+        [
+          1239,
+          245
+        ],
+        [
+          1239,
+          243
+        ]
+      ]
+    },
+    {
+      "condition": "근거 2건 / 5문장",
+      "evidence": 2,
+      "max_sentences": 5,
+      "latency_med_ms": 2246,
+      "latency_min_ms": 2001,
+      "latency_max_ms": 2255,
+      "usage": [
+        [
+          1239,
+          247
+        ],
+        [
+          1239,
+          241
+        ],
+        [
+          1239,
+          241
+        ]
+      ]
+    },
+    {
+      "condition": "근거 15건 / 3문장",
+      "evidence": 15,
+      "max_sentences": 3,
+      "latency_med_ms": 3507,
+      "latency_min_ms": 2965,
+      "latency_max_ms": 4723,
+      "usage": [
+        [
+          2079,
+          450
+        ],
+        [
+          2079,
+          624
+        ],
+        [
+          2079,
+          557
+        ]
+      ]
+    },
+    {
+      "condition": "근거 15건 / 5문장",
+      "evidence": 15,
+      "max_sentences": 5,
+      "latency_med_ms": 3537,
+      "latency_min_ms": 3434,
+      "latency_max_ms": 4453,
+      "usage": [
+        [
+          2079,
+          570
+        ],
+        [
+          2079,
+          760
+        ],
+        [
+          2079,
+          571
+        ]
+      ]
+    }
+  ]
+}

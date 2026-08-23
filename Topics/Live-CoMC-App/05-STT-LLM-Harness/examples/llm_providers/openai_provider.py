@@ -14,20 +14,25 @@ import json
 
 from openai import OpenAI
 
-from .base import LLMProvider, provider_schema
+from .base import LLMProvider, native_effort, provider_schema
 
 
 class OpenAIProvider(LLMProvider):
     name = "openai"
 
-    def __init__(self, model: str, cost_per_1k_tokens=None):
-        super().__init__(model, cost_per_1k_tokens)
+    def __init__(self, model: str, cost_per_1k_tokens=None, effort: str | None = None):
+        super().__init__(model, cost_per_1k_tokens, effort=effort)
         self.client = OpenAI()                    # OPENAI_API_KEY
 
     def _schema_for_provider(self) -> dict:
         return provider_schema(force_all_required=True)
 
     def _call(self, system: str, user: str, schema: dict):
+        extra = {}
+        eff = native_effort(self.name, self.effort)
+        if eff:
+            extra["reasoning_effort"] = eff
+
         resp = self.client.chat.completions.create(
             model=self.model,
             messages=[{"role": "system", "content": system},
@@ -36,6 +41,7 @@ class OpenAIProvider(LLMProvider):
                 "type": "json_schema",
                 "json_schema": {"name": "answer_draft", "strict": True, "schema": schema},
             },
+            **extra,
         )
         choice = resp.choices[0]
 
@@ -50,6 +56,10 @@ class OpenAIProvider(LLMProvider):
             raise RuntimeError(f"JSON 파싱 실패: {e} / 앞부분={text[:120]!r}")
 
         u = resp.usage
+        # OpenAI 는 추론 토큰을 따로 보고한다 → 지연 원인을 직접 볼 수 있는 곳이다.
+        details = getattr(u, "completion_tokens_details", None)
         usage = {"input_tokens": getattr(u, "prompt_tokens", 0),
-                 "output_tokens": getattr(u, "completion_tokens", 0)}
+                 "output_tokens": getattr(u, "completion_tokens", 0),
+                 "reasoning_tokens": getattr(details, "reasoning_tokens", None),
+                 "effort_sent": eff}
         return payload, usage

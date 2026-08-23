@@ -20,7 +20,9 @@
     "parts": {
       "type": "array",
       "description": "## N부: 제목 (시간) 헤딩으로 구분된 방송 구간 목록",
-      "items": { "$ref": "#/$defs/part" }
+      "items": {
+        "$ref": "#/$defs/part"
+      }
     },
     "excluded_sections": {
       "type": "array",
@@ -28,14 +30,25 @@
       "items": {
         "type": "object",
         "properties": {
-          "heading": { "type": "string", "description": "섹션 헤딩 원문" },
+          "heading": {
+            "type": "string",
+            "description": "섹션 헤딩 원문"
+          },
           "reason": {
             "type": "string",
-            "enum": ["unscheduled", "on_hold", "candidate", "sensitive_draft"],
+            "enum": [
+              "unscheduled",
+              "on_hold",
+              "candidate",
+              "sensitive_draft"
+            ],
             "description": "배제 근거 태그 (미편성/보류/후보/미공개초안)"
           }
         },
-        "required": ["heading", "reason"],
+        "required": [
+          "heading",
+          "reason"
+        ],
         "additionalProperties": false
       }
     },
@@ -45,13 +58,18 @@
       "items": {
         "type": "object",
         "properties": {
-          "heading": { "type": "string" },
+          "heading": {
+            "type": "string"
+          },
           "condition": {
             "type": "string",
             "description": "조건 문자열 원문 보존 (예: '시간이 남으면') — M8에서 기계 규칙으로 변환"
           }
         },
-        "required": ["heading", "condition"],
+        "required": [
+          "heading",
+          "condition"
+        ],
         "additionalProperties": false
       }
     },
@@ -61,7 +79,13 @@
       "description": "파싱 시각"
     }
   },
-  "required": ["source_path", "is_final", "parts", "excluded_sections", "conditional_sections"],
+  "required": [
+    "source_path",
+    "is_final",
+    "parts",
+    "excluded_sections",
+    "conditional_sections"
+  ],
   "additionalProperties": false,
   "$defs": {
     "part": {
@@ -75,13 +99,27 @@
           "type": "number",
           "description": "정렬용 float (예: 4.5). id를 수치화한 값"
         },
-        "title": { "type": "string", "description": "파트 제목" },
+        "is_numbered": {
+          "type": "boolean",
+          "default": true,
+          "description": "'## N부:' 형식으로 번호가 붙은 파트면 true. false 면 번호 없이 커버리지 줄만 가진 방송 구간이다 (실물: Live20 '## 주간 영상 (시간 미정)'). 번호가 없어도 발화 허용 범위를 가지므로 파트로 취급해야 한다 — 빼면 그 구간의 커버리지가 통째로 사라져 말할 수 있는 것을 말하지 못한다. id 에는 제목 문자열이 들어가고 sort_key 는 번호 파트 뒤에 놓인다. 2026-08-23 M7 실습 2에서 추가."
+        },
+        "title": {
+          "type": "string",
+          "description": "파트 제목"
+        },
         "time_raw": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "description": "괄호 안 시간 표기 원문 (예: '20분', '시간 미정', '나머지 시간 전부'). 미정이면 null 가능"
         },
         "time_minutes": {
-          "type": ["integer", "null"],
+          "type": [
+            "integer",
+            "null"
+          ],
           "description": "분 단위 정수로 파싱된 값. 파싱 불가('시간 미정' 등)면 null"
         },
         "is_remainder": {
@@ -90,20 +128,36 @@
         },
         "coverage_state": {
           "type": "string",
-          "enum": ["defined", "directive", "undefined"],
+          "enum": [
+            "defined",
+            "directive",
+            "undefined"
+          ],
           "description": "커버리지 줄 상태 3분류 (M1 case-table 케이스 6/7/8)"
         },
         "coverage_items": {
           "type": "array",
-          "items": { "type": "string" },
+          "items": {
+            "type": "string"
+          },
           "description": "①②③... 발화 허용 화이트리스트 항목. undefined면 빈 배열"
         },
         "directive_note": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "description": "커버리지 줄 끝 운영 지시문 (발화 대상 제외). directive 상태에서만 값 존재"
         }
       },
-      "required": ["id", "sort_key", "title", "is_remainder", "coverage_state", "coverage_items"],
+      "required": [
+        "id",
+        "sort_key",
+        "title",
+        "is_remainder",
+        "coverage_state",
+        "coverage_items"
+      ],
       "additionalProperties": false
     }
   }

@@ -1,0 +1,53 @@
+{
+  "_comment": [
+    "실습 5(파트 판정 권위값/추정값 분리)의 입력 샘플.",
+    "Live21 의 파트 구성(1부 20분 / 2부 10분 / 3부 나머지 전부)을 시각으로 편 것이다.",
+    "",
+    "⚠️ 이 파일은 suggested_part_id 를 계산하는 데만 쓴다.",
+    "   current_part_id 는 절대 이 파일에서 나오지 않는다 — 핫키·음성·클릭으로만 바뀐다(M2).",
+    "   시각 추정이 틀려도 응답에 쓰이는 값은 변하지 않아야 하고, 그것이 실습 5의 검증 기준이다.",
+    "",
+    "왜 자동 전환을 막는가: 방송은 계획대로 흐르지 않는다. 1부가 20분으로 잡혀 있어도",
+    "실제로는 35분이 될 수 있고, 그때 앱이 혼자 2부로 넘어가면 진행자가 1부 이야기를 하는 동안",
+    "AI 는 2부 근거로 답한다. 어긋난 것을 시청자가 먼저 알아챈다.",
+    "",
+    "started_at 은 방송 시작 시각(로컬). Live21 실제 시작 시각이 아니라 샘플 값이다."
+  ],
+
+  "session_ref": "Live21 (2026-07-26)",
+  "started_at": "2026-07-26T19:00:00-07:00",
+  "source_rundown": "AI/Roundup/2026-07-26 - Live21 Weekly Rundown.md",
+
+  "parts": [
+    {
+      "id": "1",
+      "title": "지난 주 활동",
+      "planned_minutes": 20,
+      "offset_start_min": 0,
+      "offset_end_min": 20
+    },
+    {
+      "id": "2",
+      "title": "내 주변 AI News",
+      "planned_minutes": 10,
+      "offset_start_min": 20,
+      "offset_end_min": 30
+    },
+    {
+      "id": "3",
+      "title": "오늘의 실험",
+      "planned_minutes": null,
+      "is_remainder": true,
+      "offset_start_min": 30,
+      "offset_end_min": null,
+      "_note": "is_remainder 파트는 끝 시각을 계산할 수 없다. offset_end_min 은 null 로 두고 추정 신뢰도를 낮춘다."
+    }
+  ],
+
+  "_estimation_note": [
+    "offset 은 planned_minutes 의 누적이다. 실제 진행과 어긋나는 것이 정상이다.",
+    "그래서 suggested_part_id 에는 신뢰도가 따라붙어야 하고, 화면에는 배지로만 표시한다.",
+    "Live20 처럼 전 파트가 '시간 미정'이면 이 파일을 만들 수 없다 → 추정 자체를 하지 않는다.",
+    "추정할 수 없을 때 추정하지 않는 것이, 틀린 추정을 표시하는 것보다 낫다."
+  ]
+}

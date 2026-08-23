@@ -13,6 +13,7 @@ M4에서 얻은 함정 두 가지를 그대로 반영했다:
     python record_utterances.py --list-devices
     python record_utterances.py --device "MV7" --condition clean
     python record_utterances.py --device "MV7" --condition bgm
+    python record_utterances.py --device "VoiceMeeter Out B1" --condition routed
     python record_utterances.py --device "MV7" --condition clean --only 07,12
 
 산출:
@@ -89,7 +90,11 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--list-devices", action="store_true")
     ap.add_argument("--device", help="입력 장치 이름 일부 (권장) 또는 인덱스")
-    ap.add_argument("--condition", default="clean", choices=["clean", "bgm"])
+    # routed: M6 오디오 라우팅(VoiceMeeter 경유) 후 재측정용.
+    # clean 으로 다시 녹음하면 M5 기준선(WER 23.3%)을 덮어쓴다 —
+    # 조건이 다른 측정은 파일을 분리해야 비교가 가능하다.
+    ap.add_argument("--condition", default="clean",
+                    choices=["clean", "bgm", "routed"])
     ap.add_argument("--seconds", type=float, default=6.0, help="문장당 녹음 창 (기본 6초)")
     ap.add_argument("--only", default="", help="특정 번호만 재녹음. 예: 07,12")
     args = ap.parse_args()

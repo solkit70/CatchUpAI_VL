@@ -277,6 +277,9 @@ def main():
                 "structured_output": providers[r["provider"]]["structured_output"],
                 "schema_unsupported_keywords":
                     providers[r["provider"]].get("schema_unsupported_keywords", []),
+                # 실측으로 정한 기본 추론 강도. 어댑터가 각 사 파라미터로 번역한다.
+                # 이 값이 런타임까지 오지 않으면 소비자가 프로바이더 기본값(=느린 쪽)으로 돈다.
+                "default_effort": providers[r["provider"]].get("default_effort"),
             }
             for r in results if r["usable"]
         },

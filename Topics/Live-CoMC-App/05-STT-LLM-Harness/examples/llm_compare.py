@@ -95,14 +95,18 @@ def evidence_ok(draft: dict) -> tuple[bool, list[str]]:
 
 
 def run_one(name, cfg, verbose=True):
-    p = build(name, cfg["model"], cfg.get("cost_per_1k_tokens"))
+    # 레지스트리의 기본 effort 를 그대로 쓴다. 여기서 None 으로 두면
+    # 실측으로 정한 설정을 무시하고 프로바이더 기본값(느린 쪽)으로 도는 셈이 된다.
+    p = build(name, cfg["model"], cfg.get("cost_per_1k_tokens"),
+              effort=cfg.get("default_effort"))
     t0 = time.time()
     r = p.complete(SYSTEM, USER, max_retries=1)
     wall = round((time.time() - t0) * 1000)
     ok, problems = evidence_ok(r.draft)
     if verbose:
         cost = f"${r.est_cost_usd}" if r.est_cost_usd is not None else "단가 미확인"
-        print(f"\n── {name} ({r.model}) ──")
+        eff = r.usage.get("effort_sent") or "프로바이더 기본값"
+        print(f"\n── {name} ({r.model}, effort={eff}) ──")
         print(f"   지연 {wall}ms · 시도 {r.attempts}회 · "
               f"토큰 in {r.usage.get('input_tokens')} / out {r.usage.get('output_tokens')} · {cost}")
         print(f"   문장 {r.draft['length_sentences']}개 · coverage={r.draft['coverage_state']} · "

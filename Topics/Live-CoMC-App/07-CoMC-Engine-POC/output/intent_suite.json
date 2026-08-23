@@ -1,0 +1,230 @@
+[
+  {
+    "id": "01",
+    "kind": "question",
+    "transcript": "코엠씨, 오늘 방송에서 다루는 주제가 뭐예요?",
+    "intent": "answer_question",
+    "slots": {
+      "_stripped_wake_residue": "코엠씨,"
+    },
+    "ambiguity_flags": [],
+    "confidence": 0.9,
+    "created_at": "2026-08-23T13:33:33.229048+00:00"
+  },
+  {
+    "id": "02",
+    "kind": "question",
+    "transcript": "RAG하고 파인튜닝 중에 어떤 걸 먼저 배워야 하나요?",
+    "intent": "answer_question",
+    "slots": {},
+    "ambiguity_flags": [],
+    "confidence": 0.9,
+    "created_at": "2026-08-23T13:33:33.409687+00:00"
+  },
+  {
+    "id": "03",
+    "kind": "question",
+    "transcript": "지금 쓰시는 TTS 모델이 Qwen3-TTS 맞나요?",
+    "intent": "answer_question",
+    "slots": {},
+    "ambiguity_flags": [],
+    "confidence": 0.9,
+    "created_at": "2026-08-23T13:33:33.410244+00:00"
+  },
+  {
+    "id": "04",
+    "kind": "question",
+    "transcript": "비전공자도 FDE로 취업할 수 있을까요?",
+    "intent": "answer_question",
+    "slots": {},
+    "ambiguity_flags": [],
+    "confidence": 0.9,
+    "created_at": "2026-08-23T13:33:33.410456+00:00"
+  },
+  {
+    "id": "05",
+    "kind": "question",
+    "transcript": "이 코드는 GitHub에 공개되어 있나요?",
+    "intent": "answer_question",
+    "slots": {},
+    "ambiguity_flags": [],
+    "confidence": 0.9,
+    "created_at": "2026-08-23T13:33:33.410613+00:00"
+  },
+  {
+    "id": "06",
+    "kind": "question",
+    "transcript": "API 비용은 한 달에 얼마나 나오나요?",
+    "intent": "answer_question",
+    "slots": {},
+    "ambiguity_flags": [],
+    "confidence": 0.9,
+    "created_at": "2026-08-23T13:33:33.410753+00:00"
+  },
+  {
+    "id": "07",
+    "kind": "question",
+    "transcript": "로컬 GPU 없이도 이 작업이 가능한가요?",
+    "intent": "answer_question",
+    "slots": {},
+    "ambiguity_flags": [],
+    "confidence": 0.6,
+    "created_at": "2026-08-23T13:33:33.410893+00:00"
+  },
+  {
+    "id": "08",
+    "kind": "question",
+    "transcript": "지난주에 만든 영상 길이가 몇 분이었죠?",
+    "intent": "answer_question",
+    "slots": {},
+    "ambiguity_flags": [],
+    "confidence": 0.9,
+    "created_at": "2026-08-23T13:33:33.411033+00:00"
+  },
+  {
+    "id": "09",
+    "kind": "question",
+    "transcript": "Remotion하고 After Effects 중에 뭐가 더 빠른가요?",
+    "intent": "answer_question",
+    "slots": {},
+    "ambiguity_flags": [],
+    "confidence": 0.6,
+    "created_at": "2026-08-23T13:33:33.411163+00:00"
+  },
+  {
+    "id": "10",
+    "kind": "question",
+    "transcript": "방금 말씀하신 자료는 어디서 받을 수 있나요?",
+    "intent": "answer_question",
+    "slots": {},
+    "ambiguity_flags": [],
+    "confidence": 0.9,
+    "created_at": "2026-08-23T13:33:33.411283+00:00"
+  },
+  {
+    "id": "11",
+    "kind": "command",
+    "transcript": "코엠씨, 방금 질문 다시 한번 읽어줘.",
+    "intent": "repeat",
+    "slots": {
+      "_stripped_wake_residue": "코엠씨,"
+    },
+    "ambiguity_flags": [],
+    "confidence": 0.9,
+    "created_at": "2026-08-23T13:33:33.411400+00:00"
+  },
+  {
+    "id": "12",
+    "kind": "command",
+    "transcript": "코엠씨, 지금까지 나온 질문 세 개만 요약해줘.",
+    "intent": "summarize_part",
+    "slots": {
+      "_stripped_wake_residue": "코엠씨,",
+      "requested_quantity": 3
+    },
+    "ambiguity_flags": [
+      "quantity_mismatch"
+    ],
+    "confidence": 0.9,
+    "created_at": "2026-08-23T13:33:33.411530+00:00"
+  },
+  {
+    "id": "13",
+    "kind": "command",
+    "transcript": "코엠씨, 다음 파트로 넘어가자.",
+    "intent": "advance_part",
+    "slots": {
+      "_stripped_wake_residue": "코엠씨,"
+    },
+    "ambiguity_flags": [],
+    "confidence": 0.9,
+    "created_at": "2026-08-23T13:33:33.411678+00:00"
+  },
+  {
+    "id": "14",
+    "kind": "command",
+    "transcript": "코엠씨, 이 주제는 나중에 다루겠다고 안내해줘.",
+    "intent": "unknown",
+    "slots": {
+      "_stripped_wake_residue": "코엠씨,"
+    },
+    "ambiguity_flags": [],
+    "confidence": 0.0,
+    "created_at": "2026-08-23T13:33:33.411795+00:00"
+  },
+  {
+    "id": "15",
+    "kind": "command",
+    "transcript": "코엠씨, 채팅창에서 반복되는 질문 찾아줘.",
+    "intent": "out_of_scope",
+    "slots": {
+      "boundary_rule": "boundary.2_chat",
+      "boundary_reason": "시청자 채팅 연동은 범위 밖 — 통제 불가 외부 입력은 프롬프트 인젝션 표면이다",
+      "_stripped_wake_residue": "코엠씨,"
+    },
+    "ambiguity_flags": [],
+    "confidence": 0.9,
+    "created_at": "2026-08-23T13:33:33.411897+00:00"
+  },
+  {
+    "id": "16",
+    "kind": "command",
+    "transcript": "코엠씨, 지금 몇 분 지났는지 알려줘.",
+    "intent": "answer_question",
+    "slots": {
+      "_stripped_wake_residue": "코엠씨,"
+    },
+    "ambiguity_flags": [],
+    "confidence": 0.9,
+    "created_at": "2026-08-23T13:33:33.412031+00:00"
+  },
+  {
+    "id": "17",
+    "kind": "command",
+    "transcript": "코엠씨, 그 답변은 근거가 없으니까 하지 마.",
+    "intent": "stop",
+    "slots": {
+      "_stripped_wake_residue": "코엠씨,"
+    },
+    "ambiguity_flags": [],
+    "confidence": 0.9,
+    "created_at": "2026-08-23T13:33:33.412139+00:00"
+  },
+  {
+    "id": "18",
+    "kind": "command",
+    "transcript": "코엠씨, 오늘 런다운 3번 파트 내용 확인해줘.",
+    "intent": "answer_question",
+    "slots": {
+      "_stripped_wake_residue": "코엠씨,",
+      "part_id": "3"
+    },
+    "ambiguity_flags": [],
+    "confidence": 0.9,
+    "created_at": "2026-08-23T13:33:33.412259+00:00"
+  },
+  {
+    "id": "19",
+    "kind": "command",
+    "transcript": "코엠씨, 시청자 이름은 부르지 말고 답해줘.",
+    "intent": "unknown",
+    "slots": {
+      "_stripped_wake_residue": "코엠씨,"
+    },
+    "ambiguity_flags": [],
+    "confidence": 0.0,
+    "created_at": "2026-08-23T13:33:33.412383+00:00"
+  },
+  {
+    "id": "20",
+    "kind": "command",
+    "transcript": "코엠씨, 여기서 잠깐 멈춰줘.",
+    "intent": "stop",
+    "slots": {
+      "_stripped_wake_residue": "코엠씨,"
+    },
+    "ambiguity_flags": [],
+    "confidence": 0.9,
+    "created_at": "2026-08-23T13:33:33.412492+00:00"
+  }
+]

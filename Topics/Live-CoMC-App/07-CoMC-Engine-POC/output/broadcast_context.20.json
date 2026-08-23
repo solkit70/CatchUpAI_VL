@@ -1,0 +1,119 @@
+{
+  "current_part_id": "2",
+  "coverage_state": "defined",
+  "coverage_items": [
+    "재미있는 일과 재미없는 일 분리하기",
+    "VibeLearn AI + AI4PKM 자동화 구조",
+    "Codex Win — 화면 읽기에서 데이터 흐름 찾기로",
+    "로드맵 우선 설계 — 시작은 신중하게, 재개는 간편하게"
+  ],
+  "evidence_pool": [
+    {
+      "path": "Ingest/CatchUpAI_VL/Topics/Live-CoMC-App/07-CoMC-Engine-POC/data/rundown_samples/2026-07-19 - Live20 Weekly Rundown.md#오늘의 인사이트",
+      "quote": "① 재미있는 일과 재미없는 일 분리하기"
+    },
+    {
+      "path": "Ingest/CatchUpAI_VL/Topics/Live-CoMC-App/07-CoMC-Engine-POC/data/rundown_samples/2026-07-19 - Live20 Weekly Rundown.md#오늘의 인사이트",
+      "quote": "② VibeLearn AI + AI4PKM 자동화 구조"
+    },
+    {
+      "path": "Ingest/CatchUpAI_VL/Topics/Live-CoMC-App/07-CoMC-Engine-POC/data/rundown_samples/2026-07-19 - Live20 Weekly Rundown.md#오늘의 인사이트",
+      "quote": "③ Codex Win — 화면 읽기에서 데이터 흐름 찾기로"
+    },
+    {
+      "path": "Ingest/CatchUpAI_VL/Topics/Live-CoMC-App/07-CoMC-Engine-POC/data/rundown_samples/2026-07-19 - Live20 Weekly Rundown.md#오늘의 인사이트",
+      "quote": "④ 로드맵 우선 설계 — 시작은 신중하게, 재개는 간편하게"
+    },
+    {
+      "path": "Ingest/CatchUpAI_VL/Topics/Live-CoMC-App/07-CoMC-Engine-POC/data/rundown_samples/2026-07-19 - Live20 Weekly Rundown.md#오늘의 인사이트",
+      "quote": "추가 후보 (미확정) — BigHug AI/Bila AI: 흩어진 커뮤니티 문서를 요약·보고하는 운영 보조자"
+    },
+    {
+      "path": "Roundup/2026-07-21 - Daily Roundup#Status Summary",
+      "quote": "Build with AI 한국어 영상 — 완료 — YouTube 업로드 완료: `https://youtu.be/T9BCpJ_ffzQ`"
+    },
+    {
+      "path": "Roundup/2026-07-21 - Daily Roundup#Status Summary",
+      "quote": "Build with AI 영어 영상 — 완료 — YouTube 업로드 완료: `https://youtu.be/bfpj7aetzhk`"
+    },
+    {
+      "path": "Roundup/2026-07-22 - Daily Roundup#Status Summary",
+      "quote": "김진영님 AI4PKM 미팅 녹화 편집 — 이월 — 7/22 착수 못 함, 7/23 단일 task로 이동"
+    },
+    {
+      "path": "Roundup/2026-07-22 - Daily Roundup#Status Summary",
+      "quote": "Spark + AI / Databricks Bellevue — 참석 완료 — 같은 행사로 통합 관리, 녹화본 편집 task 필요"
+    },
+    {
+      "path": "Roundup/2026-07-22 - Daily Roundup#Status Summary",
+      "quote": "BigHug AI/Bila AI 적용 아이디어 — 인사이트 — BigHug 행사 준비 문서화·요약·grant project 가능성"
+    },
+    {
+      "path": "Roundup/2026-07-22 - Daily Roundup#Status Summary",
+      "quote": "Builders Lounge 오프라인 확장 — 인사이트 — 일반 소비자/수요자와 빌더를 연결하는 공간 구상"
+    },
+    {
+      "path": "Roundup/2026-07-23 - Daily Roundup#Status Summary",
+      "quote": "김진영님 AI4PKM 녹화 편집 — 이월 — 7/26 일요일로 이동"
+    },
+    {
+      "path": "Roundup/2026-07-23 - Daily Roundup#Status Summary",
+      "quote": "Spark + AI 후속 task — 이월 — 7/26 일요일로 이동"
+    },
+    {
+      "path": "Roundup/2026-07-24 - Daily Roundup#Status Summary",
+      "quote": "AI in Action Live 20 썸네일·방송 세팅 — 완료 — 파일로는 확인 안 됨, 사용자 보고 기준"
+    },
+    {
+      "path": "Roundup/2026-07-24 - Daily Roundup#Status Summary",
+      "quote": "페더럴 한인회 화상 미팅 — 완료 — 광복절 AI 테마 논의 발견"
+    },
+    {
+      "path": "Roundup/2026-07-24 - Daily Roundup#Status Summary",
+      "quote": "광복절 AI 접목 라이브 기획 — 신규 — 7/26 Live20 4부 반영"
+    },
+    {
+      "path": "Roundup/2026-07-24 - Daily Roundup#Status Summary",
+      "quote": "AI 빌더 범위 인사이트 — 신규 — Builders Lounge 후보로 기록, 실행 계획 없음"
+    },
+    {
+      "path": "Roundup/2026-07-25 - Daily Roundup#Status Summary",
+      "quote": "Live20 오늘의 실험 6개 + 프롬프트 — 완료 — 방송 중 바로 사용 가능"
+    },
+    {
+      "path": "Roundup/2026-07-25 - Daily Roundup#Status Summary",
+      "quote": "VibeLearn AI Topic 전수 점검 — 완료 — GOBI-Guiding 중단 표시, CVL 패턴 메모리화"
+    },
+    {
+      "path": "Roundup/2026-07-25 - Daily Roundup#Status Summary",
+      "quote": "광복절 AI 접목 자료 — 미도착 — 내일 방송 4부 처리 방식 미정"
+    },
+    {
+      "path": "Roundup/2026-07-19 - Weekly Progress and Planning#Priority Summary",
+      "quote": "3 — Build with AI 영상 제작 — [x] — 한국어·영어 영상 렌더링 및 YouTube 업로드 완료(7/21)"
+    },
+    {
+      "path": "Roundup/2026-07-19 - Weekly Progress and Planning#Priority Summary",
+      "quote": "4 — Build with AI SNS/블로그 게시 — [>] — 기본 SNS/블로그 홍보 완료, Facebook 관련 그룹 추가 홍보 예정"
+    },
+    {
+      "path": "Roundup/2026-07-19 - Weekly Progress and Planning#Priority Summary",
+      "quote": "5 — 오프라인 활동 확대 — [>] — Spark + AI 참석, BigHug Bellevue City Hall 실측, Seattle Tech Week 참가 Plan과 연결"
+    }
+  ],
+  "status_map": {
+    "rundown": "unconfirmed",
+    "2026-07-19 - Daily Roundup": "missing_section",
+    "2026-07-20 - Daily Roundup": "missing_section",
+    "2026-07-21 - Daily Roundup": "ok:2/8",
+    "2026-07-22 - Daily Roundup": "ok:4/7",
+    "2026-07-23 - Daily Roundup": "ok:2/11",
+    "2026-07-24 - Daily Roundup": "ok:4/10",
+    "2026-07-25 - Daily Roundup": "ok:3/8",
+    "2026-07-19 - Weekly Progress and Planning": "ok:3/5",
+    "2026-07-19 - Weekly Dashboard.canvas": "skipped:canvas",
+    "2026-07-13~2026-07-19 - Codex": "missing_section"
+  },
+  "forbidden_removed": true,
+  "assembled_at": "2026-08-23T13:26:38.291084+00:00"
+}

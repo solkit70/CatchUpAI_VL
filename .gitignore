@@ -65,3 +65,11 @@ Topics/Live-CoMC-App/05-STT-LLM-Harness/examples/utterances/**/*.wav
 
 # 프리플라이트가 생성하는 런타임 상태 — 환경마다 다르므로 추적하지 않는다
 Topics/Live-CoMC-App/05-STT-LLM-Harness/guides/llm_registry.runtime.json
+
+# M6 합성 오디오 — 스크립트로 언제든 재생성되는 산출물이고 13MB 다.
+# tts_comparison.json(측정 결과)과 tts_log.jsonl(이벤트)은 추적한다.
+# 재현하려면 tts_probe.py 후 tts_compare.py 를 돌리면 된다.
+Topics/Live-CoMC-App/06-TTS-Audio-Routing-Harness/examples/audio/
+
+# M6 프리플라이트 런타임 상태 — 위와 같은 이유
+Topics/Live-CoMC-App/06-TTS-Audio-Routing-Harness/examples/voice_registry.runtime.json

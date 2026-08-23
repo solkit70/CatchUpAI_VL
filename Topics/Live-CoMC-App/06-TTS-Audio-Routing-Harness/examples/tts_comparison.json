@@ -1,0 +1,632 @@
+{
+  "edge": {
+    "model": "edge-tts",
+    "voice": "ko-KR-SunHiNeural",
+    "cost_per_1k_chars": 0.0,
+    "cost_confirmed": true,
+    "cost_incomplete": false,
+    "cases": {
+      "plain": {
+        "runs": [
+          {
+            "ok": true,
+            "latency_ms": 852,
+            "first_chunk_ms": 615,
+            "duration_s": 4.944,
+            "rtf": 0.172,
+            "bytes": 29664,
+            "chars": 29,
+            "est_cost_usd": 0.0,
+            "path": "edge_plain_1.mp3"
+          },
+          {
+            "ok": true,
+            "latency_ms": 2013,
+            "first_chunk_ms": 584,
+            "duration_s": 4.944,
+            "rtf": 0.407,
+            "bytes": 29664,
+            "chars": 29,
+            "est_cost_usd": 0.0,
+            "path": "edge_plain_2.mp3"
+          },
+          {
+            "ok": true,
+            "latency_ms": 1398,
+            "first_chunk_ms": 568,
+            "duration_s": 4.944,
+            "rtf": 0.283,
+            "bytes": 29664,
+            "chars": 29,
+            "est_cost_usd": 0.0,
+            "path": "edge_plain_3.mp3"
+          },
+          {
+            "ok": true,
+            "latency_ms": 1054,
+            "first_chunk_ms": 628,
+            "duration_s": 4.944,
+            "rtf": 0.213,
+            "bytes": 29664,
+            "chars": 29,
+            "est_cost_usd": 0.0,
+            "path": "edge_plain_4.mp3"
+          },
+          {
+            "ok": true,
+            "latency_ms": 842,
+            "first_chunk_ms": 588,
+            "duration_s": 4.944,
+            "rtf": 0.17,
+            "bytes": 29664,
+            "chars": 29,
+            "est_cost_usd": 0.0,
+            "path": "edge_plain_5.mp3"
+          }
+        ],
+        "chars": 29,
+        "latency_med_ms": 1054,
+        "first_chunk_med_ms": 588,
+        "duration_med_s": 4.944,
+        "rtf_med": 0.213,
+        "first_chunk_max_ms": 628,
+        "latency_max_ms": 2013,
+        "n_ok": 5
+      },
+      "mixed": {
+        "runs": [
+          {
+            "ok": true,
+            "latency_ms": 2537,
+            "first_chunk_ms": 522,
+            "duration_s": 10.008,
+            "rtf": 0.253,
+            "bytes": 60048,
+            "chars": 66,
+            "est_cost_usd": 0.0,
+            "path": "edge_mixed_1.mp3"
+          },
+          {
+            "ok": true,
+            "latency_ms": 3598,
+            "first_chunk_ms": 608,
+            "duration_s": 10.008,
+            "rtf": 0.36,
+            "bytes": 60048,
+            "chars": 66,
+            "est_cost_usd": 0.0,
+            "path": "edge_mixed_2.mp3"
+          },
+          {
+            "ok": true,
+            "latency_ms": 1122,
+            "first_chunk_ms": 627,
+            "duration_s": 10.008,
+            "rtf": 0.112,
+            "bytes": 60048,
+            "chars": 66,
+            "est_cost_usd": 0.0,
+            "path": "edge_mixed_3.mp3"
+          },
+          {
+            "ok": true,
+            "latency_ms": 1231,
+            "first_chunk_ms": 574,
+            "duration_s": 10.008,
+            "rtf": 0.123,
+            "bytes": 60048,
+            "chars": 66,
+            "est_cost_usd": 0.0,
+            "path": "edge_mixed_4.mp3"
+          },
+          {
+            "ok": true,
+            "latency_ms": 2924,
+            "first_chunk_ms": 588,
+            "duration_s": 10.008,
+            "rtf": 0.292,
+            "bytes": 60048,
+            "chars": 66,
+            "est_cost_usd": 0.0,
+            "path": "edge_mixed_5.mp3"
+          }
+        ],
+        "chars": 66,
+        "latency_med_ms": 2537,
+        "first_chunk_med_ms": 588,
+        "duration_med_s": 10.008,
+        "rtf_med": 0.253,
+        "first_chunk_max_ms": 627,
+        "latency_max_ms": 3598,
+        "n_ok": 5
+      },
+      "long": {
+        "runs": [
+          {
+            "ok": true,
+            "latency_ms": 1040,
+            "first_chunk_ms": 615,
+            "duration_s": 20.616,
+            "rtf": 0.05,
+            "bytes": 123696,
+            "chars": 138,
+            "est_cost_usd": 0.0,
+            "path": "edge_long_1.mp3"
+          },
+          {
+            "ok": true,
+            "latency_ms": 1049,
+            "first_chunk_ms": 589,
+            "duration_s": 20.616,
+            "rtf": 0.051,
+            "bytes": 123696,
+            "chars": 138,
+            "est_cost_usd": 0.0,
+            "path": "edge_long_2.mp3"
+          },
+          {
+            "ok": true,
+            "latency_ms": 1102,
+            "first_chunk_ms": 620,
+            "duration_s": 20.616,
+            "rtf": 0.053,
+            "bytes": 123696,
+            "chars": 138,
+            "est_cost_usd": 0.0,
+            "path": "edge_long_3.mp3"
+          },
+          {
+            "ok": true,
+            "latency_ms": 1023,
+            "first_chunk_ms": 605,
+            "duration_s": 20.616,
+            "rtf": 0.05,
+            "bytes": 123696,
+            "chars": 138,
+            "est_cost_usd": 0.0,
+            "path": "edge_long_4.mp3"
+          },
+          {
+            "ok": true,
+            "latency_ms": 4495,
+            "first_chunk_ms": 606,
+            "duration_s": 20.616,
+            "rtf": 0.218,
+            "bytes": 123696,
+            "chars": 138,
+            "est_cost_usd": 0.0,
+            "path": "edge_long_5.mp3"
+          }
+        ],
+        "chars": 138,
+        "latency_med_ms": 1049,
+        "first_chunk_med_ms": 606,
+        "duration_med_s": 20.616,
+        "rtf_med": 0.051,
+        "first_chunk_max_ms": 620,
+        "latency_max_ms": 4495,
+        "n_ok": 5
+      }
+    }
+  },
+  "openai": {
+    "model": "gpt-4o-mini-tts",
+    "voice": "nova",
+    "cost_per_1k_chars": 0.0006,
+    "cost_confirmed": true,
+    "cost_incomplete": true,
+    "cases": {
+      "plain": {
+        "runs": [
+          {
+            "ok": true,
+            "latency_ms": 2861,
+            "first_chunk_ms": 2575,
+            "duration_s": 4.608,
+            "rtf": 0.621,
+            "bytes": 73728,
+            "chars": 29,
+            "est_cost_usd": 1.7e-05,
+            "path": "openai_plain_1.mp3"
+          },
+          {
+            "ok": true,
+            "latency_ms": 1722,
+            "first_chunk_ms": 1434,
+            "duration_s": 4.8,
+            "rtf": 0.359,
+            "bytes": 76800,
+            "chars": 29,
+            "est_cost_usd": 1.7e-05,
+            "path": "openai_plain_2.mp3"
+          },
+          {
+            "ok": true,
+            "latency_ms": 1838,
+            "first_chunk_ms": 1548,
+            "duration_s": 4.704,
+            "rtf": 0.391,
+            "bytes": 75264,
+            "chars": 29,
+            "est_cost_usd": 1.7e-05,
+            "path": "openai_plain_3.mp3"
+          },
+          {
+            "ok": true,
+            "latency_ms": 2257,
+            "first_chunk_ms": 1992,
+            "duration_s": 4.704,
+            "rtf": 0.48,
+            "bytes": 75264,
+            "chars": 29,
+            "est_cost_usd": 1.7e-05,
+            "path": "openai_plain_4.mp3"
+          },
+          {
+            "ok": true,
+            "latency_ms": 1341,
+            "first_chunk_ms": 982,
+            "duration_s": 5.4,
+            "rtf": 0.248,
+            "bytes": 86400,
+            "chars": 29,
+            "est_cost_usd": 1.7e-05,
+            "path": "openai_plain_5.mp3"
+          }
+        ],
+        "chars": 29,
+        "latency_med_ms": 1838,
+        "first_chunk_med_ms": 1548,
+        "duration_med_s": 4.704,
+        "rtf_med": 0.391,
+        "first_chunk_max_ms": 2575,
+        "latency_max_ms": 2861,
+        "n_ok": 5
+      },
+      "mixed": {
+        "runs": [
+          {
+            "ok": true,
+            "latency_ms": 2233,
+            "first_chunk_ms": 1718,
+            "duration_s": 9.552,
+            "rtf": 0.234,
+            "bytes": 152832,
+            "chars": 66,
+            "est_cost_usd": 4e-05,
+            "path": "openai_mixed_1.mp3"
+          },
+          {
+            "ok": true,
+            "latency_ms": 1993,
+            "first_chunk_ms": 954,
+            "duration_s": 9.6,
+            "rtf": 0.208,
+            "bytes": 153600,
+            "chars": 66,
+            "est_cost_usd": 4e-05,
+            "path": "openai_mixed_2.mp3"
+          },
+          {
+            "ok": true,
+            "latency_ms": 2323,
+            "first_chunk_ms": 1624,
+            "duration_s": 10.752,
+            "rtf": 0.216,
+            "bytes": 172032,
+            "chars": 66,
+            "est_cost_usd": 4e-05,
+            "path": "openai_mixed_3.mp3"
+          },
+          {
+            "ok": true,
+            "latency_ms": 2059,
+            "first_chunk_ms": 1467,
+            "duration_s": 10.008,
+            "rtf": 0.206,
+            "bytes": 160128,
+            "chars": 66,
+            "est_cost_usd": 4e-05,
+            "path": "openai_mixed_4.mp3"
+          },
+          {
+            "ok": true,
+            "latency_ms": 2824,
+            "first_chunk_ms": 2236,
+            "duration_s": 9.504,
+            "rtf": 0.297,
+            "bytes": 152064,
+            "chars": 66,
+            "est_cost_usd": 4e-05,
+            "path": "openai_mixed_5.mp3"
+          }
+        ],
+        "chars": 66,
+        "latency_med_ms": 2233,
+        "first_chunk_med_ms": 1624,
+        "duration_med_s": 9.6,
+        "rtf_med": 0.216,
+        "first_chunk_max_ms": 2236,
+        "latency_max_ms": 2824,
+        "n_ok": 5
+      },
+      "long": {
+        "runs": [
+          {
+            "ok": true,
+            "latency_ms": 3302,
+            "first_chunk_ms": 1456,
+            "duration_s": 18.96,
+            "rtf": 0.174,
+            "bytes": 303360,
+            "chars": 138,
+            "est_cost_usd": 8.3e-05,
+            "path": "openai_long_1.mp3"
+          },
+          {
+            "ok": true,
+            "latency_ms": 3365,
+            "first_chunk_ms": 987,
+            "duration_s": 19.8,
+            "rtf": 0.17,
+            "bytes": 316800,
+            "chars": 138,
+            "est_cost_usd": 8.3e-05,
+            "path": "openai_long_2.mp3"
+          },
+          {
+            "ok": true,
+            "latency_ms": 3438,
+            "first_chunk_ms": 1415,
+            "duration_s": 19.656,
+            "rtf": 0.175,
+            "bytes": 314496,
+            "chars": 138,
+            "est_cost_usd": 8.3e-05,
+            "path": "openai_long_3.mp3"
+          },
+          {
+            "ok": true,
+            "latency_ms": 3358,
+            "first_chunk_ms": 1479,
+            "duration_s": 19.2,
+            "rtf": 0.175,
+            "bytes": 307200,
+            "chars": 138,
+            "est_cost_usd": 8.3e-05,
+            "path": "openai_long_4.mp3"
+          },
+          {
+            "ok": true,
+            "latency_ms": 3471,
+            "first_chunk_ms": 1534,
+            "duration_s": 19.56,
+            "rtf": 0.177,
+            "bytes": 312960,
+            "chars": 138,
+            "est_cost_usd": 8.3e-05,
+            "path": "openai_long_5.mp3"
+          }
+        ],
+        "chars": 138,
+        "latency_med_ms": 3365,
+        "first_chunk_med_ms": 1456,
+        "duration_med_s": 19.56,
+        "rtf_med": 0.175,
+        "first_chunk_max_ms": 1534,
+        "latency_max_ms": 3471,
+        "n_ok": 5
+      }
+    }
+  },
+  "qwen": {
+    "model": "qwen3-tts-flash",
+    "voice": "Cherry",
+    "cost_per_1k_chars": null,
+    "cost_confirmed": false,
+    "cost_incomplete": false,
+    "cases": {
+      "plain": {
+        "runs": [
+          {
+            "ok": true,
+            "latency_ms": 3361,
+            "first_chunk_ms": 3359,
+            "duration_s": 4.4,
+            "rtf": 0.764,
+            "bytes": 211244,
+            "chars": 29,
+            "est_cost_usd": null,
+            "path": "qwen_plain_1.wav"
+          },
+          {
+            "ok": true,
+            "latency_ms": 2706,
+            "first_chunk_ms": 2700,
+            "duration_s": 4.24,
+            "rtf": 0.638,
+            "bytes": 203564,
+            "chars": 29,
+            "est_cost_usd": null,
+            "path": "qwen_plain_2.wav"
+          },
+          {
+            "ok": true,
+            "latency_ms": 2828,
+            "first_chunk_ms": 2827,
+            "duration_s": 4.24,
+            "rtf": 0.667,
+            "bytes": 203564,
+            "chars": 29,
+            "est_cost_usd": null,
+            "path": "qwen_plain_3.wav"
+          },
+          {
+            "ok": true,
+            "latency_ms": 2460,
+            "first_chunk_ms": 2459,
+            "duration_s": 4.0,
+            "rtf": 0.615,
+            "bytes": 192044,
+            "chars": 29,
+            "est_cost_usd": null,
+            "path": "qwen_plain_4.wav"
+          },
+          {
+            "ok": true,
+            "latency_ms": 3243,
+            "first_chunk_ms": 3242,
+            "duration_s": 5.84,
+            "rtf": 0.555,
+            "bytes": 280364,
+            "chars": 29,
+            "est_cost_usd": null,
+            "path": "qwen_plain_5.wav"
+          }
+        ],
+        "chars": 29,
+        "latency_med_ms": 2828,
+        "first_chunk_med_ms": 2827,
+        "duration_med_s": 4.24,
+        "rtf_med": 0.638,
+        "first_chunk_max_ms": 3359,
+        "latency_max_ms": 3361,
+        "n_ok": 5
+      },
+      "mixed": {
+        "runs": [
+          {
+            "ok": true,
+            "latency_ms": 3776,
+            "first_chunk_ms": 3775,
+            "duration_s": 9.92,
+            "rtf": 0.381,
+            "bytes": 476204,
+            "chars": 66,
+            "est_cost_usd": null,
+            "path": "qwen_mixed_1.wav"
+          },
+          {
+            "ok": true,
+            "latency_ms": 3988,
+            "first_chunk_ms": 3986,
+            "duration_s": 10.08,
+            "rtf": 0.396,
+            "bytes": 483884,
+            "chars": 66,
+            "est_cost_usd": null,
+            "path": "qwen_mixed_2.wav"
+          },
+          {
+            "ok": true,
+            "latency_ms": 3774,
+            "first_chunk_ms": 3774,
+            "duration_s": 9.52,
+            "rtf": 0.396,
+            "bytes": 457004,
+            "chars": 66,
+            "est_cost_usd": null,
+            "path": "qwen_mixed_3.wav"
+          },
+          {
+            "ok": true,
+            "latency_ms": 4275,
+            "first_chunk_ms": 4275,
+            "duration_s": 10.72,
+            "rtf": 0.399,
+            "bytes": 514604,
+            "chars": 66,
+            "est_cost_usd": null,
+            "path": "qwen_mixed_4.wav"
+          },
+          {
+            "ok": true,
+            "latency_ms": 3934,
+            "first_chunk_ms": 3927,
+            "duration_s": 10.24,
+            "rtf": 0.384,
+            "bytes": 491564,
+            "chars": 66,
+            "est_cost_usd": null,
+            "path": "qwen_mixed_5.wav"
+          }
+        ],
+        "chars": 66,
+        "latency_med_ms": 3934,
+        "first_chunk_med_ms": 3927,
+        "duration_med_s": 10.08,
+        "rtf_med": 0.396,
+        "first_chunk_max_ms": 4275,
+        "latency_max_ms": 4275,
+        "n_ok": 5
+      },
+      "long": {
+        "runs": [
+          {
+            "ok": true,
+            "latency_ms": 6064,
+            "first_chunk_ms": 6063,
+            "duration_s": 19.6,
+            "rtf": 0.309,
+            "bytes": 940844,
+            "chars": 138,
+            "est_cost_usd": null,
+            "path": "qwen_long_1.wav"
+          },
+          {
+            "ok": true,
+            "latency_ms": 6627,
+            "first_chunk_ms": 6626,
+            "duration_s": 19.68,
+            "rtf": 0.337,
+            "bytes": 944684,
+            "chars": 138,
+            "est_cost_usd": null,
+            "path": "qwen_long_2.wav"
+          },
+          {
+            "ok": true,
+            "latency_ms": 6317,
+            "first_chunk_ms": 6316,
+            "duration_s": 21.6,
+            "rtf": 0.292,
+            "bytes": 1036844,
+            "chars": 138,
+            "est_cost_usd": null,
+            "path": "qwen_long_3.wav"
+          },
+          {
+            "ok": true,
+            "latency_ms": 5938,
+            "first_chunk_ms": 5937,
+            "duration_s": 20.08,
+            "rtf": 0.296,
+            "bytes": 963884,
+            "chars": 138,
+            "est_cost_usd": null,
+            "path": "qwen_long_4.wav"
+          },
+          {
+            "ok": true,
+            "latency_ms": 6172,
+            "first_chunk_ms": 6170,
+            "duration_s": 19.76,
+            "rtf": 0.312,
+            "bytes": 948524,
+            "chars": 138,
+            "est_cost_usd": null,
+            "path": "qwen_long_5.wav"
+          }
+        ],
+        "chars": 138,
+        "latency_med_ms": 6172,
+        "first_chunk_med_ms": 6170,
+        "duration_med_s": 19.76,
+        "rtf_med": 0.309,
+        "first_chunk_max_ms": 6626,
+        "latency_max_ms": 6627,
+        "n_ok": 5
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{"ts": "2026-08-23T13:47:41.801182+00:00", "stage": "01_parse_rundown", "ok": true, "source": "Ingest/CatchUpAI_VL/Topics/Live-CoMC-App/07-CoMC-Engine-POC/data/rundown_samples/2026-07-26 - Live21 Weekly Rundown.md", "parts": 3, "coverage_items": 5, "excluded": 2, "conditional": 1, "output": "rundown_index.21.json"}
+{"ts": "2026-08-23T13:47:42.713595+00:00", "stage": "02_resolve_context", "ok": true, "live": "21", "part": "3", "coverage_items": 2, "evidence": 15, "status_map": 11, "output": "broadcast_context.21.json"}
+{"ts": "2026-08-23T13:47:43.895974+00:00", "stage": "session_state", "ok": true, "action": "init", "part": "3"}
+{"ts": "2026-08-23T13:47:44.560243+00:00", "stage": "03_classify_intent", "ok": true, "intent": "answer_question", "confidence": 0.9, "flags": [], "output": "intent.json"}
+{"ts": "2026-08-23T13:47:54.320041+00:00", "stage": "04_compose_answer", "ok": true, "provider": "openai", "model": "gpt-5", "effort": "minimal", "latency_ms": 6273, "attempts": 1, "sentences": 5, "max_sentences": 5, "fallback_skipped": [], "output": "answer_draft.json"}
+{"ts": "2026-08-23T13:47:55.556317+00:00", "stage": "05_verify_and_gate", "ok": true, "passed": true, "tamper": false, "kept": 5, "dropped": 0, "reasons": [], "output": "verdict.json"}
+{"ts": "2026-08-23T13:47:56.607707+00:00", "stage": "06_render_output", "ok": true, "provider": "edge", "voice": "ko-KR-SunHiNeural", "part_id": "3", "kept": 5, "source_verdict_pass": true, "outputs": ["output.json", "overlay.json", "spoken.json"]}
+{"ts": "2026-08-23T13:49:24.591700+00:00", "stage": "03_classify_intent", "ok": true, "intent": "answer_question", "confidence": 0.9, "flags": [], "output": "intent.json"}
+{"ts": "2026-08-23T13:49:37.553565+00:00", "stage": "04_compose_answer", "ok": true, "provider": "openai", "model": "gpt-5", "effort": "minimal", "latency_ms": 8301, "attempts": 1, "sentences": 5, "max_sentences": 5, "fallback_skipped": [], "output": "answer_draft.json"}

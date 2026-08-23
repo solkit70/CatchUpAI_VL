@@ -14,7 +14,7 @@ from __future__ import annotations
 
 import anthropic
 
-from .base import LLMProvider, provider_schema
+from .base import LLMProvider, native_effort, provider_schema
 
 TOOL_NAME = "emit_answer_draft"
 
@@ -25,8 +25,9 @@ DROP = ("minimum", "maximum", "minLength", "maxLength", "minItems", "maxItems")
 class ClaudeProvider(LLMProvider):
     name = "claude"
 
-    def __init__(self, model: str, cost_per_1k_tokens=None, max_tokens: int = 4096):
-        super().__init__(model, cost_per_1k_tokens)
+    def __init__(self, model: str, cost_per_1k_tokens=None, max_tokens: int = 4096,
+                 effort: str | None = None):
+        super().__init__(model, cost_per_1k_tokens, effort=effort)
         self.max_tokens = max_tokens
         self.client = anthropic.Anthropic()      # ANTHROPIC_API_KEY 를 알아서 읽는다
 
@@ -34,10 +35,23 @@ class ClaudeProvider(LLMProvider):
         return provider_schema(drop=DROP)
 
     def _call(self, system: str, user: str, schema: dict):
+        # Opus 5 는 thinking 이 기본 ON(adaptive)이다. 지연 제어는 effort 로 한다.
+        # thinking={"type": "disabled"} 는 쓰지 않는다 — strict tool use 와 함께 쓰면
+        # 도구 호출이 tool_use 블록 대신 본문 텍스트로 새는 실패 모드가 있다.
+        # output_config 는 설치된 anthropic 0.75.0 이 아직 모르는 파라미터라
+        # 명시 인자로 넣으면 TypeError 가 난다. extra_body 로 요청 본문에
+        # 그대로 실어 보낸다 — 서버가 받는 JSON 은 동일하다.
+        # SDK 1.x 로 올리면 output_config=... 로 바꿀 수 있다(백로그).
+        extra = {}
+        eff = native_effort(self.name, self.effort)
+        if eff:
+            extra["extra_body"] = {"output_config": {"effort": eff}}
+
         resp = self.client.messages.create(
             model=self.model,
             max_tokens=self.max_tokens,
             system=system,
+            **extra,
             tools=[{
                 "name": TOOL_NAME,
                 "description": "검증된 근거만으로 만든 발화 초안을 제출한다.",
@@ -59,7 +73,11 @@ class ClaudeProvider(LLMProvider):
             kinds = [b.type for b in resp.content]
             raise RuntimeError(f"tool_use 블록 없음 (stop_reason={resp.stop_reason}, blocks={kinds})")
 
+        # Anthropic 은 thinking 토큰을 따로 보고하지 않는다 — output_tokens 에 포함된다.
+        # 추론 비중은 effort 를 낮췄을 때 output_tokens 가 얼마나 줄어드는지로 읽는다.
         usage = {"input_tokens": resp.usage.input_tokens,
-                 "output_tokens": resp.usage.output_tokens}
+                 "output_tokens": resp.usage.output_tokens,
+                 "reasoning_tokens": None,
+                 "effort_sent": eff}
         # tool_use.input 은 이미 파싱된 객체다 (JSON 문자열 아님)
         return dict(block.input), usage

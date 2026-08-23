@@ -5,18 +5,33 @@
   "description": "파이프라인 ④ Intent 분류 출력. STT 전사 텍스트를 의도/슬롯/모호성 플래그로 구조화.",
   "type": "object",
   "properties": {
-    "transcript": { "type": "string", "description": "③ STT 전사 텍스트 원문" },
+    "transcript": {
+      "type": "string",
+      "description": "③ STT 전사 텍스트 원문"
+    },
     "intent": {
       "type": "string",
-      "enum": ["answer_question", "advance_part", "summarize_part", "repeat", "stop", "unknown"],
-      "description": "분류된 의도. unknown이면 HITL로 되묻는다"
+      "enum": [
+        "answer_question",
+        "advance_part",
+        "summarize_part",
+        "repeat",
+        "stop",
+        "out_of_scope",
+        "unknown"
+      ],
+      "description": "의도 분류 결과. unknown 과 out_of_scope 는 다르다 — unknown 은 '무슨 뜻인지 모르겠으니 되묻는다'이고, out_of_scope 는 'M2 App Boundary 가 배제한 기능이므로 하지 않는다'이다. 둘을 뭉치면 HITL 대기열이 영원히 충족될 수 없는 요청으로 채워진다. 2026-08-23 M7 실습 3에서 out_of_scope 추가."
     },
     "slots": {
       "type": "object",
       "description": "의도 실행에 필요한 인자 (예: part_id, topic)",
       "properties": {
-        "part_id": { "type": "string" },
-        "topic": { "type": "string" }
+        "part_id": {
+          "type": "string"
+        },
+        "topic": {
+          "type": "string"
+        }
       },
       "additionalProperties": true
     },
@@ -25,7 +40,11 @@
       "description": "safety_policy 모호성 3규칙과 연동되는 플래그. 하나라도 있으면 생성 전 확인",
       "items": {
         "type": "string",
-        "enum": ["quantity_mismatch", "no_coverage", "completion_confusion"]
+        "enum": [
+          "quantity_mismatch",
+          "no_coverage",
+          "completion_confusion"
+        ]
       }
     },
     "confidence": {
@@ -34,8 +53,16 @@
       "maximum": 1,
       "description": "의도 분류 신뢰도"
     },
-    "created_at": { "type": "string", "format": "date-time" }
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    }
   },
-  "required": ["transcript", "intent", "slots", "ambiguity_flags"],
+  "required": [
+    "transcript",
+    "intent",
+    "slots",
+    "ambiguity_flags"
+  ],
   "additionalProperties": false
 }

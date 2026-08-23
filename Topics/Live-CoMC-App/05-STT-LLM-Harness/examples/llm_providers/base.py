@@ -42,6 +42,30 @@ _VALIDATOR = Draft202012Validator(ANSWER_DRAFT_SCHEMA)
 # 이 둘을 프로바이더 스키마에 남기면 OpenAI strict(전 필드 required)에서 걸린다.
 ADAPTER_INJECTED = ("provider", "created_at")
 
+# ── 추론 강도 정규화 ───────────────────────────────────────────────────
+# 3사가 같은 이름을 쓰지 않는다. 공통 척도를 하나 정하고 각 사 파라미터로 번역한다.
+# None = 그 프로바이더에는 해당 수준이 없음 → 스윕에서 건너뛴다.
+#
+# claude : output_config.effort  (low/medium/high/xhigh/max, 기본 high)
+#          thinking 을 끄는 선택지는 두지 않는다 — strict tool use 와 함께 쓰면
+#          도구 호출이 tool_use 블록 대신 본문 텍스트로 나오는 실패 모드가 있다.
+# openai : reasoning_effort      (minimal/low/medium/high)
+# gemini : thinking_level        (low/high)
+EFFORT_LEVELS = ("minimal", "low", "medium", "high")
+
+EFFORT_MAP = {
+    "claude": {"minimal": None, "low": "low", "medium": "medium", "high": "high"},
+    "openai": {"minimal": "minimal", "low": "low", "medium": "medium", "high": "high"},
+    "gemini": {"minimal": None, "low": "low", "medium": None, "high": "high"},
+}
+
+
+def native_effort(provider: str, effort: str | None) -> str | None:
+    """공통 척도를 프로바이더 고유 값으로 번역한다. 미지원이면 None."""
+    if effort is None:
+        return None
+    return EFFORT_MAP.get(provider, {}).get(effort)
+
 
 class SchemaViolation(Exception):
     """재검증 실패. 같은 프로바이더 재시도 → 실패 시 폴백의 트리거."""
@@ -168,11 +192,15 @@ class LLMProvider(ABC):
 
     name: str = "base"
 
-    def __init__(self, model: str, cost_per_1k_tokens: dict | None = None):
+    def __init__(self, model: str, cost_per_1k_tokens: dict | None = None,
+                 effort: str | None = None):
         self.model = model
         # {"input": 0.005, "output": 0.025} 형식. 확인되지 않은 값은 None 으로 둔다 —
         # 추측한 단가를 넣으면 비용 리포트가 조용히 틀린다.
         self.cost_per_1k_tokens = cost_per_1k_tokens or {}
+        # 추론 강도. None 이면 프로바이더 기본값(=M5 측정 조건)을 그대로 쓴다.
+        # 정규화된 값은 EFFORT_MAP 으로 각 사 파라미터에 번역한다.
+        self.effort = effort
 
     @abstractmethod
     def _call(self, system: str, user: str, schema: dict) -> tuple[dict, dict]:
