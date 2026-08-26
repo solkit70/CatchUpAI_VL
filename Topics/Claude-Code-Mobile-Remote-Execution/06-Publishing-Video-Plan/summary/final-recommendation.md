@@ -1,4 +1,4 @@
-# 전체 산출물 정리와 최종 추천 구조
+﻿# 전체 산출물 정리와 최종 추천 구조
 
 ## 학습 순서대로 정리한 전체 산출물
 
@@ -64,10 +64,18 @@ M2 결론을 유지한다: 맥미니/맥 스튜디오는 **지금 구매할 대�
 
 ### 인증 방식 판단
 
-Password 인증은 1차 실험 단계에서는 허용 가능했지만(Tailscale 사설망 안에서만 노출), 장기 운영 전에는 SSH key 인증으로 전환하는 것을 최종 추천안으로 유지한다. 자세한 근거는 [security-checklist.md](../../05-Operations-Security/guides/security-checklist.md)를 참조.
+Password 인증은 1차 실험 단계에서는 허용 가능했지만(Tailscale 사설망 안에서만 노출), 장기 운영 전에는 Windows OpenSSH 로그인용 SSH key 인증으로 전환하는 것을 최종 추천안으로 유지한다. 이는 이미 완료한 GitHub push용 SSH key 설정과 별도이며, 자세한 근거는 [security-checklist.md](../../05-Operations-Security/guides/security-checklist.md)를 참조.
+
+## 완료 조건 충족
+
+현재 추천 구조는 Claude Code 기준 검증에 더해 iPad Termius에서 Codex와 Gemini CLI 실행 가능 여부까지 확인했다. 따라서 Topic의 기술 검증 범위는 완료되었고, 다음 단계는 Remotion 영상 제작 전 보안 검토와 사용자 최종 승인이다.
 
 ## 참조
 
 - [M2 1차 실험 추천안](../../02-Architecture-Comparison/decisions/recommended-first-experiment.md)
 - [M4 검증 결과](../../04-Remote-Execution-Lab/lab/validation-results.md)
 - [M5 운영 구조 요약](../../05-Operations-Security/README.md)
+
+
+
+

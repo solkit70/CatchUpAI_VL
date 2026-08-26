@@ -1,12 +1,35 @@
-# 후속 개선 과제
+﻿# 후속 개선 과제
 
 M5에서 문서화만 하고 실제로 적용하지 않은 항목과, M4~M5에서 관찰만 하고 결론을 유보한 항목을 후속 과제로 정리한다. 모든 항목은 별도 승인 후 진행한다.
 
+## M7 완료 기록
+
+M7에서 iPad Termius 안에서 Claude Code뿐 아니라 Codex CLI와 Gemini CLI도 같은 Windows SSH 구조로 실행 가능한지 확인했다. 다음 단계는 Remotion 영상 제작 전 보안 검토와 사용자 최종 승인이다.
+
+### 재검증 명령 세트
+
+```bat
+cd C:\AI_study\2026\Changsoo_Vault\Ingest\CatchUpAI_VL
+whoami
+hostname
+claude --version
+where codex
+codex --version
+where gemini
+gemini --version
+```
+
+### 재검증 판단 기준
+
+- Codex/Gemini가 이미 설치되어 있고 PATH에서 인식되면 실행 결과와 버전을 기록한다.
+- `where codex` 또는 `where gemini`가 실패하면, 즉시 설치하지 말고 설치 방식/계정/PATH 영향 범위를 먼저 정리한 뒤 사용자 승인을 받는다.
+- Claude Code, Codex, Gemini를 동시에 열 수 있더라도 같은 파일을 동시에 수정하지 않는 운영 규칙을 먼저 만든다.
+- 이 검증은 완료되었으며, 이후에는 Topic Retrospective와 Remotion 영상 제작 Go/No-Go 확인으로 넘어간다.
 ## 우선순위 1 — 보안 강화
 
 | 과제 | 현재 상태 | 왜 필요한가 | 적용 시점 |
 |---|---|---|---|
-| SSH key 인증 전환 | 문서화만 완료 ([security-checklist.md](../../05-Operations-Security/guides/security-checklist.md)) | password 인증은 iPhone 분실, 화면 노출, 반복 인증 실패 위험이 있음 | 장기 운영 전 |
+| Windows OpenSSH 로그인용 SSH key 인증 전환 | 문서화만 완료 ([security-checklist.md](../../05-Operations-Security/guides/security-checklist.md)); GitHub push용 SSH key와는 별도 | password 인증은 iPhone/iPad 분실, 화면 노출, 반복 인증 실패 위험이 있음 | 장기 운영 전 |
 | Tailscale 계정 MFA 확인 | 미확인 | tailnet 접근 자체를 보호하는 첫 번째 방어선 | 다음 세션 |
 | `catchupai` 계정 권한 최소화 점검 | 최초 설정만 완료 | 원격 세션 탈취 시 피해 범위를 제한 | 정기 점검 |
 
@@ -37,3 +60,7 @@ M5에서 문서화만 하고 실제로 적용하지 않은 항목과, M4~M5에�
 
 - **Remotion AI 영상 실제 제작**: 이 Topic은 영상화 후보와 스토리라인 정리까지가 범위다. 실제 슬라이드 플랜/오디오/렌더링은 `remotion-video` 스킬을 사용하는 별도 작업으로 진행한다. → [../video/remotion-ai-video-brief.md](../video/remotion-ai-video-brief.md)
 - **맥미니/맥 스튜디오 실제 구매 및 셋업**: 별도 Topic으로 분리해서 진행하는 것을 권장한다 (조건 충족 시).
+
+
+
+

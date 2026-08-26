@@ -1,4 +1,4 @@
-# WorkLog - M6: 최종 패키징과 Remotion AI 영상화 후보 정리
+﻿# WorkLog - M6: 최종 패키징과 Remotion AI 영상화 후보 정리
 
 **날짜**: 2026-08-24
 **Topic**: Claude-Code-Mobile-Remote-Execution
@@ -36,7 +36,7 @@ M6 시작 전 M1~M5의 모든 README와 핵심 산출물(비교표, 검증 결�
 
 ## 문제 해결 로그
 
-이번 세션에서는 별도 기술적 문제가 발생하지 않았다. 문서 정리와 패키징 단계였기 때문에 실습형 문제 해결 로그는 없다.
+이번 세션의 문서 패키징 자체에는 별도 기술적 문제가 없었다. 다만 iPad Termius에서 Claude Code를 실행한 화면에서는 `vibelearn-ai` skill 직접 호출이 실패할 수 있음을 확인했다. 이 경우 VibeLearn AI 전용 파일(`AGENTS.md`, `CLAUDE.md`, roadmap, 최신 WorkLog)을 직접 읽고 그 절차대로 진행하는 방식으로 우회할 수 있으며, 이 사례는 영상에서 "AI CLI마다 skill/extension 지원 범위가 다를 수 있다"는 포인트로 활용한다.
 
 ## DoD 체크리스트
 
@@ -65,7 +65,7 @@ M6 시작 전 M1~M5의 모든 README와 핵심 산출물(비교표, 검증 결�
 
 ### 다음 모듈 준비
 
-M6이 Topic의 마지막 모듈이므로 다음 모듈은 없다. Topic Retrospective로 이어진다.
+M6은 패키징 모듈로 완료했지만, Topic 전체 완료는 보류한다. 사용자 결정에 따라 M7에서 iPad Termius 안에서 Codex와 Gemini도 실행 가능한지 확인한 뒤 Topic Retrospective로 이어진다.
 
 ## Topic Retrospective - Claude-Code-Mobile-Remote-Execution
 
@@ -78,7 +78,7 @@ M6이 Topic의 마지막 모듈이므로 다음 모듈은 없다. Topic Retrospe
 - [x] 맥미니/맥 스튜디오 홈서버 도입 시 필요한 장비, 운영 방식, 보안/백업 전략을 설계할 수 있다 — M2, M5
 - [x] 최종 운영 가이드와 영상화 가능한 스토리라인을 만들 수 있다 — M5, M6
 
-전체 6개 모듈, 6개 학습 목표, 6개 성공 기준 모두 달성했다.
+M1~M6의 기존 6개 모듈 산출물은 완료했다. 다만 Topic 전체 완료 조건은 M7에서 iPad Termius 기반 Codex/Gemini 실행 검증까지 포함하도록 확장했으므로, 최종 Topic Retrospective는 M7 이후 진행한다.
 
 ### 최종 추천 구조
 
@@ -90,19 +90,20 @@ iPhone/iPad (Termius) -> Tailscale -> Windows OpenSSH Server -> catchupai 계정
 
 ### 실무 적용 계획
 
-- `next-steps.md`의 우선순위 1(SSH key 전환, Tailscale MFA 확인)을 다음 원격 작업 세션 전에 별도 승인받아 적용한다.
+- 다음 학습 세션은 M7로 시작한다. 목표는 iPad Termius의 별도 탭에서 Codex CLI와 Gemini CLI 설치/인식 여부를 확인하고, 필요 시 설치 또는 보류 기준을 정하는 것이다.
+- `next-steps.md`의 우선순위 1(Windows OpenSSH 로그인용 SSH key 전환, Tailscale MFA 확인)은 Codex/Gemini 검증 전후로 별도 승인받아 적용한다.
 - GitHub push는 `solkit70` SSH alias 고정 구조를 계속 사용하고, 모바일에서는 `git add .`를 쓰지 않는 원칙을 유지한다.
 - Remotion AI 영상 제작은 `remotion-ai-video-brief.md`의 Go/No-Go 체크리스트를 통과한 뒤 별도 세션에서 `remotion-video` 스킬로 진행한다.
 
 ### 보안/운영 리스크
 
-- 현재 password SSH 인증은 Tailscale 사설망 안에서만 열려 있어 단기 실험 리스크는 낮지만, 장기 운영 전 SSH key 전환이 미완료 상태다.
+- 현재 password SSH 인증은 Tailscale 사설망 안에서만 열려 있어 단기 실험 리스크는 낮지만, 장기 운영 전 Windows OpenSSH 로그인용 SSH key 전환이 미완료 상태다. GitHub push용 SSH key와는 별도 항목이다.
 - Tailscale tailnet에 새 기기가 자동으로 붙을 수 있어 ACL/Grants·device approval 정책이 아직 없다.
 - 영상 공개 전 Tailscale IP, 호스트명, 계정명 등 실제 값 노출 여부를 반드시 재검토해야 한다 (`remotion-ai-video-brief.md`의 확인 조건에 명시).
 
 ### Remotion AI 영상화 여부
 
-영상화를 진행하는 방향으로 결론지었다. M4·M5에서 실제로 겪은 실패 사례 3건이 이미 "실패 → 원인 → 해결" 구조로 문서화되어 있어, 완성된 가이드보다 시행착오를 보여주는 영상이 시청자에게 더 유용할 것으로 판단했다. 다만 실제 제작은 이 Topic의 범위 밖이며, 브리프의 Go/No-Go 조건을 충족한 뒤 별도로 진행한다.
+영상화를 진행하는 방향은 유지하되, 실제 제작 착수는 M7에서 Codex/Gemini 실행 검증을 끝낸 뒤로 미룬다. M4·M5에서 실제로 겪은 실패 사례 3건이 이미 "실패 → 원인 → 해결" 구조로 문서화되어 있어, 완성된 가이드보다 시행착오를 보여주는 영상이 시청자에게 더 유용할 것으로 판단했다. 다만 실제 제작은 이 Topic의 범위 밖이며, 브리프의 Go/No-Go 조건을 충족한 뒤 별도로 진행한다.
 
 ### VibeLearn AI 방법론 개선점
 
@@ -119,12 +120,13 @@ iPhone/iPad (Termius) -> Tailscale -> Windows OpenSSH Server -> catchupai 계정
 - `vl_worklog/20260824_M6_Claude-Code-Mobile-Remote-Execution.md`
 
 **업데이트된 파일**:
-- `vl_roadmap/20260823_RoadMap_Claude-Code-Mobile-Remote-Execution.md` — M6 DoD, 진행 상황 추적, 성공 기준, Topic 학습 목표 완료 처리
+- `vl_roadmap/20260823_RoadMap_Claude-Code-Mobile-Remote-Execution.md` — M6 DoD 완료 처리, M7 Codex/Gemini 검증 모듈 추가, Topic 완료 조건 갱신
 - `05-Operations-Security/README.md` — 이전/다음 모듈 섹션 추가
 
 **다음 세션 준비사항**:
 - Remotion AI 영상 제작 여부는 사용자 승인 후 별도 세션에서 `remotion-video` 스킬로 진행
-- SSH key 전환, Tailscale ACL 적용 등 `next-steps.md`의 후속 과제는 별도 승인 후 진행
+- 다음 학습 시작 시 M7 Codex/Gemini 검증부터 진행하고, SSH key 전환/Tailscale ACL 적용 등 `next-steps.md`의 후속 과제는 별도 승인 후 진행
 
 **작성자**: Claude Code
 **방법론**: VibeLearn AI
+

@@ -17,6 +17,7 @@
 - [x] 현재 Windows 노트북에서 모바일 원격 접속 기반 Claude Code 실행 실험을 완료할 수 있다.
 - [x] 맥미니/맥 스튜디오 홈서버 도입 시 필요한 장비, 운영 방식, 보안/백업 전략을 설계할 수 있다.
 - [x] 최종 운영 가이드와 영상화 가능한 스토리라인을 만들 수 있다.
+- [x] iPad Termius에서 Claude Code, Codex, Gemini를 각각 실행 가능한 모바일 AI CLI 작업 환경으로 검증한다.
 
 ## 전체 로드맵 구조
 
@@ -28,8 +29,9 @@
 | M4 | 모바일 원격 실행 1차 실험 설계 및 수행 | 3 | 2.5h | `04-Remote-Execution-Lab/` | done |
 | M5 | 보안, 운영, 백업 가이드 정리 | 2 | 1.5h | `05-Operations-Security/` | done |
 | M6 | 최종 패키징과 Remotion AI 영상화 후보 정리 | 2 | 1h | `06-Publishing-Video-Plan/` | done |
+| M7 | iPad Termius에서 Codex/Gemini CLI 세팅 검증 | 1 | 1h | `07-Multi-Agent-CLI-Setup/` | done |
 
-**총 예상 시간**: 약 10시간, 20% 버퍼 포함
+**총 예상 시간**: 약 11시간, 20% 버퍼 포함
 
 ## M1 - 실행 구조 이해와 첫 모델링
 
@@ -279,10 +281,10 @@
 
 ### 학습 목표
 
-- [ ] 전체 산출물을 학습 순서대로 정리한다.
-- [ ] 최종 추천 구조와 후속 개선 과제를 명시한다.
-- [ ] Remotion AI 영상화에 적합한 스토리라인을 만든다.
-- [ ] 영상 제작으로 넘어갈지 판단하는 기준을 만든다.
+- [x] 전체 산출물을 학습 순서대로 정리한다.
+- [x] 최종 추천 구조와 후속 개선 과제를 명시한다.
+- [x] Remotion AI 영상화에 적합한 스토리라인을 만든다.
+- [x] 영상 제작으로 넘어갈지 판단하는 기준을 만든다.
 
 ### 주요 개념
 
@@ -316,6 +318,72 @@
 - [x] 영상 제작 전 확인 조건 작성
 - [x] Topic Retrospective 준비
 
+
+## M7 - iPad Termius에서 Codex/Gemini CLI 세팅 검증
+
+**목표 기간**: 1일  
+**예상 시간**: 1h  
+**상태**: 완료
+
+### 학습 목표
+
+- [x] iPad Termius의 새 SSH 탭에서 Codex CLI 설치/인식 여부를 확인한다.
+- [x] iPad Termius의 새 SSH 탭에서 Gemini CLI 설치/인식 여부를 확인한다.
+- [x] Claude Code, Codex, Gemini를 동시에 열 때의 세션/작업 디렉터리/파일 충돌 위험을 정리한다.
+- [x] Codex/Gemini 미설치 또는 PATH 미등록 상태에서 다음 조치 기준을 만든다.
+
+### 핵심 질문
+
+- iPad Termius는 하나의 Windows SSH 서버에 여러 탭을 동시에 열 수 있는가?
+- Codex와 Gemini는 `catchupai` 사용자 계정에서 바로 실행 가능한가, 아니면 별도 설치/PATH 설정이 필요한가?
+- 여러 AI CLI를 동시에 사용할 때 같은 repository에서 안전하게 작업하려면 어떤 규칙이 필요한가?
+- 이 검증이 끝나야 Topic을 완료 처리하고 Remotion 영상 제작으로 넘어갈 수 있는가?
+
+### 학습 내용
+
+1. iPad Termius에서 새 탭 또는 새 연결을 열어 기존 `Catchup AI Windows` host에 접속
+2. `where codex`, `codex --version`, `where gemini`, `gemini --version` 실행 결과 기록
+3. 미설치/미인식 시 설치 후보와 보류 기준 정리
+4. Claude Code가 작업 중일 때 Codex/Gemini를 병행 실행하는 운영 규칙 작성
+5. 영상화 관점에서 "Claude만 되는 상태"와 "Codex/Gemini까지 확장한 상태"의 차이 정리
+
+### 실습
+
+- iPad Termius 새 탭에서 `cd C:\AI_study\2026\Changsoo_Vault\Ingest\CatchUpAI_VL`
+- `claude --version`, `codex --version`, `gemini --version` 비교
+- 각 CLI가 실행되는 계정과 현재 작업 디렉터리 확인: `whoami`, `hostname`, `cd`
+- 동시에 열려 있는 탭에서 같은 파일을 수정하지 않는 운영 규칙 확인
+
+### 산출물
+
+- `07-Multi-Agent-CLI-Setup/README.md`
+- `07-Multi-Agent-CLI-Setup/checks/ipad-termius-cli-check.md`
+- `07-Multi-Agent-CLI-Setup/guides/multi-cli-session-rules.md`
+- `vl_worklog/YYYYMMDD_M7_Claude-Code-Mobile-Remote-Execution.md`
+
+### DoD
+
+- [x] iPad Termius에서 Codex 실행 가능 여부 기록
+- [x] iPad Termius에서 Gemini 실행 가능 여부 기록
+- [x] 미설치/미인식 시 원인과 다음 조치 기록
+- [x] Claude/Codex/Gemini 병행 사용 규칙 작성
+- [x] Topic 완료 조건을 M7 검증 이후로 갱신
+- [ ] WorkLog 작성
+
+### 리뷰 포인트
+
+- Codex/Gemini 설치를 지금 진행할지, 문서화만 하고 별도 Topic으로 분리할지 판단
+- 세 CLI를 동시에 실행할 때 repository 변경 충돌을 피하는 규칙이 충분한지 확인
+- Remotion 영상에 "다른 AI CLI도 같은 구조로 붙일 수 있다"는 확장 포인트를 넣을지 결정
+
+### 출력 폴더
+
+```text
+07-Multi-Agent-CLI-Setup/
+  README.md
+  checks/ipad-termius-cli-check.md
+  guides/multi-cli-session-rules.md
+```
 ## WorkLog 작성 가이드
 
 각 학습 세션마다 `vl_worklog/YYYYMMDD_MX_Claude-Code-Mobile-Remote-Execution.md` 형식으로 WorkLog를 작성한다.
@@ -372,10 +440,11 @@
 | M4 | 2026-08-23 | 2026-08-23 | done | 100% | iPhone Termius + Tailscale + OpenSSH + Claude Code 실행 검증 완료 |
 | M5 | 2026-08-24 | 2026-08-24 | done | 100% | 보안/운영/백업 런북 작성 완료 |
 | M6 | 2026-08-24 | 2026-08-24 | done | 100% | 최종 추천 구조 + 후속 과제 + Remotion AI 영상 브리프 작성 완료 |
+| M7 | 2026-08-24 | 2026-08-24 | done | 100% | iPad Termius에서 Codex/Gemini CLI 실행 가능 여부 검증 완료 |
 
 ## 성공 기준
 
-- [x] 6개 모듈의 DoD 100% 달성
+- [x] 7개 모듈의 DoD 100% 달성
 - [x] 모바일 조작과 로컬 실행 구조 설명 문서 완성
 - [x] 기술 구조 비교표와 홈서버 도입 판단표 완성
 - [x] 현재 Windows 노트북 기준 1차 원격 실행 실험 완료
@@ -393,6 +462,10 @@
 **생성자**: Codex with VibeLearn AI  
 **Roadmap 버전**: 1.1  
 **방법론 버전**: VibeLearn AI 2.0
+
+
+
+
 
 
 
