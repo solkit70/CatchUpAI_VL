@@ -31,17 +31,19 @@ vl_roadmap/20260823_RoadMap_Claude-Code-Mobile-Remote-Execution.md
 
 **현재 진행 중인 모듈**:
 ```
-M1 - 첫 학습 세션 시작 전
+M9 - Codex Remote 검증과 세팅 (1단계 완료, 2단계 대기)
 ```
 
 **가장 최근 WorkLog 파일**:
 ```
-없음 - 첫 학습 세션
+vl_worklog/20260828_M9_Claude-Code-Mobile-Remote-Execution.md
 ```
 
 **이전 세션의 Tomorrow's focus**:
 ```
-없음
+- ChatGPT 모바일 앱 상태 확인 및 계정 데이터 관리 설정 점검
+- ChatGPT 데스크톱 앱 설치 -> 호스트 등록 -> QR 페어링
+- 경계 테스트 7항목 수행 후 절차서를 실기록으로 전환
 ```
 
 ---

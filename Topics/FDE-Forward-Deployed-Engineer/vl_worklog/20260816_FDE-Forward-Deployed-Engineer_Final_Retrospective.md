@@ -37,10 +37,12 @@ FDE는 engineering과 consulting의 중간이라는 설명만으로는 부족하
 
 ## 다음 단계
 
-1. Claude Code에게 `10-Capstone-Video/video/`의 3개 문서를 넘겨 Remotion 구현을 시작한다.
-2. 영상 제작 전에 에피소드별 길이, 자막 언어, TTS 사용 여부, visual theme을 확정한다.
+1. ~~Claude Code에게 `10-Capstone-Video/video/`의 3개 문서를 넘겨 Remotion 구현을 시작한다.~~ ✅ **완료 (2026-08-19)** — 6편 분할 시리즈가 아니라 **단일 장편 1편**으로 구현했고, 한국어·영어 두 언어판을 각각 렌더해 유튜브에 공개했다. 🇰🇷 28분 1초 https://youtu.be/U0L2oyE6Ph4 · 🇺🇸 27분 11초 https://youtu.be/A6Yx6Wx22cA. 파트 전환마다 해당 모듈로 가는 QR을 넣어 영상에서 문서로 되돌아오는 경로를 만들었고, 두 README에 영상 링크를 반영했다.
+2. ~~영상 제작 전에 에피소드별 길이, 자막 언어, TTS 사용 여부, visual theme을 확정한다.~~ ✅ **완료 (2026-08-19)** — 언어별 나레이션 분리(한·영 각 1편), TTS 사용, 슬라이드 기반 visual theme으로 확정해 제작했다.
 3. 포트폴리오 프로젝트 3개 중 하나를 실제 구현 대상으로 선택한다.
 4. 지원자 유형별로 M7, M8, M9 문서를 별도 guide package로 재배치할 수 있다.
+
+> **Capstone 영상화 마감 (2026-08-23 확인).** M10에서 영상 제작 전 기획/핸드오프까지로 범위를 끊었던 작업이 실제 제작·업로드까지 닫혔다. 남은 후속은 이 Topic 밖의 일 — SNS 홍보 잔여 플랫폼 게시(Facebook 계열·LinkedIn·Threads·X·bada.us·블로그)뿐이며, [[Research/2026-08-19 FDE 영상 SNS 홍보 글 by Claude Code|SNS 홍보 글 문서]]에서 추적한다. 업로드 메타데이터(제목·Description·챕터·태그)는 `AI/RemotionStudio/_archive/public/fde-career-0816/youtube-upload.md`에 있다.
 
 ## Topic 성공 기준 점검
 

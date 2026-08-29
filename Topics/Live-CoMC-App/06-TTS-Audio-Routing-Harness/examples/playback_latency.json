@@ -1,0 +1,68 @@
+{
+  "provider": "edge",
+  "repeats": 5,
+  "chars": 52,
+  "median": {
+    "synth_ms": 1584,
+    "load_ms": 8,
+    "cable_ms": 314,
+    "total_ms": 1910
+  },
+  "runs": [
+    {
+      "ok": true,
+      "synth_ms": 2469,
+      "first_chunk_ms": 608,
+      "load_ms": 12,
+      "cable_ms": 314,
+      "total_ms": 2795,
+      "audio_sec": 8.81,
+      "captured_peak": 0.6683,
+      "chars": 52
+    },
+    {
+      "ok": true,
+      "synth_ms": 1584,
+      "first_chunk_ms": 865,
+      "load_ms": 8,
+      "cable_ms": 314,
+      "total_ms": 1906,
+      "audio_sec": 8.81,
+      "captured_peak": 0.6696,
+      "chars": 52
+    },
+    {
+      "ok": true,
+      "synth_ms": 1581,
+      "first_chunk_ms": 1065,
+      "load_ms": 8,
+      "cable_ms": 321,
+      "total_ms": 1910,
+      "audio_sec": 8.81,
+      "captured_peak": 0.6735,
+      "chars": 52
+    },
+    {
+      "ok": true,
+      "synth_ms": 2183,
+      "first_chunk_ms": 759,
+      "load_ms": 8,
+      "cable_ms": 312,
+      "total_ms": 2503,
+      "audio_sec": 8.81,
+      "captured_peak": 0.6652,
+      "chars": 52
+    },
+    {
+      "ok": true,
+      "synth_ms": 1479,
+      "first_chunk_ms": 862,
+      "load_ms": 9,
+      "cable_ms": 314,
+      "total_ms": 1802,
+      "audio_sec": 8.81,
+      "captured_peak": 0.669,
+      "chars": 52
+    }
+  ]
+}

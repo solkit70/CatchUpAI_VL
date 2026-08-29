@@ -30,6 +30,8 @@
 | M5 | 보안, 운영, 백업 가이드 정리 | 2 | 1.5h | `05-Operations-Security/` | done |
 | M6 | 최종 패키징과 Remotion AI 영상화 후보 정리 | 2 | 1h | `06-Publishing-Video-Plan/` | done |
 | M7 | iPad Termius에서 Codex/Gemini CLI 세팅 검증 | 1 | 1h | `07-Multi-Agent-CLI-Setup/` | done |
+| M8 | 네이티브 Remote Control 검증과 구조 비교 | 2 | 2h | `08-Native-Remote-Control/` | done |
+| M9 | Codex Remote 검증과 세팅 | 2 | 2.5h | `09-Codex-Remote/` | **1단계 done · 2단계 대기** |
 
 **총 예상 시간**: 약 11시간, 20% 버퍼 포함
 
@@ -368,7 +370,7 @@
 - [x] 미설치/미인식 시 원인과 다음 조치 기록
 - [x] Claude/Codex/Gemini 병행 사용 규칙 작성
 - [x] Topic 완료 조건을 M7 검증 이후로 갱신
-- [ ] WorkLog 작성
+- [x] WorkLog 작성
 
 ### 리뷰 포인트
 
@@ -383,6 +385,192 @@
   README.md
   checks/ipad-termius-cli-check.md
   guides/multi-cli-session-rules.md
+```
+## M8 - 네이티브 Remote Control 검증과 구조 비교
+
+**목표 기간**: 1일
+**예상 시간**: 2h
+**상태**: 완료
+**성격**: Topic Retrospective 이후 추가된 유지보수 모듈 (CVL)
+
+### 배경
+
+2026-08-28, 사용자가 iPad Claude 앱의 `Code` 탭에서 로컬 세션이 `Connected` 상태로 떠 있는 것을 발견했다. Claude Code에는 SSH 없이 모바일에서 로컬 세션을 조종하는 **네이티브 Remote Control** 기능이 있었다. M1~M7 전체와 Vault 어디에도 이 기능에 대한 기록이 없었다. 원래 학습하려던 것이 이 기능이었고, SSH 경로로 우회해 7개 모듈을 완주한 뒤에야 직행 경로를 발견한 셈이다.
+
+### 학습 목표
+
+- [x] Remote Control의 연결 구조를 설명하고 SSH 방식과 대조할 수 있다.
+- [x] 활성화·연결 상태를 이 환경에서 실측하고 기록한다.
+- [x] 두 방식의 경계를 판별한다 — 무엇이 Remote Control로 가능하고 무엇이 SSH를 필요로 하는가.
+- [x] 상황별로 어느 방식을 쓸지 결정 기준을 만든다.
+
+### 핵심 질문
+
+- Remote Control은 어디서 실행되고 무엇이 어디에 저장되는가?
+- M1의 "모바일은 조작 콘솔, 실행은 로컬" 모델이 여전히 유효한가?
+- SSH 구조가 담당하던 것 중 무엇이 대체되고 무엇이 남는가?
+- 이 Vault의 개인정보를 다룰 때 어떤 기준이 필요한가?
+
+### 학습 내용
+
+1. 공식 문서(`code.claude.com/docs/en/remote-control`)로 연결 구조·요건·제약 확인
+2. `ListAgents`, `claude --version`, 확장 버전, 환경변수, 설정 파일로 현재 상태 실측
+3. 경계 테스트 — 실행 위치, MCP 유지, 인바운드 포트, 계정 경계, 터미널 시작 가능 여부, 트랜스크립트 저장 위치
+4. M2 구조 비교표와 같은 형식으로 SSH 방식 대비 비교표 작성
+5. 민감 작업 규칙을 포함한 결정 흐름 작성
+
+### 실습
+
+- `ListAgents`로 같은 계정의 Remote Control 세션 조회
+- `claude remote-control --help` 실행 → 자격 검사 실패 원인 특정
+- 인증 관련 환경변수 9종 점검
+- `~/.claude.json`, `settings.json` 3종에서 Remote Control 관련 키 확인
+- iPad 스크린샷과 `ListAgents` 출력 교차 검증
+
+### 산출물
+
+- `08-Native-Remote-Control/README.md`
+- `08-Native-Remote-Control/concepts/native-remote-control-model.md`
+- `08-Native-Remote-Control/lab/remote-control-verification.md`
+- `08-Native-Remote-Control/comparisons/ssh-vs-native-remote-control.md`
+- `08-Native-Remote-Control/decisions/which-path-when.md`
+- `vl_worklog/20260828_M8_Claude-Code-Mobile-Remote-Execution.md`
+
+### DoD
+
+- [x] Remote Control 연결 구조 문서화 (Mermaid 다이어그램 포함)
+- [x] 활성화·연결 절차 실측 기록
+- [x] 경계 테스트 6건 이상 수행 및 결과 기록
+- [x] SSH 방식과의 비교표 작성
+- [x] 상황별 선택 기준 작성
+- [x] 로드맵 추적표·성공 기준 갱신
+- [x] WorkLog 작성
+
+### 핵심 발견
+
+| 항목 | 내용 |
+|---|---|
+| 학습 모델 | M1의 "모바일은 조작 콘솔, 실행은 로컬"은 **두 방식 모두에 유효** |
+| 대체되지 않는 것 | Codex·Gemini 실행, 임의 셸 작업, 계정 격리, 홈서버, 오프라인 LAN |
+| 보안 후퇴 1 | 계정 격리 없음 — `catchupai`가 아니라 `dougg` 세션에 붙는다 |
+| 보안 후퇴 2 | 트랜스크립트가 Anthropic 서버에 저장된다 |
+| 환경 문제 1 | PATH CLI `2.1.143` vs VS Code 확장 `2.1.250` — 버전 게이트 7건 |
+| 환경 문제 2 | `ANTHROPIC_API_KEY` 설정으로 터미널에서 `claude remote-control` 차단 |
+
+### 리뷰 포인트
+
+- 터미널 CLI 업데이트 후 서버 모드(`claude remote-control`) 재검증 필요
+- 자동 연결(`remoteControlAtStartup`)을 켤지 판단 — 민감 작업 규칙과 함께
+- Remotion 영상 브리프를 "두 경로 비교" 구성으로 개정할지 결정
+
+### 출력 폴더
+
+```text
+08-Native-Remote-Control/
+  README.md
+  concepts/native-remote-control-model.md
+  lab/remote-control-verification.md
+  comparisons/ssh-vs-native-remote-control.md
+  decisions/which-path-when.md
+```
+## M9 - Codex Remote 검증과 세팅
+
+**목표 기간**: 2일 (1단계 / 2단계 분리)
+**예상 시간**: 2.5h
+**상태**: **1단계 완료** (문서 조사·3자 비교) / **2단계 대기** (설치·세팅·실사용)
+**성격**: M8에 이은 유지보수 모듈 (CVL)
+
+### 배경
+
+M8에서 Claude Code 네이티브 Remote Control을 정리한 뒤, Codex에도 같은 성격의 원격 기능이 있다는 것을 확인했다. M7에서 Codex CLI를 iPad Termius로 실행하는 것까지 검증했으므로, 이 모듈이 완료되면 **SSH · Claude RC · Codex Remote 3자 비교**가 성립한다.
+
+사용자 요청으로 **문서 조사와 비교를 1단계**, **설치와 세팅을 2단계**로 나눴다.
+
+### 학습 목표
+
+- [x] Codex Remote의 연결 구조를 설명하고 Claude Code Remote Control과 대조할 수 있다.
+- [x] Handoff · SSH 호스트 등록 · Computer Use가 무엇인지 설명할 수 있다.
+- [x] 세 경로의 비교표를 만들고 각각 언제 쓸지 판단할 수 있다.
+- [ ] 이 환경에 Codex Remote를 세팅하고 모바일에서 실제로 사용할 수 있다.
+
+### 핵심 질문
+
+- Codex Remote의 호스트는 무엇인가? Codex CLI인가 다른 것인가?
+- Claude Code Remote Control에 없는 기능은 무엇인가?
+- 데이터 저장 범위는 어떻게 되는가?
+- M1~M7에서 만든 SSH 구조가 여기서도 쓰이는가?
+
+### 학습 내용 (1단계)
+
+1. 공식 문서 조사 — `learn.chatgpt.com/docs/remote-connections`, 실무 워크플로우 블로그
+2. Claude Code Remote Control과의 구조 대조
+3. Handoff · SSH 호스트 등록 · Computer Use 정리
+4. 3자 비교표 작성
+5. 이 환경의 세팅 요건 점검 및 절차서 준비
+
+### 실습 (2단계, 대기)
+
+- ChatGPT 데스크톱 앱 설치 (`winget` 없음 → 웹 다운로드)
+- Settings → Connections → Control this Mac or PC → Set up
+- 모바일 QR 페어링
+- 경계 테스트 7항목 (실행 위치 · 승인 흐름 · 실행 계정 · 로컬 설정 유지 · 푸시 · 한글 입력 · 잠자기 복구)
+
+### 산출물
+
+- `09-Codex-Remote/README.md`
+- `09-Codex-Remote/concepts/codex-remote-model.md`
+- `09-Codex-Remote/comparisons/three-way-remote-comparison.md`
+- `09-Codex-Remote/lab/setup-procedure.md`
+- `09-Codex-Remote/decisions/codex-remote-usage-rules.md`
+- `vl_worklog/20260828_M9_Claude-Code-Mobile-Remote-Execution.md`
+
+### DoD
+
+**1단계**
+
+- [x] Codex Remote 연결 구조 문서화 (Mermaid 포함)
+- [x] Handoff · SSH 호스트 등록 · Computer Use 정리
+- [x] 3자 비교표 작성
+- [x] 세팅 요건 점검
+- [x] 설치·페어링 절차서 작성 (경계 테스트 7항목 포함)
+- [x] 운용 규칙 잠정안 작성
+- [x] WorkLog 작성
+
+**2단계**
+
+- [ ] ChatGPT 데스크톱 앱 설치
+- [ ] 호스트 등록 + 모바일 QR 페어링
+- [ ] 경계 테스트 7항목 수행
+- [ ] 절차서를 실기록으로 전환
+- [ ] 운용 규칙 확정
+
+### 핵심 발견 (1단계)
+
+| 항목 | 내용 |
+|---|---|
+| 호스트 주체 | **ChatGPT 데스크톱 앱**. Codex CLI로는 설정 불가 |
+| 고유 기능 | Handoff(대화+Git 상태 이전) · SSH 호스트 등록 · Computer Use |
+| M1~M7과의 연결 | **SSH 호스트 등록으로 기존 구조를 재활용 가능** — 세 경로가 배타적이지 않다 |
+| 데이터 취급 | 공식 문서에 저장 범위 **명시 없음** (Claude Code는 명시) |
+| 공통 보안 후퇴 | Claude RC와 마찬가지로 **계정 격리 없음** — 일상 계정 세션에 붙는다 |
+| 환경 | ChatGPT 데스크톱 앱 미설치, `winget` 없음, 플랜 Plus 확인 |
+
+### 리뷰 포인트
+
+- 1차 세팅에서 **Computer Use는 제외** — Windows에서 잠금 해제 + 포그라운드 필요, 화면 조작 권한 위험
+- **SSH 호스트 등록도 1차에서 제외** — M5 보안 체크리스트를 다시 건드리므로 별도 승인
+- 세팅 전 **ChatGPT 계정 데이터 관리 설정 확인** 필수
+- Claude RC와 Codex Remote를 동시에 켜 둘 경우 M7의 "같은 파일 동시 수정 금지" 규칙을 어떻게 적용할지
+
+### 출력 폴더
+
+```text
+09-Codex-Remote/
+  README.md
+  concepts/codex-remote-model.md
+  comparisons/three-way-remote-comparison.md
+  lab/setup-procedure.md
+  decisions/codex-remote-usage-rules.md
 ```
 ## WorkLog 작성 가이드
 
@@ -441,16 +629,20 @@
 | M5 | 2026-08-24 | 2026-08-24 | done | 100% | 보안/운영/백업 런북 작성 완료 |
 | M6 | 2026-08-24 | 2026-08-24 | done | 100% | 최종 추천 구조 + 후속 과제 + Remotion AI 영상 브리프 작성 완료 |
 | M7 | 2026-08-24 | 2026-08-24 | done | 100% | iPad Termius에서 Codex/Gemini CLI 실행 가능 여부 검증 완료 |
+| M8 | 2026-08-28 | 2026-08-28 | done | 100% | 네이티브 Remote Control 검증. SSH 방식과 비교·선택 기준 작성 |
+| M9 | 2026-08-28 | 진행 중 | 1단계 done | 7/12 | 문서 조사·3자 비교 완료. 설치·세팅은 2단계로 분리 |
 
 ## 성공 기준
 
-- [x] 7개 모듈의 DoD 100% 달성
+- [>] 9개 모듈 — M1~M8 DoD 100%, M9는 1단계 완료 / 2단계 대기
 - [x] 모바일 조작과 로컬 실행 구조 설명 문서 완성
 - [x] 기술 구조 비교표와 홈서버 도입 판단표 완성
 - [x] 현재 Windows 노트북 기준 1차 원격 실행 실험 완료
 - [x] 보안/운영/백업 런북 완성
 - [x] Remotion AI 영상화 후보 문서 완성
 - [x] Topic Retrospective 작성
+- [x] 네이티브 Remote Control과 SSH 구조 비교·선택 기준 완성 (M8, 2026-08-28 추가)
+- [>] Codex Remote 조사·3자 비교 완성 (M9 1단계, 2026-08-28) — 세팅은 2단계 대기
 
 ## 진행 규칙
 
@@ -460,7 +652,7 @@
 - 실험은 작은 성공 기준부터 시작하고, vault 변경 전 항상 작업 범위를 확인한다.
 
 **생성자**: Codex with VibeLearn AI  
-**Roadmap 버전**: 1.1  
+**Roadmap 버전**: 1.3 (2026-08-28 M9 추가)  
 **방법론 버전**: VibeLearn AI 2.0
 
 

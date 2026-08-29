@@ -1,6 +1,6 @@
 # M6 — 멀티 TTS 하네스 + 오디오 라우팅
 
-**상태**: 실습 1·2·4 완료 · 실습 3 이월 · DoD 5/6
+**상태**: 실습 1·2·4 완료 · 실습 3 대부분 완료(트랙 뮤트 검증 1건 미완) · DoD 5.5/6
 **예상 학습 시간**: 7h
 **난이도**: ⭐⭐⭐
 
@@ -102,9 +102,12 @@ python circuit_breaker.py --demo --by chars
       어댑터는 작성했고 프리플라이트가 자동 제외한다
 - [x] 지연·비용·품질 실측표 완성 및 기본값 결정 — [tts-comparison.md](guides/tts-comparison.md).
       단, **주관 청취 평가는 방송 종료 후로 분리** (재생이 방송에 섞이므로)
-- [ ] VoiceMeeter+VB-CABLE 라우팅 구성 완료, OBS 트랙 개별 뮤트 검증 — **이월**.
-      미설치 + 재부팅 필요 + 라이브 방송 중. 설계와 절차는
-      [audio-routing-setup.md](guides/audio-routing-setup.md) 에 완비
+- [~] VoiceMeeter+VB-CABLE 라우팅 구성, OBS 트랙 개별 뮤트 검증 — **거의 완료**.
+      **VoiceMeeter 는 실측으로 불필요 판명**(마이크 WASAPI 공유 모드 동시 열기 성립).
+      VB-CABLE 설치·통과 검증·재생 지연 실측(**케이블 314ms**)·OBS 격리 구성까지 완료.
+      **트랙 2 개별 뮤트 검증 1건만 미완** → [audio-routing-setup.md](guides/audio-routing-setup.md)
+- [x] **운용 모드 2종 정리** (로드맵 외 추가) — [operating-modes.md](guides/operating-modes.md).
+      평상시 미팅 녹화 세팅과 AI 공동진행 방송 세팅을 체크리스트로 분리
 - [x] 비용 서킷 브레이커 강등 동작 확인 — 실제 합성으로 openai → edge 강등 검증
 - [x] README 작성 완료
 - [x] WorkLog 작성 완료

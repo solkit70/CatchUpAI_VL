@@ -34,6 +34,16 @@
 - [05-Operations-Security/guides/github-push-video-lessons.md](../../05-Operations-Security/guides/github-push-video-lessons.md) — GitHub push 설정 실수 (영상화 사례 2)
 - [05-Operations-Security/guides/ipad-korean-input-lessons.md](../../05-Operations-Security/guides/ipad-korean-input-lessons.md) — iPad 한글 IME 자모 분리 문제 (영상화 사례 3)
 
+### M8 — 네이티브 Remote Control 검증과 구조 비교 (2026-08-28 추가)
+
+- [08-Native-Remote-Control/README.md](../../08-Native-Remote-Control/README.md) — 모듈 요약과 결론
+- [08-Native-Remote-Control/concepts/native-remote-control-model.md](../../08-Native-Remote-Control/concepts/native-remote-control-model.md) — 연결 구조와 요건
+- [08-Native-Remote-Control/lab/remote-control-verification.md](../../08-Native-Remote-Control/lab/remote-control-verification.md) — 실측과 경계 테스트
+- [08-Native-Remote-Control/comparisons/ssh-vs-native-remote-control.md](../../08-Native-Remote-Control/comparisons/ssh-vs-native-remote-control.md) — 두 방식 비교
+- [08-Native-Remote-Control/decisions/which-path-when.md](../../08-Native-Remote-Control/decisions/which-path-when.md) — 상황별 선택 기준
+
+> ⚠️ **아래 "최종 추천 구조"는 M7 시점 기준이다.** M8에서 Claude Code 네이티브 Remote Control을 확인해, **Claude Code만 쓸 경우 SSH 스택 없이 연결하는 경로**가 따로 있다. SSH 구조는 Codex·Gemini 실행, 임의 셸 작업, 계정 격리, 홈서버 용도로 여전히 유효하다. 선택 기준은 위 `which-path-when.md`를 따른다.
+
 ## 최종 추천 구조
 
 ```text

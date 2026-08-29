@@ -1,4 +1,4 @@
-﻿# Remotion AI 영상화 후보 브리프
+# Remotion AI 영상화 후보 브리프
 
 ## 왜 이 Topic이 영상화 후보인가
 
