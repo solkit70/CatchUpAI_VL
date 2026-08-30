@@ -9,6 +9,11 @@
       "type": "boolean",
       "description": "전체 통과 여부. 하나라도 위반이 있으면 false지만 kept_sentences로 부분 발화는 가능"
     },
+    "absence_by_closure": {
+      "type": "array",
+      "description": "인용이 아니라 화이트리스트가 닫힌 집합이라는 사실에 근거한 문장 인덱스 (M8). '없다'를 지지하는 인용은 존재할 수 없으므로 무엇으로 뒷받침됐는지를 구분해 남긴다.",
+      "items": { "type": "integer" }
+    },
     "final_text": {
       "type": "string",
       "description": "검증 후 남은 문장으로 조립한 최종 발화 텍스트 (⑧ overlay·⑨ TTS 공통 입력)"
@@ -27,8 +32,8 @@
           "sentence_idx": { "type": "integer", "minimum": 0 },
           "reason": {
             "type": "string",
-            "enum": ["no_evidence", "evidence_not_found", "coverage_violation", "length_hardcut"],
-            "description": "탈락 사유: claim 없음/근거 문자열 미발견/화이트리스트 위반/길이 하드컷 초과"
+            "enum": ["no_evidence", "evidence_not_found", "coverage_violation", "length_hardcut", "fact_not_in_evidence", "absence_contradicts_coverage"],
+            "description": "탈락 사유: claim 없음/근거 문자열 미발견/화이트리스트 위반/길이 하드컷 초과/숫자·고유명사가 자기 근거에 없음(M8)/화이트리스트에 있는 항목을 없다고 주장(M8)"
           }
         },
         "required": ["sentence_idx", "reason"],

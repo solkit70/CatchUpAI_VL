@@ -1,0 +1,5 @@
+{
+  "text": "오늘 3번 파트는, Live21 실험 항목을 다루는 세션으로 이동된 내용이 포함됩니다. 구체적으로는, 기존 스킬을 OpenAI의 신규 Transcribe 모델로 업데이트하는 실험을 다룹니다. 예시로, video-subtitles 스킬에서 Whisper API를 GPT-Transcribe로 교체 검토를 진행합니다. 또한 video-add-chapters의 transcribe_video.py 교체 검토도 포함됩니다. 방송 결과 기준으로는 GPT-Transcribe/GPT-Live-Transcribe 스킬 반영이 완료되어, 다섯 개 스킬에 적용되었습니다.",
+  "part_id": "3",
+  "updated_at": "2026-08-30T13:07:16.823511+00:00"
+}

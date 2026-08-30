@@ -178,6 +178,22 @@ def build_intent(text: str, ctx: dict | None) -> dict:
     # ── 모호성 플래그 (safety_policy.ambiguity_rules 와 연동) ──────────
     flags: list[str] = []
     if ctx is not None:
+        # 금칙 섹션을 이름으로 지목한 요청.
+        #
+        # M8 시나리오 forbidden-request 가 드러낸 것: 근거 풀에서 금칙 본문을
+        # 빼는 것만으로는 부족하다. 금칙 섹션의 **이름**은 진행자 발화를 타고
+        # 프롬프트에 들어오고, 모델은 그 이름에 이끌려 근거 풀의 다른 내용을
+        # 그 섹션의 내용인 것처럼 이어 붙인다. 인용이 실재하므로 게이트는 통과시킨다.
+        #
+        # 잡아야 할 지점은 생성 후가 아니라 생성 전이다. 이름이 나오면 거절한다.
+        for h in ctx.get("excluded_headings", []):
+            # 헤딩 전체가 아니라 괄호 앞 본체로 대조한다 —
+            # 진행자는 '보류된 인사이트 후보 (이번 방송 미편성)' 를 통째로 말하지 않는다.
+            core = h.split("(")[0].strip()
+            if core and core in body:
+                flags.append("forbidden_topic_requested")
+                slots["forbidden_heading"] = h
+                break
         cov = ctx.get("coverage_items", [])
         if ctx.get("coverage_state") == "undefined" or not cov:
             flags.append("no_coverage")

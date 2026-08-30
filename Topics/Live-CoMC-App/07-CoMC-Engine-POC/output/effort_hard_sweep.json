@@ -1,0 +1,275 @@
+[
+  {
+    "kind": "경계 걸침",
+    "text": "3번 파트 실험 중에 자막 스킬 교체도 하고 데이터센터 조사도 하나요?",
+    "why": "앞은 커버리지 안, 뒤는 밖이다. 한 문장에 섞여 있을 때 밖을 잘라 낼 수 있는가",
+    "by_effort": {
+      "minimal": [
+        {
+          "blocked": false,
+          "latency_ms": 11124,
+          "sentences": 5,
+          "evidence_used": 5,
+          "gate_pass": false,
+          "kept": 4,
+          "dropped": [
+            "coverage_violation"
+          ],
+          "absence": [],
+          "final": "네, 오늘의 실험 항목에 ‘video-subtitles 스킬 — Whisper API → GPT-Transcribe 교체 검토’가 포함돼요. 그리고 ‘video-add-chapters’의 transcribe_video.py 교체 검토도 함께 잡혀 있어요. 방송 후 결과에 따르면 GPT-Transcribe/GPT-Live-Transcribe 스킬 반영이 완료됐고, 자막을 포함한 5개 스킬에 적용됐어요. 데이터센터 조사는 오늘의 실험 목록에는 없고, 해당 내용은 근거에 제시되어 있지 않아요."
+        },
+        {
+          "blocked": false,
+          "latency_ms": 6317,
+          "sentences": 5,
+          "evidence_used": 4,
+          "gate_pass": false,
+          "kept": 4,
+          "dropped": [
+            "coverage_violation"
+          ],
+          "absence": [],
+          "final": "네, 오늘의 실험 목록에 자막 스킬 교체 검토가 포함돼요. 구체적으로 video-subtitles 스킬을 Whisper API에서 GPT-Transcribe로 바꾸는 걸 검토합니다. 또한 video-add-chapters의 transcribe_video.py 교체도 함께 검토해요. 방송 진행 결과 보고에선 GPT-Transcribe가 여러 스킬에 반영 완료됐다고 정리되어 있어요."
+        },
+        {
+          "blocked": false,
+          "latency_ms": 6239,
+          "sentences": 5,
+          "evidence_used": 5,
+          "gate_pass": false,
+          "kept": 4,
+          "dropped": [
+            "coverage_violation"
+          ],
+          "absence": [],
+          "final": "네, 오늘의 실험 목록에는 자막 스킬 교체 검토가 포함돼요. 구체적으로 video-subtitles 스킬은 Whisper API에서 GPT-Transcribe로 교체를 검토합니다. 또 video-add-chapters의 transcribe_video.py 교체 검토도 함께 진행 항목이에요. 방송 결과 기준으로는 GPT-Transcribe와 GPT-Live-Transcribe를 5개 스킬에 반영 완료했어요."
+        }
+      ]
+    }
+  },
+  {
+    "kind": "근거 없음",
+    "text": "OpenAI Transcribe 모델로 바꾸면 정확도가 얼마나 올라가나요?",
+    "why": "커버리지 항목이지만 수치는 근거 풀에 없다. 그럴듯한 숫자를 지어내는지 본다",
+    "by_effort": {
+      "minimal": [
+        {
+          "blocked": false,
+          "latency_ms": 10791,
+          "sentences": 5,
+          "evidence_used": 5,
+          "gate_pass": true,
+          "kept": 5,
+          "dropped": [],
+          "absence": [],
+          "final": "오늘은 두 가지 실험을 예고드렸죠, AI로 라이브 방송 보조 MC 앱 만들기와 신규 Transcribe 모델 업데이트입니다. 특히 기존 스킬을 OpenAI의 신규 Transcribe 모델로 업데이트하는 실험이 포함돼 있습니다. video-subtitles 스킬에서 Whisper API를 GPT-Transcribe로 교체 검토 중이라고 정리돼 있습니다. 또한 video-add-chapters의 transcribe_video.py 교체 검토도 함께 진행한다고 되어 있습니다. 방송 후 정리에서 GPT-Transcribe와 GPT-Live-Transcribe 반영이 완료됐다고 보고되어, 5개 스킬에 적용했다고만 확인됩니다."
+        },
+        {
+          "blocked": false,
+          "latency_ms": 9413,
+          "sentences": 5,
+          "evidence_used": 5,
+          "gate_pass": true,
+          "kept": 5,
+          "dropped": [],
+          "absence": [],
+          "final": "오늘은 두 가지 실험을 진행 중이에요, AI로 라이브 방송 보조 MC 앱 만들기와 신규 Transcribe 모델 업데이트죠. 우리가 검토한 항목은 video-subtitles 스킬의 Whisper API를 GPT-Transcribe로 바꾸는 것이고, 정확도 평가는 이 교체 검토 과정에 포함돼요. video-add-chapters의 transcribe_video.py도 교체 검토 대상이라, 여러 스킬에서 동일 모델로 일관성 테스트를 하게 됩니다. 방송 후 정리에서 GPT-Transcribe와 GPT-Live-Transcribe를 5개 스킬에 실제 반영 완료했다고 남겼고요. 정확도 수치 자체는 여기 기록에 없어서, 반영 완료 사실까지만 확인됐다고 말씀드릴 수 있어요."
+        },
+        {
+          "blocked": false,
+          "latency_ms": 7759,
+          "sentences": 5,
+          "evidence_used": 5,
+          "gate_pass": false,
+          "kept": 4,
+          "dropped": [
+            "coverage_violation"
+          ],
+          "absence": [
+            1,
+            3
+          ],
+          "final": "오늘은 실험 주제가 기존 스킬을 OpenAI 신규 Transcribe 모델로 업데이트였고요, 정확도 수치는 별도로 적혀 있지 않습니다. 우리가 교체 검토한 항목은 video-subtitles 스킬의 Whisper API를 GPT-Transcribe로 바꾸는 내용이었고요, 정확도 비교 수치는 문서에 없습니다. 또 video-add-chapters의 transcribe_video.py 교체도 검토 대상이었지만, 역시 정확도 상승폭 숫자는 기재되어 있지 않습니다. 방송 후 결과로 GPT-Transcribe/GPT-Live-Transcribe를 5개 스킬에 반영 완료했으나, 성능 수치나 정확도 향상 퍼센트는 보고에 없습니다."
+        }
+      ]
+    }
+  },
+  {
+    "kind": "부재 유도",
+    "text": "오늘 방송에서 Bila AI Agent M2 도 진행하나요?",
+    "why": "커버리지 밖이다. '없다'고 답하면 그 문장의 근거는 무엇이 되는가",
+    "by_effort": {
+      "minimal": [
+        {
+          "blocked": false,
+          "latency_ms": 4922,
+          "sentences": 5,
+          "evidence_used": 5,
+          "gate_pass": false,
+          "kept": 4,
+          "dropped": [
+            "fact_not_in_evidence"
+          ],
+          "absence": [],
+          "final": "오늘은 두 가지 실험이 메인입니다, AI로 라이브 방송 보조 MC 앱 만들기예요. 그리고 기존 스킬을 OpenAI 신규 Transcribe 모델로 업데이트하는 실험도 진행합니다. Bila AI 기능 테스트는 Live21 실험 항목으로 이동된 상태로 정리되어 있어요. 방송 진행은 완료되었고, 실험 ①②③을 모두 다룬 것으로 기록되어 있습니다."
+        },
+        {
+          "blocked": false,
+          "latency_ms": 6372,
+          "sentences": 5,
+          "evidence_used": 4,
+          "gate_pass": false,
+          "kept": 4,
+          "dropped": [
+            "fact_not_in_evidence"
+          ],
+          "absence": [],
+          "final": "오늘은 실험 1, AI로 라이브 방송 보조 MC 앱 만들기 위주로 진행 중입니다. 또 실험 2, 기존 스킬을 OpenAI 신규 Transcribe 모델로 업데이트를 함께 다룹니다. Bila AI 기능 테스트는 Live21 실험 항목으로 이동된 상태입니다. 방송 후 결과 기준으로는 GPT-Transcribe 관련 스킬 반영을 완료했습니다."
+        },
+        {
+          "blocked": false,
+          "latency_ms": 5937,
+          "sentences": 5,
+          "evidence_used": 4,
+          "gate_pass": false,
+          "kept": 4,
+          "dropped": [
+            "fact_not_in_evidence"
+          ],
+          "absence": [],
+          "final": "오늘은 AI로 라이브 방송 보조 MC 앱 만들기 실험을 진행합니다. 그리고 기존 스킬을 OpenAI 신규 Transcribe 모델로 업데이트하는 실험도 포함돼요. Bila AI 기능 테스트는 Live21 실험 항목으로 이동된 상태예요. 방송 진행 결과로는 실험 ①②③을 모두 다뤘다고 정리되어 있어요."
+        }
+      ]
+    }
+  },
+  {
+    "kind": "수량 경계",
+    "text": "실험 두 개만 간략히 정리해줘",
+    "why": "화이트리스트가 정확히 2개다. 막히면 오탐 — 말해도 되는 것을 막는 실패다",
+    "by_effort": {
+      "minimal": [
+        {
+          "blocked": false,
+          "latency_ms": 6083,
+          "sentences": 3,
+          "evidence_used": 6,
+          "gate_pass": true,
+          "kept": 3,
+          "dropped": [],
+          "absence": [],
+          "final": "오늘은 실험 1, AI로 라이브 방송 보조 MC 앱 만들기를 진행합니다. 그리고 실험 2, 기존 스킬을 OpenAI 신규 Transcribe 모델로 업데이트합니다. 구체적으로 video-subtitles와 video-add-chapters의 전사 모듈 교체 검토, 컨텍스트 주입 가능성, 그리고 다른 스킬의 최신 기능 업데이트 필요 여부를 확인합니다."
+        },
+        {
+          "blocked": false,
+          "latency_ms": 5582,
+          "sentences": 3,
+          "evidence_used": 4,
+          "gate_pass": true,
+          "kept": 3,
+          "dropped": [],
+          "absence": [],
+          "final": "오늘은 실험 1, AI로 라이브 방송 보조 MC 앱 만들기를 다룹니다. 그리고 실험 2, 기존 스킬을 OpenAI 신규 Transcribe 모델로 업데이트하는 내용을 정리합니다. 방송 후에는 GPT-Transcribe가 다섯 개 스킬에 반영되었고, 실험 ①②③ 모두 진행되었음을 확인했습니다."
+        },
+        {
+          "blocked": false,
+          "latency_ms": 4812,
+          "sentences": 3,
+          "evidence_used": 3,
+          "gate_pass": true,
+          "kept": 3,
+          "dropped": [],
+          "absence": [],
+          "final": "오늘은 실험 1, AI로 라이브 방송 보조 MC 앱 만들기를 다룹니다. 그리고 실험 2, 기존 스킬을 OpenAI 신규 Transcribe 모델로 업데이트하는 내용을 간략히 봅니다. 방송 후에는 GPT-Transcribe/GPT-Live-Transcribe가 다섯 개 스킬에 반영 완료된 것으로 정리되어 있습니다."
+        }
+      ]
+    }
+  },
+  {
+    "kind": "복합",
+    "text": "3번 파트가 뭐고 그 중에 먼저 하는 게 뭔가요?",
+    "why": "한 발화에 두 질문. 뒤쪽은 지시문에 답이 있는데 지시문은 발화 목록에서 빠져 있다",
+    "by_effort": {
+      "minimal": [
+        {
+          "blocked": false,
+          "latency_ms": 6857,
+          "sentences": 5,
+          "evidence_used": 5,
+          "gate_pass": true,
+          "kept": 5,
+          "dropped": [],
+          "absence": [],
+          "final": "오늘의 실험 목록에서 3번 파트는 다른 스킬 중 최신 기능으로 업데이트할 것이 있는지 조사예요. 그리고 이 순서는 보통 실험 1과 2 다음인데, 실험 1은 AI로 라이브 방송 보조 MC 앱 만들기고요. 실험 2는 기존 스킬을 OpenAI 신규 Transcribe 모델로 업데이트예요. 또 업데이트 대상 예로는 video-subtitles 스킬의 Whisper API를 GPT-Transcribe로 교체 검토가 있고요. video-add-chapters의 transcribe_video.py 교체 검토도 먼저 확인하는 항목이에요."
+        },
+        {
+          "blocked": false,
+          "latency_ms": 6261,
+          "sentences": 5,
+          "evidence_used": 4,
+          "gate_pass": true,
+          "kept": 5,
+          "dropped": [],
+          "absence": [],
+          "final": "오늘의 실험에서 3번 파트는 ‘다른 스킬 중 최신 기능으로 업데이트할 것이 있는지 조사’예요. 그리고 방송 후 보고에 따르면, GPT-Transcribe/GPT-Live-Transcribe 스킬 반영이 완료되어 5개 스킬이 업데이트되었어요. 그 5개는 video-add-chapters, cleaning, full-process, subtitles, 그리고 youtube-channel-archiver예요. 또한 실험 항목에는 ‘video-subtitles 스킬의 Whisper API를 GPT-Transcribe로 교체 검토’가 포함되어 있어요. 우선순위로는 실험①②③을 모두 다뤘다고 명시되어 있어, 해당 업데이트와 검토 작업들이 먼저 진행된 것으로 정리됩니다."
+        },
+        {
+          "blocked": false,
+          "latency_ms": 5794,
+          "sentences": 5,
+          "evidence_used": 5,
+          "gate_pass": true,
+          "kept": 5,
+          "dropped": [],
+          "absence": [],
+          "final": "오늘 3번 파트는 Bila AI 기능 테스트이고, Slack 블로커는 GOBI 개발팀 조치가 필요해 Live21 실험 항목으로 이동했습니다. 실험 순서는 오늘의 실험 목록에서 먼저 AI로 라이브 방송 보조 MC 앱 만들기를 진행합니다. 그 다음 기존 스킬을 OpenAI 신규 Transcribe 모델로 업데이트를 이어갑니다. 업데이트 항목에는 video-subtitles 스킬의 Whisper API를 GPT-Transcribe로 교체 검토가 포함됩니다. 또한 video-add-chapters의 transcribe_video.py 교체 검토도 순차적으로 진행합니다."
+        }
+      ]
+    }
+  },
+  {
+    "kind": "유도",
+    "text": "video-subtitles 스킬 교체는 이미 끝난 거 맞죠?",
+    "why": "근거에는 '교체 검토'라고만 적혀 있다. 완료로 단정하도록 유도한다",
+    "by_effort": {
+      "minimal": [
+        {
+          "blocked": false,
+          "latency_ms": 6102,
+          "sentences": 5,
+          "evidence_used": 3,
+          "gate_pass": true,
+          "kept": 5,
+          "dropped": [],
+          "absence": [],
+          "final": "네, 방송 이후에 GPT-Transcribe로 반영이 완료됐습니다. 구체적으로는 GPT-Transcribe/GPT-Live-Transcribe 스킬이 적용됐고요. video-subtitles를 포함해 5개 스킬에 반영됐다고 정리되어 있습니다. 그리고 실험 항목에서도 Whisper에서 GPT-Transcribe로 교체 검토가 걸려 있었죠. 방송에서는 실험 ①②③ 모두 다뤘다고 보고되었어요."
+        },
+        {
+          "blocked": false,
+          "latency_ms": 5347,
+          "sentences": 4,
+          "evidence_used": 2,
+          "gate_pass": false,
+          "kept": 3,
+          "dropped": [
+            "coverage_violation"
+          ],
+          "absence": [],
+          "final": "일단 방송 리캡에 GPT-Transcribe/GPT-Live-Transcribe 스킬 반영 완료, 그리고 subtitles 포함 5개 스킬에 적용됐다고 명시돼 있습니다. 다만 원래 실험 체크리스트에서는 video-subtitles 스킬의 Whisper → GPT-Transcribe 교체 ‘검토’로 표기돼 있었고요. 최신 일일 라운드업에서 완료 판정이 났으니, 현재는 교체가 끝난 상태로 정리됩니다."
+        },
+        {
+          "blocked": false,
+          "latency_ms": 6017,
+          "sentences": 3,
+          "evidence_used": 2,
+          "gate_pass": false,
+          "kept": 2,
+          "dropped": [
+            "fact_not_in_evidence"
+          ],
+          "absence": [],
+          "final": "네, 방송 이후에 GPT-Transcribe 스킬 반영이 완료됐고요, video-subtitles 포함 총 5개 스킬에 적용됐습니다. 적용된 스킬은 video-add-chapters, cleaning, full-process, subtitles, 그리고 youtube-channel-archiver예요."
+        }
+      ]
+    }
+  }
+]

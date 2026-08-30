@@ -63,6 +63,15 @@
       ],
       "additionalProperties": false
     },
+    "mode": {
+      "type": "string",
+      "enum": ["LIVE", "REVIEW", "MUTE"],
+      "description": "이 발화가 렌더된 시점의 운영 모드 (M8). LIVE=즉시 발화 / REVIEW=화면 표시 후 승인 대기 / MUTE=화면만. 사후 분석에서 '왜 이건 소리가 안 났나'에 답하려면 그때의 모드가 남아 있어야 한다."
+    },
+    "spoken_withheld": {
+      "type": "boolean",
+      "description": "발화가 보류됐는가 (REVIEW 승인 대기 또는 MUTE). true 면 spoken 은 계획일 뿐 실제로 나가지 않았다."
+    },
     "source_verdict_pass": {
       "type": "boolean",
       "description": "이 출력을 만든 verdict.pass 값 — pass=false여도 kept_sentences 기반 부분 발화일 수 있음을 추적"

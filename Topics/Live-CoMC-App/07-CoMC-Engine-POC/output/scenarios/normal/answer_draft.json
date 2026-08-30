@@ -1,0 +1,40 @@
+{
+  "sentences": [
+    "오늘 3번 파트는, Live21 실험 항목을 다루는 세션으로 이동된 내용이 포함됩니다.",
+    "구체적으로는, 기존 스킬을 OpenAI의 신규 Transcribe 모델로 업데이트하는 실험을 다룹니다.",
+    "예시로, video-subtitles 스킬에서 Whisper API를 GPT-Transcribe로 교체 검토를 진행합니다.",
+    "또한 video-add-chapters의 transcribe_video.py 교체 검토도 포함됩니다.",
+    "방송 결과 기준으로는 GPT-Transcribe/GPT-Live-Transcribe 스킬 반영이 완료되어, 다섯 개 스킬에 적용되었습니다."
+  ],
+  "claim_map": [
+    {
+      "sentence_idx": 0,
+      "evidence_path": "Roundup/2026-07-26 - Weekly Progress and Planning#Priority Summary",
+      "evidence_quote": "7 — Bila AI 기능 테스트 — [>] — Slack 블로커는 GOBI 개발팀 조치 필요, Live21 실험 항목으로 이동"
+    },
+    {
+      "sentence_idx": 1,
+      "evidence_path": "Ingest/CatchUpAI_VL/Topics/Live-CoMC-App/07-CoMC-Engine-POC/data/rundown_samples/2026-07-26 - Live21 Weekly Rundown.md#오늘의 실험",
+      "evidence_quote": "★ 실험 2 — 기존 스킬을 OpenAI 신규 Transcribe 모델로 업데이트"
+    },
+    {
+      "sentence_idx": 2,
+      "evidence_path": "Ingest/CatchUpAI_VL/Topics/Live-CoMC-App/07-CoMC-Engine-POC/data/rundown_samples/2026-07-26 - Live21 Weekly Rundown.md#오늘의 실험",
+      "evidence_quote": "[ ] `video-subtitles` 스킬 — Whisper API → GPT-Transcribe 교체 검토"
+    },
+    {
+      "sentence_idx": 3,
+      "evidence_path": "Ingest/CatchUpAI_VL/Topics/Live-CoMC-App/07-CoMC-Engine-POC/data/rundown_samples/2026-07-26 - Live21 Weekly Rundown.md#오늘의 실험",
+      "evidence_quote": "[ ] `video-add-chapters`의 `transcribe_video.py` 교체 검토"
+    },
+    {
+      "sentence_idx": 4,
+      "evidence_path": "Roundup/2026-08-02 - Daily Roundup#Status Summary",
+      "evidence_quote": "GPT-Transcribe/GPT-Live-Transcribe 스킬 반영 — 완료 — 5개 스킬(video-add-chapters/cleaning/full-process/subtitles, youtube-channel-archiver)"
+    }
+  ],
+  "coverage_state": "defined",
+  "length_sentences": 5,
+  "provider": "openai",
+  "created_at": "2026-08-30T13:07:16.124840+00:00"
+}

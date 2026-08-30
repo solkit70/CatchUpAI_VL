@@ -73,6 +73,23 @@
         "additionalProperties": false
       }
     },
+    "parse_anomalies": {
+      "type": "array",
+      "description": "파서가 처리하지 못한 줄. 빈 배열이 정상이다. M8 발견: 커버리지 줄을 못 읽어도 결과는 undefined 로 '안전하게' 보여 조용히 화이트리스트가 사라진다. 못 읽은 것과 비어 있는 것은 다르므로 반드시 구분해 남긴다.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "kind": {
+            "type": "string",
+            "enum": ["coverage_line_unparsed", "part_heading_unparsed", "coverage_without_part"]
+          },
+          "line_no": { "type": "integer" },
+          "raw": { "type": "string" }
+        },
+        "required": ["kind", "raw"],
+        "additionalProperties": false
+      }
+    },
     "parsed_at": {
       "type": "string",
       "format": "date-time",
@@ -141,6 +158,21 @@
             "type": "string"
           },
           "description": "①②③... 발화 허용 화이트리스트 항목. undefined면 빈 배열"
+        },
+        "subsection_coverage": {
+          "type": "array",
+          "description": "파트 안 H3 하위 섹션(예: '### 실험 ①: …')이 따로 가진 커버리지. M8 발견: 파트는 첫 커버리지 줄만 갖고, 뒤따르는 줄들은 하위 섹션의 것이다. 예전에는 나중 줄이 파트 커버리지를 **덮어써서** 파트의 발화 허용 목록이 통째로 다른 집합으로 바뀌어 있었다(Live16 3부·Live17 4부).",
+          "items": {
+            "type": "object",
+            "properties": {
+              "heading": { "type": "string" },
+              "coverage_state": { "type": "string" },
+              "coverage_items": { "type": "array", "items": { "type": "string" } },
+              "directive_note": { "type": ["string", "null"] }
+            },
+            "required": ["heading", "coverage_state", "coverage_items"],
+            "additionalProperties": false
+          }
         },
         "directive_note": {
           "type": [

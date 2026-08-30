@@ -25,6 +25,20 @@ gemini --version
 - `where codex` 또는 `where gemini`가 실패하면, 즉시 설치하지 말고 설치 방식/계정/PATH 영향 범위를 먼저 정리한 뒤 사용자 승인을 받는다.
 - Claude Code, Codex, Gemini를 동시에 열 수 있더라도 같은 파일을 동시에 수정하지 않는 운영 규칙을 먼저 만든다.
 - 이 검증은 완료되었으며, 이후에는 Topic Retrospective와 Remotion 영상 제작 Go/No-Go 확인으로 넘어간다.
+## M9 추가 완료 기록
+
+2026-08-30에 새 ChatGPT Desktop/Codex 앱 설치, iPad Remote 연결, 현재 vault 구조 읽기 테스트가 성공했다. 이 과정에서 `ChatGPT Classic`과 새 Codex 앱을 구분해야 한다는 점, `Codex CLI` 인증과 `Codex Remote host` 등록이 다르다는 점, `.appinstaller` 오류와 Store 설치 성공을 분리해서 해석해야 한다는 점이 확인됐다.
+
+### 남은 M9 검증
+
+| 과제 | 현재 상태 | 적용 시점 |
+|---|---|---|
+| 파일 쓰기 최소 테스트 | 완료: `codex-remote-test-20260830.txt` 생성 확인 | 2026-08-30 |
+| 승인 흐름 확인 | 부분 완료: iPad에서 파일 쓰기 성공, 승인 UI 세부 기록은 대기 | 다음 경계 테스트 시 |
+| 푸시 알림 확인 | 부분 성공: Windows 노트북 알림 수신, iPad 푸시는 미수신 | iPadOS 알림 권한 점검 시 |
+| 잠자기/복구 확인 | 대기 | 방송 종료 후 |
+| 운용 규칙 부분 확정 | 완료: 방송 중 사용 범위, 금지 작업, 경로 분리 원칙 정리 | 2026-08-30 |
+
 ## 우선순위 1 — 보안 강화
 
 | 과제 | 현재 상태 | 왜 필요한가 | 적용 시점 |
@@ -60,6 +74,11 @@ gemini --version
 
 - **Remotion AI 영상 실제 제작**: 이 Topic은 영상화 후보와 스토리라인 정리까지가 범위다. 실제 슬라이드 플랜/오디오/렌더링은 `remotion-video` 스킬을 사용하는 별도 작업으로 진행한다. → [../video/remotion-ai-video-brief.md](../video/remotion-ai-video-brief.md)
 - **맥미니/맥 스튜디오 실제 구매 및 셋업**: 별도 Topic으로 분리해서 진행하는 것을 권장한다 (조건 충족 시).
+
+
+
+
+
 
 
 

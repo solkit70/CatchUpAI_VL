@@ -1,0 +1,41 @@
+[커버리지 화이트리스트 — 이 범위 밖은 말하지 않는다]
+- AI로 라방 보조 MC 앱 만들기
+- 기존 스킬을 OpenAI 신규 Transcribe 모델로 업데이트
+
+[근거 목록]
+- path: Ingest/CatchUpAI_VL/Topics/Live-CoMC-App/07-CoMC-Engine-POC/data/rundown_samples/2026-07-26 - Live21 Weekly Rundown.md#오늘의 실험
+  quote: ★ 실험 1 — AI로 라이브 방송 보조 MC 앱 만들기
+- path: Ingest/CatchUpAI_VL/Topics/Live-CoMC-App/07-CoMC-Engine-POC/data/rundown_samples/2026-07-26 - Live21 Weekly Rundown.md#오늘의 실험
+  quote: ★ 실험 2 — 기존 스킬을 OpenAI 신규 Transcribe 모델로 업데이트
+- path: Ingest/CatchUpAI_VL/Topics/Live-CoMC-App/07-CoMC-Engine-POC/data/rundown_samples/2026-07-26 - Live21 Weekly Rundown.md#오늘의 실험
+  quote: [ ] `video-subtitles` 스킬 — Whisper API → GPT-Transcribe 교체 검토
+- path: Ingest/CatchUpAI_VL/Topics/Live-CoMC-App/07-CoMC-Engine-POC/data/rundown_samples/2026-07-26 - Live21 Weekly Rundown.md#오늘의 실험
+  quote: [ ] `video-add-chapters`의 `transcribe_video.py` 교체 검토
+- path: Ingest/CatchUpAI_VL/Topics/Live-CoMC-App/07-CoMC-Engine-POC/data/rundown_samples/2026-07-26 - Live21 Weekly Rundown.md#오늘의 실험
+  quote: [ ] **컨텍스트 주입 기능 연결** — 최근 만든 `glossary.json`의 `prompt_terms`를 그대로 넘길 수 있는지 확인
+- path: Ingest/CatchUpAI_VL/Topics/Live-CoMC-App/07-CoMC-Engine-POC/data/rundown_samples/2026-07-26 - Live21 Weekly Rundown.md#오늘의 실험
+  quote: [ ] 다른 스킬 중 최신 기능으로 업데이트할 것이 있는지 조사
+- path: Ingest/CatchUpAI_VL/Topics/Live-CoMC-App/07-CoMC-Engine-POC/data/rundown_samples/2026-07-26 - Live21 Weekly Rundown.md#오늘의 실험
+  quote: ✅ 방송 후 결과 (2026-08-02)
+- path: Roundup/2026-07-26 - Weekly Progress and Planning#Priority Summary
+  quote: 3 — NGO 실무자를 위한 AI 활용법 영상 (신규) — [x] — 8/1 공개, 인트로·아웃트로 제작 포함 → https://youtu.be/IsmHWee25Ag
+- path: Roundup/2026-07-26 - Weekly Progress and Planning#Priority Summary
+  quote: 4 — FedWay 기획안 v2 개정 (신규) — [x] — 프로그램 초안 반영, 유공자 12인 AI 영상 중심으로 전환
+- path: Roundup/2026-07-26 - Weekly Progress and Planning#Priority Summary
+  quote: 7 — Bila AI 기능 테스트 — [>] — Slack 블로커는 GOBI 개발팀 조치 필요, Live21 실험 항목으로 이동
+- path: Roundup/2026-07-30 - Daily Roundup#Status Summary
+  quote: BigHug Bellevue City Hall 실측 자료 — 업데이트 확인 — 전기 outlet/사인 부착/운영 동선 follow-up 필요
+- path: Roundup/2026-08-02 - Daily Roundup#Status Summary
+  quote: Live21 방송 진행 — 완료 — 실험①②③ 모두 다룸
+- path: Roundup/2026-08-02 - Daily Roundup#Status Summary
+  quote: GPT-Transcribe/GPT-Live-Transcribe 스킬 반영 — 완료 — 5개 스킬(video-add-chapters/cleaning/full-process/subtitles, youtube-channel-archiver)
+- path: Roundup/2026-08-02 - Daily Roundup#Status Summary
+  quote: Titlow Park 새 관찰 모임 참가 — 완료 — 오늘의 핵심 인사이트 소스
+
+[커버리지 상태]
+directive
+
+[진행자/시청자 발화]
+오늘 방송에서 데이터센터 인력 프로그램도 다루나요?
+
+위 근거만 사용해 시청자 질문에 답하는 초안을 만들어라. 문장은 최대 5개.

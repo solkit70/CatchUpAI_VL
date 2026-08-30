@@ -1,0 +1,12 @@
+{
+  "transcript": "질문 세 개만 요약해줘",
+  "intent": "summarize_part",
+  "slots": {
+    "requested_quantity": 3
+  },
+  "ambiguity_flags": [
+    "quantity_mismatch"
+  ],
+  "confidence": 0.9,
+  "created_at": "2026-08-30T13:07:18.302501+00:00"
+}

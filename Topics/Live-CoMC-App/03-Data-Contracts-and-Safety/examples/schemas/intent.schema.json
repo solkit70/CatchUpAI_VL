@@ -43,7 +43,8 @@
         "enum": [
           "quantity_mismatch",
           "no_coverage",
-          "completion_confusion"
+          "completion_confusion",
+          "forbidden_topic_requested"
         ]
       }
     },

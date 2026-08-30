@@ -31,7 +31,17 @@ from common import (DATA, out, now_iso, read_text, rel_to_vault, trace,  # noqa:
 # ── 정규식 (M1 case-table.md 실측 기반) ────────────────────────────────
 
 # 케이스 1~5: 정수/소수 파트, 분 단위·미정·나머지 전부
-RE_PART = re.compile(r"^##\s+(\d+(?:\.\d+)?)부:\s*(.+?)\s*\((.+?)\)\s*$")
+#
+# ⚠️ 괄호 시간 표기는 **선택**이다 (M8 발견, 2026-08-30).
+#    Live20·21 은 항상 '## 1부: 제목 (20분)' 이라 필수로 두었는데,
+#    Live25 는 '## 1부: 지난 주 생성한 컨텐츠' — 괄호가 없다.
+#    필수로 두면 파트로 인식되지 않고, 뒤따르는 커버리지 줄이 받을 파트를 잃어
+#    **화이트리스트 15개가 통째로 사라진다.** 크래시도 경고도 없이.
+# 이모지·기호 접두를 허용한다. Live11: '## 1️⃣ 1부: 이번 주 활동 수치'
+# 접두를 요구하지 않으면 파트가 통째로 인식되지 않아 그 구간이 사라진다.
+RE_PART = re.compile(
+    r"^##\s+(?:[^\w\s]|\d️⃣)*\s*(\d+(?:\.\d+)?)부:\s*(.+?)"
+    r"(?:\s*\((.+?)\))?\s*$")
 
 # 번호 없이 괄호 시간 표기만 있는 H2. 실물: Live20 '## 주간 영상 (시간 미정)'
 RE_H2_PAREN = re.compile(r"^##\s+(.+?)\s*\((.+?)\)\s*$")
@@ -39,7 +49,21 @@ RE_H2_ANY = re.compile(r"^##\s+(.+?)\s*$")
 RE_H3_PAREN = re.compile(r"^###\s+(.+?)\s*\((.+?)\)\s*$")
 
 # 케이스 6~8: 커버리지 줄
-RE_COVERAGE = re.compile(r"^>\s*\*\*이번 방송 커버리지\*\*:\s*(.+?)\s*$")
+#
+# ⚠️ 볼드 안에 수식어가 붙는 실물이 있다 (M8 발견, 2026-08-30).
+#    Live22 2부: '**이번 방송 커버리지 (2026-08-09 방송 후 실제)**: ①...'
+#    수식어를 허용하지 않으면 매칭에 실패하고, 실패는 undefined 로 떨어져
+#    **항목 3개가 조용히 사라진다.**
+RE_COVERAGE = re.compile(
+    r"^>\s*\*\*이번 방송 커버리지(?:\s*\([^)]*\))?\s*\*\*:\s*(.+?)\s*$")
+
+# 커버리지가 '없음'을 뜻하는 어형. 항목이 아니라 부재 선언이다.
+#
+# ⚠️ 이것을 항목으로 읽으면 **말하면 안 되는 것을 말해도 된다고 허가하는 것**이 된다.
+#    Live25 주간 영상: '미편성 — 이번 회차 슬라이드에 없음' 이 통째로
+#    발화 허용 항목 1개가 되어 있었다. 항목 소실(말 못 함)보다 나쁜 방향의 실패다.
+NO_COVERAGE_FORMS = ("미정", "TBD", "tbd", "미편성", "없음", "해당 없음", "해당없음",
+                     "추후", "미확정")
 
 RE_MINUTES = re.compile(r"(\d+)\s*분")
 
@@ -102,18 +126,41 @@ def parse_time(raw: str) -> tuple[int | None, bool]:
     return (int(m.group(1)) if m else None), False
 
 
-def parse_coverage(line: str) -> tuple[str, list[str], str | None]:
-    """커버리지 줄 → (state, items, directive_note)."""
+def parse_coverage(line: str) -> tuple[str, list[str], str | None, str | None]:
+    """커버리지 줄 → (state, items, directive_note, anomaly).
+
+    ## 못 읽은 것과 비어 있는 것은 다르다
+
+    이 함수는 원래 실패를 전부 `undefined` 로 돌려보냈다. undefined 는
+    HITL 로 넘어가므로 **안전해 보인다.** 그래서 아무도 눈치채지 못한다 —
+    파이프라인은 성공을 보고하고, 파트는 조용히 발화 항목 0개가 된다.
+
+    비어 있는 것(진짜 미편성)은 정상이고, 못 읽은 것은 버그다.
+    같은 값으로 뭉뚱그리면 버그가 정상으로 위장된다.
+    4번째 값 `anomaly` 가 그 둘을 가른다.
+    """
     m = RE_COVERAGE.match(line)
     if not m:
-        return "undefined", [], None
+        # 줄에 '이번 방송 커버리지' 가 있는데 정규식이 못 읽었다 = 파서 결함.
+        return "undefined", [], None, "coverage_line_unparsed"
     body = m.group(1).strip()
-    if not body or body in ("미정", "TBD"):
-        return "undefined", [], None
+    if not body:
+        return "undefined", [], None, None
+
+    # 부재 선언은 항목이 아니다. 앞부분만 봐서 판정한다 —
+    # '미편성 — 이번 회차 슬라이드에 없음' 처럼 뒤에 설명이 붙는다.
+    head = body.split("—")[0].split("–")[0].strip()
+    if head in NO_COVERAGE_FORMS or body in NO_COVERAGE_FORMS:
+        return "undefined", [], None, None
 
     raw_items = [x.strip() for x in RE_ITEM_SPLIT.split(body) if x.strip()]
     if not raw_items:
-        return "undefined", [], None
+        return "undefined", [], None, None
+
+    # 원문자(①②③)가 하나도 없으면 항목 목록이 아니다. 문장 하나를 통째로
+    # 화이트리스트에 넣으면 그 문장 전체가 발화 허가가 된다.
+    if not RE_ITEM_SPLIT.search(body):
+        return "undefined", [], None, None
 
     # 지시문은 마지막 항목 뒤에 붙는다. 항목 텍스트에서 떼어 내지 않으면
     # 발화 화이트리스트에 운영 지시문이 섞여 들어간다.
@@ -124,7 +171,7 @@ def parse_coverage(line: str) -> tuple[str, list[str], str | None]:
         raw_items[-1] = raw_items[-1][:dm.start()].strip()
         raw_items = [x for x in raw_items if x]
 
-    return ("directive" if directive else "defined"), raw_items, directive
+    return ("directive" if directive else "defined"), raw_items, directive, None
 
 
 def exclude_reason(heading: str) -> str | None:
@@ -143,11 +190,13 @@ def parse_rundown(md_path: Path) -> dict:
     excluded: list[dict] = []
     conditional: list[dict] = []
 
+    anomalies: list[dict] = []       # 못 읽은 줄. 빈 리스트가 정상이다
     cur: dict | None = None          # 지금 커버리지 줄을 받을 수 있는 파트
     cur_excluded = False             # 금칙 섹션 안이면 커버리지도 무시한다
     pending_h2: tuple[str, str] | None = None   # (제목, 괄호내용) — 커버리지가 오면 파트로 승격
+    cur_h3: str | None = None        # 파트 안에서 마지막으로 지난 H3
 
-    for line in lines:
+    for ln, line in enumerate(lines, 1):
         # ── H2 ────────────────────────────────────────────────────────
         if line.startswith("## "):
             heading = line[3:].strip()
@@ -161,9 +210,13 @@ def parse_rundown(md_path: Path) -> dict:
                 cur_excluded = True
                 continue
 
+            cur_h3 = None
             m = RE_PART.match(line)
             if m:
-                pid, title, time_raw = m.group(1), m.group(2).strip(), m.group(3).strip()
+                # 괄호 시간 표기는 선택이다. 없으면 group(3) 이 None 이다 —
+                # 시간을 모르는 것이지 파트가 아닌 것이 아니다.
+                pid, title = m.group(1), m.group(2).strip()
+                time_raw = (m.group(3) or "").strip() or "시간 미표기"
                 minutes, remainder = parse_time(time_raw)
                 cur = {"id": pid, "sort_key": float(pid), "is_numbered": True,
                        "title": title, "time_raw": time_raw, "time_minutes": minutes,
@@ -182,6 +235,7 @@ def parse_rundown(md_path: Path) -> dict:
 
         # ── H3 ────────────────────────────────────────────────────────
         if line.startswith("### "):
+            cur_h3 = line[4:].strip()
             m3 = RE_H3_PAREN.match(line)
             if m3 and any(h in m3.group(2) for h in CONDITION_HINTS):
                 conditional.append({"heading": line[4:].strip(),
@@ -192,7 +246,10 @@ def parse_rundown(md_path: Path) -> dict:
         if line.lstrip().startswith(">") and "이번 방송 커버리지" in line:
             if cur_excluded:
                 continue
-            state, items, directive = parse_coverage(line.strip())
+            state, items, directive, anomaly = parse_coverage(line.strip())
+            if anomaly:
+                anomalies.append({"kind": anomaly, "line_no": ln,
+                                  "raw": line.strip()[:200]})
 
             if cur is None and pending_h2 is not None:
                 # 번호 없는 방송 구간. 커버리지를 가졌으므로 파트다.
@@ -208,9 +265,37 @@ def parse_rundown(md_path: Path) -> dict:
                 pending_h2 = None
 
             if cur is not None:
-                cur["coverage_state"] = state
-                cur["coverage_items"] = items
-                cur["directive_note"] = directive
+                # ⚠️ 파트는 **첫 커버리지 줄**만 갖는다 (M8 발견, 2026-08-30).
+                #
+                # 예전에는 뒤따르는 줄이 앞의 것을 덮어썼다. 그래서 파트의 발화
+                # 허용 목록이 **통째로 다른 집합으로 바뀌어** 있었다.
+                #
+                #   Live16 3부  파트 직속 2항목 → 실험②의 3항목으로 대체
+                #   Live17 4부  파트 직속 7항목 → 실험⑦의 3항목으로 대체
+                #
+                # 항목이 사라지는 것보다 나쁘다. 사라지면 말을 못 할 뿐이지만,
+                # 대체되면 **엉뚱한 것을 말해도 된다고 허가**하게 된다.
+                #
+                # 실물에서 순서는 일정하다 — 파트 직속 줄이 항상 먼저 오고,
+                # 그 뒤는 전부 '### 실험 ①②③' 같은 하위 섹션의 것이다.
+                # 버리지 않고 따로 담는다. 진행자가 특정 실험을 진행할 때
+                # 더 좁은 화이트리스트로 쓸 수 있는 정보다.
+                if cur_h3 is None and not cur["coverage_items"]:
+                    cur["coverage_state"] = state
+                    cur["coverage_items"] = items
+                    cur["directive_note"] = directive
+                else:
+                    cur.setdefault("subsection_coverage", []).append({
+                        "heading": cur_h3 or "(파트 직속 · 중복 줄)",
+                        "coverage_state": state,
+                        "coverage_items": items,
+                        "directive_note": directive,
+                    })
+            else:
+                # 받을 파트가 없다. 헤딩을 못 읽었다는 뜻이고,
+                # 이 줄의 발화 항목은 어디에도 실리지 않는다.
+                anomalies.append({"kind": "coverage_without_part", "line_no": ln,
+                                  "raw": line.strip()[:200]})
 
     status = fm.get("status", "")
     index = {
@@ -219,6 +304,7 @@ def parse_rundown(md_path: Path) -> dict:
         "parts": parts,
         "excluded_sections": excluded,
         "conditional_sections": conditional,
+        "parse_anomalies": anomalies,
         "parsed_at": now_iso(),
     }
     if status:
@@ -231,7 +317,25 @@ def parse_rundown(md_path: Path) -> dict:
 SAMPLES = {
     "20": "2026-07-19 - Live20 Weekly Rundown.md",
     "21": "2026-07-26 - Live21 Weekly Rundown.md",
+    # M8에서 추가. 이 둘이 파서 결함 3종을 드러낸 실물이다 —
+    # 22는 볼드 안 수식어, 25는 괄호 없는 파트 헤딩 + 부재 선언 오탐.
+    "22": "2026-08-02 - Live22 Weekly Rundown.md",
+    "25": "2026-08-23 - Live25 Weekly Rundown.md",
 }
+
+
+def report_anomalies(idx: dict) -> None:
+    """못 읽은 줄을 반드시 눈에 보이게 한다.
+
+    조용한 실패가 이 파서의 핵심 위험이다. 결과가 '안전한 값'(undefined)으로
+    떨어지기 때문에 성공과 구분되지 않는다. 화면에 띄우지 않으면 아무도 모른다.
+    """
+    an = idx.get("parse_anomalies") or []
+    if not an:
+        return
+    print(f"   ⚠ 못 읽은 줄 {len(an)}건 — 발화 항목이 소실됐을 수 있습니다")
+    for a in an:
+        print(f"       [{a['kind']}] L{a.get('line_no','?')}: {a['raw'][:88]}")
 
 
 def report(idx: dict) -> None:
@@ -274,11 +378,13 @@ def main():
         name = f"rundown_index.{live}.json" if live else "rundown_index.json"
         path = write_json(out(name), idx)
         report(idx)
+        report_anomalies(idx)
         covered = sum(len(p["coverage_items"]) for p in idx["parts"])
         trace("01_parse_rundown", ok=True, source=idx["source_path"],
               parts=len(idx["parts"]), coverage_items=covered,
               excluded=len(idx["excluded_sections"]),
-              conditional=len(idx["conditional_sections"]), output=path.name)
+              conditional=len(idx["conditional_sections"]),
+              anomalies=idx.get("parse_anomalies", []), output=path.name)
         print(f"   → {path.name}  (커버리지 항목 총 {covered}개)")
 
     return 0

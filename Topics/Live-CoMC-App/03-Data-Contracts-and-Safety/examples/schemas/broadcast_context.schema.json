@@ -42,6 +42,25 @@
       "description": "excluded_sections가 이 컨텍스트에서 실제로 제거되었음을 단언하는 불변식 플래그 (true 강제)",
       "const": true
     },
+    "excluded_headings": {
+      "type": "array",
+      "description": "이번 방송에서 제외된 섹션의 **이름만**. 본문은 담지 않는다. M8 발견: 진행자가 금칙 섹션을 이름으로 물으면 그 이름이 발화문을 타고 프롬프트에 들어간다. 거절하려면 무엇이 금칙인지 알아야 하므로 이름을 여기까지 가져온다. build_prompt 는 이 필드를 쓰지 않는다.",
+      "items": { "type": "string" }
+    },
+    "withheld_conditional": {
+      "type": "array",
+      "description": "조건 미충족으로 근거 풀에서 보류한 조건부 섹션. safety_policy 의 conditional.time_gated 집행 기록이다. 무엇을 왜 뺐는지 남지 않으면 '원래 없었다'와 구분되지 않는다.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "heading": { "type": "string" },
+          "condition": { "type": "string" },
+          "reason": { "type": "string" }
+        },
+        "required": ["heading", "condition", "reason"],
+        "additionalProperties": false
+      }
+    },
     "assembled_at": { "type": "string", "format": "date-time" }
   },
   "required": ["current_part_id", "coverage_state", "coverage_items", "evidence_pool", "forbidden_removed"],

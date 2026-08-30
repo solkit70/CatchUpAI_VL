@@ -1,21 +1,14 @@
 {
   "sentences": [
-    "오늘은 실험 주제가 AI로 라이브 방송 보조 MC 앱 만들기와, 기존 스킬을 OpenAI 신규 Transcribe 모델로 업데이트하는 내용으로 진행되고 있어요.",
-    "특히 GPT-Transcribe와 GPT-Live-Transcribe 스킬 반영이 완료되었다고 정리되어 있습니다.",
-    "따라서 현재 방송에서 다루는 업데이트 범위는 Transcribe 관련 스킬 교체와 적용에 한정됩니다.",
-    "질문 주신 TTS 모델(Qwen3-TTS) 사용 여부는 오늘의 실험 기록과 결과 목록에 명시되어 있지 않습니다.",
-    "근거에 없는 정보는 확정해 말씀드릴 수 없어서, TTS 모델 종류는 문서상 확인 불가로 안내드립니다."
+    "네, 방송 이후에 GPT-Transcribe 스킬 반영이 완료됐고요, video-subtitles 포함 총 5개 스킬에 적용됐습니다.",
+    "적용된 스킬은 video-add-chapters, cleaning, full-process, subtitles, 그리고 youtube-channel-archiver예요.",
+    "그리고 8월 2일 라이브에서 실험 ①②③ 모두 다뤘다는 점도 확인됐습니다."
   ],
   "claim_map": [
     {
       "sentence_idx": 0,
-      "evidence_path": "Ingest/CatchUpAI_VL/Topics/Live-CoMC-App/07-CoMC-Engine-POC/data/rundown_samples/2026-07-26 - Live21 Weekly Rundown.md#오늘의 실험",
-      "evidence_quote": "★ 실험 1 — AI로 라이브 방송 보조 MC 앱 만들기"
-    },
-    {
-      "sentence_idx": 0,
-      "evidence_path": "Ingest/CatchUpAI_VL/Topics/Live-CoMC-App/07-CoMC-Engine-POC/data/rundown_samples/2026-07-26 - Live21 Weekly Rundown.md#오늘의 실험",
-      "evidence_quote": "★ 실험 2 — 기존 스킬을 OpenAI 신규 Transcribe 모델로 업데이트"
+      "evidence_path": "Roundup/2026-08-02 - Daily Roundup#Status Summary",
+      "evidence_quote": "GPT-Transcribe/GPT-Live-Transcribe 스킬 반영 — 완료 — 5개 스킬(video-add-chapters/cleaning/full-process/subtitles, youtube-channel-archiver)"
     },
     {
       "sentence_idx": 1,
@@ -24,27 +17,12 @@
     },
     {
       "sentence_idx": 2,
-      "evidence_path": "Ingest/CatchUpAI_VL/Topics/Live-CoMC-App/07-CoMC-Engine-POC/data/rundown_samples/2026-07-26 - Live21 Weekly Rundown.md#오늘의 실험",
-      "evidence_quote": "[ ] `video-subtitles` 스킬 — Whisper API → GPT-Transcribe 교체 검토"
-    },
-    {
-      "sentence_idx": 2,
-      "evidence_path": "Ingest/CatchUpAI_VL/Topics/Live-CoMC-App/07-CoMC-Engine-POC/data/rundown_samples/2026-07-26 - Live21 Weekly Rundown.md#오늘의 실험",
-      "evidence_quote": "[ ] `video-add-chapters`의 `transcribe_video.py` 교체 검토"
-    },
-    {
-      "sentence_idx": 3,
       "evidence_path": "Roundup/2026-08-02 - Daily Roundup#Status Summary",
       "evidence_quote": "Live21 방송 진행 — 완료 — 실험①②③ 모두 다룸"
-    },
-    {
-      "sentence_idx": 4,
-      "evidence_path": "Ingest/CatchUpAI_VL/Topics/Live-CoMC-App/07-CoMC-Engine-POC/data/rundown_samples/2026-07-26 - Live21 Weekly Rundown.md#오늘의 실험",
-      "evidence_quote": "★ 실험 2 — 기존 스킬을 OpenAI 신규 Transcribe 모델로 업데이트"
     }
   ],
   "coverage_state": "directive",
-  "length_sentences": 5,
+  "length_sentences": 3,
   "provider": "openai",
-  "created_at": "2026-08-23T13:49:37.545729+00:00"
+  "created_at": "2026-08-30T13:16:32.955464+00:00"
 }

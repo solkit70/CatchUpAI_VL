@@ -31,6 +31,7 @@ openai=minimal / gemini=low 다. 코드에 박지 않는다 —
 from __future__ import annotations
 
 import argparse
+import hashlib
 import sys
 import time
 from pathlib import Path
@@ -96,6 +97,11 @@ def main():
     ap.add_argument("--live", required=True)
     ap.add_argument("--intent-file", help="기본값 output/intent.json")
     ap.add_argument("--provider", help="폴백 무시하고 지정 프로바이더만")
+    ap.add_argument("--effort", choices=["minimal", "low", "medium", "high"],
+                    help="레지스트리의 default_effort 를 덮어쓴다 (M8 effort 스윕용). "
+                         "실전에서는 쓰지 않는다 — 근거는 llm-latency-sweep.md 다")
+    ap.add_argument("--dump-prompt", help="LLM 에 보낸 프롬프트 전문을 이 경로에 저장 "
+                                          "(M8 실습 2 — 금칙 섹션 미노출 증명)")
     args = ap.parse_args()
 
     ctx = read_json(out(f"broadcast_context.{args.live}.json"))
@@ -130,6 +136,20 @@ def main():
     max_s = max_sentences_for(intent, policy)
 
     prompt = build_prompt(ctx, intent, max_s)
+
+    # ── 프롬프트 지문 ─────────────────────────────────────────────────
+    # 전문을 trace 에 매번 넣으면 파일이 불어나고 같은 내용을 두 벌 갖게 된다.
+    # 대신 해시만 남긴다. build_prompt 는 (ctx, intent, max_s) 에 대해 결정적이므로
+    # 나중에 저장된 컨텍스트로 다시 만들어 해시를 맞춰 보면
+    # **그때 보낸 것이 이것임을 증명할 수 있다.**
+    # 증명이 성립해야 "금칙 섹션이 프롬프트에 없었다"를 사후에 확인할 수 있다.
+    fingerprint = hashlib.sha256(prompt.encode("utf-8")).hexdigest()
+    if args.dump_prompt:
+        dp = Path(args.dump_prompt)
+        dp.parent.mkdir(parents=True, exist_ok=True)
+        dp.write_text(prompt, encoding="utf-8")
+        print(f"   프롬프트 전문 저장: {dp.name} (sha256 {fingerprint[:16]})")
+
     attempts: list[dict] = []
 
     for name in order:
@@ -137,7 +157,7 @@ def main():
         if cfg is None:
             attempts.append({"provider": name, "error": "런타임 레지스트리에 없음"})
             continue
-        eff = cfg.get("default_effort")
+        eff = args.effort or cfg.get("default_effort")
         p = build(name, cfg["model"], cfg.get("cost_per_1k_tokens"), effort=eff)
         t0 = time.time()
         try:
@@ -165,6 +185,8 @@ def main():
         for i, s in enumerate(draft["sentences"]):
             print(f"     [{i}] {s}")
         trace("04_compose_answer", ok=True, provider=name, model=r.model,
+              prompt_sha256=fingerprint, prompt_chars=len(prompt),
+              evidence_paths=sorted({e["path"] for e in ctx["evidence_pool"]}),
               effort=eff, latency_ms=wall, attempts=r.attempts,
               sentences=draft["length_sentences"], max_sentences=max_s,
               fallback_skipped=[a["provider"] for a in attempts], output=path.name)

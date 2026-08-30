@@ -1,0 +1,10 @@
+{
+  "transcript": "Seattle Tech Week 영상 편집은 앞으로 언제 하나요?",
+  "intent": "answer_question",
+  "slots": {},
+  "ambiguity_flags": [
+    "completion_confusion"
+  ],
+  "confidence": 0.9,
+  "created_at": "2026-08-30T13:07:19.046703+00:00"
+}

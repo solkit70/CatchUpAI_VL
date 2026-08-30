@@ -35,10 +35,6 @@
       "quote": "✅ 방송 후 결과 (2026-08-02)"
     },
     {
-      "path": "Ingest/CatchUpAI_VL/Topics/Live-CoMC-App/07-CoMC-Engine-POC/data/rundown_samples/2026-07-26 - Live21 Weekly Rundown.md#오늘의 실험",
-      "quote": "대기 목록 (시간이 남으면)"
-    },
-    {
       "path": "Roundup/2026-07-26 - Weekly Progress and Planning#Priority Summary",
       "quote": "3 — NGO 실무자를 위한 AI 활용법 영상 (신규) — [x] — 8/1 공개, 인트로·아웃트로 제작 포함 → https://youtu.be/IsmHWee25Ag"
     },
@@ -80,6 +76,17 @@
     "2026-07-19~2026-07-26 - Claude Code": "missing_section",
     "2026-08-01 시민단체를 위한 AI 영상 유튜브 업로드 자료 (한국어) by Claude Code": "missing_section"
   },
+  "excluded_headings": [
+    "보류된 인사이트 후보 (이번 방송 미편성)",
+    "주간 영상 후보 (이번 방송 코너 미편성)"
+  ],
+  "withheld_conditional": [
+    {
+      "heading": "대기 목록 (시간이 남으면)",
+      "condition": "시간이 남으면",
+      "reason": "조건 충족 여부를 코드가 판정할 수 없음 — 기본값 제외 (--allow-conditional 로 편입)"
+    }
+  ],
   "forbidden_removed": true,
-  "assembled_at": "2026-08-23T13:47:42.353128+00:00"
+  "assembled_at": "2026-08-30T13:13:36.827216+00:00"
 }

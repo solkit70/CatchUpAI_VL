@@ -1,0 +1,68 @@
+{
+  "source_path": "AI/Roundup/2026-08-23 - Live25 Weekly Rundown.md",
+  "is_final": false,
+  "parts": [
+    {
+      "id": "1",
+      "sort_key": 1.0,
+      "is_numbered": true,
+      "title": "지난 주 생성한 컨텐츠",
+      "time_raw": "시간 미표기",
+      "time_minutes": null,
+      "is_remainder": false,
+      "coverage_state": "defined",
+      "coverage_items": [
+        "Builders Lounge 4차 모임 영상 작업 완료"
+      ],
+      "directive_note": null
+    },
+    {
+      "id": "2",
+      "sort_key": 2.0,
+      "is_numbered": true,
+      "title": "오늘의 실험",
+      "time_raw": "시간 미표기",
+      "time_minutes": null,
+      "is_remainder": false,
+      "coverage_state": "defined",
+      "coverage_items": [
+        "AI 라방 보조 MC 앱",
+        "데이터센터 인력 프로그램 조사",
+        "Claude Code 모바일→로컬 실행",
+        "Caregiver Topic",
+        "Chromebook VibeLearn AI",
+        "Seattle Tech Week 2026 영상 학습",
+        "DFS Crowd Manager 요약 영상",
+        "총기난사 대처 요약 영상",
+        "\"AI는 일을 줄이는가\" 회고 글",
+        "Bila AI Agent M2",
+        "피터 틸 vs 내 관점",
+        "catchupai.net BL 내용 추가",
+        "실시간 번역 앱 feasibility",
+        "기타 진행 중 Topic 3종"
+      ],
+      "directive_note": null
+    },
+    {
+      "id": "주간 영상",
+      "sort_key": 902.0,
+      "is_numbered": false,
+      "title": "주간 영상",
+      "time_raw": "시간 미정",
+      "time_minutes": null,
+      "is_remainder": false,
+      "coverage_state": "undefined",
+      "coverage_items": [],
+      "directive_note": null
+    }
+  ],
+  "excluded_sections": [
+    {
+      "heading": "보류된 인사이트 후보 (다음 방송 검토용)",
+      "reason": "on_hold"
+    }
+  ],
+  "conditional_sections": [],
+  "parse_anomalies": [],
+  "parsed_at": "2026-08-30T12:55:23.765148+00:00"
+}

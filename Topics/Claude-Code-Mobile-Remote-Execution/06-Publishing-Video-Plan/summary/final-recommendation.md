@@ -42,7 +42,14 @@
 - [08-Native-Remote-Control/comparisons/ssh-vs-native-remote-control.md](../../08-Native-Remote-Control/comparisons/ssh-vs-native-remote-control.md) — 두 방식 비교
 - [08-Native-Remote-Control/decisions/which-path-when.md](../../08-Native-Remote-Control/decisions/which-path-when.md) — 상황별 선택 기준
 
-> ⚠️ **아래 "최종 추천 구조"는 M7 시점 기준이다.** M8에서 Claude Code 네이티브 Remote Control을 확인해, **Claude Code만 쓸 경우 SSH 스택 없이 연결하는 경로**가 따로 있다. SSH 구조는 Codex·Gemini 실행, 임의 셸 작업, 계정 격리, 홈서버 용도로 여전히 유효하다. 선택 기준은 위 `which-path-when.md`를 따른다.
+### M9 — Codex Remote 검증과 세팅 (2026-08-30 추가)
+
+- [09-Codex-Remote/README.md](../../09-Codex-Remote/README.md) — 모듈 요약과 현재 상태
+- [09-Codex-Remote/lab/setup-procedure.md](../../09-Codex-Remote/lab/setup-procedure.md) — 설치, iPad 연결, 읽기 테스트 기록
+- [09-Codex-Remote/decisions/codex-remote-usage-rules.md](../../09-Codex-Remote/decisions/codex-remote-usage-rules.md) — Codex Remote 운용 규칙
+- [vl_worklog/20260830_M9_Claude-Code-Mobile-Remote-Execution.md](../../vl_worklog/20260830_M9_Claude-Code-Mobile-Remote-Execution.md) — Classic 앱 혼선부터 iPad 연결 성공까지의 실제 문제 해결 기록
+
+> ⚠️ **아래 "최종 추천 구조"는 M7 시점 기준이다.** M8에서 Claude Code 네이티브 Remote Control을 확인했고, M9에서 Codex도 새 ChatGPT Desktop/Codex 앱을 통해 iPad Remote 연결이 가능함을 확인했다. SSH 구조는 Gemini 실행, 임의 셸 작업, 계정 격리, 홈서버, 세밀한 운영 통제 용도로 여전히 유효하다. Claude는 Claude Remote Control, Codex는 Codex Remote, 범용 셸은 SSH로 구분해 선택한다.
 
 ## 최종 추천 구조
 
@@ -78,13 +85,15 @@ Password 인증은 1차 실험 단계에서는 허용 가능했지만(Tailscale 
 
 ## 완료 조건 충족
 
-현재 추천 구조는 Claude Code 기준 검증에 더해 iPad Termius에서 Codex와 Gemini CLI 실행 가능 여부까지 확인했다. 따라서 Topic의 기술 검증 범위는 완료되었고, 다음 단계는 Remotion 영상 제작 전 보안 검토와 사용자 최종 승인이다.
+현재 추천 구조는 Claude Code 기준 SSH 검증에 더해 iPad Termius에서 Codex/Gemini CLI 실행 가능 여부를 확인했고, 이후 Claude Remote Control과 Codex Remote까지 추가 검증했다. M9에서는 새 ChatGPT Desktop/Codex 앱에서 iPad Remote 연결, 현재 위치 구조 읽기, 최소 파일 쓰기 테스트가 성공했다. 남은 범위는 푸시 알림, 잠자기 복구 확인, 운용 규칙 최종 확정, Remotion 영상 제작 전 보안 검토다.
 
 ## 참조
 
 - [M2 1차 실험 추천안](../../02-Architecture-Comparison/decisions/recommended-first-experiment.md)
 - [M4 검증 결과](../../04-Remote-Execution-Lab/lab/validation-results.md)
 - [M5 운영 구조 요약](../../05-Operations-Security/README.md)
+
+
 
 
 

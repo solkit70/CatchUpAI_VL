@@ -1027,9 +1027,9 @@ WA 요양보호사 교육이 코호트제로 운영될 가능성이 있다 — *
 
 | 모듈 | 시작일 | 종료일 | 상태 | DoD 달성률 | 비고 |
 |------|--------|--------|------|-----------|------|
-| M1 | | | ⏳ | 0% | **규칙 1 적용 — 일정 스캔 먼저** |
-| M2 | | | ⏳ | 0% | |
-| M3 | | | ⏳ | 0% | 의료보험 조건이 핵심 |
+| M1 | 2026-08-29 | 2026-08-29 | ✅ | **100% (7/7)** | **세 경로는 같은 층위가 아니다** — HCA=자격 / IP=고용 형태 / NAC=상위 자격(HCA 면제). 상위 개념 **Long-Term Care Worker** 아래 기관 소속과 IP가 모두 포함되고 그들이 HCA 대상. **취업이 먼저다** — *"If you are not currently working, you are not able to obtain the DSHS background check."* 기한은 전부 채용일 기준(신청 14일 / 교육 120일 / 자격 200일)으로 1차 파악했으나, M2에서 2026-08-30 현재 한시 규칙상 자격 취득 365일/425일 기준으로 갱신. **규칙 1 판정: 순서 유지** — 취업이 먼저라 코호트 마감이 진입을 막지 않는다. 대신 **리스크 방향이 반대**로, 채용 후 120일 내 교육 미이수가 위험. **HCA→NAC Bridge 38시간** 전환 경로 존재. **IP 월 20시간 이하는 HCA 면제** → 파트타임 직결. 규제 3분할(발급 DOH / 교육·배경조회 DSHS / 시험 Prometric), NAC는 2026-07-01 WABON 이관. **75시간 구성 확보**(Orientation 2h+Safety 3h+Basic 70h / Basic=Fundamentals 38h+Skills 16h+Population Specific 16h). **기한 미준수 시 근무 중단** — *"You must stop working until you receive a home care aide certification."* |
+| M2 | 2026-08-30 | 2026-08-30 | ✅ | **100% (7/7)** | **200일/365일 관계 해결** — RCW/DOH FAQ의 200일은 기본 규정 또는 미갱신 문구이고, 2026-08-30 현재 WAC 246-980-030/040 한시 규칙은 2025-08-25~2027-12-31 신청자에게 365일, provisional certificate는 425일을 적용. **면제 층위 분리** — HCA certification exemption은 WAC 246-980-025, 70-hour basic training exemption은 WAC 388-112A-0090. **가족 돌봄 VA-funded 범위 해결** — spouse/domestic partner는 2026-07-01 이후 VA-funded 요건 없이 면제 가능. **NAC/NAR 구분 및 비용 정리**, **배경조회는 채용/계약 기관을 통해 진행**한다는 운영 기준 확정. |
+| M3 | 2026-08-30 | 2026-08-30 | ✅ | **100% (7/7)** | **"파트타임 = 무보험"이 아니었다** — 세 체계 모두 문턱이 **월 80시간(주당 약 18.5h)** 이고, 고정 파트타임이면 넘을 수 있다. **다만 같은 80시간도 진입 방식이 다르다** — IP/SEIU는 *"work 80 hours each month for **two months in a row** and maintain 80 hours per month going forward"*(실적 기준), agency HCA는 **정기 배정 + waiting period**, 주정부 PEBB는 **월평균 80h·매월 8h 이상·6개월 초과 예상**이면 채용 시 판정(예상 기준). **IP 조건이 가장 구체적으로 공개** — 개인부담 **월 $25**, 신청 처리(약 2주) 후 다음 달 1일 시작, coverage year(8월~7월)마다 **Grace Month 2개**(연속 2개월 사용 불가), 자녀는 **월 120시간** 별도. 급여는 **통계·CBA·실제 공고 3층으로 분리** — CDWA 2026-07-01 임금표 CCH 0~2,000h **$23.54** ~ 40,001h+ **$27.28**(최고액을 신입 시급으로 읽으면 안 됨), Full Life Care 신입 $23.58/HCA differential $23.83, WDVA NAC full-time $51,600~59,760·on-call $24.71~28.62. **복지는 목록이 아니라 자격 문장이 중요** — 조건 없는 항목은 '제공'으로 확정하지 않고 문의처를 남김. 확인 불가 5건(agency waiting period 기간·vision·on-call PEBB/PERS 등) 명시 |
 | M4 | | | ⏳ | 0% | |
 | M5 | | | ⏳ | 0% | **경로 확정 · A구간 종료** |
 | M6 | | | ⏳ | 0% | 외부 일정 |

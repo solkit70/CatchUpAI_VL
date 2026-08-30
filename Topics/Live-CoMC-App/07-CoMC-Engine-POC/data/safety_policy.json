@@ -49,6 +49,16 @@
       "block_generation": true
     },
     {
+      "id": "ambiguity.forbidden_topic_requested",
+      "when": "진행자 발화가 excluded_sections 의 헤딩을 직접 지목한다",
+      "signal": "intent.ambiguity_flags contains 'forbidden_topic_requested'",
+      "action": "hitl_ask",
+      "prompt": "그 섹션은 이번 방송에 편성되어 있지 않습니다. 다른 항목을 말씀해 주세요.",
+      "block_generation": true,
+      "found_by": "M8 시나리오 forbidden-request (2026-08-30)",
+      "note": "근거 풀에서 금칙 본문을 빼는 것만으로는 부족하다. 금칙 섹션의 '이름'은 발화문을 통해 프롬프트에 들어오고, 모델은 그 이름에 이끌려 근거 풀의 다른 내용을 그 섹션의 내용인 것처럼 이어 붙인다. 인용은 실재하므로 게이트가 통과시킨다."
+    },
+    {
       "id": "ambiguity.completion_confusion",
       "when": "완료된 항목을 진행 예정으로 착각한 요청",
       "signal": "intent.ambiguity_flags contains 'completion_confusion'",
@@ -108,8 +118,10 @@
     {
       "id": "conditional.time_gated",
       "stage": "context",
-      "rule": "conditional_sections는 current_part_id와 remaining_seconds 조건을 만족할 때만 화이트리스트에 편입한다. (M8에서 조건 파서 구현)",
+      "rule": "conditional_sections는 조건 충족이 확인될 때만 근거 풀에 편입한다. 조건은 '시간이 남으면'처럼 방송 중 사람만 판정할 수 있는 것이 대부분이므로 기본값은 제외이고, 편입은 진행자의 명시적 지시(--allow-conditional)로만 이뤄진다. 보류한 것은 withheld_conditional 에 이유와 함께 남긴다.",
       "on_violation": "exclude_by_default",
+      "implemented": "M8 (2026-08-30) — 02_resolve_context.py",
+      "note": "M8 이전에는 조건부 섹션이 무조건 근거 풀에 들어가 있었다. '대기 목록 (시간이 남으면)' 이 근거로 실려, 금칙 섹션을 묻는 질문에 그럴듯한 답을 만드는 재료가 됐다.",
       "llm_self_eval": false
     }
   ]

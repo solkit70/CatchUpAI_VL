@@ -1,0 +1,8 @@
+{
+  "transcript": "오늘 방송에서 데이터센터 인력 프로그램도 다루나요?",
+  "intent": "answer_question",
+  "slots": {},
+  "ambiguity_flags": [],
+  "confidence": 0.9,
+  "created_at": "2026-08-30T13:07:19.742121+00:00"
+}

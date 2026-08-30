@@ -31,7 +31,7 @@
 | M6 | 최종 패키징과 Remotion AI 영상화 후보 정리 | 2 | 1h | `06-Publishing-Video-Plan/` | done |
 | M7 | iPad Termius에서 Codex/Gemini CLI 세팅 검증 | 1 | 1h | `07-Multi-Agent-CLI-Setup/` | done |
 | M8 | 네이티브 Remote Control 검증과 구조 비교 | 2 | 2h | `08-Native-Remote-Control/` | done |
-| M9 | Codex Remote 검증과 세팅 | 2 | 2.5h | `09-Codex-Remote/` | **1단계 done · 2단계 대기** |
+| M9 | Codex Remote 검증과 세팅 | 2 | 2.5h | `09-Codex-Remote/` | **2단계 진행 중 · 10/12 · 오늘 세션 종료** |
 
 **총 예상 시간**: 약 11시간, 20% 버퍼 포함
 
@@ -477,7 +477,7 @@
 
 **목표 기간**: 2일 (1단계 / 2단계 분리)
 **예상 시간**: 2.5h
-**상태**: **1단계 완료** (문서 조사·3자 비교) / **2단계 대기** (설치·세팅·실사용)
+**상태**: **1단계 완료** (문서 조사·3자 비교) / **2단계 진행 중** (Desktop 설치·iPad 연결·읽기/쓰기 테스트 완료, 운용 규칙 부분 확정, 남은 iPad 푸시·잠자기 복구 대기)
 **성격**: M8에 이은 유지보수 모듈 (CVL)
 
 ### 배경
@@ -538,11 +538,11 @@ M8에서 Claude Code 네이티브 Remote Control을 정리한 뒤, Codex에도 �
 
 **2단계**
 
-- [ ] ChatGPT 데스크톱 앱 설치
-- [ ] 호스트 등록 + 모바일 QR 페어링
-- [ ] 경계 테스트 7항목 수행
+- [x] ChatGPT 데스크톱 앱 설치
+- [x] 호스트 등록 + 모바일 QR 페어링
+- [>] 경계 테스트 7항목 수행 (읽기/쓰기 테스트 완료, 남은 장시간 테스트 대기)
 - [ ] 절차서를 실기록으로 전환
-- [ ] 운용 규칙 확정
+- [x] 운용 규칙 부분 확정
 
 ### 핵심 발견 (1단계)
 
@@ -553,7 +553,7 @@ M8에서 Claude Code 네이티브 Remote Control을 정리한 뒤, Codex에도 �
 | M1~M7과의 연결 | **SSH 호스트 등록으로 기존 구조를 재활용 가능** — 세 경로가 배타적이지 않다 |
 | 데이터 취급 | 공식 문서에 저장 범위 **명시 없음** (Claude Code는 명시) |
 | 공통 보안 후퇴 | Claude RC와 마찬가지로 **계정 격리 없음** — 일상 계정 세션에 붙는다 |
-| 환경 | ChatGPT 데스크톱 앱 미설치, `winget` 없음, 플랜 Plus 확인 |
+| 환경 | ChatGPT 데스크톱 앱 설치됨 (`OpenAI.ChatGPT-Desktop 1.2026.190.0`), `winget` 없음, 플랜 Plus 확인 |
 
 ### 리뷰 포인트
 
@@ -630,11 +630,11 @@ M8에서 Claude Code 네이티브 Remote Control을 정리한 뒤, Codex에도 �
 | M6 | 2026-08-24 | 2026-08-24 | done | 100% | 최종 추천 구조 + 후속 과제 + Remotion AI 영상 브리프 작성 완료 |
 | M7 | 2026-08-24 | 2026-08-24 | done | 100% | iPad Termius에서 Codex/Gemini CLI 실행 가능 여부 검증 완료 |
 | M8 | 2026-08-28 | 2026-08-28 | done | 100% | 네이티브 Remote Control 검증. SSH 방식과 비교·선택 기준 작성 |
-| M9 | 2026-08-28 | 진행 중 | 1단계 done | 7/12 | 문서 조사·3자 비교 완료. 설치·세팅은 2단계로 분리 |
+| M9 | 2026-08-28 | 진행 중 | 오늘 세션 종료 | 10/12 | 읽기/쓰기/한글 입력/운용 규칙 부분 확정 완료. iPad 푸시·잠자기 복구 대기 |
 
 ## 성공 기준
 
-- [>] 9개 모듈 — M1~M8 DoD 100%, M9는 1단계 완료 / 2단계 대기
+- [>] 9개 모듈 — M1~M8 DoD 100%, M9는 1단계 완료 / 2단계 진행 중
 - [x] 모바일 조작과 로컬 실행 구조 설명 문서 완성
 - [x] 기술 구조 비교표와 홈서버 도입 판단표 완성
 - [x] 현재 Windows 노트북 기준 1차 원격 실행 실험 완료
@@ -642,7 +642,7 @@ M8에서 Claude Code 네이티브 Remote Control을 정리한 뒤, Codex에도 �
 - [x] Remotion AI 영상화 후보 문서 완성
 - [x] Topic Retrospective 작성
 - [x] 네이티브 Remote Control과 SSH 구조 비교·선택 기준 완성 (M8, 2026-08-28 추가)
-- [>] Codex Remote 조사·3자 비교 완성 (M9 1단계, 2026-08-28) — 세팅은 2단계 대기
+- [>] Codex Remote 조사·3자 비교 완성 (M9 1단계, 2026-08-28) — ChatGPT Desktop 설치, iPad 연결, 읽기/쓰기 테스트 완료. 운용 규칙 부분 확정, 남은 iPad 푸시·잠자기 복구 대기
 
 ## 진행 규칙
 
@@ -654,6 +654,12 @@ M8에서 Claude Code 네이티브 Remote Control을 정리한 뒤, Codex에도 �
 **생성자**: Codex with VibeLearn AI  
 **Roadmap 버전**: 1.3 (2026-08-28 M9 추가)  
 **방법론 버전**: VibeLearn AI 2.0
+
+
+
+
+
+
 
 
 

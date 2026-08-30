@@ -136,7 +136,8 @@ def part_body_quotes(md_text: str, part_title: str, limit: int) -> list[str]:
     return quotes
 
 
-def build(live: str, part_id: str, max_evidence: int) -> dict:
+def build(live: str, part_id: str, max_evidence: int,
+          allow_conditional: bool = False) -> dict:
     idx = read_json(out(f"rundown_index.{live}.json"))
     src = vault_path(idx["source_path"])
     md_text = read_text(src)
@@ -204,12 +205,39 @@ def build(live: str, part_id: str, max_evidence: int) -> dict:
               file=sys.stderr)
         sys.exit(1)
 
+    # ── 조건부 섹션 게이팅 (safety_policy.conditional.time_gated) ──────
+    #
+    # M8 이전에는 조건부 섹션이 근거 풀에 무조건 들어 있었다. Live21 의
+    # '대기 목록 (시간이 남으면)' 이 근거로 실려 있었고, 금칙 섹션을 묻는
+    # 질문에 **그럴듯한 답을 만드는 재료**가 됐다.
+    #
+    # 조건이 '시간이 남으면' 같은 형태라 코드가 판정할 수 없다.
+    # 판정할 수 없는 조건의 기본값은 '충족되지 않음'이어야 한다 — 모르면 넣지 않는다.
+    withheld: list[dict] = []
+    cond = idx.get("conditional_sections", [])
+    if cond and not allow_conditional:
+        keep = []
+        for e in evidence:
+            hit = next((c for c in cond
+                        if c["heading"] in e["quote"] or c["heading"] in e["path"]), None)
+            if hit:
+                withheld.append({"heading": hit["heading"], "condition": hit["condition"],
+                                 "reason": "조건 충족 여부를 코드가 판정할 수 없음 — "
+                                           "기본값 제외 (--allow-conditional 로 편입)"})
+            else:
+                keep.append(e)
+        evidence = keep
+
     ctx = {
         "current_part_id": part["id"],
         "coverage_state": part["coverage_state"],
         "coverage_items": part["coverage_items"],
         "evidence_pool": evidence,
         "status_map": status_map,
+        # 이름만 넘긴다. 본문은 넘기지 않는다. 금칙 요청을 거절하려면
+        # 무엇이 금칙인지 알아야 하고, 그건 이름만으로 충분하다.
+        "excluded_headings": forbidden_headings,
+        "withheld_conditional": withheld,
         "forbidden_removed": True,
         "assembled_at": now_iso(),
     }
@@ -221,11 +249,14 @@ def main():
     ap.add_argument("--live", required=True, help="회차 (rundown_index.{live}.json)")
     ap.add_argument("--part", required=True,
                     help="current_part_id — 권위값. 추정하지 않고 명시적으로 받는다")
+    ap.add_argument("--allow-conditional", action="store_true",
+                    help="조건부 섹션을 근거 풀에 편입한다 (진행자가 조건 충족을 판정했을 때)")
     ap.add_argument("--max-evidence", type=int, default=8,
                     help="소스별 최대 근거 수 (기본 8). 근거 풀은 좁을수록 좋다")
     args = ap.parse_args()
 
-    ctx, part = build(args.live, args.part, args.max_evidence)
+    ctx, part = build(args.live, args.part, args.max_evidence,
+                      allow_conditional=args.allow_conditional)
     validate_or_die("broadcast_context", ctx, "02_resolve_context")
     path = write_json(out(f"broadcast_context.{args.live}.json"), ctx)
 

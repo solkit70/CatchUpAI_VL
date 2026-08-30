@@ -1,15 +1,23 @@
 {
-  "pass": true,
-  "final_text": "오늘 3번 파트는 ‘기존 스킬을 OpenAI 신규 Transcribe 모델로 업데이트’를 다룹니다. 구체적으로 `video-subtitles` 스킬의 Whisper API를 GPT-Transcribe로 교체 검토하고, `video-add-chapters`의 `transcribe_video.py` 교체를 함께 검토합니다. 또, 최근 만든 `glossary.json`의 `prompt_terms`를 그대로 넘기는 컨텍스트 주입 연결 여부를 확인하고, 다른 스킬 중 최신 기능으로 업데이트할 것이 있는지도 조사합니다.",
+  "pass": false,
+  "absence_by_closure": [],
+  "final_text": "네, 방송 이후에 GPT-Transcribe 스킬 반영이 완료됐고요, video-subtitles 포함 총 5개 스킬에 적용됐습니다. 적용된 스킬은 video-add-chapters, cleaning, full-process, subtitles, 그리고 youtube-channel-archiver예요.",
   "kept_sentences": [
     0,
-    1,
-    2,
-    3,
-    4
+    1
   ],
-  "dropped_sentences": [],
-  "violations": [],
-  "length_after": 5,
-  "verified_at": "2026-08-23T13:47:55.256575+00:00"
+  "dropped_sentences": [
+    {
+      "sentence_idx": 2,
+      "reason": "fact_not_in_evidence"
+    }
+  ],
+  "violations": [
+    {
+      "rule_id": "claim.facts_must_be_quoted",
+      "detail": "문장 2: 숫자 '8'"
+    }
+  ],
+  "length_after": 2,
+  "verified_at": "2026-08-30T13:16:33.818766+00:00"
 }

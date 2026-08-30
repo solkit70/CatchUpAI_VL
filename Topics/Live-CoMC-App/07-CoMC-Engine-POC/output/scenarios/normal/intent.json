@@ -1,0 +1,10 @@
+{
+  "transcript": "오늘 3번 파트에서 뭘 다루나요?",
+  "intent": "answer_question",
+  "slots": {
+    "part_id": "3"
+  },
+  "ambiguity_flags": [],
+  "confidence": 0.9,
+  "created_at": "2026-08-30T13:07:08.175275+00:00"
+}

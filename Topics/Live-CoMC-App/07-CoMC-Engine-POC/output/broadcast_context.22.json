@@ -1,0 +1,108 @@
+{
+  "current_part_id": "2",
+  "coverage_state": "defined",
+  "coverage_items": [
+    "라이브 방송 보조 MC 앱(Live-CoMC-App M3 완료 + M4 실습 1·2)",
+    "Seattle Tech Week 2026 → 기사 작성 Topic 로드맵",
+    "VibeLearn AI를 Codex에 최적화"
+  ],
+  "evidence_pool": [
+    {
+      "path": "Ingest/CatchUpAI_VL/Topics/Live-CoMC-App/07-CoMC-Engine-POC/data/rundown_samples/2026-08-02 - Live22 Weekly Rundown.md#오늘의 실험",
+      "quote": "후보 ① AI로 라이브 방송 보조 MC 앱 만들기"
+    },
+    {
+      "path": "Ingest/CatchUpAI_VL/Topics/Live-CoMC-App/07-CoMC-Engine-POC/data/rundown_samples/2026-08-02 - Live22 Weekly Rundown.md#오늘의 실험",
+      "quote": "후보 ② Seattle Tech Week 2026 영상 VibeLearn AI 학습"
+    },
+    {
+      "path": "Ingest/CatchUpAI_VL/Topics/Live-CoMC-App/07-CoMC-Engine-POC/data/rundown_samples/2026-08-02 - Live22 Weekly Rundown.md#오늘의 실험",
+      "quote": "실제 진행: VibeLearn AI를 Codex에 최적화"
+    },
+    {
+      "path": "Ingest/CatchUpAI_VL/Topics/Live-CoMC-App/07-CoMC-Engine-POC/data/rundown_samples/2026-08-02 - Live22 Weekly Rundown.md#오늘의 실험",
+      "quote": "후보 ③ FedWay 독립유공자 영상 마무리"
+    },
+    {
+      "path": "Ingest/CatchUpAI_VL/Topics/Live-CoMC-App/07-CoMC-Engine-POC/data/rundown_samples/2026-08-02 - Live22 Weekly Rundown.md#오늘의 실험",
+      "quote": "후보 ④ DFS Crowd Manager Training 요약 영상 제작"
+    },
+    {
+      "path": "Ingest/CatchUpAI_VL/Topics/Live-CoMC-App/07-CoMC-Engine-POC/data/rundown_samples/2026-08-02 - Live22 Weekly Rundown.md#오늘의 실험",
+      "quote": "후보 ⑤ 총기난사 대처 요령 교육과정 요약 영상 제작"
+    },
+    {
+      "path": "Ingest/CatchUpAI_VL/Topics/Live-CoMC-App/07-CoMC-Engine-POC/data/rundown_samples/2026-08-02 - Live22 Weekly Rundown.md#오늘의 실험",
+      "quote": "후보 ⑥ AI는 일을 줄이는가, 더 만드는가 회고 글 작성"
+    },
+    {
+      "path": "Ingest/CatchUpAI_VL/Topics/Live-CoMC-App/07-CoMC-Engine-POC/data/rundown_samples/2026-08-02 - Live22 Weekly Rundown.md#오늘의 실험",
+      "quote": "후보 ⑦ Bila AI Agent 만들기 M2 진행"
+    },
+    {
+      "path": "Roundup/2026-08-03 - Daily Roundup#Status Summary",
+      "quote": "Seattle Tech Week 녹화 편집 — 미확인 — 8/3 실제 착수 흔적은 이번 스캔에서 확인되지 않음"
+    },
+    {
+      "path": "Roundup/2026-08-04 - Daily Roundup#Status Summary",
+      "quote": "Seattle Spark + AI 4편 업로드 정보 — 완료 — 제목·설명·챕터·태그·URL·전사 출처 정리"
+    },
+    {
+      "path": "Roundup/2026-08-04 - Daily Roundup#Status Summary",
+      "quote": "Seattle Spark + AI 전사 방식 — 완료 — `gpt-transcribe`는 세그먼트 타임스탬프 부재로 제외, `whisper-1` 사용"
+    },
+    {
+      "path": "Roundup/2026-08-05 - Daily Roundup#Status Summary",
+      "quote": "Seattle Tech Week 영상 편집 — 진행 중 — 체감 50% 완료. 이번 주 내 완료 목표 유지"
+    },
+    {
+      "path": "Roundup/2026-08-07 - Daily Roundup#Status Summary",
+      "quote": "Seattle Tech Week 2026 영상 편집 — 완료 — 8/7 ACM 2편 + InformsCon 3편 + Biuty 2편까지 정리, 주간 편집 작업 마무리"
+    },
+    {
+      "path": "Roundup/2026-08-07 - Daily Roundup#Status Summary",
+      "quote": "Live22 학습 계획 — 신규 확정 — 2026-08-09 방송에서 Seattle Tech Week 영상을 VibeLearn AI 방식으로 공부하고 현재 일과 연결"
+    },
+    {
+      "path": "Roundup/2026-08-02 - Weekly Progress and Planning#Priority Summary",
+      "quote": "1 — **Seattle Tech Week 녹화 영상** 자막·편집·업로드 — [x] — 8/7 ACM Data Conclave 2편 + InformsCon 3편 업로드·playlist 반영(총 128편), Biuty AI 2편 후속 없음 확인. 편집 주간 마무리"
+    },
+    {
+      "path": "Roundup/2026-08-02 - Weekly Progress and Planning#Priority Summary",
+      "quote": "2 — Databricks AI 세미나 나머지 영상 자막·편집 — [x] — 8/4 Seattle Spark + AI 4편 전사·챕터·업로드 정보 정리 완료 → [[Research/2026-08-04 Seattle Spark AI 밋업 영상 업로드 정보 by Claude Code — 업로드 정보]]"
+    },
+    {
+      "path": "Roundup/2026-08-02 - Weekly Progress and Planning#Priority Summary",
+      "quote": "3 — 김진영님 AI4PKM 5개월 사용기 영상 편집 — [ ] — Seattle Tech Week → FedWay → Builders Lounge 4차 영상 이후 순서로 재정렬"
+    },
+    {
+      "path": "Roundup/2026-08-02 - Weekly Progress and Planning#Priority Summary",
+      "quote": "4 — Live-CoMC-App M3 (데이터 계약·안전 정책 스펙) — [x] — 8/9 완료 DoD 6/6. 이어서 M4(Wake Word/VAD) 실습 1·2까지 진행, 실습 3·4는 다음 세션"
+    },
+    {
+      "path": "Roundup/2026-08-02 - Weekly Progress and Planning#Priority Summary",
+      "quote": "10 — FedWay 광복절 AI 특별기획 파일럿 공유 — [>] — 독립유공자 소개 영상 마무리 필요(미완료 이월). 다음 주 초 이구님과 통합한국학교 학생 대상 VibeLearn AI 시도(Vibe Coding 셋업+설치+학생 선정 Topic) 기획 — 학생용 커리큘럼 신규 작성 필요"
+    },
+    {
+      "path": "Roundup/2026-08-02 - Weekly Progress and Planning#Priority Summary",
+      "quote": "11 — Seattle Tech Week 2026 기사 작성 Topic — [x] — 8/9 Codex로 로드맵 완성(VibeLearn AI 정합 위해 수정). 1차 기사 작성 대기"
+    }
+  ],
+  "status_map": {
+    "rundown": "final",
+    "2026-08-03 - Daily Roundup": "ok:1/8",
+    "2026-08-04 - Daily Roundup": "ok:2/7",
+    "2026-08-05 - Daily Roundup": "ok:1/8",
+    "2026-08-06 - Daily Roundup": "ok:0/7",
+    "2026-08-07 - Daily Roundup": "ok:2/9",
+    "2026-08-02 - Weekly Progress and Planning": "ok:6/12",
+    "2026-08-02 - Weekly Dashboard.canvas": "skipped:canvas",
+    "2026-07-26~2026-08-02 - Claude Code": "missing_section"
+  },
+  "excluded_headings": [
+    "보류된 인사이트 후보 (다음 방송 검토용)"
+  ],
+  "withheld_conditional": [],
+  "forbidden_removed": true,
+  "assembled_at": "2026-08-30T13:07:18.718051+00:00"
+}

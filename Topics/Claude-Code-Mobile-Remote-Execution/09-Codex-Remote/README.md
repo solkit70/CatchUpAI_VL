@@ -39,9 +39,9 @@ SSH 호스트 등록이 특히 흥미롭다. 세 경로가 배타적이지 않�
 
 | 항목 | 상태 |
 |---|---|
-| ChatGPT 플랜 | **Plus** (`douggy.park@yahoo.com`) ✅ |
+| ChatGPT 플랜 | **Plus** (개인 계정) ✅ |
 | Codex CLI | `0.149.1` — 이 기능과 무관 |
-| **ChatGPT 데스크톱 앱** | ❌ **미설치** |
+| **ChatGPT 데스크톱 앱** | ✅ 설치됨: `OpenAI.ChatGPT-Desktop 1.2026.190.0` (2026-08-30) |
 | `winget` | ❌ 사용 불가 → 웹에서 직접 다운로드 필요 |
 
 ## 산출물
@@ -55,7 +55,7 @@ SSH 호스트 등록이 특히 흥미롭다. 세 경로가 배타적이지 않�
 
 1. ChatGPT 모바일 앱 설치·로그인 상태 확인
 2. ChatGPT 계정 데이터 관리 설정 확인
-3. ChatGPT 데스크톱 앱 설치 (https://chatgpt.com/download)
+3. 설치된 ChatGPT 데스크톱 앱에서 로그인 후 호스트 등록
 4. 호스트 등록 + QR 페어링
 5. 경계 테스트 7항목 수행
 6. 절차서를 실기록으로 전환, 운용 규칙 확정
@@ -65,3 +65,4 @@ SSH 호스트 등록이 특히 흥미롭다. 세 경로가 배타적이지 않�
 ## 이전/다음
 
 - 이전 모듈: [../08-Native-Remote-Control/README.md](../08-Native-Remote-Control/README.md)
+

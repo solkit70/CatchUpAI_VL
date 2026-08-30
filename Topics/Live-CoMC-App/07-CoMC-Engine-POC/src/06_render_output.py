@@ -73,11 +73,83 @@ def load_session_state(part_id: str) -> dict:
     return {"current_part_id": part_id}
 
 
+MODES = ("LIVE", "REVIEW", "MUTE")
+
+# 모드는 **파일**에 둔다. 프로세스 인자로 두면 방송 중에 모드를 바꾸려고
+# 프로세스를 재시작해야 하는데, 사고가 난 순간에 재시작은 할 수 없는 일이다.
+# 파일이면 다음 발화가 알아서 새 모드를 읽는다.
+MODE_FILE = "mode.json"
+
+
+def load_mode() -> tuple[str, str]:
+    """(모드, 출처). 읽을 수 없으면 REVIEW 로 떨어진다.
+
+    ## 왜 파일이 깨졌을 때 LIVE 가 아닌가
+
+    파일이 없는 것과 깨진 것은 다르다.
+
+      없다   아직 모드를 설정한 적이 없다 → LIVE (로드맵 기본값)
+      깨졌다 무언가 잘못됐다 → REVIEW
+
+    깨진 상태에서 LIVE 로 떨어지면 **모르는 상태로 말하기 시작한다.**
+    REVIEW 는 화면에는 띄우되 사람의 승인을 받으므로 틀려도 방송으로 나가지 않는다.
+    실패의 기본 방향은 침묵 쪽이어야 한다.
+    """
+    p = out(MODE_FILE)
+    if not p.exists():
+        return "LIVE", "기본값 (모드 파일 없음)"
+    try:
+        m = read_json(p)
+        mode = str(m.get("mode", "")).upper()
+        if mode not in MODES:
+            raise ValueError(mode)
+        return mode, f"{MODE_FILE} ({m.get('reason') or '사유 미기재'})"
+    except Exception as e:
+        print(f"⚠ {MODE_FILE} 을 읽을 수 없습니다 ({type(e).__name__}). "
+              f"REVIEW 로 내려갑니다 — 모르는 상태로 말하지 않는다.", file=sys.stderr)
+        trace("06_render_output", ok=False, reason="mode_unreadable", fallback="REVIEW")
+        return "REVIEW", "폴백 (모드 파일 손상)"
+
+
+def set_mode(mode: str, reason: str) -> None:
+    write_json(out(MODE_FILE), {"mode": mode, "reason": reason,
+                                "changed_at": now_iso()})
+    print(f"모드 → {mode}   사유: {reason}")
+    print("   다음 발화부터 적용됩니다 (진행 중인 발화는 건드리지 않는다).")
+    trace("06_render_output", ok=True, action="set_mode", mode=mode, reason=reason)
+
+
+def approve_pending() -> int:
+    """REVIEW 에서 대기 중인 발화를 승인해 내보낸다."""
+    pend = out("spoken_pending.json")
+    if not pend.exists():
+        print("승인 대기 중인 발화가 없습니다.")
+        return 2
+    spoken = read_json(pend)
+    write_json(out("spoken.json"), spoken)
+    pend.unlink()
+    print("승인 → spoken.json 으로 내보냈습니다")
+    print(f"   {spoken['text'][:88]}")
+    trace("06_render_output", ok=True, action="approve", chars=len(spoken["text"]))
+    return 0
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--live", required=True)
     ap.add_argument("--provider", help="TTS 프로바이더 강제 지정 (기본: M6 실측 기본값)")
+    ap.add_argument("--set-mode", choices=MODES, help="운영 모드 전환 (렌더하지 않는다)")
+    ap.add_argument("--reason", default="", help="--set-mode 의 사유. 남기지 않으면 "
+                                                 "나중에 왜 내렸는지 알 수 없다")
+    ap.add_argument("--approve", action="store_true",
+                    help="REVIEW 에서 대기 중인 발화를 승인해 내보낸다")
     args = ap.parse_args()
+
+    if args.set_mode:
+        set_mode(args.set_mode, args.reason)
+        return 0
+    if args.approve:
+        return approve_pending()
 
     verdict = read_json(out("verdict.json"))
     ctx = read_json(out(f"broadcast_context.{args.live}.json"))
@@ -92,6 +164,7 @@ def main():
 
     state = load_session_state(ctx["current_part_id"])
     provider, voice = pick_voice(args.provider)
+    mode, mode_src = load_mode()
     ts = now_iso()
 
     output = {
@@ -107,6 +180,10 @@ def main():
             "audio_path": None,      # 합성은 M9 셸의 몫
             "spoken_at": ts,
         },
+        "mode": mode,
+        # LIVE 가 아니면 spoken 은 '계획'이지 '나간 것'이 아니다.
+        # 이 구분을 남기지 않으면 사후에 무엇이 실제로 방송됐는지 알 수 없다.
+        "spoken_withheld": mode != "LIVE",
         "source_verdict_pass": verdict["pass"],
     }
     validate_or_die("output", output, "06_render_output")
@@ -114,22 +191,44 @@ def main():
     p_out = write_json(out("output.json"), output)
     # OBS Browser Source 와 TTS 는 서로 다른 프로세스가 폴링한다.
     # 한 파일을 둘이 읽게 하면 한쪽 오류가 다른 쪽을 멈춘다 → 파일도 분리한다.
+    #
+    # 화면은 세 모드 모두에서 갱신한다. 진행자가 무엇을 말하려 했는지는
+    # 보여야 승인도 하고 판단도 한다. 모드가 가르는 것은 **소리**다.
     p_ov = write_json(out("overlay.json"), output["overlay"])
-    p_sp = write_json(out("spoken.json"), output["spoken"])
+
+    written = [p_out.name, p_ov.name]
+    stale = out("spoken.json")
+    if mode == "LIVE":
+        written.append(write_json(stale, output["spoken"]).name)
+    else:
+        # ⚠️ 지난 발화의 spoken.json 이 남아 있으면 TTS 폴러가 그것을 다시 읽어
+        #    **모드를 내렸는데 옛 발화가 나가는** 사고가 난다. 반드시 지운다.
+        if stale.exists():
+            stale.unlink()
+        if mode == "REVIEW":
+            written.append(write_json(out("spoken_pending.json"),
+                                      output["spoken"]).name)
 
     kept, total = len(verdict["kept_sentences"]), \
         len(verdict["kept_sentences"]) + len(verdict["dropped_sentences"])
     print(f"\n── 렌더 완료 · verdict.pass={verdict['pass']} · {kept}/{total} 문장")
     print(f"   overlay  part={output['overlay']['part_id']}")
-    print(f"   spoken   {provider} / {voice}")
+    print(f"   모드     {mode}  ← {mode_src}")
+    print(f"   spoken   {provider} / {voice}"
+          + ("" if mode == "LIVE" else "   (보류됨)"))
+    if mode == "REVIEW":
+        print("   ⏸ 발화 보류 — spoken_pending.json · "
+              f"승인: python 06_render_output.py --live {args.live} --approve")
+    elif mode == "MUTE":
+        print("   🔇 발화 없음 — 화면만 갱신했습니다")
     print(f"   text     {verdict['final_text'][:88]}")
     if not verdict["pass"]:
         print(f"   ⚠ 부분 통과 발화 — source_verdict_pass=false 로 기록됨")
     trace("06_render_output", ok=True, provider=provider, voice=voice,
-          part_id=output["overlay"]["part_id"], kept=kept,
-          source_verdict_pass=verdict["pass"],
-          outputs=[p_out.name, p_ov.name, p_sp.name])
-    print(f"   → {p_out.name} · {p_ov.name} · {p_sp.name}")
+          part_id=output["overlay"]["part_id"], kept=kept, mode=mode,
+          spoken_withheld=output["spoken_withheld"],
+          source_verdict_pass=verdict["pass"], outputs=written)
+    print(f"   → {' · '.join(written)}")
     return 0
 
 
