@@ -73,3 +73,9 @@ Topics/Live-CoMC-App/06-TTS-Audio-Routing-Harness/examples/audio/
 
 # M6 프리플라이트 런타임 상태 — 위와 같은 이유
 Topics/Live-CoMC-App/06-TTS-Audio-Routing-Harness/examples/voice_registry.runtime.json
+
+# Claude-Code-Mobile-Remote-Execution 영상용 스크린샷 — 로컬 전용 (GitHub 제외)
+# iPhone/iPad 화면 캡처 29장(16MB). Termius Edit Host 화면에 SSH 사용자명이
+# 그대로 보이는 등, M5 보안 체크리스트의 "IP·계정명·이메일·키 노출 검토"가
+# 아직 수행되지 않았다. 검토 후 공개 여부를 다시 판단한다. (2026-08-29)
+Topics/Claude-Code-Mobile-Remote-Execution/vl_materials/
