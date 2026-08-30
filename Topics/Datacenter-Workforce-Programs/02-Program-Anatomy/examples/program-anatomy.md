@@ -100,18 +100,55 @@ AI 리터러시 교육**이다("no-cost AI literacy courses and industry-recogni
 
 ---
 
-## ⑤ Amazon/AWS — Technical Workforce Development
+## ⑤ Amazon/AWS — Technical Workforce Development (2026-08-28 조사 완료)
 
-| 항목 | 내용 |
+> **"Technical Workforce Development"는 Amazon이 쓰는 공식 프로그램명이 아니었다.**
+> 실제 우산 브랜드는 **`AWS Grow Our Own Talent`** 이고, 그 아래 4개 경로가 있다.
+> M1이 "두 칸에 걸친다"고 본 것은 맞았다 — 하나가 아니라 여러 개였기 때문이다.
+
+### 우산 구조 — AWS Grow Our Own Talent
+
+| # | 경로 | 성격 |
+|---|---|---|
+| **⑤-a** | **Work-Based Learning Program (WBLP)** | **12개월 유급 훈련 → AWS 데이터센터 정규직** |
+| ⑤-b | College internships | 재학생 인턴 |
+| ⑤-c | Amazon Dedicated Cloud | 보안 인가(cleared) 인력 |
+| ⑤-d | Current employee opportunities | 사내 전환 |
+
+**본인에게 해당하는 것은 ⑤-a 하나다.** 나머지는 재학생·기인가자·사내 직원 대상이다.
+
+### ⑤-a WBLP 8항목 해부
+
+| 항목 | 내용 | 출처 |
+|---|---|---|
+| 운영 주체 | **Amazon/AWS 직접** | 공식 |
+| 자금원 | 명시 없음 (자체 운영으로 추정) | — |
+| 대상 직무 | **Data center operations technician · install technician · decommissioning technician · logistics specialist** (4종) | 공식 |
+| 기간 | **12개월 유급 훈련** | 공식 |
+| 비용 | **무료 + 유급** | 공식 |
+| **수료 후 고용 주체** | **AWS 직고용** — *"promoted into their chosen roles at an AWS data center"* | 공식 |
+| 지역 | 상위 페이지에 **Haymarket VA · Kent WA · Aurora CO** 명시 | 공식 |
+| **지원 창구** | **Amazon 채용 사이트** (View open roles) | 공식 |
+
+### 자격 요건
+
+우산 페이지는 대상을 *"students, high school or college graduates, current employees, or cleared professionals"* 로 적는다. 수료자 인터뷰에는 **고졸 직후 · 무경험** 사례가 있다.
+
+**학위·경력 요건이 명시돼 있지 않다.** M1이 "데이터센터 기술자는 문턱이 가장 낮다"고 판정한 것과 일치한다.
+
+### 🔑 이 조사가 바꾸는 것
+
+**⑤-a WBLP가 6개 프로그램 중 본인 조건에 가장 가깝다.**
+
+| 근거 | 내용 |
 |---|---|
-| 전 항목 | **미조사** |
+| **지역** | **Kent, WA** — 워싱턴주. 6개 중 WA 소재가 확인된 유일한 경로 |
+| **고용 주체** | AWS 직고용. ④Google(IBEW local 경유)·①Meta(협력사)와 달리 중간 단계가 없다 |
+| **문턱** | 학위·경력 요건 없음 |
+| **보수** | 훈련 기간부터 유급 |
+| **직무 일치** | 데이터센터 운영 기술직 4종 — 건설기 숙련직이 아니다 |
 
-⚠️ **이번 세션에서 조사하지 못했다.** M1에서 이 항목이 건설기·운영기 두 칸에 걸친다는 것을
-확인하고 "하위 트랙 분해"를 M2 과제로 넘겼는데, 시간 배분상 ①②③④⑥을 먼저 하다가 닿지 못했다.
-
-**시도한 경로**: 없음 (착수 못 함)
-**다음 조치**: M2 잔여 작업으로 남긴다. 우산 브랜드 아래 별도 트랙일 가능성이 높으므로
-분해가 필요하다.
+→ **M5(워싱턴주 정밀 조사)와 M7(적합성 판별)의 우선 조사 대상.** Kent 사업장의 실제 공고 존재 여부를 M5에서 확인한다.
 
 ---
 
@@ -121,7 +158,7 @@ AI 리터러시 교육**이다("no-cost AI literacy courses and industry-recogni
 |---|---|---|
 | 운영 주체 | Amazon/AWS 직접 | 공식 |
 | 자금원 | Amazon | 공식 |
-| 대상 직무 | Cloud Support Associate · Solutions Architect · Software Development Engineer · **Data Center Technician** · Support Engineer · Technical Account Manager · Technical Sales | 공식 |
+| 대상 직무 | Associate Cloud Consultant · Cloud Support Associate · Solutions Architect · Software Development Engineer · Support Engineer · Technical Account Manager · Technical Sales (**7종 전부 클라우드 직군**) | 공식 (2026-08-28 재확인) |
 | 기간 | 강의형 훈련 10~18주 + **유급 현장훈련 최대 12개월** (총 최대 18개월) | 공식 |
 | 비용 | **무료 + 유급** — "paid training course coupled with on-the-job training" | 공식 |
 | **수료 후 고용 주체** | **Amazon/AWS 직고용** (견습생을 직접 채용) | 공식 |
@@ -130,27 +167,56 @@ AI 리터러시 교육**이다("no-cost AI literacy courses and industry-recogni
 
 **미 노동부(DOL) 인증** 프로그램. **경력 불필요.**
 
-⚠️ **자격 대상에 주의.** `amazon.jobs`의 해당 랜딩 페이지는 **"members of the military
-community—veterans and their spouses"** 를 대상으로 명시한다. 다만 aboutamazon 기사는
-프로그램이 **"recently expanded beyond military veterans and their spouses"** 라고 적는다.
+### ⚠️ 자격 대상 — 2026-08-28 재확인 결과 (상충 해소 안 됨)
 
-→ **군 출신이 아니어도 지원 가능한 트랙이 무엇인지 확인이 필요하다.** 이것이 확인되지 않으면
-   ⑥은 본인에게 해당 없는 프로그램일 수 있다. **M7 적합성 판별의 선결 조건.**
+공식 채용 페이지를 직접 열어 다시 확인했다. **상충이 그대로다.**
+
+| 출처 | 성격 | 서술 |
+|---|---|---|
+| `amazon.jobs` 공식 프로그램 페이지 | **1차** | *"helps members of the military community—veterans and their spouses"* — **군 대상 서술만 있고, 확대 언급 없음** |
+| `aboutamazon` 기사 | 2차 | *"recently expanded beyond military veterans and their spouses"* — 다만 **누구까지 확대됐는지 명시 없음** |
+
+**판정: 공식 페이지 기준으로는 여전히 군 커뮤니티 대상이다.** 확대를 주장하는 것은 2차 자료뿐이고, 그 2차 자료조차 대상 범위를 밝히지 않는다. 1차 출처가 갱신되지 않은 이상 **본인(비군 출신)에게 열려 있다고 볼 근거가 없다.**
+
+### ⚠️ 대상 직무 정정 — Data Center Technician이 목록에 없다
+
+이전 조사에서 대상 직무에 **Data Center Technician**을 넣었으나, **공식 페이지의 현재 7개 트랙에 없다.**
+
+| 공식 페이지 현재 7개 트랙 | 기간 |
+|---|---|
+| Associate Cloud Consultant | 12주 |
+| Cloud Support Associate | 14주 |
+| Solutions Architect | 14주 |
+| Software Development Engineer | 18주 |
+| Support Engineer | 12주 |
+| Technical Account Manager | 12주 |
+| Technical Sales | 10주 |
+
+**전부 클라우드 직군이다. 데이터센터 현장직이 하나도 없다.** `aboutamazon` 기사에 Data Center Technician 견습생 사례(2021년 지원)가 나오지만, 그것이 현재도 열려 있는 트랙이라는 근거는 공식 페이지에 없다.
+
+### → ⑥에 대한 결론
+
+**본인 기준으로 ⑥은 사실상 해당 없음이다.** 두 가지가 겹친다.
+
+1. **자격** — 공식 기준 군 커뮤니티 대상
+2. **직무** — 현재 트랙이 전부 클라우드 직군. 이 Topic의 목표(데이터센터)와 어긋난다
+
+**M7에서 shortlist 제외 후보로 둔다.** 다만 완전히 지우지는 않는다 — 확대 서술이 실제로 반영되고 데이터센터 트랙이 다시 열릴 가능성이 있으므로, M5에서 실제 공고를 한 번 더 확인한다.
 
 ---
 
 ## 8항목 요약표
 
-|           | ① Meta AWA    | ② MS DCA  | ③ MS NABTU    | ④ Google.org    | ⑤ Amazon TWD | ⑥ Amazon Appr. |
+|           | ① Meta AWA    | ② MS DCA  | ③ MS NABTU    | ④ Google.org    | ⑤ AWS WBLP   | ⑥ Amazon Appr. |
 | --------- | ------------- | --------- | ------------- | --------------- | ------------ | -------------- |
-| 운영 주체     | Meta+ABC+CBRE | 커뮤니티 칼리지  | NABTU         | etA (NECA+IBEW) | 미조사          | Amazon         |
-| 자금원       | Meta $115M    | Microsoft | Microsoft     | Google.org $50M | 미조사          | Amazon         |
-| 기간        | 4주(공식)        | 1~2년      | 확인 불가         | 확인 불가           | 미조사          | 최대 18개월        |
-| 비용        | 무료+수당         | 장학금 커버    | 무료(AI과정)      | 확인 불가           | 미조사          | 무료+유급          |
-| **고용 주체** | **Meta 협력사**  | 명시 없음     | 조합 건설사        | 조합 전기업체         | 미조사          | **Amazon 직고용** |
-| **지원 창구** | Meta 포털       | **각 대학**  | TradesFutures | **IBEW local**  | 미조사          | Amazon 채용      |
-| 경력 요구     | 없음            | 확인 불가     | 확인 불가         | 확인 불가           | 미조사          | 없음             |
-| 지역 제약     | **없음(50주)**   | 대학 소재지    | 34개 주         | 20+ 주           | 미조사          | 확인 불가          |
+| 운영 주체     | Meta+ABC+CBRE | 커뮤니티 칼리지  | NABTU         | etA (NECA+IBEW) | **AWS 직접**    | Amazon         |
+| 자금원       | Meta $115M    | Microsoft | Microsoft     | Google.org $50M | 명시 없음        | Amazon         |
+| 기간        | 4주(공식)        | 1~2년      | 확인 불가         | 확인 불가           | **12개월**      | 최대 18개월        |
+| 비용        | 무료+수당         | 장학금 커버    | 무료(AI과정)      | 확인 불가           | **무료+유급**     | 무료+유급          |
+| **고용 주체** | **Meta 협력사**  | 명시 없음     | 조합 건설사        | 조합 전기업체         | **AWS 직고용**   | **Amazon 직고용** |
+| **지원 창구** | Meta 포털       | **각 대학**  | TradesFutures | **IBEW local**  | **Amazon 채용**  | Amazon 채용      |
+| 경력 요구     | 없음            | 확인 불가     | 확인 불가         | 확인 불가           | **없음**        | 없음             |
+| 지역 제약     | **없음(50주)**   | 대학 소재지    | 34개 주         | 20+ 주           | **VA·WA·CO**  | 확인 불가          |
 
 ---
 
@@ -158,8 +224,8 @@ community—veterans and their spouses"** 를 대상으로 명시한다. 다만 
 
 | 항목 | 시도한 경로 | 다음 문의처 |
 |---|---|---|
-| ⑤ 전 항목 | 없음 (미착수) | Amazon 데이터센터 커뮤니티 페이지 |
-| ⑥ 군 출신 외 지원 자격 | 공식 랜딩 2곳 확인, 상충 | Amazon 채용 포털 공고 직접 확인 |
+| ⑤ 자금원 | ✅ **해소 (8/28)** — 나머지 7항목 확인. 자금원만 미명시 | AWS 자체 운영으로 추정, 추가 확인 불요 |
+| ⑥ 군 출신 외 지원 자격 | ⚠️ **8/28 재확인 — 상충 유지.** 공식 페이지는 여전히 군 대상만 서술. 확대는 2차 자료 주장뿐이고 범위 미명시 | M5에서 Kent WA 실제 공고로 최종 확인 |
 | ①의 훈련 기간 4주 vs 5주 | 공식·2차 확인, 불일치 | Meta 지원 포털 |
 | ③④의 기간·비용 | 웹 검색 | 지역 IBEW local / TradesFutures |
 | ② 수료 후 고용 주체 | 공식 확인, 명시 없음 | Big Bend CC 취업지원처 |
