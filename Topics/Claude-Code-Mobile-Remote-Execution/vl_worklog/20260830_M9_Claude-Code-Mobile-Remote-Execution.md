@@ -1,4 +1,4 @@
-﻿# WorkLog - M9: Codex Remote 검증과 세팅
+# WorkLog - M9: Codex Remote 검증과 세팅
 
 **날짜**: 2026-08-30
 **Topic**: Claude-Code-Mobile-Remote-Execution
