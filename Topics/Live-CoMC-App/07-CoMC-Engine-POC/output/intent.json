@@ -1,8 +1,10 @@
 {
-  "transcript": "video-subtitles 스킬 교체는 이미 끝난 거 맞죠?",
+  "transcript": "오늘 3번 파트에서 뭘 다루나요?",
   "intent": "answer_question",
-  "slots": {},
+  "slots": {
+    "part_id": "3"
+  },
   "ambiguity_flags": [],
-  "confidence": 0.6,
-  "created_at": "2026-08-30T13:16:23.297684+00:00"
+  "confidence": 0.9,
+  "created_at": "2026-08-31T19:55:23.404487+00:00"
 }

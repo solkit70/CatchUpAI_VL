@@ -46,27 +46,29 @@ vl_roadmap/20260829_RoadMap_WA-Caregiver-Pathways.md
 
 ### 학습 진행 상황
 
-### M3 완료 갱신 (2026-08-30)
-- 최신 WorkLog: `vl_worklog/20260830_M3_WA-Caregiver-Pathways.md`
-- 완료: **M1 · M2 · M3** (전부 DoD 100%)
-- 다음 모듈: **M4 - 반경 50마일 일자리·교육기관** (`04-Local-Options/` 미생성)
-- M3 답: part-time 으로도 의료보험 자격이 생긴다. 문턱은 세 체계 모두 **월 80시간(주당 약 18.5h)** 이고, **진입 방식이 다르다** — IP는 2개월 연속 실적, agency 는 정기 배정+대기기간, PEBB 는 예상 근무시간 기준.
-- M4 핵심 질문: Tehaleh/Bonney Lake 반경 50마일 안에 **월 80시간을 안정적으로 채울 수 있는** 고용주와 교육기관이 실제로 있는가.
+### M6-prep 완료 갱신 (2026-08-31)
 
-**현재 진행 중인 모듈**:
-```
-M4 - 반경 50마일 일자리·교육기관 (착수 전)
+- 최신 WorkLog: `vl_worklog/20260831_M6-prep_WA-Caregiver-Pathways.md`
+- 완료 모듈: M1, M2, M3, M4, M5
+- 부분 진행: **M8-precheck 완료** (`08-Application-and-Hire/`), **M6-prep 완료** (`06-Training-Enrollment/`)
+- 다음 진행: **사용자 직접 문의 결과 기록**. 1순위는 Family Resource 또는 Visiting Angels의 employer training 확인이고, fallback은 Two Rivers/Wellspring 교육 등록 문의다.
+- M6-prep 결과 요약: self-pay 교육기관 등록 전 비교표, enrollment steps, provider selection, training log를 만들었다. 실제 등록과 결제는 사용자가 직접 수행해야 하므로 M6 전체는 아직 완료가 아니다.
+- 핵심 학습: 교육기관 선택은 단독 결정이 아니라 employer training 확인 결과에 종속된다. employer가 training을 제공하면 self-pay 등록을 미루고, 제공하지 않으면 Wellspring/Two Rivers부터 문의한다.
+
+## Today's Learning Topic
+
+M8 actual-contact 또는 M6 fallback 문의 결과 기록
 ```
 
 **가장 최근 WorkLog 파일**:
-- `vl_worklog/20260830_M3_WA-Caregiver-Pathways.md`
+- `vl_worklog/20260831_M4_WA-Caregiver-Pathways.md`
 
 **이전 세션의 "Tomorrow's focus"**:
 ```
-- M4 착수 전 조사 반경의 기준점을 Tehaleh/Bonney Lake 로 재확인한다
-- 반경 약 50마일에서 교육기관 3곳 이상과 고용주 3곳 이상을 근거리·중거리·원거리로 나눈다
-- 실제 공고마다 시급, FTE, 의료보험 시간·대기 조건, 배정 지역, 교통비를 수집한다
-- M4에서도 M5 전까지 본인 적합성 판단은 유보한다 (규칙 3)
+- 사용자 직접 문의 결과를 application-log에 기록한다. 답변이 오기 전에는 M6 교육 등록 fallback 준비까지만 진행한다
+- M4 후보를 3경로 × 2근무형태의 6개 후보로 펼친다
+- 월 80시간 가능성, 통근, 교육 리스크, 의료보험 조건을 기준으로 점수화한다
+- 문의 답변 기록 시 개인정보, client 정보, 지원서 식별번호를 남기지 않는다
 ```
 
 ---
@@ -145,7 +147,7 @@ M4 - 반경 50마일 일자리·교육기관 (착수 전)
 
 **Topic**: {Topic 이름}
 **전체 진행률**: M{X} / M{Total} (XX%)
-**현재 모듈**: M4 - 반경 50마일 일자리·교육기관
+**현재 모듈**: M8 actual-contact / M6 fallback 문의 결과 대기
 **모듈 DoD 달성률**: X/Y (XX%)
 
 **완료된 작업**:
@@ -700,3 +702,4 @@ graph TD
 **Template 버전**: 2.0
 **생성일**: 2025-12-28
 **방법론**: VibeLearn AI
+

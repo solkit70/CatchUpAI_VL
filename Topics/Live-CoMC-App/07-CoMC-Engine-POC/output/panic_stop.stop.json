@@ -1,0 +1,73 @@
+{
+  "method": "stop",
+  "n": 10,
+  "n_ok": 10,
+  "target_ms": 200,
+  "panic_med_ms": 100,
+  "panic_max_ms": 116,
+  "panic_min_ms": 78,
+  "start_med_ms": 74,
+  "pass": true,
+  "trials": [
+    {
+      "ok": true,
+      "start_ms": 84,
+      "panic_ms": 102,
+      "peak": 0.4
+    },
+    {
+      "ok": true,
+      "start_ms": 74,
+      "panic_ms": 110,
+      "peak": 0.4
+    },
+    {
+      "ok": true,
+      "start_ms": 66,
+      "panic_ms": 103,
+      "peak": 0.4
+    },
+    {
+      "ok": true,
+      "start_ms": 78,
+      "panic_ms": 97,
+      "peak": 0.4
+    },
+    {
+      "ok": true,
+      "start_ms": 73,
+      "panic_ms": 86,
+      "peak": 0.4
+    },
+    {
+      "ok": true,
+      "start_ms": 73,
+      "panic_ms": 116,
+      "peak": 0.4
+    },
+    {
+      "ok": true,
+      "start_ms": 74,
+      "panic_ms": 92,
+      "peak": 0.4
+    },
+    {
+      "ok": true,
+      "start_ms": 81,
+      "panic_ms": 103,
+      "peak": 0.4
+    },
+    {
+      "ok": true,
+      "start_ms": 86,
+      "panic_ms": 99,
+      "peak": 0.4
+    },
+    {
+      "ok": true,
+      "start_ms": 75,
+      "panic_ms": 78,
+      "peak": 0.4
+    }
+  ]
+}

@@ -1,23 +1,15 @@
 {
-  "pass": false,
+  "pass": true,
   "absence_by_closure": [],
-  "final_text": "네, 방송 이후에 GPT-Transcribe 스킬 반영이 완료됐고요, video-subtitles 포함 총 5개 스킬에 적용됐습니다. 적용된 스킬은 video-add-chapters, cleaning, full-process, subtitles, 그리고 youtube-channel-archiver예요.",
+  "final_text": "오늘은 실험 1, AI로 라이브 방송 보조 MC 앱 만들기를 다룹니다. 그리고 실험 2, 기존 스킬을 OpenAI 신규 Transcribe 모델로 업데이트도 함께 진행해요. 참고로 지난 Live21 방송에서 실험①②③ 모두 다뤘다는 점도 연결해서 볼 수 있어요. 또 GPT-Transcribe와 GPT-Live-Transcribe 스킬 반영이 완료되어, 관련 스킬 5개까지 업데이트된 상태예요.",
   "kept_sentences": [
     0,
-    1
+    1,
+    2,
+    3
   ],
-  "dropped_sentences": [
-    {
-      "sentence_idx": 2,
-      "reason": "fact_not_in_evidence"
-    }
-  ],
-  "violations": [
-    {
-      "rule_id": "claim.facts_must_be_quoted",
-      "detail": "문장 2: 숫자 '8'"
-    }
-  ],
-  "length_after": 2,
-  "verified_at": "2026-08-30T13:16:33.818766+00:00"
+  "dropped_sentences": [],
+  "violations": [],
+  "length_after": 4,
+  "verified_at": "2026-08-31T19:55:27.768895+00:00"
 }

@@ -1,15 +1,15 @@
 {
   "overlay": {
-    "text": "오늘은 두 가지 실험을 중심으로 진행돼요, AI로 라이브 방송 보조 MC 앱 만들기와 기존 스킬을 OpenAI 신규 Transcribe 모델로 업데이트예요. 따라서 데이터센터 인력 프로그램은 오늘 방송 주제에 포함되지 않아요. 실험 항목에는 video-subtitles와 video-add-chapters 스킬의 Transcribe 교체 검토가 있고, 컨텍스트 주입 기능 연결도 확인해요. 방송 후 결과 기준으로는 GPT-Transcribe 적용이 5개 스킬에 반영된 상태예요. 정리하면, 오늘은 실험 ①②③을 모두 다루지만 데이터센터 인력 프로그램은 다루지 않아요.",
+    "text": "오늘은 실험 1, AI로 라이브 방송 보조 MC 앱 만들기를 다룹니다. 그리고 실험 2, 기존 스킬을 OpenAI 신규 Transcribe 모델로 업데이트도 함께 진행해요. 참고로 지난 Live21 방송에서 실험①②③ 모두 다뤘다는 점도 연결해서 볼 수 있어요. 또 GPT-Transcribe와 GPT-Live-Transcribe 스킬 반영이 완료되어, 관련 스킬 5개까지 업데이트된 상태예요.",
     "part_id": "3",
-    "updated_at": "2026-08-30T13:07:31.375007+00:00"
+    "updated_at": "2026-08-31T19:55:27.770516+00:00"
   },
   "spoken": {
-    "text": "오늘은 두 가지 실험을 중심으로 진행돼요, AI로 라이브 방송 보조 MC 앱 만들기와 기존 스킬을 OpenAI 신규 Transcribe 모델로 업데이트예요. 따라서 데이터센터 인력 프로그램은 오늘 방송 주제에 포함되지 않아요. 실험 항목에는 video-subtitles와 video-add-chapters 스킬의 Transcribe 교체 검토가 있고, 컨텍스트 주입 기능 연결도 확인해요. 방송 후 결과 기준으로는 GPT-Transcribe 적용이 5개 스킬에 반영된 상태예요. 정리하면, 오늘은 실험 ①②③을 모두 다루지만 데이터센터 인력 프로그램은 다루지 않아요.",
+    "text": "오늘은 실험 1, AI로 라이브 방송 보조 MC 앱 만들기를 다룹니다. 그리고 실험 2, 기존 스킬을 OpenAI 신규 Transcribe 모델로 업데이트도 함께 진행해요. 참고로 지난 Live21 방송에서 실험①②③ 모두 다뤘다는 점도 연결해서 볼 수 있어요. 또 GPT-Transcribe와 GPT-Live-Transcribe 스킬 반영이 완료되어, 관련 스킬 5개까지 업데이트된 상태예요.",
     "provider": "edge",
     "voice": "ko-KR-SunHiNeural",
     "audio_path": null,
-    "spoken_at": "2026-08-30T13:07:31.375007+00:00"
+    "spoken_at": "2026-08-31T19:55:27.770516+00:00"
   },
   "mode": "LIVE",
   "spoken_withheld": false,

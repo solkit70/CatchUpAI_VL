@@ -1,0 +1,73 @@
+{
+  "method": "abort",
+  "n": 10,
+  "n_ok": 10,
+  "target_ms": 200,
+  "panic_med_ms": 98,
+  "panic_max_ms": 112,
+  "panic_min_ms": 90,
+  "start_med_ms": 71,
+  "pass": true,
+  "trials": [
+    {
+      "ok": true,
+      "start_ms": 70,
+      "panic_ms": 99,
+      "peak": 0.4
+    },
+    {
+      "ok": true,
+      "start_ms": 67,
+      "panic_ms": 95,
+      "peak": 0.4
+    },
+    {
+      "ok": true,
+      "start_ms": 74,
+      "panic_ms": 112,
+      "peak": 0.4
+    },
+    {
+      "ok": true,
+      "start_ms": 81,
+      "panic_ms": 99,
+      "peak": 0.4
+    },
+    {
+      "ok": true,
+      "start_ms": 68,
+      "panic_ms": 97,
+      "peak": 0.4
+    },
+    {
+      "ok": true,
+      "start_ms": 72,
+      "panic_ms": 90,
+      "peak": 0.4
+    },
+    {
+      "ok": true,
+      "start_ms": 72,
+      "panic_ms": 90,
+      "peak": 0.4
+    },
+    {
+      "ok": true,
+      "start_ms": 79,
+      "panic_ms": 107,
+      "peak": 0.4
+    },
+    {
+      "ok": true,
+      "start_ms": 70,
+      "panic_ms": 98,
+      "peak": 0.4
+    },
+    {
+      "ok": true,
+      "start_ms": 68,
+      "panic_ms": 92,
+      "peak": 0.4
+    }
+  ]
+}

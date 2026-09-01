@@ -111,3 +111,24 @@ M4 완료 → **M5 - STT + 멀티 LLM 하네스**
 - MOTIV Mix 라우팅 활성화 후 디지털 루프백 회귀 테스트
 
 ← 이전: [M3 - 데이터 계약과 안전 정책 스펙](../03-Data-Contracts-and-Safety/README.md)
+
+## 호스트 API 선택 규칙 (2026-08-31 추가)
+
+Windows 는 **같은 물리 장치를 MME · DirectSound · WASAPI · WDM-KS 로 중복 열거**한다.
+이름만 맞춰 첫 매칭을 집으면 대개 **MME** 가 걸리는데, 지연이 가장 크다.
+
+| 상황 | 규칙 |
+|---|---|
+| **지연이 중요한 경로** | **WASAPI 를 명시 선택한다.** 없으면 그때 폴백 |
+| 단순 존재 확인 | 아무거나 무방 |
+
+실측 근거 — 같은 VB-CABLE 을 방식만 바꿔 재생 지연을 재면:
+
+| 경로 | 지연 |
+|---|---:|
+| MME + `sd.play` | **314ms** (M6 최초 실측) |
+| WASAPI + `sd.play` | 124ms |
+| WASAPI + 저지연 스트림 | **63ms** |
+
+> 이 규칙이 없어서 M6 의 케이블 지연이 **5배 과대 측정**됐다.
+> → [정정 실측](../09-Desktop-Shell-and-Overlay/guides/panic-stop-benchmark.md)
