@@ -1,3 +1,7 @@
+<!-- lang-switch -->
+🇰🇷 **한국어** · [🇺🇸 English](fit-criteria.en.md)
+<!-- lang-switch -->
+
 # 판단 기준과 탈락선
 
 **확정일**: 2026-08-30 (M7 실습 1)

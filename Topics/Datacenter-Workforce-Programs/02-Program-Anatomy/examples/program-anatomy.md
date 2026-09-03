@@ -6,6 +6,10 @@ tags:
   - m2
 ---
 
+<!-- lang-switch -->
+🇰🇷 **한국어** · [🇺🇸 English](program-anatomy.en.md)
+<!-- lang-switch -->
+
 ## 항목 고정
 
 6개를 같은 자로 재기 위해 8항목을 고정했다. **빈 칸을 두지 않는다** —

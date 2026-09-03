@@ -1,3 +1,7 @@
+<!-- lang-switch -->
+🇰🇷 **한국어** · [🇺🇸 English](README.en.md)
+<!-- lang-switch -->
+
 # M6 — 원격·온라인 이수 경로
 
 **기간**: 2026-08-30 (1일)

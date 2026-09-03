@@ -6,6 +6,10 @@ tags:
   - m1
 ---
 
+<!-- lang-switch -->
+🇰🇷 **한국어** · [🇺🇸 English](employment-structure.en.md)
+<!-- lang-switch -->
+
 ## 이 문서가 답하는 질문
 
 **"Meta 프로그램을 수료하면 누구에게 고용되는가?"**

@@ -1,3 +1,7 @@
+<!-- lang-switch -->
+🇰🇷 **한국어** · [🇺🇸 English](program-status-refresh.en.md)
+<!-- lang-switch -->
+
 # 프로그램 6개 현황 재확인 — 2026-08-31
 
 **M2 조사일**: 2026-08-23 · **재확인일**: 2026-08-31 (8일 경과)

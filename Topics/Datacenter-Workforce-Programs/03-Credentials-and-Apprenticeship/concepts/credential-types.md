@@ -7,6 +7,10 @@ tags:
   - credentials
 ---
 
+<!-- lang-switch -->
+🇰🇷 **한국어** · [🇺🇸 English](credential-types.en.md)
+<!-- lang-switch -->
+
 ## 왜 이 구분이 필요한가
 
 M2에서 6개 프로그램을 해부하니 **같은 "교육 프로그램"이라는 말 아래 성격이 전혀 다른 것들이 섞여 있었다.** ⑥ Amazon Apprenticeship은 DOL 등록 견습이고, ② MS Datacenter Academy는 대학 인증과정이며, ③ NABTU 확대분은 무료 단기 교육이다. **어느 형태인지에 따라 훈련 중 수입이 있는지, 끝나고 무엇이 남는지, 중간에 그만두면 어떻게 되는지가 전부 다르다.**

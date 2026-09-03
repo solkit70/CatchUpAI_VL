@@ -1,3 +1,7 @@
+<!-- lang-switch -->
+🇰🇷 **한국어** · [🇺🇸 English](README.en.md)
+<!-- lang-switch -->
+
 # M2 — 6개 프로그램 해부 + 모집 주기 조기 스캔
 
 **상태**: 부분 완료 · DoD 5/7 — **⑤ Amazon TWD 미조사, ⑥ 자격 대상 확인 필요**

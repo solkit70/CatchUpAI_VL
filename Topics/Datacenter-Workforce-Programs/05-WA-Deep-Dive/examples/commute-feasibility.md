@@ -7,6 +7,10 @@ tags:
   - commute
 ---
 
+<!-- lang-switch -->
+🇰🇷 **한국어** · [🇺🇸 English](commute-feasibility.en.md)
+<!-- lang-switch -->
+
 ## 기준점
 
 거주지: **Bonney Lake / Orting 인근** (피어스 카운티, WA)

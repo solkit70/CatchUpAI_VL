@@ -1,3 +1,7 @@
+<!-- lang-switch -->
+🇰🇷 **한국어** · [🇺🇸 English](awa-curriculum.en.md)
+<!-- lang-switch -->
+
 # ① Meta AWA — 4주 동안 실제로 무엇을 배우나
 
 **작성일**: 2026-08-31 · **M8 실습 2 부속**

@@ -1,3 +1,7 @@
+<!-- lang-switch -->
+🇰🇷 **한국어** · [🇺🇸 English](cluster-program-matrix.en.md)
+<!-- lang-switch -->
+
 # 클러스터 × 프로그램 매트릭스
 
 **조사일**: 2026-08-30 (M4 실습 2)

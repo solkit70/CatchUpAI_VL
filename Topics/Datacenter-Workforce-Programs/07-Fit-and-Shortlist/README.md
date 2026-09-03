@@ -1,3 +1,7 @@
+<!-- lang-switch -->
+🇰🇷 **한국어** · [🇺🇸 English](README.en.md)
+<!-- lang-switch -->
+
 # M7 — 본인 적합성 판별과 shortlist 확정
 
 **기간**: 2026-08-30 (1일)

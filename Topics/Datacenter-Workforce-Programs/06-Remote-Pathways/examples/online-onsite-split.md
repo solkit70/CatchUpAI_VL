@@ -1,3 +1,7 @@
+<!-- lang-switch -->
+🇰🇷 **한국어** · [🇺🇸 English](online-onsite-split.en.md)
+<!-- lang-switch -->
+
 # 온라인 / 현장 분해 — BBCC 데이터센터 과정
 
 **조사일**: 2026-08-30 (M6 실습 1)

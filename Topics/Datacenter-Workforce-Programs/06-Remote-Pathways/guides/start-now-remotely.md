@@ -1,3 +1,7 @@
+<!-- lang-switch -->
+🇰🇷 **한국어** · [🇺🇸 English](start-now-remotely.en.md)
+<!-- lang-switch -->
+
 # 지금 원격으로 시작할 수 있는 것
 
 **조사일**: 2026-08-30 (M6 실습 2)

@@ -1,3 +1,7 @@
+<!-- lang-switch -->
+🇰🇷 **한국어** · [🇺🇸 English](direct-entry-assessment.en.md)
+<!-- lang-switch -->
+
 # 직접 입사 가능성 판정 — shortlist를 우회할 수 있는가
 
 **작성일**: 2026-08-31 · **M8 실습 1 부속**

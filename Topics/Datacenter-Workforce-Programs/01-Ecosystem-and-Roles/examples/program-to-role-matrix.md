@@ -6,6 +6,10 @@ tags:
   - m1
 ---
 
+<!-- lang-switch -->
+🇰🇷 **한국어** · [🇺🇸 English](program-to-role-matrix.en.md)
+<!-- lang-switch -->
+
 ## 배치 결과
 
 기초 표의 6개 프로그램을 [직무 지도](../concepts/role-map.md) 2×2 위에 얹었다.

@@ -6,6 +6,10 @@ tags:
   - m1
 ---
 
+<!-- lang-switch -->
+🇰🇷 **한국어** · [🇺🇸 English](role-map.en.md)
+<!-- lang-switch -->
+
 ## 왜 지도부터 만드는가
 
 이후 모든 조사가 이 좌표계 위에 얹힌다. 프로그램을 하나씩 볼 때마다

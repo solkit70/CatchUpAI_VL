@@ -7,6 +7,10 @@ tags:
   - comparison
 ---
 
+<!-- lang-switch -->
+🇰🇷 **한국어** · [🇺🇸 English](track-comparison.en.md)
+<!-- lang-switch -->
+
 ## 이 표의 용도와 금지 사항
 
 M7(적합성 판별)에서 쓸 **근거**를 미리 만든다.

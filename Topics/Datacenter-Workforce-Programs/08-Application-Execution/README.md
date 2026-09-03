@@ -1,3 +1,7 @@
+<!-- lang-switch -->
+🇰🇷 **한국어** · [🇺🇸 English](README.en.md)
+<!-- lang-switch -->
+
 # M8 — 지원 요건·서류·실제 지원
 
 **기간**: 2026-08-31 (진행 중)

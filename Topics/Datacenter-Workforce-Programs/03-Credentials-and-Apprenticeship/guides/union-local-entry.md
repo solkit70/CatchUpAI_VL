@@ -7,6 +7,10 @@ tags:
   - apprenticeship
 ---
 
+<!-- lang-switch -->
+🇰🇷 **한국어** · [🇺🇸 English](union-local-entry.en.md)
+<!-- lang-switch -->
+
 ## 왜 지원 창구가 기업이 아닌가
 
 M2에서 ④ Google.org를 해부했을 때 지원 창구가 **구글이 아니라 지역 IBEW local**이었다. ③ Microsoft NABTU도 마찬가지로 **TradesFutures와 지역 local**이었다.

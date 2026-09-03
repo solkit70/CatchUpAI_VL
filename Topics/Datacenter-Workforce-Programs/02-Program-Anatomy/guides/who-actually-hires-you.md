@@ -6,6 +6,10 @@ tags:
   - m2
 ---
 
+<!-- lang-switch -->
+🇰🇷 **한국어** · [🇺🇸 English](who-actually-hires-you.en.md)
+<!-- lang-switch -->
+
 ## M1의 가설이 확인됐다
 
 M1 [employment-structure.md](../../01-Ecosystem-and-Roles/concepts/employment-structure.md)에서

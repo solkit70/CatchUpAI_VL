@@ -1,3 +1,7 @@
+<!-- lang-switch -->
+🇰🇷 **한국어** · [🇺🇸 English](shortlist.en.md)
+<!-- lang-switch -->
+
 # Shortlist — 최종 3개와 트랙 결론
 
 **확정일**: 2026-08-30 (M7 실습 2)

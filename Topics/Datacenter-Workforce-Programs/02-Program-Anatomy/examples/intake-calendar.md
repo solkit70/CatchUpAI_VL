@@ -6,6 +6,10 @@ tags:
   - m2
 ---
 
+<!-- lang-switch -->
+🇰🇷 **한국어** · [🇺🇸 English](intake-calendar.en.md)
+<!-- lang-switch -->
+
 ## 이 문서를 먼저 만든 이유
 
 로드맵 규칙 1: **마감일이 로드맵을 앞지르면 순서를 바꾼다.**

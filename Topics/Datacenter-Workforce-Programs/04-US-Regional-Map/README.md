@@ -1,3 +1,7 @@
+<!-- lang-switch -->
+🇰🇷 **한국어** · [🇺🇸 English](README.en.md)
+<!-- lang-switch -->
+
 # M4 — 전미 지역 지도
 
 **기간**: 2026-08-30 (1일)

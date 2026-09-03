@@ -1,3 +1,7 @@
+<!-- lang-switch -->
+🇰🇷 **한국어** · [🇺🇸 English](README.en.md)
+<!-- lang-switch -->
+
 # M1 — 데이터센터 인력 생태계와 직무 지도
 
 **상태**: 완료 · DoD 7/7

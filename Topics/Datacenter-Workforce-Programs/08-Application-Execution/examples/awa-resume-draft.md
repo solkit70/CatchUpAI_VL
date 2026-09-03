@@ -1,3 +1,7 @@
+<!-- lang-switch -->
+🇰🇷 **한국어** · [🇺🇸 English](awa-resume-draft.en.md)
+<!-- lang-switch -->
+
 # ① Meta AWA 파이버 트랙 — 영문 이력서 전략과 초안
 
 **작성일**: 2026-08-31 · **개정 v2**: 2026-08-31 (LinkedIn 캡처로 경력 확정) · **M8 실습 2**
@@ -294,6 +298,75 @@ Capgemini(2022-07) 종료와 TecAce(2024-05) 사이가 비어 있다.
 > 「아니오」여도 지원은 그대로 진행한다 — 위 문안이 그 경우의 문안이다.
 
 ---
+
+## 🔄 2026-09-01 개정 — 외부 리뷰 반영 + 폼 실물 확인
+
+사용자가 ChatGPT 리뷰를 가져왔고, 같은 날 **지원 폼 실물**을 확인했다. 둘을 합쳐 4곳을 고쳤다.
+백업: 스크래치패드 `resume-backup-before-edit.docx` (578단어 · 2페이지 유지)
+
+### ⭐ 폼이 문서를 뒤집었다 — 리뷰가 알 수 없었던 것
+
+「희망 근무지」는 **자유 입력이 아니라 고정 목록**이었고, **워싱턴이 목록에 없다.**
+알파벳 순으로 Virginia → Wisconsin 사이가 비어 있다. 오리건(Prineville)도 없다.
+목록은 Meta 데이터센터가 있는 주 12곳 + `Anywhere (traveler status)` 뿐이다.
+
+> **「2026 파일럿이라 WA가 아직 없다」가 아니라 「Meta 데이터센터가 워싱턴주에 없다」**였다.
+> 이 문서가 적어 둔 *"선호를 먼저, 가능성을 뒤에"* 문안은 **쓸 자리가 없어졌다.**
+
+사용자는 `Anywhere (traveler status)` 를 선택했다. 이력서의 *"Preferred work location:
+Pacific Northwest (Washington)"* 는 **폼 답변과 정면으로 어긋나므로 삭제**했다.
+
+### 고친 것 4가지
+
+| # | 무엇 | 전 → 후 | 근거 |
+|---|---|---|---|
+| 1 | **숫자 오류** | `six U.S. states` → **`seven`** | SUMMARY가 RI·CA·MN·IL·FL·NJ·WA **7개**를 나열하는데 bullet은 6이라 적혀 있었다. 경력란과 대조하면 이동도 정확히 7회(서울→NJ→RI→CA→MN→IL→FL→WA) — **7이 맞다** |
+| 2 | **근무지 문안** | `Pacific Northwest (Washington) preferred…` → `Open to placement anywhere in the United States, including traveler status.` | 폼 답변과 일치시킴 |
+| 3 | **수료 후 고용 의지 명시** | `Available for full-time training…` → `…and for full-time employment on completion.` | 심사자의 진짜 걱정은 *"교육만 받고 갈 사람인가"* 다 |
+| 4 | **학습 근거 bullet** | `Still learning after twenty years — seven certifications… 2018–2022` → `Quick to pick up unfamiliar systems — moved from software development to test automation to cloud infrastructure to AI application work` | 2026년 지원인데 최신 근거가 2022년이었다. 나이를 강조하는 *"after twenty years"* 도 제거 |
+
+**자격증 4건 삭제** — Core Java(2022) · Power BI(2021) · SAP NetWeaver(2009) · **Oracle 9i DBA(2003)**.
+남긴 5건은 Building Test Automation Framework · Agile · TOSCA · **AWS Cloud Practitioner** · Elements of AI.
+
+> **2003년 자격증은 나이 신호이고, SAP·Oracle은 *"시니어 IT 전문가"* 인상을 강화한다.**
+> 이 지원의 전략은 정확히 그 인상을 줄이는 것이다. AWS CCP만 데이터센터와 접점이 있어 남겼다.
+
+### 받아들이지 않은 리뷰 항목
+
+| 항목 | 판단 |
+|---|---|
+| `Founder & CEO` → `Founder / Technical Builder` 로 완충 | ❌ **거절.** [결정 ①](#결정--founder--ceo-를-그대로-쓸-것인가--권고를-바꾼다)에서 이미 검토했다. LinkedIn이 `Founder & CEO`라 **불일치가 과잉자격 의심보다 위험**하다. 의도는 SUMMARY 마지막 문장이 막는다 |
+| SUMMARY 전면 교체 | ❌ **거절.** 제안본은 일반론이라 *"Traveling to Indianapolis or Columbus for four weeks is nothing new for me"* 와 7개 주 실명 나열이라는 **가장 강한 두 문장**을 잃는다 |
+| 1페이지로 압축 | ❌ **거절.** Capgemini 고객사 5건 목록이 「7번의 이동」을 눈으로 보여주는 부분이다. 자격증 4건을 뺀 만큼만 짧아졌다 |
+| 섹션 제목을 `AWA FIT & TRANSFERABLE SKILLS` 로 | ❌ **거절.** 이 프로그램이 찾는 사람은 *"reliable, eager to learn"* 이다. 평이한 제목이 더 맞다 |
+| 물리적 작업 능력 추가 | ✅ **해소 (9/1 사용자 확인).** 취미가 **낚시·산 버섯채취**다. 직업 경험이 아니므로 「적합성」 bullet 이 아니라 **ADDITIONAL 에 사실로** 넣었다 — *"Physically active outside of work — regular hiking and mushroom foraging in the mountains and fishing, often full days on foot in variable weather."* 버섯채취는 **길 없는 산을 장시간 걷는 활동**이라 실제로 관련 있는 유일한 근거였다 |
+| Education에 `B.A., Political Science` 추가 | ✅ **반영 (9/1 사용자 확인).** 강원대학교 **정치외교학** 확정 — `Gangwon National University — B.A., Political Science | South Korea`. 학사 학위 보유가 분명해져 모든 프로그램의 학력 요건(고졸·GED)을 여유 있게 넘는다 |
+
+### 2차 리뷰 반영 (같은 날, 최종본 — 606단어)
+
+외부 리뷰 2회차. **6건 중 4건 수용.**
+
+| 변경 | 판단 |
+|---|---|
+| `hands-on technical work` → **`hands-on technical problem solving`** | ✅ 20년은 물리적 현장일이 아니었다. 게다가 AWA 공식 문구가 *"enjoy solving problems"* 라 **상대의 표현을 되돌려준다** |
+| `a decade` → **`nearly a decade`** | ✅ ⭐ QA 실제 기간은 Union Bank(2013-04)~T-Mobile(2022-07) = **9년 3개월.** `six→seven states` 와 **같은 종류의 사실 오류**였다 |
+| `crews` → **`work environments`** | ✅ 앞에 이미 *"embedded in their teams"* 가 있어 중복이고, **건설 어휘를 빌려 입은 티**가 난다 — 이 이력서가 피하려는 바로 그 인상 |
+| 물리 활동 줄에서 **`and fishing` 삭제** | ✅ 이 줄의 임무는 *"하루 종일 발로 서 있을 수 있다"* 하나다. 낚시가 들어가면 취미 목록으로 읽힌다. 단 `mountain foraging` 대신 **`mushroom foraging` 유지** — 구체적일수록 사실로 읽힌다 |
+| `I intend to stay in it` → `making this transition for the long term` | ❌ **거절.** 앞은 **약속**, 뒤는 **과정 서술**이다. 심사자의 걱정이 이탈이므로 약속이 강하다. 또 바로 앞 문장이 *"I want work I can do with my hands"* 라는 평이한 말투라, 한 구절만 기업 문서체가 되면 **거기서 다른 사람이 쓴 티가 난다** |
+| AWS `2020–2023` → `(2020–2023)` | ❌ **거절.** 텍스트 추출 아티팩트를 보고 나온 지적이다. 실제 문서에서는 **오른쪽 정렬 탭 열**이라 기간으로 오해될 여지가 없고, 괄호를 치면 단일 연도인 다른 줄들 사이에서 혼자 튄다. 만료 연도를 그대로 두는 쪽이 정직하다 |
+
+> ⚠️ **구버전 PDF 주의.** 외부에 `Resume_ChangsooPark.docx.pdf` 구버전이 돌아다닌다.
+> **PDF로 변환하지 말고 `.docx` 를 그대로 업로드한다** — 변환 단계가 없으면 엉뚱한 파일을 집을 일도 없고,
+> Avature 같은 ATS 는 단일 열 DOCX 를 잘 파싱한다.
+
+> 📌 **여기서 수정을 멈춘다.** 더 손대면 사람이 쓴 이력서가 아니라
+> 키워드에 맞춘 문서가 된다. 하루에 3회 개정이면 충분하다.
+
+### 남은 후속 — 이력서 밖
+
+**LinkedIn headline이 이력서와 충돌한다.** 심사자가 이력서를 보고 LinkedIn을 열면
+*"AI 회사 CEO인데 정말 숙련직으로 옮기려는 건가"* 라는 의문이 생긴다.
+headline에 전환 의도를 한 줄 넣어 두면 이 의심이 사라진다. — **제출 후 처리해도 된다.**
 
 ## 다음 단계
 

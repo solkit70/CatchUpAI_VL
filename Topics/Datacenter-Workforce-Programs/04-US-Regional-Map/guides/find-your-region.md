@@ -1,3 +1,7 @@
+<!-- lang-switch -->
+🇰🇷 **한국어** · [🇺🇸 English](find-your-region.en.md)
+<!-- lang-switch -->
+
 # 내 지역에 데이터센터 인력 프로그램이 있는지 찾는 법
 
 **작성**: 2026-08-30 (M4)

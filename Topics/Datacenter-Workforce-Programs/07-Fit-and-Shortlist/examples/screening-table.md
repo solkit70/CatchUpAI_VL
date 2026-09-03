@@ -1,3 +1,7 @@
+<!-- lang-switch -->
+🇰🇷 **한국어** · [🇺🇸 English](screening-table.en.md)
+<!-- lang-switch -->
+
 # 전체 대입 결과
 
 **대입일**: 2026-08-30 (M7 실습 2)

@@ -1,3 +1,7 @@
+<!-- lang-switch -->
+🇰🇷 **한국어** · [🇺🇸 English](us-dc-clusters.en.md)
+<!-- lang-switch -->
+
 # 미국 데이터센터 클러스터 지도
 
 **조사일**: 2026-08-30 (M4 실습 1)
@@ -7,7 +11,21 @@
 
 전력·용지·세제 혜택 세 가지가 특정 지역에 몰려 있기 때문이다. 인력 프로그램은 **그 옆에 생긴다** — 프로그램을 찾으려면 먼저 클러스터를 찾아야 하는 이유다.
 
-그리고 지금은 넷째 요인이 붙었다. 업계 조사에서 **데이터센터 운영자의 60% 이상이 인력을 못 구한다**고 답했고, 그래서 2026년에 빅테크 자금이 훈련 쪽으로 대거 흘러들었다.
+그리고 지금은 넷째 요인이 붙었다. **인력난**이다.
+
+> *"More than half of all respondents in 2026 report difficulties finding
+> qualified candidates for open positions"*
+> — [Uptime Institute 16th Annual Global Data Center Survey](https://uptimeinstitute.com/about-ui/press-releases/16th-annual-2026-global-data-center-survey-deployment-of-high-density-racks-rising-fast-operators-face-continued-recruiting-and-retention-pressures) (2026-07-28, 응답 800+)
+
+2차 보도는 이를 **53%** 로 적고, **2025년 46% 에서 올랐다**고 덧붙인다.
+채용난과 이직 문제를 **합치면 약 3분의 2** 다.
+
+그래서 2026년에 빅테크 자금이 훈련 쪽으로 대거 흘러들었다.
+
+> ⚠️ **정정 (2026-09-02)** — 이 문단은 원래 *"60% 이상이 인력을 못 구한다"* 로 적혀 있었다.
+> 1차 출처를 확인하니 **그 숫자는 원문에 없다.**
+> **53%**(적합한 지원자를 못 찾음)와 **약 2/3**(채용난 또는 이직)이 섞인 것으로 보인다.
+> **인상적인 숫자일수록 원출처를 확인해야 한다** 는 M1 의 원칙이 여기서 한 번 더 확인됐다.
 
 ## 클러스터 목록
 
