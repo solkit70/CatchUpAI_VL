@@ -1,0 +1,30 @@
+{
+  "current_part_id": "2",
+  "coverage_state": "defined",
+  "coverage_items": [
+    "CoMC 앱 개발(Live-CoMC-App) M10 마무리",
+    "Caregiver 학습 자료 기반 영상 제작을 라이브로 진행",
+    "Claude Artifacts & Routines 신규 Topic 학습"
+  ],
+  "evidence_pool": [
+    {
+      "path": "AI/Roundup/2026-08-30 - Live26 Weekly Rundown.md#오늘의 실험",
+      "quote": "9/5 갱신 — 이번 주 실험 후보 전체 목록"
+    },
+    {
+      "path": "AI/Roundup/2026-08-30 - Live26 Weekly Rundown.md#오늘의 실험",
+      "quote": "확정된 실험 ②③ — 시작 프롬프트 원문 (9/5 슬라이드, 방송 중 그대로 사용)"
+    },
+    {
+      "path": "AI/Roundup/2026-08-30 - Live26 Weekly Rundown.md#오늘의 실험",
+      "quote": "기존 후보 맥락"
+    }
+  ],
+  "status_map": {
+    "rundown": "unconfirmed"
+  },
+  "excluded_headings": [],
+  "withheld_conditional": [],
+  "forbidden_removed": true,
+  "assembled_at": "2026-09-06T13:20:08.551946+00:00"
+}

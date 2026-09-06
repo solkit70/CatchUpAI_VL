@@ -1,7 +1,0 @@
-{
-  "text": "오늘은 실험 1, AI로 라이브 방송 보조 MC 앱 만들기를 다룹니다. 그리고 실험 2, 기존 스킬을 OpenAI 신규 Transcribe 모델로 업데이트도 함께 진행해요. 참고로 지난 Live21 방송에서 실험①②③ 모두 다뤘다는 점도 연결해서 볼 수 있어요. 또 GPT-Transcribe와 GPT-Live-Transcribe 스킬 반영이 완료되어, 관련 스킬 5개까지 업데이트된 상태예요.",
-  "provider": "edge",
-  "voice": "ko-KR-SunHiNeural",
-  "audio_path": null,
-  "spoken_at": "2026-08-31T19:55:27.770516+00:00"
-}

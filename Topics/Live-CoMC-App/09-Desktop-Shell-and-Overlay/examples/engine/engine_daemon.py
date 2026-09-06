@@ -155,11 +155,19 @@ class Engine:
             sys.argv = saved
         return ok, round((time.time() - t0) * 1000)
 
-    def prewarm(self, live: str, part: str = "3", max_evidence: int | None = None) -> dict:
+    def prewarm(self, live: str, part: str | None = None,
+                max_evidence: int | None = None) -> dict:
         """①② 는 방송 전에 끝내 둔다 (M7 warm 조건과 동일).
 
         max_evidence 를 주면 근거 풀을 좁힌다 — M7 리포트의 2번 대책 실측용.
+
+        ⚠️ part 기본값이 `"3"` 로 **하드코딩돼 있었다** (M10 리허설에서 발견, 2026-09-06).
+        Live21 이 3부까지 있어서 그때는 맞았지만, 3부가 없는 회차에서는 조용히
+        엉뚱한 파트로 컨텍스트를 만든다. 세션 권위값(session_state.current_part_id)이
+        있으면 그것을 쓰고, 없으면 파싱된 첫 파트로 떨어진다 — **추정하지 않는다.**
         """
+        if part is None:
+            part = self._authoritative_part(live)
         ev = ["--max-evidence", str(max_evidence)] if max_evidence else []
         per = {}
         for label, argv in (("①", ["--live", live]),
@@ -169,6 +177,29 @@ class Engine:
             if not ok:
                 return {"ok": False, "failed_at": label, "per_stage": per}
         return {"ok": True, "per_stage": per}
+
+    def _authoritative_part(self, live: str) -> str:
+        """current_part_id 는 M7 권위값이다 — 여기서 만들어내지 않고 읽어 온다."""
+        import json as _json
+        from pathlib import Path as _Path
+        out = _Path(__file__).resolve().parents[3] / "07-CoMC-Engine-POC" / "output"
+        ss = out / "session_state.json"
+        if ss.exists():
+            try:
+                pid = _json.loads(ss.read_text(encoding="utf-8")).get("current_part_id")
+                if pid:
+                    return str(pid)
+            except Exception:
+                pass
+        idx = out / f"rundown_index.{live}.json"
+        if idx.exists():
+            try:
+                parts = _json.loads(idx.read_text(encoding="utf-8")).get("parts") or []
+                if parts:
+                    return str(parts[0]["id"])
+            except Exception:
+                pass
+        return "1"
 
     def utter(self, live: str, text: str) -> dict:
         """발화 하나를 처리한다 — ③④⑤⑥."""

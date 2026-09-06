@@ -20,6 +20,8 @@ M5는 M1~M4에서 모은 사실을 처음으로 본인 조건에 대조해 경�
 1. [examples/personal-criteria.md](examples/personal-criteria.md) - 본인 조건, 가중치, 타협 불가 항목을 확인한다.
 2. [examples/candidate-scoring.md](examples/candidate-scoring.md) - 3경로 × 2근무형태의 6개 후보를 같은 기준으로 점수화한다.
 3. [decisions/chosen-path.md](decisions/chosen-path.md) - 선택 경로, 근거, 제외 사유, 재검토 조건을 정리한다.
+4. ⭐ [guides/emotional-and-physical-reality.md](guides/emotional-and-physical-reality.md) - **2026-09-05 추가.** 위 세 문서에 없던 축 — 이 일을 몸과 마음으로 감당하는 것이 실제로 어떤 경험인지, 행정 절차 너머의 현실을 정리한다.
+5. ⭐ [guides/caregiver-testimonials.md](guides/caregiver-testimonials.md) - **2026-09-05 추가.** 4번 문서를 뒷받침하는 실제 caregiver(실명·신원 확인) 직접 인용 모음 — 추천하는 목소리와 신중해야 한다는 목소리를 함께 담았다.
 
 ## 핵심 결론
 
@@ -46,6 +48,10 @@ NAC는 시설 고정 근무와 PEBB 가능성이 장점이지만, 현재 사용�
 - [x] WorkLog + Module Retrospective 작성 (A구간 종료)
 
 **완료율**: 7/7
+
+## 2026-09-05 업데이트 — 실행 보류
+
+사용자가 M6~M8 실제 실행(교육 등록·지원)을 **더 시간을 갖고 고민하기로 결정**했다. 이유는 시급·통근 같은 경제적 조건은 다 조사됐지만, [emotional-and-physical-reality.md](guides/emotional-and-physical-reality.md)가 정리한 **육체적·정서적 부담을 감당할 수 있는지는 본인만 판단할 수 있는 영역**이기 때문이다. 이것은 이 Topic의 규칙 5(문의는 사용자가 직접)와 같은 맥락 — AI가 대신 결정하지 않는다.
 
 ## 조사 범위와 한계
 

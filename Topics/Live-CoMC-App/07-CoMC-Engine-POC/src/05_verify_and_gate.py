@@ -46,6 +46,11 @@ STOP = {"그리고", "또한", "합니다", "입니다", "있습니다", "했습
         "진행", "확인", "내용", "부분", "경우", "때문", "정도", "가지"}
 
 
+# 규칙 8 — 해라체(`~다`)에 `요` 를 붙인 종결. 방송에서 읽을 수 없다.
+# 판정 근거와 실측(0/10)은 10-Live-Rehearsal-Capstone/examples/ending_style_probe.py 참조.
+RE_BROKEN_ENDING = re.compile(r"(?:[가-힣])다\s*요[.!?]?$")
+
+
 def tokens(text: str) -> set[str]:
     return {t for t in re.findall(r"[0-9A-Za-z가-힣]{2,}", text) if t not in STOP}
 
@@ -159,7 +164,7 @@ def quote_found(quote: str, pool_quotes: list[str]) -> bool:
     return any(q in full or full in q for full in pool_quotes)
 
 
-def verify(draft: dict, ctx: dict, policy: dict) -> dict:
+def verify(draft: dict, ctx: dict, policy: dict, question: str = "") -> dict:
     sentences = draft["sentences"]
     cmap = draft.get("claim_map", [])
     pool_paths = {e["path"] for e in ctx["evidence_pool"]}
@@ -270,10 +275,63 @@ def verify(draft: dict, ctx: dict, policy: dict) -> dict:
                            "detail": f"{len(kept)}문장 → {limit}문장 (level={level})"})
         kept = kept[:limit]
 
+    # ⑦ 내용 없음 — 근거는 있는데 질문에 답하지 않았는가 (M10 리허설 1회차에서 추가)
+    #
+    # 규칙 1~6 은 전부 "틀린 말을 막는" 검사다. 그 방어가 완성되자 반대편 실패가 나왔다.
+    #
+    #   질문  오늘 2부에서 진행할 실험이 뭐가 있나요?
+    #   답    …후보 전체 목록 중에서 선별된 항목들입니다.   ← 이름을 하나도 안 말함
+    #   게이트 통과 (모든 문장에 근거가 있다)
+    #
+    # 프롬프트로 고쳐 봤더니 3회 중 1회만 항목을 말했다 — **비결정적이라 보장되지 않는다.**
+    # M8 이 세운 원칙대로 규칙 기반으로 잡는다. LLM 자기평가에 맡기지 않는다.
+    #
+    # 오탐을 피하려고 적용 범위를 좁힌다. "지금 몇 부인가요?" 같은 질문은 화이트리스트를
+    # 언급하지 않는 것이 정상이므로, **'무엇을 다루는가' 를 묻는 질문에만** 적용한다.
+    content_empty = False
+    cov_items = ctx["coverage_items"]
+    if question and cov_items and ctx.get("coverage_state") == "defined" and kept:
+        asks_what = any(k in question for k in ("뭐", "무엇", "어떤", "뭘"))
+        if asks_what:
+            spoken_tokens = tokens(" ".join(sentences[i] for i in kept))
+            named = any(
+                len(tokens(item) & spoken_tokens) >= max(1, int(len(tokens(item)) * 0.6))
+                for item in cov_items)
+            if not named:
+                content_empty = True
+                violations.append({
+                    "rule_id": "content_empty",
+                    "detail": f"'무엇을' 질문인데 커버리지 항목 {len(cov_items)}개 중 "
+                              f"어느 것도 답변에 나오지 않았다 — 근거는 있으나 내용이 없다"})
+
+    # ⑧ 종결 형태 붕괴 — 방송에서 읽을 수 없는 어미인가 (M10, 2026-09-06)
+    #
+    # 리허설 1회차에서 같은 프롬프트로 두 번 돌렸는데 한 번은 이렇게 나왔다.
+    #   "…추렸다요." / "…진행한다요." / "…예정이다요."   ← 해라체 + 요
+    # 게이트가 어미를 보지 않으므로 통과했다. REVIEW 라서 소리가 안 나갔을 뿐이다.
+    #
+    # 프롬프트에 어투 지시를 넣은 뒤 10회 재측정에서 **0/10** 이었다.
+    # 즉 이것은 활성 결함의 수정이 아니라 **하한**이다 — 규칙 7과 같은 이유로 둔다.
+    # 프롬프트는 확률을 옮기고 게이트는 하한을 만든다.
+    #
+    # ⚠️ `unknown`(아는 정상형이 아님)은 **막지 않는다.** 정상인데 내 목록에 없는
+    #    어미가 있을 수 있고, 오탐으로 발화를 막는 것이 이상한 어미가 나가는 것보다 나쁘다.
+    #    명시적 붕괴(`~다요`)만 막는다.
+    style_broken = [i for i in kept if RE_BROKEN_ENDING.search(sentences[i].strip())]
+    if style_broken:
+        for i in style_broken:
+            dropped.append({"sentence_idx": i, "reason": "style_broken"})
+        kept = [i for i in kept if i not in style_broken]
+        violations.append({
+            "rule_id": "style_broken",
+            "detail": f"방송에서 읽을 수 없는 종결(해라체+요) {len(style_broken)}건"})
+
     final_text = " ".join(sentences[i] for i in kept)
     absence_kept = [i for i in absence_basis if i in kept]
     return {
-        "pass": not dropped,
+        # 문장을 버리지는 않는다 — 위험한 말이 아니라 쓸모없는 말이다.
+        # 화면에는 띄워 진행자가 판단하게 하고, 자동 발화만 막는다.
+        "pass": not dropped and not content_empty,
         # 어느 문장이 인용이 아니라 화이트리스트 닫힘에 기대고 있는지 남긴다.
         # 남기지 않으면 사후 분석에서 "이 문장은 무엇으로 뒷받침됐나"에 답할 수 없다.
         "absence_by_closure": absence_kept,
@@ -340,8 +398,12 @@ def main():
 
     # intent 의 길이 수준을 draft 에 실어 전달한다 (스키마 밖 필드라 검증 전에 뺀다)
     ipath = out("intent.json")
+    question = ""
     if ipath.exists():
-        draft["_length_level"] = read_json(ipath)["slots"].get("length_level", "default")
+        _intent = read_json(ipath)
+        draft["_length_level"] = _intent["slots"].get("length_level", "default")
+        # 규칙 7(content_empty)은 질문 유형을 봐야 오탐이 안 난다.
+        question = _intent.get("transcript", "")
 
     if args.tamper:
         draft = tamper(draft)
@@ -352,7 +414,7 @@ def main():
         print("⚠ 사실 위조 모드 — 근거는 그대로, 숫자·고유명사만 틀리게 넣습니다")
         print("   인용은 실재하므로 M7 게이트만으로는 전부 통과한다\n")
 
-    v = verify(draft, ctx, policy)
+    v = verify(draft, ctx, policy, question=question)
     validate_or_die("verdict", v, "05_verify_and_gate")
     path = write_json(out("verdict.json"), v)
 

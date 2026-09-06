@@ -25,8 +25,8 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 
-from common import (DATA, out, now_iso, read_text, rel_to_vault, trace,  # noqa: E402
-                    validate_or_die, vault_path, write_json)
+from common import (DATA, VAULT, out, now_iso, read_text, rel_to_vault,  # noqa: E402
+                    trace, validate_or_die, vault_path, write_json)
 
 # ── 정규식 (M1 case-table.md 실측 기반) ────────────────────────────────
 
@@ -231,6 +231,19 @@ def parse_rundown(md_path: Path) -> dict:
                 # 아직 파트로 확정하지 않는다. 커버리지 줄이 따라오면 그때 승격한다 —
                 # '## 방송 순서 (초안)' 같은 헤딩까지 파트로 만들면 안 되기 때문이다.
                 pending_h2 = (mp.group(1).strip(), mp.group(2).strip())
+            else:
+                # ⚠️ 괄호 시간 표기는 번호 없는 파트에서도 **선택**이다 (M10, 2026-09-06).
+                #
+                # M8 은 이 규칙을 RE_PART(번호 있는 파트)에만 적용했다. 그래서
+                # '## 주간 영상 (시간 미정)' 은 파트가 되고 '## 주간 영상' 은 안 됐다.
+                # Live26 에서 실물로 터졌다 — 커버리지 줄이 coverage_without_part 로
+                # 떨어져 그 구간의 발화 항목이 어디에도 실리지 않았다.
+                #
+                # 승격 조건이 '커버리지 줄이 따라올 것' 이므로 여기서 넓혀도 안전하다.
+                # '## 방송 순서' 처럼 커버리지가 없는 헤딩은 끝내 승격되지 않는다.
+                ma = RE_H2_ANY.match(line)
+                if ma:
+                    pending_h2 = (ma.group(1).strip(), "")
             continue
 
         # ── H3 ────────────────────────────────────────────────────────
@@ -255,6 +268,7 @@ def parse_rundown(md_path: Path) -> dict:
                 # 번호 없는 방송 구간. 커버리지를 가졌으므로 파트다.
                 # 빼면 그 구간에서 말할 수 있는 것을 말하지 못하게 된다.
                 title, time_raw = pending_h2
+                time_raw = time_raw or "시간 미표기"   # 괄호 없는 H2 (M10 확장)
                 minutes, remainder = parse_time(time_raw)
                 cur = {"id": title, "sort_key": 900.0 + len(parts), "is_numbered": False,
                        "title": title, "time_raw": time_raw, "time_minutes": minutes,
@@ -324,6 +338,29 @@ SAMPLES = {
 }
 
 
+def resolve_live(label: str) -> Path:
+    """회차 라벨 → Rundown 파일 경로.
+
+    ⚠️ M10 리허설에서 드러난 것 (2026-09-06):
+    `--live` 가 SAMPLES 에 고정돼 있어 **오늘 방송 회차로는 엔진을 돌릴 수 없었다.**
+    샘플 사본은 재현성 때문에 둔 것인데(M7), 그 결과 실물 방송이 사각지대가 됐다.
+
+    - 샘플에 있으면 사본을 쓴다 (기존 동작 유지 — 회귀 검증이 여기 걸려 있다)
+    - 없으면 **볼트의 실제 Rundown** 을 찾는다. 매주 사본을 뜨거나 코드를 고칠 필요가 없다.
+    """
+    if label in SAMPLES:
+        return DATA / "rundown_samples" / SAMPLES[label]
+
+    roundup = VAULT / "AI" / "Roundup"
+    hits = sorted(roundup.glob(f"* - Live{label} Weekly Rundown.md"))
+    if not hits:
+        raise SystemExit(
+            f"Live{label} Rundown 을 찾지 못했습니다.\n"
+            f"  샘플: {', '.join(sorted(SAMPLES))}\n"
+            f"  볼트: {roundup}\\* - Live{label} Weekly Rundown.md")
+    return hits[-1]
+
+
 def report_anomalies(idx: dict) -> None:
     """못 읽은 줄을 반드시 눈에 보이게 한다.
 
@@ -359,14 +396,15 @@ def report(idx: dict) -> None:
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--live", choices=sorted(SAMPLES), help="샘플 회차")
+    ap.add_argument("--live", help=f"회차. 샘플({', '.join(sorted(SAMPLES))}) 또는 "
+                                   f"볼트의 실제 회차 번호(예: 26)")
     ap.add_argument("--path", help="볼트 상대 경로의 Rundown .md")
     args = ap.parse_args()
 
     if args.path:
         targets = [(None, vault_path(args.path))]
     elif args.live:
-        targets = [(args.live, DATA / "rundown_samples" / SAMPLES[args.live])]
+        targets = [(args.live, resolve_live(args.live))]
     else:
         targets = [(k, DATA / "rundown_samples" / v) for k, v in SAMPLES.items()]
 

@@ -20,6 +20,8 @@ tags:
 > → 상세: [KWA·First Choice 신청 요령](../../08-Application-and-Hire/guides/kwa-firstchoice-application.md)
 > → **문의 결과(월 80시간 배정 가능성)를 받은 뒤 순위를 확정한다.**
 
+> ⚠️ **2026-09-05 추가 — 실행 보류.** 위 재검토는 전부 경제적·행정적 조건(임금·보험·통근)에 관한 것이었다. [emotional-and-physical-reality.md](../guides/emotional-and-physical-reality.md)가 정리한 **육체적 부담(이동·transfer)과 정서적 부담(환자 히스테리, 가족 관계)**은 이 문서 어디에도 반영돼 있지 않았다. 사용자는 이 축을 충분히 고민한 뒤 KWA·First Choice 지원 여부를 결정하기로 했다 — **지원·교육 등록 실행은 보류.**
+
 ## 결정
 
 **임시 1순위**: 기관 소속 HCA 파트타임, Tacoma/Puyallup 권역 agency 우선.
@@ -86,6 +88,7 @@ M1에서 확인한 구조상 HCA는 "자격 취득 후 취업"이 아니라 많�
 - 의료보험이 필수가 아니라고 사용자가 확정하면 short-hour agency part-time의 점수를 올린다.
 - 전업이 가능하다고 사용자가 확정하면 agency HCA 전업과 WDVA/NAC 경로를 다시 비교한다.
 - Orting/Tacoma 근처 paid NAC in-training 공고가 열리면 NAC 경로를 즉시 재검토한다.
+- **사용자가 [emotional-and-physical-reality.md](../guides/emotional-and-physical-reality.md)의 자가 점검(8절)에 답을 정리하면**, 그 결과를 반영해 지원 여부를 다시 확정한다.
 
 ## 결정 문장
 

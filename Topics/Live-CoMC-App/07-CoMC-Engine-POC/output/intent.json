@@ -1,10 +1,8 @@
 {
-  "transcript": "오늘 3번 파트에서 뭘 다루나요?",
+  "transcript": "오늘 2부에서 진행할 실험이 뭐가 있나요?",
   "intent": "answer_question",
-  "slots": {
-    "part_id": "3"
-  },
+  "slots": {},
   "ambiguity_flags": [],
   "confidence": 0.9,
-  "created_at": "2026-08-31T19:55:23.404487+00:00"
+  "created_at": "2026-09-06T13:20:20.651241+00:00"
 }

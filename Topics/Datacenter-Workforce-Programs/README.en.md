@@ -224,8 +224,8 @@ I kept those in, because they may be more useful than the research itself.
 
 This research process was also made into a video.
 
-- 🇰🇷 Korean — *(coming soon)*
-- 🇺🇸 English — *(coming soon)*
+- 🇰🇷 Korean — https://youtu.be/DotegI2Q8fw
+- 🇺🇸 English — https://youtu.be/749dpzOq09Y
 
 **The video covers only what's needed to make a decision. The detail lives here.**
 

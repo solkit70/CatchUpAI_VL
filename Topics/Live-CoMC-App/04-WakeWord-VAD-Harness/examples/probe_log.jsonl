@@ -44,3 +44,5 @@
 {"event": "echo_test", "gate": "on", "model": "alexa", "tts_seconds": 12.0, "peak": 1, "detected_during_playback": 0, "suppressed": 0, "after_playback": 0, "detections": [], "suppressed_detail": [], "logged_at": "2026-08-15T22:58:34"}
 {"event": "summary", "mode": "record", "seconds": 1800.0, "counts": {"alexa": 0}, "avg_proc_ms": 6.39, "logged_at": "2026-08-15T23:32:11"}
 {"event": "echo_test", "gate": "off", "model": "alexa", "tts_seconds": 12.0, "peak": 1, "detected_during_playback": 0, "suppressed": 0, "after_playback": 0, "detections": [], "suppressed_detail": [], "logged_at": "2026-08-31T10:57:49"}
+{"event": "wake", "mode": "file", "model": "alexa", "score": 0.595, "clock_s": 8028.8, "logged_at": "2026-09-06T06:50:46"}
+{"event": "summary", "mode": "file", "seconds": 11020.0, "counts": {"hey_jarvis": 0, "alexa": 1, "hey_mycroft": 0}, "avg_proc_ms": 9.04, "logged_at": "2026-09-06T06:55:50"}

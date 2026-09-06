@@ -223,8 +223,8 @@ technician   1차 조회 0건  →  반복 조회 2,352건
 
 이 조사 과정을 영상으로도 만들었습니다.
 
-- 🇰🇷 한국어 — *(공개 예정)*
-- 🇺🇸 English — *(공개 예정)*
+- 🇰🇷 한국어 — https://youtu.be/DotegI2Q8fw
+- 🇺🇸 English — https://youtu.be/749dpzOq09Y
 
 **영상은 판단에 필요한 것까지만 담았고, 상세는 이 저장소에 있습니다.**
 

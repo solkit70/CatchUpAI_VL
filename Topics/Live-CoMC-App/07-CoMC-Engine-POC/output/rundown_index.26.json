@@ -1,0 +1,55 @@
+{
+  "source_path": "AI/Roundup/2026-08-30 - Live26 Weekly Rundown.md",
+  "is_final": false,
+  "parts": [
+    {
+      "id": "1",
+      "sort_key": 1.0,
+      "is_numbered": true,
+      "title": "지난 주 생성한 컨텐츠",
+      "time_raw": "시간 미표기",
+      "time_minutes": null,
+      "is_remainder": false,
+      "coverage_state": "defined",
+      "coverage_items": [
+        "모바일 원격 실행(한/영)",
+        "「무엇을 만들 것인가」(한/영)",
+        "Datacenter Workforce M10 캡스톤(한/영)",
+        "Sebastian Raschka LLM Q&A 자막 영상"
+      ],
+      "directive_note": null
+    },
+    {
+      "id": "2",
+      "sort_key": 2.0,
+      "is_numbered": true,
+      "title": "오늘의 실험",
+      "time_raw": "시간 미표기",
+      "time_minutes": null,
+      "is_remainder": false,
+      "coverage_state": "defined",
+      "coverage_items": [
+        "CoMC 앱 개발(Live-CoMC-App) M10 마무리",
+        "Caregiver 학습 자료 기반 영상 제작을 라이브로 진행",
+        "Claude Artifacts & Routines 신규 Topic 학습"
+      ],
+      "directive_note": null
+    },
+    {
+      "id": "주간 영상",
+      "sort_key": 902.0,
+      "is_numbered": false,
+      "title": "주간 영상",
+      "time_raw": "시간 미표기",
+      "time_minutes": null,
+      "is_remainder": false,
+      "coverage_state": "undefined",
+      "coverage_items": [],
+      "directive_note": null
+    }
+  ],
+  "excluded_sections": [],
+  "conditional_sections": [],
+  "parse_anomalies": [],
+  "parsed_at": "2026-09-06T13:20:08.540646+00:00"
+}

@@ -1,0 +1,20 @@
+[커버리지 화이트리스트 — 이 범위 밖은 말하지 않는다]
+- CoMC 앱 개발(Live-CoMC-App) M10 마무리
+- Caregiver 학습 자료 기반 영상 제작을 라이브로 진행
+- Claude Artifacts & Routines 신규 Topic 학습
+
+[근거 목록]
+- path: AI/Roundup/2026-08-30 - Live26 Weekly Rundown.md#오늘의 실험
+  quote: 9/5 갱신 — 이번 주 실험 후보 전체 목록
+- path: AI/Roundup/2026-08-30 - Live26 Weekly Rundown.md#오늘의 실험
+  quote: 확정된 실험 ②③ — 시작 프롬프트 원문 (9/5 슬라이드, 방송 중 그대로 사용)
+- path: AI/Roundup/2026-08-30 - Live26 Weekly Rundown.md#오늘의 실험
+  quote: 기존 후보 맥락
+
+[커버리지 상태]
+defined
+
+[진행자/시청자 발화]
+오늘 2부에서 진행할 실험이 뭐가 있나요?
+
+위 근거만 사용해 시청자 질문에 답하는 초안을 만들어라. 문장은 최대 5개.

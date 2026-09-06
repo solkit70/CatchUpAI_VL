@@ -76,7 +76,9 @@ def resolve_device(spec):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--mode", choices=["record", "detect", "falsepos"], default="record")
+    ap.add_argument("--mode", choices=["record", "detect", "falsepos", "file"],
+                    default="record")
+    ap.add_argument("--audio", help="mode=file 일 때 채점할 오디오/영상 파일 (ffmpeg 디코드)")
     ap.add_argument("--seconds", type=float, default=120.0)
     ap.add_argument("--device", default=None,
                     help="입력 장치 번호 또는 이름 일부(예: MV7). 인덱스가 불안정하므로 이름 권장")
@@ -123,7 +125,7 @@ def main():
                 cooldown_until[m] = clock + COOLDOWN_S
                 log({"event": "wake", "mode": args.mode, "model": m,
                      "score": round(float(s), 3), "clock_s": round(clock, 2)})
-                tag = "⚠️오탐" if args.mode == "falsepos" else "감지"
+                tag = "⚠️오탐" if args.mode in ("falsepos", "file") else "감지"
                 print(f"  {tag}  {m:14} score={s:.3f}  @{clock:6.2f}s")
 
     print(f"[mode={args.mode}] models={model_names} thr={args.threshold} "
@@ -144,6 +146,52 @@ def main():
         # 가상 시계로 프레임별 오프라인 채점
         for i in range(0, len(audio) - FRAME, FRAME):
             process_frame(audio[i:i + FRAME], clock=i / SR)
+    elif args.mode == "file":
+        # ── 파일 오프라인 채점 (M4 이월 과제, 2026-09-06 추가) ──────────────
+        #
+        # M4 실습 3은 30분 배경 녹음으로 오탐 0회를 재고 **3시간으로 환산**했다.
+        # 환산은 측정이 아니다 — 30분에 안 나온 것이 3시간에도 안 나온다는 보장은 없다.
+        # 그래서 README 가 *"실측 오탐률 확보"* 를 이월로 남겼다.
+        #
+        # 마이크로는 실측할 수 없다. 3시간을 실시간으로 앉아 있어야 하고,
+        # 그렇게 재도 매번 다른 소리라 재현이 안 된다. **파일이어야 결정적이다.**
+        #
+        # 전체를 메모리에 올리지 않고 ffmpeg 파이프에서 프레임 단위로 흘린다 —
+        # 3시간 16kHz mono int16 은 약 345MB 라 올려도 되지만, 더 긴 소스에서도
+        # 같은 코드가 돌아야 한다.
+        import subprocess
+        src = Path(args.audio)
+        if not src.exists():
+            print(f"파일 없음: {src}", file=sys.stderr)
+            return 1
+        cmd = ["ffmpeg", "-v", "error", "-i", str(src),
+               "-f", "s16le", "-acodec", "pcm_s16le",
+               "-ar", str(SR), "-ac", "1", "-"]
+        print(f"[file] {src.name} 디코드 시작 (16kHz mono)")
+        proc = subprocess.Popen(cmd, stdout=subprocess.PIPE,
+                                stderr=subprocess.DEVNULL)
+        nbytes = FRAME * 2                      # int16
+        n_frames, peak = 0, 0
+        t_start = time.perf_counter()
+        while True:
+            buf = proc.stdout.read(nbytes)
+            if len(buf) < nbytes:
+                break
+            frame = np.frombuffer(buf, dtype=np.int16)
+            peak = max(peak, int(np.abs(frame).max()))
+            process_frame(frame, clock=n_frames * FRAME / SR)
+            n_frames += 1
+            if n_frames % 4500 == 0:            # 약 6분마다
+                mins = n_frames * FRAME / SR / 60
+                print(f"    …{mins:.0f}분 채점 · 누적 감지 {sum(counts.values())}회",
+                      flush=True)
+        proc.stdout.close()
+        proc.wait()
+        args.seconds = n_frames * FRAME / SR    # 요약의 환산 분모를 실제 길이로
+        wall = time.perf_counter() - t_start
+        print(f"[file] {args.seconds/60:.1f}분 채점 완료 "
+              f"(소요 {wall/60:.1f}분 · {args.seconds/max(wall,1e-9):.0f}x 실시간) "
+              f"peak={peak}/32767")
     else:
         # 실시간 스트림 (직접 터미널 실행 권장 — 라이브 피드백)
         if args.mode == "detect":
@@ -162,7 +210,7 @@ def main():
     for m in model_names:
         print(f"  {m:16} 감지 {counts[m]}회")
     print(f"  평균 프레임 처리시간 {avg_proc:.2f}ms (80ms 프레임 대비 실시간 여유)")
-    if args.mode == "falsepos":
+    if args.mode in ("falsepos", "file"):
         ratio3h = {m: round(counts[m] * (3 * 3600 / args.seconds), 1) for m in model_names}
         print("  3시간 환산 오탐:", ratio3h)
     log({"event": "summary", "mode": args.mode, "seconds": args.seconds,
