@@ -35,7 +35,7 @@ Ingest/CatchUpAI_VL/Topics/active-shooter-response/
 
 **Roadmap 파일 경로**:
 ```
-vl_roadmap/20260906_RoadMap_active-shooter-response.md
+vl_roadmap/20260907_RoadMap_active-shooter-response.md
 ```
 
 ---
