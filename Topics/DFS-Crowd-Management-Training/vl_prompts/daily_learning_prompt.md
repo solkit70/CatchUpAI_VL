@@ -34,13 +34,28 @@ DFS-Crowd-Management-Training
 
 **Topic 폴더 경로**:
 ```
-C:\AI_study\2026\Changsoo_Vault\Topics\DFS-Crowd-Management-Training\
+C:\AI_study\2026\Changsoo_Vault\Ingest\CatchUpAI_VL\Topics\DFS-Crowd-Management-Training\
 ```
 
 **Roadmap 파일 경로**:
 ```
-[로드맵 승인 후 생성]
+C:\AI_study\2026\Changsoo_Vault\Ingest\CatchUpAI_VL\Topics\DFS-Crowd-Management-Training\vl_roadmap\20260906_RoadMap_DFS-Crowd-Management-Training.md
 ```
+
+---
+
+### 제작 언어 순서와 영어판 준비
+
+**기준 산출물**:
+- 한국어 영상이 기준 산출물이다.
+- 한국어판 승인 후, 같은 원문 근거와 claim ledger를 사용해 영어판을 현지화한다.
+- 영어판은 한국어 대본의 기계 역번역이 아니며, 영어 공식 용어·출처·적용 지역·면책 문구를 재검토한다.
+
+**영어판 준비 산출물**:
+- bilingual terminology glossary
+- 장면 ID별 Korean script / English localized script mapping
+- claim ledger with source URL, verification date, jurisdiction, and public-use status
+- English caption, narration, link, and disclaimer QA checklist
 
 ---
 

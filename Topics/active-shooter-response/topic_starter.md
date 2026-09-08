@@ -9,7 +9,9 @@
 총기난사 사건 발생 시 일반 시민이 생명을 지키기 위한 대처 요령(DHS 자료 및 개인 교육 경험 기반)을 교육하고, 이를 효과적으로 알릴 수 있는 Remotion AI 기반 영상을 기획/제작하는 학습 과정.
 
 ### 학습 목적
-- 미 국토안보부(DHS) 및 교육 자료의 핵심 행동 지침(Run, Hide, Fight 및 경찰 대응)을 체계적으로 정리하고 학습한다.
+- 미 국토안보부(DHS) 및 교육 자료의 핵심 행동 지침(Run, Hide, Fight 및 경찰 대응)을 체계적으로 정리하고 학습한다.   
+- **시민단체(NGO) 실무진 및 자원봉사자들을 위해 실제 온/오프라인 전문 교육(FEMA IS-907.A, CRASE, ALICE)을 수강하는 방법과 이수 경로를 가이드한다.**
+- **단체 및 종교 시설 등의 비상 대처 역량을 높이기 위한 비상대응계획(EAP) 가이드라인, CISA Tabletop 시뮬레이션, 지혈법(Stop the Bleed) 등 도움이 될 만한 연계 안전 자원 정보를 취합하고 체계화한다.**
 - 정리된 내용을 효과적으로 시각화하고 전달하기 위한 Remotion 동영상 발표용 슬라이드 플랜 및 나레이션 스크립트를 설계한다.
 - React, TypeScript, Remotion 프레임워크 및 TTS 기술을 활용하여 자막과 음성이 싱크된 완성도 높은 교육 영상을 제작한다.
 - 시민 단체 및 소외 계층에 도움이 될 수 있는 공익적 목적의 배포 자료를 구성한다.
@@ -22,10 +24,12 @@
 ## 🎯 학습 목표
 
 - [ ] 총기난사 발생 시 3대 핵심 대응 수칙(Run, Hide, Fight)과 대처 흐름을 말로 명확히 설명할 수 있다.
+- [ ] **FEMA IS-907.A, CRASE, ALICE 등 시민단체 및 일반인이 이수할 수 있는 무료/유료 온·오프라인 실무자 교육 과정의 특징과 참여 경로를 가이드할 수 있다.**
+- **[ ] 시민단체 비상행동계획(EAP) 가이드라인, CISA 시뮬레이션 키트, 지혈법(Stop the Bleed) 등 NGO 단체 안전망 구축에 도움되는 핵심 안전 자원을 매핑할 수 있다.**
 - [ ] Remotion용 슬라이드 플랜(`video-slide-plan.md`) 및 지루하지 않은 감정 마커 나레이션 스크립트를 작성할 수 있다.
 - [ ] Remotion 동적 효과(Spring, Stagger, Motion Blur 등)와 다양한 슬라이드 타입을 적용해 UI 컴포넌트를 설계할 수 있다.
 - [ ] TTS 스크립트(`gen_audio.py` 및 `gen_audio_qwen.py`)를 활용해 완벽하게 패딩이 적용된 한국어 음성을 생성할 수 있다.
-- [ ] 비디오 렌더링을 성공적으로 완료하여 시민 단체 등 필요한 곳에 바로 전파할 수 있는 최종 MP4 영상을 확보한다.
+- [ ] 비디오 렌더링을 성공적으로 완료하여 시민 단체 등 필요한 곳에 바로 전파할 수 있는 최종 MP4 영상을 확보한다.    
 
 ---
 
@@ -57,6 +61,13 @@ OS: Windows 11
 ### 관련 문서 및 파일 (Ingest/CatchUpAI_VL/Topics/active-shooter-response/vl_materials/ 에 배치됨)
 - `미 국토안보부(DHS) 자료-총기난사 발생 시 대응요령(국문).pdf`
 - `U.S. DHS-Active Shooter_How to Respond (English).pdf`
+
+### 시민단체용 공익 교육 및 안전 자원
+- **FEMA Independent Study**: [IS-907.A: Active Shooter: What You Can Do](https://training.fema.gov/is/courseoverview.aspx?code=IS-907.a)
+- **ALERRT CRASE Course**: [Civilian Response to Active Shooter Events (Avoid, Deny, Defend)](https://alerrt.org/)
+- **Navigate360 ALICE Training**: [ALICE Active Shooter Training for Schools & Organizations](https://www.alicelearning.com/)
+- **DHS Stop the Bleed**: [Stop the Bleed Campaign and Training](https://www.stopthebleed.org/)
+- **CISA Emergency Planning**: [CISA Active Shooter Preparedness Resources & Tabletop-in-a-box](https://www.cisa.gov/active-shooter-preparedness)
 
 ### 공식 튜토리얼 및 라이브러리
 - Remotion 공식 문서: https://www.remotion.dev/

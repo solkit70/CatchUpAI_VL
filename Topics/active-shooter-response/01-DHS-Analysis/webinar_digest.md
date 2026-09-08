@@ -117,6 +117,42 @@ tags:
 
 ---
 
+## 🎓 시민단체를 위한 추가 전문 교육 수강 가이드 및 대비 자료
+
+총기난사 상황에 효과적으로 대응하고 커뮤니티의 소중한 생명을 보호하기 위해, 시민단체(NGO) 실무진과 자원봉사자들은 본 영상 교육 외에도 정부 및 전문 기관이 제공하는 다양한 온/오프라인 교육을 이수하고 비상 자원을 확보할 수 있습니다.
+
+### 1. 무료 온라인 독립 이수 교육 (FEMA Independent Study)
+미 연방재난관리청(FEMA)은 일반 시민과 자원봉사자, NGO 임직원을 위해 무료로 이수할 수 있는 대화형 웹 기반 독립 교육 과정을 제공하고 있습니다.
+*   **IS-907.A: Active Shooter: What You Can Do (총기난사: 개인이 할 수 있는 것)**
+    *   **과정 링크**: [FEMA IS-907.A Course](https://training.fema.gov/is/courseoverview.aspx?code=IS-907.a)
+    *   **학습 시간**: 약 1시간 (수강 후 온라인 시험 통과 시 공식 수료증 발급)
+    *   **주요 내용**: 총기난사 사건의 행동 특성 인지, 상황별(Run, Hide, Fight) 최선의 판단 기준, 조직 내 잠재적 폭력 징후 사전 식별 요령.
+*   **IS-905: Responding to an Active Shooter: You Can Make a Difference (총기난사 대응: 당신이 만드는 차이)**
+    *   **과정 링크**: [FEMA IS-905 Course](https://training.fema.gov/is/courseoverview.aspx?code=IS-905)
+    *   **학습 시간**: 약 1.3시간 (수료증 발급 가능)
+    *   **주요 내용**: 비상 상황에서의 즉각적이고 이성적인 의사결정 프로세스, 부상자 구호 기본 지식, 경찰 진입 시 조우 수칙 심화 가이드.
+
+### 2. 기관/단체 행동 전술 모델 및 오프라인 교육 (Civilian Response Models)
+시민단체와 종교 단체, 교육 시설에서 널리 채택하여 훈련하고 있는 대표적인 오프라인/온라인 혼합형 행동 대응 전술 훈련 프로그램입니다.
+*   **CRASE (Civilian Response to Active Shooter Events - 시민 총기난사 대응 훈련)**
+    *   **프레임워크**: **ADD (Avoid, Deny, Defend - 회피, 거부, 방어)** 모델 기반. (DHS의 Run, Hide, Fight와 맥락이 동일하지만 스트레스 상태 하에서의 인간 행동 심리와 계획 수립에 더 특화됨)
+    *   **제공 주체**: 텍사스 주립대 ALERRT(Advanced Law Enforcement Rapid Response Training) 센터 및 지역 경찰서. [ALERRT CRASE 공식 웹사이트](https://alerrt.org/)
+    *   **NGO 활용**: 지역 경찰서(Local Police Department)에 요청 시 비영리단체, 교회, 커뮤니티 센터 등을 위해 **무료 출장 강연 및 강사 교육(Train-the-Trainer)**을 제공하기도 합니다.
+*   **ALICE (Alert, Lockdown, Inform, Counter, Evacuate - 경고, 락다운, 정보 전파, 카운터, 대피)**
+    *   **프레임워크**: 기존의 소극적 잠금(Lockdown) 위주의 훈련을 탈피하여, 상황 변화에 따라 능동적이고 자율적으로 대응 옵션을 선택하도록 설계된 대표적 민간 솔루션.
+    *   **제공 주체**: Navigate360. [Navigate360 ALICE 공식 웹사이트](https://www.alicelearning.com/)
+    *   **NGO 활용**: 온라인 이러닝(E-learning) 교육과 경찰관 동반 현장 드릴(Drill)을 병행하여 자원봉사자들의 실무 생존 능력을 비약적으로 증강시킵니다.
+
+### 3. 시민단체 자체 안전망 구축을 위한 핵심 자원 세트 (NGO Safety Resource Kit)
+*   **시민단체 비상행동계획 (Emergency Action Plan - EAP) 수립**:
+    *   DHS와 FEMA는 종교 시설 및 비영리단체가 자체 EAP를 설계할 수 있도록 단계별 템플릿과 가이드를 제공합니다. [CISA 비상대응 계획 리소스](https://www.cisa.gov/active-shooter-preparedness)를 통해 다운로드하여 자치 규정을 즉시 제정할 수 있습니다.
+*   **CISA Tabletop Exercise in a Box (시뮬레이션 키트)**:
+    *   미 사이버안보·기간시설안보청(CISA)에서 제공하는 "박스 안의 테이블탑 훈련" 패키지로, 복잡한 인프라 없이 NGO 이사진과 자원봉사자 리더들이 모여 가상의 총기난사 시나리오 카드를 보며 단체의 실제 비상 연락망과 EAP가 정상 작동하는지 모의 도상 훈련을 해볼 수 있는 도구 세트입니다.
+*   **지혈법 교육 (Stop the Bleed - 지혈 캠페인)**:
+    *   총기난사 사건 발생 시 즉각적인 출혈 제어가 불가능해 현장 사망자가 급증하는 현실을 막기 위해 DHS가 주도하는 범국민 응급처치 캠페인입니다. [Stop the Bleed 공식 웹사이트](https://www.stopthebleed.org/)를 통해 지혈대(Tourniquet) 적용법 Packing 지혈법 무료 온라인 강좌를 수강하고 비상 구급 배낭에 지혈 도구를 구비하는 법을 전파할 수 있습니다.
+
+---
+
 ## 💡 요약 및 동영상 기획용 시사점
 
 1. **지루하지 않은 시각 슬라이드 구성**:

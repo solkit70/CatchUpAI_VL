@@ -1,54 +1,68 @@
 ---
-title: "Active Shooter Response Training — 이미지 생성 프롬프트 명세서"
-status: "📋 자기완결 규칙 준수 (M2 진행)"
-created: 2026-09-06
+title: "Active Shooter Response Training — AI 이미지 생성 프롬프트 명세서"
+status: "📋 설계 완료 (M2 완료 - v2.1 개정판)"
+created: 2026-09-08
+note: "Remotion 비디오 제작을 위한 자기완결형(Self-contained) 이미지 생성 명세서입니다."
 ---
 
-# 이미지 생성 프롬프트 명세서: Active Shooter Response Training
+# AI 이미지 생성 프롬프트 명세서: Active Shooter Response
 
-본 명세서는 영상의 슬라이드에 활용할 AI 생성 이미지의 프롬프트를 정의합니다. Remotion Video Skill의 **「자기완결 프롬프트 원칙」**을 엄격히 준수하여 설계되었습니다.
-
----
-
-## 🔆 이미지 가이드라인 및 공통 제약
-
-1.  **일관된 디자인 테마**: 모든 이미지는 **L3 중간어둠(L3 Mid-Dark)** 대역을 고수합니다. 배경은 `Slate Charcoal (#161B22)` 톤을 기반으로 하며, 채도가 낮고 차분한 블루/네이비 톤 위에 강렬한 경고 색상(Crimson Red 또는 Caution Orange)이 포인트 라이트로 쓰여야 합니다.
-2.  **자기완결성 (Self-Containment)**: 코드 블록 외부의 부가 설명 없이, 각 코드 블록 내의 영어 프롬프트 텍스트 한 줄만으로 AI 모델(Midjourney, DALL-E 3 등)이 완벽한 가시적 디자인을 구현할 수 있도록 7대 요소를 순서대로 포함하였습니다.
-3.  **종횡비**: 모든 슬라이드용 비주얼 이미지는 **16:9 종횡비**로 명시합니다. (`--ar 16:9` 및 `aspect ratio 16:9` 포함)
+본 문서는 **VibeLearn AI 자기완결 프롬프트 원칙**에 맞춰, 비율, 조명, 구도, 그리고 밝기 가이드가 각 프롬프트 내에 완벽하게 기재된 영어 프롬프트 명세서입니다.
 
 ---
 
-## 📸 이미지 프롬프트 목록
+## 🎨 밝기 대역 정의 (Brightness Scale)
 
-### 1. Slide 03 — 뛴다 (Run)용 비주얼 이미지
-*   **파일명**: `slide_03_run.png`
-*   **비주얼 컨셉**: 대피로 유도선과 화살표가 있는 바닥 위로 다급히 달아나는 사람들의 발목 아래 클로즈업 샷 (긴박함과 질서정연함이 공존하는 분위기).
-
-```text
-A realistic cinematic photo of multiple people's legs and feet running urgently, low-angle ground shot, shallow depth of field, stepping on dark slate asphalt with glowing green directional evacuation arrow indicators printed on the floor, dramatic high-contrast lighting with dark shadows, L3 mid-dark desaturated blue and slate charcoal color grading, tense and high-alert atmosphere, photorealistic, sharp focus on shoes, aspect ratio 16:9, --ar 16:9 --v 6.0
-```
+*   `L1`: 매우 밝음 (화이트 도면지 스키마, 테크니컬 스케치)
+*   `L2`: 밝음/보통 (실내 자연광, 일상적인 사무실/로비 풍경)
+*   `L3`: 어두움 (Slate Charcoal `#1a1f2c` 테마, 진지하고 현대적인 인포그래픽)
+*   `L4`: 아주 어두움 (야간, 완전 소등 대피실, 침묵 은신처)
 
 ---
 
-### 2. Slide 05 — 싸운다 (Fight)용 비주얼 이미지
-*   **파일명**: `slide_05_fight.png`
-*   **비주얼 컨셉**: 어둠 속에서 최후의 수단으로 저항하기 위해 빨간 소화기의 손잡이를 굳게 쥐어잡고 있는 두 손의 익스트림 매크로 샷 (생존을 향한 비장한 의지).
+## 🖼️ 슬라이드별 이미지 프롬프트 리스트
 
-```text
-An extreme macro close-up cinematic photo of two strong hands gripping a red fire extinguisher tightly, preparing for last resort defense, hands are positioned in the center, dramatic high-contrast lighting with deep shadows, vivid crimson red rim light hitting the edges of the extinguisher and hands, L3 mid-dark slate grey background, intense and resolute atmosphere, photorealistic, detailed skin texture, aspect ratio 16:9, --ar 16:9 --v 6.0
-```
-
----
-
-### 3. Slide 07 — 경찰 대면 (Police)용 비주얼 이미지
-*   **파일명**: `slide_07_police.png`
-*   **비주얼 컨셉**: 건물 내부 복도의 어둠 속에서 강한 플래시라이트 조명을 비추며 전술 장비와 소총을 든 채 진입하는 SWAT 경찰 전술팀의 실루엣과, 그 앞에 무장이 없음을 보이기 위해 두 손을 높이 번쩍 들어 손가락을 펴고 있는 대피하는 시민의 양손 실루엣의 실루엣 대비 샷.
-
-```text
-A cinematic high-contrast dramatic photo of a police SWAT tactical team silhouetted in a dark slate-colored corridor, strong beams of cool white flashlight cutting through the volumetric haze, in the foreground the silhouette of a civilian's two hands raised high with fingers spread wide showing they are unarmed, L3 mid-dark slate charcoal background with teal-blue accents, urgent and intense high-alert atmosphere, extremely sharp focus on the raised hands, aspect ratio 16:9, --ar 16:9 --v 6.0
-```
+### Slide 01: 오프닝 타이틀 (Opening Title Backdrop)
+*   **밝기 대역**: `L3` (어두움)
+*   **비주얼 컨셉**: 미 국토안보부(DHS) 재난대응 브리핑 느낌의 신뢰도 높은 추상 테크니컬 디자인.
+*   **영어 프롬프트**:
+    > Cinematic modern abstract background, dark slate charcoal (#1a1f2c) color scheme, soft neon-blue and gold light accents, flowing elegant lines and high-tech geometric structures, clean professional educational theme, 3D render, subtle depth of field, 16:9 aspect ratio, ultra-high resolution, photorealistic, no text, no human --ar 16:9
 
 ---
 
-**작성 및 검증 완료**: Gemini CLI with VibeLearn AI
-** master version**: 1.0
+### Slide 05: 물리적 방어선: 문 단속 (Physical Security Steel Door)
+*   **밝기 대역**: `L3` (어두움)
+*   **비주얼 컨셉**: 안일한 불감증을 차단하는 튼튼하고 잠글 수 있는 보안 출입문 레이아웃.
+*   **영어 프롬프트**:
+    > Close-up shot of a heavily reinforced industrial steel security door, set in a solid matte-grey concrete wall, locked tight, modern minimalist design, dramatic side-lighting casting sharp shadows, minimal high-tech digital keypad glowing softly in blue on the wall side, dark moody atmospheric look, 16:9 aspect ratio, photorealistic, high contrast, no text, no human --ar 16:9
+
+---
+
+### Slide 06: 제1원칙: 뛴다 (Run - The Bright Exit)
+*   **밝기 대역**: `L2` (밝음/보통)
+*   **비주얼 컨셉**: 짐을 버리고 단호하게 달려가는 목적지인 안전하고 환하게 트인 비상구 방향.
+*   **영어 프롬프트**:
+    > Symmetric perspective of a modern architectural corridor leading to a bright, safe exit illuminated by warm morning sunlight, minimalist clean white walls, high concrete ceiling, subtle green emergency exit sign glowing softly above the glass doors, feeling of safety and ultimate hope, cinematic warm lighting, 16:9 aspect ratio, depth of field, photorealistic, no text, no human --ar 16:9
+
+---
+
+### Slide 07: 제2원칙: 숨는다 (Hide - Barricaded Shelter)
+*   **밝기 대역**: `L4` (아주 어두움)
+*   **비주얼 컨셉**: 소리가 완벽히 음소거되고 물리적 바리케이드가 튼튼하게 구축된 실내 은신 공간.
+*   **영어 프롬프트**:
+    > Dimly lit safe room interior, dark blue and deep charcoal palette, windowless concrete wall, heavy wooden desks and solid steel filing cabinets barricaded tightly against a locked metal door, quiet and secure atmosphere, soft moonlight filtering in, no people, safe shelter, cinematic moody lighting, 16:9 aspect ratio, photorealistic, no text --ar 16:9
+
+---
+
+### Slide 08: 제3원칙: 맞서 싸운다 (Fight - Aggressive Resolution)
+*   **밝기 대역**: `L3` (어두움)
+*   **비주얼 컨셉**: 맨손이 아닌 주변 집기를 적극 무기화하여 공격적으로 대항하겠다는 결연한 의지의 시각화.
+*   **영어 프롬프트**:
+    > Powerful energetic abstract background with intense deep-red and golden-yellow color splashes, dramatic diagonal light beams cutting through dark smoke, high-contrast, representing ultimate resolve, courageous action, and extreme determination, sharp graphic edges, professional vector poster style, 16:9 aspect ratio, no text --ar 16:9
+
+---
+
+## ⚠️ 프롬프트 적용 시 금지사항 (Negative Prompts)
+
+- **텍스트 금지 (No Text)**: 모든 프롬프트에 `no text`, `no letters`, `no typos`를 의무 적용하여 AI가 생성하는 무작위 문자열 깨짐을 원천 차단합니다.
+- **상대적 지칭 금지**: "Slide 01과 같은 테마" 혹은 "위와 동일" 등의 지칭을 일절 사용하지 않으며, 각각의 프롬프트는 완전히 자기완결적으로 독립 복사하여 사용할 수 있게 설계되었습니다.

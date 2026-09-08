@@ -27,7 +27,7 @@
 
 **Topic 설명**:
 ```
-BigHug의 DFS Crowd Manager Training 원자료를 분석하고 시민단체용 안전 안내 Remotion 영상을 제작하는 실습 Topic
+BigHug의 DFS Crowd Manager Training 원자료를 분석하고, 시민단체용 한국어 기준 안전 안내 Remotion 영상과 승인 후 영어 현지화 영상의 제작 준비물을 만드는 실습 Topic
 ```
 
 **학습 목적**:
@@ -35,9 +35,10 @@ BigHug의 DFS Crowd Manager Training 원자료를 분석하고 시민단체용 �
 - DFS 교육의 핵심 책임과 적용 범위를 이해한다.
 - BigHug 사례를 시민단체의 현장 준비 기준으로 번역한다.
 - 증거 기반의 한국어 안내 영상을 기획·제작한다.
+- 한국어판 승인 후 같은 근거를 사용하는 영어 현지화 영상의 용어·대본·자막·나레이션 handoff을 준비한다.
 ```
 
-**예상 학습 기간**: `3주 (총 20.5시간, 전사 자료 검증·영상 설계 포함)`
+**예상 학습 기간**: `4주 (총 30시간, 공식 수강 경로·보완 자료·한국어 영상 설계·영어판 준비 포함)`
 
 ### 환경 및 사전 지식
 
@@ -70,8 +71,9 @@ BigHug의 DFS Crowd Manager Training 원자료를 분석하고 시민단체용 �
 - [ ] 교육 원문을 근거로 핵심 책임을 설명할 수 있다.
 - [ ] 현장 운영 체크리스트로 전환할 수 있다.
 - [ ] 관할별 차이를 구분할 수 있다.
-- [ ] 검토용 영상 슬라이드 플랜을 완성할 수 있다.
-- [ ] 승인 후 Remotion 영상으로 구현할 수 있다.
+- [ ] 검토용 한국어 기준 영상 슬라이드 플랜을 완성할 수 있다.
+- [ ] 한국어 기준 대본과 영문 공식 용어·출처를 연결한 영어 현지화 준비 패키지를 만들 수 있다.
+- [ ] 승인 후 한국어 Remotion 영상으로 구현하고, 별도 영어판 handoff을 준비할 수 있다.
 ```
 
 **참조 자료**:
@@ -81,6 +83,8 @@ BigHug의 DFS Crowd Manager Training 원자료를 분석하고 시민단체용 �
 - Changsoo Park DFS Crowd Manager Certificate PDF
 - FP-250 Crowd Manager Fire and Building Safety Checklist PDF
 - Massachusetts DFS 공식 안내 및 추후 제공될 교육 화면 스크린샷
+- FEMA IS-15.B 및 CISA Mass Gathering Security Planning Tool 공식 안내
+- 영어판 제작용 공식 영어 용어, 출처 URL, 적용 지역·면책 문구 검토 기록
 ```
 
 **vl_materials/ 폴더**:
