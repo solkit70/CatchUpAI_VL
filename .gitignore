@@ -79,3 +79,8 @@ Topics/Live-CoMC-App/06-TTS-Audio-Routing-Harness/examples/voice_registry.runtim
 # 그대로 보이는 등, M5 보안 체크리스트의 "IP·계정명·이메일·키 노출 검토"가
 # 아직 수행되지 않았다. 검토 후 공개 여부를 다시 판단한다. (2026-08-29)
 Topics/Claude-Code-Mobile-Remote-Execution/vl_materials/
+
+# YouTube 채널 분석 — 수집 원자료는 로컬 전용 (GitHub 제외)
+# 수익·유입경로 등 공개할 생각이 없는 지표가 섞여 들어온다.
+# 발표에 쓸 숫자는 analysis/ 문서에 골라서 적는다 — 그건 커밋된다.
+Topics/YouTube-Channel-Revival-With-AI/01-Data-Pipeline/data/
