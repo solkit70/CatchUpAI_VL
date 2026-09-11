@@ -14,7 +14,9 @@ sources:
 
 ## 목적
 
-이 문서는 창발 발표 `The AI Powered Creator`에서 사용할 YouTube Studio 성과 캡처를 정리한 자료다. 원본 이미지는 2026-06-22 오후 3:28~3:29에 iPad YouTube Studio 앱에서 캡처한 것으로 보이며, Lifetime 기준 Views, Watch time, Subscribers, Estimated revenue 화면을 포함한다. 이 자료의 역할은 채널 성장의 정량적 근거를 발표 자료에 연결하고, 어떤 콘텐츠 유형이 조회·시청시간·구독·수익에 각각 다르게 기여했는지 초벌 분석하는 것이다.
+이 문서는 창발 발표 `The AI Powered Creator`에서 사용할 YouTube Studio 성과 캡처를 정리한 자료다. 원본 이미지는 2026-06-22 오후 3:28~3:29에 iPad YouTube Studio 앱에서 캡처한 것으로 보이며, Lifetime 기준 Views, Watch time, Subscribers 화면을 포함한다. (수익 화면은 공개 저장소에서 제외했다.) 이 자료의 역할은 채널 성장의 정량적 근거를 발표 자료에 연결하고, 어떤 콘텐츠 유형이 조회·시청시간·구독에 각각 다르게 기여했는지 초벌 분석하는 것이다.
+
+> 🔒 **수익 수치는 공개 저장소에서 제외했습니다** (2026-09-10). 원자료와 수치는 로컬에만 둡니다.
 
 ## 원본 이미지 목록
 
@@ -26,8 +28,6 @@ sources:
 | `IMG_4420.PNG` | Watch time / Lifetime Top content | 상위 Watch time 콘텐츠 목록 확장 |
 | `IMG_4421.PNG` | Subscribers / Lifetime | 전체 구독자 증감 그래프, 총 구독자 순증, 상위 Subscribers 콘텐츠 일부 |
 | `IMG_4422.PNG` | Subscribers / Lifetime Top content | 상위 Subscribers 콘텐츠 목록 확장 |
-| `IMG_4423.PNG` | Estimated revenue / Lifetime | 전체 추정 수익 그래프, 총 추정 수익, 상위 수익 콘텐츠 일부 |
-| `IMG_4424.PNG` | Estimated revenue / Lifetime Top earning content | 상위 수익 콘텐츠 목록 확장 |
 
 ## Lifetime 핵심 수치
 
@@ -36,11 +36,9 @@ sources:
 | Views | 194,063 | 2024-11-01 전후 큰 단일 스파이크, 2025년 중후반 더 큰 군집형 스파이크, 이후 낮은 변동 |
 | Watch time (hours) | 7,141.4 | 2024-11-01 전후 최고 단일 스파이크, 이후 AI 개발 콘텐츠 중심의 중간 규모 반복 스파이크 |
 | Subscribers | +4,297 | 2024-11-01 전후 가장 큰 단일 순증, 이후 AI Agent/개발 콘텐츠에서 여러 차례 순증 |
-| Estimated revenue | $220.19 | 수익 데이터는 2025년 이후부터 보이며, 최근 2일은 처리 중. 최대 일별 수익 스파이크는 약 $7.80 근처 |
 
 > "2 days of data still processing"
 
-수익 화면에는 최근 2일 데이터가 아직 처리 중이라는 문구가 표시된다. 따라서 2026-06-22 기준 최근 수익과 Top earning content는 확정값이 아니라 지연 반영 가능성이 있다.
 
 ## Top content — Views
 
@@ -87,21 +85,6 @@ sources:
 | 9 | LangGraph - 점찍고 선만 그으면 됩니다. 정말 쉽게 설명 드립니다. Graph Theory 만 생각하세요. | 79 | LangGraph / 교육 |
 | 10 | DL Basic 07 - 드디어 ChatGPT를 만든 Transformer Model을 배웁니다. | 67 | 딥러닝 기초 |
 
-## Top content — Estimated revenue
-
-| 순위 | 콘텐츠 | Estimated revenue | 주제 분류 |
-| ---- | ------ | ----------------- | --------- |
-| 1 | 재미로 하는 Vibe Coding - Development에서 Production 까지 필요한 세팅들은 어떤것들이 있을까요? - CloudFront, CI/CD etc. | $15.89 | Vibe Coding / Production / DevOps |
-| 2 | AI Camp AI meetup (Seattle) Building production-ready multi-agent systems | $10.73 | Seattle AI meetup / Multi-agent systems |
-| 3 | Gen AI Zoo - Seattle : Introducing Generative UI, Thesys | $9.69 | Seattle AI event / Generative UI |
-| 4 | MoM - AI Based Personalized health Assessment System | $7.07 | AI Healthcare / Seattle meetup |
-| 5 | 재미로 하는 Vibe Coding - AI와 함께 Claude Skills 효율적으로 공부하기 이어서 진행합니다. | $5.60 | Vibe Coding / Claude Skills |
-| 6 | Cursor AI 와 Github Copilot 비교해 봤습니다 - 남들은 Cursor AI 가 더 좋다고 하던데 저는... | $3.55 | AI 개발 도구 비교 |
-| 7 | AI in Action - AI를 좀 더 일상에 적용하려면 필요한 것들, 저희 집 잔디 관리 학습 파일럿 방송 하면서 느낀 것, AI 이젠 자영업 비지니스에 활용해 보기 | $3.20 | AI in Action / 일상 적용 |
-| 8 | 재미로 하는 Vibe Coding - 영어 회화 Tutor 앱 기능을 개선합니다. | $3.18 | Vibe Coding / 앱 개선 |
-| 9 | VibeLearn AI - AI 시대 새로운 학습 패러다임, 디테일은 AI에게 맡기고, 인간은 방향에 집중합니다 | $3.07 | VibeLearn AI / 학습 방법론 |
-| 10 | PyData Seattle - Reshaping Clinical Trials with Wearable Device Data | $2.81 | Seattle meetup / Data / Healthcare |
-
 ## 지표별 콘텐츠 패턴
 
 ### Views와 Watch time
@@ -111,10 +94,6 @@ Views와 Watch time 모두 IONQ 현장 방문 영상이 압도적인 1위다. �
 ### Subscribers
 
 Subscribers는 IONQ 영상이 1위지만, 2위가 `AI Multi-Agent Architectures 공부 시작`이다. 이 영상은 조회수 순위에서는 6위지만 구독자 순증에서는 2위이므로, "내가 왜 이걸 공부하는가", "AI Agent를 배우는 장기 여정" 같은 개인 서사와 학습 선언이 구독 전환에 강하게 작동했을 가능성이 있다. 구독 전환용 콘텐츠는 단발 조회수보다 채널의 방향성과 시리즈 기대감을 보여주는 편이 더 유리하다는 가설을 세울 수 있다.
-
-### Estimated revenue
-
-Estimated revenue 상위권은 Views/Watch time 상위권과 다르다. 수익 1위는 Vibe Coding의 Development to Production 세팅 영상이고, 그 다음은 Seattle AI meetup, Gen AI Zoo, MoM Healthcare, Claude Skills 학습 영상이다. 이는 수익이 단순 조회수보다 시청자 지역, 영상 길이, 광고 적합성, 주제의 상업성, 최근 데이터 반영 여부에 영향을 받기 때문으로 보인다. 특히 Production, CI/CD, enterprise-ready multi-agent systems, healthcare/data 같은 실무형 주제가 수익 측면에서는 더 강하게 나타난다.
 
 ## 성장률 피크에 대한 현재 추정
 

@@ -84,3 +84,10 @@ Topics/Claude-Code-Mobile-Remote-Execution/vl_materials/
 # 수익·유입경로 등 공개할 생각이 없는 지표가 섞여 들어온다.
 # 발표에 쓸 숫자는 analysis/ 문서에 골라서 적는다 — 그건 커밋된다.
 Topics/YouTube-Channel-Revival-With-AI/01-Data-Pipeline/data/
+
+# 1편 YouTube Studio 원자료 — 로컬 전용 (GitHub 제외), 2026-09-10
+# 2편(`01-Data-Pipeline/data/`)과 같은 이유다. Studio 의 `Table data.csv` 는
+# 어떤 차트를 골라 내보내든 **Estimated revenue 컬럼을 항상 함께 담는다** —
+# `RevenuebyContents` 만 빼는 것으로는 부족해서 폴더째 제외한다.
+# 스크린샷(IMG_44xx)에도 수익 화면이 섞여 있다.
+Topics/The-AI-Powered-Creator/vl_materials/youtube-analytics/
