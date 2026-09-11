@@ -57,14 +57,15 @@ tags:
 
 ## ✅ Definition of Done
 
-- [ ] 🟥 **CSV 4종을 1편과 같은 폴더 구조로 확보** ← 최소 완료선
-- [ ] 🟥 **횡보 시작·마이너스 전환 시점을 날짜와 숫자로 특정** ← 최소 완료선
-- [ ] OAuth 연결 성공 — `reports.query` 200 응답
-- [ ] 노출·CTR 이 API 에 있는지 없는지 **판정 기록**
-- [ ] `youtube_analytics.py` 로 4개 조합 중 3개 이상 수집 자동화
-- [ ] `phase5-growth-analysis.md` 초안 완성 (1편 표 양식)
-- [ ] 496편 아카이브와 대조 검산 완료
-- [ ] WorkLog + Daily Retrospective 작성
+- [x] 🟥 **CSV 확보** ← 최소 완료선 — ⚠️ **4종이 아니라 `content` 1종**(Chart/Table/Totals). Studio 고급 모드의 다른 보고서는 받지 않았고, **API 로 대체됐다**
+- [x] 🟥 **횡보 시작·마이너스 전환 시점을 날짜와 숫자로 특정** ← 최소 완료선
+- [x] OAuth 연결 성공 — `reports.query` 200 응답
+- [x] 노출·CTR 이 API 에 있는지 없는지 **판정 기록** — 없다(`400 Unknown identifier`). `data/raw/probe_impressions_FAIL.json`
+- [x] `youtube_analytics.py` 로 4개 조합 중 3개 이상 수집 자동화 — **4개 다**(일별·영상별·유입·수익)
+- [x] `phase5-growth-analysis.md` 초안 완성 (1편 표 양식)
+- [ ] 🔴 **496편 아카이브와 대조 검산 — 미완.** Data API `videoCount` 628 vs 볼트 496 의 차이가 아직 설명되지 않았다 (Shorts·비공개·라이브 아카이브 포함 여부). [phase5-growth-analysis.md](analysis/phase5-growth-analysis.md) 참조
+- [x] WorkLog 작성 — [vl_worklog/20260910_M1_…](../vl_worklog/20260910_M1_YouTube-Channel-Revival-With-AI.md)
+- [ ] Daily Retrospective — **미작성**
 
 ## 🔴 이 모듈에서 반드시 확인할 것
 

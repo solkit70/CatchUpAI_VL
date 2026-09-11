@@ -166,7 +166,7 @@ M5 는 *"거리 제약의 방향이 예상과 반대였다 — 교육기관이 �
 테스트 자동화)은 원격 가능한 직군**이다. 이 Topic 의 범위 밖이지만
 **같은 목적(생활비)을 훨씬 짧은 경로로 달성할 수 있는지**는 별도로 볼 만하다.
 
-→ [WA-Caregiver-Pathways](../../../WA-Caregiver-Pathways/README.md) 와 함께
+→ [WA-Caregiver-Pathways](../../../WA-Caregiver-Pathways/topic_starter.md) 와 함께
 「생계 경로」 갈래로 묶여 있는 주제다.
 
 ---

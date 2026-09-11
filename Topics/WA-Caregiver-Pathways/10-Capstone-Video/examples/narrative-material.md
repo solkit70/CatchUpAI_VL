@@ -14,7 +14,7 @@ tags:
 > 조사·지원을 진행하며 나온 장면 중 **영상에서 말할 값이 있는 것**을 모은다.
 >
 > 📌 **Datacenter 편과 Caregiver 편은 별도 영상**이다 (2026-09-01 사용자 결정).
-> Datacenter 쪽 재료는 [별도 문서](../../Datacenter-Workforce-Programs/10-Capstone-Video/examples/narrative-material.md)에 있다.
+> Datacenter 쪽 재료는 [별도 문서](../../../Datacenter-Workforce-Programs/10-Capstone-Video/examples/narrative-material.md)에 있다.
 
 ## ⭐ 확정 — Artifacts 기능 소개는 **Caregiver 편**에 넣는다
 

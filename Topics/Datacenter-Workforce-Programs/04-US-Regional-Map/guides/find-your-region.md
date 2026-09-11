@@ -118,7 +118,7 @@ https://www.amazon.jobs/search.json?base_query=work-based+learning&result_limit=
 1. **집 근처 커뮤니티 칼리지** — 브랜드명이 없어도 유사 과정이 있을 수 있습니다. `[내 지역] community college data center technician certificate`
 2. **지역 IBEW 지부** — 견습 접수 재개 시점을 물어 두고 **알림을 받겠다고 남기세요**
 3. **주 노동부 견습 등록처** — `[주 이름] registered apprenticeship` (워싱턴주는 WSATC)
-4. **기다리는 동안 원격으로 딸 수 있는 자격** → [지금 원격으로 시작할 수 있는 것](start-now-remotely.md)
+4. **기다리는 동안 원격으로 딸 수 있는 자격** → [지금 원격으로 시작할 수 있는 것](../../06-Remote-Pathways/guides/start-now-remotely.md)
 
 ## 판단할 때 놓치기 쉬운 것
 

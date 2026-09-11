@@ -62,6 +62,7 @@ VibeLearn AI(VibeLearn AI) 방법론으로 새로운 학습 Topic을 시작하�
 
 ## 생성할 폴더 구조
 Topics/{TopicName}/
+├── README.md               # 🔴 필수 — Topic 최상위 안내 (GitHub 방문자의 첫 화면)
 ├── topic_info.md           # Topic 기본 정보
 ├── vl_prompts/             # 프롬프트 템플릿
 ├── vl_roadmap/             # 학습 로드맵
@@ -89,6 +90,9 @@ mkdir -p "Topics/$topic"/{vl_prompts,vl_roadmap,vl_worklog,vl_materials}
 
 - [ ] topic_info.md 작성 완료
 - [ ] 2단계: Roadmap 생성으로 진행
+
+> 🔴 **최상위 `README.md` 는 Topic 을 «닫을 때» 쓴다.** 시작 시점엔 쓸 내용이 없다.
+> 다만 **마지막 모듈을 마치면 반드시 쓴다** — 아래 「Topic 마무리 점검」 참조.
 
 ---
 
@@ -206,6 +210,7 @@ VibeLearn-AI/
 │   └── workflow_guide.md            # 이 파일
 └── Topics/                          # 학습 Topic들
     └── {TopicName}/
+        ├── README.md                # 🔴 필수 — Topic 최상위 안내
         ├── topic_info.md
         ├── vl_prompts/
         ├── vl_roadmap/
@@ -214,6 +219,18 @@ VibeLearn-AI/
         │   └── YYYYMMDD_M{X}_{TopicName}.md
         └── vl_materials/
 ```
+
+### 🔴 Topic 마무리 점검 — 모듈을 닫을 때마다
+
+**이 셋을 안 하면 GitHub 에서 깨져 보인다.** 실제로 겪은 일이다 (2026-09-10).
+
+- [ ] **README 링크가 실제 파일을 가리키는가** — `python scripts/check_links.py`
+  - 🔴 README 를 **로드맵의 「계획된 산출물」에서 옮겨 쓰고 실제와 대조하지 않는 실수**가 잦다.
+    계획에만 있던 문서를 링크한 채로 남는다
+- [ ] **빈 폴더가 없는가** — **git 은 빈 폴더를 추적하지 않는다.**
+  로컬에선 「폴더는 있고 파일만 없음」인데 GitHub 에선 **폴더 자체가 사라진다**
+  - 문서를 채우거나, **폴더를 지우고 README 에 «생략 사유»를 적는다**
+- [ ] **DoD 체크리스트가 실제 상태와 맞는가** — 끝나지 않은 항목을 ✅ 로 두지 않는다
 
 ### vl_ 접두사 규칙
 
