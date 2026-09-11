@@ -204,6 +204,7 @@ For each exercise:
 - [ ] Completed X practical exercises.
 - [ ] Successfully executed Y key commands/APIs.
 - [ ] Created output folder and wrote README.
+- [ ] 🔴 **Verified README links resolve to real files** (`python scripts/check_links.py`)
 - [ ] Completed WorkLog.
 - [ ] Completed Daily Retrospective.
 ```
@@ -273,7 +274,12 @@ When designing practical exercises, you **must** adhere to the following princip
 ##### 5. Output-centric
 -   Create a folder for each module (`01-xxx/`, `02-xxx/`).
 -   **"Textbook quality"**: At a level that another learner can learn from this alone.
--   **README.md must be included** — it must contain the following:
+-   🔴 **A Topic-level `README.md` is also required** — separate from module READMEs.
+    -   What the Topic covers and **what was actually found**, at a glance
+    -   **Module list in learning order**, with relative-path links
+    -   Links to outputs (videos, artifacts, public guides) if any
+    -   ⚠️ **This repo is public on GitHub.** Without a top-level README, visitors see **only a folder listing**
+-   **A module `README.md` must be included** — it must contain the following:
     -   Module number/title/status/estimated learning time header
     -   All documents in this folder listed **in learning order** with numbers
     -   **Relative path links** for each document (e.g., `[concepts/overview.md](concepts/overview.md)`)
@@ -341,6 +347,7 @@ Write within the WorkLog:
 ##### 3. Folder Structure
 ```
 {Topic}/
+├── README.md                  # 🔴 **Required** — Topic-level guide. The first thing a GitHub visitor sees
 ├── topic_info.md              # Topic information (reference)
 ├── vl_prompts/
 │   ├── roadmap_prompt.md      # This file
