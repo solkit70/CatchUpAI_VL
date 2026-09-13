@@ -30,6 +30,9 @@ M1~M9 는 각자의 샘플 위에서 통과했다. M10 은 그것들을 **오늘
 6. [examples/ending_style_probe.py](examples/ending_style_probe.py) — 문장 종결 붕괴 재현율 측정 (0/10) · 검사기 자체 검증 10/10
 7. [guides/what-can-run-during-broadcast.md](guides/what-can-run-during-broadcast.md) — **방송 중 가능/불가 판정표** (기준: 오디오 출력을 건드리는가)
 8. [guides/false-positive-measured.md](guides/false-positive-measured.md) — **M4 이월 과제 해소.** 3시간 실측에서 환산값이 뒤집혔다
+9. [guides/rehearsal-log-3.md](guides/rehearsal-log-3.md) — **3회차 = Live #27 실전** (09-12 사용자 결정). 사전 점검 · 당일 절차 · 체크리스트 · 결과 칸 (실습 4)
+10. [guides/go-nogo-decision.md](guides/go-nogo-decision.md) — **LIVE 투입 판단 3갈래**: A 화면 보조 조건부 GO · B 음성 출력 NO-GO · C 음성 입력 NO-GO
+11. [../vl_worklog/20260912_Live-CoMC-App_Final_Retrospective.md](../vl_worklog/20260912_Live-CoMC-App_Final_Retrospective.md) — Topic Retrospective 초안 (실습 5)
 
 ## 핵심 결론
 
@@ -90,7 +93,12 @@ LLM 자기평가에 맡기지 않는다는 M8 원칙은 그대로 지켰다 — 
 └── guides/
     ├── streaming-vs-safety-gate.md 선결 과제 결론 + T_filler 정정
     ├── rehearsal-log-1.md          1회차 기록 · 사고 5건 · 지연 실측
-    └── incident-classification.md  유형 분류 · 모듈 매핑 · 재현 테스트
+    ├── rehearsal-log-2.md          2회차 · 막혀야 할 경로 3종 · 사고 0건
+    ├── rehearsal-log-3.md          3회차 = Live #27 실전 · 사전 점검 · 당일 절차
+    ├── incident-classification.md  유형 분류 6종 · 7건 매핑 · 재현 테스트
+    ├── go-nogo-decision.md         LIVE 투입 판단 3갈래 · 후속 5단계
+    ├── what-can-run-during-broadcast.md
+    └── false-positive-measured.md  호출어 3시간 실측
 ```
 
 **다른 모듈에 남긴 수정**
@@ -109,11 +117,11 @@ LLM 자기평가에 맡기지 않는다는 M8 원칙은 그대로 지켰다 — 
 - [x] 무관중 리허설 **2회** 완료 (실습 2) — 1회차 사고 6건 · **2회차 사고 0건**
 - [x] 사고 유형 분류표 완성, 각 유형이 해당 모듈에 매핑됨 (실습 3)
 - [x] 재현 테스트로 수정 확인 — 볼트 Rundown **16편 전수 파싱 이상 0건**, M8 게이트 테스트 **9/9 유지**
-- [ ] 리허설 3회차 (실습 4) — **성격이 다르다**: 사람이 마이크로 전 구간을 돈다
-- [ ] LIVE 투입 가능 여부 최종 판단 문서화
-- [ ] Topic Retrospective (실습 5)
+- [ ] 리허설 3회차 (실습 4) — **09-13 Live #27 실전으로 진행** (로드맵 원문 「동일 조건」. 「마이크 전 구간」은 존재하지 않는 경로였다 → [rehearsal-log-3](guides/rehearsal-log-3.md))
+- [x] LIVE 투입 가능 여부 판단 문서화 — [go-nogo-decision.md](guides/go-nogo-decision.md) 3갈래. 3회차 후 A 확정
+- [ ] Topic Retrospective (실습 5) — 초안 완료, 「실제 방송 투입 결과」절 대기
 
-**완료율**: 4/7
+**완료율**: 5/7
 
 ## 리허설 2회차 — 막혀야 할 것이 막히는가 (사고 0건)
 
@@ -134,20 +142,29 @@ LLM 자기평가에 맡기지 않는다는 M8 원칙은 그대로 지켰다 — 
 
 → [rehearsal-log-2.md](guides/rehearsal-log-2.md)
 
-## 현재 판정 — LIVE 투입 가능(조건부), REVIEW 권장
+## 현재 판정 (09-12 갱신) — 화면 보조는 GO, 목소리는 부품이 없다
 
-| | 판정 |
+09-06 판정은 *"REVIEW 투입 가능 · LIVE 조건부"* 였고, 조건은 「사람이 마이크로 전 구간을 돈 적이 없다」였다.
+09-12 방송 전날 사전 점검에서 **그 조건이 애초에 충족 불가능한 것**이었음이 드러났다.
+
+| 발견 | 뜻 |
 |---|---|
-| `REVIEW` | ✅ **투입 가능** — 화면에 뜨고 소리는 보류. 진행자가 보고 직접 말하는 보조로 성립 |
-| `LIVE` | ⚠️ **조건부 가능** — 게이트 8규칙으로 「틀린 말」·「내용 없는 말」·「읽을 수 없는 말」이 모두 막힌다 |
+| `spoken.json` 을 읽어 재생하는 코드가 없다 (사고 6) | **LIVE 모드는 소리를 낼 부품이 없다.** REVIEW 와의 차이는 파일 이름뿐 |
+| 마이크→호출어→STT→엔진 연결이 없다 | M4·M5 는 프로브 스크립트로만 존재. 「전 구간」은 리허설이 아니라 개발 |
+| `--serve` 중 파트 전환이 컨텍스트를 안 만든다 (사고 7) | 파트마다 ② 재실행으로 우회 |
 
-`LIVE` 를 막고 있던 사유(어미 붕괴)는 규칙 8로 하한이 생겼다. 다만 **조건부**로 두는 이유는 하나다 —
-**1·2회차 모두 명령줄에서 `--text` 로 발화를 넣었다.** 마이크 입력·호출어·STT·오디오 출력을
-사람이 실제로 도는 전 구간은 아직 한 번도 안 돌았다. M4·M5·M6 이 그 경로에 걸려 있고 셋 다 단독 검증만 됐다.
+그래서 「LIVE 투입」을 세 갈래로 갈랐다 — [go-nogo-decision.md](guides/go-nogo-decision.md):
 
-**3회차의 성격이 1·2회차와 다른 이유가 여기 있다.** 남은 것은 코드가 아니라 사람이 도는 검증이다.
+| 갈래 | 판정 |
+|---|---|
+| **A 화면 보조** (질문 입력 → 근거 있는 답 → OBS 오버레이) | **GO — 조건부.** 09-13 Live #27 을 3회차로 돌려 사고 0건이면 상시 투입 |
+| **B 음성 출력** | **NO-GO** — 재생기 · 송출 트랙 검증 · 방송 없는 날 리허설, 셋 다 필요 |
+| **C 음성 입력** | **NO-GO** — B 이후. 3시간 실측 오탐 1회(임계 여유 0.095) 재조정 먼저 |
+
+> 안전 없는 음성보다 음성 없는 안전이 먼저다. M1~M10 이 만든 것은 A 이고, A 는 성립한다.
 
 ## 이전 / 다음
 
 - 이전: [../09-Desktop-Shell-and-Overlay/README.md](../09-Desktop-Shell-and-Overlay/README.md)
-- 다음: 리허설 2·3회차 → Topic Retrospective (이 Topic 의 마지막 모듈)
+- 다음: 09-13 Live #27 (3회차) → [rehearsal-log-3](guides/rehearsal-log-3.md) 결과 → go-nogo A 확정 → Retrospective 완결 (이 Topic 의 마지막 모듈)
+- 그 뒤: B 음성 출력 → C 음성 입력 — go-nogo 후속표 순서대로 (새 Topic 또는 CVL 유지보수)

@@ -1,0 +1,53 @@
+<title>db 페이지 실험</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;600&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<style>:root{--bg:#F7F5EE;--ink:#1E2A22;--mute:#5E6A62;--line:#D9D6C8;--card:#FFFFFF;--acc:#1F6E5A;--acc-bg:#E3F0EA;--warn:#8A4B12;--warn-bg:#F6E9DA}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121712;--ink:#E7EAE2;--mute:#9AA59C;--line:#2A332B;--card:#1A211B;--acc:#6FC9A8;--acc-bg:#16302A;--warn:#E3A46A;--warn-bg:#2E2114}}
+:root[data-theme="dark"]{--bg:#121712;--ink:#E7EAE2;--mute:#9AA59C;--line:#2A332B;--card:#1A211B;--acc:#6FC9A8;--acc-bg:#16302A;--warn:#E3A46A;--warn-bg:#2E2114}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 "IBM Plex Sans KR","Malgun Gothic",system-ui,sans-serif;padding:0 1.25rem}
+.wrap{max-width:38rem;margin:0 auto;padding-block:3rem 4rem}
+.eyebrow{font:600 .7rem/1 "IBM Plex Mono",ui-monospace,monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);margin:0 0 1rem}
+h1{font-size:clamp(1.7rem,5vw,2.3rem);line-height:1.3;margin:0 0 .8rem;text-wrap:balance}
+p{margin:0 0 1rem}
+.probe{border:1px solid var(--line);background:var(--card);border-radius:6px;padding:1.1rem 1.3rem;margin:1.6rem 0;display:grid;gap:.5rem}
+.probe .k{font:600 .68rem/1 "IBM Plex Mono",ui-monospace,monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+.probe .v{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.95rem;font-variant-numeric:tabular-nums}
+.ok{color:var(--acc)} .no{color:var(--warn)}
+table{border-collapse:collapse;width:100%;font-size:.92rem;margin:1rem 0}
+th,td{text-align:left;padding:.5rem .6rem;border-bottom:1px solid var(--line);vertical-align:top}
+th{font:600 .68rem/1 "IBM Plex Mono",ui-monospace,monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--mute)}
+footer{margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--line);font-size:.82rem;color:var(--mute)}
+</style>
+<div class="wrap">
+<p class="eyebrow">Claude-Artifacts-Routines · M2 실습 2 · 2×2 공유 실험</p>
+<h1>db 를 선언한 페이지</h1>
+<p>이 페이지는 <code>capabilities: {db: {}}</code> 를 선언했다. 열릴 때마다 <code>probe/hits</code> 문서의 <code>count</code> 를 1 올린다 — 그것뿐이다. 짝 페이지(정적)와 <strong>공유 메뉴에 무엇이 뜨는지 · 시크릿 창에서 열리는지</strong>를 비교한다. 부스 매니저가 "링크 공유가 안 된다"고 했던 이유를 가장 작은 형태로 재현하는 실험.</p>
+<div class="probe">
+  <span class="k">선언한 capability</span><span class="v">db</span>
+  <span class="k">claude.use("db") 결과</span><span class="v" id="dbst">확인 중…</span>
+  <span class="k">probe/hits.count</span><span class="v" id="cnt">—</span>
+  <span class="k">발행</span><span class="v">2026-09-13 · Live #27 방송 중</span>
+</div>
+<table><thead><tr><th>보는 곳</th><th>기대</th><th>실측</th></tr></thead>
+<tbody><tr><td>소유자 브라우저</td><td>열림 · count 증가</td><td>—</td></tr>
+<tr><td>공유 메뉴</td><td>공개 링크 옵션이 <em>없거나</em> 막힘 (추론)</td><td>—</td></tr>
+<tr><td>시크릿 창</td><td>Sign in</td><td>—</td></tr></tbody></table>
+<footer>실측 칸은 볼트의 <code>02-Artifacts-Sharing-and-Versions/guides/sharing-matrix.md</code> 에 적는다. db 데이터는 count 하나뿐이다.</footer>
+</div>
+<script>
+(async () => {
+  const st = document.getElementById("dbst"), c = document.getElementById("cnt");
+  if (!(window.claude && window.claude.use)) { st.textContent = "window.claude 없음"; st.className="v no"; return; }
+  const db = await window.claude.use("db");
+  if (!db) { st.textContent = "null — 이 뷰에서는 db 를 못 쓴다"; st.className="v no"; return; }
+  st.textContent = "namespace 받음"; st.className="v ok";
+  try {
+    const ref = db.doc("probe/hits");
+    const snap = await ref.get();
+    const cur = snap.exists ? Number((snap.data()||{}).count)||0 : 0;
+    const next = cur + 1;
+    await ref.set({count: next, last: new Date().toISOString()});
+    c.textContent = String(next);
+  } catch (e) { c.textContent = "쓰기 실패: " + (e && (e.code||e.message) || e); c.className="v no"; }
+})();
+</script>

@@ -1,73 +1,33 @@
 {
   "ok": true,
   "max_evidence": null,
-  "warmup_ms": 1502,
-  "prewarm_ms": 19,
-  "n": 5,
-  "n_ok": 5,
-  "total_med_ms": 2998,
-  "total_max_ms": 4022,
-  "total_min_ms": 2527,
+  "warmup_ms": 2495,
+  "prewarm_ms": 24,
+  "n": 1,
+  "n_ok": 1,
+  "total_med_ms": 7317,
+  "total_max_ms": 7317,
+  "total_min_ms": 7317,
   "stage_med_ms": {
-    "③": 6,
-    "④": 2969,
-    "⑤": 12,
-    "⑥": 14
+    "③": 7,
+    "④": 7252,
+    "⑤": 38,
+    "⑥": 20
   },
   "provider_build": {
-    "calls": 5,
+    "calls": 1,
     "misses": 1
   },
   "runs": [
     {
       "ok": true,
       "per_stage": {
-        "③": 8,
-        "④": 3997,
-        "⑤": 7,
-        "⑥": 10
-      },
-      "total_ms": 4022
-    },
-    {
-      "ok": true,
-      "per_stage": {
-        "③": 4,
-        "④": 2507,
-        "⑤": 17,
-        "⑥": 18
-      },
-      "total_ms": 2546
-    },
-    {
-      "ok": true,
-      "per_stage": {
         "③": 7,
-        "④": 2969,
-        "⑤": 9,
-        "⑥": 13
+        "④": 7252,
+        "⑤": 38,
+        "⑥": 20
       },
-      "total_ms": 2998
-    },
-    {
-      "ok": true,
-      "per_stage": {
-        "③": 6,
-        "④": 2495,
-        "⑤": 12,
-        "⑥": 14
-      },
-      "total_ms": 2527
-    },
-    {
-      "ok": true,
-      "per_stage": {
-        "③": 6,
-        "④": 3249,
-        "⑤": 15,
-        "⑥": 14
-      },
-      "total_ms": 3284
+      "total_ms": 7317
     }
   ]
 }

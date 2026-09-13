@@ -1,0 +1,33 @@
+{
+  "ok": true,
+  "max_evidence": null,
+  "warmup_ms": 2495,
+  "prewarm_ms": 24,
+  "n": 1,
+  "n_ok": 1,
+  "total_med_ms": 7317,
+  "total_max_ms": 7317,
+  "total_min_ms": 7317,
+  "stage_med_ms": {
+    "③": 7,
+    "④": 7252,
+    "⑤": 38,
+    "⑥": 20
+  },
+  "provider_build": {
+    "calls": 1,
+    "misses": 1
+  },
+  "runs": [
+    {
+      "ok": true,
+      "per_stage": {
+        "③": 7,
+        "④": 7252,
+        "⑤": 38,
+        "⑥": 20
+      },
+      "total_ms": 7317
+    }
+  ]
+}

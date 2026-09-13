@@ -44,16 +44,16 @@ C:\AI_study\2026\Changsoo_Vault\Ingest\CatchUpAI_VL\Topics\DFS-Crowd-Management-
 
 ---
 
-### 제작 언어 순서와 영어판 준비
+### 미국 내 시민단체 대상의 이중언어 제작
 
-**기준 산출물**:
-- 한국어 영상이 기준 산출물이다.
-- 한국어판 승인 후, 같은 원문 근거와 claim ledger를 사용해 영어판을 현지화한다.
-- 영어판은 한국어 대본의 기계 역번역이 아니며, 영어 공식 용어·출처·적용 지역·면책 문구를 재검토한다.
+**대상과 기준 산출물**:
+- 대상은 미국 내 한인 시민단체와 영어권 미국 시민단체다. 한국 내 행사는 범위 밖이다.
+- 한국어판은 미국 내 한인 시민단체를 위한 기준 산출물이고, 영어판은 같은 미국 행사 안내를 영어권 시민단체에 제공한다.
+- 영어판은 한국어 대본의 기계 역번역이 아니며, 영어 공식 용어·출처·적용 지역·면책 문구를 재검토한다. 이는 언어판 검토이지 국가·지역 현지화가 아니다.
 
 **영어판 준비 산출물**:
 - bilingual terminology glossary
-- 장면 ID별 Korean script / English localized script mapping
+- 장면 ID별 Korean script / English-language script mapping
 - claim ledger with source URL, verification date, jurisdiction, and public-use status
 - English caption, narration, link, and disclaimer QA checklist
 

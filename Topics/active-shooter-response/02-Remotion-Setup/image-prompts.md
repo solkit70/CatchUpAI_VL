@@ -1,68 +1,44 @@
 ---
-title: "Active Shooter Response Training — AI 이미지 생성 프롬프트 명세서"
-status: "📋 설계 완료 (M2 완료 - v2.1 개정판)"
-created: 2026-09-08
-note: "Remotion 비디오 제작을 위한 자기완결형(Self-contained) 이미지 생성 명세서입니다."
+title: "시민단체를 위한 총기난사 대응 및 공인 교육 수강 가이드 — 이미지 프롬프트 명세서 (v3.0)"
+video-id: "active-shooter-0908"
+created: 2026-09-13
 ---
 
-# AI 이미지 생성 프롬프트 명세서: Active Shooter Response
+# AI 이미지 생성 프롬프트 명세서
 
-본 문서는 **VibeLearn AI 자기완결 프롬프트 원칙**에 맞춰, 비율, 조명, 구도, 그리고 밝기 가이드가 각 프롬프트 내에 완벽하게 기재된 영어 프롬프트 명세서입니다.
+본 명세서는 **VibeLearn AI 자기완결형 프롬프트 원칙**을 엄격히 준수하여, 사용자가 각 코드 블록을 **단 한 번에 복사해서 미드저니, Dall-E 3, 또는 Gemini Image Skill에 붙여넣기만 하면** 즉각 고화질 에셋을 얻을 수 있도록 상세 규격을 내부화했습니다.
 
----
-
-## 🎨 밝기 대역 정의 (Brightness Scale)
-
-*   `L1`: 매우 밝음 (화이트 도면지 스키마, 테크니컬 스케치)
-*   `L2`: 밝음/보통 (실내 자연광, 일상적인 사무실/로비 풍경)
-*   `L3`: 어두움 (Slate Charcoal `#1a1f2c` 테마, 진지하고 현대적인 인포그래픽)
-*   `L4`: 아주 어두움 (야간, 완전 소등 대피실, 침묵 은신처)
+*   **배경 테마 및 밝기 대역**: L1 밝음 (Blueprint / Drawing Paper, #F7F9FC 배경색 기반)  
+*   **화풍 컨셉**: 플랫하고 현대적인 산뜻한 테크니컬 일러스트레이션 및 다이어그램 스타일  
 
 ---
 
-## 🖼️ 슬라이드별 이미지 프롬프트 리스트
+## 🖼️ 슬라이드별 이미지 프롬프트
 
-### Slide 01: 오프닝 타이틀 (Opening Title Backdrop)
-*   **밝기 대역**: `L3` (어두움)
-*   **비주얼 컨셉**: 미 국토안보부(DHS) 재난대응 브리핑 느낌의 신뢰도 높은 추상 테크니컬 디자인.
-*   **영어 프롬프트**:
-    > Cinematic modern abstract background, dark slate charcoal (#1a1f2c) color scheme, soft neon-blue and gold light accents, flowing elegant lines and high-tech geometric structures, clean professional educational theme, 3D render, subtle depth of field, 16:9 aspect ratio, ultra-high resolution, photorealistic, no text, no human --ar 16:9
-
----
-
-### Slide 05: 물리적 방어선: 문 단속 (Physical Security Steel Door)
-*   **밝기 대역**: `L3` (어두움)
-*   **비주얼 컨셉**: 안일한 불감증을 차단하는 튼튼하고 잠글 수 있는 보안 출입문 레이아웃.
-*   **영어 프롬프트**:
-    > Close-up shot of a heavily reinforced industrial steel security door, set in a solid matte-grey concrete wall, locked tight, modern minimalist design, dramatic side-lighting casting sharp shadows, minimal high-tech digital keypad glowing softly in blue on the wall side, dark moody atmospheric look, 16:9 aspect ratio, photorealistic, high contrast, no text, no human --ar 16:9
+### 1. `slide_02_context.png` — [Slide 02 삽입형 인포그래픽, 16:9]
+*   **역할**: 시애틀센터 축제 현장 참사의 복합 충격(락다운, 수송 중단, 사회 불안)을 상징하는 연결형 재난 임팩트 다이어그램.
+*   **권장 비율**: 16:9 와이드 삽입형 (`--ar 16:9` / 1792x1024)
+*   **복사용 프롬프트**:
+```text
+Professional clean flat technical infographic diagram illustrating the cascading crisis of an urban active shooter incident, showing nodes connected by dashed blue lines representing "SOCIETAL CRISIS", "LOCKDOWN", and "TRANSPORTATION HALT". High-contrast, clean modern graphic vector style, soft off-white drawing paper background (#F7F9FC), bright sky-blue and warning-rose accents, minimal flat design, extremely sharp details, professional vector illustration, 16:9 aspect ratio, no realistic human faces, no gibberish text --ar 16:9
+```
 
 ---
 
-### Slide 06: 제1원칙: 뛴다 (Run - The Bright Exit)
-*   **밝기 대역**: `L2` (밝음/보통)
-*   **비주얼 컨셉**: 짐을 버리고 단호하게 달려가는 목적지인 안전하고 환하게 트인 비상구 방향.
-*   **영어 프롬프트**:
-    > Symmetric perspective of a modern architectural corridor leading to a bright, safe exit illuminated by warm morning sunlight, minimalist clean white walls, high concrete ceiling, subtle green emergency exit sign glowing softly above the glass doors, feeling of safety and ultimate hope, cinematic warm lighting, 16:9 aspect ratio, depth of field, photorealistic, no text, no human --ar 16:9
+### 2. `slide_08_boundaries.png` — [Slide 08 역할 경계 다이어그램, 16:9]
+*   **역할**: 무장 경비/경찰(공식 대응 영역)과 자원봉사자(대피/연락 및 대처 영역)의 엄격한 역할 한계선과 협업 구조를 시각화한 역할 경계 맵.
+*   **권장 비율**: 16:9 와이드 삽입형 (`--ar 16:9` / 1792x1024)
+*   **복사용 프롬프트**:
+```text
+A professional flat infographic diagram showing a clear vertical sky-blue dashed line representing a "ROLE BOUNDARY". On the left side is a security shield icon labeled with the word "OFFICIAL" in clean dark slate font. On the right side is a megaphone and high-visibility vest icon labeled with the word "VOLUNTEER" in bright caution-orange font. Minimalist technical vector style, soft light blue-gray background (#F7F9FC), clean flat design, high contrast, professional organization chart, 16:9 aspect ratio, no messy details, no gibberish letters --ar 16:9
+```
 
 ---
 
-### Slide 07: 제2원칙: 숨는다 (Hide - Barricaded Shelter)
-*   **밝기 대역**: `L4` (아주 어두움)
-*   **비주얼 컨셉**: 소리가 완벽히 음소거되고 물리적 바리케이드가 튼튼하게 구축된 실내 은신 공간.
-*   **영어 프롬프트**:
-    > Dimly lit safe room interior, dark blue and deep charcoal palette, windowless concrete wall, heavy wooden desks and solid steel filing cabinets barricaded tightly against a locked metal door, quiet and secure atmosphere, soft moonlight filtering in, no people, safe shelter, cinematic moody lighting, 16:9 aspect ratio, photorealistic, no text --ar 16:9
-
----
-
-### Slide 08: 제3원칙: 맞서 싸운다 (Fight - Aggressive Resolution)
-*   **밝기 대역**: `L3` (어두움)
-*   **비주얼 컨셉**: 맨손이 아닌 주변 집기를 적극 무기화하여 공격적으로 대항하겠다는 결연한 의지의 시각화.
-*   **영어 프롬프트**:
-    > Powerful energetic abstract background with intense deep-red and golden-yellow color splashes, dramatic diagonal light beams cutting through dark smoke, high-contrast, representing ultimate resolve, courageous action, and extreme determination, sharp graphic edges, professional vector poster style, 16:9 aspect ratio, no text --ar 16:9
-
----
-
-## ⚠️ 프롬프트 적용 시 금지사항 (Negative Prompts)
-
-- **텍스트 금지 (No Text)**: 모든 프롬프트에 `no text`, `no letters`, `no typos`를 의무 적용하여 AI가 생성하는 무작위 문자열 깨짐을 원천 차단합니다.
-- **상대적 지칭 금지**: "Slide 01과 같은 테마" 혹은 "위와 동일" 등의 지칭을 일절 사용하지 않으며, 각각의 프롬프트는 완전히 자기완결적으로 독립 복사하여 사용할 수 있게 설계되었습니다.
+### 3. `slide_12_qr.png` — [Slide 12 QR 코드 수록 글래스 카드, 1:1]
+*   **역할**: 아웃트로에서 가이드북 다운로드용 QR코드가 삽입될 고급 골드/오렌지 빛 글로우 테두리의 글래스모피즘 카드 배경.
+*   **권장 비율**: 1:1 정밀 카드형 (`--ar 1:1` / 1024x1024)
+*   **복사용 프롬프트**:
+```text
+A high-fidelity minimalist vector illustration of a blank translucent frosted-glass square card floating in center, with a pulsing warm-golden and cautious orange neon glowing border emitting subtle light waves. Inside the glass card is an abstract high-tech square placeholder pattern representing a QR code. Soft off-white drawing paper background (#F7F9FC) with a faint micro dot grid pattern. Clean flat design, premium vector style, high-contrast, centered composition, aspect ratio 1:1, no letters, no typos --ar 1:1
+```

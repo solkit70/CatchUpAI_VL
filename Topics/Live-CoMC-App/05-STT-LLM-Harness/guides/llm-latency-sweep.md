@@ -172,6 +172,6 @@ M5 회고에서 진행자가 제안한 대기 필러는 유효하다. 4.5초 침
 ## 참조
 
 - 이전 측정: [stt-wer-report.md](stt-wer-report.md) — STT 1.2초의 출처
-- WorkLog: [../vl_worklog/20260823_M6_Live-CoMC-App.md](../vl_worklog/20260823_M6_Live-CoMC-App.md)
+- WorkLog: [../../vl_worklog/20260823_M6_Live-CoMC-App.md](../../vl_worklog/20260823_M6_Live-CoMC-App.md)
 - 코드: [../examples/llm_latency_sweep.py](../examples/llm_latency_sweep.py) ·
   [../examples/llm_effort_quality.py](../examples/llm_effort_quality.py)

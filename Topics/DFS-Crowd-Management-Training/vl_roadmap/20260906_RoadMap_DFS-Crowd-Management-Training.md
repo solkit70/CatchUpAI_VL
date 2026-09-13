@@ -20,13 +20,13 @@ tags:
 
 ## 학습 개요
 
-이 Roadmap은 BigHug의 DFS Crowd Manager Training 원자료를 시민단체 실무자와 자원봉사자가 자기 행사에 적용할 수 있는 정보로 번역하는 4주 과정이다. 기존 교육 분석과 한국어 영상 설계에 더해, Massachusetts DFS 공식 교육의 수강 경로와 보완 교육·계획 도구를 출처와 적용 범위까지 포함해 안내한다.
+이 Roadmap은 BigHug의 DFS Crowd Manager Training 원자료를 **미국 내 한인 시민단체와 영어권 미국 시민단체**가 자기 행사에 적용할 수 있는 정보로 번역하는 4주 과정이다. Massachusetts DFS를 1차 법규 사례로 삼아, 미국 행사에서 필요한 관할 확인·공식 수강 경로·보완 도구를 안내한다. 한국 내 행사는 이 Topic의 대상 범위가 아니다.
 
 주된 1차 자료는 [[2026-09-07 DFS Training Full Screenshot Transcript|DFS Training Full Screenshot Transcript]]와 [[2026-09-07 DFS Training Screenshot Evidence Index|DFS Training Screenshot Evidence Index]]다. 수강 방법, 기간, 시험, 인증 주기처럼 변경될 수 있는 정보는 화면 기록이 아니라 Massachusetts DFS의 현재 공식 페이지를 우선한다.
 
 이 과정의 정보 패키지는 공식 DFS 교육, 시설별 요구사항, 법률 자문 또는 행사 안전계획을 대체하지 않는다. 실제 행사를 열기 전에는 시설 운영자, 관할 fire department 또는 fire marshal, building official, 허가 기관과 적용 조건을 확인한다.
 
-제작 순서는 한국어 기준 영상의 사실·표현·시청자 검토를 먼저 완료한 뒤 영어 현지화 영상을 만드는 방식이다. 영어판은 한국어 대본을 기계적으로 역번역하지 않으며, 같은 원문 근거와 claim ledger를 사용해 영어 공식 용어, 적용 지역, 링크, 면책 문구, 자막과 나레이션을 다시 검토한다.
+제작 순서는 미국 내 한인 시민단체용 한국어판의 사실·표현·시청자 검토를 먼저 완료한 뒤, 영어권 미국 시민단체용 영어판을 만드는 방식이다. 영어판은 한국어 대본의 기계적 역번역이 아니지만, 같은 원문 근거와 claim ledger를 사용해 영어 공식 용어, 적용 지역, 링크, 면책 문구, 자막과 나레이션을 다시 검토한다. 이는 언어판의 차이이며 적용 지역을 한국에서 미국으로 옮기는 작업이 아니다.
 
 ### 최종 학습 기간
 
@@ -60,20 +60,20 @@ Massachusetts DFS는 Crowd Manager 과정을 무료 온라인 교육으로 안�
 2. 해당하는 경우 DFS 공식 허브에서 현재 온라인 교육 링크를 연다.
 3. 개인별 등록과 확인 절차는 해당 화면의 최신 안내를 따른다. 단체 계정을 가정하거나 오래된 기술 요구사항을 재배포하지 않는다.
 4. 교육과 시험을 완료한 뒤, 수료증 보관·재인증·현장 배치 요건은 DFS와 시설의 최신 안내를 확인한다.
-5. 다른 주·국가의 행사에는 현지 fire, building, permitting 기관이 제공하는 교육과 조건을 별도로 확인한다.
+5. Massachusetts 밖의 미국 행사에는 해당 주·지역의 fire, building, permitting 기관이 제공하는 교육과 조건을 별도로 확인한다.
 
 ## 전체 Roadmap 구조
 
-| 모듈 | 모듈명 | 난이도 | 시간 | 계획 산출물 폴더 |
-|---|---|---:|---:|---|
-| M1 | 증거 지도와 공식 정보 검증 | 1 | 3h | 01-Source-Map/ |
-| M2 | 적용 범위와 시민단체 역할 경계 | 1 | 3h | 02-Scope-and-Roles/ |
-| M3 | 인원 산정·동선·자원봉사자 배치 | 2 | 3.5h | 03-Staffing-and-Occupant-Load/ |
-| M4 | 개장 전 점검과 운영 대응 | 2 | 3.5h | 04-Pre-Opening-Checklist/ |
-| M5 | DFS 수강 경로와 인증 안내 | 2 | 4h | 05-Training-Access-Guide/ |
-| M6 | 보완 교육과 시민단체 계획 도구 | 2 | 4h | 06-Community-Training-Guide/ |
-| M7 | 한국어 기준 정보 설계와 영어판 준비 | 2 | 4h | 07-Community-Information-Design/ |
-| M8 | Capstone: 한국어 패키지와 영어판 handoff | 3 | 5h | 08-Verified-Community-Package/ |
+| 모듈  | 모듈명                            | 난이도 |   시간 | 계획 산출물 폴더                        |
+| --- | ------------------------------ | --: | ---: | -------------------------------- |
+| M1  | 증거 지도와 공식 정보 검증                |   1 |   3h | 01-Source-Map/                   |
+| M2  | 적용 범위와 시민단체 역할 경계              |   1 |   3h | 02-Scope-and-Roles/              |
+| M3  | 인원 산정·동선·자원봉사자 배치              |   2 | 3.5h | 03-Staffing-and-Occupant-Load/   |
+| M4  | 개장 전 점검과 운영 대응                 |   2 | 3.5h | 04-Pre-Opening-Checklist/        |
+| M5  | DFS 수강 경로와 인증 안내               |   2 |   4h | 05-Training-Access-Guide/        |
+| M6  | 보완 교육과 시민단체 계획 도구              |   2 |   4h | 06-Community-Training-Guide/     |
+| M7  | 한국어 기준 정보 설계와 영어판 준비           |   2 |   4h | 07-Community-Information-Design/ |
+| M8  | Capstone: 한국어 패키지와 영어판 handoff |   3 |   5h | 08-Verified-Community-Package/   |
 
 ## 모듈별 상세 계획
 
@@ -405,7 +405,7 @@ Massachusetts DFS는 Crowd Manager 과정을 무료 온라인 교육으로 안�
 #### 실습 과제
 
 1. **한국어 기준 대본과 claim ledger**: 시청자별 행동, 장면 ID, 한국어 내레이션, 근거 URL, 적용 지역, 공개 상태를 12장면에 기록한다. 75분. 모든 사실 장면에 하나 이상의 근거가 있으면 완료한다.
-2. **영어 현지화 준비 패키지**: bilingual terminology glossary, Korean script / English localized-script mapping, 영문 링크·면책 문구 후보, 영어 자막·나레이션 QA 목록을 만든다. 75분. 영어판에 새 사실 주장이 추가되지 않도록 표시하면 완료한다.
+2. **영어판 준비 패키지**: bilingual terminology glossary, Korean script / English-language script mapping, 영문 링크·면책 문구 후보, 영어 자막·나레이션 QA 목록을 만든다. 75분. 이는 같은 미국 행사 안내의 언어판 준비이며, 영어판에 새 사실 주장이 추가되지 않도록 표시하면 완료한다.
 
 #### 산출물
 
@@ -416,7 +416,7 @@ Massachusetts DFS는 Crowd Manager 과정을 무료 온라인 교육으로 안�
 - [ ] 네 시청자군의 행동 목표와 책임 경계 작성
 - [ ] 12장면 한국어 기준 플랜과 claim ledger 연결
 - [ ] 공식 영어 용어와 고유명사 용어집 작성
-- [ ] 장면 ID별 Korean script / English localized-script mapping 작성
+- [ ] 장면 ID별 Korean script / English-language script mapping 작성
 - [ ] 영문 링크·면책 문구·자막·나레이션 QA 목록 작성
 - [ ] README와 WorkLog 작성
 
@@ -523,13 +523,13 @@ DFS-Crowd-Management-Training/
 
 | 모듈 | 시작일 | 종료일 | 상태 | DoD 달성률 | 비고 |
 |---|---|---|---|---:|---|
-| M1 | 2026-09-07 |  | 진행 중 | 70% | 기존 증거 지도 완료, 공식 정보 재확인 추가 |
-| M2 |  |  | 대기 | 0% | Massachusetts 맥락과 현지 확인 분리 |
-| M3 |  |  | 대기 | 0% | capacity·동선·자원봉사자 역할 |
-| M4 |  |  | 대기 | 0% | 개장 전 walkthrough와 결함 대응 |
-| M5 |  |  | 대기 | 0% | DFS 수강 경로와 인증 안내 |
-| M6 |  |  | 대기 | 0% | 보완 교육·계획 도구 비교 |
-| M7 |  |  | 대기 | 0% | 한국어 정보·영상 설계 |
+| M1 | 2026-09-07 | 2026-09-13 | 완료 | 100% | 12개 주장 증거·공개 상태·확인일 연결, 공식 허브·FAQ·FP-250 재확인 |
+| M2 | 2026-09-13 | 2026-09-13 | 완료 | 100% | 8개 행사 시나리오, 관할 질문, 역할·escalation 카드, 조건부 영상 문장 완성 |
+| M3 | 2026-09-13 | 2026-09-13 | 완료 | 100% | 8개 capacity 계산, 구역 역할 보드, 접근 가능한 동선 질문, WorkLog·회고 완성 |
+| M4 | 2026-09-13 | 2026-09-13 | 완료 | 100% | 행동형 walkthrough, 결함 tabletop 3개, 자원봉사자 escalation 카드, WorkLog·회고 완성 |
+| M5 | 2026-09-13 | 2026-09-13 | 완료 | 100% | 공식 허브·FAQ·체크리스트 경로, 한국어 수강 카드, 업데이트·기술 안내 경계, WorkLog·회고 완성 |
+| M6 | 2026-09-13 | 2026-09-13 | 완료 | 100% | DFS·FEMA·CISA·First Aid/CPR/AED 비교표, 세 행사 유형 리소스 경로, 의료 운영 경계, WorkLog·회고 완성 |
+| M7 | 2026-09-13 | 2026-09-13 | 완료 | 100% | 네 시청자 행동표, 12장면 한국어 기준 대본·claim ledger, 영어 현지화 용어·QA, Remotion Phase 1 플랜 작성; 사용자 리뷰 대기 |
 | M8 |  |  | 대기 | 0% | 검증·배포·Remotion handoff |
 
 ## 전체 성공 기준

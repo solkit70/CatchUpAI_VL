@@ -1,0 +1,48 @@
+{
+ "source": "Artifact tool action=list scope=mine",
+ "count": 6,
+ "artifacts": [
+  {
+   "title": "부스 현황판",
+   "url": "https://claude.ai/code/artifact/aa2d46bf-d01c-4864-96c2-9257c7bd3e0e",
+   "favicon": "📋",
+   "updated": "2026-09-10",
+   "listed_at": "2026-09-13T06:22 PST"
+  },
+  {
+   "title": "부스 매니저",
+   "url": "https://claude.ai/code/artifact/991fb41f-5007-4f15-9c3b-429ab0e33b2a",
+   "favicon": "🗺️",
+   "updated": "2026-09-10",
+   "listed_at": "2026-09-13T06:22 PST"
+  },
+  {
+   "title": "요양보호사, 우리가 할 수 있을까",
+   "url": "https://claude.ai/code/artifact/1fca682e-195a-4934-b593-84e4af2e5dc4",
+   "favicon": "🏡",
+   "updated": "2026-09-08",
+   "listed_at": "2026-09-13T06:22 PST"
+  },
+  {
+   "title": "Builders Lounge 입장 안내",
+   "url": "https://claude.ai/code/artifact/e9c029bd-e072-45a9-9618-a47881af3676",
+   "favicon": "🚪",
+   "updated": "2026-09-07",
+   "listed_at": "2026-09-13T06:22 PST"
+  },
+  {
+   "title": "내가 없을 때 도는 것",
+   "url": "https://claude.ai/code/artifact/01289ae4-44b5-461f-8c44-b1d75f9d9ef9",
+   "favicon": "🔁",
+   "updated": "2026-09-02",
+   "listed_at": "2026-09-13T06:22 PST"
+  },
+  {
+   "title": "터미널에서 나온 웹페이지",
+   "url": "https://claude.ai/code/artifact/f69047c1-e380-478e-b169-15f0e48b512f",
+   "favicon": "🔗",
+   "updated": "2026-09-01",
+   "listed_at": "2026-09-13T06:22 PST"
+  }
+ ]
+}

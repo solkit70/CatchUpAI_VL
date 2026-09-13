@@ -1,58 +1,64 @@
 ---
-title: "Active Shooter Response Training — 동영상 클립 프롬프트"
-video-id: "active-shooter-0906"
-created: 2026-09-06
+title: "시민단체를 위한 총기난사 대응 및 공인 교육 수강 가이드 — 동영상 클립 프롬프트 명세서 (v3.0)"
+video-id: "active-shooter-0908"
+created: 2026-09-13
 ---
 
-# 동영상 클립 프롬프트 (Gemini Veo / VideoFX)
+# AI 동영상 클립 생성 프롬프트 명세서 (Gemini Veo / VideoFX)
 
-본 명세서는 Remotion 영상의 동적인 생동감과 시각적 임팩트를 극대화하기 위해 **Gemini Veo** 또는 **VideoFX** 등으로 생성할 10초 무음 동영상 클립의 프롬프트를 정의합니다. 
+본 명세서는 **정적인 이미지에 다이내믹한 움직임을 불어넣어 핵심 슬라이드의 몰입도(Engagement)**를 끌어올리기 위한 **Gemini Veo 전용 5~10초 무음 비디오 클립** 프롬프트 세트입니다.
 
-Remotion Video Skill의 **「자기완결성 프롬프트 원칙」**을 준수하여, 프롬프트 블록 자체만 복사-붙여넣기 해도 **L3 중간어둠 (Slate Charcoal #161B22)** 테마 톤, 16:9 비율, 시네마틱 구도가 완벽히 반영되도록 설계되었습니다.
+*   **배경 테마**: Drawing Paper 테마 및 L1 밝음 밝기 대역 일관 적용  
+*   **재생 조건**: 30 FPS, 항상 **무음(muted)** 및 **루핑(loop)** 배치  
 
 ---
 
-## 📹 동영상 클립 프롬프트 목록
+## 🎬 슬라이드별 동영상 클립 프롬프트
 
-### 1. slide_01_bg.mp4 — [TITLE 슬라이드 배경, 10초]
-*   **역할**: Title 슬라이드 전체 배경 (무음 루프형 비디오)
-*   **시각 컨셉**: 벽면에 빨간색 경보등이 천천히 깜빡이며 깊은 그림자가 생기는 어두운 사무실 복도의 슬로우 달리 샷. 차갑고 진지한 분위기.
+### 1. `slide_01_bg.mp4` — [Slide 01 타이틀 배경용, 8초]
+*   **역할**: 고풍스럽고 진중한 가상 회의 장소 공간을 입체적으로 관통하는 오프닝 인트로 영상 (밝고 산뜻한 드로잉 페이퍼 질감).
+*   **길이**: 8초
 *   **프롬프트**:
 ```text
-Cinematic slow forward dolly shot down a dark modern office hallway. On the wall, a warning alarm light slowly pulses with a red crimson glow. Moody volumetric lighting casting long dramatic shadows across the slate-charcoal floor. Photorealistic textures of metal and concrete, deep slate-charcoal and deep navy color grading, high-contrast, tense and serious emergency atmosphere, 10 seconds, no text, no people, aspect ratio 16:9, ultra-detailed 4k resolution.
+A cinematic slow forward dolly shot through an empty modern bright blueprint conference room, with soft holographic grid line projections hovering above a large dark wooden table. Soft volumetric sky-blue and warm-orange lighting leaking from the side, clean geometric shadows, professional vector 3D graphics style on a light blue-gray background (#F7F9FC), minimal look, no text, no letters, no people, seamless looping background --ar 16:9
 ```
 
 ---
 
-### 2. slide_03_run.mp4 — [Slide 03 (Run) 삽입 비디오, 10초]
-*   **역할**: Run 슬라이드 비주얼 오버레이용 비디오
-*   **시각 컨셉**: 녹색 비상 대피 지시등을 향해 복도를 다급히, 그러나 질서 있게 대피해 달아나는 수많은 시민들의 발과 다리 위주의 슬로우 모션 클로즈업.
+### 2. `slide_03_bg.mp4` — [Slide 03 섹션 구분 배경용, 4초]
+*   **역할**: 공인 교육 비교 세션 진입을 밝게 알리는 스카이블루 경고 플래시 광원 루프.
+*   **길이**: 4초
 *   **프롬프트**:
 ```text
-Cinematic slow motion low-angle ground shot of multiple people's legs and feet running urgently but orderly down a modern office corridor. The floor is dark slate asphalt, reflecting a faint green glow from a distant emergency exit sign. Dynamic shadows and high contrast, dark slate-charcoal desaturated blue color grading. Sharp focus on running shoes and rapid motion, tense high-alert atmosphere, realistic clothing textures, 10 seconds, aspect ratio 16:9, ultra-detailed 4k resolution.
+A beautiful slow-motion animation of concentric sky-blue light pulses emitting from the center of a soft light-gray grid floor (#F7F9FC), sweeping outwards through a subtle bright volumetric haze. Professional tech design, high contrast, clean vector render style, no text, no people, seamless looping motion --ar 16:9
 ```
 
 ---
 
-### 3. slide_05_fight.mp4 — [Slide 05 (Fight) 삽입 비디오, 10초]
-*   **역할**: Fight 슬라이드 비주얼 오버레이용 비디오
-*   **시각 컨셉**: 어두운 벽면 거치대에 걸려 있는 빨간색 소화기의 손잡이를 비장하게 양손으로 세게 쥐며 마지막 방어 저항을 준비하는 양손의 슬로우 모션 익스트림 매크로 샷.
+### 3. `slide_07_bg.mp4` — [Slide 07 섹션 구분 배경용, 4초]
+*   **역할**: 단체 자구책 수립 및 의료/시뮬레이션 자원 소개 섹션 진입용 산뜻한 실버 및 스틸블루 회로 연결 루프.
+*   **길이**: 4초
 *   **프롬프트**:
 ```text
-Dramatic slow motion extreme macro close-up of two strong hands gripping a bright red fire extinguisher tightly on a dark wall. Strong high-contrast cinematic lighting with deep shadows, a vivid crimson red rim light highlighting the edges of the extinguisher cylinder and hands. L3 mid-dark slate-grey background, resolute and intense last-resort defense atmosphere, detailed skin texture with subtle tension, 10 seconds, aspect ratio 16:9, ultra-detailed 4k resolution.
+A futuristic technical abstract background showing digital light pathways and sky-blue data nodes smoothly connecting and glowing along a flat drawing paper grid pattern (#F7F9FC), represents seamless communication and safety network links, sleek vector tech style, no text, no typos, seamless loop --ar 16:9
 ```
 
 ---
 
-### 4. slide_07_police.mp4 — [Slide 07 (Police) 삽입 비디오, 10초]
-*   **역할**: Police 슬라이드 비주얼 오버레이용 비디오
-*   **시각 컨셉**: 자욱한 먼지와 연기 속을 경찰 전술팀(SWAT)이 플래시라이트 광선을 비추며 복도로 진입하는 실루엣과, 그 전경에 무장하지 않았음을 보여주기 위해 손가락을 넓게 펴고 양손을 높이 든 시민의 손 슬로우 모션 실루엣 대비.
+### 4. `slide_09_tabletop.mp4` — [Slide 09 삽입형 시뮬레이션 클립, 10초]
+*   **역할**: 테이블 위에 시설 대피용 비상 평면도를 펼쳐놓고 도상 모의 훈련(Tabletop)을 수행하는 단체 봉사자들의 모션 시퀀스.
+*   **길이**: 10초
 *   **프롬프트**:
 ```text
-A cinematic highly dramatic photo-realistic video. Slow motion low-angle shot of a police SWAT tactical team silhouetted as they advance down a dark smoke-filled building corridor, cutting through volumetric haze with strong beams of cool white flashlights. In the extreme foreground, a close-up silhouette of a civilian's two hands raised high, fingers spread wide to show they are unarmed. Flashing police blue lights casting dynamic shadows, dark slate-charcoal and teal accents, high tension, 10 seconds, aspect ratio 16:9, ultra-detailed 4k resolution.
+Slow camera panning shot showing the hands of several diverse volunteers on a light-colored table, placing color-coded pins and moving wooden tokens across a large architectural floor plan layout. Bright warm spotlights illuminating the blueprint, creating a professional tabletop simulation environment. Highly stylized flat graphic animation style, bright-toned drawing-paper color palette (#F7F9FC), no realistic human faces, no text --ar 16:9
 ```
 
 ---
 
-**기획 및 작성**: Gemini CLI with VibeLearn AI
-**master version**: 1.0
+### 5. `slide_11_police.mp4` — [Slide 11 삽입형 경찰 조우 클립, 8초]
+*   **역할**: 자욱한 하네스 먼지 복도를 एडवांस하는 SWAT 실루엣과 오발 방지를 위해 양손을 벌려 높이 든 시민의 실루엣 대비.
+*   **길이**: 8초
+*   **프롬프트**:
+```text
+Slow-motion dramatic silhouette shot. A SWAT tactical team advances down a smokey corridor, cool white flashlight beams cutting through the volumetric haze. In the foreground, a close-up silhouette of a civilian's two hands raised high, fingers spread wide to show they are unarmed. High-contrast dark slate gray and safe green accents on a light blue-gray background (#F7F9FC), cinematic 10-second scene --ar 16:9
+```

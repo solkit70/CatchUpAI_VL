@@ -1,8 +1,8 @@
 {
-  "transcript": "오늘 2부에서 진행할 실험이 뭐가 있나요?",
+  "transcript": "Seattle AI Week 준비는 뭘 하나요?",
   "intent": "answer_question",
   "slots": {},
   "ambiguity_flags": [],
   "confidence": 0.9,
-  "created_at": "2026-09-06T13:20:20.651241+00:00"
+  "created_at": "2026-09-13T12:40:23.661698+00:00"
 }

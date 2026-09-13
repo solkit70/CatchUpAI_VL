@@ -1,0 +1,31 @@
+{
+  "current_part_id": "2",
+  "coverage_state": "defined",
+  "coverage_items": [
+    "AI로 라이브 방송 보조 MC 앱 만들기 마무리",
+    "Claude Artifacts & Routines 배우기",
+    "AI로 Seattle AI Week 참가 준비하기"
+  ],
+  "evidence_pool": [
+    {
+      "path": "AI/Roundup/2026-09-06 - Live27 Weekly Rundown.md#오늘의 실험",
+      "quote": "「오늘의 실험」 슬라이드 전체 목록 (15건 · 커버리지는 위 3건만)"
+    },
+    {
+      "path": "AI/Roundup/2026-09-06 - Live27 Weekly Rundown.md#오늘의 실험",
+      "quote": "후보 (주중 진행에 따라 승격)"
+    }
+  ],
+  "status_map": {
+    "rundown": "final",
+    "2026-09-06 - Weekly Progress and Planning": "missing_section",
+    "2026-09-06 - Weekly Dashboard.canvas": "skipped:canvas",
+    "2026-08-30~2026-09-06 - Claude Code": "missing_section",
+    "2026-08-30 - Live26 Weekly Rundown": "missing_section",
+    "Task Board": "missing_section"
+  },
+  "excluded_headings": [],
+  "withheld_conditional": [],
+  "forbidden_removed": true,
+  "assembled_at": "2026-09-13T12:40:23.655358+00:00"
+}
