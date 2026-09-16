@@ -74,6 +74,14 @@ style: |
   }
   pre code { background: transparent; color: #a7f3d0; padding: 0; }
   .lead h1 { font-size: 2em; text-align: center; }
+  section.title { padding-top: 40px; padding-bottom: 30px; }
+  section.title h1 { font-size: 1.55em; margin-bottom: 0.1em; }
+  section.title h2 { font-size: 0.95em; text-align: center; margin-bottom: 0.35em; }
+  section.title p { font-size: 0.75em; margin-top: 0.3em; }
+  .title-row { display: flex; align-items: flex-end; justify-content: center; gap: 28px; margin: 0.2em auto 0; }
+  .title-thumb img { width: 400px; border-radius: 10px; border: 2px solid rgba(34,197,94,0.5); box-shadow: 0 4px 20px rgba(0,0,0,0.35); display: block; }
+  .title-qr img { width: 132px; border-radius: 8px; background: #fff; padding: 4px; display: block; margin: 0 auto; }
+  .title-row .cap { font-size: 0.55em; color: #bbf7d0; text-align: center; margin-top: 6px; line-height: 1.3; max-width: 400px; }
   .lead p { text-align: center; font-size: 1.1em; }
   section.lead {
     background-image:
@@ -98,13 +106,27 @@ style: |
   }
 ---
 
-<!-- _class: lead -->
+<!-- _class: lead title -->
 
 # 유튜브 채널 살리기, 석 달 뒤
 ## 사람이 병목이 아니라, 사람이 개입해야 퀄리티가 유지된다
 
+<div class="title-row">
+  <div class="title-thumb">
+    <img src="../images/thumb-0626-changbal.jpg" alt="6/26 창발 발표 풀버전 썸네일">
+    <div class="cap">지난 6/26 창발 발표 「AI 시대의 크리에이터」 — 이 발표의 1편</div>
+  </div>
+  <div class="title-qr">
+    <img src="../images/qr-youtube-0626.png" alt="QR 6/26 발표 영상">
+    <div class="cap">▶ 6/26 발표 영상 (38:33)</div>
+  </div>
+  <div class="title-qr">
+    <img src="../images/qr-slides-pdf.png" alt="QR 오늘 슬라이드 PDF">
+    <div class="cap">📄 오늘 슬라이드 (PDF)</div>
+  </div>
+</div>
+
 **박창수 · Catch Up AI** · Builders Lounge 5차 모임 · 2026-09-16
-지난 6/26 발표 「AI 시대의 크리에이터」 2편
 
 <!--
 (0:20) 6월 창발 발표 「AI 시대의 크리에이터」의 2편입니다. 석 달이 지났습니다. 오늘은 그 뒤에 무엇을 했고, 숫자가 어떻게 됐고, 그중 하나가 완전히 틀렸다는 얘기를 10분에 하겠습니다.

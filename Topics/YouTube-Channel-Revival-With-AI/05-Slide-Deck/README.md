@@ -35,9 +35,12 @@ tags:
 ```powershell
 cd slides
 # 본문(_body.md)을 고친 뒤:
-Get-Content _style-header.md, _body.md | Set-Content presentation-0916.md -Encoding utf8
+# ⚠️ PowerShell 5.1 의 Get-Content 는 ANSI 로 읽어 한글이 깨진다 (9/15 실제 발생) — Python 으로 합친다
+python -c "open('presentation-0916.md','w',encoding='utf-8').write(open('_style-header.md',encoding='utf-8').read()+open('_body.md',encoding='utf-8').read())"
 npx -y @marp-team/marp-cli@latest presentation-0916.md --html --allow-local-files -o presentation-0916.html
 npx -y @marp-team/marp-cli@latest presentation-0916.md --pdf  --allow-local-files -o presentation-0916.pdf
+# GitHub htmlpreview 용 (차트·썸네일·QR 을 base64 로 인라인) — 05-Slide-Deck 에서
+python -c "import base64,re,os;t=open('slides/presentation-0916.html',encoding='utf-8').read();f=lambda m:'src=\"data:image/'+('jpeg' if m.group(1).endswith('.jpg') else 'png')+';base64,'+base64.b64encode(open(os.path.join('slides',m.group(1)),'rb').read()).decode();open('slides/presentation-0916-preview.html','w',encoding='utf-8').write(re.sub(r'src=\"(\.\./images/[^\"]+\.(?:png|jpg))',f,t))"
 ```
 
 ## 이전 / 다음

@@ -74,6 +74,14 @@ style: |
   }
   pre code { background: transparent; color: #a7f3d0; padding: 0; }
   .lead h1 { font-size: 2em; text-align: center; }
+  section.title { padding-top: 40px; padding-bottom: 30px; }
+  section.title h1 { font-size: 1.55em; margin-bottom: 0.1em; }
+  section.title h2 { font-size: 0.95em; text-align: center; margin-bottom: 0.35em; }
+  section.title p { font-size: 0.75em; margin-top: 0.3em; }
+  .title-row { display: flex; align-items: flex-end; justify-content: center; gap: 28px; margin: 0.2em auto 0; }
+  .title-thumb img { width: 400px; border-radius: 10px; border: 2px solid rgba(34,197,94,0.5); box-shadow: 0 4px 20px rgba(0,0,0,0.35); display: block; }
+  .title-qr img { width: 132px; border-radius: 8px; background: #fff; padding: 4px; display: block; margin: 0 auto; }
+  .title-row .cap { font-size: 0.55em; color: #bbf7d0; text-align: center; margin-top: 6px; line-height: 1.3; max-width: 400px; }
   .lead p { text-align: center; font-size: 1.1em; }
   section.lead {
     background-image:
