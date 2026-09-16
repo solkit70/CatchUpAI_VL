@@ -73,6 +73,8 @@ style: |
     font-size: 0.82em;
   }
   pre code { background: transparent; color: #a7f3d0; padding: 0; }
+  section.phase table { font-size: 0.78em; }
+  section.phase td, section.phase th { white-space: nowrap; }
   .lead h1 { font-size: 2em; text-align: center; }
   section.title { padding-top: 40px; padding-bottom: 30px; }
   section.title h1 { font-size: 1.55em; margin-bottom: 0.1em; }
