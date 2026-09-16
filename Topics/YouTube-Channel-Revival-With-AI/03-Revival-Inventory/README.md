@@ -18,6 +18,7 @@ tags:
 2. [analysis/phases-continued.md](analysis/phases-continued.md) — ⭐⭐ **지난 발표 P1~P4 표를 석 달 더.** 지표 정의 복원 + 반등 동인
 3. [analysis/operations-1-and-2.md](analysis/operations-1-and-2.md) — **작전 1·2 전후 비교**
 4. [analysis/hypothesis2-rejudged.md](analysis/hypothesis2-rejudged.md) — 🔴 **가설 2 가 뒤집혔다.** M2 판정이 왜 틀렸는지
+4b. [analysis/language-axis.md](analysis/language-axis.md) — 🆕 **9/13 언어 축.** 세미나 34편은 영어 영상 — 언어를 떼면 27배가 5.5배. 한/영 짝 13쌍: KR 조회 2.21배 · 구독 4.14배
 5. [evidence/human-touch-cases.md](evidence/human-touch-cases.md) — **AI 가 지어낸 것을 사람이 잡은 물증 6건**
 6. 스크립트 — [phases.py](scripts/phases.py) Phase·동인 · [classify_tracks.py](scripts/classify_tracks.py) 갈래 분류 · [operations.py](scripts/operations.py) 작전 전후 · [traffic_by_group.py](scripts/traffic_by_group.py) 유입 경로
 
@@ -33,6 +34,8 @@ tags:
 | **세미나 녹화** | **34** | **3** | **11.3편** |
 
 현장 촬영 → 전사 → 번역 → 자막까지 가장 손이 많이 간 세미나 34편이 **구독 3명**이다.
+
+> ⚠️ **9/13 정정** — 세미나는 전부 **영어 영상**이고 비교군은 한국어다. 같은 언어(AI 제작 EN, 편당 0.50)와 비교하면 **5.5배**이지 27배가 아니다. 결론은 유지되지만 배수를 바꿨다 → [analysis/language-axis.md](analysis/language-axis.md)
 
 ### ② 🔴 가설 2 가 뒤집혔다 — 그리고 분류가 왜 어려운지 드러났다
 
