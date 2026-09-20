@@ -1,17 +1,21 @@
 {
   "source_path": "AI/Roundup/2026-09-13 - Live28 Weekly Rundown.md",
-  "is_final": true,
+  "is_final": false,
   "parts": [
     {
       "id": "1",
       "sort_key": 1.0,
       "is_numbered": true,
-      "title": "지난 주 생성한 컨텐츠",
-      "time_raw": "시간 미표기",
-      "time_minutes": null,
+      "title": "지난주 생성 콘텐츠",
+      "time_raw": "8분",
+      "time_minutes": 8,
       "is_remainder": false,
-      "coverage_state": "undefined",
-      "coverage_items": [],
+      "coverage_state": "defined",
+      "coverage_items": [
+        "DFS Crowd Manager 영상 한국어판 공개",
+        "DFS Crowd Manager 영상 영어판 공개",
+        "제작 과정에서 확인한 저작권 안전 규칙"
+      ],
       "directive_note": null
     },
     {
@@ -19,32 +23,54 @@
       "sort_key": 2.0,
       "is_numbered": true,
       "title": "오늘의 실험",
-      "time_raw": "시간 미표기",
-      "time_minutes": null,
+      "time_raw": "45~55분",
+      "time_minutes": 55,
       "is_remainder": false,
       "coverage_state": "defined",
       "coverage_items": [
-        "Chrome Remote Desktop으로 외부에서 집 컴퓨터 조작",
-        "Live-CoMC 앱 완성본 실사용"
+        "CoMC 앱 실사용과 Claude Code 수정",
+        "총기난사 대처 요령 영상 제작 작업 지시",
+        "Chrome Remote Desktop 학습·설치·외부 접속 실습"
       ],
       "directive_note": null
     },
     {
-      "id": "3. 주간 영상",
-      "sort_key": 902.0,
-      "is_numbered": false,
-      "title": "3. 주간 영상",
-      "time_raw": "시간 미표기",
-      "time_minutes": null,
+      "id": "3",
+      "sort_key": 3.0,
+      "is_numbered": true,
+      "title": "시간 여유 시 학습",
+      "time_raw": "최대 20분",
+      "time_minutes": 20,
+      "is_remainder": false,
+      "coverage_state": "defined",
+      "coverage_items": [
+        "시간 여유 시",
+        "Claude Artifacts & Routines 학습 재개 또는",
+        "Seattle AI Week 준비를 위한 VibeLearn AI 작업 — CoMC 실험 종료 뒤 한 항목을 선택"
+      ],
+      "directive_note": null
+    },
+    {
+      "id": "4",
+      "sort_key": 4.0,
+      "is_numbered": true,
+      "title": "아웃트로",
+      "time_raw": "5분",
+      "time_minutes": 5,
       "is_remainder": false,
       "coverage_state": "undefined",
       "coverage_items": [],
       "directive_note": null
     }
   ],
-  "excluded_sections": [],
+  "excluded_sections": [
+    {
+      "heading": "주간 영상 (이번 방송 미편성)",
+      "reason": "unscheduled"
+    }
+  ],
   "conditional_sections": [],
   "parse_anomalies": [],
-  "parsed_at": "2026-09-18T14:33:42.131458+00:00",
-  "frontmatter_status": "⏳ 준비 중 — 2부 커버리지 2건 확정 / 1·3부 미정"
+  "parsed_at": "2026-09-20T12:20:49.278661+00:00",
+  "frontmatter_status": "'✅ 사전 준비 완료 · ⏳ 방송 전 최종 점검'"
 }
