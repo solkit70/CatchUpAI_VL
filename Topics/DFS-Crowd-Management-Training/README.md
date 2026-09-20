@@ -6,7 +6,7 @@ source:
 author:
   - 'Codex'
 created: '2026-09-17 08:02:53'
-updated: '2026-09-19 14:06:02'
+updated: '2026-09-19 22:25:38'
 tags:
   - dfs
   - crowd-management
@@ -53,7 +53,14 @@ status: active-review
 
 이 Topic을 바탕으로 만든 영상은 DFS Crowd Manager Training을 통해 기본 역할을 소개하고, Massachusetts DFS 교육을 받는 방법과 수료 기록 유지 방법을 안내합니다. 또한 Washington주 사례와 연방 자료의 위치를 덧붙여, 시청자가 자신의 주와 지역 기준을 확인해야 한다는 점을 설명합니다.
 
-현재 영상은 슬라이드와 Qwen3-TTS 음성을 검토 중이며, 아직 최종 MP4로 공개하지 않았습니다. 이 README에는 GitHub에서 바로 확인할 수 있는 Topic 문서만 연결했습니다.
+## 공개 영상
+
+| 언어 | 영상 | 설명 |
+| --- | --- | --- |
+| 한국어 | [미국 대규모 인원 참여 행사에 필요한 Crowd Manager란 무엇인가?](https://youtu.be/ytntz1bY0RI) | DFS Certification을 중심으로 Crowd Manager의 역할과 주별 준비 원칙을 설명합니다. |
+| English | [Planning a Large Community Event? Crowd Manager Training, DFS Certification & State Requirements](https://youtu.be/l1r1D4fifpw) | U.S. community-event organizers를 위한 영어판입니다. |
+
+두 영상 모두 DFS 교육을 기본 역할을 이해하기 위한 참고 자료로 다룹니다. 실제 행사의 허가·배치·인정 교육 요건은 주·지역·행사장·관할 기관의 최신 기준을 따로 확인해야 합니다.
 
 ## 공식 자료와 적용 경계
 
