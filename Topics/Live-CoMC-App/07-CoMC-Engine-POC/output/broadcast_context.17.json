@@ -1,0 +1,249 @@
+{
+  "current_part_id": "1",
+  "coverage_state": "defined",
+  "coverage_items": [
+    "6/29 운영 문서와 Daily Roundup 작성",
+    "Live #16 요약 영상 제작 착수와 6/30 Remotion 구현 진행",
+    "계획 지연과 일정 재조정",
+    "Builders Lounge Product Discovery Platform 구상과 보강",
+    "Build with AI source note 정리",
+    "가족 외식·쇼핑·Tacoma Ruston 불꽃놀이 같은 삶의 일정 우선순위"
+  ],
+  "evidence_pool": [
+    {
+      "path": "AI/Roundup/2026-06-29 - Live17 Weekly Rundown.md#지난 주 활동#이번 방송 커버리지",
+      "quote": "[확정] 이번 방송 커버리지 — 6/29 운영 문서와 Daily Roundup 작성"
+    },
+    {
+      "path": "AI/Roundup/2026-06-29 - Live17 Weekly Rundown.md#지난 주 활동#이번 방송 커버리지",
+      "quote": "[확정] 이번 방송 커버리지 — Live #16 요약 영상 제작 착수와 6/30 Remotion 구현 진행"
+    },
+    {
+      "path": "AI/Roundup/2026-06-29 - Live17 Weekly Rundown.md#지난 주 활동#이번 방송 커버리지",
+      "quote": "[확정] 이번 방송 커버리지 — 계획 지연과 일정 재조정"
+    },
+    {
+      "path": "AI/Roundup/2026-06-29 - Live17 Weekly Rundown.md#지난 주 활동#이번 방송 커버리지",
+      "quote": "[확정] 이번 방송 커버리지 — Builders Lounge Product Discovery Platform 구상과 보강"
+    },
+    {
+      "path": "AI/Roundup/2026-06-29 - Live17 Weekly Rundown.md#지난 주 활동#이번 방송 커버리지",
+      "quote": "[확정] 이번 방송 커버리지 — Build with AI source note 정리"
+    },
+    {
+      "path": "AI/Roundup/2026-06-29 - Live17 Weekly Rundown.md#지난 주 활동#이번 방송 커버리지",
+      "quote": "[확정] 이번 방송 커버리지 — 가족 외식·쇼핑·Tacoma Ruston 불꽃놀이 같은 삶의 일정 우선순위"
+    },
+    {
+      "path": "AI/Roundup/2026-06-29 - Live17 Weekly Rundown.md#지난 주 활동",
+      "quote": "주중 한 작업 (주중 계속 업데이트)"
+    },
+    {
+      "path": "AI/Roundup/2026-06-29 - Live17 Weekly Rundown.md#지난 주 활동",
+      "quote": "이번 주 주요 목표"
+    },
+    {
+      "path": "Roundup/2026-06-29 - Daily Roundup#Status Summary",
+      "quote": "주간 운영 문서 — 완료 — Weekly Progress, Dashboard, Live17 Rundown 생성"
+    },
+    {
+      "path": "Roundup/2026-06-29 - Daily Roundup#Status Summary",
+      "quote": "Live #16 요약 영상 — 진행 중 — 슬라이드 플랜과 이미지 프롬프트 작성, 6/30 완성 목표"
+    },
+    {
+      "path": "Roundup/2026-06-29 - Daily Roundup#Status Summary",
+      "quote": "Builders Lounge Product Discovery Platform — 신규 구상 완료 — 문제 인식, 플랫폼 비전, MVP, Product Profile 템플릿 정리"
+    },
+    {
+      "path": "Roundup/2026-06-29 - Daily Roundup#Status Summary",
+      "quote": "Build with AI 자료 — Live #17 실험 후보 — source note 작성, 영상 콘텐츠 angle 질문 정리"
+    },
+    {
+      "path": "Roundup/2026-06-29 - Daily Roundup#Status Summary",
+      "quote": "뒷마당 잔디 비료 — 완료 — 6/29 월요일 완료 항목으로 일정 수정"
+    },
+    {
+      "path": "Roundup/2026-06-29 - Daily Roundup#Status Summary",
+      "quote": "Journal — 보강 완료 — `Journal/2026-06-29.md` 생성 및 Roundup 링크 추가"
+    },
+    {
+      "path": "Roundup/2026-06-30 - Daily Roundup#Status Summary",
+      "quote": "6/29 Daily Roundup — 완료 — 전날 작업과 다음 액션 정리"
+    },
+    {
+      "path": "Roundup/2026-06-30 - Daily Roundup#Status Summary",
+      "quote": "Live #16 요약 영상 — 진행 중 — Remotion `data.ts`, `Live16Summary0628.tsx`, 이미지/오디오 자산 추가"
+    },
+    {
+      "path": "Roundup/2026-06-30 - Daily Roundup#Status Summary",
+      "quote": "7/6 커피챗 준비 — 6/30 준비 완료 — 참가자 정보 이메일과 Slack 안내 완료로 일정 반영"
+    },
+    {
+      "path": "Roundup/2026-06-30 - Daily Roundup#Status Summary",
+      "quote": "Builders Lounge Slack 기록 — 신규 작성 — 6/23~6/29 발표, 커피챗, Build with AI 흐름 정리"
+    },
+    {
+      "path": "Roundup/2026-06-30 - Daily Roundup#Status Summary",
+      "quote": "Product Discovery Platform — 보강 — Webtoon Harness 사례와 Product 소개 템플릿 연결"
+    },
+    {
+      "path": "Roundup/2026-06-30 - Daily Roundup#Status Summary",
+      "quote": "Live #17 Rundown — 업데이트 — Builder 시대와 Product Discovery 중심으로 방송 구조 정리"
+    },
+    {
+      "path": "Roundup/2026-06-30 - Daily Roundup#Status Summary",
+      "quote": "Journal — 보강 완료 — `Journal/2026-06-30.md`에 Roundup 링크 추가"
+    },
+    {
+      "path": "Roundup/2026-06-28 - Daily Roundup#Status Summary",
+      "quote": "Live #16 방송 — 완료 — GOBI Capture 05:00-08:03 전사, Live16 Rundown 완료 처리"
+    },
+    {
+      "path": "Roundup/2026-06-28 - Daily Roundup#Status Summary",
+      "quote": "Bila AI Agent M1 — 완료 — System Prompt 교체, 5개 질문 테스트 5/5 합격"
+    },
+    {
+      "path": "Roundup/2026-06-28 - Daily Roundup#Status Summary",
+      "quote": "Obsidian Omnisearch Google CMDS — 부분 완료 — plugin 파일 설치와 설정 문서 작성 완료, UI 활성화와 검색 테스트 대기"
+    },
+    {
+      "path": "Roundup/2026-06-28 - Daily Roundup#Status Summary",
+      "quote": "Builders Lounge 2차 영상 — 진행 중 — 6/28 착수, 1시간 40분 분량으로 다음 주 계속"
+    },
+    {
+      "path": "Roundup/2026-06-28 - Daily Roundup#Status Summary",
+      "quote": "Big Data AI / Smart City 영상 — 이월 — 다음 주 작업으로 Dashboard와 Rundown에 반영"
+    },
+    {
+      "path": "Roundup/2026-06-28 - Daily Roundup#Status Summary",
+      "quote": "Journal — 링크 보강 대상 — `Journal/2026-06-28`은 템플릿 상태"
+    },
+    {
+      "path": "Roundup/2026-07-01 - Daily Roundup#Status Summary",
+      "quote": "Live #16 방송 영상 요약 — ✅ 완료 — YouTube 업로드 KR + EN 완료"
+    },
+    {
+      "path": "Roundup/2026-07-01 - Daily Roundup#Status Summary",
+      "quote": "쇼핑과 외식 — ✅ 완료"
+    },
+    {
+      "path": "Roundup/2026-07-01 - Daily Roundup#Status Summary",
+      "quote": "스프링클러 여름 세팅 가이드 — ✅ 작성 완료 — summer-settings-2026.md 신규 생성"
+    },
+    {
+      "path": "Roundup/2026-07-01 - Daily Roundup#Status Summary",
+      "quote": "AI 활용 가이드 프로그램 — 브레인스토밍 완료, 실행 준비 — project-overview.md 신규 생성"
+    },
+    {
+      "path": "Roundup/2026-07-01 - Daily Roundup#Status Summary",
+      "quote": "주간 계획 재정비 — ✅ 완료 — 7/1 완료 처리, 7/2~7/4 재조정"
+    },
+    {
+      "path": "Roundup/2026-07-01 - Daily Roundup#Status Summary",
+      "quote": "창발 발표 영상 편집 — 미착수 — 7/2 시작 예정"
+    },
+    {
+      "path": "Roundup/2026-07-01 - Daily Roundup#Status Summary",
+      "quote": "Builders Lounge 2차 영상 편집 — 미착수 — 창발 편집 후 착수 예정"
+    },
+    {
+      "path": "Roundup/2026-07-02 - Daily Roundup#Status Summary",
+      "quote": "창발 발표 영상 편집 — 🔄 진행 중 (미완성) — 7/3 이어서 완성 예정"
+    },
+    {
+      "path": "Roundup/2026-07-02 - Daily Roundup#Status Summary",
+      "quote": "BL 2차 모임 영상 편집 — ⏭️ 7/3으로 이동 — 창발 편집 미완성으로 순서 이동"
+    },
+    {
+      "path": "Roundup/2026-07-02 - Daily Roundup#Status Summary",
+      "quote": "Slack 답글 초안 — ✅ 작성 완료 — 게시는 선생님이 직접"
+    },
+    {
+      "path": "Roundup/2026-07-02 - Daily Roundup#Status Summary",
+      "quote": "주간 계획 업데이트 — ✅ 완료 — MD + Canvas 동시 업데이트"
+    },
+    {
+      "path": "Roundup/2026-07-03 - Daily Roundup#Status Summary",
+      "quote": "BL 2차 모임 영상 편집 — ⏭️ 다음 주로 이동 — 7/3에 창발 편집 완료로 우선순위 조정"
+    },
+    {
+      "path": "Roundup/2026-07-04 - Daily Roundup#Status Summary",
+      "quote": "Beyond LLM Wiki 요약 — ✅ 완료 — 발표 요약 + 김진영 Builder 프로필 작성"
+    },
+    {
+      "path": "Roundup/2026-07-04 - Daily Roundup#Status Summary",
+      "quote": "Build with AI 정리 — ✅ 완료 — 송재희 Builder 프로필 + 자료 보관"
+    },
+    {
+      "path": "Roundup/2026-07-04 - Daily Roundup#Status Summary",
+      "quote": "Builders Lounge Weekly 공유 — 초안 작성 — 발송 전 리뷰 필요"
+    },
+    {
+      "path": "Roundup/2026-07-04 - Daily Roundup#Status Summary",
+      "quote": "Live #17 방송 준비 — ✅ 완료 — Rundown에 3부/4부 소재 보강"
+    },
+    {
+      "path": "Roundup/2026-07-04 - Daily Roundup#Status Summary",
+      "quote": "Product Discovery 발표 자료 — ⏭️ 이월 — 별도 슬라이드 완성 근거 없음"
+    },
+    {
+      "path": "Roundup/2026-07-04 - Daily Roundup#Status Summary",
+      "quote": "Tacoma Ruston 불꽃놀이 — ✅ 완료 — 사용자 입력"
+    },
+    {
+      "path": "Roundup/2026-07-04 - Daily Roundup#Status Summary",
+      "quote": "Daily Roundup — ✅ 완료 — 이 문서 작성"
+    }
+  ],
+  "status_map": {
+    "rundown": "unconfirmed",
+    "2026-06-29 - Weekly Progress and Planning": "missing_section",
+    "2026-06-29 - Weekly Dashboard.canvas": "skipped:canvas",
+    "2026-06-29 - Daily Roundup": "ok:6/7",
+    "2026-06-30 - Daily Roundup": "ok:7/8",
+    "2026-06-22 - Live16 Weekly Rundown": "missing_section",
+    "2026-06-22~2026-06-28 - Codex": "missing_section",
+    "2026-06-28 - Daily Roundup": "ok:6/8",
+    "2026-06-29 Builders Lounge Product Discovery Platform 구상": "missing_section",
+    "2026-06-29 Build with AI source note": "missing_section",
+    "video-slide-plan": "missing_section",
+    "image-prompts": "missing_section",
+    "20260628_M1_Bila-AI-Agent": "missing_section",
+    "20260628_M5.5_Peter-Thiel-Vision": "missing_section",
+    "README": "missing_section",
+    "2026-07-01 - Daily Roundup": "ok:7/9",
+    "2026-07-02 - Daily Roundup": "ok:4/6",
+    "project-overview": "missing_file",
+    "summer-settings-2026": "missing_section",
+    "2026-07-02 Nate Cho - Job Search Co-pilot": "missing_section",
+    "2026-07-03 Sung Soo Kim - HebronGuide": "missing_section",
+    "essay-braindump-20260703": "missing_section",
+    "2026-07-03 - Daily Roundup": "ok:1/7",
+    "2026-07-04 Park Jun - Mark": "missing_section",
+    "2026-07-04 Yohan Koo - MacPilot & CMDS-bio": "missing_section",
+    "2026-07-04 Song Jae-hee - Build with AI": "missing_section",
+    "2026-07-04 - Daily Roundup": "ok:7/9",
+    "2026-07-05 Builders Lounge Weekly 활동 공유 (6.28-7.5)": "missing_section"
+  },
+  "excluded_headings": [],
+  "withheld_conditional": [],
+  "forbidden_removed": true,
+  "other_parts": [
+    {
+      "id": "2",
+      "title": "오늘의 인사이트 — Builder 시대, Product Discovery, 일과 삶의 균형",
+      "coverage_state": "defined"
+    },
+    {
+      "id": "3",
+      "title": "내 주변 AI News",
+      "coverage_state": "defined"
+    },
+    {
+      "id": "4",
+      "title": "오늘의 실험",
+      "coverage_state": "defined"
+    }
+  ],
+  "assembled_at": "2026-09-17T15:05:57.077041+00:00"
+}

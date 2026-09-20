@@ -1,0 +1,86 @@
+{
+  "source_path": "AI/Roundup/2026-07-12 - Live19 Weekly Rundown.md",
+  "is_final": false,
+  "parts": [
+    {
+      "id": "1",
+      "sort_key": 1.0,
+      "is_numbered": true,
+      "title": "지난 주 활동",
+      "time_raw": "시간 미정",
+      "time_minutes": null,
+      "is_remainder": false,
+      "coverage_state": "defined",
+      "coverage_items": [
+        "이번 주 메인 — 자막 달기 대작전",
+        "무엇을 했나(세미나 9편 영→한, BL 2차 한→영, 채널 회생 정리 영상 한/영)",
+        "왜 굳이 자막을 다는가(구독자 이탈 방지)",
+        "Whisper 비용 $3.57과 지속 가능성",
+        "채널 되살리기 2차 작전 — \"내용 알차게\"",
+        "자막 자동화 과정 상세 복기(Review)"
+      ],
+      "directive_note": null
+    },
+    {
+      "id": "2",
+      "sort_key": 2.0,
+      "is_numbered": true,
+      "title": "오늘의 인사이트",
+      "time_raw": "시간 미정",
+      "time_minutes": null,
+      "is_remainder": false,
+      "coverage_state": "defined",
+      "coverage_items": [
+        "자막 자동화 실험 결과와 7/14 실무 적용",
+        "원격 승인형 워크플로우",
+        "Human-in-the-loop 자막 검수",
+        "기술 콘텐츠 구성 변화",
+        "채널 위기 및 재건 프로젝트 선언"
+      ],
+      "directive_note": null
+    },
+    {
+      "id": "3",
+      "sort_key": 3.0,
+      "is_numbered": true,
+      "title": "내 주변 AI News",
+      "time_raw": "시간 미정",
+      "time_minutes": null,
+      "is_remainder": false,
+      "coverage_state": "defined",
+      "coverage_items": [
+        "Builders Lounge 4차 모임 일정 확정(8/6 목, 벨뷰 시청, 오후 7시)",
+        "Changbal Dev Group 세미나 — 구요한님 \"AI Survival Guide: Building Your Second Brain\"(7/30 목)",
+        "Seattle Tech Week 2026(7/27 월~7/31 금) — Madrona 주최, 30개+ 이벤트, AI 트랙 다수(오늘의 실험으로 연결) — 후보:",
+        "김진영님 AI4PKM 5개월 사용 회고",
+        "BigHug 추석 행사 준비 Kick-Off",
+        "7/17 오프라인 활동 회고"
+      ],
+      "directive_note": null
+    },
+    {
+      "id": "4",
+      "sort_key": 4.0,
+      "is_numbered": true,
+      "title": "오늘의 실험",
+      "time_raw": "시간 미정",
+      "time_minutes": null,
+      "is_remainder": false,
+      "coverage_state": "defined",
+      "coverage_items": [
+        "주중 진행한 영상 자막달기 회고",
+        "Seattle Tech Week 2026 일정 세우기",
+        "Bila AI Agent 만들기 M2 진행",
+        "Build with AI 리서치 후 영상 제작",
+        "AI와 글쓰기 — 피터 틸 vs 내 관점 대결",
+        "Slack 채널 내용 자동으로 가져오기(M1)",
+        "Slack 대화 자동 수집(M1)"
+      ],
+      "directive_note": null
+    }
+  ],
+  "excluded_sections": [],
+  "conditional_sections": [],
+  "parse_anomalies": [],
+  "parsed_at": "2026-09-17T15:05:57.109008+00:00"
+}

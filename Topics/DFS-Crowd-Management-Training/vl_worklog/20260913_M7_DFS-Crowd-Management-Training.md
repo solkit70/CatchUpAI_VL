@@ -32,7 +32,7 @@ tags:
 
 ### 다음 단계
 
-사용자가 Phase 1 슬라이드 플랜을 승인하면 이미지 프롬프트를 만들고, 그 다음에만 독립 Remotion 컴포넌트와 Studio 시각 리뷰로 진행한다. M8에서는 한국어 패키지의 사실·최신성·관할 경계·개인정보 검토와 영어판 handoff을 완성한다.
+영상 작업은 사용자 지시로 Hold 상태다. 재개 전에는 최신 Washington 적용 경계를 영상 대본과 claim ledger에 반영한다. M8에서는 Washington 행사 요건과 역할별 교육 경로를 검증하고, M9에서 한국어 패키지 검증과 영어판 handoff을 완성한다.
 
 ## Daily Retrospective
 
@@ -52,4 +52,4 @@ tags:
 
 ### Tomorrow's Focus
 
-- 사용자 리뷰 후 Remotion Phase 1.5 이미지 프롬프트 또는 M8의 전체 패키지 검증으로 이어간다.
+- 사용자 지시 후 M8 Washington 적용 경계 검증 또는 보류 중인 영상 작업으로 이어간다.

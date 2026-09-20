@@ -1,0 +1,60 @@
+{
+  "source_path": "AI/Roundup/2026-08-09 - Live23 Weekly Rundown.md",
+  "is_final": false,
+  "parts": [
+    {
+      "id": "1",
+      "sort_key": 1.0,
+      "is_numbered": true,
+      "title": "지난 주 생성한 콘텐츠",
+      "time_raw": "시간 미정",
+      "time_minutes": null,
+      "is_remainder": false,
+      "coverage_state": "directive",
+      "coverage_items": [
+        "8·15 광복절 기념식 영상 상영 결과 + 사투리 고증 지적 (확정)"
+      ],
+      "directive_note": "이후는 시간 여유 시 아래 순서대로"
+    },
+    {
+      "id": "2",
+      "sort_key": 2.0,
+      "is_numbered": true,
+      "title": "오늘의 실험",
+      "time_raw": "시간 미정",
+      "time_minutes": null,
+      "is_remainder": false,
+      "coverage_state": "defined",
+      "coverage_items": [
+        "Chromebook용 VibeLearn AI 개발",
+        "FDE 취업가이드 학습 Topic 시작",
+        "AI로 라방 보조 MC 앱 빌드 3단계"
+      ],
+      "directive_note": null
+    },
+    {
+      "id": "주간 영상",
+      "sort_key": 902.0,
+      "is_numbered": false,
+      "title": "주간 영상",
+      "time_raw": "시간 미정",
+      "time_minutes": null,
+      "is_remainder": false,
+      "coverage_state": "defined",
+      "coverage_items": [
+        "사람이 취재하고 AI가 조망한다",
+        "내가 검증할 수 없는 축"
+      ],
+      "directive_note": null
+    }
+  ],
+  "excluded_sections": [
+    {
+      "heading": "보류된 인사이트 후보 (다음 방송 검토용)",
+      "reason": "on_hold"
+    }
+  ],
+  "conditional_sections": [],
+  "parse_anomalies": [],
+  "parsed_at": "2026-09-17T15:05:57.204811+00:00"
+}

@@ -91,3 +91,6 @@ Topics/YouTube-Channel-Revival-With-AI/01-Data-Pipeline/data/
 # `RevenuebyContents` 만 빼는 것으로는 부족해서 폴더째 제외한다.
 # 스크린샷(IMG_44xx)에도 수익 화면이 섞여 있다.
 Topics/The-AI-Powered-Creator/vl_materials/youtube-analytics/
+
+# Live-CoMC-App 캐주얼 브리프 — 주간 기록(사람 이름·일정)이 들어간다. 로컬 전용 (CVL 4, 2026-09-17)
+Topics/Live-CoMC-App/07-CoMC-Engine-POC/output/private/

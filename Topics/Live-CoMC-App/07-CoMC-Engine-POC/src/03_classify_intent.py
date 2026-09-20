@@ -60,10 +60,36 @@ INTENT_RULES = [
     ("stop",           ("멈춰", "그만", "정지", "스톱", "중단해", "하지 마", "하지마")),
     ("advance_part",   ("다음 파트", "다음 순서", "넘어가", "다음으로")),
     ("repeat",         ("다시 한번", "다시 한 번", "다시 읽어", "한번 더", "반복해")),
+    # ── CVL 4 (2026-09-17) 캐주얼 레인 — 근거 풀이 broadcast_context 가 아니라 casual_brief 다.
+    # 방송 내용 질문(answer_question)보다 **앞**에 둔다: 「이번 주 뭐 했어요?」는 "뭐" 때문에
+    # answer_question 으로 잡히면 오늘 파트 근거로 답하려다 침묵한다. 어휘는 좁게 —
+    # 「오늘 2부에서 뭘 다루나요」가 여기 걸리면 안 된다 (회귀: test_casual_lane.py).
+    # 시청자 언급 (진행자 요청 9/17: 댓글 남긴 분의 계정 이름을 알려 주면 코엠씨가 부르고 감사를 전한다).
+    # 근거는 진행자의 발화 자체(이름) + output/private/viewers.json 의 메모뿐이다 — 그 밖은 지어내지 않는다.
+    ("greet_viewer",     ("님이 댓글", "님 댓글", "님이 오셨", "님 오셨", "님이 들어오", "님이 입장", "님이 참여",
+                          "님께 인사", "님한테 인사", "님에게 인사", "님 감사", "님께 감사", "님 환영", "님도 오셨",
+                          "님 반갑", "님이 채팅", "님 채팅", "님이 보고 계", "님이 시청")),
+    ("broadcast_status", ("지금까지 한 일", "지금까지 뭘", "지금까지 무엇", "남은 일", "앞으로 남은",
+                          "남은 순서", "방송 진행 상황", "전체 진행", "여기까지 뭘")),
+    ("small_talk",      ("날씨", "안녕하세요 코엠씨", "인사해", "자기소개", "소개해 주세요 코엠씨",
+                         "몇 시", "몇시")),
+    ("insight",         ("인사이트", "배운 것", "배운 점", "느낀 점", "깨달", "소감", "교훈")),
+    ("weekly_recap",    ("이번 주", "이번주", "일주일", "한 주 동안", "지난 며칠", "요즘 뭐",
+                         "주중에", "이번 주에 한")),
+    ("filler",          ("재미있는", "재밌는", "시간 좀", "잠깐 자리", "잠깐 물", "물 좀", "볼일",
+                         "다녀올", "다녀올게", "기다려", "심심", "아무 얘기", "얘기 좀 해", "이야기 좀 해",
+                         "말 좀 해", "대신 진행", "진행하고 있어", "니가 진행", "네가 진행", "코엠씨가 진행",
+                         "쉬는 동안", "쉴 동안", "재밌는 얘기", "재미있는 얘기")),
     ("summarize_part", ("요약해", "정리해", "간추려")),
     ("answer_question", ("뭐예요", "뭔가요", "무엇", "어떤", "어디", "언제", "얼마",
-                         "몇 ", "인가요", "나요?", "까요?", "맞나요", "확인해")),
+                         "몇 ", "인가요", "나요?", "까요?", "맞나요", "확인해",
+                         # CVL 2 (2026-09-17) 진행자 실사용 — "…에 대해 설명해 주세요" 가 unknown 으로
+                         # 떨어져 침묵했다. 청유형 요청도 질문이다. 게이트가 뒤에서 다시 거른다.
+                         "설명해", "알려 주", "알려주", "소개해", "말해 주", "말해줘", "얘기해")),
 ]
+
+CASUAL_INTENTS = frozenset({"small_talk", "weekly_recap", "insight", "filler", "broadcast_status", "greet_viewer"})
+RE_VIEWER = re.compile(r"([A-Za-z0-9가-힣_.\-]{2,24})\s*님")
 
 # ── M2 App Boundary 제외 범위 ─────────────────────────────────────────
 # app-boundary.md 의 11개 제외 항목 중 발화로 요청될 수 있는 것만 옮겼다.
@@ -82,8 +108,8 @@ OUT_OF_SCOPE_RULES = [
      "과거 회차 조회는 범위 밖 — Rundown 단일 문서만 신뢰 소스다 (컨텍스트 혼입)"),
     ("boundary.8_canvas",   ("캔버스", "canvas"),
      ".canvas 파싱은 범위 밖 — .md 가 정본이다"),
-    ("boundary.11_lang",    ("영어로 말", "영어로 답", "in english"),
-     "다국어 TTS 출력은 범위 밖 — 1차 목표는 한국어 방송이다"),
+    # boundary.11_lang (영어 답변 거절) 은 CVL 4 (2026-09-17) 에서 뺐다 — 진행자 요청으로 영어 답변을 지원한다.
+    # 「영어로」는 이제 경계가 아니라 슬롯(lang=en)이다. 아래 LANG_TRIGGERS.
 ]
 
 
@@ -112,6 +138,17 @@ LENGTH_TRIGGERS = [("detailed", ("상세히", "자세히")),
                    ("default", ("정리해줘",))]
 
 
+# ── 답변 언어 (CVL 4) ─────────────────────────────────────────────────
+# 「영어로 답해 주세요」→ slots.lang = "en". ④ 는 영어로 쓰고, ⑤ 는 한국어 전용 검사(어휘 겹침·어미)를 건너뛰며,
+# 재생기는 영어 목소리로 바꾼다. 인용(evidence_quote)은 언어와 무관하게 근거 원문 그대로여야 한다.
+LANG_TRIGGERS = ("영어로", "in english", "english please", "영어 답변", "영어 버전")
+
+
+def detect_lang(text: str) -> str | None:
+    low = text.lower()
+    return "en" if any(k in low for k in LANG_TRIGGERS) else None
+
+
 def strip_wake_residue(text: str) -> tuple[str, str | None]:
     m = RE_WAKE_RESIDUE.match(text)
     if not m:
@@ -138,6 +175,12 @@ def classify(text: str) -> tuple[str, float]:
     low = text.lower()
     # 경계 확인이 의도 분류보다 먼저다. '채팅에서 질문 찾아줘' 는 형태만 보면
     # 질문 검색이지만, 답은 '못 한다'이지 '찾아본다'가 아니다.
+    # 시청자 언급은 경계 검사보다 먼저다 — 「○○ 님이 댓글 남겨 주셨어요」의 '댓글'이 boundary.2_chat
+    # (채팅 자동 연동 금지)에 걸린다. 그 경계는 앱이 채팅을 **스스로 읽는** 것을 막는 것이고,
+    # 진행자가 이름을 **입으로 전달**하는 것은 경계 안이다 — 입력이 진행자다 (CVL 4).
+    greet_keys = dict(INTENT_RULES)["greet_viewer"]
+    if any(k in text for k in greet_keys):
+        return "greet_viewer", CONF_STRONG
     rule_id, _ = detect_out_of_scope(text)
     if rule_id:
         return "out_of_scope", CONF_STRONG
@@ -163,6 +206,11 @@ def build_intent(text: str, ctx: dict | None) -> dict:
         # 5초 만에 확인할 수 있어야 한다.
         slots["_stripped_wake_residue"] = residue
 
+    if intent == "greet_viewer":
+        names = [n for n in RE_VIEWER.findall(body) if n not in ("창수", "코엠씨", "시청자", "여러분")]
+        if names:
+            slots["viewer_names"] = list(dict.fromkeys(names))
+
     m = re.search(r"(\d+(?:\.\d+)?)\s*번?\s*파트", body)
     if m:
         slots["part_id"] = m.group(1)
@@ -174,10 +222,14 @@ def build_intent(text: str, ctx: dict | None) -> dict:
     level = detect_length_level(body)
     if level:
         slots["length_level"] = level
+    lang = detect_lang(body)
+    if lang:
+        slots["lang"] = lang
 
     # ── 모호성 플래그 (safety_policy.ambiguity_rules 와 연동) ──────────
     flags: list[str] = []
-    if ctx is not None:
+    # 캐주얼 레인은 파트 커버리지와 무관하다 — no_coverage 등 방송 내용용 플래그를 달지 않는다.
+    if ctx is not None and intent not in CASUAL_INTENTS:
         # 금칙 섹션을 이름으로 지목한 요청.
         #
         # M8 시나리오 forbidden-request 가 드러낸 것: 근거 풀에서 금칙 본문을
@@ -231,7 +283,10 @@ def load_ctx(live: str | None):
         return None
     p = out(f"broadcast_context.{live}.json")
     if not p.exists():
-        sys.exit(f"{p.name} 없음. 먼저 02_resolve_context.py 를 실행하세요.")
+        # CVL 4: 1부처럼 커버리지 미정이라 ② 가 컨텍스트를 안 만든 파트에서도 캐주얼 의도는
+        # 분류돼야 한다. 컨텍스트 없이는 방송 내용용 모호성 플래그만 못 단다 — ④ 가 다시 거른다.
+        print(f"⚠ {p.name} 없음 — 모호성 플래그 없이 분류합니다 (캐주얼 레인만 진행 가능)", file=sys.stderr)
+        return None
     return read_json(p)
 
 

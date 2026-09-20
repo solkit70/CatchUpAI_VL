@@ -1,0 +1,62 @@
+{
+  "source_path": "AI/Roundup/2026-08-17 - Live24 Weekly Rundown.md",
+  "is_final": true,
+  "parts": [
+    {
+      "id": "1",
+      "sort_key": 1.0,
+      "is_numbered": true,
+      "title": "지난 주 생성한 컨텐츠",
+      "time_raw": "시간 미표기",
+      "time_minutes": null,
+      "is_remainder": false,
+      "coverage_state": "defined",
+      "coverage_items": [
+        "FDE 한국어판",
+        "FDE 영어판",
+        "HebronGuide 발표 영상"
+      ],
+      "directive_note": null
+    },
+    {
+      "id": "2",
+      "sort_key": 2.0,
+      "is_numbered": true,
+      "title": "오늘의 실험",
+      "time_raw": "시간 미표기",
+      "time_minutes": null,
+      "is_remainder": false,
+      "coverage_state": "defined",
+      "coverage_items": [
+        "AI로 라방 보조 MC 앱 만들기",
+        "빅테크 데이터센터 인력 교육·취업 프로그램 조사",
+        "Claude Code 모바일 → 로컬 실행 구조 실험"
+      ],
+      "directive_note": null
+    },
+    {
+      "id": "주간 영상",
+      "sort_key": 902.0,
+      "is_numbered": false,
+      "title": "주간 영상",
+      "time_raw": "시간 미정",
+      "time_minutes": null,
+      "is_remainder": false,
+      "coverage_state": "defined",
+      "coverage_items": [
+        "모임보다 멤버가 먼저다 (후보)"
+      ],
+      "directive_note": null
+    }
+  ],
+  "excluded_sections": [
+    {
+      "heading": "보류된 인사이트 후보 (다음 방송 검토용)",
+      "reason": "on_hold"
+    }
+  ],
+  "conditional_sections": [],
+  "parse_anomalies": [],
+  "parsed_at": "2026-09-17T15:05:57.211903+00:00",
+  "frontmatter_status": "📺 방송 완료 — 2부 커버리지 ①②③ 전부 실행 (2026-08-23)"
+}

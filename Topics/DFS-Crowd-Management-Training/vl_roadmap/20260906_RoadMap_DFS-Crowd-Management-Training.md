@@ -6,6 +6,9 @@ source:
   - https://www.mass.gov/info-details/crowd-manager-requirements-faq
   - https://www.cisa.gov/resources-tools/resources/mass-gathering-security-planning-tool
   - https://training.fema.gov/programs/independent-study/courseoverview.aspx?code=IS-15.b&lang=
+  - https://app.leg.wa.gov/WAC/default.aspx?cite=51-54A-0403
+  - https://app.leg.wa.gov/WAC/default.aspx?cite=51-54A-0406
+  - https://www.seattle.gov/special-events/public-safety/public-safety-and-event-management
 author:
   - Codex
 created: '2026-09-08 08:10:54'
@@ -30,7 +33,7 @@ tags:
 
 ### 최종 학습 기간
 
-**4주, 총 30시간**. 기존 3주·20.5시간에서 연장했다. 공식 수강 경로의 최신성 검증, 시민단체 대상 보완 교육 비교, 안내 자료의 경계 검토, 영상·문서 패키지 검증 시간을 추가한다. 각 모듈 시간에는 약 20%의 검토·수정 버퍼가 포함된다.
+**5주, 총 34.5시간**. 기존 4주·30시간 계획에 Washington주 적용 경로 4.5시간을 추가했다. 이 단원은 DFS 교육을 다른 주의 인증으로 오인하지 않도록, 주 기준·지방 관할·venue 조건·직무별 교육을 분리해 검증한다. 각 모듈 시간에는 약 20%의 검토·수정 버퍼가 포함된다.
 
 ### 학습 목표
 
@@ -39,6 +42,8 @@ tags:
 - [ ] legal capacity, occupant load, Crowd Manager 배치, egress와 일일 점검을 Massachusetts 맥락과 지역별 확인 사항으로 나누어 설명한다.
 - [ ] 개장 전 점검과 행사 중 인원·출구·안내 운영을 시민단체 현장 체크리스트와 역할표로 전환한다.
 - [ ] FEMA IS-15.B, CISA Mass Gathering Security Planning Tool, First Aid/CPR/AED 등 보완 자료의 목적·대상·한계를 비교해 선택 기준을 제공한다.
+- [ ] Washington주 행사에서 WAC Crowd Manager 기준, local fire code·venue·permit 조건, 행사별 emergency-plan 교육을 구분해 확인할 수 있다.
+- [ ] 음식·주류 제공처럼 별도 역할에 붙는 교육·허가를 Crowd Manager 교육과 혼동하지 않고, 해당 관할에 질문할 수 있다.
 - [ ] 시민단체의 의사결정을 돕는 한국어 안내 문서, 리소스 경로, 검증 가능한 영상 슬라이드 플랜과 Remotion handoff을 완성한다.
 - [ ] 한국어 기준 대본과 장면 ID별 영어 현지화 준비 패키지(용어집, 출처 매핑, 영문 대본 구조, 자막·나레이션 QA 기준)를 완성한다.
 
@@ -49,6 +54,7 @@ tags:
 | DFS 공식 교육 | 공식 허브, 교육 목적, 수강 링크 확인 방법 | Massachusetts의 특정 시설·행사 조건에 관한 교육이며 다른 지역의 의무를 판정하지 않음 |
 | DFS 책임·체크리스트 | egress, occupant load, exit announcement, 일일 점검의 의미 | 실제 적용 여부와 시설 수용 인원은 관할 기관과 Certificate of Inspection으로 확인 |
 | 보완 교육 | 특별행사 계획, 보안 계획, 응급처치 역량을 위한 선택지 | DFS 인증이나 현지 허가를 대체하지 않으며 대상·수료 요건이 다름 |
+| Washington 적용 | WAC 문구, Seattle 사례, venue·관할 질문, 역할별 별도 교육·허가 | statewide 기준, local code·permit·venue 요구, DFS 수료의 효력을 같은 것으로 말하지 않음 |
 | 영상·문서 | 한국어 요약, 역할표, 질문 목록, 다음 행동 | 실제 시험 재현·합격 보장·법률 자문으로 표현하지 않음 |
 | 개인정보 | 익명화한 도식과 일반화한 설명 | 수료증, 이메일, 인증번호, 로그인·시험 화면은 공개하지 않음 |
 
@@ -73,7 +79,8 @@ Massachusetts DFS는 Crowd Manager 과정을 무료 온라인 교육으로 안�
 | M5  | DFS 수강 경로와 인증 안내               |   2 |   4h | 05-Training-Access-Guide/        |
 | M6  | 보완 교육과 시민단체 계획 도구              |   2 |   4h | 06-Community-Training-Guide/     |
 | M7  | 한국어 기준 정보 설계와 영어판 준비           |   2 |   4h | 07-Community-Information-Design/ |
-| M8  | Capstone: 한국어 패키지와 영어판 handoff |   3 |   5h | 08-Verified-Community-Package/   |
+| M8  | Washington 행사 요건과 역할별 교육 경로 |   2 | 4.5h | 08-Washington-Event-Requirements/ |
+| M9  | Capstone: 한국어 패키지와 영어판 handoff |   3 |   5h | 09-Verified-Community-Package/   |
 
 ## 모듈별 상세 계획
 
@@ -435,11 +442,67 @@ Massachusetts DFS는 Crowd Manager 과정을 무료 온라인 교육으로 안�
 - M1 claim ledger와 M5 수강 경로 카드: 공식 안내의 최신성 근거.
 - M6 교육·도구 비교표: 보완 자료의 범위와 추천 조건.
 - [[2026-09-07 DFS Training Full Screenshot Transcript|DFS Training Full Screenshot Transcript]]: 원자료의 맥락 검증. 공개 영상에는 개인정보가 있는 화면을 사용하지 않는다.
-### M8 - Capstone: 한국어 패키지와 영어판 handoff
+### M8 - Washington 행사 요건과 역할별 교육 경로
+
+**난이도**: 2
+**예상 시간**: 4.5시간
+**산출물 폴더**: 08-Washington-Event-Requirements/
+
+#### 학습 목표
+
+- [ ] WAC 51-54A-0403의 1,000명 초과·fire code official 조건을 정확히 설명하고, 1,000명 미만의 자동 면제로 표현하지 않는다.
+- [ ] Washington주가 단일 Crowd Manager 교육·자격증을 지정한다고 단정하지 않고, local code·permit·venue의 승인 조건을 확인할 수 있다.
+- [ ] 주최 단체, venue, 관할 fire/building/permitting 기관의 역할과 질문을 구분한다.
+- [ ] 실내·실외 행사 및 음식·주류 제공의 별도 교육·허가 질문을 Crowd Manager 기준과 분리한다.
+
+#### 주요 개념
+
+1. **statewide baseline**: WAC가 정한 최소 기준이며, local code·fire code official·permit·venue 요구를 없애지 않는다.
+2. **행사별 plan 교육**: 외부 수료증과 별개로 승인된 emergency/public-safety plan의 절차와 각자의 duties를 가르치고 기록하는 교육이다.
+3. **역할별 자격**: Food Worker Card, MAST, Crowd Manager 교육·기록처럼 활동과 license 형태에 따라 서로 다른 요구가 생길 수 있다.
+
+#### 실습 과제
+
+1. **Washington 근거·경계 카드**: WAC 51-54A-0403·0406, Seattle 특별행사 안내를 읽고 주 기준, Seattle 사례, 확인이 필요한 local/venue 조건을 세 열에 기록한다. 75분. 1,000명 기준·fire code official 재량·교육 기록·Seattle 250명 비율의 적용 범위를 정확히 구분하면 완료한다.
+2. **시민단체 행사 intake**: 실내 180명, 야외 1,200명, 주류 제공 모금행사 3개에 대해 주최자·venue·관할 기관에 물을 질문과 남길 기록을 만든다. 95분. 각 사례에 Crowd Manager, permit/plan, food/alcohol 역할의 경계가 있으면 완료한다.
+3. **역할별 교육 지도 검토**: DFS, 현장 emergency-plan briefing, Food Worker Card, MAST를 목적·대상·증빙·비대체 항목으로 비교한다. 45분. MAST의 special occasion 예외와 on-premises licensed establishment의 일반 규칙을 혼동하지 않으면 완료한다.
+
+#### 산출물
+
+08-Washington-Event-Requirements/README.md, concepts/washington-crowd-manager-requirements.md, guides/washington-nonprofit-event-intake.md, examples/role-specific-training-map.md
+
+#### Definition of Done
+
+- [ ] WAC Crowd Manager 조건과 확인일을 공식 링크로 기록
+- [ ] statewide 기준과 Seattle·local/venue 조건을 분리
+- [ ] 주최 단체·venue·관할 기관에 물을 질문을 실내·실외 모두에 작성
+- [ ] emergency-plan 교육 기록의 범위와 자원봉사자 적용 여부의 확인 경계 명시
+- [ ] food·alcohol 역할의 교육·허가를 Crowd Manager 교육과 구분
+- [ ] README와 모든 산출물의 상대 링크 확인
+
+#### Self-Assessment
+
+- [ ] DFS 수료증과 Washington의 승인 교육을 동일한 것으로 말하면 안 되는 이유를 설명할 수 있다.
+- [ ] 1,000명 미만 행사도 관할 확인이 필요한 이유를 설명할 수 있다.
+- [ ] AI가 제시한 Washington 교육 요구에 statewide, local, venue, license 조건을 각각 요구할 수 있다.
+
+#### 예상 시간 배분
+
+개념·공식 규정 검증 55분, 실습 1 75분, 실습 2 95분, 실습 3 45분, 문서화·버퍼 40분. **합계: 4.5시간**
+
+#### 참조 자료
+
+- [WAC 51-54A-0403](https://app.leg.wa.gov/WAC/default.aspx?cite=51-54A-0403): 1,000명 초과 또는 fire code official 요구 시 Crowd Manager 배치 기준.
+- [WAC 51-54A-0406](https://app.leg.wa.gov/WAC/default.aspx?cite=51-54A-0406): emergency plan 교육·최소 연 1회 교육·기록 제시 기준.
+- [Seattle Public Safety and Event Management](https://www.seattle.gov/special-events/public-safety/public-safety-and-event-management): Seattle의 Public Safety Plan, Crowd Management Plan, 교육·배치 사례.
+- [Washington Food Worker Card](https://doh.wa.gov/community-and-environment/food/food-worker-and-industry/food-worker-card): food worker 정의와 주 전역에서 유효한 card 안내.
+- [WSLCB Special Occasion License FAQ](https://lcb.wa.gov/licensing/special-occasion-licenses/faq): 비영리 특별행사의 주류 제공과 MAST 질문의 조건부 안내.
+
+### M9 - Capstone: 한국어 패키지와 영어판 handoff
 
 **난이도**: 3
 **예상 시간**: 5시간
-**산출물 폴더**: 08-Verified-Community-Package/
+**산출물 폴더**: 09-Verified-Community-Package/
 
 #### 학습 목표
 
@@ -460,12 +523,13 @@ Massachusetts DFS는 Crowd Manager 과정을 무료 온라인 교육으로 안�
 
 #### 산출물
 
-08-Verified-Community-Package/README.md, concepts/claim-ledger-and-update-policy.md, examples/community-review-checklist.md, guides/dfs-training-and-resources-guide.md, guides/korean-canonical-video-handoff.md, guides/english-localization-handoff.md, guides/bilingual-distribution-and-update-checklist.md
+09-Verified-Community-Package/README.md, concepts/claim-ledger-and-update-policy.md, examples/community-review-checklist.md, guides/dfs-training-and-resources-guide.md, guides/korean-canonical-video-handoff.md, guides/english-localization-handoff.md, guides/bilingual-distribution-and-update-checklist.md
 
 #### Definition of Done
 
 - [ ] 한국어 기준 영상과 안내문의 모든 사실 주장에 출처·확인일·범위·공개 상태 연결
 - [ ] DFS 수강 경로와 보완 자료의 한계를 두 언어에 적용할 문구로 정리
+- [ ] Washington의 statewide·local·venue 적용 경계와 확인일을 영상·안내문 claim ledger에 반영
 - [ ] 수료증·이메일·인증번호·로그인 정보 노출 없음
 - [ ] 시민단체 검토 질문 10개와 처리 결과 기록
 - [ ] 영어 현지화 용어집·대본 매핑·자막·나레이션 QA 목록 완성
@@ -515,7 +579,7 @@ DFS-Crowd-Management-Training/
 - vl_roadmap/
   - 20260906_RoadMap_DFS-Crowd-Management-Training.md
 - vl_worklog/
-- 01-Source-Map/ through 08-Verified-Community-Package/
+- 01-Source-Map/ through 09-Verified-Community-Package/
 
 세부 산출물 폴더는 각 모듈을 실제 시작할 때 생성한다. 각 폴더의 README에는 학습 순서, 상대 경로 링크, 한 줄 설명, 이전·다음 모듈 링크를 포함한다.
 
@@ -530,14 +594,16 @@ DFS-Crowd-Management-Training/
 | M5 | 2026-09-13 | 2026-09-13 | 완료 | 100% | 공식 허브·FAQ·체크리스트 경로, 한국어 수강 카드, 업데이트·기술 안내 경계, WorkLog·회고 완성 |
 | M6 | 2026-09-13 | 2026-09-13 | 완료 | 100% | DFS·FEMA·CISA·First Aid/CPR/AED 비교표, 세 행사 유형 리소스 경로, 의료 운영 경계, WorkLog·회고 완성 |
 | M7 | 2026-09-13 | 2026-09-13 | 완료 | 100% | 네 시청자 행동표, 12장면 한국어 기준 대본·claim ledger, 영어 현지화 용어·QA, Remotion Phase 1 플랜 작성; 사용자 리뷰 대기 |
-| M8 |  |  | 대기 | 0% | 검증·배포·Remotion handoff |
+| M8 | 2026-09-19 | 2026-09-19 | 완료 | 100% | WAC·Seattle·DOH·WSLCB 공식 경로 검증, 실내·실외 intake, 역할별 교육·허가 지도 작성 |
+| M9 |  |  | 대기 | 0% | 검증·배포·Remotion handoff |
 
 ## 전체 성공 기준
 
-- [ ] 8개 모듈의 DoD를 모두 충족한다.
+- [ ] 9개 모듈의 DoD를 모두 충족한다.
 - [ ] DFS 공식 수강 경로와 수시 확인 방법을 한국어로 설명하는 안내가 있다.
 - [ ] DFS 교육과 보완 교육·계획 도구의 목적과 한계를 비교하는 표가 있다.
 - [ ] Massachusetts 교육 맥락과 현지 관할 확인 항목을 분리한다.
+- [ ] Washington주 Crowd Manager 기준, 지역·venue 조건, 역할별 별도 교육·허가를 구분하는 안내가 있다.
 - [ ] 영상과 안내문에 쓰는 모든 사실 주장을 claim ledger로 추적한다.
 - [ ] 개인정보를 포함하지 않는 한국어 영상 플랜, 1쪽 안내문, Remotion handoff을 완성한다.
 - [ ] 한국어 기준 대본과 장면 ID별 영어 현지화 준비 패키지(용어집, 출처 매핑, 자막·나레이션 QA, 영어판 승인 기준)를 완성한다.

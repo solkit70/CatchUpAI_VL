@@ -1,23 +1,44 @@
 {
-  "current_part_id": "2",
+  "current_part_id": "1",
   "coverage_state": "defined",
   "coverage_items": [
-    "CoMC 앱 개발(Live-CoMC-App) M10 마무리",
-    "Caregiver 학습 자료 기반 영상 제작을 라이브로 진행",
-    "Claude Artifacts & Routines 신규 Topic 학습"
+    "모바일 원격 실행(한/영)",
+    "「무엇을 만들 것인가」(한/영)",
+    "Datacenter Workforce M10 캡스톤(한/영)",
+    "Sebastian Raschka LLM Q&A 자막 영상"
   ],
   "evidence_pool": [
     {
-      "path": "AI/Roundup/2026-08-30 - Live26 Weekly Rundown.md#오늘의 실험",
-      "quote": "9/5 갱신 — 이번 주 실험 후보 전체 목록"
+      "path": "AI/Roundup/2026-08-30 - Live26 Weekly Rundown.md#지난 주 생성한 컨텐츠#이번 방송 커버리지",
+      "quote": "[확정] 이번 방송 커버리지 — 모바일 원격 실행(한/영)"
     },
     {
-      "path": "AI/Roundup/2026-08-30 - Live26 Weekly Rundown.md#오늘의 실험",
-      "quote": "확정된 실험 ②③ — 시작 프롬프트 원문 (9/5 슬라이드, 방송 중 그대로 사용)"
+      "path": "AI/Roundup/2026-08-30 - Live26 Weekly Rundown.md#지난 주 생성한 컨텐츠#이번 방송 커버리지",
+      "quote": "[확정] 이번 방송 커버리지 — 「무엇을 만들 것인가」(한/영)"
     },
     {
-      "path": "AI/Roundup/2026-08-30 - Live26 Weekly Rundown.md#오늘의 실험",
-      "quote": "기존 후보 맥락"
+      "path": "AI/Roundup/2026-08-30 - Live26 Weekly Rundown.md#지난 주 생성한 컨텐츠#이번 방송 커버리지",
+      "quote": "[확정] 이번 방송 커버리지 — Datacenter Workforce M10 캡스톤(한/영)"
+    },
+    {
+      "path": "AI/Roundup/2026-08-30 - Live26 Weekly Rundown.md#지난 주 생성한 컨텐츠#이번 방송 커버리지",
+      "quote": "[확정] 이번 방송 커버리지 — Sebastian Raschka LLM Q&A 자막 영상"
+    },
+    {
+      "path": "AI/Roundup/2026-08-30 - Live26 Weekly Rundown.md#지난 주 생성한 컨텐츠",
+      "quote": "[확정 항목 현재 상태] 🆕 ⭐ 「무엇을 만들 것인가」 영상 2편 공개 — ✅ 9/2 한·영 모두 공개. 🇰🇷 jkXtL5J4rUM (5:43) · 🇺🇸 AHsVMXCbQYk (5:17). 카툰 서사 27슬라이드 · Qwen3-TTS 화자 3인 — 화자 분리는 이번이 처음. ⭐ 어제 떠오른 아이디어가 세 갈래에 붙었다 — 이선생님 미팅(새 프로젝트 사전조사 단계) · 빌더스 라운지 온라인 특강 예고편 · 송재희님 글(8/31 벨뷰 만남 당일 집필)"
+    },
+    {
+      "path": "AI/Roundup/2026-08-30 - Live26 Weekly Rundown.md#지난 주 생성한 컨텐츠",
+      "quote": "[확정 항목 현재 상태] 모바일 원격 실행 영상 공개 — ✅ 8/31 한·영 두 버전 모두 업로드 및 공개 완료 (d308t2uQw3I / OKxdx6KbOPg)"
+    },
+    {
+      "path": "AI/Roundup/2026-08-30 - Live26 Weekly Rundown.md#지난 주 생성한 컨텐츠",
+      "quote": "[확정 항목 현재 상태] 🆕 ⭐ Datacenter Workforce M10 캡스톤 영상 공개 — ✅ 9/3 한·영 모두 공개, Topic 종료. 🇰🇷 13:12 · 🇺🇸 749dpzOq09Y 13:49. 46장·7막, 1인칭 기록"
+    },
+    {
+      "path": "AI/Roundup/2026-08-30 - Live26 Weekly Rundown.md#지난 주 생성한 컨텐츠",
+      "quote": "[확정 항목 현재 상태] 🆕 Sebastian Raschka LLM Q&A 자막 영상 — ✅ 9/4 한글 자막 렌더링·공개 완료 (55:44)"
     }
   ],
   "status_map": {
@@ -26,5 +47,17 @@
   "excluded_headings": [],
   "withheld_conditional": [],
   "forbidden_removed": true,
-  "assembled_at": "2026-09-06T13:20:08.551946+00:00"
+  "other_parts": [
+    {
+      "id": "2",
+      "title": "오늘의 실험",
+      "coverage_state": "defined"
+    },
+    {
+      "id": "주간 영상",
+      "title": "주간 영상",
+      "coverage_state": "undefined"
+    }
+  ],
+  "assembled_at": "2026-09-17T15:05:57.237918+00:00"
 }

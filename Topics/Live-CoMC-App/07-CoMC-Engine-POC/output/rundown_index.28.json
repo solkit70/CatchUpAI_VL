@@ -1,0 +1,50 @@
+{
+  "source_path": "AI/Roundup/2026-09-13 - Live28 Weekly Rundown.md",
+  "is_final": true,
+  "parts": [
+    {
+      "id": "1",
+      "sort_key": 1.0,
+      "is_numbered": true,
+      "title": "지난 주 생성한 컨텐츠",
+      "time_raw": "시간 미표기",
+      "time_minutes": null,
+      "is_remainder": false,
+      "coverage_state": "undefined",
+      "coverage_items": [],
+      "directive_note": null
+    },
+    {
+      "id": "2",
+      "sort_key": 2.0,
+      "is_numbered": true,
+      "title": "오늘의 실험",
+      "time_raw": "시간 미표기",
+      "time_minutes": null,
+      "is_remainder": false,
+      "coverage_state": "defined",
+      "coverage_items": [
+        "Chrome Remote Desktop으로 외부에서 집 컴퓨터 조작",
+        "Live-CoMC 앱 완성본 실사용"
+      ],
+      "directive_note": null
+    },
+    {
+      "id": "3. 주간 영상",
+      "sort_key": 902.0,
+      "is_numbered": false,
+      "title": "3. 주간 영상",
+      "time_raw": "시간 미표기",
+      "time_minutes": null,
+      "is_remainder": false,
+      "coverage_state": "undefined",
+      "coverage_items": [],
+      "directive_note": null
+    }
+  ],
+  "excluded_sections": [],
+  "conditional_sections": [],
+  "parse_anomalies": [],
+  "parsed_at": "2026-09-18T14:33:42.131458+00:00",
+  "frontmatter_status": "⏳ 준비 중 — 2부 커버리지 2건 확정 / 1·3부 미정"
+}

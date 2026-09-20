@@ -1,0 +1,46 @@
+{
+  "source_path": "AI/Roundup/2026-06-15 - Live15 Weekly Rundown.md",
+  "is_final": false,
+  "parts": [
+    {
+      "id": "1",
+      "sort_key": 1.0,
+      "is_numbered": true,
+      "title": "지난 주 활동",
+      "time_raw": "시간 미표기",
+      "time_minutes": null,
+      "is_remainder": false,
+      "coverage_state": "undefined",
+      "coverage_items": [],
+      "directive_note": null
+    },
+    {
+      "id": "2",
+      "sort_key": 2.0,
+      "is_numbered": true,
+      "title": "내 주변 AI News",
+      "time_raw": "시간 미표기",
+      "time_minutes": null,
+      "is_remainder": false,
+      "coverage_state": "undefined",
+      "coverage_items": [],
+      "directive_note": null
+    },
+    {
+      "id": "3",
+      "sort_key": 3.0,
+      "is_numbered": true,
+      "title": "오늘의 실험",
+      "time_raw": "시간 미표기",
+      "time_minutes": null,
+      "is_remainder": false,
+      "coverage_state": "undefined",
+      "coverage_items": [],
+      "directive_note": null
+    }
+  ],
+  "excluded_sections": [],
+  "conditional_sections": [],
+  "parse_anomalies": [],
+  "parsed_at": "2026-09-17T15:05:57.010386+00:00"
+}

@@ -12,7 +12,9 @@
     "absence_by_closure": {
       "type": "array",
       "description": "인용이 아니라 화이트리스트가 닫힌 집합이라는 사실에 근거한 문장 인덱스 (M8). '없다'를 지지하는 인용은 존재할 수 없으므로 무엇으로 뒷받침됐는지를 구분해 남긴다.",
-      "items": { "type": "integer" }
+      "items": {
+        "type": "integer"
+      }
     },
     "final_text": {
       "type": "string",
@@ -20,7 +22,10 @@
     },
     "kept_sentences": {
       "type": "array",
-      "items": { "type": "integer", "minimum": 0 },
+      "items": {
+        "type": "integer",
+        "minimum": 0
+      },
       "description": "근거 검증을 통과해 발화에 포함된 문장 인덱스"
     },
     "dropped_sentences": {
@@ -29,14 +34,29 @@
       "items": {
         "type": "object",
         "properties": {
-          "sentence_idx": { "type": "integer", "minimum": 0 },
+          "sentence_idx": {
+            "type": "integer",
+            "minimum": 0
+          },
           "reason": {
             "type": "string",
-            "enum": ["no_evidence", "evidence_not_found", "coverage_violation", "length_hardcut", "fact_not_in_evidence", "absence_contradicts_coverage"],
-            "description": "탈락 사유: claim 없음/근거 문자열 미발견/화이트리스트 위반/길이 하드컷 초과/숫자·고유명사가 자기 근거에 없음(M8)/화이트리스트에 있는 항목을 없다고 주장(M8)"
+            "enum": [
+              "no_evidence",
+              "evidence_not_found",
+              "coverage_violation",
+              "length_hardcut",
+              "fact_not_in_evidence",
+              "absence_contradicts_coverage",
+              "style_broken",
+              "cross_part"
+            ],
+            "description": "탈락 사유: claim 없음/근거 문자열 미발견/화이트리스트 위반/길이 하드컷 초과/숫자·고유명사가 자기 근거에 없음(M8)/화이트리스트에 있는 항목을 없다고 주장(M8) / style_broken: 방송에서 읽을 수 없는 종결(M10 규칙 8) / cross_part: 질문이 다른 파트를 가리켜 현재 파트 근거로 답할 수 없음(사고 10)"
           }
         },
-        "required": ["sentence_idx", "reason"],
+        "required": [
+          "sentence_idx",
+          "reason"
+        ],
         "additionalProperties": false
       }
     },
@@ -46,10 +66,17 @@
       "items": {
         "type": "object",
         "properties": {
-          "rule_id": { "type": "string", "description": "safety_policy.json의 규칙 ID" },
-          "detail": { "type": "string" }
+          "rule_id": {
+            "type": "string",
+            "description": "safety_policy.json의 규칙 ID"
+          },
+          "detail": {
+            "type": "string"
+          }
         },
-        "required": ["rule_id"],
+        "required": [
+          "rule_id"
+        ],
         "additionalProperties": false
       }
     },
@@ -58,8 +85,17 @@
       "minimum": 0,
       "description": "검증 후 최종 문장 수"
     },
-    "verified_at": { "type": "string", "format": "date-time" }
+    "verified_at": {
+      "type": "string",
+      "format": "date-time"
+    }
   },
-  "required": ["pass", "final_text", "kept_sentences", "dropped_sentences", "violations"],
+  "required": [
+    "pass",
+    "final_text",
+    "kept_sentences",
+    "dropped_sentences",
+    "violations"
+  ],
   "additionalProperties": false
 }

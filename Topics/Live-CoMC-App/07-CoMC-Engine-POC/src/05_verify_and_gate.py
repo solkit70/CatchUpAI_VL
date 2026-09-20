@@ -50,6 +50,19 @@ STOP = {"그리고", "또한", "합니다", "입니다", "있습니다", "했습
 # 판정 근거와 실측(0/10)은 10-Live-Rehearsal-Capstone/examples/ending_style_probe.py 참조.
 RE_BROKEN_ENDING = re.compile(r"(?:[가-힣])다\s*요[.!?]?$")
 
+# 규칙 7-b · 9 (Live #27 사고 9 · 10) — ④ 와 같은 판정 함수를 쓴다. 정의가 두 벌이면
+# 반드시 어긋난다 (M8 회고: "같은 대상에 대한 정의가 두 층에서 다르다").
+_M7 = Path(__file__).resolve().parent
+import importlib.util as _ilu  # noqa: E402
+_spec = _ilu.spec_from_file_location("stage_04_compose_answer", _M7 / "04_compose_answer.py")
+_m04 = _ilu.module_from_spec(_spec)
+_spec.loader.exec_module(_m04)
+STATUS_KEYWORDS = _m04.STATUS_KEYWORDS
+other_part_mentioned = _m04.other_part_mentioned
+# 상태 답변에 있어야 하는 어휘. 좁게 잡는다 — 넓히면 정상 답을 떨어뜨린다.
+STATUS_WORDS = ("완료", "완수", "끝났", "마쳤", "진행 중", "진행중", "대기", "보류", "확정",
+                "미정", "예정", "남았", "남은", "착수", "시작했", "마무리")
+
 
 def tokens(text: str) -> set[str]:
     return {t for t in re.findall(r"[0-9A-Za-z가-힣]{2,}", text) if t not in STOP}
@@ -92,7 +105,7 @@ def normalize(text: str) -> str:
 
 
 def check_facts(sent: str, own_quotes: list[str],
-                trusted_extra: list[str] | None = None) -> list[str]:
+                trusted_extra: list[str] | None = None, digits_only: bool = False) -> list[str]:
     """문장의 숫자·고유명사가 신뢰 가능한 출처 안에 실재하는가.
 
     ## 대조 대상은 근거 인용만이 아니다
@@ -130,7 +143,7 @@ def check_facts(sent: str, own_quotes: list[str],
         if t and normalize(t) not in hay:
             bad.append(f"숫자 {t!r}")
 
-    for tok in RE_LATIN.findall(sent):
+    for tok in ([] if digits_only else RE_LATIN.findall(sent)):   # 영어 답변은 모든 단어가 라틴 문자다 — 숫자만 본다
         if tok.lower() in LATIN_OK:
             continue
         nt = normalize(tok)
@@ -164,7 +177,21 @@ def quote_found(quote: str, pool_quotes: list[str]) -> bool:
     return any(q in full or full in q for full in pool_quotes)
 
 
-def verify(draft: dict, ctx: dict, policy: dict, question: str = "") -> dict:
+# ② 가 근거 줄에 붙이는 라벨 「[확정]」「[확정 항목 현재 상태]」 는 LLM 에게 주는 표시지 말할 내용이 아니다.
+# 9/17 콘솔 실사용에서 「오늘은 [확정] Chrome Remote Desktop…」 이 그대로 소리로 나갔다 (사고 18).
+# ④ 프롬프트에도 「대괄호 라벨을 답에 쓰지 않는다」를 넣었지만, 프롬프트는 확률이고 게이트는 하한이다.
+EVIDENCE_LABEL_RE = re.compile(r"\[(?:확정|지시|후보|확정 항목 현재 상태)\]\s*")
+
+
+def strip_evidence_labels(text: str) -> str:
+    return EVIDENCE_LABEL_RE.sub("", text).replace("  ", " ").strip()
+
+
+def verify(draft: dict, ctx: dict, policy: dict, question: str = "",
+           lane: str = "broadcast", lang: str = "ko") -> dict:
+    """lane="casual" (CVL 4): 근거 풀이 casual_brief 다. 인용·사실·길이·어미 검사는 같고,
+    방송 내용 전용 규칙(7 content_empty · 7-b 상태 어휘 · 9 다른 파트)은 적용하지 않는다 —
+    그 규칙들은 '오늘 이 파트'를 전제로 하는데 캐주얼 발화는 파트에 속하지 않는다."""
     sentences = draft["sentences"]
     cmap = draft.get("claim_map", [])
     pool_paths = {e["path"] for e in ctx["evidence_pool"]}
@@ -216,7 +243,10 @@ def verify(draft: dict, ctx: dict, policy: dict, question: str = "") -> dict:
         # ⚠️ 약한 검사다. 토큰이 겹친다고 같은 주제라는 보장은 없다 —
         #    본격적인 화이트리스트 검증은 M8 과제다.
         own_ev = tokens(" ".join(c.get("evidence_quote", "") for c in claims))
-        if not (tokens(sent) & (cov_tokens | own_ev)):
+        # 캐주얼 레인엔 화이트리스트가 없다 — 인용 실재(규칙 2)가 통과했으면 이 약한 어휘 겹침 검사는
+        # 건너뛴다. 활용형 차이(돌아와서/돌아오셔서)로 정상 문장이 떨어졌다 (CVL 4 실측).
+        # lang=en: 한국어 어휘 겹침으로 영어 문장을 재지 못한다 — 인용 실재(규칙 2)와 숫자 검사(규칙 5)가 남는다.
+        if lane == "broadcast" and lang == "ko" and not (tokens(sent) & (cov_tokens | own_ev)):
             dropped.append({"sentence_idx": i, "reason": "coverage_violation"})
             violations.append({"rule_id": "coverage.whitelist_only",
                                "detail": f"문장 {i}: 화이트리스트·근거와 공통 어휘 없음"})
@@ -255,7 +285,7 @@ def verify(draft: dict, ctx: dict, policy: dict, question: str = "") -> dict:
 
         # ⑤ 숫자·고유명사가 자기 근거 안에 실재하는가 (M8)
         own_quotes = [c.get("evidence_quote", "") for c in claims]
-        bad_facts = check_facts(sent, own_quotes, trusted_extra)
+        bad_facts = check_facts(sent, own_quotes, trusted_extra, digits_only=(lang == "en"))
         if bad_facts:
             dropped.append({"sentence_idx": i, "reason": "fact_not_in_evidence"})
             violations.append({"rule_id": "claim.facts_must_be_quoted",
@@ -275,6 +305,24 @@ def verify(draft: dict, ctx: dict, policy: dict, question: str = "") -> dict:
                            "detail": f"{len(kept)}문장 → {limit}문장 (level={level})"})
         kept = kept[:limit]
 
+    # ⑥-b 글자 수 하드컷 (CVL 2, 2026-09-17) — 문장 수만으로는 길이가 안 잡혔다.
+    # 4회차 실측: 5문장 이내인데 271자 = 소리로 34초. edge-tts 는 약 7.7자/초.
+    # 문장 단위로 뒤에서 자르고 최소 1문장은 남긴다 — 자르는 것도 침묵보다는 말하는 쪽.
+    max_chars = (hard.get("max_chars") or {}).get(level) or (hard.get("max_chars") or {}).get("default")
+    if max_chars and lang == "en":
+        max_chars = int(max_chars * 1.8)      # 영어는 글자당 소리가 짧다 (≈14자/초 vs 한국어 7.7) — 같은 시간이면 글자가 더 든다
+    if max_chars and kept:
+        total = sum(len(sentences[i]) for i in kept)
+        if total > max_chars:
+            before = list(kept)
+            while len(kept) > 1 and sum(len(sentences[i]) for i in kept) > max_chars:
+                kept.pop()
+            for i in before[len(kept):]:
+                dropped.append({"sentence_idx": i, "reason": "length_hardcut"})
+            violations.append({"rule_id": "length_hardcut",
+                               "detail": f"{total}자 → {sum(len(sentences[i]) for i in kept)}자 "
+                                         f"(상한 {max_chars}자, level={level})"})
+
     # ⑦ 내용 없음 — 근거는 있는데 질문에 답하지 않았는가 (M10 리허설 1회차에서 추가)
     #
     # 규칙 1~6 은 전부 "틀린 말을 막는" 검사다. 그 방어가 완성되자 반대편 실패가 나왔다.
@@ -290,7 +338,7 @@ def verify(draft: dict, ctx: dict, policy: dict, question: str = "") -> dict:
     # 언급하지 않는 것이 정상이므로, **'무엇을 다루는가' 를 묻는 질문에만** 적용한다.
     content_empty = False
     cov_items = ctx["coverage_items"]
-    if question and cov_items and ctx.get("coverage_state") == "defined" and kept:
+    if lane == "broadcast" and lang == "ko" and question and cov_items and ctx.get("coverage_state") == "defined" and kept:
         asks_what = any(k in question for k in ("뭐", "무엇", "어떤", "뭘"))
         if asks_what:
             spoken_tokens = tokens(" ".join(sentences[i] for i in kept))
@@ -303,6 +351,31 @@ def verify(draft: dict, ctx: dict, policy: dict, question: str = "") -> dict:
                     "rule_id": "content_empty",
                     "detail": f"'무엇을' 질문인데 커버리지 항목 {len(cov_items)}개 중 "
                               f"어느 것도 답변에 나오지 않았다 — 근거는 있으나 내용이 없다"})
+        # ⑦-b 상태 질문 (사고 9, Live #27) — "어디까지 왔나" 에 항목 이름만 읊었다.
+        # 이름은 규칙 7 을 통과시키지만 질문에는 답하지 않는다. 상태 질문이면 남은 문장 중
+        # 하나라도 상태 어휘를 담아야 한다. 어휘 목록은 좁게 — 넓히면 정상 답을 떨어뜨린다.
+        asks_status = any(k in question for k in STATUS_KEYWORDS)
+        if asks_status and not content_empty:
+            spoken = " ".join(sentences[i] for i in kept)
+            if not any(w in spoken for w in STATUS_WORDS):
+                content_empty = True
+                violations.append({
+                    "rule_id": "content_empty",
+                    "detail": "상태 질문인데 남은 문장에 상태 어휘(완료·진행·대기·확정 등)가 없다 "
+                              "— 항목 이름만 읊고 답하지 않았다"})
+
+    # ⑨ 다른 파트 질문 (사고 10, Live #27) — 2부 진행 중 「주간 영상」을 묻자 2부 항목을
+    # "이번 주 영상"으로 답했다. ④ 가 같은 검사를 먼저 하지만, 게이트는 ④ 를 믿지 않는다 —
+    # ④ 가 바뀌거나 우회돼도 여기서 잡혀야 한다. 현재 파트 근거로는 어떤 문장도 다른
+    # 파트에 대한 답이 될 수 없으므로 **전부** 떨어뜨린다.
+    op = other_part_mentioned(question, ctx) if (question and lane == "broadcast") else None
+    if op and kept:
+        for i in kept:
+            dropped.append({"sentence_idx": i, "reason": "cross_part"})
+        kept = []
+        violations.append({"rule_id": "coverage.current_part_only",
+                           "detail": f"질문이 다른 파트 '{op['title']}' 를 가리킴 — "
+                                     f"현재 파트({ctx.get('current_part_id')}) 근거로 답하지 않는다"})
 
     # ⑧ 종결 형태 붕괴 — 방송에서 읽을 수 없는 어미인가 (M10, 2026-09-06)
     #
@@ -326,7 +399,7 @@ def verify(draft: dict, ctx: dict, policy: dict, question: str = "") -> dict:
             "rule_id": "style_broken",
             "detail": f"방송에서 읽을 수 없는 종결(해라체+요) {len(style_broken)}건"})
 
-    final_text = " ".join(sentences[i] for i in kept)
+    final_text = strip_evidence_labels(" ".join(sentences[i] for i in kept))
     absence_kept = [i for i in absence_basis if i in kept]
     return {
         # 문장을 버리지는 않는다 — 위험한 말이 아니라 쓸모없는 말이다.
@@ -393,17 +466,33 @@ def main():
     args = ap.parse_args()
 
     draft = read_json(out("answer_draft.json"))
-    ctx = read_json(out(f"broadcast_context.{args.live}.json"))
     policy = load_safety_policy()
 
     # intent 의 길이 수준을 draft 에 실어 전달한다 (스키마 밖 필드라 검증 전에 뺀다)
     ipath = out("intent.json")
     question = ""
+    lane = "broadcast"
+    lang = "ko"
+    _intent = None
     if ipath.exists():
         _intent = read_json(ipath)
         draft["_length_level"] = _intent["slots"].get("length_level", "default")
         # 규칙 7(content_empty)은 질문 유형을 봐야 오탐이 안 난다.
         question = _intent.get("transcript", "")
+        lang = _intent["slots"].get("lang") or "ko"
+        if _intent["intent"] in _m04.CASUAL_INTENTS:
+            lane = "casual"
+            draft["_length_level"] = _intent["slots"].get("length_level") or (
+                "default" if _intent["intent"] in ("greet_viewer", "small_talk") else "casual")
+
+    if lane == "casual":
+        # ④ 와 같은 함수로 같은 풀을 만든다 — 정의가 두 벌이면 어긋난다.
+        brief = read_json(_m04.CASUAL_BRIEF(args.live))
+        ctx = {"evidence_pool": _m04.casual_evidence(brief, _intent["intent"], args.live, _intent),
+               "coverage_items": brief.get("topics", []), "coverage_state": "defined",
+               "current_part_id": None}
+    else:
+        ctx = read_json(out(f"broadcast_context.{args.live}.json"))
 
     if args.tamper:
         draft = tamper(draft)
@@ -414,7 +503,7 @@ def main():
         print("⚠ 사실 위조 모드 — 근거는 그대로, 숫자·고유명사만 틀리게 넣습니다")
         print("   인용은 실재하므로 M7 게이트만으로는 전부 통과한다\n")
 
-    v = verify(draft, ctx, policy, question=question)
+    v = verify(draft, ctx, policy, question=question, lane=lane, lang=lang)
     validate_or_die("verdict", v, "05_verify_and_gate")
     path = write_json(out("verdict.json"), v)
 
@@ -429,7 +518,7 @@ def main():
         print(f"   ⚠ {vi['rule_id']}: {vi.get('detail','')}")
 
     print(f"\n   최종 발화: {v['final_text'][:96] or '(없음 — 발화하지 않는다)'}")
-    trace("05_verify_and_gate", ok=True, passed=v["pass"], tamper=args.tamper,
+    trace("05_verify_and_gate", ok=True, passed=v["pass"], lane=lane, tamper=args.tamper,
           tamper_facts=args.tamper_facts,
           absence_by_closure=v.get("absence_by_closure", []),
           kept=len(v["kept_sentences"]), dropped=len(v["dropped_sentences"]),

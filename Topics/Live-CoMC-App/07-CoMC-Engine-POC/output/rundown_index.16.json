@@ -1,0 +1,84 @@
+{
+  "source_path": "AI/Roundup/2026-06-22 - Live16 Weekly Rundown.md",
+  "is_final": false,
+  "parts": [
+    {
+      "id": "1",
+      "sort_key": 1.0,
+      "is_numbered": true,
+      "title": "지난 주 활동",
+      "time_raw": "시간 미표기",
+      "time_minutes": null,
+      "is_remainder": false,
+      "coverage_state": "defined",
+      "coverage_items": [
+        "6/22 Tehaleh 한영 영상 공개",
+        "6/24~6/26 Live #15 한영 요약 영상 제작·업로드",
+        "6/26 창발 Product Group 발표 완료",
+        "6/26 김기자님 Qwen3 Voice Clone 리포팅",
+        "Daily Roundup 완료"
+      ],
+      "directive_note": null
+    },
+    {
+      "id": "2",
+      "sort_key": 2.0,
+      "is_numbered": true,
+      "title": "내 주변 AI News",
+      "time_raw": "시간 미표기",
+      "time_minutes": null,
+      "is_remainder": false,
+      "coverage_state": "defined",
+      "coverage_items": [
+        "창발 발표 후기",
+        "김기자님 Qwen3 Voice Clone 리포팅",
+        "강민석님 미팅과 Bila AI Agent",
+        "구요한님 CmdMD 앱 공개",
+        "한인 상공회의소 × 스타트업 커피챗 모임 준비"
+      ],
+      "directive_note": null
+    },
+    {
+      "id": "3",
+      "sort_key": 3.0,
+      "is_numbered": true,
+      "title": "오늘의 실험",
+      "time_raw": "시간 미표기",
+      "time_minutes": null,
+      "is_remainder": false,
+      "coverage_state": "defined",
+      "coverage_items": [
+        "Bila AI Agent 만들기",
+        "AI로 글감 마련하기 — 피터 틸의 미래 비전 M5.5"
+      ],
+      "directive_note": null,
+      "subsection_coverage": [
+        {
+          "heading": "실험 ①: Bila AI Agent 만들기",
+          "coverage_state": "defined",
+          "coverage_items": [
+            "Bila Agent 3단계 로드맵 소개",
+            "GobiSpace Settings/Agents 기능 설명",
+            "시스템 프롬프트 설계 + 방송 중 실시간 적용",
+            "현재 한계와 GOBI 개발자 요구사항"
+          ],
+          "directive_note": null
+        },
+        {
+          "heading": "실험 ②: AI로 글감 마련하기 — 피터 틸의 미래 비전 M5.5",
+          "coverage_state": "defined",
+          "coverage_items": [
+            "피터 틸 비전 리서치 M3~M5 결과 요약 공유",
+            "나의 AI 세계관 정리 실험 (M5.5)",
+            "피터 틸 비전 평가 — 동의하는 것·동의하지 않는 것"
+          ],
+          "directive_note": null
+        }
+      ]
+    }
+  ],
+  "excluded_sections": [],
+  "conditional_sections": [],
+  "parse_anomalies": [],
+  "parsed_at": "2026-09-17T15:05:57.015423+00:00"
+}

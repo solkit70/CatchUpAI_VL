@@ -1,43 +1,34 @@
 {
-  "current_part_id": "2",
+  "current_part_id": "1",
   "coverage_state": "defined",
   "coverage_items": [
-    "라이브 방송 보조 MC 앱(Live-CoMC-App M3 완료 + M4 실습 1·2)",
-    "Seattle Tech Week 2026 → 기사 작성 Topic 로드맵",
-    "VibeLearn AI를 Codex에 최적화"
+    "Seattle Tech Week 2026 녹화 영상 편집/업로드 32개 완료",
+    "편집 완료 자산을 VibeLearn AI 학습 재료로 전환"
   ],
   "evidence_pool": [
     {
-      "path": "Ingest/CatchUpAI_VL/Topics/Live-CoMC-App/07-CoMC-Engine-POC/data/rundown_samples/2026-08-02 - Live22 Weekly Rundown.md#오늘의 실험",
-      "quote": "후보 ① AI로 라이브 방송 보조 MC 앱 만들기"
+      "path": "Ingest/CatchUpAI_VL/Topics/Live-CoMC-App/07-CoMC-Engine-POC/data/rundown_samples/2026-08-02 - Live22 Weekly Rundown.md#지난 주 생성한 콘텐츠#이번 방송 커버리지",
+      "quote": "[확정] 이번 방송 커버리지 — Seattle Tech Week 2026 녹화 영상 편집/업로드 32개 완료"
     },
     {
-      "path": "Ingest/CatchUpAI_VL/Topics/Live-CoMC-App/07-CoMC-Engine-POC/data/rundown_samples/2026-08-02 - Live22 Weekly Rundown.md#오늘의 실험",
-      "quote": "후보 ② Seattle Tech Week 2026 영상 VibeLearn AI 학습"
+      "path": "Ingest/CatchUpAI_VL/Topics/Live-CoMC-App/07-CoMC-Engine-POC/data/rundown_samples/2026-08-02 - Live22 Weekly Rundown.md#지난 주 생성한 콘텐츠#이번 방송 커버리지",
+      "quote": "[확정] 이번 방송 커버리지 — 편집 완료 자산을 VibeLearn AI 학습 재료로 전환"
     },
     {
-      "path": "Ingest/CatchUpAI_VL/Topics/Live-CoMC-App/07-CoMC-Engine-POC/data/rundown_samples/2026-08-02 - Live22 Weekly Rundown.md#오늘의 실험",
-      "quote": "실제 진행: VibeLearn AI를 Codex에 최적화"
+      "path": "Ingest/CatchUpAI_VL/Topics/Live-CoMC-App/07-CoMC-Engine-POC/data/rundown_samples/2026-08-02 - Live22 Weekly Rundown.md#지난 주 생성한 콘텐츠",
+      "quote": "Seattle Tech Week 녹화 영상 편집 결과와 Live22 학습 전환"
     },
     {
-      "path": "Ingest/CatchUpAI_VL/Topics/Live-CoMC-App/07-CoMC-Engine-POC/data/rundown_samples/2026-08-02 - Live22 Weekly Rundown.md#오늘의 실험",
-      "quote": "후보 ③ FedWay 독립유공자 영상 마무리"
+      "path": "Ingest/CatchUpAI_VL/Topics/Live-CoMC-App/07-CoMC-Engine-POC/data/rundown_samples/2026-08-02 - Live22 Weekly Rundown.md#지난 주 생성한 콘텐츠",
+      "quote": "Builders Lounge 4차 모임(8/6) 후기"
     },
     {
-      "path": "Ingest/CatchUpAI_VL/Topics/Live-CoMC-App/07-CoMC-Engine-POC/data/rundown_samples/2026-08-02 - Live22 Weekly Rundown.md#오늘의 실험",
-      "quote": "후보 ④ DFS Crowd Manager Training 요약 영상 제작"
+      "path": "Ingest/CatchUpAI_VL/Topics/Live-CoMC-App/07-CoMC-Engine-POC/data/rundown_samples/2026-08-02 - Live22 Weekly Rundown.md#지난 주 생성한 콘텐츠",
+      "quote": "FedWay 광복절 AI 특별기획 파일럿 제작"
     },
     {
-      "path": "Ingest/CatchUpAI_VL/Topics/Live-CoMC-App/07-CoMC-Engine-POC/data/rundown_samples/2026-08-02 - Live22 Weekly Rundown.md#오늘의 실험",
-      "quote": "후보 ⑤ 총기난사 대처 요령 교육과정 요약 영상 제작"
-    },
-    {
-      "path": "Ingest/CatchUpAI_VL/Topics/Live-CoMC-App/07-CoMC-Engine-POC/data/rundown_samples/2026-08-02 - Live22 Weekly Rundown.md#오늘의 실험",
-      "quote": "후보 ⑥ AI는 일을 줄이는가, 더 만드는가 회고 글 작성"
-    },
-    {
-      "path": "Ingest/CatchUpAI_VL/Topics/Live-CoMC-App/07-CoMC-Engine-POC/data/rundown_samples/2026-08-02 - Live22 Weekly Rundown.md#오늘의 실험",
-      "quote": "후보 ⑦ Bila AI Agent 만들기 M2 진행"
+      "path": "Roundup/2026-08-03 - Daily Roundup#Status Summary",
+      "quote": "FedWay 파일럿 3인 영상 — 완료 — 노백린·류동열·김동협, 3분 32초, 유튜브 미등록 링크 확보"
     },
     {
       "path": "Roundup/2026-08-03 - Daily Roundup#Status Summary",
@@ -52,8 +43,36 @@
       "quote": "Seattle Spark + AI 전사 방식 — 완료 — `gpt-transcribe`는 세그먼트 타임스탬프 부재로 제외, `whisper-1` 사용"
     },
     {
+      "path": "Roundup/2026-08-04 - Daily Roundup#Status Summary",
+      "quote": "Biuty AI IMG_5146 자막 검수 — 완료 — `Biuty` 고유명사 확인, 영어 자막 수정, 짧은 클립 한계 기록"
+    },
+    {
+      "path": "Roundup/2026-08-04 - Daily Roundup#Status Summary",
+      "quote": "Biuty AI IMG_5147 자막 검수 — 완료 — `skincare decisions`, `the B2B integrations`, 한국어 의미 drift 교정"
+    },
+    {
+      "path": "Roundup/2026-08-04 - Daily Roundup#Status Summary",
+      "quote": "외부 활동 — 제한 — 공기질 악화로 집에서 영상 편집 중심으로 진행"
+    },
+    {
       "path": "Roundup/2026-08-05 - Daily Roundup#Status Summary",
       "quote": "Seattle Tech Week 영상 편집 — 진행 중 — 체감 50% 완료. 이번 주 내 완료 목표 유지"
+    },
+    {
+      "path": "Roundup/2026-08-05 - Daily Roundup#Status Summary",
+      "quote": "AI Startup Secret Sauce 5편 — 완료 — 제목·설명·챕터·태그·YouTube 링크·아카이브 반영 완료"
+    },
+    {
+      "path": "Roundup/2026-08-05 - Daily Roundup#Status Summary",
+      "quote": "FedWay 12인 영상 확장 — 방향 결정 — 현재 자료로 1차 완성 후 fact check와 추가 자료 반영으로 전환"
+    },
+    {
+      "path": "Roundup/2026-08-06 - Daily Roundup#Status Summary",
+      "quote": "Builders Lounge 4차 모임 — 완료 — 김성수(메인)·이도규(퀀트)·김민수(AI Agent) 발표, 박창수/강민석 Bila AI·Gobi Space 소개"
+    },
+    {
+      "path": "Roundup/2026-08-06 - Daily Roundup#Status Summary",
+      "quote": "Startup425 AI Demo Day (10편) — 완료 — 고유명사 오인식 8건 교정 포함, 업로드 정보 전체 완료"
     },
     {
       "path": "Roundup/2026-08-07 - Daily Roundup#Status Summary",
@@ -61,7 +80,27 @@
     },
     {
       "path": "Roundup/2026-08-07 - Daily Roundup#Status Summary",
+      "quote": "YouTube playlist — 갱신 완료 — ACM 2편 + InformsCon 3편 반영으로 123→128, Biuty AI 후속은 남은 일 없음으로 확인"
+    },
+    {
+      "path": "Roundup/2026-08-07 - Daily Roundup#Status Summary",
       "quote": "Live22 학습 계획 — 신규 확정 — 2026-08-09 방송에서 Seattle Tech Week 영상을 VibeLearn AI 방식으로 공부하고 현재 일과 연결"
+    },
+    {
+      "path": "Roundup/2026-08-07 - Daily Roundup#Status Summary",
+      "quote": "FedWay 독립유공자 영상 — Live22 핵심 후보 — 방송에서는 독립유공자 영상 마무리를 다룸"
+    },
+    {
+      "path": "Roundup/2026-08-07 - Daily Roundup#Status Summary",
+      "quote": "FedWay 온라인 미팅 편집 — 다음 최우선 주중 작업 — 이구님과의 온라인 미팅 녹화 편집 후 YouTube 업로드"
+    },
+    {
+      "path": "Roundup/2026-08-07 - Daily Roundup#Status Summary",
+      "quote": "Builders Lounge 4차 영상 — 주중 후속 — FedWay 작업 다음 순서로 편집·업로드"
+    },
+    {
+      "path": "Roundup/2026-08-07 - Daily Roundup#Status Summary",
+      "quote": "김진영님 AI4PKM advice 영상 — 주중 후속 — Builders Lounge 4차 영상 이후 편집·업로드"
     },
     {
       "path": "Roundup/2026-08-02 - Weekly Progress and Planning#Priority Summary",
@@ -77,7 +116,11 @@
     },
     {
       "path": "Roundup/2026-08-02 - Weekly Progress and Planning#Priority Summary",
-      "quote": "4 — Live-CoMC-App M3 (데이터 계약·안전 정책 스펙) — [x] — 8/9 완료 DoD 6/6. 이어서 M4(Wake Word/VAD) 실습 1·2까지 진행, 실습 3·4는 다음 세션"
+      "quote": "5 — Builders Lounge 4차 모임 발표 리허설 및 발표 (8/6) — [x] — 8/6 개최 완료 — 김성수(메인)·이도규·김민수 발표, 박창수/강민석 Bila AI·Gobi Space 소개"
+    },
+    {
+      "path": "Roundup/2026-08-02 - Weekly Progress and Planning#Priority Summary",
+      "quote": "7 — Bila AI Agent Slack 블로커 문의 + GitHub 제안서 형태 결정 — [ ] — GOBI 개발자 확인 필요, 소비자 의견 vs 공동 개발 미결정"
     },
     {
       "path": "Roundup/2026-08-02 - Weekly Progress and Planning#Priority Summary",
@@ -86,16 +129,20 @@
     {
       "path": "Roundup/2026-08-02 - Weekly Progress and Planning#Priority Summary",
       "quote": "11 — Seattle Tech Week 2026 기사 작성 Topic — [x] — 8/9 Codex로 로드맵 완성(VibeLearn AI 정합 위해 수정). 1차 기사 작성 대기"
+    },
+    {
+      "path": "Roundup/2026-08-02 - Weekly Progress and Planning#Priority Summary",
+      "quote": "12 — 채널 구독자 4,300 정체 성장 검토 — [ ] — 4,305→4,295(-10). 조회수·유입·구독 전환 데이터 확인 후 액션 수립"
     }
   ],
   "status_map": {
     "rundown": "final",
-    "2026-08-03 - Daily Roundup": "ok:1/8",
-    "2026-08-04 - Daily Roundup": "ok:2/7",
-    "2026-08-05 - Daily Roundup": "ok:1/8",
-    "2026-08-06 - Daily Roundup": "ok:0/7",
-    "2026-08-07 - Daily Roundup": "ok:2/9",
-    "2026-08-02 - Weekly Progress and Planning": "ok:6/12",
+    "2026-08-03 - Daily Roundup": "ok:2/8",
+    "2026-08-04 - Daily Roundup": "ok:5/7",
+    "2026-08-05 - Daily Roundup": "ok:3/8",
+    "2026-08-06 - Daily Roundup": "ok:2/7",
+    "2026-08-07 - Daily Roundup": "ok:7/9",
+    "2026-08-02 - Weekly Progress and Planning": "ok:8/12",
     "2026-08-02 - Weekly Dashboard.canvas": "skipped:canvas",
     "2026-07-26~2026-08-02 - Claude Code": "missing_section"
   },
@@ -104,5 +151,17 @@
   ],
   "withheld_conditional": [],
   "forbidden_removed": true,
-  "assembled_at": "2026-08-30T13:07:18.718051+00:00"
+  "other_parts": [
+    {
+      "id": "2",
+      "title": "오늘의 실험",
+      "coverage_state": "defined"
+    },
+    {
+      "id": "주간 영상",
+      "title": "주간 영상",
+      "coverage_state": "defined"
+    }
+  ],
+  "assembled_at": "2026-09-17T15:05:57.196048+00:00"
 }

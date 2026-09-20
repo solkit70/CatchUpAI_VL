@@ -1,0 +1,126 @@
+{
+  "source_path": "AI/Roundup/2026-06-08 - Live14 Weekly Rundown.md",
+  "is_final": false,
+  "parts": [
+    {
+      "id": "1",
+      "sort_key": 1.0,
+      "is_numbered": true,
+      "title": "지난 주 활동과 이번 주 결산",
+      "time_raw": "시간 미표기",
+      "time_minutes": null,
+      "is_remainder": false,
+      "coverage_state": "undefined",
+      "coverage_items": [],
+      "directive_note": null
+    },
+    {
+      "id": "2",
+      "sort_key": 2.0,
+      "is_numbered": true,
+      "title": "내 주변 AI·테크 뉴스",
+      "time_raw": "시간 미표기",
+      "time_minutes": null,
+      "is_remainder": false,
+      "coverage_state": "undefined",
+      "coverage_items": [],
+      "directive_note": null
+    },
+    {
+      "id": "3",
+      "sort_key": 3.0,
+      "is_numbered": true,
+      "title": "공개 결과 — Remotion WA Recording Law 영상 공개",
+      "time_raw": "시간 미표기",
+      "time_minutes": null,
+      "is_remainder": false,
+      "coverage_state": "defined",
+      "coverage_items": [
+        "WA Recording Law 한국어·영어 영상 공개 및 제작 흐름 회고"
+      ],
+      "directive_note": null
+    },
+    {
+      "id": "4",
+      "sort_key": 4.0,
+      "is_numbered": true,
+      "title": "공개 결과 + 제작 흐름 — Live #13 요약 영상",
+      "time_raw": "시간 미표기",
+      "time_minutes": null,
+      "is_remainder": false,
+      "coverage_state": "defined",
+      "coverage_items": [
+        "Live #13 요약 영상 완성 결과 공개",
+        "Remotion 제작 흐름 회고"
+      ],
+      "directive_note": null
+    },
+    {
+      "id": "4.5",
+      "sort_key": 4.5,
+      "is_numbered": true,
+      "title": "방송 인사이트 — 기록은 어떻게 시작하나",
+      "time_raw": "시간 미표기",
+      "time_minutes": null,
+      "is_remainder": false,
+      "coverage_state": "defined",
+      "coverage_items": [
+        "기록 시작의 장벽",
+        "공개 시스템 빌려 쓰기 전략",
+        "이번 주 GDR 프롬프트 수정 사례"
+      ],
+      "directive_note": null
+    },
+    {
+      "id": "4.8",
+      "sort_key": 4.8,
+      "is_numbered": true,
+      "title": "실전 디버깅 — YouTube Transcript 자동화와 IP 차단 사건",
+      "time_raw": "시간 미표기",
+      "time_minutes": null,
+      "is_remainder": false,
+      "coverage_state": "defined",
+      "coverage_items": [
+        "IP 차단 사건 경위",
+        "YouTube 두 엔드포인트 분리 발견",
+        "코드 개선 내용 및 다음 단계"
+      ],
+      "directive_note": null
+    },
+    {
+      "id": "4.9",
+      "sort_key": 4.9,
+      "is_numbered": true,
+      "title": "Big Data AI Seattle (5/13) — YouTube 업로드 & Description 완성",
+      "time_raw": "시간 미표기",
+      "time_minutes": null,
+      "is_remainder": false,
+      "coverage_state": "defined",
+      "coverage_items": [
+        "업로드 완료 영상 4개 소개",
+        "Members Only 선공개 배포 모델 공유"
+      ],
+      "directive_note": null
+    },
+    {
+      "id": "5",
+      "sort_key": 5.0,
+      "is_numbered": true,
+      "title": "Live 실험 3종 — 피터 틸 글감 / 발표 준비 / 멤버십 홍보 영상",
+      "time_raw": "시간 미표기",
+      "time_minutes": null,
+      "is_remainder": false,
+      "coverage_state": "defined",
+      "coverage_items": [
+        "AI로 글감 마련하기 — 피터 틸 비전",
+        "AI로 발표 준비하기 — The AI Powered Creator",
+        "AI로 홍보영상 만들기 — 멤버십 홍보"
+      ],
+      "directive_note": null
+    }
+  ],
+  "excluded_sections": [],
+  "conditional_sections": [],
+  "parse_anomalies": [],
+  "parsed_at": "2026-09-17T15:05:56.995747+00:00"
+}

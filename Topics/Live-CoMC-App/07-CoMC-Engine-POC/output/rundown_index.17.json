@@ -1,0 +1,167 @@
+{
+  "source_path": "AI/Roundup/2026-06-29 - Live17 Weekly Rundown.md",
+  "is_final": false,
+  "parts": [
+    {
+      "id": "1",
+      "sort_key": 1.0,
+      "is_numbered": true,
+      "title": "지난 주 활동",
+      "time_raw": "시간 미표기",
+      "time_minutes": null,
+      "is_remainder": false,
+      "coverage_state": "defined",
+      "coverage_items": [
+        "6/29 운영 문서와 Daily Roundup 작성",
+        "Live #16 요약 영상 제작 착수와 6/30 Remotion 구현 진행",
+        "계획 지연과 일정 재조정",
+        "Builders Lounge Product Discovery Platform 구상과 보강",
+        "Build with AI source note 정리",
+        "가족 외식·쇼핑·Tacoma Ruston 불꽃놀이 같은 삶의 일정 우선순위"
+      ],
+      "directive_note": null
+    },
+    {
+      "id": "2",
+      "sort_key": 2.0,
+      "is_numbered": true,
+      "title": "오늘의 인사이트 — Builder 시대, Product Discovery, 일과 삶의 균형",
+      "time_raw": "시간 미표기",
+      "time_minutes": null,
+      "is_remainder": false,
+      "coverage_state": "defined",
+      "coverage_items": [
+        "6/29 오늘의 인사이트",
+        "AI 시대 Builder들의 증가",
+        "Builder들이 서로 발견되고 도움을 주는 공간",
+        "Builders Lounge Product Discovery Platform",
+        "계속 보강할 관찰 루프",
+        "Nate Cho 사례 — BL 필요성 재확인",
+        "YouTube 채널 영어 콘텐츠 구독자 이탈 고민"
+      ],
+      "directive_note": null
+    },
+    {
+      "id": "3",
+      "sort_key": 3.0,
+      "is_numbered": true,
+      "title": "내 주변 AI News",
+      "time_raw": "시간 미표기",
+      "time_minutes": null,
+      "is_remainder": false,
+      "coverage_state": "defined",
+      "coverage_items": [
+        "Builders Lounge 멤버 소식 — Nate Cho + 김성수",
+        "CMDS 소식 — Mark(박준) + MacPilot/CMDS-bio(구요한)",
+        "Build with AI — 송재희 (→ 4부 실험",
+        "연결)",
+        "7/6 한인 상공회의소 IT/AI Startup 커피챗",
+        "Beyond LLM Wiki 발표(김진영, CMDS)"
+      ],
+      "directive_note": null
+    },
+    {
+      "id": "4",
+      "sort_key": 4.0,
+      "is_numbered": true,
+      "title": "오늘의 실험",
+      "time_raw": "시간 미표기",
+      "time_minutes": null,
+      "is_remainder": false,
+      "coverage_state": "defined",
+      "coverage_items": [
+        "Skill로 반복 업무 자동화",
+        "Bila AI Agent M2",
+        "Build with AI 리서치",
+        "AI와 글쓰기 — 피터틸 vs CP 관점 대결",
+        "Obsidian Omnisearch CMDS",
+        "상공회의소 커피챗 발표 자료",
+        "Vibe Coding — Slack 자동 수집"
+      ],
+      "directive_note": null,
+      "subsection_coverage": [
+        {
+          "heading": "실험 ①: 스킬로 반복되는 내 업무 자동화 하기",
+          "coverage_state": "defined",
+          "coverage_items": [
+            "실험은 쌓이는데 처리량은 한정 — Bottle Neck 진단",
+            "첫 번째 병목: 매주 방송 요약 영상 제작 2~3일 → 스킬로 자동화 설계",
+            "두 번째 병목: 매일 반복되는 일정 정리·Daily Roundup·Rundown 업데이트 → 일일 루틴 스킬 설계",
+            "자동화 이후 확보되는 시간으로 무엇을 할 것인가"
+          ],
+          "directive_note": null
+        },
+        {
+          "heading": "실험 ②: AI와 글쓰기 — 피터틸 vs 내 관점 대결",
+          "coverage_state": "defined",
+          "coverage_items": [
+            "피터 틸 기술 엘리트 독점 정당화 vs CP 반박 논거",
+            "AI와 함께 에세이 초안 쓰는 과정 실황",
+            "플라톤 철인정치 유사성",
+            "봉건제→자본주의 역사 유추",
+            "다음 리서치 방향"
+          ],
+          "directive_note": null
+        },
+        {
+          "heading": "실험 ③: Bila AI Agent M2 진행 — 데이터 소스 연결",
+          "coverage_state": "defined",
+          "coverage_items": [
+            "M1 결과 복습",
+            "M2 데이터 소스 연결 계획",
+            "GitHub + Google Drive 연결 전후 Q&A 품질 비교",
+            "커뮤니티 Agent의 다음 과제"
+          ],
+          "directive_note": null
+        },
+        {
+          "heading": "실험 ④: Build with AI 리서치 → 영상 콘텐츠 각도 잡기",
+          "coverage_state": "defined",
+          "coverage_items": [
+            "3부 소개 복습 — 왜 이 자료가 중요한가",
+            "가이드 12부작 구조 훑기",
+            "Catch Up AI 영상으로 만들 첫 angle 확정",
+            "시청자 대상 설정"
+          ],
+          "directive_note": null
+        },
+        {
+          "heading": "실험 ⑤: Obsidian Omnisearch Google CMDS 설치 후 사용해 보기",
+          "coverage_state": "defined",
+          "coverage_items": [
+            "Live #16 말미 시작 상황 복습",
+            "UI 활성화 + HTTP server 설정",
+            "Tampermonkey userscript 설치",
+            "실제 Google 검색 화면에서 동작 확인"
+          ],
+          "directive_note": null
+        },
+        {
+          "heading": "실험 ⑥: 상공회의소 커피챗 발표 자료 슬라이드로 만들기",
+          "coverage_state": "defined",
+          "coverage_items": [
+            "Product Discovery Platform 구상 정리",
+            "상공회의소 회장님께 전달할 핵심 메시지",
+            "현재 멤버와 Product 소개",
+            "협력 가능성 제안"
+          ],
+          "directive_note": null
+        },
+        {
+          "heading": "실험 ⑦: Vibe Coding — Slack 대화 자동 수집",
+          "coverage_state": "defined",
+          "coverage_items": [
+            "왜 Slack 대화 수집이 필요한가",
+            "자동화 방식 탐색",
+            "Builders Lounge Slack 적용 가능성"
+          ],
+          "directive_note": null
+        }
+      ]
+    }
+  ],
+  "excluded_sections": [],
+  "conditional_sections": [],
+  "parse_anomalies": [],
+  "parsed_at": "2026-09-17T15:05:57.044070+00:00"
+}

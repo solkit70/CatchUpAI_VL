@@ -199,8 +199,8 @@ class Handler(BaseHTTPRequestHandler):
                     except queue.Empty:
                         self.wfile.write(b": keepalive\n\n")   # 프록시 타임아웃 방지
                         self.wfile.flush()
-            except (BrokenPipeError, ConnectionResetError):
-                pass
+            except (BrokenPipeError, ConnectionResetError, ConnectionAbortedError, OSError):
+                pass                        # 클라이언트(OBS Refresh·탭 닫힘)가 끊은 것 — 정상. 조용히 정리한다
             finally:
                 with _clients_lock:
                     _clients.discard(q)

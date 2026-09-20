@@ -1,34 +1,73 @@
 {
   "sentences": [
-    "오늘은 AI로 Seattle AI Week 참가 준비하기에 대해 말씀드립니다.",
-    "또 함께 다룰 주제는 AI로 라이브 방송 보조 MC 앱 만들기 마무리와 Claude Artifacts & Routines 배우기입니다.",
-    "세부 준비 항목은 오늘의 실험 슬라이드 전체 목록 중에서 선정된 범위로 진행합니다.",
-    "추가 항목은 주중 진행에 따라 후보가 승격될 수 있습니다."
+    "시청자 여러분, Catch Up AI에서는 이번 주에 9월 16일 벨뷰 시청에서 Builders Lounge 5차 모임을 열고 10분 발표를 잘 마쳤습니다.",
+    "발표 뒤에는 1:1 바이브 코딩 온보딩을 더 많은 분께 꾸준히 제공할 수 있도록 가격과 소개 영상 구상까지 한 번에 정리했어요.",
+    "그리고 CoMC 앱을 하루 다섯 번 리허설해서, 화면 자막부터 음성, 짧은 진행 멘트, 여러 언어 인사까지 실제 방송에 투입할 수준으로 끌어올렸습니다.",
+    "오늘 방송에서는 이 CoMC를 통과한 모드만 골라서 실제로 써 볼 예정이라, 지난주엔 조용히 화면에만 나오던 보조 진행이 더 자연스럽게 들릴 거예요.",
+    "또 9월 13일 방송에서 시작한 ‘Claude 아티팩트 루틴’ 토픽처럼, 직접 해 보면서 문서로는 안 보이던 규칙을 찾아내는 실험도 이어갑니다.",
+    "그리고 Live 28에서는 원격으로 집 컴퓨터를 만지는 방법, 크롬 리모트 데스크톱도 함께 살펴볼 계획이에요.",
+    "참, 시애틀은 지금 구름이 조금 끼고 13도라 아침 공기가 상쾌합니다.",
+    "곧 창수님 돌아오셔서 이어서 진행할게요."
   ],
   "claim_map": [
     {
       "sentence_idx": 0,
-      "evidence_path": "AI/Roundup/2026-09-06 - Live27 Weekly Rundown.md#오늘의 실험",
-      "evidence_quote": "「오늘의 실험」 슬라이드 전체 목록 (15건 · 커버리지는 위 3건만)"
+      "evidence_path": "AI/Roundup/2026-09-16 - Daily Roundup.md#Summary",
+      "evidence_quote": "2026-09-16: 수요일이었던 오늘은 지난 몇 주간 심혈을 기울여 준비해 온 Builders Lounge 5차 모임에서 10분 발표(「AI와 함께 몰락해 가는 유튜브 채널을 살린 과정」)를 성공적으로 완수하고,"
     },
     {
       "sentence_idx": 1,
-      "evidence_path": "AI/Roundup/2026-09-06 - Live27 Weekly Rundown.md#오늘의 실험",
-      "evidence_quote": "「오늘의 실험」 슬라이드 전체 목록 (15건 · 커버리지는 위 3건만)"
+      "evidence_path": "AI/Roundup/2026-09-16 - Daily Roundup.md#Today's Work",
+      "evidence_quote": "2026-09-16 한 일: 바이브 코딩 온보딩 비즈니스 모델 확정안 수립 — 기록 취합 및 가격 구조 확정"
+    },
+    {
+      "sentence_idx": 1,
+      "evidence_path": "AI/Roundup/2026-09-16 - Daily Roundup.md#Today's Work",
+      "evidence_quote": "2026-09-16 한 일: 바이브 코딩 온보딩 소개 영상 10막 구상 및 자료 집대성 — 영상 내러티브 정립"
     },
     {
       "sentence_idx": 2,
-      "evidence_path": "AI/Roundup/2026-09-06 - Live27 Weekly Rundown.md#오늘의 실험",
-      "evidence_quote": "「오늘의 실험」 슬라이드 전체 목록 (15건 · 커버리지는 위 3건만)"
+      "evidence_path": "AI/Roundup/2026-09-17 - Daily Roundup.md#Summary",
+      "evidence_quote": "2026-09-17: CoMC는 하루 다섯 세션을 거쳐 화면 글자 출력에서 음성·브라우저 콘솔·50초 캐주얼 진행·시청자 언급·영어 응답·15개 언어 끝인사까지 갖췄다."
+    },
+    {
+      "sentence_idx": 2,
+      "evidence_path": "AI/Roundup/2026-09-17 - Daily Roundup.md#Summary",
+      "evidence_quote": "4회차 리허설은 사고 10건 중 0건으로 A GO, 음성 B는 조건부 GO 판정을 받았고, Live 28에서는 통과한 모드만 사용한다."
     },
     {
       "sentence_idx": 3,
-      "evidence_path": "AI/Roundup/2026-09-06 - Live27 Weekly Rundown.md#오늘의 실험",
-      "evidence_quote": "후보 (주중 진행에 따라 승격)"
+      "evidence_path": "AI/Roundup/2026-09-17 - Daily Roundup.md#Summary",
+      "evidence_quote": "Live 28에서는 통과한 모드만 사용한다."
+    },
+    {
+      "sentence_idx": 4,
+      "evidence_path": "AI/Roundup/2026-09-13 - Daily Roundup.md#Interpretation",
+      "evidence_quote": "2026-09-13 인사이트: 문서에 없던 규칙이 대화상자 한 문장에 있었다 — 실측이 문서를 이겼다 — 배경: Claude-Artifacts-Routines 의 원문 질문은 「db 연동 페이지는 왜 링크 공유가 안 되는가」였다."
+    },
+    {
+      "sentence_idx": 4,
+      "evidence_path": "AI/Roundup/2026-09-13 - Daily Roundup.md#Summary",
+      "evidence_quote": "Claude-Artifacts-Routines Topic 을 열어 M1·M2 를 방송 중에 끝냈으며"
+    },
+    {
+      "sentence_idx": 5,
+      "evidence_path": "AI/Roundup/2026-09-13 - Weekly Progress and Planning.md#Weekly Summary",
+      "evidence_quote": "9/16 창수님 결정: Live 28에서는 외부에서 집 컴퓨터 화면을 조작하는 Chrome Remote Desktop을 알아본다."
+    },
+    {
+      "sentence_idx": 6,
+      "evidence_path": "open-meteo.com#시애틀",
+      "evidence_quote": "시애틀 지금 날씨(09/18 07:30 현지): 구름 조금, 13도, 바람 시속 9km, 오늘 최고 21도 최저 12도"
+    },
+    {
+      "sentence_idx": 7,
+      "evidence_path": "transcript#host",
+      "evidence_quote": "창수님이 방금 잠깐 자리를 비운다고 말했고, 곧 돌아와서 방송을 이어간다"
     }
   ],
   "coverage_state": "defined",
-  "length_sentences": 4,
+  "length_sentences": 8,
   "provider": "openai",
-  "created_at": "2026-09-13T12:40:30.910055+00:00"
+  "created_at": "2026-09-18T14:33:58.569529+00:00"
 }

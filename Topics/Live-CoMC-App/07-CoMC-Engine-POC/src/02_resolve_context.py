@@ -114,10 +114,43 @@ def relevant(row: str, keys: set[str]) -> bool:
     return bool(tokens(row) & keys)
 
 
-def part_body_quotes(md_text: str, part_title: str, limit: int) -> list[str]:
-    """해당 파트 본문에서 인용 가능한 줄을 뽑는다 (H3 제목과 불릿)."""
+# 후보 소절 — 확정이 아닌 것을 모아 둔 자리. 이름이 이 단어로 시작하면 후보 소절로 본다.
+CANDIDATE_HEADINGS = ("후보",)
+
+# 표 셀의 마크다운 장식을 벗긴다 — 인용은 방송에서 읽을 원문이지 서식이 아니다.
+RE_MD_DECOR = re.compile(r"\*\*|__|`|\[\[|\]\]|\\\|")
+RE_WIKI_ALIAS = re.compile(r"\[\[[^\]|]*\|([^\]]+)\]\]")
+
+
+def clean_cell(s: str, limit: int = 220) -> str:
+    s = RE_WIKI_ALIAS.sub(r"\1", s)
+    s = RE_MD_DECOR.sub("", s).strip()
+    return s if len(s) <= limit else s[:limit].rstrip() + "…"
+
+
+def part_body_quotes(md_text: str, part_title: str, limit: int,
+                     coverage_items: list[str] | None = None) -> list[str]:
+    """해당 파트 본문에서 인용 가능한 줄을 뽑는다 (H3 제목과 불릿, 확정 항목의 표 행).
+
+    ⚠️ 사고 8 (Live #27, 2026-09-13) — 「후보」 소절이 근거가 되고 있었다.
+    Rundown 의 2부는 `> 이번 방송 커버리지: ①…②…` (확정) 아래에 `### 후보` 표가 있다.
+    이 함수는 H3 제목을 인용으로 넣으므로 근거 풀에 **"후보"** 라는 단어만 남았고,
+    확정 항목의 이름과 상태는 표 행이라 하나도 안 들어갔다. 모델은 시킨 대로
+    근거만 써서 확정 커버리지를 "후보"라고 말했다 — 3/3 재현.
+
+    고친 것 두 가지, 둘 다 **확정을 더 많이 보여 주는** 방향이다:
+      · 후보 소절(`### 후보…`)의 제목과 불릿은 근거에서 뺀다. 후보는 이번 방송 내용이 아니다
+      · 표 행 중 **커버리지 항목과 같은 것**만 「이름 — 현재 상태」로 넣는다.
+        상태 칸이 있어야 "어디까지 왔나" 같은 상태 질문에 답할 수 있다 (사고 9)
+    """
     lines = md_text.split("\n")
-    quotes, inside = [], False
+    quotes, inside, in_candidate = [], False, False
+    cov_keys = [tokens(c) for c in (coverage_items or [])]
+
+    def matches_coverage(cell: str) -> bool:
+        ct = tokens(cell)
+        return any(k and len(k & ct) / len(k) >= 0.5 for k in cov_keys)
+
     for line in lines:
         if line.startswith("## "):
             if inside:
@@ -128,8 +161,23 @@ def part_body_quotes(md_text: str, part_title: str, limit: int) -> list[str]:
             continue
         s = line.strip()
         if s.startswith("### "):
-            quotes.append(s[4:].strip())
-        elif s.startswith(("- ", "* ")) and len(s) > 6:
+            title = s[4:].strip()
+            in_candidate = title.startswith(CANDIDATE_HEADINGS)
+            if not in_candidate:
+                quotes.append(title)
+            continue
+        m = RE_TABLE_ROW.match(s)
+        if m and cov_keys:
+            cells = [c.strip() for c in m.group(1).split("|")]
+            if len(cells) >= 3 and not all(set(c) <= set("-: ") for c in cells) \
+                    and cells[0] not in ("#", "항목"):
+                name, status = clean_cell(cells[1], 120), clean_cell(cells[2])
+                if name and status and matches_coverage(name):
+                    quotes.append(f"[확정 항목 현재 상태] {name} — {status}")
+            continue
+        if in_candidate:
+            continue
+        if s.startswith(("- ", "* ")) and len(s) > 6:
             quotes.append(s[2:].strip())
         if len(quotes) >= limit:
             break
@@ -163,7 +211,15 @@ def build(live: str, part_id: str, max_evidence: int,
     evidence: list[dict] = []
     rundown_rel = idx["source_path"]
 
-    for q in part_body_quotes(md_text, part["title"], limit=max_evidence):
+    # 확정 커버리지는 근거 풀의 **첫 줄**이다 (사고 8). 커버리지 줄은 이 방송에서
+    # 말해도 되는 것의 정의이고, 그 사실 자체가 인용할 수 있는 근거여야 한다.
+    # 그래야 ④ 가 "이번 방송은 X 를 다룹니다" 를 확정으로 말하고 ⑤ 가 그것을 통과시킨다.
+    for item in part["coverage_items"]:
+        evidence.append({"path": f"{rundown_rel}#{part['title']}#이번 방송 커버리지",
+                         "quote": f"[확정] 이번 방송 커버리지 — {item}"})
+
+    for q in part_body_quotes(md_text, part["title"], limit=max_evidence,
+                              coverage_items=part["coverage_items"]):
         evidence.append({"path": f"{rundown_rel}#{part['title']}", "quote": q})
 
     status_map: dict[str, str] = {}
@@ -239,6 +295,13 @@ def build(live: str, part_id: str, max_evidence: int,
         "excluded_headings": forbidden_headings,
         "withheld_conditional": withheld,
         "forbidden_removed": True,
+        # 사고 10 (Live #27) — 2부 진행 중에 「주간 영상」을 묻자 2부 항목을
+        # "이번 주 영상"으로 답했다. 근거 풀은 현재 파트 것뿐이라 모델은 다른 파트가
+        # 존재한다는 것조차 모른다. **이름만** 넘긴다 — 본문은 넘기지 않는다.
+        # 다른 파트를 묻는 질문은 이 파트 근거로 답할 수 없다는 것을 ④⑤ 가 판정하는 재료다.
+        "other_parts": [{"id": p["id"], "title": p["title"],
+                         "coverage_state": p["coverage_state"]}
+                        for p in idx["parts"] if p["id"] != part["id"]],
         "assembled_at": now_iso(),
     }
     return ctx, part

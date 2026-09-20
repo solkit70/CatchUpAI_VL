@@ -254,3 +254,10 @@ M8 의 *"검증 전에는 한 글자도 내보내지 않는다"* 와 충돌한�
 - [M7 지연 리포트](../07-CoMC-Engine-POC/guides/latency-report.md) — 이 모듈의 출발점
 - [M6 오디오 라우팅](../06-TTS-Audio-Routing-Harness/guides/audio-routing-setup.md) — 킬 스위치 검증
 - [M8 안전 게이트](../08-Safety-Gate-Scenarios/README.md) — 스트리밍과 충돌하는 원칙
+
+## CVL 1 (2026-09-17) — 비어 있던 자리를 채웠다
+
+- [`examples/engine/spoken_player.py`](examples/engine/spoken_player.py) — ⑥ 이 "M9 셸의 몫"이라 위임했던 `spoken.json` 재생기. 폴링 → M6 provider 합성 → 지정 출력 장치 재생 → 소비 · 재생 중 모드가 LIVE 를 벗어나면 abort(실측 22ms). 09-12 사전 점검의 사고 6.
+- `engine_daemon.py` — 발화 전에 `session_state.current_part_id` 를 읽어 컨텍스트 파트와 다르면 ② 를 다시 돈다 (사고 7). 파트마다 손으로 ② 를 재실행하던 운영 우회가 사라졌다.
+- [`examples/engine/comc_console.py`](examples/engine/comc_console.py) — **창 하나** (CVL 3). 오버레이 서버 · 재생기 · 핫키 · 엔진을 프로세스 하나에 스레드로 넣고, 진행자 면은 로컬 웹 페이지 `http://127.0.0.1:8778/` 하나 (질문 · 모드 · 패닉 · 파트 · 프리플라이트 · 결과 · 로그). M9 가 미뤘던 Electron 셸의 자리를 표준 라이브러리 HTTP 서버 + 인라인 HTML 로 채웠다 — 의존성 0. 검증된 모듈은 그대로 import 하고, 새 로직은 콘솔 HTTP 뿐. 이 과정에서 「WASAPI 콜백 스트림은 COM 초기화된 스레드에서만」을 실측으로 배웠다 (사고 17)
+- [`examples/engine/start_comc.ps1`](examples/engine/start_comc.ps1) — 파싱 · 1부 컨텍스트 · REVIEW 를 준비하고 콘솔을 띄우는 한 줄 (CVL 2 의 창 4개 판을 CVL 3 에서 대체)

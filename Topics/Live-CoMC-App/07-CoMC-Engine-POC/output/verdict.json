@@ -1,15 +1,35 @@
 {
-  "pass": true,
+  "pass": false,
   "absence_by_closure": [],
-  "final_text": "오늘은 AI로 Seattle AI Week 참가 준비하기에 대해 말씀드립니다. 또 함께 다룰 주제는 AI로 라이브 방송 보조 MC 앱 만들기 마무리와 Claude Artifacts & Routines 배우기입니다. 세부 준비 항목은 오늘의 실험 슬라이드 전체 목록 중에서 선정된 범위로 진행합니다. 추가 항목은 주중 진행에 따라 후보가 승격될 수 있습니다.",
+  "final_text": "그리고 CoMC 앱을 하루 다섯 번 리허설해서, 화면 자막부터 음성, 짧은 진행 멘트, 여러 언어 인사까지 실제 방송에 투입할 수준으로 끌어올렸습니다. 오늘 방송에서는 이 CoMC를 통과한 모드만 골라서 실제로 써 볼 예정이라, 지난주엔 조용히 화면에만 나오던 보조 진행이 더 자연스럽게 들릴 거예요. 또 9월 13일 방송에서 시작한 ‘Claude 아티팩트 루틴’ 토픽처럼, 직접 해 보면서 문서로는 안 보이던 규칙을 찾아내는 실험도 이어갑니다. 그리고 Live 28에서는 원격으로 집 컴퓨터를 만지는 방법, 크롬 리모트 데스크톱도 함께 살펴볼 계획이에요. 참, 시애틀은 지금 구름이 조금 끼고 13도라 아침 공기가 상쾌합니다. 곧 창수님 돌아오셔서 이어서 진행할게요.",
   "kept_sentences": [
-    0,
-    1,
     2,
-    3
+    3,
+    4,
+    5,
+    6,
+    7
   ],
-  "dropped_sentences": [],
-  "violations": [],
-  "length_after": 4,
-  "verified_at": "2026-09-13T12:40:30.938282+00:00"
+  "dropped_sentences": [
+    {
+      "sentence_idx": 0,
+      "reason": "fact_not_in_evidence"
+    },
+    {
+      "sentence_idx": 1,
+      "reason": "fact_not_in_evidence"
+    }
+  ],
+  "violations": [
+    {
+      "rule_id": "claim.facts_must_be_quoted",
+      "detail": "문장 0: 고유명사 'Catch'"
+    },
+    {
+      "rule_id": "claim.facts_must_be_quoted",
+      "detail": "문장 1: 숫자 '1:1'"
+    }
+  ],
+  "length_after": 6,
+  "verified_at": "2026-09-18T14:33:58.577510+00:00"
 }

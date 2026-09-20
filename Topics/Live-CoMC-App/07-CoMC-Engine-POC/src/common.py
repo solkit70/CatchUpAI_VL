@@ -172,3 +172,31 @@ def rel_to_vault(path: Path) -> str:
         return str(Path(path).resolve().relative_to(VAULT)).replace("\\", "/")
     except ValueError:
         return str(path)
+
+
+# ── 화면 비우기 (사고 11) ───────────────────────────────────────────────
+
+def clear_overlay(stage: str, reason: str) -> Path:
+    """overlay.json 을 빈 발화로 갱신한다 — 거절·침묵 뒤에 옛 초안이 남지 않도록.
+
+    ⚠️ 사고 11 (Live #27, 2026-09-13) — 의도 `unknown` 으로 ④ 가 거절했는데
+    화면에는 **직전 발화**가 그대로 떠 있었다. ⑥ 은 "말할 것이 없으면 파일을 쓰지 않는다"
+    였고, ④ 의 거절은 ⑥ 까지 가지도 않는다. 둘 다 옳은 규칙이었지만 합쳐 놓으니
+    「거절 = 아무 일도 없음 = 옛 화면 유지」가 됐다. 시청자는 그것을 새 답으로 읽는다.
+
+    오버레이 서버는 `text` 가 비면 화면을 숨긴다(`overlay_server.py`). 그러므로
+    빈 텍스트를 쓰는 것이 곧 화면을 지우는 것이다. spoken 쪽은 건드리지 않는다 —
+    소리는 ⑥ 의 모드 규칙이 이미 옛 파일을 지운다.
+    """
+    ov = out("overlay.json")
+    part_id = None
+    try:
+        if ov.exists():
+            part_id = read_json(ov).get("part_id")
+    except Exception:
+        part_id = None
+    data = {"text": "", "part_id": part_id, "updated_at": now_iso(),
+            "cleared_by": stage, "reason": reason}
+    p = write_json(ov, data)
+    trace(stage, ok=True, action="clear_overlay", reason=reason)
+    return p

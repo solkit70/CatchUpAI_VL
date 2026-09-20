@@ -1,0 +1,236 @@
+{
+  "current_part_id": "1",
+  "coverage_state": "defined",
+  "coverage_items": [
+    "7/6 한인 상공회의소 커피챗",
+    "7/8 Kim·Kang 미팅(Builders Lounge 모임 관련 논의) + BigHug Kickoff Meeting",
+    "7/9 Beyond AI Models 포럼 + Live #17 요약 영상 완료(한국어·영어)",
+    "7/10 Seattle 중소벤처기업지원 협의회(KSC)",
+    "7/11 거북이 마라톤대회"
+  ],
+  "evidence_pool": [
+    {
+      "path": "AI/Roundup/2026-07-05 - Live18 Weekly Rundown.md#지난 주 활동#이번 방송 커버리지",
+      "quote": "[확정] 이번 방송 커버리지 — 7/6 한인 상공회의소 커피챗"
+    },
+    {
+      "path": "AI/Roundup/2026-07-05 - Live18 Weekly Rundown.md#지난 주 활동#이번 방송 커버리지",
+      "quote": "[확정] 이번 방송 커버리지 — 7/8 Kim·Kang 미팅(Builders Lounge 모임 관련 논의) + BigHug Kickoff Meeting"
+    },
+    {
+      "path": "AI/Roundup/2026-07-05 - Live18 Weekly Rundown.md#지난 주 활동#이번 방송 커버리지",
+      "quote": "[확정] 이번 방송 커버리지 — 7/9 Beyond AI Models 포럼 + Live #17 요약 영상 완료(한국어·영어)"
+    },
+    {
+      "path": "AI/Roundup/2026-07-05 - Live18 Weekly Rundown.md#지난 주 활동#이번 방송 커버리지",
+      "quote": "[확정] 이번 방송 커버리지 — 7/10 Seattle 중소벤처기업지원 협의회(KSC)"
+    },
+    {
+      "path": "AI/Roundup/2026-07-05 - Live18 Weekly Rundown.md#지난 주 활동#이번 방송 커버리지",
+      "quote": "[확정] 이번 방송 커버리지 — 7/11 거북이 마라톤대회"
+    },
+    {
+      "path": "AI/Roundup/2026-07-05 - Live18 Weekly Rundown.md#지난 주 활동",
+      "quote": "**7/6 (월)** — 한인 상공회의소(KACC) 커피챗. [Codex 요약](https://github.com/solkit70/builders-lounge-personal-notes/blob/main/notices/2026-07-06%20Builders%20Lounge%20KACC%20Coffee%20Chat%20%EA%B2%B0%EA%B3%BC%20%EA%B3%B5%EC%9C%A0%20-%20Codex%20%EC%9A%94%EC%95%BD.md), [Claude Code 요약](https://github.com/solkit70/builders-lounge-personal-notes/blob/main/notices/2026-07-06%20Builders%20Lounge%20KACC%20Coffee%20Chat%20%EA%B2%B0%EA%B3%BC%20%EA%B3%B5%EC%9C%A0%20by%20Claude%20Code.md)"
+    },
+    {
+      "path": "AI/Roundup/2026-07-05 - Live18 Weekly Rundown.md#지난 주 활동",
+      "quote": "**7/8 (수)** — Meeting with Kim and Kang (Builders Lounge 모임 관련 논의), BigHug Kickoff Meeting"
+    },
+    {
+      "path": "AI/Roundup/2026-07-05 - Live18 Weekly Rundown.md#지난 주 활동",
+      "quote": "**7/9 (목)** — Beyond AI Models Forum, Live #17 요약 영상 완료(한국어·영어 버전 모두)"
+    },
+    {
+      "path": "AI/Roundup/2026-07-05 - Live18 Weekly Rundown.md#지난 주 활동",
+      "quote": "**7/10 (금)** — Seattle 중소벤처기업지원 협의회(KSC·총영사관 공동 행사)"
+    },
+    {
+      "path": "AI/Roundup/2026-07-05 - Live18 Weekly Rundown.md#지난 주 활동",
+      "quote": "**7/11 (토)** — 거북이 마라톤 대회"
+    },
+    {
+      "path": "Roundup/2026-07-05 - Daily Roundup#Status Summary",
+      "quote": "Live #17 방송 — ✅ 완료 — Weekly Progress 7/5 완료 항목"
+    },
+    {
+      "path": "Roundup/2026-07-05 - Daily Roundup#Status Summary",
+      "quote": "다음 주 운영 파일 3종 — ✅ 완료 — Weekly Progress, Dashboard, Live #18 Rundown 생성"
+    },
+    {
+      "path": "Roundup/2026-07-05 - Daily Roundup#Status Summary",
+      "quote": "Bila AI Agent M2 — 진행 중 — GitHub 연결 검증 완료, Drive/10문항 테스트 이월"
+    },
+    {
+      "path": "Roundup/2026-07-05 - Daily Roundup#Status Summary",
+      "quote": "Build-with-AI Topic — 재시작 대기 — Roadmap 재작성, M1부터 정식 절차 진행 예정"
+    },
+    {
+      "path": "Roundup/2026-07-05 - Daily Roundup#Status Summary",
+      "quote": "Build-with-AI M1 — 진행 중 — 1부·2부 완독 노트 작성, 3부부터 이어 읽기"
+    },
+    {
+      "path": "Roundup/2026-07-05 - Daily Roundup#Status Summary",
+      "quote": "Builders Lounge GitHub 공유 문서 — ✅ 완료 — 상대 링크 변환 + 관련 문서 섹션 추가 + push"
+    },
+    {
+      "path": "Roundup/2026-07-05 - Daily Roundup#Status Summary",
+      "quote": "Catch Up AI 성장 대책 — 신규 실험 후보 — bilingual 첫 화면 안내문을 Rundown/Weekly에 반영"
+    },
+    {
+      "path": "Roundup/2026-07-05 - Daily Roundup#Status Summary",
+      "quote": "Slack 자동 수집 자동화 — 신규 Topic 생성 — VibeLearn AI Topic, 프롬프트, Roadmap, 모듈 폴더 생성"
+    },
+    {
+      "path": "Roundup/2026-07-06 - Daily Roundup#Status Summary",
+      "quote": "한인 상공회의소 커피챗 — 완료 — 사용자 입력과 주간 계획"
+    },
+    {
+      "path": "Roundup/2026-07-06 - Daily Roundup#Status Summary",
+      "quote": "Product Discovery 공유 — 완료로 판단 — 커피챗 공유용 구상/인포그래픽 준비 및 사용자 입력"
+    },
+    {
+      "path": "Roundup/2026-07-06 - Daily Roundup#Status Summary",
+      "quote": "커피챗 세부 회의록 — 미작성 — 별도 원문 기록 미발견"
+    },
+    {
+      "path": "Roundup/2026-07-06 - Daily Roundup#Status Summary",
+      "quote": "Live #18 Rundown — 소재 보강 필요 — 커피챗 후기의 중요도 상승"
+    },
+    {
+      "path": "Roundup/2026-07-07 - Daily Roundup#Status Summary",
+      "quote": "Live #17 요약 영상 — 진행 중 — audio, image assets, `data.ts`, `Live17Summary0705.tsx` 생성/수정 완료. 최종 렌더는 미확인"
+    },
+    {
+      "path": "Roundup/2026-07-07 - Daily Roundup#Status Summary",
+      "quote": "KACC Coffee Chat 요약 — 완료 — Codex 요약, Claude Code 요약 작성 및 수정"
+    },
+    {
+      "path": "Roundup/2026-07-07 - Daily Roundup#Status Summary",
+      "quote": "Builders Lounge README — 업데이트 완료 — 멤버 이메일, Nate Cho, 김진영 URL, Dokyu Lee 이메일 정정"
+    },
+    {
+      "path": "Roundup/2026-07-07 - Daily Roundup#Status Summary",
+      "quote": "Builders Lounge 2차 영상 편집 — 미착수 — 7/7 파일 변경 근거 없음"
+    },
+    {
+      "path": "Roundup/2026-07-08 - Daily Roundup#Status Summary",
+      "quote": "김진영·강민석 미팅 (14:00–15:30) — ✅ 완료"
+    },
+    {
+      "path": "Roundup/2026-07-08 - Daily Roundup#Status Summary",
+      "quote": "Live #17 요약 영상 나레이션/이미지/오디오 작업 — 🔄 진행 중 — id 1,2,3,6,7,8 완료, 나머지 슬라이드·최종 렌더 남음"
+    },
+    {
+      "path": "Roundup/2026-07-08 - Daily Roundup#Status Summary",
+      "quote": "Live #17 화요일 완료 목표 — ❌ 미달성 — 목요일로 이월 중"
+    },
+    {
+      "path": "Roundup/2026-07-08 - Daily Roundup#Status Summary",
+      "quote": "BIGHUG Kickoff Meeting (19:30) — ✅ 완료"
+    },
+    {
+      "path": "Roundup/2026-07-09 - Daily Roundup#Status Summary",
+      "quote": "Lee & Park Meeting (10:00–11:30) — ✅ 완료"
+    },
+    {
+      "path": "Roundup/2026-07-09 - Daily Roundup#Status Summary",
+      "quote": "Beyond AI Models 포럼 (16:30–20:00) — ✅ 완료"
+    },
+    {
+      "path": "Roundup/2026-07-09 - Daily Roundup#Status Summary",
+      "quote": "Live #17 요약 영상 — 한국어 최종 완료 + YouTube 업로드 — ✅ 완료"
+    },
+    {
+      "path": "Roundup/2026-07-09 - Daily Roundup#Status Summary",
+      "quote": "Live #17 요약 영상 — 영어 버전 신규 제작 + 렌더 완료 — ✅ 완료"
+    },
+    {
+      "path": "Roundup/2026-07-09 - Daily Roundup#Status Summary",
+      "quote": "Live #17 요약 영상 — 영어 버전 YouTube 업로드 — ✅ 완료 — https://youtu.be/_S82H5EVTnc"
+    },
+    {
+      "path": "Roundup/2026-07-09 - Daily Roundup#Status Summary",
+      "quote": "YouTube 업로드 자료 (제목/Description/태그/썸네일) — 한국어/영어 — ✅ 완료"
+    },
+    {
+      "path": "Roundup/2026-07-10 - Daily Roundup#Status Summary",
+      "quote": "KSC·총영사관 공동 행사 참석 — ✅ 완료"
+    },
+    {
+      "path": "Roundup/2026-07-10 - Daily Roundup#Status Summary",
+      "quote": "Live #17 요약 영상 — 영어 버전 최종 렌더·업로드 — ✅ 완료"
+    },
+    {
+      "path": "Roundup/2026-07-10 - Daily Roundup#Status Summary",
+      "quote": "Live #17 YouTube 제목/Description/태그/썸네일 — KR+EN 최종 확정 — ✅ 완료"
+    },
+    {
+      "path": "Roundup/2026-07-10 - Daily Roundup#Status Summary",
+      "quote": "Live #17 SNS 홍보 콘텐츠 7개 플랫폼 — ✅ 완료"
+    },
+    {
+      "path": "Roundup/2026-07-10 - Daily Roundup#Status Summary",
+      "quote": "Builders Lounge README 공개용 재작성 — ✅ 완료"
+    },
+    {
+      "path": "Roundup/2026-07-10 - Daily Roundup#Status Summary",
+      "quote": "Builders Lounge 첫 뉴스레터 작성·발송 — ✅ 완료 (멤버 16 To + 외부 10 CC)"
+    },
+    {
+      "path": "Roundup/2026-07-10 - Daily Roundup#Status Summary",
+      "quote": "Builders Lounge 2차 모임 영상 편집 — ⏳ 계속 이월"
+    },
+    {
+      "path": "Roundup/2026-07-11 - Daily Roundup#Status Summary",
+      "quote": "Builders Lounge 뉴스레터 개별 안내 (8명) — ✅ 완료"
+    },
+    {
+      "path": "Roundup/2026-07-11 - Daily Roundup#Status Summary",
+      "quote": "Builders Lounge 뉴스레터 — 창발 Slack + GobiSpace 공지 — ✅ 완료"
+    },
+    {
+      "path": "Roundup/2026-07-11 - Daily Roundup#Status Summary",
+      "quote": "Live #18 Weekly Rundown 업데이트 (7/10~7/11분) — ✅ 완료"
+    },
+    {
+      "path": "Roundup/2026-07-11 - Daily Roundup#Status Summary",
+      "quote": "Live #18 방송 준비 — 🔄 진행 중 — 오후 마무리 예정"
+    }
+  ],
+  "status_map": {
+    "rundown": "unconfirmed",
+    "2026-07-05 - Daily Roundup": "ok:9/14",
+    "2026-07-06 - Daily Roundup": "ok:4/7",
+    "2026-07-07 - Daily Roundup": "ok:4/9",
+    "2026-07-08 - Daily Roundup": "ok:4/5",
+    "2026-07-09 - Daily Roundup": "ok:6/7",
+    "2026-07-10 - Daily Roundup": "ok:7/8",
+    "2026-07-11 - Daily Roundup": "ok:4/7",
+    "2026-07-05 - Weekly Progress and Planning": "missing_section",
+    "2026-07-05 - Weekly Dashboard.canvas": "skipped:canvas",
+    "2026-07-05 - Live18 Weekly Rundown.canvas": "skipped:canvas",
+    "2026-06-29 - Live17 Weekly Rundown": "missing_section"
+  },
+  "excluded_headings": [],
+  "withheld_conditional": [],
+  "forbidden_removed": true,
+  "other_parts": [
+    {
+      "id": "2",
+      "title": "오늘의 인사이트",
+      "coverage_state": "defined"
+    },
+    {
+      "id": "3",
+      "title": "내 주변 AI News",
+      "coverage_state": "defined"
+    },
+    {
+      "id": "4",
+      "title": "오늘의 실험",
+      "coverage_state": "defined"
+    }
+  ],
+  "assembled_at": "2026-09-17T15:05:57.102648+00:00"
+}

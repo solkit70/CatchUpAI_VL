@@ -1,19 +1,17 @@
 {
-  "current_part_id": "2",
+  "current_part_id": "1",
   "coverage_state": "defined",
   "coverage_items": [
-    "AI로 라이브 방송 보조 MC 앱 만들기 마무리",
-    "Claude Artifacts & Routines 배우기",
-    "AI로 Seattle AI Week 참가 준비하기"
+    "Caregiver 캡스톤 영상 「요양보호사, 마음만 먹으면 당장 취업됩니다」(한/영)"
   ],
   "evidence_pool": [
     {
-      "path": "AI/Roundup/2026-09-06 - Live27 Weekly Rundown.md#오늘의 실험",
-      "quote": "「오늘의 실험」 슬라이드 전체 목록 (15건 · 커버리지는 위 3건만)"
+      "path": "AI/Roundup/2026-09-06 - Live27 Weekly Rundown.md#지난 주 생성한 컨텐츠#이번 방송 커버리지",
+      "quote": "[확정] 이번 방송 커버리지 — Caregiver 캡스톤 영상 「요양보호사, 마음만 먹으면 당장 취업됩니다」(한/영)"
     },
     {
-      "path": "AI/Roundup/2026-09-06 - Live27 Weekly Rundown.md#오늘의 실험",
-      "quote": "후보 (주중 진행에 따라 승격)"
+      "path": "AI/Roundup/2026-09-06 - Live27 Weekly Rundown.md#지난 주 생성한 컨텐츠",
+      "quote": "[확정 항목 현재 상태] 🎬 Caregiver 캡스톤 영상 「요양보호사, 나도 할 수 있을까」 — ✅ 커버리지 ① 로 승격 완료 — 더 이상 후보가 아님. 9/8 완료 (9/9 유튜브 업로드 및 SNS 타겟 홍보 완료). 한·영 두 버전 Remotion 렌더링 성공 및 유튜브 공식 런칭 완료."
     }
   ],
   "status_map": {
@@ -27,5 +25,17 @@
   "excluded_headings": [],
   "withheld_conditional": [],
   "forbidden_removed": true,
-  "assembled_at": "2026-09-13T12:40:23.655358+00:00"
+  "other_parts": [
+    {
+      "id": "2",
+      "title": "오늘의 실험",
+      "coverage_state": "defined"
+    },
+    {
+      "id": "주간 영상",
+      "title": "주간 영상",
+      "coverage_state": "undefined"
+    }
+  ],
+  "assembled_at": "2026-09-17T15:05:57.247876+00:00"
 }

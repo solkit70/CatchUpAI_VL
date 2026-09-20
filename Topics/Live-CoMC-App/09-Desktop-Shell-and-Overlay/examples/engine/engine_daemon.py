@@ -66,6 +66,11 @@ if str(M7_SRC) not in sys.path:
 if str(M5_EXAMPLES) not in sys.path:
     sys.path.insert(0, str(M5_EXAMPLES))
 
+from common import out, read_json  # noqa: E402
+
+# CVL 4 — 캐주얼 레인 의도. ③ 과 같은 집합이어야 한다 (③ 의 CASUAL_INTENTS 를 기동 시 읽어 맞춘다).
+CASUAL_INTENTS = frozenset({"small_talk", "weekly_recap", "insight", "filler", "broadcast_status", "greet_viewer"})
+
 # 파일명이 숫자로 시작해 일반 import 가 안 된다. importlib 로 직접 로드한다.
 STAGES = {
     "①": "01_parse_rundown.py",
@@ -124,6 +129,8 @@ class Engine:
         self.quiet = quiet
         t0 = time.time()
         self.mods = {k: load_stage(v) for k, v in STAGES.items()}
+        global CASUAL_INTENTS
+        CASUAL_INTENTS = frozenset(getattr(self.mods["③"], "CASUAL_INTENTS", CASUAL_INTENTS))
         self.provider_stats = install_provider_cache()
         # openai SDK 를 미리 import 해 둔다 — 첫 발화가 이 비용을 물지 않도록
         try:
@@ -143,9 +150,12 @@ class Engine:
         try:
             if self.quiet:
                 with redirect_stdout(buf_o), redirect_stderr(buf_e):
-                    mod.main()
+                    rc = mod.main()
             else:
-                mod.main()
+                rc = mod.main()
+            # ④ 는 거절을 sys.exit 가 아니라 `return 2` 로 알린다 (CVL 2 에서 발견 —
+            # 거절이 ok 로 읽혀 ⑤ 까지 흘러가 「⑤ 실패」로 기록됐다). 반환값도 본다.
+            ok = rc in (0, None)
         except SystemExit as e:               # main() 이 sys.exit 를 부를 수 있다
             ok = (e.code in (0, None))
         except Exception as e:
@@ -176,6 +186,7 @@ class Engine:
             per[label] = ms
             if not ok:
                 return {"ok": False, "failed_at": label, "per_stage": per}
+        self.context_part = part          # utter() 가 파트 전환을 감지하는 기준값 (사고 7)
         return {"ok": True, "per_stage": per}
 
     def _authoritative_part(self, live: str) -> str:
@@ -202,10 +213,45 @@ class Engine:
         return "1"
 
     def utter(self, live: str, text: str) -> dict:
-        """발화 하나를 처리한다 — ③④⑤⑥."""
+        """발화 하나를 처리한다 — ③④⑤⑥ (파트가 바뀌었으면 ② 먼저).
+
+        ⚠️ 사고 7 (3회차 사전 점검 09-12 · Live #27 실전 09-13) — `--serve` 는 ①② 를
+        기동 시 한 번만 돌리고, 핫키는 `session_state.current_part_id` 만 바꾼다.
+        ④ 는 `broadcast_context.{live}.json` 을 매번 파일에서 읽으므로 **옛 파트 근거로
+        답했다.** Live #27 은 파트마다 다른 창에서 ② 를 손으로 재실행해 우회했다.
+        이제 발화 전에 권위값을 읽어, 컨텍스트가 만들어진 파트와 다르면 ② 를 다시 돈다.
+        추정하지 않는다 — 읽는 것은 session_state 뿐이다.
+        """
         per, total = {}, 0
-        for label, argv in (("③", ["--live", live, "--text", text]),
-                            ("④", ["--live", live]),
+        part = self._authoritative_part(live)
+        ctx_fail = None
+        if part != getattr(self, "context_part", None):
+            ok, ms = self.call("②", ["--live", live, "--part", part])
+            per["②"] = ms
+            total += ms
+            if not ok:
+                # CVL 4: 커버리지 미정 파트(1부)라 ② 가 거절해도 **캐주얼 의도는 살아야 한다** —
+                # 날씨·이번 주 얘기는 파트에 속하지 않는다. ③ 을 먼저 돌려 의도를 본 뒤 결정한다.
+                ctx_fail = {"ok": False, "failed_at": "②", "per_stage": per,
+                            "total_ms": total, "error": getattr(self, "last_error", None),
+                            "part_switch": {"from": getattr(self, "context_part", None),
+                                            "to": part}}
+            else:
+                per["part_switch"] = {"from": getattr(self, "context_part", None), "to": part}
+                self.context_part = part
+        ok, ms = self.call("③", ["--live", live, "--text", text])
+        per["③"] = ms
+        total += ms
+        if not ok:
+            return {"ok": False, "failed_at": "③", "per_stage": per,
+                    "total_ms": total, "error": getattr(self, "last_error", None)}
+        ip = out("intent.json")
+        intent_name = read_json(ip).get("intent") if ip.exists() else None
+        casual = intent_name in CASUAL_INTENTS
+        if ctx_fail and not casual:
+            ctx_fail["per_stage"], ctx_fail["total_ms"] = per, total
+            return ctx_fail
+        for label, argv in (("④", ["--live", live]),
                             ("⑤", ["--live", live]),
                             ("⑥", ["--live", live])):
             ok, ms = self.call(label, argv)
@@ -214,7 +260,8 @@ class Engine:
             if not ok:
                 return {"ok": False, "failed_at": label, "per_stage": per,
                         "total_ms": total, "error": getattr(self, "last_error", None)}
-        return {"ok": True, "per_stage": per, "total_ms": total}
+        return {"ok": True, "per_stage": per, "total_ms": total, "intent": intent_name,
+                "lane": "casual" if casual else "broadcast"}
 
 
 def bench(live: str, text: str, repeats: int, max_evidence: int | None = None) -> dict:

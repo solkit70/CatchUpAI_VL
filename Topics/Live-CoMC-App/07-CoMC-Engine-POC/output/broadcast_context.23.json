@@ -1,0 +1,52 @@
+{
+  "current_part_id": "2",
+  "coverage_state": "defined",
+  "coverage_items": [
+    "Chromebook용 VibeLearn AI 개발",
+    "FDE 취업가이드 학습 Topic 시작",
+    "AI로 라방 보조 MC 앱 빌드 3단계"
+  ],
+  "evidence_pool": [
+    {
+      "path": "AI/Roundup/2026-08-09 - Live23 Weekly Rundown.md#오늘의 실험#이번 방송 커버리지",
+      "quote": "[확정] 이번 방송 커버리지 — Chromebook용 VibeLearn AI 개발"
+    },
+    {
+      "path": "AI/Roundup/2026-08-09 - Live23 Weekly Rundown.md#오늘의 실험#이번 방송 커버리지",
+      "quote": "[확정] 이번 방송 커버리지 — FDE 취업가이드 학습 Topic 시작"
+    },
+    {
+      "path": "AI/Roundup/2026-08-09 - Live23 Weekly Rundown.md#오늘의 실험#이번 방송 커버리지",
+      "quote": "[확정] 이번 방송 커버리지 — AI로 라방 보조 MC 앱 빌드 3단계"
+    },
+    {
+      "path": "AI/Roundup/2026-08-09 - Live23 Weekly Rundown.md#오늘의 실험",
+      "quote": "~~후보 ⑦ VibeLearn AI Codex 최적화 저장소 반영~~ ✅ 8/9 완료"
+    },
+    {
+      "path": "AI/Roundup/2026-08-09 - Live23 Weekly Rundown.md#오늘의 실험",
+      "quote": "우선순위 낮은 대기 목록"
+    }
+  ],
+  "status_map": {
+    "rundown": "unconfirmed"
+  },
+  "excluded_headings": [
+    "보류된 인사이트 후보 (다음 방송 검토용)"
+  ],
+  "withheld_conditional": [],
+  "forbidden_removed": true,
+  "other_parts": [
+    {
+      "id": "1",
+      "title": "지난 주 생성한 콘텐츠",
+      "coverage_state": "directive"
+    },
+    {
+      "id": "주간 영상",
+      "title": "주간 영상",
+      "coverage_state": "defined"
+    }
+  ],
+  "assembled_at": "2026-09-17T15:06:39.721757+00:00"
+}

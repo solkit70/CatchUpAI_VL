@@ -1,0 +1,122 @@
+{
+  "current_part_id": "1",
+  "coverage_state": "defined",
+  "coverage_items": [
+    "6/22 Tehaleh 한영 영상 공개",
+    "6/24~6/26 Live #15 한영 요약 영상 제작·업로드",
+    "6/26 창발 Product Group 발표 완료",
+    "6/26 김기자님 Qwen3 Voice Clone 리포팅",
+    "Daily Roundup 완료"
+  ],
+  "evidence_pool": [
+    {
+      "path": "AI/Roundup/2026-06-22 - Live16 Weekly Rundown.md#지난 주 활동#이번 방송 커버리지",
+      "quote": "[확정] 이번 방송 커버리지 — 6/22 Tehaleh 한영 영상 공개"
+    },
+    {
+      "path": "AI/Roundup/2026-06-22 - Live16 Weekly Rundown.md#지난 주 활동#이번 방송 커버리지",
+      "quote": "[확정] 이번 방송 커버리지 — 6/24~6/26 Live #15 한영 요약 영상 제작·업로드"
+    },
+    {
+      "path": "AI/Roundup/2026-06-22 - Live16 Weekly Rundown.md#지난 주 활동#이번 방송 커버리지",
+      "quote": "[확정] 이번 방송 커버리지 — 6/26 창발 Product Group 발표 완료"
+    },
+    {
+      "path": "AI/Roundup/2026-06-22 - Live16 Weekly Rundown.md#지난 주 활동#이번 방송 커버리지",
+      "quote": "[확정] 이번 방송 커버리지 — 6/26 김기자님 Qwen3 Voice Clone 리포팅"
+    },
+    {
+      "path": "AI/Roundup/2026-06-22 - Live16 Weekly Rundown.md#지난 주 활동#이번 방송 커버리지",
+      "quote": "[확정] 이번 방송 커버리지 — Daily Roundup 완료"
+    },
+    {
+      "path": "AI/Roundup/2026-06-22 - Live16 Weekly Rundown.md#지난 주 활동",
+      "quote": "주중 한 작업"
+    },
+    {
+      "path": "AI/Roundup/2026-06-22 - Live16 Weekly Rundown.md#지난 주 활동",
+      "quote": "이번 주 업로드 영상"
+    },
+    {
+      "path": "AI/Roundup/2026-06-22 - Live16 Weekly Rundown.md#지난 주 활동",
+      "quote": "창발 발표 \"The AI Powered Creator\" — VibeLearn AI M5~M7 준비 과정과 발표 자료 정리"
+    },
+    {
+      "path": "AI/Roundup/2026-06-22 - Live16 Weekly Rundown.md#지난 주 활동",
+      "quote": "Live #15 요약 영상이 한국어·영어 두 버전으로 YouTube 업로드 완료"
+    },
+    {
+      "path": "AI/Roundup/2026-06-22 - Live16 Weekly Rundown.md#지난 주 활동",
+      "quote": "영어 영상은 Remotion으로 영어 나레이션·오디오 16개 별도 제작 후 렌더 (160.5MB, 7:36)"
+    },
+    {
+      "path": "AI/Roundup/2026-06-22 - Live16 Weekly Rundown.md#지난 주 활동",
+      "quote": "영어 영상 썸네일: 미국 여성 진행자 + \"AI Broke During Live. Fixed It.\" 텍스트 포함 AI 생성"
+    },
+    {
+      "path": "AI/Roundup/2026-06-22 - Live16 Weekly Rundown.md#지난 주 활동",
+      "quote": "sunghyu Voice Clone 완료 → 한국전쟁 76주년 뉴스 리포트 음성 제작 → 김기자님 전달"
+    },
+    {
+      "path": "AI/Roundup/2026-06-22 - Live16 Weekly Rundown.md#지난 주 활동",
+      "quote": "Seattle Korean Daily 김기자님 Voice Clone + 기사 리포팅 음성 제작: 전화 요청 후 20분도 안 되어 결과 전달"
+    },
+    {
+      "path": "Roundup/2026-06-26 - Daily Roundup#Status Summary",
+      "quote": "Live #15 요약 영상 — 완료 — KR YouTube 링크와 게시 정보 생성, Remotion source/public assets/build artifacts 생성"
+    },
+    {
+      "path": "Roundup/2026-06-26 - Daily Roundup#Status Summary",
+      "quote": "Live #15 영어 버전 — 완료 — 영어 데이터·컴포넌트·오디오 자산 생성 후 YouTube 업로드 확인"
+    },
+    {
+      "path": "Roundup/2026-06-26 - Daily Roundup#Status Summary",
+      "quote": "창발 Product Group 발표 — 완료 — 6/26 7:00 PM 발표 완료로 주간 계획 반영"
+    },
+    {
+      "path": "Roundup/2026-06-26 - Daily Roundup#Status Summary",
+      "quote": "김기자님 Voice Clone + Report TTS — 완료 — 사용자 입력과 주간 계획 완료 항목 반영"
+    },
+    {
+      "path": "Roundup/2026-06-26 - Daily Roundup#Status Summary",
+      "quote": "발표 피드백 기록 — 6/27로 이동 — 토요일 일정으로 이월"
+    },
+    {
+      "path": "Roundup/2026-06-26 - Daily Roundup#Status Summary",
+      "quote": "Journal — 링크 보강 — 템플릿 상태였고 Roundup 링크를 추가 대상으로 확인"
+    }
+  ],
+  "status_map": {
+    "rundown": "unconfirmed",
+    "2026-06-22 - Weekly Progress and Planning": "missing_section",
+    "2026-06-15 - Live15 Weekly Rundown": "missing_section",
+    "2026-06-22 - Daily Roundup": "missing_section",
+    "2026-06-23 - Daily Roundup": "missing_section",
+    "2026-06-24 - Daily Roundup": "missing_section",
+    "2026-06-25 - Daily Roundup": "missing_section",
+    "2026-06-26 - Daily Roundup": "ok:6/7",
+    "2026-06-27 - Claude Code": "missing_section",
+    "youtube-channel-growth-analysis": "missing_section",
+    "video-slide-plan": "missing_section",
+    "youtube-publish": "missing_section",
+    "20260529_Final_Retrospective_Qwen3-TTS": "missing_section",
+    "2026-06-23 Tehaleh Annual All Members Meeting Transcript": "missing_section",
+    "Vibe Guiding": "missing_section"
+  },
+  "excluded_headings": [],
+  "withheld_conditional": [],
+  "forbidden_removed": true,
+  "other_parts": [
+    {
+      "id": "2",
+      "title": "내 주변 AI News",
+      "coverage_state": "defined"
+    },
+    {
+      "id": "3",
+      "title": "오늘의 실험",
+      "coverage_state": "defined"
+    }
+  ],
+  "assembled_at": "2026-09-17T15:05:57.038349+00:00"
+}

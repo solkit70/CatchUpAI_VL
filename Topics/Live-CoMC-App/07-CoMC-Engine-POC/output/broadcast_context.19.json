@@ -1,0 +1,169 @@
+{
+  "current_part_id": "1",
+  "coverage_state": "defined",
+  "coverage_items": [
+    "이번 주 메인 — 자막 달기 대작전",
+    "무엇을 했나(세미나 9편 영→한, BL 2차 한→영, 채널 회생 정리 영상 한/영)",
+    "왜 굳이 자막을 다는가(구독자 이탈 방지)",
+    "Whisper 비용 $3.57과 지속 가능성",
+    "채널 되살리기 2차 작전 — \"내용 알차게\"",
+    "자막 자동화 과정 상세 복기(Review)"
+  ],
+  "evidence_pool": [
+    {
+      "path": "AI/Roundup/2026-07-12 - Live19 Weekly Rundown.md#지난 주 활동#이번 방송 커버리지",
+      "quote": "[확정] 이번 방송 커버리지 — 이번 주 메인 — 자막 달기 대작전"
+    },
+    {
+      "path": "AI/Roundup/2026-07-12 - Live19 Weekly Rundown.md#지난 주 활동#이번 방송 커버리지",
+      "quote": "[확정] 이번 방송 커버리지 — 무엇을 했나(세미나 9편 영→한, BL 2차 한→영, 채널 회생 정리 영상 한/영)"
+    },
+    {
+      "path": "AI/Roundup/2026-07-12 - Live19 Weekly Rundown.md#지난 주 활동#이번 방송 커버리지",
+      "quote": "[확정] 이번 방송 커버리지 — 왜 굳이 자막을 다는가(구독자 이탈 방지)"
+    },
+    {
+      "path": "AI/Roundup/2026-07-12 - Live19 Weekly Rundown.md#지난 주 활동#이번 방송 커버리지",
+      "quote": "[확정] 이번 방송 커버리지 — Whisper 비용 $3.57과 지속 가능성"
+    },
+    {
+      "path": "AI/Roundup/2026-07-12 - Live19 Weekly Rundown.md#지난 주 활동#이번 방송 커버리지",
+      "quote": "[확정] 이번 방송 커버리지 — 채널 되살리기 2차 작전 — \"내용 알차게\""
+    },
+    {
+      "path": "AI/Roundup/2026-07-12 - Live19 Weekly Rundown.md#지난 주 활동#이번 방송 커버리지",
+      "quote": "[확정] 이번 방송 커버리지 — 자막 자동화 과정 상세 복기(Review)"
+    },
+    {
+      "path": "AI/Roundup/2026-07-12 - Live19 Weekly Rundown.md#지난 주 활동",
+      "quote": "① 이번 주 메인 — 자막 달기 대작전"
+    },
+    {
+      "path": "AI/Roundup/2026-07-12 - Live19 Weekly Rundown.md#지난 주 활동",
+      "quote": "② 무엇을 했나 — 세미나 9편 + BL 2차 + 채널 회생 정리 영상"
+    },
+    {
+      "path": "AI/Roundup/2026-07-12 - Live19 Weekly Rundown.md#지난 주 활동",
+      "quote": "③ 왜 굳이 자막을 다는가 — 구독자 이탈 방지"
+    },
+    {
+      "path": "AI/Roundup/2026-07-12 - Live19 Weekly Rundown.md#지난 주 활동",
+      "quote": "④ Whisper 비용 $3.57과 지속 가능성"
+    },
+    {
+      "path": "AI/Roundup/2026-07-12 - Live19 Weekly Rundown.md#지난 주 활동",
+      "quote": "⑤ 채널 되살리기 2차 작전 — \"내용 알차게\""
+    },
+    {
+      "path": "AI/Roundup/2026-07-12 - Live19 Weekly Rundown.md#지난 주 활동",
+      "quote": "⑥ 자막 자동화 과정 상세 복기 (Review)"
+    },
+    {
+      "path": "Roundup/2026-07-12 - Daily Roundup#Status Summary",
+      "quote": "전략 방향 전환 결정 (BL·Bila·Vibe Guiding 최우선) — ✅ 결정 완료, 실행은 다음 주부터"
+    },
+    {
+      "path": "Roundup/2026-07-14 - Daily Roundup#Status Summary",
+      "quote": "7/9 Beyond AI Models 세미나 자막 작업 — 완료 — 5개 영상 전체"
+    },
+    {
+      "path": "Roundup/2026-07-14 - Daily Roundup#Status Summary",
+      "quote": "7/9 세미나 유튜브 업로드 메타데이터 — 완료 — Title, Description, Tags, Chapters 정리"
+    },
+    {
+      "path": "Roundup/2026-07-14 - Daily Roundup#Status Summary",
+      "quote": "6/11 + 7/9 세미나 자막 누적 — 완료 — 총 9개 영상"
+    },
+    {
+      "path": "Roundup/2026-07-14 - Daily Roundup#Status Summary",
+      "quote": "Builders Lounge 2차 모임 영상 편집 — 진행 중 — 개인정보·얼굴 노출 검토 필요"
+    },
+    {
+      "path": "Roundup/2026-07-15 - Daily Roundup#Status Summary",
+      "quote": "BL 2차 모임 transcript/번역/caption 산출물 — 완료 — `_staging/bl2nd-0608-kotoen`에 생성"
+    },
+    {
+      "path": "Roundup/2026-07-15 - Daily Roundup#Status Summary",
+      "quote": "BL 2차 모임 한/영 자막 검토 문서 — 진행 중 — 907문장 검토·교정 계속"
+    },
+    {
+      "path": "Roundup/2026-07-15 - Daily Roundup#Status Summary",
+      "quote": "BL Intro/Outro 영상 — 완료 — `out/builders-lounge-intro.mp4`, `out/builders-lounge-outro.mp4` 렌더링"
+    },
+    {
+      "path": "Roundup/2026-07-15 - Daily Roundup#Status Summary",
+      "quote": "Catch Up AI 채널 운영 분석 최신화 — 이월"
+    },
+    {
+      "path": "Roundup/2026-07-16 - Daily Roundup#Status Summary",
+      "quote": "Builders Lounge 2차 모임 영상 최종 렌더 — 완료 — 1시간 28분, 영어 하드섭, `out/bl2nd-0608-kotoen.mp4`"
+    },
+    {
+      "path": "Roundup/2026-07-16 - Daily Roundup#Status Summary",
+      "quote": "Builders Lounge 2차 모임 YouTube 공개 — 완료 — `https://youtu.be/Racs4wG3BtA`"
+    },
+    {
+      "path": "Roundup/2026-07-16 - Daily Roundup#Status Summary",
+      "quote": "Gobi Space 홍보 게시 — 완료 — 창발 채널 게시 기록 있음"
+    },
+    {
+      "path": "Roundup/2026-07-16 - Daily Roundup#Status Summary",
+      "quote": "채널 회생 영상 제작 — 진행 중 — 슬라이드 플랜, 이미지/동영상 프롬프트, TTS, Remotion 구현 착수"
+    },
+    {
+      "path": "Roundup/2026-07-17 - Daily Roundup#Status Summary",
+      "quote": "오프라인 활동 확대 — 인사이트 확인 — 다음 주 활동 계획에 반영 필요"
+    },
+    {
+      "path": "Roundup/2026-07-17 - Daily Roundup#Status Summary",
+      "quote": "채널 회생 영상 — 진행 중 — slide 17 \"여정 중심 콘텐츠\" 보강, 오디오/프리뷰/미디어 산출물 갱신"
+    },
+    {
+      "path": "Roundup/2026-07-17 - Daily Roundup#Status Summary",
+      "quote": "워싱턴주 한인기업 AI 세미나 — 주간 계획상 일정 존재, 오늘 입력만으로 완료 여부 미확인"
+    }
+  ],
+  "status_map": {
+    "rundown": "unconfirmed",
+    "2026-07-12 - Daily Roundup": "ok:1/10",
+    "2026-07-12 - Weekly Progress and Planning": "missing_section",
+    "2026-07-12 - Weekly Dashboard.canvas": "skipped:canvas",
+    "2026-07-05 - Live18 Weekly Rundown": "missing_section",
+    "2026-07-14 - Daily Roundup": "ok:4/9",
+    "2026-07-14 Beyond AI Models 세미나 유튜브 업로드 정보 (제목·Description·Tags) by Claude Code": "missing_section",
+    "2026-07-14 AI 시대의 일하는 방식 변화 - 원격 승인형 워크플로우 인사이트 by Claude Code": "missing_section",
+    "2026-07-14 Builders Lounge 다음 모임 City Hall 신청 접수 기록": "missing_section",
+    "2026-07-15 - Daily Roundup": "ok:4/7",
+    "2026-07-15 AI 자막 작업에서 느낀 인사이트 - 아직 사람이 해야 할 일 by Claude Code": "missing_section",
+    "2026-07-15 Builders Lounge 2차 모임 영어자막 검토 (한영 대조) by Claude Code": "missing_section",
+    "2026-07-16 - Daily Roundup": "ok:4/11",
+    "2026-07-16 Builders Lounge 2차 모임 유튜브 Description (한영) by Claude Code": "missing_section",
+    "2026-07-16 Builders Lounge 2차 모임 SNS 홍보 글 by Claude Code": "missing_section",
+    "2026-07-16 Session 18 - Voice Legacy 영어 앱 테스트 + Netlify 배포": "missing_section",
+    "2026-07-17 - Daily Roundup": "ok:3/5",
+    "2026-07-13 Seattle AI 세미나 유튜브 업로드 정보 (제목·Description·Tags) by Claude Code": "missing_section",
+    "2026-07-18 몰락한 유튜브 채널 살리기 영상 유튜브 업로드 자료 (한국어) by Claude Code": "missing_section",
+    "2026-07-18 Rescue a Declining YouTube Channel - YouTube Upload Assets (English) by Claude Code": "missing_section"
+  },
+  "excluded_headings": [],
+  "withheld_conditional": [],
+  "forbidden_removed": true,
+  "other_parts": [
+    {
+      "id": "2",
+      "title": "오늘의 인사이트",
+      "coverage_state": "defined"
+    },
+    {
+      "id": "3",
+      "title": "내 주변 AI News",
+      "coverage_state": "defined"
+    },
+    {
+      "id": "4",
+      "title": "오늘의 실험",
+      "coverage_state": "defined"
+    }
+  ],
+  "assembled_at": "2026-09-17T15:05:57.137185+00:00"
+}

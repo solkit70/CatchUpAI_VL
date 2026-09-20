@@ -1,8 +1,8 @@
 {
-  "transcript": "Seattle AI Week 준비는 뭘 하나요?",
-  "intent": "answer_question",
+  "transcript": "잠깐 물 마시고 올게요. 그동안 시청자분들께 재미있는 얘기 해 주세요",
+  "intent": "filler",
   "slots": {},
   "ambiguity_flags": [],
   "confidence": 0.9,
-  "created_at": "2026-09-13T12:40:23.661698+00:00"
+  "created_at": "2026-09-18T14:33:50.700566+00:00"
 }

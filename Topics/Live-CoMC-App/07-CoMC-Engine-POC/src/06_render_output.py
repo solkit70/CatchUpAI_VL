@@ -40,8 +40,8 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 
-from common import (TOPIC, now_iso, out, read_json, trace,  # noqa: E402
-                    validate_or_die, write_json)
+from common import (TOPIC, clear_overlay, now_iso, out, read_json,  # noqa: E402
+                    trace, validate_or_die, write_json)
 
 M6_RUNTIME = (TOPIC / "06-TTS-Audio-Routing-Harness" / "examples"
               / "voice_registry.runtime.json")
@@ -126,6 +126,9 @@ def approve_pending() -> int:
         print("승인 대기 중인 발화가 없습니다.")
         return 2
     spoken = read_json(pend)
+    # REVIEW 에서 사람이 승인한 발화다. 재생기는 모드가 LIVE 가 아니면 보류하는데,
+    # 승인은 그 자체가 사람의 판단이므로 이 한 건은 내보내도 된다 (CVL 2, 2026-09-17).
+    spoken["approved"] = True
     write_json(out("spoken.json"), spoken)
     pend.unlink()
     print("승인 → spoken.json 으로 내보냈습니다")
@@ -152,17 +155,23 @@ def main():
         return approve_pending()
 
     verdict = read_json(out("verdict.json"))
-    ctx = read_json(out(f"broadcast_context.{args.live}.json"))
+    # CVL 4: 캐주얼 레인은 파트 컨텍스트 없이도 온다 (1부 커버리지 미정일 때). part_id 는 session_state 가 권위값이다.
+    cp = out(f"broadcast_context.{args.live}.json")
+    ctx = read_json(cp) if cp.exists() else {"current_part_id": None}
 
     if not verdict["kept_sentences"]:
         trace("06_render_output", ok=False, reason="nothing_to_say",
               dropped=len(verdict["dropped_sentences"]))
-        print("\n⛔ 발화할 문장이 남지 않았습니다 — 파일을 쓰지 않습니다.")
-        print("   빈 텍스트로 화면을 갱신하거나 빈 문자열을 TTS 에 넘기지 않는다.")
-        print("   말할 것이 없을 때는 침묵이 정답이다.")
+        print("\n⛔ 발화할 문장이 남지 않았습니다 — spoken 은 쓰지 않습니다.")
+        print("   빈 문자열을 TTS 에 넘기지 않는다. 말할 것이 없을 때는 침묵이 정답이다.")
+        # ⚠️ 사고 11 (Live #27) — 예전엔 여기서 overlay 도 안 건드렸다. 그러면 화면에
+        #    **직전 발화**가 그대로 남고, 시청자는 그것을 이번 질문의 답으로 읽는다.
+        #    침묵은 화면에서도 침묵이어야 한다. 오버레이 서버는 text 가 비면 화면을 숨긴다.
+        clear_overlay("06_render_output", "nothing_to_say")
+        print("   화면을 비웠습니다 (overlay.json text=\"\") — 옛 초안이 남지 않는다.")
         return 2
 
-    state = load_session_state(ctx["current_part_id"])
+    state = load_session_state(ctx.get("current_part_id"))
     provider, voice = pick_voice(args.provider)
     mode, mode_src = load_mode()
     ts = now_iso()
@@ -170,7 +179,7 @@ def main():
     output = {
         "overlay": {
             "text": verdict["final_text"],
-            "part_id": state.get("current_part_id") or ctx["current_part_id"],
+            "part_id": state.get("current_part_id") or ctx.get("current_part_id") or "1",
             "updated_at": ts,
         },
         "spoken": {

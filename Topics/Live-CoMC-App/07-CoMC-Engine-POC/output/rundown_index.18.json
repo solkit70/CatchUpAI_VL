@@ -1,0 +1,81 @@
+{
+  "source_path": "AI/Roundup/2026-07-05 - Live18 Weekly Rundown.md",
+  "is_final": false,
+  "parts": [
+    {
+      "id": "1",
+      "sort_key": 1.0,
+      "is_numbered": true,
+      "title": "지난 주 활동",
+      "time_raw": "시간 미정",
+      "time_minutes": null,
+      "is_remainder": false,
+      "coverage_state": "defined",
+      "coverage_items": [
+        "7/6 한인 상공회의소 커피챗",
+        "7/8 Kim·Kang 미팅(Builders Lounge 모임 관련 논의) + BigHug Kickoff Meeting",
+        "7/9 Beyond AI Models 포럼 + Live #17 요약 영상 완료(한국어·영어)",
+        "7/10 Seattle 중소벤처기업지원 협의회(KSC)",
+        "7/11 거북이 마라톤대회"
+      ],
+      "directive_note": null
+    },
+    {
+      "id": "2",
+      "sort_key": 2.0,
+      "is_numbered": true,
+      "title": "오늘의 인사이트",
+      "time_raw": "시간 미정",
+      "time_minutes": null,
+      "is_remainder": false,
+      "coverage_state": "defined",
+      "coverage_items": [
+        "KACC Coffee Chat 기록을 AI Agent context로 전환한 의미",
+        "Product Discovery Platform의 지역 네트워크 검증",
+        "Catch Up AI bilingual 안내 실험",
+        "live-summary-video 화요일 완료 원칙 — 이번 주는 못 지켰지만 계속 방안을 찾아야 한다는 다짐",
+        "\"바이브 가이딩\" 개념 소개",
+        "오프라인 활동이 온라인 작업의 아이디어 재료가 된다는 발견"
+      ],
+      "directive_note": null
+    },
+    {
+      "id": "3",
+      "sort_key": 3.0,
+      "is_numbered": true,
+      "title": "내 주변 AI News",
+      "time_raw": "시간 미정",
+      "time_minutes": null,
+      "is_remainder": false,
+      "coverage_state": "defined",
+      "coverage_items": [
+        "Builders Lounge 첫 뉴스레터 발송 + 8월 4차 모임 예고",
+        "워싱턴주 한인기업 AI 세미나(7/17, 시애틀한인회관) 소식",
+        "BigHug K-pop Play Day Season 2 (9/26) 예고"
+      ],
+      "directive_note": null
+    },
+    {
+      "id": "4",
+      "sort_key": 4.0,
+      "is_numbered": true,
+      "title": "오늘의 실험",
+      "time_raw": "시간 미정",
+      "time_minutes": null,
+      "is_remainder": false,
+      "coverage_state": "defined",
+      "coverage_items": [
+        "Build with AI 리서치 후 영상 제작",
+        "Bila AI Agent 만들기 M2 진행",
+        "AI와 글쓰기 — 피터틸 vs 내 관점 대결",
+        "Slack 채널 내용 자동으로 가져오기",
+        "Slack 대화 자동 수집"
+      ],
+      "directive_note": null
+    }
+  ],
+  "excluded_sections": [],
+  "conditional_sections": [],
+  "parse_anomalies": [],
+  "parsed_at": "2026-09-17T15:05:57.085013+00:00"
+}

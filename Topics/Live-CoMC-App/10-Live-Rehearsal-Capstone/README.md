@@ -168,3 +168,11 @@ LLM 자기평가에 맡기지 않는다는 M8 원칙은 그대로 지켰다 — 
 - 이전: [../09-Desktop-Shell-and-Overlay/README.md](../09-Desktop-Shell-and-Overlay/README.md)
 - 다음: 09-13 Live #27 (3회차) → [rehearsal-log-3](guides/rehearsal-log-3.md) 결과 → go-nogo A 확정 → Retrospective 완결 (이 Topic 의 마지막 모듈)
 - 그 뒤: B 음성 출력 → C 음성 입력 — go-nogo 후속표 순서대로 (새 Topic 또는 CVL 유지보수)
+
+## CVL (Topic 완료 후)
+
+- [guides/operator-guide.md](guides/operator-guide.md) — **진행자용 조작 가이드** (켜기 `start_comc.ps1` → 브라우저 탭 하나 · 말 시키기 · 모드 버튼/핫키 · 멈추기). CVL 3 에서 창 4개 → [콘솔 하나](../09-Desktop-Shell-and-Overlay/examples/engine/comc_console.py)
+- [guides/rehearsal-log-4.md](guides/rehearsal-log-4.md) — 4회차(무관중, 소리 포함) 절차·질문 세트·결과 칸. OBS `Untitled` 프로필 현황 포함
+- [examples/rehearsal4_driver.py](examples/rehearsal4_driver.py) — 4회차 질문 8개를 데몬에 넣는 드라이버 (핫키·패닉은 파일 조작)
+- [examples/test_casual_lane.py](examples/test_casual_lane.py) — CVL 4 회귀: 캐주얼 의도 분류 14건(LLM 없음) + `--llm` 끝까지 4건(자리 비움 ≥30초 · 날씨 값 · 방송 질문은 방송 레인)
+- [examples/test_live27_incidents.py](examples/test_live27_incidents.py) — Live #27 사고 7~11 재현 테스트 (수정 전 0/10 → 후 10/10)

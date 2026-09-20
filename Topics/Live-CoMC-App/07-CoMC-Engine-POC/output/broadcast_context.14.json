@@ -1,0 +1,92 @@
+{
+  "current_part_id": "3",
+  "coverage_state": "defined",
+  "coverage_items": [
+    "WA Recording Law 한국어·영어 영상 공개 및 제작 흐름 회고"
+  ],
+  "evidence_pool": [
+    {
+      "path": "AI/Roundup/2026-06-08 - Live14 Weekly Rundown.md#공개 결과 — Remotion WA Recording Law 영상 공개#이번 방송 커버리지",
+      "quote": "[확정] 이번 방송 커버리지 — WA Recording Law 한국어·영어 영상 공개 및 제작 흐름 회고"
+    },
+    {
+      "path": "AI/Roundup/2026-06-08 - Live14 Weekly Rundown.md#공개 결과 — Remotion WA Recording Law 영상 공개",
+      "quote": "영상 완성 체크리스트"
+    },
+    {
+      "path": "AI/Roundup/2026-06-08 - Live14 Weekly Rundown.md#공개 결과 — Remotion WA Recording Law 영상 공개",
+      "quote": "[x] ChatGPT gpt-image-2로 12개 이미지 생성 후 `public/wa-recording-law-0607/images/` 저장"
+    },
+    {
+      "path": "AI/Roundup/2026-06-08 - Live14 Weekly Rundown.md#공개 결과 — Remotion WA Recording Law 영상 공개",
+      "quote": "[x] gen_audio_qwen.py 실행 → Qwen3-TTS VC(창수) + VD(이지영 변호사) 오디오 교체"
+    },
+    {
+      "path": "AI/Roundup/2026-06-08 - Live14 Weekly Rundown.md#공개 결과 — Remotion WA Recording Law 영상 공개",
+      "quote": "[x] AUDIO_DURATIONS·Q_DURATIONS 재측정 후 data.ts 업데이트"
+    },
+    {
+      "path": "AI/Roundup/2026-06-08 - Live14 Weekly Rundown.md#공개 결과 — Remotion WA Recording Law 영상 공개",
+      "quote": "[x] Remotion 렌더링"
+    },
+    {
+      "path": "AI/Roundup/2026-06-08 - Live14 Weekly Rundown.md#공개 결과 — Remotion WA Recording Law 영상 공개",
+      "quote": "[x] ffmpeg concat → 최종 MP4"
+    },
+    {
+      "path": "AI/Roundup/2026-06-08 - Live14 Weekly Rundown.md#공개 결과 — Remotion WA Recording Law 영상 공개",
+      "quote": "[x] YouTube 업로드 + 메타데이터 작성"
+    },
+    {
+      "path": "AI/Roundup/2026-06-08 - Live14 Weekly Rundown.md#공개 결과 — Remotion WA Recording Law 영상 공개",
+      "quote": "방송 공유 포인트"
+    }
+  ],
+  "status_map": {
+    "rundown": "unconfirmed",
+    "2026-06-08 - Weekly Progress and Planning": "missing_section",
+    "2026-06-08 - Weekly Dashboard.canvas": "skipped:canvas",
+    "2026-06-02 - Live13 Weekly Rundown": "missing_section"
+  },
+  "excluded_headings": [],
+  "withheld_conditional": [],
+  "forbidden_removed": true,
+  "other_parts": [
+    {
+      "id": "1",
+      "title": "지난 주 활동과 이번 주 결산",
+      "coverage_state": "undefined"
+    },
+    {
+      "id": "2",
+      "title": "내 주변 AI·테크 뉴스",
+      "coverage_state": "undefined"
+    },
+    {
+      "id": "4",
+      "title": "공개 결과 + 제작 흐름 — Live #13 요약 영상",
+      "coverage_state": "defined"
+    },
+    {
+      "id": "4.5",
+      "title": "방송 인사이트 — 기록은 어떻게 시작하나",
+      "coverage_state": "defined"
+    },
+    {
+      "id": "4.8",
+      "title": "실전 디버깅 — YouTube Transcript 자동화와 IP 차단 사건",
+      "coverage_state": "defined"
+    },
+    {
+      "id": "4.9",
+      "title": "Big Data AI Seattle (5/13) — YouTube 업로드 & Description 완성",
+      "coverage_state": "defined"
+    },
+    {
+      "id": "5",
+      "title": "Live 실험 3종 — 피터 틸 글감 / 발표 준비 / 멤버십 홍보 영상",
+      "coverage_state": "defined"
+    }
+  ],
+  "assembled_at": "2026-09-17T15:05:57.004184+00:00"
+}

@@ -18,9 +18,15 @@
         "repeat",
         "stop",
         "out_of_scope",
-        "unknown"
+        "unknown",
+        "small_talk",
+        "weekly_recap",
+        "insight",
+        "filler",
+        "broadcast_status",
+        "greet_viewer"
       ],
-      "description": "의도 분류 결과. unknown 과 out_of_scope 는 다르다 — unknown 은 '무슨 뜻인지 모르겠으니 되묻는다'이고, out_of_scope 는 'M2 App Boundary 가 배제한 기능이므로 하지 않는다'이다. 둘을 뭉치면 HITL 대기열이 영원히 충족될 수 없는 요청으로 채워진다. 2026-08-23 M7 실습 3에서 out_of_scope 추가."
+      "description": "의도 분류 결과. unknown 과 out_of_scope 는 다르다 — unknown 은 '무슨 뜻인지 모르겠으니 되묻는다'이고, out_of_scope 는 'M2 App Boundary 가 배제한 기능이므로 하지 않는다'이다. 둘을 뭉치면 HITL 대기열이 영원히 충족될 수 없는 요청으로 채워진다. 2026-08-23 M7 실습 3에서 out_of_scope 추가. 2026-09-17 CVL 4 에서 캐주얼 레인 5종(small_talk 날씨·인사 / weekly_recap 이번 주 한 일 / insight 배운 것 / filler 시간 끌기 / broadcast_status 방송 전체 진행) 추가 — 근거 풀이 broadcast_context 가 아니라 casual_brief 다."
     },
     "slots": {
       "type": "object",

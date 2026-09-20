@@ -1,38 +1,21 @@
 {
-  "current_part_id": "3",
-  "coverage_state": "directive",
+  "current_part_id": "2",
+  "coverage_state": "defined",
   "coverage_items": [
-    "AI로 라방 보조 MC 앱 만들기",
-    "기존 스킬을 OpenAI 신규 Transcribe 모델로 업데이트"
+    "Builders Lounge 4차 모임(8/6) 일정·발표자 확정"
   ],
   "evidence_pool": [
     {
-      "path": "Ingest/CatchUpAI_VL/Topics/Live-CoMC-App/07-CoMC-Engine-POC/data/rundown_samples/2026-07-26 - Live21 Weekly Rundown.md#오늘의 실험",
-      "quote": "★ 실험 1 — AI로 라이브 방송 보조 MC 앱 만들기"
+      "path": "Ingest/CatchUpAI_VL/Topics/Live-CoMC-App/07-CoMC-Engine-POC/data/rundown_samples/2026-07-26 - Live21 Weekly Rundown.md#내 주변 AI News#이번 방송 커버리지",
+      "quote": "[확정] 이번 방송 커버리지 — Builders Lounge 4차 모임(8/6) 일정·발표자 확정"
     },
     {
-      "path": "Ingest/CatchUpAI_VL/Topics/Live-CoMC-App/07-CoMC-Engine-POC/data/rundown_samples/2026-07-26 - Live21 Weekly Rundown.md#오늘의 실험",
-      "quote": "★ 실험 2 — 기존 스킬을 OpenAI 신규 Transcribe 모델로 업데이트"
+      "path": "Ingest/CatchUpAI_VL/Topics/Live-CoMC-App/07-CoMC-Engine-POC/data/rundown_samples/2026-07-26 - Live21 Weekly Rundown.md#내 주변 AI News",
+      "quote": "Builders Lounge 4차 모임 — 8월 6일 (목) 확정"
     },
     {
-      "path": "Ingest/CatchUpAI_VL/Topics/Live-CoMC-App/07-CoMC-Engine-POC/data/rundown_samples/2026-07-26 - Live21 Weekly Rundown.md#오늘의 실험",
-      "quote": "[ ] `video-subtitles` 스킬 — Whisper API → GPT-Transcribe 교체 검토"
-    },
-    {
-      "path": "Ingest/CatchUpAI_VL/Topics/Live-CoMC-App/07-CoMC-Engine-POC/data/rundown_samples/2026-07-26 - Live21 Weekly Rundown.md#오늘의 실험",
-      "quote": "[ ] `video-add-chapters`의 `transcribe_video.py` 교체 검토"
-    },
-    {
-      "path": "Ingest/CatchUpAI_VL/Topics/Live-CoMC-App/07-CoMC-Engine-POC/data/rundown_samples/2026-07-26 - Live21 Weekly Rundown.md#오늘의 실험",
-      "quote": "[ ] **컨텍스트 주입 기능 연결** — 최근 만든 `glossary.json`의 `prompt_terms`를 그대로 넘길 수 있는지 확인"
-    },
-    {
-      "path": "Ingest/CatchUpAI_VL/Topics/Live-CoMC-App/07-CoMC-Engine-POC/data/rundown_samples/2026-07-26 - Live21 Weekly Rundown.md#오늘의 실험",
-      "quote": "[ ] 다른 스킬 중 최신 기능으로 업데이트할 것이 있는지 조사"
-    },
-    {
-      "path": "Ingest/CatchUpAI_VL/Topics/Live-CoMC-App/07-CoMC-Engine-POC/data/rundown_samples/2026-07-26 - Live21 Weekly Rundown.md#오늘의 실험",
-      "quote": "✅ 방송 후 결과 (2026-08-02)"
+      "path": "Roundup/2026-07-26 - Weekly Progress and Planning#Priority Summary",
+      "quote": "2 — Seattle Tech Week 일정 수립 과정 영상 렌더링·업로드 — [x] — 한국어 7:13 / 영어 7:00 업로드 완료"
     },
     {
       "path": "Roundup/2026-07-26 - Weekly Progress and Planning#Priority Summary",
@@ -47,16 +30,60 @@
       "quote": "7 — Bila AI 기능 테스트 — [>] — Slack 블로커는 GOBI 개발팀 조치 필요, Live21 실험 항목으로 이동"
     },
     {
+      "path": "Roundup/2026-07-26 - Weekly Progress and Planning#Priority Summary",
+      "quote": "8 — AI 협업 속도와 사람의 workload 균형 점검 — [>] — 8/1 이구님과의 협업에서 한 가지 답 도출 — 혼자 더 하기보다 도구를 남이 쓰게 하기"
+    },
+    {
+      "path": "Roundup/2026-07-28 - Daily Roundup#Status Summary",
+      "quote": "SAP 주최 Seattle Tech Week 세미나 참석 — 완료 — 대기업 AI 세미나의 Product 중심성, 낮은 혁신성 관찰"
+    },
+    {
+      "path": "Roundup/2026-07-28 - Daily Roundup#Status Summary",
+      "quote": "행사 선택 원칙 — 갱신 — 대기업 AI 세미나와 스타트업 세미나가 겹치면 스타트업 우선"
+    },
+    {
+      "path": "Roundup/2026-07-28 - Daily Roundup#Status Summary",
+      "quote": "AI와 burnout 질문 — 핵심 인사이트 — 향후 AI 세미나에서 질문하고 싶은 주제로 기록"
+    },
+    {
+      "path": "Roundup/2026-07-29 - Daily Roundup#Status Summary",
+      "quote": "Builders Lounge 멤버 간 1:1 교류 활성화 아이디어 — 정리 완료 — 8/6 모임에서 전달 예정"
+    },
+    {
+      "path": "Roundup/2026-07-29 - Daily Roundup#Status Summary",
+      "quote": "Bila AI Context 데이터 관리 문제 · GitHub 제안 구상 — 정리 완료 — 제안서 작성 여부 및 형태(소비자 의견 vs 공동 개발) 미결정"
+    },
+    {
+      "path": "Roundup/2026-07-29 - Daily Roundup#Status Summary",
+      "quote": "Builders Lounge 4차 모임 시간 배정 공지 — 초안 완료 — Slack/GobiSpace 게시 및 뉴스레터 발송 전"
+    },
+    {
       "path": "Roundup/2026-07-30 - Daily Roundup#Status Summary",
-      "quote": "BigHug Bellevue City Hall 실측 자료 — 업데이트 확인 — 전기 outlet/사인 부착/운영 동선 follow-up 필요"
+      "quote": "Vibe Guiding Event Driven Process 인사이트 — 정리 완료 — 사용자 모니터링 → 이벤트 감지 → AI Agent 가이드 트리거 구조로 재정의"
+    },
+    {
+      "path": "Roundup/2026-07-31 - Daily Roundup#Status Summary",
+      "quote": "INFORMS PNW / Biuty AI — **완료** — 금요일 두 행사 모두 참석"
+    },
+    {
+      "path": "Roundup/2026-08-01 - Daily Roundup#Status Summary",
+      "quote": "이구님과 광복절 행사 준비 (온라인) — 완료 — VibeLearn AI 첫 협업 적용, 결과 양호"
+    },
+    {
+      "path": "Roundup/2026-08-01 - Daily Roundup#Status Summary",
+      "quote": "FedWay 기획안 v2 개정 — 완료 — 유공자 12인 AI 영상 중심으로 전환"
+    },
+    {
+      "path": "Roundup/2026-08-01 - Daily Roundup#Status Summary",
+      "quote": "NGO 실무자를 위한 AI 활용법 영상 — **공개 완료** — https://youtu.be/IsmHWee25Ag"
+    },
+    {
+      "path": "Roundup/2026-08-01 - Daily Roundup#Status Summary",
+      "quote": "Live21 Rundown — 최종본 완료 — 커버리지 전체 확정"
     },
     {
       "path": "Roundup/2026-08-02 - Daily Roundup#Status Summary",
-      "quote": "Live21 방송 진행 — 완료 — 실험①②③ 모두 다룸"
-    },
-    {
-      "path": "Roundup/2026-08-02 - Daily Roundup#Status Summary",
-      "quote": "GPT-Transcribe/GPT-Live-Transcribe 스킬 반영 — 완료 — 5개 스킬(video-add-chapters/cleaning/full-process/subtitles, youtube-channel-archiver)"
+      "quote": "Builders Lounge 4차 발표자료 (M1~M4) — 완료 — 8/6 발표 준비 완료, 실제 리허설은 남음"
     },
     {
       "path": "Roundup/2026-08-02 - Daily Roundup#Status Summary",
@@ -65,14 +92,14 @@
   ],
   "status_map": {
     "rundown": "final",
-    "2026-07-26 - Weekly Progress and Planning": "ok:3/8",
+    "2026-07-26 - Weekly Progress and Planning": "ok:5/8",
     "2026-07-26 - Weekly Dashboard.canvas": "skipped:canvas",
-    "2026-07-28 - Daily Roundup": "ok:0/6",
-    "2026-07-29 - Daily Roundup": "ok:0/5",
+    "2026-07-28 - Daily Roundup": "ok:3/6",
+    "2026-07-29 - Daily Roundup": "ok:3/5",
     "2026-07-30 - Daily Roundup": "ok:1/5",
-    "2026-07-31 - Daily Roundup": "ok:0/5",
-    "2026-08-01 - Daily Roundup": "ok:0/10",
-    "2026-08-02 - Daily Roundup": "ok:3/8",
+    "2026-07-31 - Daily Roundup": "ok:1/5",
+    "2026-08-01 - Daily Roundup": "ok:4/10",
+    "2026-08-02 - Daily Roundup": "ok:2/8",
     "2026-07-19~2026-07-26 - Claude Code": "missing_section",
     "2026-08-01 시민단체를 위한 AI 영상 유튜브 업로드 자료 (한국어) by Claude Code": "missing_section"
   },
@@ -80,13 +107,19 @@
     "보류된 인사이트 후보 (이번 방송 미편성)",
     "주간 영상 후보 (이번 방송 코너 미편성)"
   ],
-  "withheld_conditional": [
+  "withheld_conditional": [],
+  "forbidden_removed": true,
+  "other_parts": [
     {
-      "heading": "대기 목록 (시간이 남으면)",
-      "condition": "시간이 남으면",
-      "reason": "조건 충족 여부를 코드가 판정할 수 없음 — 기본값 제외 (--allow-conditional 로 편입)"
+      "id": "1",
+      "title": "지난 주 활동",
+      "coverage_state": "defined"
+    },
+    {
+      "id": "3",
+      "title": "오늘의 실험",
+      "coverage_state": "directive"
     }
   ],
-  "forbidden_removed": true,
-  "assembled_at": "2026-09-06T13:19:49.419496+00:00"
+  "assembled_at": "2026-09-17T15:06:39.484246+00:00"
 }

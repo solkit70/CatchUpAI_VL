@@ -1,0 +1,94 @@
+{
+  "source_path": "AI/Roundup/2026-05-19 - Live11 Weekly Rundown.md",
+  "is_final": false,
+  "parts": [
+    {
+      "id": "1",
+      "sort_key": 1.0,
+      "is_numbered": true,
+      "title": "이번 주 활동 수치",
+      "time_raw": "시간 미표기",
+      "time_minutes": null,
+      "is_remainder": false,
+      "coverage_state": "undefined",
+      "coverage_items": [],
+      "directive_note": null
+    },
+    {
+      "id": "2",
+      "sort_key": 2.0,
+      "is_numbered": true,
+      "title": "'모자무싸' — AI와 협업의 현실",
+      "time_raw": "시간 미표기",
+      "time_minutes": null,
+      "is_remainder": false,
+      "coverage_state": "undefined",
+      "coverage_items": [],
+      "directive_note": null
+    },
+    {
+      "id": "3",
+      "sort_key": 3.0,
+      "is_numbered": true,
+      "title": "Qwen3-TTS M3 — Voice Clone 실험",
+      "time_raw": "시간 미표기",
+      "time_minutes": null,
+      "is_remainder": false,
+      "coverage_state": "undefined",
+      "coverage_items": [],
+      "directive_note": null
+    },
+    {
+      "id": "4",
+      "sort_key": 4.0,
+      "is_numbered": true,
+      "title": "피터 틸이 꿈꾸는 세상 — 라이브 리서치 & 에세이 프리뷰",
+      "time_raw": "시간 미표기",
+      "time_minutes": null,
+      "is_remainder": false,
+      "coverage_state": "undefined",
+      "coverage_items": [],
+      "directive_note": null
+    },
+    {
+      "id": "5",
+      "sort_key": 5.0,
+      "is_numbered": true,
+      "title": "이번 주 이벤트 리포트",
+      "time_raw": "4개",
+      "time_minutes": null,
+      "is_remainder": false,
+      "coverage_state": "undefined",
+      "coverage_items": [],
+      "directive_note": null
+    },
+    {
+      "id": "6",
+      "sort_key": 6.0,
+      "is_numbered": true,
+      "title": "Utah 프로젝트 진행 소식 (5/21 목 10:00 미팅) ✅",
+      "time_raw": "시간 미표기",
+      "time_minutes": null,
+      "is_remainder": false,
+      "coverage_state": "undefined",
+      "coverage_items": [],
+      "directive_note": null
+    },
+    {
+      "id": "7",
+      "sort_key": 7.0,
+      "is_numbered": true,
+      "title": "VibeLearn AI — 커스텀 홈페이지 제작 라이브 데모",
+      "time_raw": "시간 미표기",
+      "time_minutes": null,
+      "is_remainder": false,
+      "coverage_state": "undefined",
+      "coverage_items": [],
+      "directive_note": null
+    }
+  ],
+  "excluded_sections": [],
+  "conditional_sections": [],
+  "parse_anomalies": [],
+  "parsed_at": "2026-09-17T15:05:56.869296+00:00"
+}

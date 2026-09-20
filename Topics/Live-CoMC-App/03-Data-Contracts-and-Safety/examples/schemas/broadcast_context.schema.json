@@ -11,12 +11,18 @@
     },
     "coverage_state": {
       "type": "string",
-      "enum": ["defined", "directive", "undefined"],
+      "enum": [
+        "defined",
+        "directive",
+        "undefined"
+      ],
       "description": "현재 파트의 커버리지 상태. undefined면 컨텍스트를 조립하지 않고 HITL로 되묻는다"
     },
     "coverage_items": {
       "type": "array",
-      "items": { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "description": "발화 허용 화이트리스트. LLM은 이 범위 밖 주제를 생성하면 안 된다"
     },
     "evidence_pool": {
@@ -25,17 +31,28 @@
       "items": {
         "type": "object",
         "properties": {
-          "path": { "type": "string", "description": "근거 문서 볼트 경로" },
-          "quote": { "type": "string", "description": "인용 가능한 원문 문자열" }
+          "path": {
+            "type": "string",
+            "description": "근거 문서 볼트 경로"
+          },
+          "quote": {
+            "type": "string",
+            "description": "인용 가능한 원문 문자열"
+          }
         },
-        "required": ["path", "quote"],
+        "required": [
+          "path",
+          "quote"
+        ],
         "additionalProperties": false
       }
     },
     "status_map": {
       "type": "object",
       "description": "참조 문서별 최신성/상태 플래그 (예: {'rundown':'final','dashboard':'stale'})",
-      "additionalProperties": { "type": "string" }
+      "additionalProperties": {
+        "type": "string"
+      }
     },
     "forbidden_removed": {
       "type": "boolean",
@@ -45,7 +62,9 @@
     "excluded_headings": {
       "type": "array",
       "description": "이번 방송에서 제외된 섹션의 **이름만**. 본문은 담지 않는다. M8 발견: 진행자가 금칙 섹션을 이름으로 물으면 그 이름이 발화문을 타고 프롬프트에 들어간다. 거절하려면 무엇이 금칙인지 알아야 하므로 이름을 여기까지 가져온다. build_prompt 는 이 필드를 쓰지 않는다.",
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
     "withheld_conditional": {
       "type": "array",
@@ -53,16 +72,65 @@
       "items": {
         "type": "object",
         "properties": {
-          "heading": { "type": "string" },
-          "condition": { "type": "string" },
-          "reason": { "type": "string" }
+          "heading": {
+            "type": "string"
+          },
+          "condition": {
+            "type": "string"
+          },
+          "reason": {
+            "type": "string"
+          }
         },
-        "required": ["heading", "condition", "reason"],
+        "required": [
+          "heading",
+          "condition",
+          "reason"
+        ],
         "additionalProperties": false
       }
     },
-    "assembled_at": { "type": "string", "format": "date-time" }
+    "assembled_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "other_parts": {
+      "type": "array",
+      "description": "현재 파트가 아닌 파트의 이름만 (본문 없음). 다른 파트를 묻는 질문을 이 파트 근거로 답하지 않기 위한 재료 — 사고 10 (2026-09-13)",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "coverage_state": {
+            "type": "string",
+            "enum": [
+              "defined",
+              "directive",
+              "undefined"
+            ],
+            "description": "rundown_index.parts[].coverage_state 와 같은 3분류"
+          }
+        },
+        "required": [
+          "id",
+          "title",
+          "coverage_state"
+        ],
+        "additionalProperties": false
+      }
+    }
   },
-  "required": ["current_part_id", "coverage_state", "coverage_items", "evidence_pool", "forbidden_removed"],
+  "required": [
+    "current_part_id",
+    "coverage_state",
+    "coverage_items",
+    "evidence_pool",
+    "forbidden_removed"
+  ],
   "additionalProperties": false
 }

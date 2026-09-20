@@ -1,0 +1,62 @@
+{
+  "current_part_id": "2",
+  "coverage_state": "defined",
+  "coverage_items": [
+    "Chrome Remote Desktop으로 외부에서 집 컴퓨터 조작",
+    "Live-CoMC 앱 완성본 실사용"
+  ],
+  "evidence_pool": [
+    {
+      "path": "AI/Roundup/2026-09-13 - Live28 Weekly Rundown.md#오늘의 실험#이번 방송 커버리지",
+      "quote": "[확정] 이번 방송 커버리지 — Chrome Remote Desktop으로 외부에서 집 컴퓨터 조작"
+    },
+    {
+      "path": "AI/Roundup/2026-09-13 - Live28 Weekly Rundown.md#오늘의 실험#이번 방송 커버리지",
+      "quote": "[확정] 이번 방송 커버리지 — Live-CoMC 앱 완성본 실사용"
+    },
+    {
+      "path": "AI/Roundup/2026-09-13 - Live28 Weekly Rundown.md#오늘의 실험",
+      "quote": "[확정 항목 현재 상태] 🖥️ Chrome Remote Desktop — 외부에서 집 컴퓨터 화면 조작 — 🔴 이번 방송 확정. 9/19 전 호스트 설치·PIN·절전 정책을 확인하고, 외부 기기에서 YouTube Studio 또는 OBS 화면을 실제 조작한다. 장점·보안·화면 크기·로컬 화면 동작을 실측으로 설명한다"
+    },
+    {
+      "path": "AI/Roundup/2026-09-13 - Live28 Weekly Rundown.md#오늘의 실험",
+      "quote": "[확정 항목 현재 상태] 🎙️ Live-CoMC 앱 — 완성본 음성 출력 실사용 — 🔴 이번 방송 확정. ✅ 9/17 M10c·CVL 1~4 완료: 사고 7~18 수정, 회귀 10/10·14/14·4/4, 무관중 4회차 사고 0으로 A GO·B 조건부 GO. 남은 것은 9/19 프리플라이트에서 콘솔·OBS·REVIEW/LIVE·패닉 스톱을 확인하고, 통과한 모드만 실제 사용한다."
+    },
+    {
+      "path": "AI/Roundup/2026-09-13 - Live28 Weekly Rundown.md#오늘의 실험",
+      "quote": "지난 회차의 교훈"
+    },
+    {
+      "path": "AI/Roundup/2026-09-13 - Live28 Weekly Rundown.md#오늘의 실험",
+      "quote": "**Live26 → Live27**: 커버리지에 올린 항목이 미착수였던 첫 사례(Artifacts)가 다음 회차에 **방송 안에서 M1·M2까지 완료**됐다. 커버리지는 **회차에 묶인 항목을 밀어 주는 힘**이 있다 — 마감 없는 Topic(후보 2)에 특히"
+    },
+    {
+      "path": "AI/Roundup/2026-09-13 - Live28 Weekly Rundown.md#오늘의 실험",
+      "quote": "**Live27 CoMC**: 사고 4건이 전부 화면에서 멈췄다. **B 세션 없이 음성 출력을 켜지 않는다**"
+    }
+  ],
+  "status_map": {
+    "rundown": "final",
+    "2026-09-13 - Weekly Progress and Planning": "missing_section",
+    "2026-09-13 - Weekly Dashboard.canvas": "skipped:canvas",
+    "2026-09-06~2026-09-13 - Claude Code": "missing_section",
+    "2026-09-06 - Live27 Weekly Rundown": "missing_section",
+    "Task Board": "missing_section"
+  },
+  "excluded_headings": [],
+  "withheld_conditional": [],
+  "forbidden_removed": true,
+  "other_parts": [
+    {
+      "id": "1",
+      "title": "지난 주 생성한 컨텐츠",
+      "coverage_state": "undefined"
+    },
+    {
+      "id": "3. 주간 영상",
+      "title": "3. 주간 영상",
+      "coverage_state": "undefined"
+    }
+  ],
+  "assembled_at": "2026-09-18T14:33:42.139158+00:00"
+}

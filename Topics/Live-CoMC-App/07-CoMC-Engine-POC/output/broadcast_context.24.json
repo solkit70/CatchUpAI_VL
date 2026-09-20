@@ -1,0 +1,75 @@
+{
+  "current_part_id": "1",
+  "coverage_state": "defined",
+  "coverage_items": [
+    "FDE 한국어판",
+    "FDE 영어판",
+    "HebronGuide 발표 영상"
+  ],
+  "evidence_pool": [
+    {
+      "path": "AI/Roundup/2026-08-17 - Live24 Weekly Rundown.md#지난 주 생성한 컨텐츠#이번 방송 커버리지",
+      "quote": "[확정] 이번 방송 커버리지 — FDE 한국어판"
+    },
+    {
+      "path": "AI/Roundup/2026-08-17 - Live24 Weekly Rundown.md#지난 주 생성한 컨텐츠#이번 방송 커버리지",
+      "quote": "[확정] 이번 방송 커버리지 — FDE 영어판"
+    },
+    {
+      "path": "AI/Roundup/2026-08-17 - Live24 Weekly Rundown.md#지난 주 생성한 컨텐츠#이번 방송 커버리지",
+      "quote": "[확정] 이번 방송 커버리지 — HebronGuide 발표 영상"
+    },
+    {
+      "path": "AI/Roundup/2026-08-17 - Live24 Weekly Rundown.md#지난 주 생성한 컨텐츠",
+      "quote": "① 연봉 3억 FDE, 도대체 무슨 일을 하나 (28:02)"
+    },
+    {
+      "path": "AI/Roundup/2026-08-17 - Live24 Weekly Rundown.md#지난 주 생성한 컨텐츠",
+      "quote": "[확정 항목 현재 상태] 연봉 3억 FDE, 도대체 무슨 일을 하나 \\ — Forward Deployed Engineer 완전 정리 \\"
+    },
+    {
+      "path": "AI/Roundup/2026-08-17 - Live24 Weekly Rundown.md#지난 주 생성한 컨텐츠",
+      "quote": "② The $320K AI Job Nobody Explains (27:12)"
+    },
+    {
+      "path": "AI/Roundup/2026-08-17 - Live24 Weekly Rundown.md#지난 주 생성한 컨텐츠",
+      "quote": "③ 목사님이 바이브 코딩에 빠져서 만든 앱 [ENG SUB] (38:33)"
+    },
+    {
+      "path": "Roundup/2026-08-22 - Daily Roundup#Status Summary",
+      "quote": "4차 모임 영상 1편 — ✅ 공개 (38:32, https://youtu.be/vXPCbt47rok)"
+    },
+    {
+      "path": "Roundup/2026-08-22 - Daily Roundup#Status Summary",
+      "quote": "4차 모임 영상 2편 (Bila AI Agent) — 🔄 한국어 전사 검토 완료, 번역·렌더링 진행 중"
+    },
+    {
+      "path": "Roundup/2026-08-22 - Daily Roundup#Status Summary",
+      "quote": "4차 모임 영상 3·4편 — ⏸ 미착수 (손민수 장애 대응 에이전트, Dokyu Lee Quant 에이전트)"
+    }
+  ],
+  "status_map": {
+    "rundown": "final",
+    "2026-08-23 - Live24 업로드 자료": "missing_section",
+    "2026-08-17 - Weekly Progress and Planning": "missing_section",
+    "2026-08-22 - Daily Roundup": "ok:3/6"
+  },
+  "excluded_headings": [
+    "보류된 인사이트 후보 (다음 방송 검토용)"
+  ],
+  "withheld_conditional": [],
+  "forbidden_removed": true,
+  "other_parts": [
+    {
+      "id": "2",
+      "title": "오늘의 실험",
+      "coverage_state": "defined"
+    },
+    {
+      "id": "주간 영상",
+      "title": "주간 영상",
+      "coverage_state": "defined"
+    }
+  ],
+  "assembled_at": "2026-09-17T15:05:57.219532+00:00"
+}

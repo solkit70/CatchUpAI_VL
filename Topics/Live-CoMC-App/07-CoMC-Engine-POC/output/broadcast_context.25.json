@@ -1,0 +1,42 @@
+{
+  "current_part_id": "1",
+  "coverage_state": "defined",
+  "coverage_items": [
+    "Builders Lounge 4차 모임 영상 작업 완료"
+  ],
+  "evidence_pool": [
+    {
+      "path": "Ingest/CatchUpAI_VL/Topics/Live-CoMC-App/07-CoMC-Engine-POC/data/rundown_samples/2026-08-23 - Live25 Weekly Rundown.md#지난 주 생성한 컨텐츠#이번 방송 커버리지",
+      "quote": "[확정] 이번 방송 커버리지 — Builders Lounge 4차 모임 영상 작업 완료"
+    },
+    {
+      "path": "Ingest/CatchUpAI_VL/Topics/Live-CoMC-App/07-CoMC-Engine-POC/data/rundown_samples/2026-08-23 - Live25 Weekly Rundown.md#지난 주 생성한 컨텐츠",
+      "quote": "[확정 항목 현재 상태] Builders Lounge 4차 3편 (Dokyu Lee · Quant 에이전트) — 공개 완료 (8/24) — https://youtu.be/dsl7CZCCAh4"
+    },
+    {
+      "path": "Ingest/CatchUpAI_VL/Topics/Live-CoMC-App/07-CoMC-Engine-POC/data/rundown_samples/2026-08-23 - Live25 Weekly Rundown.md#지난 주 생성한 컨텐츠",
+      "quote": "[확정 항목 현재 상태] Builders Lounge 4차 4편 (손민수 · 장애 대응 에이전트) — 콘텐츠 작업 완료 (8/27)"
+    }
+  ],
+  "status_map": {
+    "rundown": "unconfirmed"
+  },
+  "excluded_headings": [
+    "보류된 인사이트 후보 (다음 방송 검토용)"
+  ],
+  "withheld_conditional": [],
+  "forbidden_removed": true,
+  "other_parts": [
+    {
+      "id": "2",
+      "title": "오늘의 실험",
+      "coverage_state": "defined"
+    },
+    {
+      "id": "주간 영상",
+      "title": "주간 영상",
+      "coverage_state": "undefined"
+    }
+  ],
+  "assembled_at": "2026-09-17T15:05:57.229345+00:00"
+}
