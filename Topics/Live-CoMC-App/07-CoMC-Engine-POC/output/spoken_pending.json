@@ -1,7 +1,7 @@
 {
-  "text": "오늘 1부에서는 DFS Crowd Manager 영상 한국어판 공개를 다룹니다. 한국어 영상은 여기에서 보실 수 있어요: https://youtu.be/ytntz1bY0RI.",
+  "text": "일정 관리 앱은 9월 12일에 시작됐고, 처리 중인 일 62건 중 5건이 이미 기한을 넘겨 AI 와 한 시간 넘게 우선순위를 다시 정리해 보니 다음 주면 또 흐트러질 거라서, Jira 나 Trello 대신 제게 맞는 도구를 직접 만들기로 했습니다.",
   "provider": "edge",
   "voice": "ko-KR-SunHiNeural",
   "audio_path": null,
-  "spoken_at": "2026-09-20T12:07:09.194767+00:00"
+  "spoken_at": "2026-09-26T07:31:02.060394+00:00"
 }

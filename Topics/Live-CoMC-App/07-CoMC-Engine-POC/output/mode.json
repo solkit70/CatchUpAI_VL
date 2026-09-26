@@ -1,5 +1,5 @@
 {
-  "mode": "LIVE",
-  "reason": "콘솔 버튼 (LIVE)",
-  "changed_at": "2026-09-20T14:40:21.361346+00:00"
+  "mode": "MUTE",
+  "reason": "패닉 스톱 (Ctrl+Alt+Space)",
+  "changed_at": "2026-09-26T07:43:54.452462+00:00"
 }

@@ -1,49 +1,19 @@
 {
   "pass": false,
   "absence_by_closure": [],
-  "final_text": "이 과정에서 창수님이 하루 다섯 번 리허설을 돌리며 화면 자막, 음성, 브라우저 콘솔, 시청자 언급과 다국어 끝인사까지 갖춰 실전 점검을 끝냈어요. 또 DFS Crowd Management 교육 영상을 사람 손으로 다듬어 같은 클립 반복을 없애고 느린 재생으로 보기 편하게 바꾸고, 발음·표현을 시청자 눈높이에 맞게 전면 수정한 뒤 한·영 버전으로 유튜브에 공개했습니다. 9월 16일에는 Builders Lounge 5차 모임에서 10분 발표를 완수했고, 그동안 준비해 온 바이브 코딩 온보딩 모델을 숫자로 묶어 최종 확정하며 소개 영상의 큰 줄기도 잡았습니다. Live 28 준비는 런다운과 실제 사용 시나리오까지 마무리해, 일요일 2부에서 Chrome Remote Desktop을 직접 배우고 설치해 외부 기기 접속까지 해 보는 실험으로 확정했어요.",
+  "final_text": "아키텍처를 미리 다 정하지 않고 AI 와 대화하며 내린 결정을 아키텍처 문서에 쌓아 가는 방식으로 갑니다. 설계 전에 업계에서는 보통 어떻게 하는지 먼저 묻고, 다 만들고 나면 다음 앱에 재사용할 아키텍처가 남도록 합니다. 오늘은 VibeLearn AI 로 이 Topic 을 만들고, 시작의 기록인 M0부터 진행합니다.",
   "kept_sentences": [
+    0,
     1,
-    2,
-    3,
-    4
+    2
   ],
-  "dropped_sentences": [
-    {
-      "sentence_idx": 0,
-      "reason": "fact_not_in_evidence"
-    },
-    {
-      "sentence_idx": 5,
-      "reason": "length_hardcut"
-    },
-    {
-      "sentence_idx": 6,
-      "reason": "fact_not_in_evidence"
-    },
-    {
-      "sentence_idx": 7,
-      "reason": "fact_not_in_evidence"
-    }
-  ],
+  "dropped_sentences": [],
   "violations": [
     {
-      "rule_id": "claim.facts_must_be_quoted",
-      "detail": "문장 0: 고유명사 'Catch'"
-    },
-    {
-      "rule_id": "claim.facts_must_be_quoted",
-      "detail": "문장 6: 고유명사 'MVP'"
-    },
-    {
-      "rule_id": "claim.facts_must_be_quoted",
-      "detail": "문장 7: 고유명사 'Catch'"
-    },
-    {
-      "rule_id": "length_hardcut",
-      "detail": "471자 → 418자 (상한 450자, level=casual)"
+      "rule_id": "content_empty",
+      "detail": "'무엇을' 질문인데 커버리지 항목 3개 중 어느 것도 답변에 나오지 않았다 — 근거는 있으나 내용이 없다"
     }
   ],
-  "length_after": 4,
-  "verified_at": "2026-09-20T14:45:00.835409+00:00"
+  "length_after": 3,
+  "verified_at": "2026-09-26T07:40:46.531371+00:00"
 }

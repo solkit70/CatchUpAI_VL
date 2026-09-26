@@ -35,7 +35,16 @@ comc
 
 이 한 줄이 ① 오늘 Rundown 파싱 ② 1부 컨텍스트 ③ 모드 REVIEW ④ 콘솔 기동(오버레이 서버 · 재생기 · 핫키 · 엔진) ⑤ 브라우저 탭 열기까지 한다. 약 5초 뒤 탭이 뜨면 「프리플라이트 → 지금 점검」을 누르고 **FAIL 0** 인지 본다 (WARN 2 는 정상 — 1부 커버리지 미정 · 타임라인 샘플). FAIL 이 있으면 그 줄을 읽고 고친 뒤 다시.
 
-OBS 는 `Untitled` 프로필 그대로 — Audio Input Capture 모니터링 Enabled · 모니터링 장치 Buds · Desktop Audio Realtek (9/17 설정). 영상을 틀 회차면 Desktop Audio 를 Buds 로 되돌린다.
+OBS 는 `Untitled` 프로필 그대로 — Audio Input Capture 모니터링 Enabled · 모니터링 장치 Buds. **Scene Collection 이 `Live` 인지 본다** (상단 메뉴 Scene Collection). 컬렉션은 둘이다 — **9/25 실제 생성·파일 확인** (9/20 에 계획만 적혀 있었고 실제로는 `Untitled` 하나였다). Desktop Audio·Mic/Aux 장치는 컬렉션에 저장되므로 고르는 것만으로 바뀐다. ⚠️ **장치를 바꾸기 전에 반드시 컬렉션부터 전환한다** — 켜진 컬렉션의 값이 덮어써진다 (9/25 복제 전에 바꿔 녹화용까지 방송용이 됐다):
+
+| Scene Collection | Desktop Audio | Mic/Aux | 언제 |
+|---|---|---|---|
+| **`Live`** | Speaker (Realtek) — Buds 로 두면 CoMC 소리가 두 번 난다 | Motiv Mix (Shure) | 라이브 방송 |
+| `Recording` | Headphones (Galaxy Buds2 Pro) | Microphone Array (내장) | 마이크 없이 화면+유튜브 소리+목소리 녹화 |
+
+📌 **매주 방송 전 — `Live` 의 채팅 Browser 소스 URL 을 이번 주 방송 ID 로 바꾼다** (`https://studio.youtube.com/live_chat?is_popout=1&v=<방송ID>`). 9/25 확인 때 지난 방송 ID(`o7EdTYymoRs`)가 남아 있었다. `CoMC-Test` 컬렉션은 영상 소스가 없어 쓰지 않는다.
+
+⚠️ Motiv Mix 는 USB 를 꽂아야 목록에 나온다 — 꽂기 전에 `Live` 를 열면 Mic/Aux 가 비어 보인다. **Buds 마이크(Headset)는 어느 쪽에서도 고르지 않는다** — 고르는 순간 블루투스가 통화 모드로 바뀌어 Buds 출력 음질이 떨어지고 Desktop Audio 캡처가 끊긴다 (9/20 Live #28 이어폰 무음의 유력 원인). 영상을 틀 회차면 `Live` 에서 Desktop Audio 를 Buds 로 되돌린다.
 
 ⚠️ **OBS 가 먼저 켜져 있었다면** Browser Source 가 서버 없는 상태로 굳어 오버레이가 안 보인다 (9/17 실사고 15). Sources 에서 「Co-MC 오버레이」 클릭 → 소스 툴바 **Refresh**. 순서를 `start_comc.ps1` → OBS 로 하면 이 일이 없다. 「Co-MC 오버레이」가 2개면 하나는 눈을 꺼 둔다 (겹치면 글자가 두꺼워진다).
 
@@ -101,6 +110,8 @@ OBS 는 `Untitled` 프로필 그대로 — Audio Input Capture 모니터링 Enab
 | **자막(오버레이)만 치우기** | 오버레이 칸 오른쪽 **「화면 지우기」** 버튼 — 소리·모드는 그대로. 급하면 OBS 「Co-MC 오버레이」 눈 아이콘 |
 | 앱 전부 종료 | PowerShell 창에서 **Ctrl+C** 한 번. 오버레이 서버도 같이 꺼지므로 OBS 오버레이가 사라진다 |
 
+⚠️ **Space 만 누르지 않는다** (9/26 리허설) — 패닉 핫키는 **Ctrl+Alt+Space** 다. 콘솔 탭에서 Space 만 누르면 브라우저가 **마지막에 누른 버튼을 다시 누른다** — 「15개 국어」는 확인 창이 떠서 멈췄지만 날씨·이번 주 한 일 같은 버튼이면 확인 없이 바로 말을 시작한다. 9/26 콘솔 수정: 버튼은 누르는 즉시 포커스를 놓고, 버튼 위의 Space·Enter 는 무시한다(콘솔 재시작 후 적용). 화면 안내 문구도 「Ctrl+Alt+Space = 패닉」으로 고쳤다.
+
 ## 5. 방송 후
 
 `07-CoMC-Engine-POC/output/` 의 `daemon_latency.json` · `session_trace.jsonl` · `spoken_log.jsonl` 을 `output/debug/live28/` 로 옮기고, Rundown 「방송 후 기록」에 CoMC 한 줄(시도/통과/침묵/사고). 사고가 있으면 [incident-classification.md](incident-classification.md) 에 번호를 붙인다. 콘솔 탭의 「결과」 목록은 프로세스를 끄면 사라지니, 남길 게 있으면 끄기 전에 본다.
@@ -109,7 +120,8 @@ OBS 는 `Untitled` 프로필 그대로 — Audio Input Capture 모니터링 Enab
 
 - **소리가 안 난다** → 배지가 LIVE 인가 — 패닉 뒤 REVIEW 를 눌렀으면 화면만 나온다, **LIVE** 를 누른다 · 로그에 `player ⛔` 가 있나 · OBS 모니터링 장치가 Buds 인가
 - **질문했는데 「비어 있음」이고 결과 줄에 `⛔ 04 unknown`** → ③ 이 질문으로 못 알아들은 것. 「~뭐예요 / 어디까지 / 설명해 주세요 / 알려 주세요」 꼴로 다시. 새 말투가 자주 걸리면 `03_classify_intent.py` INTENT_RULES 에 추가하고 콘솔 재시작 (Ctrl+C → 다시 `comc`)
-- **소리가 두 번 난다** → Desktop Audio 가 Buds 로 되돌아가 있다 → Realtek 으로
+- **소리가 두 번 난다** → Scene Collection 이 `Recording` 이거나 Desktop Audio 가 Buds 로 되돌아가 있다 → `Live` 로 / Realtek 으로
+- **마이크 막대가 안 움직인다** → Mic/Aux 가 안 꽂힌 장치를 가리킨다 (Motiv 미연결) → Motiv 를 꽂거나, 녹화라면 `Recording` 컬렉션(내장 마이크)
 - **답이 후보를 말한다 / 상태를 안 말한다** → Rundown 이 앱이 읽는 형식인지 (`rundown-writer` 스킬 「CoMC 앱이 읽는 방식」)
 - **파트 바꿨는데 옛 파트 얘기를 한다** → 상단 「파트」 표시가 바뀌었는지. 콘솔 버튼과 핫키는 같은 `session_state.json` 을 바꾼다
 - **너무 길게 말한다** → `safety_policy.json` `length_hardcut.max_chars` (원본 + `data/` 사본 둘 다)

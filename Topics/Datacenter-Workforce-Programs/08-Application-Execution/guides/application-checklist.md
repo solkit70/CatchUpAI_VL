@@ -220,7 +220,7 @@ M7 탈락선 3번(*"주 3일 이상 현지 체류 시 탈락"*)은 **통학형�
 
 ### 🔄 공고 수 추이 — 왜 알림이 필요한지 보여준다
 
-`amazon.jobs` 검색 JSON 직접 조회 (`search.json?base_query=work-based+learning&country[]=USA`)
+`amazon.jobs` 검색 JSON 직접 조회 (`search.json?base_query=work-based+learning&normalized_country_code[]=USA`)
 
 | 조사일 | 전 세계 | 미국 | 워싱턴주 |
 |---|---:|---|---|
@@ -262,7 +262,7 @@ M7 탈락선 3번(*"주 3일 이상 현지 체류 시 탈락"*)은 **통학형�
 #### 지금 할 행동
 
 - [ ] **amazon.jobs job alert 등록** — Kent WA · 데이터센터 직무
-- [ ] 검색 API 주기 확인 (`search.json?base_query=work-based+learning&country[]=USA`)
+- [ ] 검색 API 주기 확인 (`search.json?base_query=work-based+learning&normalized_country_code[]=USA`)
 - [ ] **이력서 영문본을 미리 만들어 둔다** — 공고는 예고 없이 뜨고 빨리 닫힌다
 
 ---

@@ -1,0 +1,96 @@
+{
+  "source_path": "AI/Roundup/2026-09-20 - Live29 Weekly Rundown.md",
+  "is_final": true,
+  "parts": [
+    {
+      "id": "0",
+      "sort_key": 0.0,
+      "is_numbered": true,
+      "title": "인트로",
+      "time_raw": "5분",
+      "time_minutes": 5,
+      "is_remainder": false,
+      "coverage_state": "defined",
+      "coverage_items": [
+        "AI in Action 29번째 방송",
+        "Builders Lounge",
+        "오늘의 주제 나만의 일정 관리 앱 개발 시작",
+        "CoMC 두 번째 실전",
+        "Chrome Remote Desktop 마무리와 영상 제작"
+      ],
+      "directive_note": null
+    },
+    {
+      "id": "1",
+      "sort_key": 1.0,
+      "is_numbered": true,
+      "title": "지난주 생성 콘텐츠",
+      "time_raw": "8분",
+      "time_minutes": 8,
+      "is_remainder": false,
+      "coverage_state": "defined",
+      "coverage_items": [
+        "총기난사 대처 요령 공익 영상 한·영",
+        "Builders Lounge 5차 발표 영상"
+      ],
+      "directive_note": null
+    },
+    {
+      "id": "2",
+      "sort_key": 2.0,
+      "is_numbered": true,
+      "title": "오늘의 실험",
+      "time_raw": "45~55분",
+      "time_minutes": 55,
+      "is_remainder": false,
+      "coverage_state": "defined",
+      "coverage_items": [
+        "나만의 일정 관리 앱(Personal Ops Board) M1 인덱서",
+        "CoMC 테스트 계속",
+        "Chrome Remote Desktop 정리와 영상 제작"
+      ],
+      "directive_note": null
+    },
+    {
+      "id": "3",
+      "sort_key": 3.0,
+      "is_numbered": true,
+      "title": "시간 여유 시 학습",
+      "time_raw": "최대 20분",
+      "time_minutes": 20,
+      "is_remainder": false,
+      "coverage_state": "directive",
+      "coverage_items": [
+        "Claude Artifacts & Routines",
+        "Seattle AI Week 준비"
+      ],
+      "directive_note": "시간이 남으면 진행한다"
+    },
+    {
+      "id": "4",
+      "sort_key": 4.0,
+      "is_numbered": true,
+      "title": "아웃트로",
+      "time_raw": "5분",
+      "time_minutes": 5,
+      "is_remainder": false,
+      "coverage_state": "undefined",
+      "coverage_items": [],
+      "directive_note": null
+    }
+  ],
+  "excluded_sections": [
+    {
+      "heading": "주간 영상 (이번 방송 미편성)",
+      "reason": "unscheduled"
+    },
+    {
+      "heading": "유튜브 업로드 자료 (이번 방송 미편성)",
+      "reason": "unscheduled"
+    }
+  ],
+  "conditional_sections": [],
+  "parse_anomalies": [],
+  "parsed_at": "2026-09-26T07:57:32.971482+00:00",
+  "frontmatter_status": "'✅ 커버리지 확정 (9/26) — 0~3부 확정 · 주간 영상 미편성'"
+}

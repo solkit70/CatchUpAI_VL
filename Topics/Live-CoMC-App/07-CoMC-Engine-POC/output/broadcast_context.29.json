@@ -1,0 +1,96 @@
+{
+  "current_part_id": "2",
+  "coverage_state": "defined",
+  "coverage_items": [
+    "나만의 일정 관리 앱(Personal Ops Board) M1 인덱서",
+    "CoMC 테스트 계속",
+    "Chrome Remote Desktop 정리와 영상 제작"
+  ],
+  "evidence_pool": [
+    {
+      "path": "AI/Roundup/2026-09-20 - Live29 Weekly Rundown.md#오늘의 실험#이번 방송 커버리지",
+      "quote": "[확정] 이번 방송 커버리지 — 나만의 일정 관리 앱(Personal Ops Board) M1 인덱서"
+    },
+    {
+      "path": "AI/Roundup/2026-09-20 - Live29 Weekly Rundown.md#오늘의 실험#이번 방송 커버리지",
+      "quote": "[확정] 이번 방송 커버리지 — CoMC 테스트 계속"
+    },
+    {
+      "path": "AI/Roundup/2026-09-20 - Live29 Weekly Rundown.md#오늘의 실험#이번 방송 커버리지",
+      "quote": "[확정] 이번 방송 커버리지 — Chrome Remote Desktop 정리와 영상 제작"
+    },
+    {
+      "path": "AI/Roundup/2026-09-20 - Live29 Weekly Rundown.md#오늘의 실험",
+      "quote": "[확정 항목 현재 상태] 나만의 일정 관리 앱(Personal Ops Board) M1 인덱서 — 예정 — 준비 완료(9/25), 오늘 VibeLearn AI Topic 시작 · M0 · 첫 코드"
+    },
+    {
+      "path": "AI/Roundup/2026-09-20 - Live29 Weekly Rundown.md#오늘의 실험",
+      "quote": "[확정 항목 현재 상태] CoMC 테스트 계속 — 진행 중 — 지난주 첫 실전 완료, 오늘 두 번째 실전"
+    },
+    {
+      "path": "AI/Roundup/2026-09-20 - Live29 Weekly Rundown.md#오늘의 실험",
+      "quote": "[확정 항목 현재 상태] Chrome Remote Desktop 정리와 영상 제작 — 진행 중 — M1~M3 완료, M4 는 iPhone 접속만 남음, 안내 영상은 오늘 시작"
+    },
+    {
+      "path": "AI/Roundup/2026-09-20 - Live29 Weekly Rundown.md#오늘의 실험",
+      "quote": "일정 관리 앱은 9월 12일에 시작됐습니다. 그날 처리 중인 일이 62건이었고 그중 5건은 이미 날짜가 지나 있어서, AI 와 한 시간 넘게 손으로 우선순위를 다시 정리했습니다. 다음 주면 또 흐트러질 정리라서 Jira 나 Trello 같지만 나한테 맞는 도구를 만들기로 했습니다. 원본은 내 마크다운 파일이고 AI 에이전트가 유지하며, 일을 시키는 상관이 아니라 사람이 판단하도록 돕는 도구입니다."
+    },
+    {
+      "path": "AI/Roundup/2026-09-20 - Live29 Weekly Rundown.md#오늘의 실험",
+      "quote": "앱보다 데이터를 먼저 키웠습니다. 2주 동안 할 일 하나를 파일 하나로 기록해 23건에서 55건이 됐고, 규칙이 안 맞을 때마다 결정 로그에 9건을 남겼습니다. 오늘은 이 파일들을 읽기만 하는 첫 코드인 인덱서를 만들어, 하나도 빠짐없이 읽히는지와 규칙 위반을 제대로 찾아내는지 확인합니다."
+    },
+    {
+      "path": "AI/Roundup/2026-09-20 - Live29 Weekly Rundown.md#오늘의 실험",
+      "quote": "개발 방식은 Builders Lounge 5차 모임에서 다른 빌더에게 배운 방식으로, 아키텍처를 미리 다 정하지 않고 AI 와 대화하며 내린 결정을 아키텍처 문서에 쌓아 가며 만듭니다. 설계 전에 업계에서는 보통 어떻게 하는지 먼저 묻고, 다 만들고 나면 다음 앱에 재사용할 아키텍처가 남습니다. 오늘은 VibeLearn AI 로 이 Topic 을 만들고, 시작의 기록(M0)부터 합니다."
+    },
+    {
+      "path": "AI/Roundup/2026-09-20 - Live29 Weekly Rundown.md#오늘의 실험",
+      "quote": "CoMC: 지난주 첫 실전에서 이어폰 무음, 마이크 끊김, 같은 문장 반복 같은 사고가 있었지만 방송은 끊기지 않았고, 오늘도 방송 내내 함께하며 더 고칠 점을 정리합니다. 다음 주부터는 Rundown 뿐 아니라 진행자의 지난 기록, 웹 검색, 「재밌는 얘기 해 봐」에는 지어낸 이야기까지 골라서 답하도록 고쳐 나갈 계획이고, 새 기능은 처음에 화면으로 먼저 확인한 뒤에 말하게 합니다."
+    },
+    {
+      "path": "AI/Roundup/2026-09-20 - Live29 Weekly Rundown.md#오늘의 실험",
+      "quote": "Chrome Remote Desktop: 보안 점검까지 마쳤고, 오늘은 iPhone 으로 밖에서 쓰는 통신망(LTE)으로 처음 접속해 봅니다. 그다음 지금까지 배운 것(기본값이 개인 정보를 드러내는 함정, 보안 점검표, 외부 접속 결과)을 정리하고, 누구나 따라 하는 안내 영상 만들기를 시작합니다."
+    }
+  ],
+  "status_map": {
+    "rundown": "final",
+    "2026-09-20 - Weekly Progress and Planning": "missing_section",
+    "2026-09-20 - Weekly Dashboard.canvas": "skipped:canvas",
+    "2026-09-13 - Live28 Weekly Rundown": "missing_section",
+    "2026-09-13~2026-09-20 - Claude Code": "missing_section",
+    "Task Board": "missing_section"
+  },
+  "excluded_headings": [
+    "유튜브 업로드 자료 (이번 방송 미편성)"
+  ],
+  "withheld_conditional": [],
+  "forbidden_removed": true,
+  "other_parts": [
+    {
+      "id": "0",
+      "title": "인트로",
+      "coverage_state": "defined"
+    },
+    {
+      "id": "1",
+      "title": "지난주 생성 콘텐츠",
+      "coverage_state": "defined"
+    },
+    {
+      "id": "3",
+      "title": "시간 여유 시 학습",
+      "coverage_state": "directive"
+    },
+    {
+      "id": "주간 영상",
+      "title": "주간 영상",
+      "coverage_state": "undefined"
+    },
+    {
+      "id": "4",
+      "title": "아웃트로",
+      "coverage_state": "undefined"
+    }
+  ],
+  "assembled_at": "2026-09-26T07:35:04.471719+00:00"
+}

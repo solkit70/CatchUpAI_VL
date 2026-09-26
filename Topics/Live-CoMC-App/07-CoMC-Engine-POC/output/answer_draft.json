@@ -1,78 +1,28 @@
 {
   "sentences": [
-    "시청자 여러분, Catch Up AI에서는 이번 주에 CoMC 앱을 실제 방송에 투입할 수준으로 마무리했고, Live 28에서 통과한 모드만 쓰기로 정리했습니다.",
-    "이 과정에서 창수님이 하루 다섯 번 리허설을 돌리며 화면 자막, 음성, 브라우저 콘솔, 시청자 언급과 다국어 끝인사까지 갖춰 실전 점검을 끝냈어요.",
-    "또 DFS Crowd Management 교육 영상을 사람 손으로 다듬어 같은 클립 반복을 없애고 느린 재생으로 보기 편하게 바꾸고, 발음·표현을 시청자 눈높이에 맞게 전면 수정한 뒤 한·영 버전으로 유튜브에 공개했습니다.",
-    "9월 16일에는 Builders Lounge 5차 모임에서 10분 발표를 완수했고, 그동안 준비해 온 바이브 코딩 온보딩 모델을 숫자로 묶어 최종 확정하며 소개 영상의 큰 줄기도 잡았습니다.",
-    "Live 28 준비는 런다운과 실제 사용 시나리오까지 마무리해, 일요일 2부에서 Chrome Remote Desktop을 직접 배우고 설치해 외부 기기 접속까지 해 보는 실험으로 확정했어요.",
-    "마지막으로 Seattle AI Week 로드맵은 다시 검토해 현재 계획대로 간다고 정리했습니다.",
-    "그리고 창수님은 이번 주 기록에서, 혼자 쓰는 MVP 앱과 많은 사람이 쓰는 서비스는 전혀 다른 게임이라며, 배포·데이터·백엔드·관리자 모드·테스트·배포·홍보까지 보이지 않는 준비가 진짜 일이라고 짚어 주셨어요.",
-    "그래서 Catch Up AI의 선택도 ‘새 기능 추가’보다 ‘실전 투입과 정돈’에 무게를 둬, 방송에서 바로 쓰며 고치고 다음 실험으로 이어가도록 맞췄습니다."
+    "아키텍처를 미리 다 정하지 않고 AI 와 대화하며 내린 결정을 아키텍처 문서에 쌓아 가는 방식으로 갑니다.",
+    "설계 전에 업계에서는 보통 어떻게 하는지 먼저 묻고, 다 만들고 나면 다음 앱에 재사용할 아키텍처가 남도록 합니다.",
+    "오늘은 VibeLearn AI 로 이 Topic 을 만들고, 시작의 기록인 M0부터 진행합니다."
   ],
   "claim_map": [
     {
       "sentence_idx": 0,
-      "evidence_path": "AI/Roundup/2026-09-17 - Daily Roundup.md#Summary",
-      "evidence_quote": "2026-09-17: CoMC는 하루 다섯 세션을 거쳐 화면 글자 출력에서 음성·브라우저 콘솔·50초 캐주얼 진행·시청자 언급·영어 응답·15개 언어 끝인사까지 갖췄다. 4회차 리허설은 사고 10건 중 0건으로 A GO, 음성 B는 조건부 GO 판정을 받았고, Live 28에서는 통과한 모드만 사용한다."
+      "evidence_path": "AI/Roundup/2026-09-20 - Live29 Weekly Rundown.md#오늘의 실험",
+      "evidence_quote": "개발 방식은 Builders Lounge 5차 모임에서 다른 빌더에게 배운 방식으로, 아키텍처를 미리 다 정하지 않고 AI 와 대화하며 내린 결정을 아키텍처 문서에 쌓아 가며 만듭니다."
     },
     {
       "sentence_idx": 1,
-      "evidence_path": "AI/Roundup/2026-09-17 - Daily Roundup.md#Summary",
-      "evidence_quote": "2026-09-17: CoMC는 하루 다섯 세션을 거쳐 화면 글자 출력에서 음성·브라우저 콘솔·50초 캐주얼 진행·시청자 언급·영어 응답·15개 언어 끝인사까지 갖췄다."
+      "evidence_path": "AI/Roundup/2026-09-20 - Live29 Weekly Rundown.md#오늘의 실험",
+      "evidence_quote": "설계 전에 업계에서는 보통 어떻게 하는지 먼저 묻고, 다 만들고 나면 다음 앱에 재사용할 아키텍처가 남습니다."
     },
     {
       "sentence_idx": 2,
-      "evidence_path": "AI/Roundup/2026-09-18 - Daily Roundup.md#Summary",
-      "evidence_quote": "2026-09-18: 어제 미디어를 연결해 둔 영상을 창수님가 직접 보면서 고쳤다 — 같은 클립이 여러 슬라이드에 반복되던 것을 영상 5개가 슬라이드 하나씩 한 번만 느리게 재생되도록 바꾸고, 결함이 있는 두 클립(V04·V05)의 앞부분을 잘라 냈으며, 이미지가 여러 장인 슬라이드는 한 번씩만 서로 다른 전환으로 보이게 했다."
-    },
-    {
-      "sentence_idx": 2,
-      "evidence_path": "AI/Roundup/2026-09-18 - Daily Roundup.md#Summary",
-      "evidence_quote": "2026-09-18: 마지막으로 Codex 가 쓴 나레이션 19편을 시민단체 실무자가 듣고 바로 이해할 말로 전부 다시 쓰고, CISA 를 「싸이사」로 읽던 발음을 「씨아이에스에이」처럼 글자 단위로 고쳐 오디오를 새로 만들었다."
-    },
-    {
-      "sentence_idx": 2,
-      "evidence_path": "AI/Roundup/2026-09-19 - Daily Roundup.md#Today's Work",
-      "evidence_quote": "2026-09-19 한 일: DFS Crowd Management 영상 한·영 공개 완료 — DFS Crowd Management 영상은 한국어판과 영어판을 각각 렌더링하고 YouTube에 공개했다."
-    },
-    {
-      "sentence_idx": 3,
-      "evidence_path": "AI/Roundup/2026-09-16 - Daily Roundup.md#Summary",
-      "evidence_quote": "2026-09-16: 수요일이었던 오늘은 지난 몇 주간 심혈을 기울여 준비해 온 Builders Lounge 5차 모임에서 10분 발표(「AI와 함께 몰락해 가는 유튜브 채널을 살린 과정」)를 성공적으로 완수하고, 동시에 그동안 축적되어 온 바이브 코딩 온보딩 비즈니스 모델을 구체적 숫자로 최종 확정하며 이를 알릴 소개 영상 10막 구상까지 정립한 결실의 하루였다."
-    },
-    {
-      "sentence_idx": 4,
-      "evidence_path": "AI/Roundup/2026-09-13 - Weekly Progress and Planning.md#Weekly Summary",
-      "evidence_quote": "Chrome Remote Desktop은 토요일 사전 검증이 아니라 일요일 2부 실습으로 확정했다."
-    },
-    {
-      "sentence_idx": 4,
-      "evidence_path": "AI/Roundup/2026-09-19 - Daily Roundup.md#Today's Work",
-      "evidence_quote": "2026-09-19 한 일: Live 28 사전 준비 완료 — Live 28의 Rundown과 실사용 시나리오를 확정했다."
-    },
-    {
-      "sentence_idx": 5,
-      "evidence_path": "AI/Roundup/2026-09-19 - Daily Roundup.md#Today's Work",
-      "evidence_quote": "2026-09-19 한 일: Seattle AI Week 로드맵 검토 완료 — Seattle AI Week 로드맵은 현재 계획대로 진행하기로 했다."
-    },
-    {
-      "sentence_idx": 6,
-      "evidence_path": "AI/Roundup/2026-09-19 - Daily Roundup.md#Summary",
-      "evidence_quote": "2026-09-19: 오늘은 새 기능을 더 만드는 날이 아니라, 이번 주에 만든 것을 공개하고 다음 실전에 맞게 정렬한 날이다."
-    },
-    {
-      "sentence_idx": 6,
-      "evidence_path": "AI/Roundup/2026-09-17 - Daily Roundup.md#Today's Work",
-      "evidence_quote": "2026-09-17 한 일: Live-CoMC-App 완성 및 Live 28 투입 준비"
-    },
-    {
-      "sentence_idx": 7,
-      "evidence_path": "AI/Roundup/2026-09-19 - Daily Roundup.md#Summary",
-      "evidence_quote": "2026-09-19: 오늘은 새 기능을 더 만드는 날이 아니라, 이번 주에 만든 것을 공개하고 다음 실전에 맞게 정렬한 날이다."
+      "evidence_path": "AI/Roundup/2026-09-20 - Live29 Weekly Rundown.md#오늘의 실험",
+      "evidence_quote": "오늘은 VibeLearn AI 로 이 Topic 을 만들고, 시작의 기록(M0)부터 합니다."
     }
   ],
   "coverage_state": "defined",
-  "length_sentences": 8,
+  "length_sentences": 3,
   "provider": "openai",
-  "created_at": "2026-09-20T14:45:00.819315+00:00"
+  "created_at": "2026-09-26T07:40:46.525639+00:00"
 }

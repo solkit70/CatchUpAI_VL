@@ -406,7 +406,7 @@ textarea{width:100%;font:inherit;background:#0b1118;color:var(--ink);border:1px 
   <button class="live" onclick="setMode('LIVE')">LIVE · 소리</button>
   <button class="mute" onclick="setMode('MUTE')">MUTE</button></div>
   <button class="panic" onclick="post('/api/panic')">■ 패닉 — 지금 말하는 것 끊기</button>
-  <div class="meta" style="margin-top:6px">핫키도 살아 있습니다: Ctrl+Alt+L/R/M · Space · 1~9</div></div>
+  <div class="meta" style="margin-top:6px">핫키: <b>Ctrl+Alt+Space = 패닉</b> · Ctrl+Alt+L/R/M = 모드 · Ctrl+Alt+1~9 = 파트 · <b>Space 만 누르면 안 됩니다</b> (마지막에 누른 버튼이 다시 눌려요)</div></div>
  <div class="card" style="margin-top:14px"><h2>파트</h2><div id="parts" class="row"></div></div>
  <div class="card" style="margin-top:14px"><h2>캐주얼 브리프 (이번 주 기록 · 날씨) <button style="float:right;padding:4px 10px;font-size:13px" onclick="post('/api/brief')">다시 만들기</button></h2><div id="brief" class="pf">없음 — 「다시 만들기」</div></div>
  <div class="card" style="margin-top:14px"><h2>프리플라이트</h2><div class="row"><button onclick="post('/api/preflight')">지금 점검</button></div><div id="pf" class="pf"></div></div>
@@ -422,6 +422,10 @@ function quick(t){$('q').value=t;ask();}
 function greet(){const n=prompt('댓글 남긴 시청자 계정 이름 (여러 명이면 쉼표)');if(!n)return;const names=n.split(',').map(x=>x.trim()).filter(Boolean).map(x=>x+' 님').join(', ');quick(names+'이 댓글 남겨 주셨어요. 감사 인사 해 주세요');}
 async function ask(){const t=$('q').value.trim();if(!t)return;$('q').value='';$('busy').textContent='… 생각 중 (약 5초)';await post('/api/ask',{text:t});}
 $('q').addEventListener('keydown',e=>{if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();ask();}});
+// 9/26 리허설 사고: 버튼을 누른 뒤 포커스가 남아 Space 한 번에 그 버튼이 다시 눌렸다(15개 국어 샘플 재시작 확인 창). 날씨 같은 확인 없는 버튼이면 바로 말을 시작한다.
+// 버튼은 누르는 즉시 포커스를 놓고, 버튼 위의 Space·Enter 는 무시한다. 패닉은 Ctrl+Alt+Space(전역 핫키) 또는 빨간 버튼.
+document.addEventListener('click',e=>{const b=e.target.closest('button');if(b)setTimeout(()=>b.blur(),0);},true);
+document.addEventListener('keydown',e=>{if((e.key===' '||e.key==='Enter')&&e.target.tagName==='BUTTON'){e.preventDefault();e.stopPropagation();}},true);
 function esc(s){return (s||'').replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));}
 async function tick(){try{const s=await (await fetch('/api/state')).json();
  $('live').textContent=s.live;PART=s.part||'1';$('part').textContent=plabel(PART);$('started').textContent=s.started||'';

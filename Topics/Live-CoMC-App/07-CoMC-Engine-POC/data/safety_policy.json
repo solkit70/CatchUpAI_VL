@@ -81,8 +81,8 @@
     "unit": "sentences",
     "levels": {
       "brief": 3,
-      "default": 5,
-      "detailed": 7,
+      "default": 7,
+      "detailed": 10,
       "casual": 8
     },
     "trigger_phrases": {
@@ -102,11 +102,12 @@
     "verdict_reason": "length_hardcut",
     "max_chars": {
       "brief": 90,
-      "default": 120,
-      "detailed": 180,
-      "casual": 450
+      "default": 500,
+      "detailed": 700,
+      "casual": 500
     },
     "_max_chars_why": "CVL 2 (2026-09-17) 4회차 실측: edge-tts 약 7.7자/초 — 271자=34초, 180자=23초. 방송에서 AI 가 20초 넘게 말하면 진행이 멈춘다. 문장 수 상한만으로는 길이가 안 잡혀 글자 수 상한을 더한다. 문장 단위로 뒤에서 자르고 최소 1문장은 남긴다",
+    "_max_chars_raise_2026_09_26": "Live #29 준비 리허설(9/26): 120자로는 근거 불릿의 한 문장만 남아 출처(「Builders Lounge 5차에서 배운」)가 잘렸다. 진행자 요청으로 default 120→500자(≈65초, 문장 5→7) · detailed 180→700자(≈91초, 문장 7→10) · casual 450→500자. 「20초 넘으면 진행이 멈춘다」(CVL 2)보다 답의 완결성을 택한 진행자 결정 — 길면 패닉으로 끊는다. brief(90자 · 3문장)는 그대로",
     "_casual_why": "CVL 4 (2026-09-17): 캐주얼 레인(filler·weekly_recap·broadcast_status 등)은 진행자가 자리를 비운 사이를 채우는 발화라 120자로는 못 채운다. 450자 ≈ 58초 (7.7자/초). 패닉으로 언제든 끊는 것이 안전장치"
   },
   "verification_rules": [

@@ -139,4 +139,4 @@ M5는 한 번 조회하고 결과를 그대로 기록했다. 그때 나온 "4건
 - PSEJATC: https://www.psejatc.org/careers/apply-now/
 - WSATC-0134 표준서: https://www.lni.wa.gov/licensing-permits/apprenticeship/_docs/0134.pdf
 - AWS WBLP: https://amazon.jobs/content/en/teams/amazon-web-services/data-centers/work-based-learning-program
-- amazon.jobs 검색 API: `https://www.amazon.jobs/search.json?base_query=work-based+learning&country[]=USA`
+- amazon.jobs 검색 API: `https://www.amazon.jobs/search.json?base_query=work-based+learning&normalized_country_code[]=USA`

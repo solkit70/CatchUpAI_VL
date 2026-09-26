@@ -114,7 +114,7 @@ M2에서 "확인 불가"로 남긴 항목을 **직접 문의로 해소**한 기�
 |---|---|
 | 대상 | amazon.jobs 계정 |
 | 조치 | Kent WA · 데이터센터 직무 **job alert 등록** |
-| 참고 | 검색 API로 주기 확인도 가능: `search.json?base_query=work-based+learning&country[]=USA` |
+| 참고 | 검색 API로 주기 확인도 가능: `search.json?base_query=work-based+learning&normalized_country_code[]=USA` |
 
 ## 미해소로 남는 항목
 
