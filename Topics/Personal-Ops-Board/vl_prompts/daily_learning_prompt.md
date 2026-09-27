@@ -29,17 +29,18 @@
 
 **Topic 이름**:
 ```
-Claude-Artifacts-Routines
+Personal-Ops-Board
 ```
 
 **Topic 폴더 경로**:
 ```
-C:\AI_study6\Changsoo_Vault\Ingest\CatchUpAI_VL\Topics\Claude-Artifacts-Routines\
+Ingest/CatchUpAI_VL/Topics/Personal-Ops-Board/
+(앱 코드·실제 데이터는 볼트 AI/Tasks/ — 공개 레포 아님)
 ```
 
 **Roadmap 파일 경로**:
 ```
-vl_roadmap/20260913_RoadMap_Claude-Artifacts-Routines.md
+vl_roadmap/20260927_RoadMap_Personal-Ops-Board.md
 ```
 
 ---
@@ -48,17 +49,19 @@ vl_roadmap/20260913_RoadMap_Claude-Artifacts-Routines.md
 
 **현재 진행 중인 모듈**:
 ```
-M3 - Artifacts 런타임 기능 실험 — db·user·assets·comments·다중 파일
+M0 - 시작의 기록 (⑤ 마무리) · M1 - 스키마 + 인덱서 (④ 속도 개선 승인 대기)
 ```
 
 **가장 최근 WorkLog 파일**:
 ```
-vl_worklog/20260927_M3_Claude-Artifacts-Routines.md
+vl_worklog/20260927_M0_Personal-Ops-Board.md
 ```
 
 **이전 세션의 "Tomorrow's focus"** (있다면):
 ```
-Claude 웹에서 M3 실습 1의 db 카운터부터 만든다. Artifact URL·capability 선언·시크릿 창 확인 결과를 즉시 기록하고, 실제 발행 전에는 완료로 처리하지 않는다.
+🔴 세션을 시작하면 WorkLog 20260927 의 「▶ 다음 세션 시작 때 먼저 알릴 것」 A1~A4 를
+   가장 먼저 사용자에게 보여 주고 승인을 받는다 (A1 인덱서 속도 · A2 방송 후 문서 검토 ·
+   A3 EARS 틀 · A4 공개 push 시점). 그 다음 M0·M1 남은 일(README · check_links)
 ```
 
 ---
@@ -67,12 +70,30 @@ Claude 웹에서 M3 실습 1의 db 카운터부터 만든다. Artifact URL·capa
 
 **사용 가능한 시간**:
 ```
-[세션마다 입력 — 기본 1~2시간. 일요일 라이브 방송 중이면 30~60분]
+[예: 3시간]
+[예: 오전 2시간 + 오후 1시간]
 ```
 
 **오늘의 상태/제약사항** (있다면):
 ```
-[세션마다 입력] — 라이브 방송 중이면 「소리·화면 공유에 영향 없는 작업만」. 9/16 BL5 발표 · 9/26 BigHug 행사 · 9/27 Personal Ops Board 착수 주간은 시간이 줄어든다
+[예: 피곤한 상태 - 난이도 낮은 작업 우선]
+[예: 인터넷 불안정 - 오프라인 자료 위주]
+[없음]
+```
+
+---
+
+### 이 Topic 의 세션 규칙 (매 세션 확인)
+
+```
+- 매 모듈의 한 바퀴: ① 요구 찾기 → ② 업계 방식 조사(2026년 9월 기준, 멀티 에이전트 구조 포함)
+  → ③ 설계 제안 → 사용자 승인 → ④ 구현·검증 → ⑤ ARCHITECTURE.md · decisions/ 갱신 → ⑥ WorkLog
+- 오늘 계획에 「지금 모듈이 한 바퀴 중 어디인지」를 적는다
+- ① 요구 찾기의 요구마다 EARS 한 줄(「WHEN [조건] 이면 THE SYSTEM SHALL [동작] 한다」) → ④ 에서 한 줄씩 통과/실패
+- 🧪 방법론 실험: KIRO 식 요소를 적용·변형하면 vl_materials/VibeLearn AI 새 버전 실험 노트.md 원장에 한 줄
+- 승인 전에는 코드를 쓰지 않는다. ⑤ 없이 모듈을 닫지 않는다
+- 방송 중에 못 끝낸 것은 주중에 이어 간다 — WorkLog 에 이어갈 곳을 적는다
+- 공개 레포: 실제 할 일·이름·연락처 금지. 코드·데이터는 볼트 AI/Tasks/ 에만
 ```
 
 ---

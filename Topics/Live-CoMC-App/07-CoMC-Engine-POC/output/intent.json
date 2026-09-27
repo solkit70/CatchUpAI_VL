@@ -1,10 +1,8 @@
 {
-  "transcript": "코엠씨, 어떤 방식으로 개발하기로 했어?",
-  "intent": "answer_question",
-  "slots": {
-    "_stripped_wake_residue": "코엠씨,"
-  },
+  "transcript": "잠깐 볼일 보고 올게요. 시청자분들께 지금까지 한 일과 앞으로 남은 일을 설명해 주세요",
+  "intent": "broadcast_status",
+  "slots": {},
   "ambiguity_flags": [],
   "confidence": 0.9,
-  "created_at": "2026-09-26T07:40:42.797262+00:00"
+  "created_at": "2026-09-27T14:53:02.703265+00:00"
 }

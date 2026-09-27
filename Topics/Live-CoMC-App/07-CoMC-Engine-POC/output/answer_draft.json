@@ -1,28 +1,46 @@
 {
   "sentences": [
-    "아키텍처를 미리 다 정하지 않고 AI 와 대화하며 내린 결정을 아키텍처 문서에 쌓아 가는 방식으로 갑니다.",
-    "설계 전에 업계에서는 보통 어떻게 하는지 먼저 묻고, 다 만들고 나면 다음 앱에 재사용할 아키텍처가 남도록 합니다.",
-    "오늘은 VibeLearn AI 로 이 Topic 을 만들고, 시작의 기록인 M0부터 진행합니다."
+    "시청자 여러분, 오늘 Catch Up AI 라이브 29번째 방송은 인트로에서 이번 주 흐름과 주제들을 먼저 정리하고 시작했어요.",
+    "지난주에 만든 콘텐츠로는 총기난사 대처 요령 공익 영상과 Builders Lounge 5차 발표 영상을 소개했습니다.",
+    "오늘의 실험 파트에서는 나만의 일정 관리 앱 Personal Ops Board를 시작해 인덱서 점검에 들어가고, CoMC 테스트를 이어가며, Chrome Remote Desktop 정리와 영상 제작 계획을 다뤘습니다.",
+    "지금은 3부 학습 파트가 진행 중이에요 — Claude Artifacts & Routines 살펴보고 Seattle AI Week 준비를 연결하고 있습니다.",
+    "앞으로 남은 순서는 3부를 마무리한 뒤 아웃트로로 정리하고 방송을 닫는 흐름입니다.",
+    "잠깐 진행자가 자리를 비운 상태라, 돌아오면 이어서 같은 순서로 진행할 예정이에요."
   ],
   "claim_map": [
     {
       "sentence_idx": 0,
-      "evidence_path": "AI/Roundup/2026-09-20 - Live29 Weekly Rundown.md#오늘의 실험",
-      "evidence_quote": "개발 방식은 Builders Lounge 5차 모임에서 다른 빌더에게 배운 방식으로, 아키텍처를 미리 다 정하지 않고 AI 와 대화하며 내린 결정을 아키텍처 문서에 쌓아 가며 만듭니다."
+      "evidence_path": "rundown_index.29#0",
+      "evidence_quote": "방송 순서 0부 「인트로」: 커버리지 확정 — AI in Action 29번째 방송 · Builders Lounge · 오늘의 주제 나만의 일정 관리 앱 개발 시작 · CoMC 두 번째 실전 · Chrome Remote Desktop 마무리와 영상 제작"
     },
     {
       "sentence_idx": 1,
-      "evidence_path": "AI/Roundup/2026-09-20 - Live29 Weekly Rundown.md#오늘의 실험",
-      "evidence_quote": "설계 전에 업계에서는 보통 어떻게 하는지 먼저 묻고, 다 만들고 나면 다음 앱에 재사용할 아키텍처가 남습니다."
+      "evidence_path": "rundown_index.29#1",
+      "evidence_quote": "방송 순서 1부 「지난주 생성 콘텐츠」: 커버리지 확정 — 총기난사 대처 요령 공익 영상 한·영 · Builders Lounge 5차 발표 영상"
     },
     {
       "sentence_idx": 2,
-      "evidence_path": "AI/Roundup/2026-09-20 - Live29 Weekly Rundown.md#오늘의 실험",
-      "evidence_quote": "오늘은 VibeLearn AI 로 이 Topic 을 만들고, 시작의 기록(M0)부터 합니다."
+      "evidence_path": "rundown_index.29#2",
+      "evidence_quote": "방송 순서 2부 「오늘의 실험」: 커버리지 확정 — 나만의 일정 관리 앱(Personal Ops Board) M1 인덱서 · CoMC 테스트 계속 · Chrome Remote Desktop 정리와 영상 제작"
+    },
+    {
+      "sentence_idx": 3,
+      "evidence_path": "rundown_index.29#3",
+      "evidence_quote": "방송 순서 3부 「시간 여유 시 학습」 (지금 진행 중): 커버리지 지시 — Claude Artifacts & Routines · Seattle AI Week 준비"
+    },
+    {
+      "sentence_idx": 4,
+      "evidence_path": "rundown_index.29#4",
+      "evidence_quote": "방송 순서 4부 「아웃트로」: 커버리지 미정 — 항목 없음"
+    },
+    {
+      "sentence_idx": 5,
+      "evidence_path": "transcript#host",
+      "evidence_quote": "창수님이 방금 잠깐 자리를 비운다고 말했고, 곧 돌아와서 방송을 이어간다"
     }
   ],
   "coverage_state": "defined",
-  "length_sentences": 3,
+  "length_sentences": 6,
   "provider": "openai",
-  "created_at": "2026-09-26T07:40:46.525639+00:00"
+  "created_at": "2026-09-27T14:53:08.403610+00:00"
 }

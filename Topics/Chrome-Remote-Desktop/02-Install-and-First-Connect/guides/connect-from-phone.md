@@ -14,7 +14,7 @@ tags:
 **걸리는 시간**: 15~20분 · **준비물**: 폰 또는 태블릿, 집 컴퓨터에 설정한 **같은 구글 계정**, PIN
 
 > 앞 문서([install-host-windows.md](install-host-windows.md))에서 집 컴퓨터에 설치를 마쳤다면,
-> 이제 **밖에서 들어가는 쪽**을 준비한다. 폰에는 설치할 것이 앱 하나뿐이다.
+> 이제 **밖에서 들어가는 쪽**을 준비한다. iPhone·iPad에서는 앱을 쓰거나, 앱이 보이지 않으면 Safari 웹앱으로 들어간다.
 
 ## 시작 전에 — 꼭 확인할 것 하나
 
@@ -25,13 +25,16 @@ tags:
 
 ## 1단계 — 기기에 따라 방법이 다르다 ⚠️
 
-**iPhone·iPad 는 App Store 에서 앱을 찾을 수 없다.** 없어진 것이 맞다 — 구글이 **2025년 9월에
-iOS 앱을 폐지**하고 브라우저 방식으로 바꿨다. 아무리 검색해도 안 나오는 것이 정상이다.
+> iPhone에서 바로 따라 하려면: [connect-from-iphone.md](connect-from-iphone.md)
+
+Google의 현재 iPhone·iPad 도움말은 앱을 열되, **앱이 없으면 브라우저에서**
+`remotedesktop.google.com/access`로 이동하라고 안내한다. 이 Topic의 iPad 실측에서는 App Store 앱 대신
+Safari 웹앱으로 성공했다. iPhone에서도 앱을 찾는 데 시간을 쓰지 말고 Safari 방식부터 사용한다.
 
 | 기기 | 방법 |
 |---|---|
 | **Android** 폰·태블릿 | **Play 스토어**에서 **Chrome Remote Desktop** 앱 설치 (만든 곳: Google LLC) |
-| **iPhone·iPad** | 앱 없음. **Safari** 로 `remotedesktop.google.com/access` 접속 → **홈 화면에 추가** |
+| **iPhone·iPad** | 앱이 보이면 사용 가능. 보이지 않으면 **Safari** 로 `remotedesktop.google.com/access` 접속 → **홈 화면에 추가** |
 
 ### iPhone·iPad 에서 왜 Chrome 이 아니라 Safari 인가
 
@@ -48,6 +51,8 @@ iOS 에서 **「홈 화면에 추가」로 앱처럼 만드는 기능은 Safari 
 5. 접속이 되면, 화면 아래(또는 위)의 **공유 버튼 `□↑`** 을 누른다
 6. 아래로 스크롤해 **「홈 화면에 추가」** → 이름 확인 → **추가**
 7. 이제 홈 화면 아이콘으로 실행하면 **전체 화면**으로 쓸 수 있다
+
+> Google 공식 도움말도 Safari의 **공유 → 홈 화면에 추가**를 안내하며, 이 방법이 주소 표시줄 없이 전체 화면으로 보는 방법이라고 설명한다.
 
 > 💡 **사이트가 먼저 알려 준다.** Safari 로 열면 오른쪽 아래에 「이 기기에 설치하시겠어요? 공유 버튼 →
 > Add to Home Screen」 안내가 뜬다. 이 안내를 따라가면 된다 (아래 화면 ① 오른쪽 아래).

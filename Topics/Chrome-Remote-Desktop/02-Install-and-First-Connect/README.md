@@ -17,8 +17,9 @@ tags:
 | 순서 | 문서 | 무엇을 하나 | 걸리는 시간 |
 |---|---|---|---|
 | 1 | [guides/install-host-windows.md](guides/install-host-windows.md) | 집 컴퓨터(Windows)에 설치 · 이름 · PIN | 10~15분 |
-| 2 | [guides/connect-from-phone.md](guides/connect-from-phone.md) | 폰·태블릿에서 접속 — **iPad 는 앱이 없다, Safari 로** | 15~20분 |
-| 3 | [guides/connect-from-laptop.md](guides/connect-from-laptop.md) | 다른 컴퓨터 브라우저에서 접속 · 남의 컴퓨터일 때 주의 | 5분 |
+| 2 | [guides/connect-from-iphone.md](guides/connect-from-iphone.md) | **iPhone 전용** — Safari 웹앱으로 연결 · LTE 실측 · 안전 종료 | 10분 |
+| 3 | [guides/connect-from-phone.md](guides/connect-from-phone.md) | iPad·Android를 포함한 폰·태블릿 공통 안내 | 15~20분 |
+| 4 | [guides/connect-from-laptop.md](guides/connect-from-laptop.md) | 다른 컴퓨터 브라우저에서 접속 · 남의 컴퓨터일 때 주의 | 5분 |
 | 참고 | [troubleshooting/cannot-connect.md](troubleshooting/cannot-connect.md) | 안 될 때 — 증상별로 어디를 보나 | 막혔을 때 |
 | 기록 | [examples/first-connect-log.md](examples/first-connect-log.md) | 첫 접속 실측 (기기·회선·시간·체감) | — |
 

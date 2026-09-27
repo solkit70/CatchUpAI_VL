@@ -54,6 +54,10 @@ tags:
 
 **다음 실습**: 사용자는 iPhone에서도 접속하기를 원한다. iPhone 접속 자체는 아직 실측되지 않았으므로, [작은 화면 작업 안내](../04-Real-Use-Work/guides/working-on-small-screen.md)에 따라 먼저 Safari 웹 경로로 접속한 뒤 실제 결과를 기록한다.
 
+### 2026-09-27 방송 중 준비 업데이트 — iPhone 설정 완료, 실측 보류
+
+사용자는 iPhone에서 Chrome Remote Desktop의 Safari 설정과 홈 화면 추가를 마쳤다. 다만 라이브 방송에서는 실제 접속을 하지 않기로 했으므로, LTE·5G 접속, 문서 입력·저장, 접속 시간·끊김, Windows Lock → Disconnect 결과는 아직 확인하지 않았다. 이 준비만으로 M4의 외부 실사용 DoD를 완료로 바꾸지 않는다. 따라 할 iPhone 안내는 [connect-from-iphone.md](../02-Install-and-First-Connect/guides/connect-from-iphone.md)에 분리했다.
+
 ## 문제 해결 로그
 
 이 세션에서 연결 오류나 큰 한글 입력 지연은 보고되지 않았다. CPU·메모리 과다 사용 상황이나 원격 프로세스 종료는 아직 실측되지 않았다.
