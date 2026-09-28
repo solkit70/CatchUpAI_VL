@@ -3,6 +3,7 @@ title: "M3 준비 — Chrome의 Claude 탭과 ChatGPT for Chrome 연결"
 created: 2026-09-27 07:52:59
 author:
   - "Codex"
+  - "Claude Code"
 topic: "Claude-Artifacts-Routines"
 module: "M3"
 tags:
@@ -87,6 +88,37 @@ ChatGPT 데스크톱 앱의 **Settings → Computer use**에서 Google Chrome �
 2. URL, capability 선언, 시크릿 창 결과를 `lab-log.md`에 기록한다.
 3. 카운터로 `read_db` → `write_db` → 이전 version의 `if_version` 거부를 실측한다.
 4. 그 뒤 나머지 4종 최소 예제와 기존 Builders Lounge Artifact 재검토 범위를 정한다.
+
+## 이어서 — VS Code Claude Code 확장 세션 (2026-09-27 오후)
+
+사용자: 「M3 런타임 기능 실험 은 Codex 에서 작업을 하려다가 VS Code 내에서 Codex Extension 으로 진행하는데 어려움이 있어서 중단 한 겁니다. 이곳은 VS Code 의 Claude Extension 인데요. 여기서 M3 단원을 다시 진행 해 주세요.」
+
+**경로 전환**: Claude Code 세션에는 `Artifact`(발행 · asset 업로드) 와 `ArtifactData`(db 읽기·쓰기) 도구가 직접 있다. 브라우저를 조작하지 않고 세션이 발행·db 실측을 하고, 사람은 URL 을 열어 화면만 확인한다. 오전의 Chrome + ChatGPT 경로는 쓰지 않았다.
+
+| 순서 | 한 일 | 결과 |
+|---|---|---|
+| 0 | `artifact-capabilities` 스킬 로드 · `db.d.ts` · `user.d.ts` · `comments.d.ts` · `assets.d.ts` 확인 | runtime contract **0.2.60** |
+| 1 | 실습 1 — 5종 최소 예제 작성·발행 | 5개 URL → [lab-log](../03-Artifacts-Capabilities-Lab/guides/lab-log.md) |
+| 2 | 실습 2 — db 왕복 (세션 쪽) | get(없음) → set v1 → update(if_version 1) v2 → **update(옛 if_version 1) `version_mismatch` 거부, 아무것도 안 쓰임** → [db-roundtrip](../03-Artifacts-Capabilities-Lab/guides/db-roundtrip.md) |
+| 3 | 세션에서 03 보관함에 이미지 1장 업로드 | `/_blob/8bba69ce…` |
+| 4 | 발견 | 한 세션의 아티팩트 감시는 10개 — 예제 발행으로 부스 매니저·현황판 감시가 밀려남 → [troubleshooting](../03-Artifacts-Capabilities-Lab/troubleshooting/cdn-and-storage-gotchas.md) |
+
+**DoD (갱신)**
+
+- [x] 5종 예제 발행 · URL 기록 · 화면 확인 — ①~⑤ 모두 기대대로 (사용자). 다른 계정 확인은 생략 (사용자: 「간단하게」)
+- [x] db 왕복 + `if_version` 거부 로그 — 세션 쓰기 → 화면 확인 → 화면 +1 두 번(v4) → 세션 읽기 → **실제 충돌에서 옛 v2 쓰기 거부** → v4 로 재시도 통과(v5)
+- [x] 실물 1건 — 부스 매니저 점검, **수정 불필요 근거** (행사 종료 · 놓친 것 2개: 배치도 base64 → assets, 활동 로그에 user id) → [bighug-artifacts-review](../03-Artifacts-Capabilities-Lab/guides/bighug-artifacts-review.md)
+- [x] 선택표 · README · 링크 검사 (정상 20 · 깨짐 0)
+
+**M3 DoD 6/6 — ✅ 완료** (실소요: 오후 세션 약 1시간)
+
+### Daily Retrospective (오후)
+
+- **잘된 점**: 직전 개선점(「화면 연결 확인을 되풀이하지 말고 첫 Artifact 발행부터」)을 지켰다 — 세션의 Artifact 도구로 첫 호출부터 발행했다. 사람이 +1 을 누른 덕에 **사람과 AI 가 같은 문서를 고치는 실제 충돌**을 만들 수 있었다
+- **개선할 점**: 예제를 한 세션에서 연달아 발행해 운영 중인 아티팩트 감시가 밀려났다 — 실습용 발행은 다른 세션에서. 실습 3 을 「대상 고르기」로 사용자에게 넘겼는데 무엇을 하는지 설명이 부족했다 — 선택지보다 목적을 먼저 말한다
+- **인사이트**: Artifact 에 AI 를 붙일 때 첫 안전장치는 `if_version` 이다. 그리고 「Send to Claude」 댓글은 페이지와 세션을 잇는 가장 가벼운 통로다
+- **다음**: M4 Routines 나머지(공식 문서 · 두 번째 루틴 · 판단표) → M5 → M6 영상
+- [x] WorkLog
 
 ## 참조 및 산출물
 

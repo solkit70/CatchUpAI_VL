@@ -1,0 +1,31 @@
+<title>M3 Lab 05 파일 나눠 발행</title>
+<link rel="stylesheet" href="app.css">
+
+<main>
+  <div class="eyebrow">Claude-Artifacts-Routines · M3 실습 1-⑤</div>
+  <h1>파일 나눠 발행</h1>
+  <p>이 페이지의 스타일은 HTML 안이 아니라 함께 발행한 <code>app.css</code> 파일에 있습니다. 색과 여백이 01~04 예제와 같게 보이면 별도 파일이 제대로 불러와진 것입니다.</p>
+  <section class="panel">
+    <div class="count" id="check" style="font-size:28px">확인 중…</div>
+    <dl>
+      <dt>app.css 적용</dt><dd id="css">–</dd>
+      <dt>data.json 읽기</dt><dd id="json">–</dd>
+    </dl>
+  </section>
+  <p>같은 방식으로 스크립트나 데이터(JSON)도 따로 둘 수 있습니다. 페이지 한 장이 16MB 를 넘지 않게 나누는 방법이기도 합니다.</p>
+</main>
+
+<script>
+(async () => {
+  const $ = (id) => document.getElementById(id);
+  const bg = getComputedStyle(document.body).backgroundColor;
+  const cssOk = bg !== "rgba(0, 0, 0, 0)" && bg !== "transparent";
+  $("css").textContent = cssOk ? "예 (배경 " + bg + ")" : "아니오";
+  try {
+    const r = await fetch("data.json");
+    const d = await r.json();
+    $("json").textContent = "예 — " + d.note;
+  } catch (e) { $("json").textContent = "아니오 (" + e.message + ")"; }
+  $("check").textContent = cssOk ? "여러 파일 발행 성공" : "CSS 가 불러와지지 않았습니다";
+})();
+</script>

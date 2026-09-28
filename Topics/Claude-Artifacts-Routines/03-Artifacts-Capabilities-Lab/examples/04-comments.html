@@ -1,0 +1,52 @@
+<title>M3 Lab 04 댓글 받는 문서</title>
+<style>
+  :root{--bg:#f3f5f8;--panel:#ffffff;--ink:#18212e;--muted:#5b6778;--line:#d9dee6;--accent:#2b6cb0;--accent-ink:#ffffff;--ok:#1f7a4d;--warn:#a15c00}
+  @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#11161d;--panel:#19212b;--ink:#e6ebf2;--muted:#9aa6b6;--line:#2c3643;--accent:#6aa5e6;--accent-ink:#0d1520;--ok:#5fc48f;--warn:#e2a54a;color-scheme:dark}}
+  :root[data-theme="dark"]{--bg:#11161d;--panel:#19212b;--ink:#e6ebf2;--muted:#9aa6b6;--line:#2c3643;--accent:#6aa5e6;--accent-ink:#0d1520;--ok:#5fc48f;--warn:#e2a54a;color-scheme:dark}
+  body{background:var(--bg);color:var(--ink);font-family:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;padding-inline:16px;padding-block:32px}
+  main{max-width:560px;margin:0 auto;display:grid;gap:16px}
+  .eyebrow{font:600 12px/1 ui-monospace,monospace;letter-spacing:.08em;color:var(--muted);text-transform:uppercase}
+  h1{margin:0;font-size:24px;text-wrap:balance}
+  p{margin:0;color:var(--muted);line-height:1.6}
+  .claim{display:grid;gap:10px;padding:16px;border:1px solid var(--line);border-radius:8px;background:var(--panel)}
+  .claim p{color:var(--ink)}
+  button{font:600 14px/1 inherit;padding:10px 14px;border-radius:8px;border:1px solid var(--accent);background:transparent;color:var(--accent);cursor:pointer;justify-self:start}
+  button:disabled{opacity:.45;cursor:not-allowed}
+  button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+  .ok{color:var(--ok)} .warn{color:var(--warn)}
+</style>
+
+<main>
+  <div class="eyebrow">Claude-Artifacts-Routines · M3 실습 1-④</div>
+  <h1>댓글 받는 문서</h1>
+  <p><code>comments</code> 기능을 가장 가벼운 형태(<code>composer_only</code>)로 켰습니다. 각 문단의 버튼을 누르면 그 문단에 댓글 창이 열립니다. 댓글 목록은 페이지가 아니라 claude.ai 화면이 보여 줍니다.</p>
+  <section class="claim" id="c1">
+    <p>1. Artifact 의 db 는 마지막에 쓴 사람이 이긴다. 그래서 두 사람이 같은 숫자를 동시에 올리면 한 번이 사라질 수 있다.</p>
+    <button type="button" data-target="c1">이 문단에 댓글</button>
+  </section>
+  <section class="claim" id="c2">
+    <p>2. 세션에서 쓸 때 <code>if_version</code> 을 붙이면, 그 사이 누가 고친 문서에는 쓰지 않고 거부된다.</p>
+    <button type="button" data-target="c2">이 문단에 댓글</button>
+  </section>
+  <section class="claim" id="c3">
+    <p>3. localStorage 는 저장이 아니다. 보는 사람의 브라우저에만 남고 다른 사람도 Claude 도 볼 수 없다.</p>
+    <button type="button" data-target="c3">이 문단에 댓글</button>
+  </section>
+  <div id="status" class="ok" aria-live="polite"></div>
+</main>
+
+<script>
+(async () => {
+  const $ = (id) => document.getElementById(id);
+  const buttons = document.querySelectorAll("[data-target]");
+  const comments = await window.claude?.use?.("comments");
+  if (!comments) { $("status").textContent = "이 보기에서는 댓글 창을 열 수 없습니다"; $("status").className = "warn";
+    buttons.forEach(b => b.disabled = true); return; }
+  buttons.forEach(b => b.addEventListener("click", async () => {
+    try {
+      const r = await comments.openComposer({ element: document.getElementById(b.dataset.target) });
+      $("status").textContent = r.opened ? "댓글 창이 열렸습니다" : "댓글 창을 열지 못했습니다";
+    } catch (e) { $("status").textContent = "실패: " + (e.code || e.message); $("status").className = "warn"; }
+  }));
+})();
+</script>

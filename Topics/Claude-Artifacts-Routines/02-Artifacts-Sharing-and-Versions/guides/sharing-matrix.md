@@ -42,6 +42,7 @@ tags:
 
 Share 메뉴에 **조직(organization) 선택지가 없다** — "Only people with access / Anyone with the link" 둘뿐 `[실측]`. 공식 문서의 *"On Pro and Max plans, a public link is the only way to share"* 와 맞는다 → **이 계정은 Pro/Max 다** `[문서+실측]`. 따라서:
 - **댓글은 이 계정에서 불가능하다** — *"only an artifact you share within your organization takes comments"* (Team/Enterprise). 실습 3 의 댓글 항목은 「해당 없음」으로 닫는다
+  - ⚠️ **2026-09-27 정정 (M3 실측)**: 이 계정에서 `comments` capability(`composer_only`)를 선언한 예제에 작성자가 댓글을 달았고, 「Send to Claude」로 보낸 댓글에 세션이 자동으로 답했다 → [M3 lab-log](../../03-Artifacts-Capabilities-Lab/guides/lab-log.md). 「불가」는 문서 한 문장을 해석한 결론이었다. 다른 사람(조직 밖 · 공개 링크 방문자)이 댓글을 달 수 있는지는 여전히 미확인
 - 편집자(editor) 지정도 불가 — 같은 이유
 - 9/1 설명 페이지 A6 의 "댓글을 남길 수 있다"는 **이 계정에서는 틀린 문장**이다 → 영상(M6)에서 빼거나 플랜 조건을 붙인다
 

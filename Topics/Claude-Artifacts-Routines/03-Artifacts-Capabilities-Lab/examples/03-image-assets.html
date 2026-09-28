@@ -1,0 +1,68 @@
+<title>M3 Lab 03 이미지 보관함</title>
+<style>
+  :root{--bg:#f3f5f8;--panel:#ffffff;--ink:#18212e;--muted:#5b6778;--line:#d9dee6;--accent:#2b6cb0;--accent-ink:#ffffff;--ok:#1f7a4d;--warn:#a15c00}
+  @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#11161d;--panel:#19212b;--ink:#e6ebf2;--muted:#9aa6b6;--line:#2c3643;--accent:#6aa5e6;--accent-ink:#0d1520;--ok:#5fc48f;--warn:#e2a54a;color-scheme:dark}}
+  :root[data-theme="dark"]{--bg:#11161d;--panel:#19212b;--ink:#e6ebf2;--muted:#9aa6b6;--line:#2c3643;--accent:#6aa5e6;--accent-ink:#0d1520;--ok:#5fc48f;--warn:#e2a54a;color-scheme:dark}
+  body{background:var(--bg);color:var(--ink);font-family:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;padding-inline:16px;padding-block:32px}
+  main{max-width:560px;margin:0 auto;display:grid;gap:20px}
+  .eyebrow{font:600 12px/1 ui-monospace,monospace;letter-spacing:.08em;color:var(--muted);text-transform:uppercase}
+  h1{margin:0;font-size:24px;text-wrap:balance}
+  p{margin:0;color:var(--muted);line-height:1.6}
+  .panel{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:24px;display:grid;gap:16px}
+  .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+  input[type=file]{font:inherit;color:var(--muted);max-width:100%}
+  .gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:12px}
+  .gallery figure{margin:0;display:grid;gap:6px}
+  .gallery img{width:100%;aspect-ratio:1;object-fit:contain;background:var(--bg);border:1px solid var(--line);border-radius:6px}
+  .gallery figcaption{font:12px/1.4 ui-monospace,monospace;color:var(--muted);word-break:break-all}
+  dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font-size:13px}
+  dt{color:var(--muted)} dd{margin:0;font-family:ui-monospace,monospace}
+  .ok{color:var(--ok)} .warn{color:var(--warn)}
+</style>
+
+<main>
+  <div class="eyebrow">Claude-Artifacts-Routines · M3 실습 1-③</div>
+  <h1>이미지 보관함</h1>
+  <p><code>assets</code> 기능은 이미지·PDF 같은 파일을 이 아티팩트에 올려 두고 페이지가 불러 쓰게 합니다. 페이지 HTML 안에 이미지를 통째로 넣지 않아도 됩니다.</p>
+  <section class="panel">
+    <div class="row" id="uploader" hidden>
+      <label for="pick">이미지 올리기 (편집자만)</label>
+      <input id="pick" type="file" accept="image/*">
+    </div>
+    <div id="status" class="ok">보관함 여는 중…</div>
+    <div class="gallery" id="gallery"></div>
+    <dl><dt>사용량</dt><dd id="usage">–</dd></dl>
+  </section>
+  <p>업로드는 편집 권한이 있는 사람만 할 수 있고, 보기만 하는 사람에게는 업로드 칸이 보이지 않습니다. 이 기능을 켠 아티팩트는 조직 밖에 공개할 수 없습니다.</p>
+</main>
+
+<script>
+(async () => {
+  const $ = (id) => document.getElementById(id);
+  const say = (t, cls) => { $("status").textContent = t; $("status").className = cls || "ok"; };
+  const assets = await window.claude?.use?.("assets");
+  if (!assets) { say("이 보기에서는 보관함을 열 수 없습니다 (읽기 전용이거나 권한 없음)", "warn"); return; }
+  $("uploader").hidden = false;
+  async function refresh() {
+    try {
+      const { assets: list, usage } = await assets.list();
+      $("gallery").replaceChildren(...list.filter(a => a.contentType.startsWith("image/")).map(a => {
+        const f = document.createElement("figure");
+        const img = document.createElement("img"); img.src = a.url; img.alt = "보관된 이미지";
+        const c = document.createElement("figcaption"); c.textContent = a.contentType + " · " + Math.round(a.sizeBytes / 1024) + " KB";
+        f.append(img, c); return f;
+      }));
+      say(list.length ? list.length + "개 파일" : "아직 올린 파일이 없습니다");
+      $("usage").textContent = usage.files + " / " + usage.maxFiles + " 파일 · " + Math.round(usage.bytes / 1024) + " KB";
+    } catch (e) { say("목록 실패: " + (e.code || e.message), "warn"); }
+  }
+  $("pick").addEventListener("change", async (ev) => {
+    const file = ev.target.files?.[0]; if (!file) return;
+    say("올리는 중…");
+    try { await assets.upload(file); await refresh(); }
+    catch (e) { say("업로드 실패: " + (e.code || e.message), "warn"); }
+    ev.target.value = "";
+  });
+  refresh();
+})();
+</script>

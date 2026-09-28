@@ -1,0 +1,89 @@
+<title>M3 Lab 01 db 카운터</title>
+<style>
+  :root{
+    --bg:#f3f5f8; --panel:#ffffff; --ink:#18212e; --muted:#5b6778; --line:#d9dee6;
+    --accent:#2b6cb0; --accent-ink:#ffffff; --ok:#1f7a4d; --warn:#a15c00;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#11161d; --panel:#19212b; --ink:#e6ebf2; --muted:#9aa6b6; --line:#2c3643;
+      --accent:#6aa5e6; --accent-ink:#0d1520; --ok:#5fc48f; --warn:#e2a54a; color-scheme:dark;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#11161d; --panel:#19212b; --ink:#e6ebf2; --muted:#9aa6b6; --line:#2c3643;
+    --accent:#6aa5e6; --accent-ink:#0d1520; --ok:#5fc48f; --warn:#e2a54a; color-scheme:dark;
+  }
+  body{background:var(--bg);color:var(--ink);font-family:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;padding-inline:16px;padding-block:32px}
+  main{max-width:560px;margin:0 auto;display:grid;gap:20px}
+  .eyebrow{font:600 12px/1 ui-monospace,"IBM Plex Mono",monospace;letter-spacing:.08em;color:var(--muted);text-transform:uppercase}
+  h1{margin:0;font-size:24px;text-wrap:balance}
+  p{margin:0;color:var(--muted);line-height:1.6}
+  .panel{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:24px;display:grid;gap:16px;justify-items:start}
+  .count{font:700 64px/1 ui-monospace,"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums}
+  .row{display:flex;gap:10px;flex-wrap:wrap}
+  button{font:600 15px/1 inherit;padding:12px 18px;border-radius:8px;border:1px solid var(--accent);background:var(--accent);color:var(--accent-ink);cursor:pointer}
+  button.secondary{background:transparent;color:var(--accent)}
+  button:disabled{opacity:.45;cursor:not-allowed}
+  button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+  dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font-size:13px}
+  dt{color:var(--muted)} dd{margin:0;font-family:ui-monospace,monospace;word-break:break-all}
+  .state-ok{color:var(--ok)} .state-warn{color:var(--warn)}
+</style>
+
+<main>
+  <div class="eyebrow">Claude-Artifacts-Routines · M3 실습 1-①</div>
+  <h1>db 카운터</h1>
+  <p>숫자는 이 아티팩트의 공유 db 문서 <code>counter/main</code> 에 저장됩니다. 다른 창에서 열어도 같은 숫자가 보이고, Claude 세션도 이 값을 읽고 쓸 수 있습니다.</p>
+
+  <section class="panel" aria-live="polite">
+    <div class="count" id="count">–</div>
+    <div class="row">
+      <button id="inc" type="button" disabled>+1</button>
+      <button id="reset" type="button" class="secondary" disabled>0 으로</button>
+    </div>
+    <dl>
+      <dt>상태</dt><dd id="status">db 연결 중…</dd>
+      <dt>마지막 변경</dt><dd id="by">–</dd>
+      <dt>변경 시각</dt><dd id="at">–</dd>
+    </dl>
+  </section>
+
+  <p>실습용 예제입니다. db 쓰기는 마지막에 쓴 사람이 이기므로, 두 사람이 동시에 누르면 한 번이 사라질 수 있습니다 — 이것도 실험 대상입니다.</p>
+</main>
+
+<script>
+(async () => {
+  const $ = (id) => document.getElementById(id);
+  const setStatus = (t, cls) => { $("status").textContent = t; $("status").className = cls || ""; };
+  let current = 0, busy = false;
+
+  const db = await window.claude?.use?.("db");
+  if (!db) { setStatus("이 화면에서는 db 를 쓸 수 없습니다 (읽기 전용 보기)", "state-warn"); return; }
+  const ref = db.doc("counter/main");
+
+  ref.onSnapshot((snap) => {
+    const d = snap.exists ? snap.data() : null;
+    current = typeof d?.value === "number" ? d.value : 0;
+    $("count").textContent = current;
+    $("by").textContent = d?.by || "–";
+    $("at").textContent = d?.at || "–";
+    setStatus(snap.metadata.hasPendingWrites ? "저장 중…" : "연결됨 (실시간)", "state-ok");
+    $("inc").disabled = $("reset").disabled = busy;
+  }, (e) => setStatus("구독 종료: " + e.code, "state-warn"));
+
+  async function write(value) {
+    if (busy) return;
+    busy = true; $("inc").disabled = $("reset").disabled = true;
+    try {
+      await ref.set({ value, by: "page", at: new Date().toISOString() });
+    } catch (e) {
+      setStatus(e.code === "invalid_argument" ? "쓰기 권한이 없습니다 (Viewer)" : "쓰기 실패: " + e.code, "state-warn");
+    } finally {
+      busy = false; $("inc").disabled = $("reset").disabled = false;
+    }
+  }
+  $("inc").addEventListener("click", () => write(current + 1));
+  $("reset").addEventListener("click", () => write(0));
+})();
+</script>
