@@ -4,7 +4,7 @@ created: 2026-09-27 00:00:00
 author:
   - "Codex"
 module: M2
-status: "설정 완료 — LTE 접속 실측 대기"
+status: "모바일 데이터 접속·입력·저장·잠금·재접속 실측 완료"
 tags:
   - chrome-remote-desktop
   - guides
@@ -14,11 +14,11 @@ tags:
 
 # iPhone에서 Chrome Remote Desktop으로 집 컴퓨터에 접속하기
 
-**걸리는 시간**: 약 10분 · **준비물**: iPhone, 집 컴퓨터에 설정한 같은 Google 계정, Chrome Remote Desktop PIN. 이 문서는 iPhone 전용 안내이며, 실제 iPhone 접속 결과는 아직 기록하지 않았다.
+**걸리는 시간**: 약 10분 · **준비물**: iPhone, 집 컴퓨터에 설정한 같은 Google 계정, Chrome Remote Desktop PIN. 이 문서는 iPhone 전용 안내이며, 아래에 실제 iPhone 접속 결과도 기록했다.
 
 ## 현재 실습 상태
 
-2026-09-27 라이브 방송 중 iPhone에서 Safari 설정과 **홈 화면에 추가**까지 마쳤다. LTE·5G 접속, 문서 한 줄 입력·저장, Windows 잠금 후 Disconnect는 방송에서 하지 않기로 했으므로 아직 미실측이다.
+2026-09-27 라이브 방송 중 iPhone에서 Safari 설정과 **홈 화면에 추가**까지 마쳤다. 방송 후 Wi-Fi를 끄고 모바일 데이터로 연결해 메모장 한글 한 줄 입력·저장, 영문 입력, Windows 잠금 화면 확인·잠금 해제·Disconnect·재접속을 수행했다. 사용자는 저장 내용을 다시 확인했고, 접속까지 약 2초로 추정했으며, 사용 중 끊김은 없었다고 보고했다. 정확한 타이머 측정은 아니다. 원문: [[Journal/2026-09-27#Chrome Remote Desktop iPhone 모바일 데이터 실습 (구술 원문)|첫 보고]] · [[Journal/2026-09-27#Chrome Remote Desktop iPhone 실측 결과 보충 (구술 원문)|결과 보충]].
 
 ## 먼저 알아둘 것
 
@@ -59,9 +59,13 @@ PIN은 방송 화면·채팅·캡처·WorkLog에 적지 않는다. 화면이 뜨
 
 작은 화면에서는 기본 트랙패드 모드가 정확한 클릭에 유리하다. 세션 메뉴에서 Windows용 터치 입력 모드도 바꿔 볼 수 있으나, 첫 실측에서는 익숙한 모드 하나로 문서 입력·저장을 먼저 끝낸다.
 
+### 실습 중 나타난 Windows 권한 확인창
+
+사용자는 처음 입력할 때 Windows에 “Do you want allow this app to make changes to your device?”가 나타났고 **Yes**를 누른 뒤 한글과 영문 입력이 모두 가능했다고 보고했다. [현장 사진](../images/005_iPhone_test_Windows_UAC_Command_Processor.jpg)에는 요청 프로그램 `Windows Command Processor`, 확인된 게시자 `Microsoft Windows`가 보인다. 사진 촬영 시각인 14:39와 이 노트북의 RustDesk 설치·서비스 등록 시각이 겹치므로, 그 설치 과정의 권한 요청이었을 가능성이 높다. **CRD에서 글자를 입력할 때마다 나타나는 창으로 안내하지 않는다.** 부모 프로세스까지 확인한 것은 아니므로 원인은 추정이다. 같은 창이 다시 나타나면 프로그램 이름과 게시자를 먼저 확인하고, 본인이 방금 시작한 작업의 요청인지 판단한 뒤 선택한다.
+
 ## 5. 안전하게 종료하기
 
-1. 원격 Windows에서 **Lock**을 실행한다.
+1. 원격 Windows의 **시작 메뉴 → 오른쪽 아래 전원 아이콘 → Lock/잠금**을 선택한다. 최신 Windows 11에서는 사용자 계정 메뉴에 잠금이 보이지 않을 수 있다. 전원 메뉴에서도 찾지 못하면 원격 키보드로 **Windows 키 + L**을 보낸다. **Sleep/절전**과 **Sign out/로그아웃**은 누르지 않는다. [Microsoft의 Windows 잠금 안내](https://support.microsoft.com/en-US/accounts-billing/security/user-account-access-in-windows)
 2. iPhone 화면에서 Windows 잠금 화면이 보이는지 확인한다.
 3. 그다음 세션 메뉴에서 **Disconnect**를 선택한다.
 4. 가능하면 다시 접속해 Windows PIN을 요구하는지 확인한다.

@@ -37,7 +37,7 @@ Safari의 공유 메뉴에서 **홈 화면에 추가**를 선택하면 주소창
 
 ## 끝낼 때
 
-**왜 먼저 잠그나**: 이 노트북에서는 Disconnect만 하면 Windows 작업 화면이 그대로 남았다. 따라서 M3에서 실측한 **Windows Lock → 잠금 화면 확인 → Disconnect** 순서를 사용한다. 재접속하면 Windows 잠금 화면과 PIN 요구가 나오는지 확인하되, 검증을 위해 다시 잠금을 풀었다면 실습을 마칠 때 다시 잠근다.
+**왜 먼저 잠그나**: 이 노트북에서는 Disconnect만 하면 Windows 작업 화면이 그대로 남았다. 원격 Windows의 **시작 메뉴 → 오른쪽 아래 전원 아이콘 → Lock/잠금**을 선택한 뒤, **잠금 화면 확인 → Disconnect** 순서로 끝낸다. 최신 Windows 11에서는 사용자 계정 메뉴에 잠금이 보이지 않을 수 있다. 전원 메뉴에서도 찾지 못하면 원격 키보드로 Windows 키 + L을 보낸다. Sleep/절전은 원격 재접속을 막을 수 있으므로 선택하지 않는다. 재접속하면 Windows 잠금 화면과 PIN 요구가 나오는지 확인하되, 검증을 위해 다시 잠금을 풀었다면 실습을 마칠 때 다시 잠근다. 출처: [Microsoft Windows 잠금 안내](https://support.microsoft.com/en-US/accounts-billing/security/user-account-access-in-windows)
 
 Google은 모바일에서 앱·탭을 닫거나 메뉴의 Disconnect로 원격 세션을 끝낼 수 있다고 설명한다. 다만 이것이 Windows 잠금을 실행한다는 뜻은 아니다. 출처: [Google 원격 세션 종료 안내](https://support.google.com/chrome/answer/1649523?co=GENIE.Platform%3DiOS&hl=en-AO) · [M3 실측](../../03-Security-Checklist/guides/windows-power-and-lock.md#4-실측-완료--ipad에서-먼저-잠그고-연결-종료)
 

@@ -30,6 +30,8 @@ tags:
 3. **iPad 는 App Store 에 앱이 없다** — 2025-09 폐지. Safari + 홈 화면 추가
 4. **iOS 공유 메뉴에 연락처 이름·사진이 뜬다** — 캡처를 문서·영상에 쓸 때 가려야 한다
 5. PIN 최소 6자리는 **도움말엔 없고 설치 화면에 있다**
+6. **iPhone 실습 중 Windows 권한 확인창이 나타났다** — 사진에는 `Windows Command Processor` · 게시자 `Microsoft Windows`가 보인다. 같은 시각 RustDesk 설치가 진행돼, CRD 입력 자체가 원인인지는 확인되지 않았다
+7. **최신 Windows 11 계정 메뉴에는 잠금이 보이지 않을 수 있다** — 시작 메뉴의 전원 아이콘에서 Lock/잠금을 찾는다
 
 ## 확인된 사실 (2026-09-20)
 
@@ -39,6 +41,8 @@ tags:
 | 접속 | iPad(Safari Web App) — 집 Wi-Fi ✅ · **폰 핫스팟 LTE ✅** · VPN 켜진 상태 ✅ |
 | 입력 | 영문 ✅ · **한글 ✅** · Ctrl+S 저장 ✅ |
 | 체감 | 빠름 (정적 화면 기준) |
+
+2026-09-27 iPhone 보강 실습에서는 Wi-Fi를 끄고 모바일 데이터로 접속해 메모장 한글·영문 입력과 한 줄 저장·내용 유지, Windows 잠금·해제·Disconnect·재접속을 확인했다. 접속은 약 2초 추정, 끊김은 0회였다. → [iPhone 전용 안내](guides/connect-from-iphone.md#현재-실습-상태) · [M4 기록](../vl_worklog/20260923_M4_Chrome-Remote-Desktop.md#활동-4--iphone-모바일-데이터-첫-실측)
 
 ## 미검증 범위와 다음 확인
 
@@ -60,8 +64,11 @@ tags:
 | `002_iPad_pin.PNG` | iPad PIN 입력 | 불필요 |
 | `003_iPad_addToHomeScreen_masked.png` | 공유 메뉴 | ✅ 연락처 |
 | `004_iPad_addToHomeScreen2_masked.png` | 홈 화면에 추가 · Open as Web App | ✅ 연락처 |
+| [`005_iPhone_test_Windows_UAC_Command_Processor.jpg`](images/005_iPhone_test_Windows_UAC_Command_Processor.jpg) | iPhone 실습 중 노트북에 나타난 Windows UAC 확인창 · `Windows Command Processor`/`Microsoft Windows` 표시 | ✅ 위치 EXIF 제거 · 화면 반사·주변부는 영상 편집 때 확인 |
 
 > `04_remotedesktop_name.png` · `06_remotedesktop_device.png` · `003/004` 원본은 본명·연락처가 보이므로 **문서·영상에 쓰지 않는다.**
+
+`005` 사진의 원본은 다운로드 폴더에 그대로 두었고, 이 폴더의 복사본에서 위치를 포함한 EXIF 메타데이터를 제거했다. 사진의 UAC를 「iPhone에서 글자를 입력하면 항상 뜨는 창」으로 설명하지 않는다. 촬영 시각과 RustDesk 설치 시각이 겹쳐, 설치 프로그램의 권한 요청이었을 가능성이 높지만 부모 프로세스는 확인하지 못했다.
 
 ## 다음 모듈
 

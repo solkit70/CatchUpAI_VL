@@ -53,7 +53,7 @@ vl_roadmap/20260920_RoadMap_Chrome-Remote-Desktop.md
 전체 모듈 (7개):
 M1 원격 접속이란 무엇인가 (개념·선택 기준) · M2 설치와 첫 연결 · M3 보안 점검
 M4 실사용 ① 집을 비우고 작업하기 · M5 실사용 ② 밖에서 AI 리뷰·승인 한 바퀴
-M6 대안 비교 (무료 2번째 카드 + Grok Bot) · M7 Capstone 안내 영상 1편
+M6 대안 비교 (추가 설치 판단 + Grok Bot, 9/27 설치 보류) · M7 Capstone 안내 영상 1편
 ```
 
 **가장 최근 WorkLog 파일**:
