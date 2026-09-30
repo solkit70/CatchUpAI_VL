@@ -69,7 +69,7 @@ tags:
 - 루틴에 넣을 커넥터는 「무엇을 읽고 무엇을 쓰나」로 고른다 — 넣은 커넥터는 쓰기까지 묻지 않고 한다
 
 ### Tomorrow's focus
-1. 9/28 08:12 WBLP 정기 실행 결과를 `list_runs` 로 확인 (환경 수정 후 첫 정기 실행)
+1. ✅ 9/28 08:12 WBLP 정기 실행 결과를 `list_runs` 로 확인 (환경 수정 후 첫 정기 실행) — **9/29 확인: 08:13 실행 · 42초 성공 · Frederick MD 기술직 새 공고 메일 발송** → [wblp-routine-audit](../04-Routines-Lab/guides/wblp-routine-audit.md)
 2. M5 — 사용 패턴 가이드
 3. M6 — Remotion 영상
 

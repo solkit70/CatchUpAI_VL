@@ -33,6 +33,7 @@ tags:
 | 9/14 (월) 08:07 | ❌ 동일 · 프록시 상태까지 조회 | `/__agentproxy/status` 의 허용 목록(noProxy)에 `api.anthropic.com · registry.npmjs.org · pypi.org …` 만 있음 |
 | 9/21 (월) 08:07 | ❌ 동일 | WebFetch 도 `{"error_type":"EGRESS_BLOCKED","domain":"www.amazon.jobs"}` |
 | **9/21 10:13 (복구 후 수동 실행)** | ✅ **4/4 HTTP 200** · 113초 | 미국 기술직 4건 발견 → **Gmail 발송** |
+| **9/28 (월) 08:13 — 복구 후 첫 정기 실행** | ✅ **4/4 HTTP 200** · 42초 · 7 turns | 새 공고 **Frederick, Maryland — WBLP Data Center Operations Technician (9/21 게시)** 발견 → **Gmail 「AWS WBLP 공고 알림 — 메릴랜드주 프레더릭」 발송** + 푸시. 워싱턴주 0건 |
 
 세 번 다 같은 자리에서 같은 이유로 죽었고, 루틴은 매번 「확인 못 했다」는 **푸시 알림만** 보냈다. 루틴의 판단은 옳았다 — 검색 엔진 스니펫(Indeed·Glassdoor)으로는 실제 공고 위치를 확인할 수 없으니 **메일을 안 보낸 것**이 맞다. 다만 그 푸시가 「루틴이 매주 실패한다」는 사실로 읽히기까지 3주가 걸렸다.
 
@@ -89,6 +90,25 @@ flowchart TB
 - 복구 실행에서 **WBLP Data Center Operations Technician** — Berwick PA ×2 (9/10) · Canton MS (9/8) · Boardman OR (6/5) — 발견 → 첫 알림 메일. 워싱턴은 여전히 0건
 - 다음 정기 실행 9/28(월)부터 고친 프롬프트로 돈다
 - Datacenter Topic 문서 3곳의 `country[]=USA` 도 같이 고쳤다
+
+## 복구 후 첫 정기 실행 — 2026-09-28 (월)
+
+**환경을 고친 뒤 사람 손 없이 돈 첫 정기 실행이 성공했다.** 세션 `cse_01RYovkjpfhd1umJMb7T3H85` — 08:13:48 시작(예정 08:12) → 42초 · 7 turns 에 끝났다. 네 쿼리 모두 HTTP 200 이고 `filterFacets` 가 채워져, 9/21 에 고친 파라미터(`normalized_country_code[]` · `normalized_location[]`)가 적용된 것도 로그로 확인했다.
+
+| 쿼리 | 결과 |
+|---|---|
+| ① work-based learning · 미국 | 6건 — **새 공고 2**: Frederick MD 데이터센터 운영 기술직(9/21 게시) · Canton MS 물류(9/24) / 기준선 4: Berwick PA 기술직 · Canton MS 기술직 · Boardman OR 기술직 · New Albany OH 물류 |
+| ② work based learning · 워싱턴 | 0건 |
+| ③ data center technician · 워싱턴 | 0건 |
+| ④ fiber technician · 미국 | 0건 |
+
+루틴의 판단: Frederick MD 는 **기준선에 없던 기술직**이라 알림 조건 ②를 충족 → 메일 발송. Canton MS 물류는 「물류는 알리지 않는다」 규칙대로 제외했다. 사용자가 받은편지함에서 메일을 확인했다 (9/29, 캡처).
+
+부수 관찰: 기준선의 Berwick PA 기술직 2건 중 1건만 보였다 — 하나는 닫힌 것으로 보인다고 루틴이 스스로 적었다.
+
+~~**남은 위험**: 프롬프트의 기준선이 9/21 에 멈춰 있어, 다음 주에 Frederick MD 가 아직 열려 있으면 같은 공고로 다시 알릴 수 있었다.~~ → ✅ **2026-09-29 해결** (사용자 요청 「기준 목록에 9/28 결과를 더해 주세요」). `RemoteTrigger update` 로 프롬프트의 기준선 한 문장만 고쳤다 — **「Baseline as of 2026-09-28」**: Frederick MD 기술직(9/21 게시 · 9/28 메일 보냄) · Berwick PA(9/21 에 2건 → 9/28 에 1건) · Canton MS · Boardman OR 기술직 · Canton MS(9/24) · New Albany OH 물류. 일정(`0 15 * * 1`) · Gmail 커넥터 · 도구 · 나머지 프롬프트는 그대로이고, 다음 실행은 **10/5(월) 08:12 PDT**.
+
+> 💡 기준선을 프롬프트에 손으로 적어 두는 방식은 매주 사람이 고쳐야 한다. 루틴이 Gmail 로 「지난 알림 메일」을 직접 찾아 기준선으로 쓰게 하는 방법도 있다 — 지금은 주 1회라 손으로 충분하다.
 
 ## 이 사례에서 배운 것 (영상용)
 

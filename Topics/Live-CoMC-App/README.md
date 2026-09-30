@@ -57,4 +57,5 @@ REVIEW 모드(진행자 타이핑 → OBS 오버레이). 프리플라이트 PASS
 - WorkLog 14편 + Retrospective: [`vl_worklog/`](vl_worklog/) — 특히 [Final Retrospective](vl_worklog/20260912_Live-CoMC-App_Final_Retrospective.md)(방법론 평가 · 인사이트 6 · 개선 제안 5)
 - Topic 시작: [`topic_starter.md`](topic_starter.md)
 - WorkLog 5편이 더 붙었다 (09-17 M10c · CVL 1~4) — 하루의 이야기는 [`vl_materials/2026-09-17 CoMC 하루 개발 기록 — 발표·영상용.md`](vl_materials/2026-09-17%20CoMC%20하루%20개발%20기록%20—%20발표·영상용.md) (발표 3막 · 데모 시나리오 · 숫자 한 장)
+- 참고 영상: [`vl_materials/2026-09-29 참고 영상 — AI 와 함께 진행하는 라이브 방송 (hu-po).md`](vl_materials/2026-09-29%20참고%20영상%20—%20AI%20와%20함께%20진행하는%20라이브%20방송%20(hu-po).md) — 음성 AI 를 공동 진행자로 둔 1시간 51분 라이브. 진행 위치 착각 · 엉뚱한 모델과 대화 · 채움 말 · 추측 금지 등 CoMC 에 참고할 8가지
 - `vl_materials/` 의 다른 재료는 볼트의 실제 Rundown 16편(`AI/Roundup/*Weekly Rundown.md`, 비공개)이라 레포에 두지 않았다. `06-…/examples/audio/` 는 실측 오디오라 gitignore.
