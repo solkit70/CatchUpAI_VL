@@ -10,7 +10,7 @@
 
 | # | 승인 요청 | 제안 | 승인되면 |
 |---|---|---|---|
-| **A1** | **M1 인덱서 속도** (E7 실패 — 86초) | 선택지 A(제외 폴더를 훑는 도중 건너뛰기, `os.walk` — 측정 2.3초) + B(경로 링크는 파일 존재만 바로 확인, 볼트 전체 목록은 이름만 적은 링크가 있을 때만 — 100개 링크 모두 경로형). **E7 목표 = 5초 안** | 코드 수정 → 58건·fixture 재검증 → `decisions/009` · WorkLog |
+| **A1** | **M1 인덱서 속도** (E7 실패 — 86초) | 선택지 A(제외 폴더를 훑는 도중 건너뛰기, `os.walk` — 측정 2.3초) + B(경로 링크는 파일 존재만 바로 확인, 볼트 전체 목록은 이름만 적은 링크가 있을 때만 — 100개 링크 모두 경로형). **E7 목표 = 5초 안** | 10/2 승인·완료: 현재 69건·회귀 10건, 전체 실행 0.221초 → [M1 WorkLog](20261002_M1_Personal-Ops-Board.md#검증) |
 | **A2** | **방송 후 문서 검토 결과** | 사용자가 방송 후 살펴보기로 한 문서: 시작의 기록 · `ARCHITECTURE.md` · `decisions/001~008` · 실험 노트 (방송 중 훑어본 판단: 「일단 OK」) | 고칠 곳 반영 |
 | **A3** | EARS 한국어 틀 확인 | 「WHEN [조건] 이면 THE SYSTEM SHALL [동작] 한다」 (008) | 그대로 M2 부터 사용 |
 | **A4** | 공개 레포 커밋·push 시점 | 공개 전 개인정보 재점검(이름·연락처·실제 할 일) 후, 사용자가 요청할 때 | CatchUpAI_VL push |
@@ -130,6 +130,10 @@
 ## 📎 참조 및 산출물
 
 - 로드맵: [../vl_roadmap/20260927_RoadMap_Personal-Ops-Board.md](../vl_roadmap/20260927_RoadMap_Personal-Ops-Board.md)
-- 시작의 기록: [../vl_materials/2026-09-27 시작의 기록.md](<../vl_materials/2026-09-27 시작의 기록.md>)
+- 시작의 기록: [../vl_materials/2026-09-27 시작의 기록.md](../vl_materials/2026-09-27%20시작의%20기록.md)
 - 아키텍처: [../architecture/ARCHITECTURE.md](../architecture/ARCHITECTURE.md)
 - 볼트(비공개): `AI/Tasks/scripts/pob_index.py` · `AI/Tasks/views/index.json`
+
+## 후속 상태 (2026-10-02)
+
+당시 표의 A1은 구현·검증 완료, A3은 틀 유지 승인이다. A2 사용자 검토는 진행 중이고 A4는 별도 공개 시점 요청 조건을 유지한다. M1 DoD 6/6과 M0 문서 정리 결과는 [후속 WorkLog](20261002_M1_Personal-Ops-Board.md#dod와-남은-일)에 기록했다. 위 당시 체크리스트와 측정은 세션 기록으로 보존한다.

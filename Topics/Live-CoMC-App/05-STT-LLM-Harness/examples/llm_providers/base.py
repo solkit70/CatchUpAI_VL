@@ -157,7 +157,7 @@ def normalize(payload: dict, provider: str) -> dict:
     return d
 
 
-def validate(draft: dict) -> None:
+def validate(draft: dict, evidence_mode: str = "grounded") -> None:
     """answer_draft.schema.json 재검증 + 스키마로 표현 못 하는 계약 검사."""
     errs = [f"{'/'.join(map(str, e.path)) or '(root)'}: {e.message}"
             for e in sorted(_VALIDATOR.iter_errors(draft), key=lambda e: list(e.path))]
@@ -170,8 +170,10 @@ def validate(draft: dict) -> None:
     if isinstance(sents, list) and isinstance(cmap, list):
         covered = {c.get("sentence_idx") for c in cmap if isinstance(c, dict)}
         missing = [i for i in range(len(sents)) if i not in covered]
-        if missing:
+        if missing and evidence_mode != "creative":
             errs.append(f"claim_map: 근거 없는 문장 인덱스 {missing}")
+        if evidence_mode == "creative" and cmap:
+            errs.append("claim_map: 창작 레인은 사실 인용을 만들지 않는다")
         out_of_range = sorted(i for i in covered
                               if isinstance(i, int) and not 0 <= i < len(sents))
         if out_of_range:
@@ -217,7 +219,8 @@ class LLMProvider(ABC):
         return round(usage.get("input_tokens", 0) / 1000 * c["input"]
                      + usage.get("output_tokens", 0) / 1000 * c["output"], 6)
 
-    def complete(self, system: str, user: str, max_retries: int = 1) -> LLMResult:
+    def complete(self, system: str, user: str, max_retries: int = 1,
+                 evidence_mode: str = "grounded") -> LLMResult:
         """호출 → 정규화 → 재검증. 실패하면 오류를 붙여 같은 프로바이더로 재시도한다.
 
         재시도까지 실패하면 SchemaViolation 을 올린다. 폴백 판단은 router 몫이다.
@@ -233,7 +236,7 @@ class LLMProvider(ABC):
             latency = round((time.time() - t0) * 1000)
             draft = normalize(payload, self.name)
             try:
-                validate(draft)
+                validate(draft, evidence_mode=evidence_mode)
             except SchemaViolation as e:
                 last = e
                 if attempt > max_retries:

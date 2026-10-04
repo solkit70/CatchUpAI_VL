@@ -185,6 +185,8 @@ class Engine:
             ok, ms = self.call(label, argv)
             per[label] = ms
             if not ok:
+                if label == "②" and out(f"broadcast_context.{live}.json").exists():
+                    out(f"broadcast_context.{live}.json").unlink()
                 return {"ok": False, "failed_at": label, "per_stage": per}
         self.context_part = part          # utter() 가 파트 전환을 감지하는 기준값 (사고 7)
         return {"ok": True, "per_stage": per}
@@ -212,7 +214,8 @@ class Engine:
                 pass
         return "1"
 
-    def utter(self, live: str, text: str) -> dict:
+    def utter(self, live: str, text: str, lane: str = "auto", viewer_records: list | None = None,
+              viewer_scope: str = "current") -> dict:
         """발화 하나를 처리한다 — ③④⑤⑥ (파트가 바뀌었으면 ② 먼저).
 
         ⚠️ 사고 7 (3회차 사전 점검 09-12 · Live #27 실전 09-13) — `--serve` 는 ①② 를
@@ -222,6 +225,11 @@ class Engine:
         이제 발화 전에 권위값을 읽어, 컨텍스트가 만들어진 파트와 다르면 ② 를 다시 돈다.
         추정하지 않는다 — 읽는 것은 session_state 뿐이다.
         """
+        from common import clear_overlay
+        for name in ("spoken_pending.json", "spoken.json", "answer_draft.json", "verdict.json", "intent.json"):
+            if out(name).exists():
+                out(name).unlink()
+        clear_overlay("engine_daemon", "new_question")
         per, total = {}, 0
         part = self._authoritative_part(live)
         ctx_fail = None
@@ -230,6 +238,11 @@ class Engine:
             per["②"] = ms
             total += ms
             if not ok:
+                clear_overlay("engine_daemon", "stage_failed")
+                if out(f"broadcast_context.{live}.json").exists():
+                    out(f"broadcast_context.{live}.json").unlink()
+                per["part_switch"] = {"from": getattr(self, "context_part", None), "to": part,
+                                      "context_available": False}
                 # CVL 4: 커버리지 미정 파트(1부)라 ② 가 거절해도 **캐주얼 의도는 살아야 한다** —
                 # 날씨·이번 주 얘기는 파트에 속하지 않는다. ③ 을 먼저 돌려 의도를 본 뒤 결정한다.
                 ctx_fail = {"ok": False, "failed_at": "②", "per_stage": per,
@@ -246,22 +259,54 @@ class Engine:
             return {"ok": False, "failed_at": "③", "per_stage": per,
                     "total_ms": total, "error": getattr(self, "last_error", None)}
         ip = out("intent.json")
+        if viewer_records is not None and ip.exists():
+            from common import write_json
+            it = read_json(ip)
+            it['intent'] = 'greet_viewer'
+            it['ambiguity_flags'] = []
+            it['slots'] = {'viewer_names': [r['name'] for r in viewer_records],
+                           'viewer_records': viewer_records, 'viewer_scope': viewer_scope,
+                           'evidence_lane': 'auto'}
+            write_json(ip, it)
+            lane = 'auto'
+        if ip.exists():
+            from common import write_json
+            from persona_store import bind_intent
+            it = read_json(ip)
+            lane = bind_intent(it, lane)
+            write_json(ip, it)
+        if ip.exists() and lane != "auto":
+            from common import write_json
+            it = read_json(ip)
+            if it["intent"] not in ("stop", "repeat", "advance_part", "out_of_scope", "greet_viewer"):
+                it["intent"] = "answer_question"
+                it["slots"]["evidence_lane"] = lane
+                it["ambiguity_flags"] = [f for f in it["ambiguity_flags"] if f == "forbidden_topic_requested"]
+                write_json(ip, it)
         intent_name = read_json(ip).get("intent") if ip.exists() else None
         casual = intent_name in CASUAL_INTENTS
-        if ctx_fail and not casual:
+        # M11 can answer from vault/web/fiction even with undefined coverage.
+        if ctx_fail and not casual and intent_name in ("out_of_scope", "unknown"):
             ctx_fail["per_stage"], ctx_fail["total_ms"] = per, total
             return ctx_fail
-        for label, argv in (("④", ["--live", live]),
+        for label, argv in (("④", ["--live", live, "--lane", lane]),
                             ("⑤", ["--live", live]),
                             ("⑥", ["--live", live])):
             ok, ms = self.call(label, argv)
             per[label] = ms
             total += ms
             if not ok:
+                clear_overlay("engine_daemon", "stage_failed")
                 return {"ok": False, "failed_at": label, "per_stage": per,
                         "total_ms": total, "error": getattr(self, "last_error", None)}
+        import evidence_lanes as lanes
+        actual_lane = "casual" if casual else "broadcast"
+        if lanes.CONTEXT.exists():
+            lc = read_json(lanes.CONTEXT)
+            if ip.exists() and lc.get("intent_fingerprint") == lanes.fingerprint(read_json(ip)):
+                actual_lane = lc["lane"]
         return {"ok": True, "per_stage": per, "total_ms": total, "intent": intent_name,
-                "lane": "casual" if casual else "broadcast"}
+                "lane": actual_lane}
 
 
 def bench(live: str, text: str, repeats: int, max_evidence: int | None = None) -> dict:

@@ -1,21 +1,34 @@
 {
-  "source_path": "AI/Roundup/2026-08-30 - Live26 Weekly Rundown.md",
+  "source_path": "AI/Roundup/2026-09-27 - Live30 Weekly Rundown.md",
   "is_final": false,
   "parts": [
+    {
+      "id": "0",
+      "sort_key": 0.0,
+      "is_numbered": true,
+      "title": "인트로",
+      "time_raw": "5분",
+      "time_minutes": 5,
+      "is_remainder": false,
+      "coverage_state": "defined",
+      "coverage_items": [
+        "바뀐 진행 방식 — 실험 · 실습 중심",
+        "오늘의 실험 네 가지 예고",
+        "AI4PKM 예약 실행 테스트 예고"
+      ],
+      "directive_note": null
+    },
     {
       "id": "1",
       "sort_key": 1.0,
       "is_numbered": true,
-      "title": "지난 주 생성한 컨텐츠",
+      "title": "라방 공동 진행 AI CoMC 시연",
       "time_raw": "시간 미표기",
       "time_minutes": null,
       "is_remainder": false,
       "coverage_state": "defined",
       "coverage_items": [
-        "모바일 원격 실행(한/영)",
-        "「무엇을 만들 것인가」(한/영)",
-        "Datacenter Workforce M10 캡스톤(한/영)",
-        "Sebastian Raschka LLM Q&A 자막 영상"
+        "CoMC 전체 기능 테스트 시나리오 시연"
       ],
       "directive_note": null
     },
@@ -23,33 +36,140 @@
       "id": "2",
       "sort_key": 2.0,
       "is_numbered": true,
-      "title": "오늘의 실험",
+      "title": "우리 회사 FDE AI Agent 캐치 시연",
       "time_raw": "시간 미표기",
       "time_minutes": null,
       "is_remainder": false,
       "coverage_state": "defined",
       "coverage_items": [
-        "CoMC 앱 개발(Live-CoMC-App) M10 마무리",
-        "Caregiver 학습 자료 기반 영상 제작을 라이브로 진행",
-        "Claude Artifacts & Routines 신규 Topic 학습"
+        "캐치 가상 고객 테스트 시나리오 시연"
+      ],
+      "directive_note": null
+    },
+    {
+      "id": "3",
+      "sort_key": 3.0,
+      "is_numbered": true,
+      "title": "AI 시대에 맞는 나만의 일정관리 앱 개발",
+      "time_raw": "시간 미표기",
+      "time_minutes": null,
+      "is_remainder": false,
+      "coverage_state": "defined",
+      "coverage_items": [
+        "Personal Ops Board 이어서 개발",
+        "AI4PKM 05:15 POB Deadline 예약 실행의 확인 결과"
+      ],
+      "directive_note": null
+    },
+    {
+      "id": "4",
+      "sort_key": 4.0,
+      "is_numbered": true,
+      "title": "Claude Artifacts & Routines 이어서",
+      "time_raw": "시간 미표기",
+      "time_minutes": null,
+      "is_remainder": false,
+      "coverage_state": "defined",
+      "coverage_items": [
+        "Capstone 영상 제작 — 내가 몰랐던 기능을 AI 가 찾아냈다"
+      ],
+      "directive_note": null
+    },
+    {
+      "id": "틈새 A: 지난 주 만든 콘텐츠",
+      "sort_key": 905.0,
+      "is_numbered": false,
+      "title": "틈새 A: 지난 주 만든 콘텐츠",
+      "time_raw": "시간이 남으면",
+      "time_minutes": null,
+      "is_remainder": false,
+      "coverage_state": "defined",
+      "coverage_items": [
+        "Builders Lounge 5차 김진영님 발표 영상",
+        "Chrome Remote Desktop 안내 영상 (한국어)",
+        "Chrome Remote Desktop 안내 영상 (English)"
+      ],
+      "directive_note": null
+    },
+    {
+      "id": "틈새 B: 이번 주 소식 · 인사이트",
+      "sort_key": 906.0,
+      "is_numbered": false,
+      "title": "틈새 B: 이번 주 소식 · 인사이트",
+      "time_raw": "시간이 남으면",
+      "time_minutes": null,
+      "is_remainder": false,
+      "coverage_state": "defined",
+      "coverage_items": [
+        "공급자가 소비자보다 많아지는 시대",
+        "앱 개발이 너무 쉬워졌다 — 누구나 빌더가 되는 시대",
+        "캐치 앱 첫 실전",
+        "한인상공회의소 스타트업 지원팀 합류",
+        "CTS 2026 Builders Lounge 부스",
+        "송재희님 온라인 특강 예고",
+        "AI 공동 진행 라이브에서 배운 것"
+      ],
+      "directive_note": null
+    },
+    {
+      "id": "틈새 C: 기록으로 나에게 맞춰지는 세 AI 앱",
+      "sort_key": 907.0,
+      "is_numbered": false,
+      "title": "틈새 C: 기록으로 나에게 맞춰지는 세 AI 앱",
+      "time_raw": "시간이 남으면",
+      "time_minutes": null,
+      "is_remainder": false,
+      "coverage_state": "defined",
+      "coverage_items": [
+        "기록으로 나에게 맞춰지는 AI 앱",
+        "CoMC · Catch · POB의 각 역할과 Catch 멀티 에이전트 방향",
+        "나만을 위한 앱과 생산자의 시대"
       ],
       "directive_note": null
     },
     {
       "id": "주간 영상",
-      "sort_key": 902.0,
+      "sort_key": 908.0,
       "is_numbered": false,
       "title": "주간 영상",
-      "time_raw": "시간 미표기",
+      "time_raw": "시간 미정",
       "time_minutes": null,
       "is_remainder": false,
       "coverage_state": "undefined",
       "coverage_items": [],
       "directive_note": null
+    },
+    {
+      "id": "5",
+      "sort_key": 5.0,
+      "is_numbered": true,
+      "title": "마무리 · 다음 주",
+      "time_raw": "5분",
+      "time_minutes": 5,
+      "is_remainder": false,
+      "coverage_state": "defined",
+      "coverage_items": [
+        "다음 주 계획",
+        "15개 국어 끝인사"
+      ],
+      "directive_note": null
     }
   ],
-  "excluded_sections": [],
+  "excluded_sections": [
+    {
+      "heading": "시간이 남으면 — 다른 실험 후보",
+      "reason": "candidate"
+    },
+    {
+      "heading": "유튜브 업로드 자료 (이번 방송 미편성)",
+      "reason": "unscheduled"
+    },
+    {
+      "heading": "방송 전 오디오 점검 — 유튜브 음악이 방송에 안 들리는 문제 (이번 방송 미편성)",
+      "reason": "unscheduled"
+    }
+  ],
   "conditional_sections": [],
   "parse_anomalies": [],
-  "parsed_at": "2026-09-06T12:46:29.036724+00:00"
+  "parsed_at": "2026-10-03T13:38:18.101277+00:00"
 }

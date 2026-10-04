@@ -174,20 +174,48 @@ def main():
     state = load_session_state(ctx.get("current_part_id"))
     provider, voice = pick_voice(args.provider)
     mode, mode_src = load_mode()
+    import evidence_lanes as lanes
+    if lanes.CONTEXT.exists() and out("intent.json").exists():
+        lane_ctx = read_json(lanes.CONTEXT)
+        if lane_ctx.get("intent_fingerprint") == lanes.fingerprint(read_json(out("intent.json"))):
+            if mode != "MUTE":
+                mode, mode_src = "REVIEW", "M11 새 근거 경로 — 진행자 승인 후 발화"
     ts = now_iso()
+    spoken_text, greeting = verdict['final_text'], None
+    profile = None
+    if out('intent.json').exists():
+        it = read_json(out('intent.json'))
+        profile = it.get('slots', {}).get('persona')
+        if it.get('intent') == 'greet_viewer' and it.get('slots', {}).get('viewer_records'):
+            from viewer_store import greeting_output
+            spoken_text, greeting = greeting_output(spoken_text, args.live, it['slots'])
+            if not greeting['recipients']:
+                clear_overlay('06_render_output', 'no_viewer_names_in_gated_text')
+                trace('06_render_output', ok=False, reason='no_viewer_names_in_gated_text')
+                return 2
+    settings = None
+    if profile:
+        from persona_store import voice_settings
+        settings = voice_settings(profile, it.get('slots', {}).get('lang', 'ko'))
+        if settings and not args.provider:
+            provider, voice = settings['provider'], settings['voice']
+        elif args.provider:
+            settings = None
 
     output = {
         "overlay": {
             "text": verdict["final_text"],
             "part_id": state.get("current_part_id") or ctx.get("current_part_id") or "1",
             "updated_at": ts,
+            "captioned": True,
         },
         "spoken": {
-            "text": verdict["final_text"],
+            "text": spoken_text,
             "provider": provider,
             "voice": voice,
             "audio_path": None,      # 합성은 M9 셸의 몫
             "spoken_at": ts,
+            "caption_text": verdict['final_text'],
         },
         "mode": mode,
         # LIVE 가 아니면 spoken 은 '계획'이지 '나간 것'이 아니다.
@@ -195,7 +223,20 @@ def main():
         "spoken_withheld": mode != "LIVE",
         "source_verdict_pass": verdict["pass"],
     }
+    if greeting:
+        output['spoken']['viewer_greeting'] = greeting
+        output['spoken']['caption_aliases'] = {r['name']: r['pronunciation']
+            for r in it['slots']['viewer_records'] if r.get('pronunciation')}
+    if profile:
+        output['overlay']['persona'] = 'AI 코엠씨 · ' + profile['name']
+        output['spoken']['persona'] = {k: profile[k] for k in ('id', 'name', 'speech', 'definition_sha256')}
+        output['spoken']['persona']['live'] = args.live
+        if settings:
+            output['spoken']['rate'], output['spoken']['pitch'] = settings['rate'], settings['pitch']
     validate_or_die("output", output, "06_render_output")
+    if profile:
+        from persona_store import PersonaStore
+        PersonaStore().record_answer(args.live, profile, ts, mode)
 
     p_out = write_json(out("output.json"), output)
     # OBS Browser Source 와 TTS 는 서로 다른 프로세스가 폴링한다.
@@ -204,6 +245,8 @@ def main():
     # 화면은 세 모드 모두에서 갱신한다. 진행자가 무엇을 말하려 했는지는
     # 보여야 승인도 하고 판단도 한다. 모드가 가르는 것은 **소리**다.
     p_ov = write_json(out("overlay.json"), output["overlay"])
+    from caption_pages import publish
+    publish(ts, 'ready' if mode == 'REVIEW' else 'preparing' if mode == 'LIVE' else 'stopped')
 
     written = [p_out.name, p_ov.name]
     stale = out("spoken.json")
@@ -226,6 +269,12 @@ def main():
     print(f"   spoken   {provider} / {voice}"
           + ("" if mode == "LIVE" else "   (보류됨)"))
     if mode == "REVIEW":
+        from deny_terms import review_sources
+        draft_path = out('answer_draft.json')
+        draft = read_json(draft_path) if draft_path.exists() else {}
+        review = review_sources(draft, verdict['kept_sentences'])
+        review['spoken_at'] = ts
+        write_json(out('private') / 'm11' / 'review_sources.json', review)
         print("   ⏸ 발화 보류 — spoken_pending.json · "
               f"승인: python 06_render_output.py --live {args.live} --approve")
     elif mode == "MUTE":
@@ -234,6 +283,7 @@ def main():
     if not verdict["pass"]:
         print(f"   ⚠ 부분 통과 발화 — source_verdict_pass=false 로 기록됨")
     trace("06_render_output", ok=True, provider=provider, voice=voice,
+          persona_id=profile['id'] if profile else None,
           part_id=output["overlay"]["part_id"], kept=kept, mode=mode,
           spoken_withheld=output["spoken_withheld"],
           source_verdict_pass=verdict["pass"], outputs=written)

@@ -5,7 +5,8 @@
 | | |
 |---|---|
 | 기간 | 2026-09-20 로드맵 → 진행 중 (2주 계획 · ~10/4) |
-| 상태 | ✅ **M1 · M2 · M3 · M5 · M6 완료** · 🟡 M4 실사용 기록 3/6 · 🟡 M7 공개 안내 영상 제작 중 |
+| 상태 | ✅ **M1 · M2 · M3 · M5 · M6 · M7 완료** · 🟡 M4 실사용 기록 3/6 |
+| 🎬 안내 영상 | **[한국어](https://youtu.be/Uj47SPD6owc)** · [English](https://youtu.be/G1WsQ_J2jxU) — 설치부터 잠그기 · 재시작 복구 · AI 작업 확인까지 (약 15분, 2026-09-30 공개) |
 | 환경 | 집 컴퓨터(호스트): Windows 11 노트북 · 밖에서 쓰는 기기: **iPad 사파리**(iOS 앱은 2025-09 종료 → 웹으로 접속) · Android 는 기기가 없어 **미검증** |
 | 대상 | **모든 사람** — 기준선은 「IT 지식이 없는 일반인」 |
 | 한 줄 결과 | **집 컴퓨터를 켜 두고 절전만 꺼 두면, 카페에서도 약 5초 만에 들어가 글을 쓰고 저장하고, 원격으로 다시 시작해도 1~2분 뒤 다시 들어갈 수 있다.** 대신 떠나기 전에 반드시 Windows 를 잠근다 |
@@ -33,7 +34,7 @@
 | 4 | [실사용 ① 집을 비우고 작업하기](04-Real-Use-Work/README.md) | 🟡 3/6 | [작은 화면에서 일하기](04-Real-Use-Work/guides/working-on-small-screen.md) · [실사용 기록](04-Real-Use-Work/examples/real-session-log.md) · [기기 · 회선 표](04-Real-Use-Work/examples/device-network-matrix.md) |
 | 5 | [실사용 ② 밖에서 AI 작업 확인하기](05-Remote-AI-Review-Loop/README.md) | ✅ 9/27 | [밖에서 승인하기](05-Remote-AI-Review-Loop/guides/approve-from-phone.md) · [나가기 전에](05-Remote-AI-Review-Loop/guides/before-you-leave.md) · [밖에서 되는 것](05-Remote-AI-Review-Loop/examples/what-works-outside.md) · [카페 실측](05-Remote-AI-Review-Loop/examples/loop-session-log.md) · [입력이 안 될 때](05-Remote-AI-Review-Loop/troubleshooting/typing-and-input.md) |
 | 6 | [대안 비교 · Grok Bot](06-Alternatives-and-GrokBot/README.md) | ✅ 9/27 | [도구 비교표](06-Alternatives-and-GrokBot/guides/comparison-table.md) · [두 가지 종류](06-Alternatives-and-GrokBot/concepts/two-categories.md) · [CRD vs Grok Bot](06-Alternatives-and-GrokBot/guides/crd-vs-grokbot.md) |
-| 7 | [Capstone — 누구나 따라 하는 안내 영상](07-Public-Guide-Video/README.md) | 🟡 제작 중 | [슬라이드 플랜 v4](07-Public-Guide-Video/examples/slide-plan.md) — 27장 · 약 15~16분 · iPad 기준 · PART 4 「AI 에게 일 시키는 사람에게 더 좋은 이유」 |
+| 7 | [Capstone — 누구나 따라 하는 안내 영상](07-Public-Guide-Video/README.md) | ✅ 9/30 | 🎬 [한국어 영상](https://youtu.be/Uj47SPD6owc) · [English video](https://youtu.be/G1WsQ_J2jxU) · [슬라이드 플랜 v5](07-Public-Guide-Video/examples/slide-plan.md) — 28장 · 약 15분 · iPad 기준 · PART 4 「AI 에게 일 시키는 사람에게 더 좋은 이유」 |
 
 > 처음 온 사람이라면 **[Windows 설치 따라 하기](02-Install-and-First-Connect/guides/install-host-windows.md) → [iPad · iPhone 연결](02-Install-and-First-Connect/guides/connect-from-iphone.md) → [전원 · 잠금 설정](03-Security-Checklist/guides/windows-power-and-lock.md)** 세 장이면 시작할 수 있다.
 

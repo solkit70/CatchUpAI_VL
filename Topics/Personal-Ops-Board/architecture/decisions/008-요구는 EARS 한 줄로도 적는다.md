@@ -4,7 +4,7 @@
 - **상태**: ✅ 채택 — 우리 방식으로 변형해 적용
 
 ## 맥락
-KIRO 공식 문서를 확인해 보니, KIRO 는 요구사항을 **EARS 표기**(Easy Approach to Requirements Syntax)로 쓴다 — 「WHEN [조건/사건] THE SYSTEM SHALL [기대 동작]」. 이 Topic 은 요구 찾기 결과를 WorkLog 에 자연어 표로만 적고 있었다 → [006](<006-두 트랙 개발 방식.md>) 비교표.
+KIRO 공식 문서를 확인해 보니, KIRO 는 요구사항을 **EARS 표기**(Easy Approach to Requirements Syntax)로 쓴다 — 「WHEN [조건/사건] THE SYSTEM SHALL [기대 동작]」. 이 Topic 은 요구 찾기 결과를 WorkLog 에 자연어 표로만 적고 있었다 → [006](006-두%20트랙%20개발%20방식.md) 비교표.
 
 사용자 결정 (방송 중):
 

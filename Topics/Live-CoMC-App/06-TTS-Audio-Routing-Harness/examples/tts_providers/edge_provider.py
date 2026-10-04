@@ -24,6 +24,7 @@ class EdgeTTSProvider(TTSProvider):
 
     def __init__(self, model, voice, cost_per_1k_chars=None, replacements=None):
         super().__init__(model, voice, cost_per_1k_chars, replacements)
+        self.rate, self.pitch = '+0%', '+0Hz'
         try:
             import edge_tts  # noqa: F401
         except ImportError as e:
@@ -40,7 +41,7 @@ class EdgeTTSProvider(TTSProvider):
 
         async def pump():
             try:
-                comm = edge_tts.Communicate(text, self.voice)
+                comm = edge_tts.Communicate(text, self.voice, rate=self.rate, pitch=self.pitch)
                 async for chunk in comm.stream():
                     if chunk.get("type") == "audio" and chunk.get("data"):
                         q.put(chunk["data"])

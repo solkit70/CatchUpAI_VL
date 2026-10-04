@@ -49,19 +49,18 @@ vl_roadmap/20260927_RoadMap_Personal-Ops-Board.md
 
 **현재 진행 중인 모듈**:
 ```
-M0 - 시작의 기록 (⑤ 마무리) · M1 - 스키마 + 인덱서 (④ 속도 개선 승인 대기)
+M0 - 시작의 기록 (완료) · M1 - 스키마 + 인덱서 (완료) · M2 - Board 에이전트 (완료, 파일 자동 감시 비활성) · M3 - Migration (handoff 적용, 전체 이관 진행 중; 10/6에 미승인 제안 검토 예정) · M4 - Workflow Integration (완료, 2026-10-03 다음 날 지속성 검증 71/71 유효·오류 0) · M5 - Deadline Agent (구현·합성 회귀 및 10/3 예약 실행 2회 확인 완료; 10/4 05:15 다음 날 갱신 검증 대기) · M6 - Board UI (구현·56건 regression·HTTP fixture E2E·read-only 화면 확인; browser fixture 수동 조작 및 Retrospective 남음)
 ```
 
 **가장 최근 WorkLog 파일**:
 ```
-vl_worklog/20260927_M0_Personal-Ops-Board.md
+vl_worklog/20261003_M6_Personal-Ops-Board.md (2026-10-03 M6 화면/API 구현 및 검증 기록)
 ```
 
 **이전 세션의 "Tomorrow's focus"** (있다면):
 ```
-🔴 세션을 시작하면 WorkLog 20260927 의 「▶ 다음 세션 시작 때 먼저 알릴 것」 A1~A4 를
-   가장 먼저 사용자에게 보여 주고 승인을 받는다 (A1 인덱서 속도 · A2 방송 후 문서 검토 ·
-   A3 EARS 틀 · A4 공개 push 시점). 그 다음 M0·M1 남은 일(README · check_links)
+M3/M4의 module guide와 ADR 011을 작성했고, 생성 Board 보존 확인 및 실제 PRE-HANDOFF Roundup 실행 뒤 사용자 승인으로 POST-HANDOFF를 적용했다. 마지막 실제 Roundup에는 task 상태 변경이 없어 item 쓰기가 없는 정상 no-op이었다.
+2026-10-02 Roundup에서 실제 task 변경 4건을 `items → index → priority-board`로 반영해 POST-HANDOFF 경로를 확인했다. 10/3 다음 날 GDR 뒤 네 변경의 지속성과 71/71 index·Board 재생성을 확인해 M4를 마쳤다. M5 합성 회귀와 10/3 cron 예약 실행 2회는 통과했고, 10/4 05:15 다음 날 자동 갱신 검증이 남아 있다. M6는 loopback 전용 Board UI, 안전한 frontmatter 편집·proposal 승인, 56건 회귀 및 synthetic HTTP 종단 간 검증을 진행했다. 라이브 방송에서 모든 기능을 안전하게 시연할 fixture runner와 POB-01~08 절차를 마련했다. 다음에는 시나리오를 브라우저에서 실행하고 M6 retrospective를 마친다.
 ```
 
 ---
@@ -93,6 +92,7 @@ vl_worklog/20260927_M0_Personal-Ops-Board.md
 - 🧪 방법론 실험: KIRO 식 요소를 적용·변형하면 vl_materials/VibeLearn AI 새 버전 실험 노트.md 원장에 한 줄
 - 승인 전에는 코드를 쓰지 않는다. ⑤ 없이 모듈을 닫지 않는다
 - 방송 중에 못 끝낸 것은 주중에 이어 간다 — WorkLog 에 이어갈 곳을 적는다
+- 일일 회고는 별도 태스크로 반복하지 않는다. Daily Roundup의 당일 회고가 완료되면 WorkLog의 `Daily Retrospective`에는 해당 Roundup 링크만 남기고 같은 회고를 복사하지 않는다. Roundup 전에는 미완료 표시만 두며, 모듈 검증·산출물 기록은 WorkLog에 유지한다.
 - 공개 레포: 실제 할 일·이름·연락처 금지. 코드·데이터는 볼트 AI/Tasks/ 에만
 ```
 

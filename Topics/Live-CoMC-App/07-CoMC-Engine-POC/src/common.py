@@ -48,7 +48,7 @@ ROOT = Path(__file__).resolve().parents[1]          # 07-CoMC-Engine-POC/
 TOPIC = ROOT.parent                                  # Topics/Live-CoMC-App/
 DATA = ROOT / "data"
 OUTPUT = ROOT / "output"
-TRACE = OUTPUT / "session_trace.jsonl"
+TRACE = OUTPUT / "private" / "runtime" / "session_trace.jsonl"
 
 SCHEMA_DIR = TOPIC / "03-Data-Contracts-and-Safety" / "examples" / "schemas"
 SAFETY_SRC = TOPIC / "03-Data-Contracts-and-Safety" / "examples" / "safety_policy.json"
@@ -68,6 +68,9 @@ def read_json(path: Path) -> Any:
 
 def write_json(path: Path, data: Any) -> Path:
     path = Path(path)
+    if path.is_relative_to(OUTPUT) and 'private' not in path.relative_to(OUTPUT).parts:
+        from deny_terms import redact
+        data = redact(data)
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n",
                     encoding="utf-8")
@@ -92,6 +95,8 @@ def trace(stage: str, **fields) -> None:
     """
     TRACE.parent.mkdir(parents=True, exist_ok=True)
     rec = {"ts": now_iso(), "stage": stage, **fields}
+    from deny_terms import redact
+    rec = redact(rec)
     with TRACE.open("a", encoding="utf-8") as f:
         f.write(json.dumps(rec, ensure_ascii=False) + "\n")
 
@@ -127,7 +132,8 @@ def validate_or_die(schema_name: str, instance: Any, stage: str) -> None:
         trace(stage, ok=False, schema=schema_name, errors=errs[:5])
         print(f"\n[{stage}] {schema_name} 계약 위반 {len(errs)}건:", file=sys.stderr)
         for e in errs[:8]:
-            print(f"   - {e}", file=sys.stderr)
+            from deny_terms import redact
+            print(f"   - {redact(e)}", file=sys.stderr)
         sys.exit(1)
 
 
@@ -155,6 +161,13 @@ def load_safety_policy(warn: bool = True) -> dict:
 # ── 경로 도우미 ───────────────────────────────────────────────────────
 
 def out(name: str) -> Path:
+    if name == 'session_trace.jsonl':
+        return TRACE
+    # Runtime utterances can contain viewer identities; old public files are fixtures only.
+    if name in {'intent.json', 'answer_draft.json', 'verdict.json', 'output.json',
+                'overlay.json', 'captions.json', 'spoken.json', 'spoken_pending.json', 'spoken_log.jsonl',
+                'daemon_latency.json', 'debug'}:
+        return OUTPUT / 'private' / 'runtime' / name
     return OUTPUT / name
 
 

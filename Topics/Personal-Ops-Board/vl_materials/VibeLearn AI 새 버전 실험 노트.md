@@ -24,7 +24,7 @@ tags:
 | 스펙을 개발하며 계속 고친다 | ✅ 그대로 | `architecture/ARCHITECTURE.md` 를 모듈마다 갱신 · 변경 이력 | M0 | ⏳ |
 | 단계 사이 승인 게이트 | ✅ 그대로 (이미 있음) | 로드맵 승인 · 일일 계획 승인 · ③ 설계 승인 | M0 | ⏳ |
 | 기능마다 스펙 | 🔄 변형 | 모듈마다 「한 바퀴」 6단계 (요구 찾기 → 업계 방식 → 승인 → 구현 → 아키텍처 갱신 → WorkLog) | M0 | ⏳ |
-| `requirements.md` + EARS | 🔄 변형 | 별도 파일 없이 **WorkLog 「오늘 정한 요구」에 EARS 한 줄** → DoD 검증 항목 → [decisions/008](<../architecture/decisions/008-요구는 EARS 한 줄로도 적는다.md>) | M1 | ⏳ |
+| `requirements.md` + EARS | 🔄 변형 | 별도 파일 없이 **WorkLog 「오늘 정한 요구」에 EARS 한 줄** → DoD 검증 항목 → [decisions/008](../architecture/decisions/008-요구는%20EARS%20한%20줄로도%20적는다.md) | M1 | ⏳ |
 | `design.md` (기능마다) | 🔄 변형 | 앱 전체 `ARCHITECTURE.md` 하나 | M0 | ⏳ |
 | (KIRO 에 없음) 결정의 이유 | ➕ 추가 | `architecture/decisions/NNN-제목.md` — 결정 하나 = 파일 하나 (ADR) | M0 | ⏳ |
 | (KIRO 에 없음) 업계 방식 조사 | ➕ 추가 | ② 단계 — Builders Lounge 5차 발표자의 「갈라파고스 금지」 | M0 | ⏳ |
@@ -49,6 +49,24 @@ tags:
 
 ## 기록 규칙
 
+### 2026-10-02 — A1에서 요구·검증·설계 기록 연결
+
+승인된 성능 개선을 EARS E7의 5초 목표로 구체화하고, 전체 실행 0.221초·합성 회귀 10건·원본 무변경으로 검증했다. 결과는 ARCHITECTURE v0.2와 ADR 009에 즉시 반영했다. 후속 문서·결정 반영표·16건 회귀로 M1을 마무리했다. M1에서는 요구와 검증의 연결·현재 설계 갱신이 작동했으나 전체 방법론의 최종 성공 판정은 M10까지 보류한다. → [M1 WorkLog 검증](../vl_worklog/20261002_M1_Personal-Ops-Board.md#검증)
+
+### 2026-10-02 — M2에서 세부 설계 승인 후 결정적 보드 구현
+
+M2 EARS 요구를 먼저 적고, 세 가지 설계 질문에 대한 사용자 승인을 받은 다음 Python renderer와 합성 회귀를 구현했다. 완료/닫음 구분과 root Task Board를 M3까지 쓰지 않는 경계를 ADR 010 및 ARCHITECTURE v0.3에 반영했다. WorkLog 요구별 검증표와 30건 회귀는 요구→구현→증거 연결을 보여 준다. 사용자가 승인한 AI4PKM 단회 trigger는 completed log와 실제 view 갱신으로 확인했다. → [M2 WorkLog 검증](../vl_worklog/20261002_M2_Personal-Ops-Board.md#검증)
+
+### 2026-10-03 — M5 요구 승인 후 결정적 마감 경고 구현
+
+마감 규칙을 EARS 표와 경계값 사례로 먼저 확정하고 사용자 승인을 받은 뒤 구현했다. 날짜 계산은 LLM에서 분리해 `pob_deadline.py`에 두고 AI4PKM cron은 기존 runtime에 연결했다. 합성 경계 회귀·운영 수동 렌더·CLI agent registry는 통과했으며 scheduler를 실제 켠 예약 log는 아직 없다. 요구→테스트→ADR 연결은 적용됐고, 매일 확인하는 운영 동작은 다음 session에서 검증한다. → [M5 WorkLog](../vl_worklog/20261003_M5_Personal-Ops-Board.md#검증)
+
+### 기록 원칙
+
 - 모듈을 닫을 때(Module Retrospective) 위 원장의 「평가」 칸을 채운다
 - KIRO 식 요소를 새로 적용하거나 바꾸면 원장에 한 줄 더하고, 앱 구조에 관한 것이면 `decisions/` 에도 남긴다
 - Topic Final Retrospective 에서 이 노트로 「새 버전을 만들지」 판단한다
+
+## M1 모듈 평가
+
+EARS를 별도 파일 없이 WorkLog에 두고 코드·검증·ADR 009·현재 아키텍처로 연결했다. 9건 기준 계획과 현재 10건 사양의 차이를 반영표에서 구분했고, 운영 규칙을 파서 기능으로 오인하지 않도록 명시했다. 재사용 효과와 전체 문서 부담은 아직 검증하지 못했다. → [M1 모듈 회고](../vl_worklog/20261002_M1_Retrospective.md#다음-모듈-준비)

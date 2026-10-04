@@ -214,9 +214,28 @@ def verify(draft: dict, ctx: dict, policy: dict, question: str = "",
         str(len(ctx["coverage_items"])),
         str(len(ctx["evidence_pool"])),
     ]
+    if lane in ("vault", "web", "creative"):
+        trusted_extra = []
+    creative_bad = lane == "creative" and (
+        not sentences or not sentences[0].startswith("지어낸 이야기인데요,") or
+        any(re.search(r"\d|[A-Za-z]|창수|진행자|멤버|님|실존|서울|시애틀|한국|미국|삼성|구글|네이버", s) for s in sentences))
 
     for i, sent in enumerate(sentences):
+        import deny_terms
+        denied = deny_terms.matches(sent)
+        if denied:
+            dropped.append({'sentence_idx': i, 'reason': 'm11.deny_term'})
+            violations.append({'rule_id': 'm11.deny_term', 'detail': f'금칙 정보 문장 제외 {len(denied)}건',
+                               })
+            continue
         claims = by_idx.get(i, [])
+        if lane == "creative":
+            if creative_bad or cmap:
+                dropped.append({"sentence_idx": i, "reason": "creative_policy"})
+                violations.append({"rule_id": "creative.fiction_only", "detail": "가상 이야기 표시·실존 인물·숫자·인용 정책 위반"})
+            else:
+                kept.append(i)
+            continue
 
         # ① 근거가 붙어 있는가
         if not claims:
@@ -230,7 +249,8 @@ def verify(draft: dict, ctx: dict, policy: dict, question: str = "",
         for c in claims:
             if c.get("evidence_path") not in pool_paths:
                 bad.append(f"경로 위조 {c.get('evidence_path')!r}")
-            elif not quote_found(c.get("evidence_quote", ""), pool_quotes):
+            elif not quote_found(c.get("evidence_quote", ""),
+                                 [e["quote"] for e in ctx["evidence_pool"] if e["path"] == c.get("evidence_path")]):
                 bad.append(f"인용 미발견 {str(c.get('evidence_quote'))[:32]!r}")
         if bad:
             dropped.append({"sentence_idx": i, "reason": "evidence_not_found"})
@@ -260,7 +280,7 @@ def verify(draft: dict, ctx: dict, policy: dict, question: str = "",
         #
         #   주제가 화이트리스트 밖  →  화이트리스트 닫힘으로 참. 근거 표기만 바로잡는다
         #   주제가 화이트리스트 안  →  화이트리스트와 모순. 드롭한다
-        if RE_ABSENCE.search(sent):
+        if lane == "broadcast" and RE_ABSENCE.search(sent):
             # 부재 주장의 **주어**가 화이트리스트 항목인지를 본다.
             #
             # 처음에는 '문장에 커버리지 어휘가 겹치고 남는 토큰이 없으면 모순'으로
@@ -285,7 +305,11 @@ def verify(draft: dict, ctx: dict, policy: dict, question: str = "",
 
         # ⑤ 숫자·고유명사가 자기 근거 안에 실재하는가 (M8)
         own_quotes = [c.get("evidence_quote", "") for c in claims]
-        bad_facts = check_facts(sent, own_quotes, trusted_extra, digits_only=(lang == "en"))
+        source_hosts = []
+        if lane == "web":
+            from urllib.parse import urlparse
+            source_hosts = [urlparse(c.get("evidence_path", "")).hostname or "" for c in claims]
+        bad_facts = check_facts(sent, own_quotes, trusted_extra + source_hosts, digits_only=(lang == "en"))
         if bad_facts:
             dropped.append({"sentence_idx": i, "reason": "fact_not_in_evidence"})
             violations.append({"rule_id": "claim.facts_must_be_quoted",
@@ -400,6 +424,13 @@ def verify(draft: dict, ctx: dict, policy: dict, question: str = "",
             "detail": f"방송에서 읽을 수 없는 종결(해라체+요) {len(style_broken)}건"})
 
     final_text = strip_evidence_labels(" ".join(sentences[i] for i in kept))
+    if lane in ("vault", "web") and kept:
+        prefix = "지난 기록을 보면," if lane == "vault" else "검색 결과에 따르면,"
+        if not final_text.startswith(prefix):
+            for i in kept:
+                dropped.append({"sentence_idx": i, "reason": "source_disclosure_missing"})
+            kept, final_text = [], ""
+            violations.append({"rule_id": "source.disclose_lane", "detail": "답변 시작에 근거 종류 표시가 없습니다"})
     absence_kept = [i for i in absence_basis if i in kept]
     return {
         # 문장을 버리지는 않는다 — 위험한 말이 아니라 쓸모없는 말이다.
@@ -485,9 +516,14 @@ def main():
             draft["_length_level"] = _intent["slots"].get("length_level") or (
                 "default" if _intent["intent"] in ("greet_viewer", "small_talk") else "casual")
 
-    if lane == "casual":
+    import evidence_lanes as lanes
+    extended_ctx = read_json(lanes.CONTEXT) if lanes.CONTEXT.exists() else None
+    if extended_ctx and _intent and extended_ctx.get("intent_fingerprint") == lanes.fingerprint(_intent):
+        ctx = extended_ctx
+        lane = ctx["lane"]
+    elif lane == "casual":
         # ④ 와 같은 함수로 같은 풀을 만든다 — 정의가 두 벌이면 어긋난다.
-        brief = read_json(_m04.CASUAL_BRIEF(args.live))
+        brief = {'evidence_pool': []} if _m04.standalone_casual(_intent) else read_json(_m04.CASUAL_BRIEF(args.live))
         ctx = {"evidence_pool": _m04.casual_evidence(brief, _intent["intent"], args.live, _intent),
                "coverage_items": brief.get("topics", []), "coverage_state": "defined",
                "current_part_id": None}
@@ -504,6 +540,9 @@ def main():
         print("   인용은 실재하므로 M7 게이트만으로는 전부 통과한다\n")
 
     v = verify(draft, ctx, policy, question=question, lane=lane, lang=lang)
+    if _intent:
+        from persona_store import apply_policy
+        v = apply_policy(v, draft, _intent)
     validate_or_die("verdict", v, "05_verify_and_gate")
     path = write_json(out("verdict.json"), v)
 
@@ -513,9 +552,11 @@ def main():
     for i, s in enumerate(draft["sentences"]):
         d = next((x for x in v["dropped_sentences"] if x["sentence_idx"] == i), None)
         mark = f"✗ {d['reason']}" if d else "✓"
-        print(f"   [{i}] {mark:<22} {s[:52]}")
+        from deny_terms import redact
+        print(f"   [{i}] {mark:<22} {redact(s[:52])}")
     for vi in v["violations"]:
-        print(f"   ⚠ {vi['rule_id']}: {vi.get('detail','')}")
+        from deny_terms import redact
+        print(f"   ⚠ {vi['rule_id']}: {redact(vi.get('detail',''))}")
 
     print(f"\n   최종 발화: {v['final_text'][:96] or '(없음 — 발화하지 않는다)'}")
     trace("05_verify_and_gate", ok=True, passed=v["pass"], lane=lane, tamper=args.tamper,

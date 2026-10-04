@@ -99,6 +99,21 @@ Clearly-BRD-PRD/
 |------|------|------|
 | 🇰🇷 한국어 | [AI가 질문 몇 가지로 BRD/PRD를 만들어준다? \| Clearly 앱 실사용 후기](https://youtu.be/crK2aO_uXkQ?si=pPe0YaNHMnTte_b7) | 16:28 |
 | 🇺🇸 영어 | [AI Writes Your BRD & PRD in Minutes? \| Honest Clearly App Review](https://youtu.be/KwQOpU__BKo?si=J2A_irhEPO_tCYPf) | 13:48 |
+
+### 실습 라이브 — 재미로 하는 Vibe Coding
+
+Clearly 로 만든 BRD/PRD 를 바탕으로 홈페이지를 만들고, 세 AI 도구 결과를 비교하고, 소개 영상까지 만든 과정입니다.
+
+| 날짜 | 영상 | 길이 |
+|---|---|---|
+| 2026-02-15 | [번외편 — Clearly App 개발자분이 Bug Fix 하셨습니다. 다시 사용해 보겠습니다](https://youtu.be/3-ZljCZMV9I) | 1:32:06 |
+| 2026-02-16 | [Clearly App 으로 BRD/PRD 완성하고 홈페이지 만들기, VibeLearn AI 영어 버전 제작과 영어권 홍보 계획 설계하기](https://youtu.be/2cgwYl7XChA) | 2:30:14 |
+| 2026-02-19 | [번외편 — Clearly App 으로 만든 BRD/PRD 로 홈페이지 개발 (Claude Code)](https://youtu.be/twe6zuK-M0I) | 1:21:27 |
+| 2026-02-20 | [번외편 — Gemini 로 홈페이지 만들기, Claude Code 와 비교](https://youtu.be/JfBP0WkWJWY) | 1:23:07 |
+| 2026-02-21 | [번외편 — Codex 로 홈페이지 작업, Claude Code · Gemini · Codex 작품 비교](https://youtu.be/uEF56fdDMSI) | 58:20 |
+| 2026-02-24 | [주중 작업한 홈페이지 개발 마무리, VibeLearn AI 영어 버전 작업](https://youtu.be/KHlBJNj-l4g) | 3:00:20 |
+| 2026-02-24 | [번외편 — Clearly 공부 마지막 시간, Skill 로 한국어/영어 홍보 영상 만들기](https://youtu.be/UYN9ReXrym4) | 1:29:14 |
+| 2026-02-25 | [번외편 — Claude Skills 로 어제 만든 한국어 영상을 바탕으로 영어 버전 영상 만들기](https://youtu.be/MzQxhlJo_-I) | 1:43:41 |
  
 ---
 

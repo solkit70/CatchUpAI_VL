@@ -1,5 +1,5 @@
 {
-  "version": "1.0",
+  "version": "1.1-m11",
   "source": "_Settings_/Skills/live-broadcast/SKILL.md (v1.2.0)",
   "generated_by": "M3 - 데이터 계약과 안전 정책 스펙",
   "note": "SKILL.md의 사람이 읽는 원칙을 코드가 로드/집행할 수 있는 규칙으로 번역한다. M8 안전 검증 게이트가 이 파일을 그대로 로드한다.",
@@ -7,7 +7,7 @@
     {
       "id": "no_speculation",
       "title": "절대 추측 금지",
-      "rule": "Rundown 문서 내 팩트(상태·타임스탬프·항목)만 사용한다. 근거가 없거나 모호하면 발화하지 않고 확인 질문을 던진다.",
+      "rule": "근거의 종류를 밝히고 말한다. Rundown은 오늘 방송의 1순위 권위값, 볼트는 지난 기록, 웹은 공개 정보로 구분한다. 창작은 명시 요청과 가상 이야기 계약으로만 허용한다.",
       "enforced_by": [
         "claim.evidence_required",
         "ambiguity.quantity_mismatch",
@@ -155,5 +155,31 @@
       "note": "M8 이전에는 조건부 섹션이 무조건 근거 풀에 들어가 있었다. '대기 목록 (시간이 남으면)' 이 근거로 실려, 금칙 섹션을 묻는 질문에 그럴듯한 답을 만드는 재료가 됐다.",
       "llm_self_eval": false
     }
-  ]
+  ],
+  "m11": {
+    "lanes": [
+      "rundown",
+      "vault",
+      "web",
+      "creative"
+    ],
+    "review_required": [
+      "vault",
+      "web",
+      "creative"
+    ],
+    "creative_requires_explicit_request": true,
+    "private_sources_excluded": true,
+    "quote_must_match_same_path": true,
+    "deny_terms_file": "output/private/m11/deny_terms.json",
+    "deny_terms_match": "NFKC whitespace-normalized case-insensitive substring",
+    "deny_terms_missing": "warn_and_use_empty_list",
+    "deny_terms_rules": [
+      "exclude_vault_web_evidence_at_index_and_use",
+      "reject_vault_web_questions_without_fallback",
+      "drop_final_sentences_in_all_lanes",
+      "log_count_and_kind_only"
+    ],
+    "personal_record_review_warning": "claim_map evidence_path starts with Journal/ or AI/Roundup/; console only; approval allowed"
+  }
 }

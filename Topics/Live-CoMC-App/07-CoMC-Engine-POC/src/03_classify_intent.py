@@ -116,6 +116,8 @@ OUT_OF_SCOPE_RULES = [
 def detect_out_of_scope(text: str):
     low = text.lower()
     for rule_id, keys, why in OUT_OF_SCOPE_RULES:
+        if rule_id in ("boundary.4_rag", "boundary.7_history"):
+            continue  # M11: historical/vault evidence is now an explicit lane.
         if any(k.lower() in low for k in keys):
             return rule_id, why
     return None, None
@@ -196,7 +198,13 @@ def build_intent(text: str, ctx: dict | None) -> dict:
     body, residue = strip_wake_residue(text)
     intent, conf = classify(body)
 
+    from evidence_lanes import requested_lane
+    requested = requested_lane(body)
+    if requested != "auto" and intent not in ("stop", "advance_part", "repeat", "out_of_scope", "greet_viewer"):
+        intent, conf = "answer_question", CONF_STRONG
+
     slots: dict = {}
+    slots["evidence_lane"] = requested
     if intent == "out_of_scope":
         rule_id, why = detect_out_of_scope(body)
         slots["boundary_rule"] = rule_id
@@ -229,7 +237,7 @@ def build_intent(text: str, ctx: dict | None) -> dict:
     # ── 모호성 플래그 (safety_policy.ambiguity_rules 와 연동) ──────────
     flags: list[str] = []
     # 캐주얼 레인은 파트 커버리지와 무관하다 — no_coverage 등 방송 내용용 플래그를 달지 않는다.
-    if ctx is not None and intent not in CASUAL_INTENTS:
+    if ctx is not None and intent not in CASUAL_INTENTS and requested in ("auto", "rundown"):
         # 금칙 섹션을 이름으로 지목한 요청.
         #
         # M8 시나리오 forbidden-request 가 드러낸 것: 근거 풀에서 금칙 본문을
@@ -347,7 +355,8 @@ def main():
     it = build_intent(text, ctx)
     validate_or_die("intent", it, "03_classify_intent")
     path = write_json(out("intent.json"), it)
-    print(f"\n  발화: {text}")
+    from deny_terms import redact
+    print(f"\n  발화: {redact(text)}")
     show(it)
     trace("03_classify_intent", ok=True, intent=it["intent"],
           confidence=it["confidence"], flags=it["ambiguity_flags"], output=path.name)

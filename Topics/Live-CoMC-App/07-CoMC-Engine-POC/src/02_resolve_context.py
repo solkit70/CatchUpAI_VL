@@ -42,6 +42,29 @@ from common import (now_iso, out, read_json, read_text, trace,  # noqa: E402
 RE_WIKILINK = re.compile(r"\[\[([^\]|#]+)")
 RE_TABLE_ROW = re.compile(r"^\|(.+)\|\s*$")
 
+
+def heading_title(line: str) -> str:
+    # Use the same canonical heading parser as stage ①: titles omit N부/time.
+    import importlib.util
+    mod = sys.modules.get("m11_rundown_parser")
+    if mod is None:
+        spec = importlib.util.spec_from_file_location("m11_rundown_parser", HERE / "01_parse_rundown.py")
+        mod = importlib.util.module_from_spec(spec)
+        sys.modules[spec.name] = mod
+        spec.loader.exec_module(mod)
+    numbered = mod.RE_PART.match(line)
+    if numbered:
+        return numbered.group(2).strip()
+    parenthesized = mod.RE_H2_PAREN.match(line)
+    return parenthesized.group(1).strip() if parenthesized else line[3:].strip()
+
+
+def table_cells(row: str) -> list[str]:
+    # Protect wiki aliases and escaped pipes before splitting table columns.
+    row = re.sub(r"\[\[[^\]]+\]\]", lambda m: m[0].replace("|", "\u0000"), row)
+    row = row.replace("\\|", "\u0000")
+    return [c.replace("\u0000", "|").strip() for c in row.split("|")]
+
 # 근거로 쓸 섹션. 로드맵이 지정한 크로스 조회 대상이다.
 DAILY_SECTION = "## Status Summary"
 WEEKLY_SECTION = "## Priority Summary"
@@ -91,7 +114,7 @@ def section_rows(path: Path, heading: str) -> list[str]:
         m = RE_TABLE_ROW.match(line.rstrip())
         if not m:
             continue
-        cells = [c.strip() for c in m.group(1).split("|")]
+        cells = table_cells(m.group(1))
         if not cells or all(set(c) <= set("-: ") for c in cells):
             continue                                  # 구분선
         if cells[0] in ("항목", "우선순위"):
@@ -155,7 +178,7 @@ def part_body_quotes(md_text: str, part_title: str, limit: int,
         if line.startswith("## "):
             if inside:
                 break
-            inside = part_title in line
+            inside = heading_title(line) == part_title.strip()
             continue
         if not inside:
             continue
@@ -166,14 +189,19 @@ def part_body_quotes(md_text: str, part_title: str, limit: int,
             if not in_candidate:
                 quotes.append(title)
             continue
+        if in_candidate:
+            continue
         m = RE_TABLE_ROW.match(s)
         if m and cov_keys:
-            cells = [c.strip() for c in m.group(1).split("|")]
-            if len(cells) >= 3 and not all(set(c) <= set("-: ") for c in cells) \
+            cells = table_cells(m.group(1))
+            if len(cells) >= 2 and not all(set(c) <= set("-: ") for c in cells) \
                     and cells[0] not in ("#", "항목"):
-                name, status = clean_cell(cells[1], 120), clean_cell(cells[2])
+                offset = 1 if len(cells) >= 3 and not matches_coverage(clean_cell(cells[0])) and matches_coverage(clean_cell(cells[1])) else 0
+                name, status = clean_cell(cells[offset], 120), clean_cell(cells[offset + 1])
                 if name and status and matches_coverage(name):
                     quotes.append(f"[확정 항목 현재 상태] {name} — {status}")
+                    if len(quotes) >= limit:
+                        break
             continue
         if in_candidate:
             continue
@@ -210,17 +238,19 @@ def build(live: str, part_id: str, max_evidence: int,
     # 금칙 본문이 들어올 경로가 구조적으로 없다. 그래도 뒤에서 대조해 확인한다.
     evidence: list[dict] = []
     rundown_rel = idx["source_path"]
+    actual_heading = next((line[3:].strip() for line in md_text.splitlines()
+                           if line.startswith("## ") and heading_title(line) == part["title"]), part["title"])
 
     # 확정 커버리지는 근거 풀의 **첫 줄**이다 (사고 8). 커버리지 줄은 이 방송에서
     # 말해도 되는 것의 정의이고, 그 사실 자체가 인용할 수 있는 근거여야 한다.
     # 그래야 ④ 가 "이번 방송은 X 를 다룹니다" 를 확정으로 말하고 ⑤ 가 그것을 통과시킨다.
     for item in part["coverage_items"]:
-        evidence.append({"path": f"{rundown_rel}#{part['title']}#이번 방송 커버리지",
+        evidence.append({"path": f"{rundown_rel}#{actual_heading}",
                          "quote": f"[확정] 이번 방송 커버리지 — {item}"})
 
     for q in part_body_quotes(md_text, part["title"], limit=max_evidence,
                               coverage_items=part["coverage_items"]):
-        evidence.append({"path": f"{rundown_rel}#{part['title']}", "quote": q})
+        evidence.append({"path": f"{rundown_rel}#{actual_heading}", "quote": q})
 
     status_map: dict[str, str] = {}
     status_map["rundown"] = "final" if idx["is_final"] else "unconfirmed"
@@ -314,8 +344,8 @@ def main():
                     help="current_part_id — 권위값. 추정하지 않고 명시적으로 받는다")
     ap.add_argument("--allow-conditional", action="store_true",
                     help="조건부 섹션을 근거 풀에 편입한다 (진행자가 조건 충족을 판정했을 때)")
-    ap.add_argument("--max-evidence", type=int, default=8,
-                    help="소스별 최대 근거 수 (기본 8). 근거 풀은 좁을수록 좋다")
+    ap.add_argument("--max-evidence", type=int, default=24,
+                    help="소스별 최대 근거 수 (기본 24). M11 검색 결과는 별도 질의별 10건")
     args = ap.parse_args()
 
     ctx, part = build(args.live, args.part, args.max_evidence,

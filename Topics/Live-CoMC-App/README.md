@@ -1,13 +1,35 @@
 # Live-CoMC-App — 라이브 방송 보조 MC 앱
 
-> **Rundown 에 적힌 것만 근거로 말하는 방송 보조 MC.** 매주 일요일 05:00 PST 「AI in Action Live」에서 진행자 옆에 붙어, 그 주 Rundown 에 있는 내용만 화면(오버레이)과 — 다음 단계로 — 목소리로 답하는 앱을 VibeLearn AI 방법론으로 만든 프로젝트형 Topic 이다.
+> **근거의 종류를 밝히고 말하는 AI 공동 MC.** 매주 일요일 Seattle 현지 05:00 「AI in Action Live」에서 Rundown을 우선 확인하고, 지난 볼트 기록·공개 웹 검색·명시적으로 요청한 가상 이야기를 구분해 답한다. M1~M10의 방송 진행 계약에 M11 근거 확장을 연결한 프로젝트형 Topic이다.
 
 | | |
 |---|---|
-| 기간 | 2026-08-02 로드맵 → 2026-09-17 완료 (6주 반 · 14세션) |
-| 상태 | ✅ **M1~M10 완료** · Retrospective 완결 · **CVL 1~4 (9/17)**: 사고 7~11 수정 · `spoken_player.py` · 무관중 4회차 사고 0 → **A GO · B 조건부 GO** · 진행자 UI = [브라우저 탭 하나](09-Desktop-Shell-and-Overlay/examples/engine/comc_console.py) · **코엠씨 캐주얼 레인** (주간 맥락·날씨·시청자 인사·영어) · 15개 언어 시그니처 끝인사 |
-| 실전 투입 | Live #26(09-06, 리허설 1회차) · **Live #27(09-13, 3회차 실전 — REVIEW 모드)** |
-| 한 줄 결과 | 「근거 없으면 말하지 않는다」를 지키는 엔진과 그것을 방송 화면에 띄우는 경로는 완성됐다. 목소리로 내는 경로(B)와 목소리로 묻는 경로(C)는 부품이 각각 검증된 채 아직 이어지지 않았다 |
+| 기간 | 2026-08-02 시작 → 2026-09-17 M1~M10 마감 → 2026-10-01 M11 근거 확장 |
+| 상태 | M1~M10 · CVL1~4 완료. M11 구현·자동 및 실제 LLM 검증 완료, 진행자 콘솔·라이브 확인 대기 |
+| 실전 투입 | Live #26·#27 화면 리허설 → Live #28(9/20) 음성 첫 실전 → Live #29(9/27) 두 번째 음성 방송 |
+| 한 줄 결과 | 화면·음성 공동 MC에 Rundown·볼트·웹·창작을 연결했다. 새 답변 경로는 출처를 표시하고 승인 뒤 발화한다. 음성 입력(C)은 아직 별도 검증 대상 |
+
+## M11 — 답변 근거 확장 (2026-10-01)
+
+CVL8은 비공개 금칙 목록으로 검색 근거·질문·최종 발화를 검사하며, Journal·Roundup 출처의 승인 대기 답에는 콘솔 경고와 파일·섹션을 표시한다. 개인 기록 검색과 기존 승인 흐름은 유지한다. → [CVL8 기록](vl_worklog/20261002_CVL8_Live-CoMC-App.md#📚-진행-내용)
+
+Rundown → 비공개 로컬 볼트 색인 → Tavily 공개 웹 검색의 자동 선택과 수동 선택을 구현했다. 창작은 명시적으로 요청할 때만 허용하며, 볼트·웹·창작 답변은 LIVE 모드에서도 승인 대기로 보내고 진행자가 확인한 뒤 발화한다. 현재 파트 권위값, 미편성 내용 제외, 숫자·고유명사·인용 검증을 유지한다.
+
+콘솔을 재시작하면 질문란 아래 **답변 근거** 선택 칸과 **볼트 색인 갱신** 버튼이 보인다. 결과에는 경로 배지와 출처 파일의 섹션 또는 URL이 나오며, 새 기록을 반영하려면 색인을 갱신한다. 구현은 [evidence_lanes.py](07-CoMC-Engine-POC/src/evidence_lanes.py), 검증은 [M11 테스트](07-CoMC-Engine-POC/tests/test_evidence_lanes.py)와 [개발 WorkLog](vl_worklog/20261001_M11_Live-CoMC-App.md)에 있다.
+
+색인·질문별 근거·Tavily 설정은 Git에서 제외되는 `07-CoMC-Engine-POC/output/private/m11/`에만 둔다. 내부 자료와 민감한 개인 일은 검색에서 제외하며, 구현·자동 및 실제 LLM 검증 뒤 진행자의 콘솔·음성 확인과 다음 라이브 검증이 남아 있다. 개발 순서는 M11 → 시청자 이름·참여 기록 → Persona이며, 기존 CVL5 사고 손질은 뒤로 미룬다.
+
+## 시청자 이름 기억과 참여 기록 (CVL6 · 2026-10-01)
+
+콘솔의 「시청자 · 이번 회차 참여 기록」에서 표시 이름을 한 번 등록한 뒤 선택해서 인사한다. 쉼표로 여러 명을 추가하고 방송 날짜를 확인·수정할 수 있으며, 회차별 명단은 재시작 후에도 유지된다. 이전 회차 참여 횟수와 다시 온 분 표시, 전체 참여자의 처음·마지막 회차, 이름 수정·삭제·음성용 읽는 법을 지원한다. 인사 대상이 많으면 최대 네 명씩 묶어 하나씩 진행한다.
+
+✓ 인사 완료는 실제 재생이 정상 종료된 뒤에만 표시한다. 명단은 `output/private/viewers/roster.json`, 이름이 포함되는 런타임 파일과 오디오는 `output/private/runtime/`에 저장한다. 자동·브라우저·실제 LLM 검증을 마쳤고 실제 출력 장치와 다음 라이브 확인은 남아 있다. → [운영 가이드](10-Live-Rehearsal-Capstone/guides/operator-guide.md#시청자-명단과-참여-기록-cvl6--2026-10-01) · [CVL6 WorkLog](vl_worklog/20261001_CVL6_Live-CoMC-App.md). 다음 개발은 Persona 선택이다.
+
+## Persona 선택 (CVL7 · 2026-10-01)
+
+콘솔의 「AI 코엠씨 · Persona」에서 기본 말투와 하늘(고등학생), 다온(아나운서 지망 대학생), 서연(프로 아나운서), 지우(친구)를 선택한다. 다음 질문부터 말투와 음성 설정이 바뀌며 선택은 재시작 후에도 유지된다. 답변 생성 중 바꿔도 기존 초안·승인 대기 음성은 생성 당시 캐릭터를 유지하고 콘솔 결과와 자막에 그 이름을 표시한다. → [정의 JSON](07-CoMC-Engine-POC/data/personas.json) · [운영 가이드](10-Live-Rehearsal-Capstone/guides/operator-guide.md#persona-선택-cvl7--2026-10-01)
+
+캐릭터는 AI 공동 진행자의 가상 설정이다. 친구가 진행자의 과거 이야기를 할 때는 실제 볼트 기록만 사용하며, 기존 사실·인용·길이·민감 정보 제외 검사는 유지하고 실존 인물 행세와 공동 경험 주장 검사를 추가했다. 선택·답변 생성·재생 완료와 회차별 반응 메모는 `output/private/personas/state.json`에 남긴다. 구현·자동·브라우저·실제 LLM 비교·한국어와 영어 합성을 검증했으며, 자연스러움과 목소리 적합성은 진행자의 실제 청취 확인이 남아 있다. → [CVL7 WorkLog](vl_worklog/20261001_CVL7_Live-CoMC-App.md)
 
 ## 무엇을 알아냈나
 
@@ -49,7 +71,7 @@ REVIEW 모드(진행자 타이핑 → OBS 오버레이). 프리플라이트 PASS
 
 ## 다음 (CVL 유지보수)
 
-✅ CVL 1·2 (09-17) 로 ①②③ 완료 — [사고 7~11 수정](10-Live-Rehearsal-Capstone/guides/incident-classification.md) · [`spoken_player.py`](09-Desktop-Shell-and-Overlay/examples/engine/spoken_player.py) · [4회차](10-Live-Rehearsal-Capstone/guides/rehearsal-log-4.md). CVL 3 (09-17 밤) 로 창 4개 → [콘솔 하나](09-Desktop-Shell-and-Overlay/examples/engine/comc_console.py) + [조작 가이드](10-Live-Rehearsal-Capstone/guides/operator-guide.md). CVL 4 (09-17 밤) 로 두 번째 근거 풀 [캐주얼 브리프](07-CoMC-Engine-POC/src/02b_build_casual_brief.py) — 날씨·이번 주 한 일·인사이트·자리 비움 진행(≈50초)·시청자 언급·영어 답변 ([게이트 규칙 차이](08-Safety-Gate-Scenarios/guides/verification-rules.md)). 다음은 **Live #28(09-20) 실전** — A·B 의 첫 방송 — 그 뒤 C(음성 입력).
+✅ CVL 1·2 (09-17) 로 ①②③ 완료 — [사고 7~11 수정](10-Live-Rehearsal-Capstone/guides/incident-classification.md) · [`spoken_player.py`](09-Desktop-Shell-and-Overlay/examples/engine/spoken_player.py) · [4회차](10-Live-Rehearsal-Capstone/guides/rehearsal-log-4.md). CVL 3 (09-17 밤) 로 창 4개 → [콘솔 하나](09-Desktop-Shell-and-Overlay/examples/engine/comc_console.py) + [조작 가이드](10-Live-Rehearsal-Capstone/guides/operator-guide.md). CVL 4 (09-17 밤) 로 두 번째 근거 풀 [캐주얼 브리프](07-CoMC-Engine-POC/src/02b_build_casual_brief.py) — 날씨·이번 주 한 일·인사이트·자리 비움 진행(≈50초)·시청자 언급·영어 답변 ([게이트 규칙 차이](08-Safety-Gate-Scenarios/guides/verification-rules.md)). Live #28(09-20)과 Live #29(09-27) 음성 실전을 거쳤다. 현재 개발은 M11 근거 확장 → 시청자 참여 기록 → Persona 순이며 C(음성 입력)는 별도 후속 대상이다.
 
 ## 기록
 

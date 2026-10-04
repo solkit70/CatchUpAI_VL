@@ -22,6 +22,17 @@ CUA_VL (Catch Up AI Vibe Learning) 방법론을 사용하여 2주간 학습하�
 
 ---
 
+## 🎬 이 Topic 으로 만든 영상
+
+| 날짜 | 영상 | 길이 |
+|---|---|---|
+| 2026-01-29 | [재미로 하는 Vibe Coding 번외편 — 유튜브 영어 영상 자막을 한국어로 요약해 주는 Skill 을 커뮤니티 GitHub Repo 에 PR 하기](https://youtu.be/NWy139jzKwg) | 1:12:33 |
+| 2026-01-30 | [AI-powered PKM 실습 — 영어 유튜브 영상을 한글로 요약해 주는 Skill 소개 및 GitHub PR 실전 데모](https://youtu.be/HWU3iYJK-8Y) | 33:48 |
+
+YouTube→MD Skill(`03-Skill-B-YouTube-MD/`)을 만들고 공개하는 과정입니다.
+
+---
+
 ## 빠른 시작
 
 ### 1. CUA_VL Skill

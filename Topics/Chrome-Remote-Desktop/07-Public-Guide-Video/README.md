@@ -4,7 +4,7 @@ created: "2026-09-27 21:38:05"
 author:
   - "Codex"
 module: "M7"
-status: "진행 중 · 슬라이드 플랜 v2 검토 대기"
+status: "완료 · 한국어 · 영어 영상 공개 (2026-09-30)"
 tags:
   - vibelearn-ai
   - chrome-remote-desktop
@@ -12,6 +12,8 @@ tags:
 ---
 
 ## 목표와 현재 상태
+
+> 🎬 **공개 완료 (2026-09-30)** — [한국어 영상](https://youtu.be/Uj47SPD6owc) · [English video](https://youtu.be/G1WsQ_J2jxU)
 
 일반 시청자가 집 Windows 컴퓨터를 준비하고 iPhone에서 접속해 짧은 작업·저장·잠금·연결 종료·재접속까지 따라 할 수 있는 한국어 영상을 만든다. 사용자 스타일 기준을 적용한 18장 슬라이드 플랜을 작성했으며, 현재는 흐름과 설명 수준을 검토하는 단계다.
 

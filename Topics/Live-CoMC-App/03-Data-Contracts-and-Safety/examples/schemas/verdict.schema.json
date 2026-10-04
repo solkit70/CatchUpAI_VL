@@ -48,7 +48,10 @@
               "fact_not_in_evidence",
               "absence_contradicts_coverage",
               "style_broken",
-              "cross_part"
+              "cross_part",
+              "creative_policy",
+              "source_disclosure_missing",
+              "persona_policy"
             ],
             "description": "탈락 사유: claim 없음/근거 문자열 미발견/화이트리스트 위반/길이 하드컷 초과/숫자·고유명사가 자기 근거에 없음(M8)/화이트리스트에 있는 항목을 없다고 주장(M8) / style_broken: 방송에서 읽을 수 없는 종결(M10 규칙 8) / cross_part: 질문이 다른 파트를 가리켜 현재 파트 근거로 답할 수 없음(사고 10)"
           }

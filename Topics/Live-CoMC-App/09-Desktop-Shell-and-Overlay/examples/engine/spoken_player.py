@@ -68,6 +68,19 @@ LOG = out("spoken_log.jsonl")
 AUDIO_DIR = out("debug") / "audio"
 POLL_S = 0.25
 MODE_CHECK_S = 0.05
+REPEAT_WINDOW_S = 30.0
+# Only completed playback counts. Monotonic time is unaffected by clock changes.
+_last_completed = None
+
+
+def repeat_key(spoken: dict, provider_name: str, prov) -> tuple:
+    text = re.sub(r"\s+", " ", normalize_for_tts(spoken.get('text') or '')).strip()
+    persona = spoken.get('persona') or {}
+    custom = persona.get('id') not in (None, 'default')
+    return (text, persona.get('live'), persona.get('id'), persona.get('definition_sha256'),
+            spoken.get('provider', provider_name) if custom else provider_name,
+            spoken.get('voice') if custom else getattr(prov, 'voice', None),
+            spoken.get('rate') if custom else None, spoken.get('pitch') if custom else None)
 
 
 def log(ev: dict) -> None:
@@ -222,23 +235,79 @@ def normalize_for_tts(text: str) -> str:
     return t
 
 
-def speak(text: str, prov, provider_name: str, device: int | None,
-          watch_mode: bool, tag: str, stop_unless: tuple[str, ...] = ("LIVE",)) -> dict:
+def prepare_audio(text: str, prov, provider_name: str, device: int | None, tag: str,
+          voice: str | None = None, rate: str | None = None, pitch: str | None = None) -> dict:
     AUDIO_DIR.mkdir(parents=True, exist_ok=True)
     path = AUDIO_DIR / f"spoken_{tag}.mp3"
     t0 = time.perf_counter()
     voice_backup = prov.voice
-    if is_english(text) and provider_name in EN_VOICE:
+    rate_backup, pitch_backup = getattr(prov, 'rate', None), getattr(prov, 'pitch', None)
+    if voice:
+        prov.voice = voice
+    elif is_english(text) and provider_name in EN_VOICE:
         prov.voice = EN_VOICE[provider_name]
+    if provider_name == 'edge':
+        if rate is not None: prov.rate = rate
+        if pitch is not None: prov.pitch = pitch
+    used_voice = prov.voice
     try:
         r = prov.synth(normalize_for_tts(text), path)
     finally:
         prov.voice = voice_backup
+        if provider_name == 'edge':
+            prov.rate, prov.pitch = rate_backup, pitch_backup
     synth_ms = round((time.perf_counter() - t0) * 1000)
     data, sr = load_audio(r.path, device)
-    pr = play(data, sr, device, watch_mode, stop_unless)
-    return {"provider": provider_name, "voice": prov.voice, "audio": str(r.path.name),
-            "synth_ms": synth_ms, "audio_s": round(len(data) / sr, 2), **pr}
+    return {"provider": provider_name, "voice": used_voice, "audio": str(r.path.name),
+            "synth_ms": synth_ms, "audio_s": round(len(data) / sr, 2), 'data': data, 'sr': sr}
+
+
+def speak(text: str, prov, provider_name: str, device: int | None,
+          watch_mode: bool, tag: str, stop_unless: tuple[str, ...] = ("LIVE",),
+          voice: str | None = None, rate: str | None = None, pitch: str | None = None,
+          caption_token: str | None = None, caption_text: str | None = None,
+          caption_aliases: dict | None = None) -> dict:
+    from caption_pages import pages, publish
+    chunks = pages(caption_text or text) if caption_token else [{'speech': text, 'text': text}]
+    if caption_aliases:
+        pattern = r'(?<![\w])(' + '|'.join(re.escape(n) for n in sorted(caption_aliases, key=len, reverse=True)) + r')(?:(?![\w])|(?=님))'
+        for chunk in chunks:
+            chunk['speech'] = re.sub(pattern, lambda m: caption_aliases[m[0]], chunk['speech'])
+    prepared = []
+    effective_voice = voice or (EN_VOICE[provider_name] if is_english(text) and provider_name in EN_VOICE else prov.voice)
+    if caption_token: publish(caption_token, 'preparing')
+    try:
+        # Prepare all pages before playback: no network wait between captions.
+        for i, chunk in enumerate(chunks):
+            if watch_mode and current_mode() not in stop_unless:
+                if caption_token: publish(caption_token, 'stopped')
+                return {'aborted': True, 'abort_reason': f'mode={current_mode()}',
+                        'synth_ms': sum(p['synth_ms'] for p in prepared), 'played_ms': 0}
+            audio = prepare_audio(chunk['speech'], prov, provider_name, device,
+                                  f'{tag}_{i}', effective_voice, rate, pitch)
+            if caption_token:
+                audio['data'] = trim_silence(audio['data'], audio['sr'])
+            prepared.append(audio)
+        played_ms = 0
+        for i, audio in enumerate(prepared):
+            if watch_mode and current_mode() not in stop_unless:
+                if caption_token: publish(caption_token, 'stopped')
+                return {'aborted': True, 'abort_reason': f'mode={current_mode()}',
+                        'synth_ms': sum(p['synth_ms'] for p in prepared), 'played_ms': played_ms}
+            if caption_token: publish(caption_token, 'playing', chunks[i]['text'], i + 1, len(chunks))
+            pr = play(audio['data'], audio['sr'], device, watch_mode, stop_unless)
+            played_ms += pr['played_ms']
+            if pr['aborted']:
+                if caption_token: publish(caption_token, 'stopped')
+                break
+        if caption_token and not pr['aborted']:
+            publish(caption_token, 'finished', chunks[-1]['text'], len(chunks), len(chunks))
+        return {'provider': provider_name, 'voice': prepared[-1]['voice'],
+                'audio': prepared[-1]['audio'], 'audio_s': round(sum(p['audio_s'] for p in prepared), 2),
+                'synth_ms': sum(p['synth_ms'] for p in prepared), **pr, 'played_ms': played_ms}
+    except Exception:
+        if caption_token: publish(caption_token, 'stopped')
+        raise
 
 
 # ── 시그니처 끝인사 (CVL 4, 2026-09-17) ───────────────────────────────
@@ -315,6 +384,7 @@ def consume_signoff(device: int | None) -> bool:
 
 def consume_one(prov, provider_name: str, device: int | None) -> bool:
     """spoken.json 한 건을 처리한다. 처리했으면 True."""
+    global _last_completed
     if not SPOKEN.exists():
         return False
     try:
@@ -332,17 +402,53 @@ def consume_one(prov, provider_name: str, device: int | None) -> bool:
         log({"event": "withheld", "reason": f"mode={mode}", "chars": len(text)})
         SPOKEN.unlink(missing_ok=True)
         print(f"  ⏸ 모드 {mode} — 발화 보류·소비 ({len(text)}자)")
+        from caption_pages import publish
+        publish(spoken.get('spoken_at'), 'stopped')
         return True
     if not text:
         log({"event": "skip", "reason": "empty_text"})
         SPOKEN.unlink(missing_ok=True)
         return True
+    key = repeat_key(spoken, provider_name, prov)
+    if _last_completed and _last_completed[0] == key:
+        elapsed = time.monotonic() - _last_completed[1]
+        if 0 <= elapsed < REPEAT_WINDOW_S:
+            from caption_pages import publish
+            publish(spoken.get('spoken_at'), 'stopped')
+            log({'event': 'repeat_suppressed', 'window_s': REPEAT_WINDOW_S,
+                 'elapsed_s': round(elapsed, 3), 'spoken_at': spoken.get('spoken_at'), 'chars': len(text)})
+            trace('spoken_player', ok=True, action='repeat_suppressed', chars=len(text))
+            print(f"  ⏸ 같은 발화 반복 억제 — 재생 완료 후 {elapsed:.1f}초 (기준 {REPEAT_WINDOW_S:g}초)")
+            try:
+                if SPOKEN.exists() and read_json(SPOKEN).get('spoken_at') == spoken.get('spoken_at'):
+                    SPOKEN.unlink(missing_ok=True)
+            except (OSError, ValueError):
+                pass
+            return True
     tag = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S")
     print(f"  🔊 {text[:72]}")
     try:
         # 승인 발화는 REVIEW 상태에서 재생되므로 「LIVE 벗어나면 abort」 감시를 MUTE 기준으로 낮춘다
+        options = {}
+        if spoken.get('persona') and spoken['persona']['id'] != 'default':
+            requested_provider = spoken.get('provider', provider_name)
+            if requested_provider != provider_name:
+                provider_name, prov = load_provider(requested_provider)
+            options = {'voice': spoken.get('voice'), 'rate': spoken.get('rate'), 'pitch': spoken.get('pitch')}
         res = speak(text, prov, provider_name, device, watch_mode=True, tag=tag,
-                    stop_unless=("LIVE",) if not approved else ("LIVE", "REVIEW"))
+                    stop_unless=("LIVE",) if not approved else ("LIVE", "REVIEW"),
+                    caption_token=spoken.get('spoken_at'), caption_text=spoken.get('caption_text'),
+                    caption_aliases=spoken.get('caption_aliases'), **options)
+        if not res['aborted']:
+            _last_completed = (key, time.monotonic())
+        if not res['aborted'] and spoken.get('viewer_greeting'):
+            from viewer_store import ViewerStore
+            greeting = spoken['viewer_greeting']
+            ViewerStore().mark_greeted(greeting['live'], greeting['recipients'])
+        if not res['aborted'] and spoken.get('persona'):
+            from persona_store import PersonaStore
+            PersonaStore().record_played(spoken['persona']['live'], spoken['persona'], spoken.get('spoken_at'),
+                                         res.get('voice', spoken.get('voice')))
         log({"event": "played", "text": text, "spoken_at": spoken.get("spoken_at"), **res})
         trace("spoken_player", ok=True, **{k: v for k, v in res.items() if k != "audio"})
         mark = "⛔ 중단" if res["aborted"] else "✅"
@@ -355,7 +461,13 @@ def consume_one(prov, provider_name: str, device: int | None) -> bool:
         log({"event": "failed", "reason": f"{type(e).__name__}:{str(e)[:120]}", "text": text})
         print(f"     ⛔ 실패 — 침묵: {type(e).__name__}: {str(e)[:80]}")
     finally:
-        SPOKEN.unlink(missing_ok=True)                     # 소비 = 삭제. 같은 말을 두 번 하지 않는다
+        # A newer question can publish while this audio is playing. Consume only our request.
+        if SPOKEN.exists():
+            try:
+                if read_json(SPOKEN).get('spoken_at') == spoken.get('spoken_at'):
+                    SPOKEN.unlink(missing_ok=True)
+            except (OSError, ValueError):
+                pass
     return True
 
 

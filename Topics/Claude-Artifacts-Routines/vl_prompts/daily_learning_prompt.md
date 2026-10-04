@@ -34,7 +34,7 @@ Claude-Artifacts-Routines
 
 **Topic 폴더 경로**:
 ```
-C:\AI_study6\Changsoo_Vault\Ingest\CatchUpAI_VL\Topics\Claude-Artifacts-Routines\
+C:\AI_study\2026\Changsoo_Vault\Ingest\CatchUpAI_VL\Topics\Claude-Artifacts-Routines\
 ```
 
 **Roadmap 파일 경로**:
@@ -48,17 +48,17 @@ vl_roadmap/20260913_RoadMap_Claude-Artifacts-Routines.md
 
 **현재 진행 중인 모듈**:
 ```
-M3 - Artifacts 런타임 기능 실험 — db·user·assets·comments·다중 파일
+M6 - Capstone 영상 제작 — 슬라이드 플랜 v1 사용자 검토 대기
 ```
 
 **가장 최근 WorkLog 파일**:
 ```
-vl_worklog/20260927_M3_Claude-Artifacts-Routines.md
+vl_worklog/20261004_M6_Claude-Artifacts-Routines.md
 ```
 
 **이전 세션의 "Tomorrow's focus"** (있다면):
 ```
-Claude 웹에서 M3 실습 1의 db 카운터부터 만든다. Artifact URL·capability 선언·시크릿 창 확인 결과를 즉시 기록하고, 실제 발행 전에는 완료로 처리하지 않는다.
+06-Capstone-Video/video-slide-plan.md의 제목·흐름·댓글 정정 장면·한국어 자막·실제 캡처 범위를 검토한다. 플랜 승인 뒤 자료와 화면 구현을 준비하고 Studio 미리보기로 이어 간다. 학습 실습은 완료했으며 영상은 제작 중이다.
 ```
 
 ---

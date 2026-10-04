@@ -20,7 +20,9 @@
         "updated_at": {
           "type": "string",
           "format": "date-time"
-        }
+        },
+        "persona": {"type": "string"},
+        "captioned": {"type": "boolean"}
       },
       "required": [
         "text",
@@ -54,13 +56,38 @@
         "spoken_at": {
           "type": "string",
           "format": "date-time"
-        }
+        },
+        "caption_text": {"type": "string"},
+        "caption_aliases": {"type": "object", "additionalProperties": {"type": "string"}},
+        "viewer_greeting": {
+          "description": "실제 재생 완료 후 인사 기록을 갱신하는 수신자 정보",
+          "type": "object",
+          "properties": {
+            "live": {"type": "string", "pattern": "^[1-9][0-9]{0,4}$"},
+            "recipients": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {"id": {"type": "string"}, "name": {"type": "string"}},
+                "required": ["id", "name"], "additionalProperties": false
+              }
+            }
+          },
+          "required": ["live", "recipients"], "additionalProperties": false
+        },
+        "persona": {
+          "type": "object",
+          "properties": {
+            "id": {"type": "string"}, "name": {"type": "string"}, "live": {"type": "string"},
+            "speech": {"type": "string", "enum": ["polite", "casual"]},
+            "definition_sha256": {"type": "string"}
+          },
+          "required": ["id", "name", "live", "speech", "definition_sha256"], "additionalProperties": false
+        },
+        "rate": {"type": "string", "pattern": "^[+-][0-9]{1,2}%$"},
+        "pitch": {"type": "string", "pattern": "^[+-][0-9]{1,2}Hz$"}
       },
-      "required": [
-        "text",
-        "provider",
-        "voice"
-      ],
+      "required": ["text", "provider", "voice"],
       "additionalProperties": false
     },
     "mode": {

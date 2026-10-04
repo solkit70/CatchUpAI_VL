@@ -1,0 +1,99 @@
+{
+  "current_part_id": "4",
+  "coverage_state": "defined",
+  "coverage_items": [
+    "Capstone 영상 제작 — 내가 몰랐던 기능을 AI 가 찾아냈다"
+  ],
+  "evidence_pool": [
+    {
+      "path": "AI/Roundup/2026-09-27 - Live30 Weekly Rundown.md#4부: Claude Artifacts & Routines 이어서",
+      "quote": "[확정] 이번 방송 커버리지 — Capstone 영상 제작 — 내가 몰랐던 기능을 AI 가 찾아냈다"
+    },
+    {
+      "path": "AI/Roundup/2026-09-27 - Live30 Weekly Rundown.md#4부: Claude Artifacts & Routines 이어서",
+      "quote": "[확정 항목 현재 상태] Capstone 영상 제작 — 내가 몰랐던 기능을 AI 가 찾아냈다 — 진행 중 — M1~M5 완료(M5 는 사용자 판단 하나 남음), 마지막 M6 영상 제작만 남았다"
+    },
+    {
+      "path": "AI/Roundup/2026-09-27 - Live30 Weekly Rundown.md#4부: Claude Artifacts & Routines 이어서",
+      "quote": "Claude 의 Artifacts(웹 페이지로 공유하는 결과물)와 Routines(정해진 시각에 AI 가 일하는 자동 작업)를 공부하는 VibeLearn Topic 을 이어서, 마지막 모듈인 영상 제작을 진행한다"
+    },
+    {
+      "path": "AI/Roundup/2026-09-27 - Live30 Weekly Rundown.md#4부: Claude Artifacts & Routines 이어서",
+      "quote": "지금까지 공개 범위 · 버전 · 데이터 저장 같은 Artifacts 기능을 실험했고, 3주 연속 실패하던 루틴의 원인(네트워크 접근 설정)을 찾아 고쳤으며, 더 잘 쓰는 패턴 가이드를 만들었다"
+    },
+    {
+      "path": "AI/Roundup/2026-09-27 - Live30 Weekly Rundown.md#4부: Claude Artifacts & Routines 이어서",
+      "quote": "영상 주제: 「내가 몰랐던 기능을 AI 가 찾아냈다」 — 학습 과정에서 새로 알게 된 기능들을 정리하는 Remotion 영상"
+    },
+    {
+      "path": "AI/Roundup/2026-09-27 - Live30 Weekly Rundown.md#4부: Claude Artifacts & Routines 이어서",
+      "quote": "출처 · [[Ingest/CatchUpAI_VL/Topics/Claude-Artifacts-Routines/README]]"
+    }
+  ],
+  "status_map": {
+    "rundown": "unconfirmed",
+    "2026-09-27 - Weekly Progress and Planning": "missing_section",
+    "2026-09-28 - Daily Roundup": "missing_section",
+    "2026-10-01 - Daily Roundup": "missing_section",
+    "2026-10-02 - Daily Roundup": "missing_section",
+    "2026-10-03 - Daily Roundup": "missing_section",
+    "2026-10-02": "missing_section",
+    "2026-10-03": "missing_section",
+    "2026-09-20~2026-09-26 - Codex": "missing_section"
+  },
+  "excluded_headings": [
+    "시간이 남으면 — 다른 실험 후보",
+    "유튜브 업로드 자료 (이번 방송 미편성)",
+    "방송 전 오디오 점검 — 유튜브 음악이 방송에 안 들리는 문제 (이번 방송 미편성)"
+  ],
+  "withheld_conditional": [],
+  "forbidden_removed": true,
+  "other_parts": [
+    {
+      "id": "0",
+      "title": "인트로",
+      "coverage_state": "defined"
+    },
+    {
+      "id": "1",
+      "title": "라방 공동 진행 AI CoMC 시연",
+      "coverage_state": "defined"
+    },
+    {
+      "id": "2",
+      "title": "우리 회사 FDE AI Agent 캐치 시연",
+      "coverage_state": "defined"
+    },
+    {
+      "id": "3",
+      "title": "AI 시대에 맞는 나만의 일정관리 앱 개발",
+      "coverage_state": "defined"
+    },
+    {
+      "id": "틈새 A: 지난 주 만든 콘텐츠",
+      "title": "틈새 A: 지난 주 만든 콘텐츠",
+      "coverage_state": "defined"
+    },
+    {
+      "id": "틈새 B: 이번 주 소식 · 인사이트",
+      "title": "틈새 B: 이번 주 소식 · 인사이트",
+      "coverage_state": "defined"
+    },
+    {
+      "id": "틈새 C: 기록으로 나에게 맞춰지는 세 AI 앱",
+      "title": "틈새 C: 기록으로 나에게 맞춰지는 세 AI 앱",
+      "coverage_state": "defined"
+    },
+    {
+      "id": "주간 영상",
+      "title": "주간 영상",
+      "coverage_state": "undefined"
+    },
+    {
+      "id": "5",
+      "title": "마무리 · 다음 주",
+      "coverage_state": "defined"
+    }
+  ],
+  "assembled_at": "2026-10-04T14:33:07.873536+00:00"
+}

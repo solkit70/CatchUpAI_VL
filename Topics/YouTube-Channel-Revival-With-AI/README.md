@@ -9,6 +9,15 @@
 > [The AI Powered Creator](../The-AI-Powered-Creator/README.md) 의 **2편**입니다.
 > 1편은 데이터가 2026-06-23 에서 끊겨 있고, 여기서 그 뒤 석 달을 잇습니다.
 
+## 🎬 이 Topic 으로 만든 영상
+
+| 언어 | 영상 | 길이 |
+|---|---|---|
+| 🇰🇷 한국어 | [유튜브 채널 구독자 수 하락시작. AI에게 왜 그런지 분석하라고 시켰더니...](https://youtu.be/2NQ57b-Zh_Y) | 12:57 |
+| 🇺🇸 English | [My YouTube Subscribers Started Falling. So I Ordered AI to Analyze Why...](https://youtu.be/Cj_fVyyTDMs) | 12:48 |
+
+2026-09-15 공개. M1~M3 의 조사 과정과 M7(기술 영상 재료)을 바탕으로 만들었습니다.
+
 ## 🔴 먼저 읽을 것
 
 숫자를 보기 전에 **지표의 한계**부터 읽습니다. 여기 적힌 것들은 **전부 오류를 내지 않아서**,

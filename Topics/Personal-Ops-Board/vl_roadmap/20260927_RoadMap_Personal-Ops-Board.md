@@ -19,7 +19,7 @@
 - [ ] 모든 모듈이 `ARCHITECTURE.md` 와 결정 기록을 갱신한 상태로 닫힌다
 - [ ] 왜·어떻게 만들기로 했고 무엇을 준비했는지가 M0 산출물로 남는다
 - [ ] 마지막에 재사용 가능한 「AI Agent Application 아키텍처 템플릿」이 나온다
-- [ ] 🧪 **방법론 실험**: KIRO 식 「아키텍처를 개발과 동시에 업데이트」를 VibeLearn AI 에 접목한 결과를 평가하고, 성공이면 VibeLearn AI 새 버전을 별도로 만든다 (사용자 결정 2026-09-27) → [실험 노트](<../vl_materials/VibeLearn AI 새 버전 실험 노트.md>)
+- [ ] 🧪 **방법론 실험**: KIRO 식 「아키텍처를 개발과 동시에 업데이트」를 VibeLearn AI 에 접목한 결과를 평가하고, 성공이면 VibeLearn AI 새 버전을 별도로 만든다 (사용자 결정 2026-09-27) → [실험 노트](../vl_materials/VibeLearn%20AI%20새%20버전%20실험%20노트.md)
 
 ### 예상 학습 기간
 모듈 M0~M10 (11개). **모듈 하나 ≈ 라이브 방송 한 회(약 55분) + 주중 이어가기.** 방송 중에 끝내지 못한 모듈은 방송 후 주중에 이어서 완료한다 (사용자 결정 2026-09-27, 「그대로 진행」).
@@ -82,7 +82,7 @@ flowchart LR
 - **구조를 바꾸는 것은 결정 기록으로만** — `decisions/` 에 「무엇을 바꾸는지 · 왜 파일 공유로 부족했나 · 되돌리는 법」을 남기고 사용자 승인 뒤에 바꾼다
 - **바꿔도 지키는 것** — 원본은 마크다운 · `items/` 는 사람과 화면만 고친다 · 사람 승인 게이트. Supervisor 나 동급 호출이 새 프레임워크·큐를 요구하면 절대 규칙(AI4PKM 런타임)과 부딪히므로 **바로 도입하지 않고 사용자에게 묻는다**
 
-**절대 규칙 (개발 시작 Prompt)**: 원본은 마크다운 — DB 없음(`views/index.json` 은 지워도 되는 캐시) · 에이전트 런타임은 AI4PKM 오케스트레이터 · Python 3.13 만(Go·Node 빌드·Electron 금지) · `items/` 는 사람과 화면만 고친다(에이전트는 `views/`·`inbox/`) · 기존 워크플로(GDR·GWR·TIU)를 깨지 않는다 · 사용자 구술 원문 무수정 · 🔴 **이 Topic 폴더는 공개 레포 — 실제 할 일·이름·연락처 금지, 예시는 가린 것만**
+**절대 규칙 (개발 시작 Prompt)**: 원본은 마크다운 — DB 없음(`views/index.json` 은 지워도 되는 캐시) · 에이전트 런타임은 AI4PKM 오케스트레이터 · 현재 Python 3.13(Go 보류, 필요하면 새 ADR·승인으로 재검토 · Node 빌드·Electron 없음) · `items/` 는 사람과 화면만 고친다(에이전트는 `views/`·`inbox/`) · 기존 워크플로(GDR·GWR·TIU)를 깨지 않는다 · 사용자 구술 원문 무수정 · 🔴 **이 Topic 폴더는 공개 레포 — 실제 할 일·이름·연락처 금지, 예시는 가린 것만**
 
 ---
 
@@ -92,10 +92,10 @@ flowchart LR
 |---|---|---|---|---|---|
 | M0 | 시작의 기록 | ⭐ | 2h | `00-Start-Record/` | — |
 | M1 | 스키마 + 인덱서 | ⭐ | 3h | `01-Schema-Indexer/` | `scripts/pob_index.py` · `views/index.json` |
-| M2 | Board 에이전트 | ⭐⭐ | 4h | `02-Board-Agent/` | `POB-Board.md` · 노드 · `views/priority-board.md` |
+| M2 | Board 에이전트 | ⭐⭐ | 4h | `02-Board-Agent/` | `Personal Ops Board (POB).md` · create/update 노드 · `views/priority-board.md` |
 | M3 | 마이그레이션 | ⭐⭐ | 4h | `03-Migration/` | `inbox/` 초안 · `Task Board.md` 생성물 전환 |
 | M4 | GDR·GWR 연동 | ⭐⭐ | 3h | `04-Workflow-Integration/` | GDR·GWR 6c 수정 |
-| M5 | Deadline 에이전트 | ⭐⭐ | 3h | `05-Deadline-Agent/` | `POB-Deadline.md` · cron 노드 · `views/warnings.md` |
+| M5 | Deadline 에이전트 | ⭐⭐ | 3h | `05-Deadline-Agent/` | `POB-DEADLINE` prompt · cron 노드 · `views/warnings.md` |
 | M6 | 화면 | ⭐⭐⭐ | 6h (방송 2회) | `06-Board-UI/` | `app/index.html` · `app/serve.py` |
 | M7 | Intake 에이전트 | ⭐⭐⭐ | 4h | `07-Intake-Agent/` | `POB-Intake.md` · Journal 감시 노드 |
 | M8 | Discovery 에이전트 | ⭐⭐ | 3h | `08-Discovery-Agent/` | `POB-Discovery.md` · 월요일 cron |
@@ -290,7 +290,7 @@ architecture/ARCHITECTURE.md 갱신 · decisions/ 추가 (예: 캐시는 JSON �
 
 #### 학습 목표
 - [ ] `index.json` 을 읽어 9/12 To-Do 와 같은 4단계 보드(`views/priority-board.md`)를 만들 수 있다
-- [ ] 에이전트를 `_Settings_/Prompts/POB-Board.md` + `orchestrator.yaml` 노드로 등록할 수 있다
+- [ ] 에이전트를 `_Settings_/Prompts/Personal Ops Board (POB).md` + `orchestrator.yaml` 노드로 등록할 수 있다
 - [ ] 「우선순위 보드 에이전트」의 업계 방식을 조사하고 그 위에서 설계를 제안받을 수 있다
 - [ ] 결정적 규칙(코드)과 판단(LLM)의 경계를 문서로 정할 수 있다
 
@@ -302,19 +302,19 @@ architecture/ARCHITECTURE.md 갱신 · decisions/ 추가 (예: 캐시는 JSON �
 
 #### 실습 과제
 **실습 1: 요구 찾기 + 업계 방식** ⭐ — 4단계 기준을 대화로 확정 · 「2026년 9월 기준 LLM 우선순위 에이전트 구성」 조사 · **멀티 에이전트 구조 검토**(파일 공유로 충분한가, Board 를 정렬·추천으로 나눠 Supervisor 로 묶는 게 나은가) → 설계 제안 → 승인 (40분, 검증: 승인된 설계 + 결정 기록 + 에이전트 계약 표 갱신)
-**실습 2: POB-Board 프롬프트 + 노드** ⭐⭐ — 프롬프트 작성 · orchestrator 노드 등록 · 수동 실행 (60분, 검증: `priority-board.md` 생성)
+**실습 2: POB 프롬프트 + 노드** ⭐⭐ — 프롬프트 작성 · orchestrator create/update 노드 등록 · 수동 실행 (60분, 검증: `priority-board.md` 생성)
 **실습 3: 5개 파일로 확인** ⭐⭐ — 가린 fixture 5건으로 4단계가 나오는지 (30분, 검증: 네 칸에 기대한 대로 배치)
 
 #### 산출물
 ```
 02-Board-Agent/ README.md · concepts/board-levels.md · examples/(가린 입력·출력) · guides/register-node.md
-볼트: _Settings_/Prompts/POB-Board.md · orchestrator.yaml 노드 · AI/Tasks/views/priority-board.md
+볼트: _Settings_/Prompts/Personal Ops Board (POB).md · orchestrator.yaml 노드 · AI/Tasks/views/priority-board.md
 architecture/ 갱신 · decisions/ (코드 vs LLM 경계 등)
 ```
 
 #### Definition of Done
 - [ ] 5개 파일로 4단계 보드가 나온다
-- [ ] 노드가 `orchestrator.yaml` 에 등록돼 한 번 이상 실행됐다
+- [x] 노드가 `orchestrator.yaml` 에 등록돼 한 번 이상 실행됐다 (CLI log: completed; 자동 감시는 비활성)
 - [ ] 업계 방식 조사 출처가 결정 기록에 있다
 - [ ] `ARCHITECTURE.md` 갱신 + 결정 기록 (아키텍처 트랙)
 - [ ] 기존 GDR·GWR 이 그대로 돈다
@@ -391,7 +391,7 @@ architecture/ 갱신 · decisions/ (승인 게이트 · 전환 시점)
 **예상 시간**: 3h (+ 하룻밤 실행)
 **산출물 폴더**: `04-Workflow-Integration/`
 
-> 📌 세부 기능은 이 모듈의 ① 요구 찾기에서 확정한다. 🔒 M3 뒤에만 한다.
+> 📌 세부 기능은 이 모듈의 ① 요구 찾기에서 확정한다. M3의 보존·복구 기준과 handoff readiness를 선행한다. 사용자 승인으로 handoff를 적용했더라도 M3의 남은 task 판정은 별도로 계속한다.
 
 #### 학습 목표
 - [ ] GDR·GWR 6c 단계를 `items/` 쓰기로 바꾸는 변경안을 **먼저 사용자에게 보이고** 승인받을 수 있다
@@ -454,22 +454,22 @@ architecture/ 갱신 · decisions/ (전환기 종료)
 
 #### 실습 과제
 **실습 1: 요구 찾기 + 업계 방식** ⭐ — 마감 알림 설계 조사 → 승인 (30분)
-**실습 2: 프롬프트 + cron 노드** ⭐⭐ — `POB-Deadline.md` · 노드 · 수동 실행 (50분, 검증: 세 단계 구분)
+**실습 2: 프롬프트 + cron 노드** ⭐⭐ — `POB-DEADLINE` prompt · 노드 · 수동 실행 (50분, 검증: 세 단계 구분)
 **실습 3: 가린 fixture 로 경계값 확인** ⭐⭐ — 오늘·D-3·D-7·D-8 (30분)
 
 #### 산출물
 ```
 05-Deadline-Agent/ README.md · concepts/warning-levels.md · examples/
-볼트: _Settings_/Prompts/POB-Deadline.md · cron 노드 · AI/Tasks/views/warnings.md
+볼트: `_Settings_/Prompts/Personal Ops Board Deadline (POB-DEADLINE).md` · cron 노드 · AI/Tasks/views/warnings.md
 architecture/ 갱신 · decisions/
 ```
 
 #### Definition of Done
-- [ ] 매일 아침 `warnings.md` 가 자동으로 생긴다 (로그 1회 이상)
-- [ ] 경계값 fixture 통과
-- [ ] `ARCHITECTURE.md` 갱신 + 결정 기록 (아키텍처 트랙)
-- [ ] 모듈 README · 🔴 `python scripts/check_links.py`
-- [ ] WorkLog + Daily Retrospective
+- [x] 매일 아침 `warnings.md` 가 자동으로 생긴다 (로그 1회 이상) — 10/3 05:05·05:15 예약 실행 및 view 갱신 확인
+- [x] 경계값 fixture 통과
+- [x] `ARCHITECTURE.md` 갱신 + 결정 기록 (아키텍처 트랙)
+- [x] 모듈 README · `05-Deadline-Agent/scripts/check_links.py` 통과
+- [x] WorkLog + Daily Retrospective
 
 #### Self-Assessment
 - [ ] (개념) 날짜 계산을 LLM 이 아니라 코드에 맡기는 이유를 설명 가능
@@ -787,13 +787,13 @@ Personal-Ops-Board/                 ← 🔴 공개 레포 (문서만)
 
 | 모듈 | 시작일 | 종료일 | 상태 | DoD 달성률 | 비고 |
 |------|--------|--------|------|-----------|------|
-| M0 | 2026-09-27 | | 🔄 | 75% | Live #29 — 초안 · 결정 기록 8 · KIRO 비교 / 남음: README · 사용자 검토 |
-| M1 | 2026-09-27 | | 🔄 | 50% | 인덱서 1차 검증 (58건 · EARS 6/7) / 속도 개선 승인 대기 |
-| M2 | | | ⏳ | 0% | |
-| M3 | | | ⏳ | 0% | 🔒 M4 보다 먼저 |
-| M4 | | | ⏳ | 0% | |
-| M5 | | | ⏳ | 0% | |
-| M6 | | | ⏳ | 0% | 방송 2회 가능 |
+| M0 | 2026-09-27 | 2026-10-02 | ✅ | 7/7 (100%) | 학습 문서·ADR·링크 정리 · 사용자 검토 완료 · 게시 요청은 별도 |
+| M1 | 2026-09-27 | 2026-10-02 | ✅ | 6/6 (100%) | 현재 69건 입력 보존 · A1 0.221초 · 회귀 16건 · 결정 1~10 반영표 · 문서·링크 검사 |
+| M2 | 2026-10-02 | 2026-10-02 | ✅ | 구현·테스트·분류/정렬·진단 사용자 검토 완료; GDR/GWR 비파괴 회귀 확인 | POB-UPDATED 1회 실행 완료; 자동 감시 비활성 |
+| M3 | 2026-10-02 | | 🔄 | 사용자 판정 136/136; 오류 0; 기존 Task Board 스냅샷·복구 검증; 사용자 승인 POST-HANDOFF 적용 | 인덱스 70 유효; 선택 필드 warning 11건은 정보성으로 수용. Backlog 41 초안 10/6 개별 검토 예정, 보류 총 48건 유지; A-010 제안 승인 대기. 전체 task migration 미완료 |
+| M4 | 2026-10-02 | 2026-10-03 | ✅ | DoD 5/5 (100%) — 승인·조건부 GDR/GWR·shadow 회귀·PRE no-op·POST 변경 4건·다음 날 지속성 검증, 71/71 유효·오류 0 | [M4 산출물](../04-Workflow-Integration/README.md). M3 전체 이관과 backlog 41건·보류 48건은 별도 진행 |
+| M5 | 2026-10-03 | | 🔄 | 90% | EARS 요구·설계 승인·결정적 renderer·합성 회귀·cron 예약 실행 2회 완료; 10/4 다음 날 갱신 검증 대기 |
+| M6 | | | 🔄 | 80% | UI·56 regression·HTTP fixture E2E·read-only smoke·quick-add 결정·시연 시나리오 문서 완료; browser fixture 수동 조작과 retrospective 남음 |
 | M7 | | | ⏳ | 0% | |
 | M8 | | | ⏳ | 0% | |
 | M9 | | | ⏳ | 0% | 달력 7일 |

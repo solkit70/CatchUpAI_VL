@@ -1418,3 +1418,18 @@
 {"ts": "2026-09-27T14:53:08.632857+00:00", "stage": "05_verify_and_gate", "ok": true, "passed": false, "lane": "casual", "tamper": false, "tamper_facts": false, "absence_by_closure": [], "kept": 5, "dropped": 1, "reasons": ["fact_not_in_evidence"], "output": "verdict.json"}
 {"ts": "2026-09-27T14:53:08.857594+00:00", "stage": "06_render_output", "ok": true, "provider": "edge", "voice": "ko-KR-SunHiNeural", "part_id": "3", "kept": 5, "mode": "LIVE", "spoken_withheld": false, "source_verdict_pass": false, "outputs": ["output.json", "overlay.json", "spoken.json"]}
 {"ts": "2026-09-27T14:53:59.434353+00:00", "stage": "spoken_player", "ok": true, "provider": "edge", "voice": "ko-KR-SunHiNeural", "synth_ms": 5744, "audio_s": 43.82, "played_ms": 44074, "aborted": false, "abort_reason": null, "progress": 1.0}
+{"ts": "2026-10-01T23:24:39.252113+00:00", "stage": "01_parse_rundown", "ok": true, "source": "AI/Roundup/2026-09-06 - Live27 Weekly Rundown.md", "parts": 3, "coverage_items": 4, "excluded": 0, "conditional": 0, "anomalies": [], "output": "rundown_index.27.json"}
+{"ts": "2026-10-01T23:24:39.258157+00:00", "stage": "02_resolve_context", "ok": true, "live": "27", "part": "2", "coverage_items": 3, "evidence": 7, "status_map": 6, "output": "broadcast_context.27.json"}
+{"ts": "2026-10-01T23:24:39.261654+00:00", "stage": "06_render_output", "ok": false, "reason": "nothing_to_say", "dropped": 1}
+{"ts": "2026-10-01T23:24:39.263853+00:00", "stage": "06_render_output", "ok": true, "action": "clear_overlay", "reason": "nothing_to_say"}
+{"ts": "2026-10-01T23:24:39.272737+00:00", "stage": "04_compose_answer", "ok": false, "reason": "unknown_intent"}
+{"ts": "2026-10-01T23:24:39.273659+00:00", "stage": "04_compose_answer", "ok": true, "action": "clear_overlay", "reason": "unknown_intent"}
+{"ts": "2026-10-01T23:24:39.981683+00:00", "stage": "01_parse_rundown", "ok": true, "source": "AI/Roundup/2026-09-06 - Live27 Weekly Rundown.md", "parts": 3, "coverage_items": 4, "excluded": 0, "conditional": 0, "anomalies": [], "output": "rundown_index.27.json"}
+{"ts": "2026-10-01T23:24:39.987583+00:00", "stage": "02_resolve_context", "ok": true, "live": "27", "part": "2", "coverage_items": 3, "evidence": 7, "status_map": 6, "output": "broadcast_context.27.json"}
+{"ts": "2026-10-01T23:24:39.992209+00:00", "stage": "engine_daemon", "ok": true, "action": "clear_overlay", "reason": "new_question"}
+{"ts": "2026-10-01T23:24:39.996824+00:00", "stage": "engine_daemon", "ok": true, "action": "clear_overlay", "reason": "stage_failed"}
+{"ts": "2026-10-01T23:24:39.999951+00:00", "stage": "03_classify_intent", "ok": true, "intent": "answer_question", "confidence": 0.9, "flags": [], "output": "intent.json"}
+{"ts": "2026-10-01T23:24:40.003198+00:00", "stage": "04_compose_answer", "ok": false, "reason": "cross_part"}
+{"ts": "2026-10-01T23:24:40.005536+00:00", "stage": "04_compose_answer", "ok": true, "action": "clear_overlay", "reason": "cross_part"}
+{"ts": "2026-10-01T23:24:40.007603+00:00", "stage": "engine_daemon", "ok": true, "action": "clear_overlay", "reason": "stage_failed"}
+{"ts": "2026-10-01T23:24:40.014782+00:00", "stage": "02_resolve_context", "ok": true, "live": "27", "part": "2", "coverage_items": 3, "evidence": 7, "status_map": 6, "output": "broadcast_context.27.json"}

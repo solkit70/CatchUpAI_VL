@@ -64,6 +64,7 @@ from common import out  # noqa: E402
 OVERLAY = out("overlay.json")
 MODE = out("mode.json")
 SESSION = out("session_state.json")
+CAPTIONS = out("captions.json")
 
 _clients: set[queue.Queue] = set()
 _clients_lock = threading.Lock()
@@ -92,10 +93,10 @@ PAGE = """<!doctype html>
   .chip.mute{background:#B4232A;color:#fff}
   .chip.review{background:#B7791F;color:#fff}
   #text{
-    font-size:44px;line-height:1.44;font-weight:600;color:#fff;
+    font-size:38px;line-height:1.44;font-weight:600;color:#fff;
     text-shadow:0 2px 10px rgba(0,0,0,.55);
     /* 너무 길면 잘라낸다 — 방송 화면을 다 덮으면 안 된다 */
-    display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden;
+    white-space:pre-wrap;max-width:1100px;overflow-wrap:anywhere;
   }
 </style>
 <div id="wrap"><div id="meta"></div><div id="text"></div></div>
@@ -107,7 +108,11 @@ function render(d){
   let chips = `<span class="chip">PART ${d.part_id ?? '-'}</span>`;
   if(m!=='LIVE') chips += `<span class="chip ${m.toLowerCase()}">${m}</span>`;
   meta.innerHTML=chips;
+  if(d.persona){const p=document.createElement('span');p.className='chip';p.textContent=d.persona;meta.append(p);}
   text.textContent=d.text;
+  text.style.fontSize='38px';
+  // Explicit three-line pages; shrink for unusually wide Latin glyphs/viewports.
+  if(d.captioned){for(let size=38;size>18&&text.scrollHeight>3*size*1.44+2;size--){text.style.fontSize=(size-1)+'px';}}
   wrap.classList.add('on');
 }
 const es=new EventSource('/events');
@@ -143,6 +148,26 @@ def snapshot() -> dict:
             d["part_id"] = str(st["current_part_id"])       # 권위값이 이긴다
     except Exception:
         pass
+    if d.get('captioned'):
+        try:
+            cap = json.loads(CAPTIONS.read_text(encoding='utf-8'))
+        except (OSError, ValueError):
+            cap = {}
+        if cap.get('token') != d.get('updated_at'):
+            cap = {'phase': 'ready' if d['mode'] == 'REVIEW' else 'preparing'}
+        phase = cap.get('phase')
+        if not d.get('text') or d['mode'] == 'MUTE':
+            d['text'] = ''
+        elif phase in ('playing', 'finished'):
+            d['text'] = cap.get('text', '')
+            if phase == 'finished' and time.time() >= (cap.get('expires_at') or 0):
+                d['text'] = ''
+        elif phase == 'ready':
+            d['text'] = '답변 준비됨 · 승인 대기'
+        elif phase == 'preparing':
+            d['text'] = '음성 준비 중'
+        else:
+            d['text'] = ''
     return d
 
 
@@ -157,13 +182,12 @@ def watcher(interval: float = 0.2):
     last = None
     while True:
         try:
-            sig = tuple(p.stat().st_mtime_ns if p.exists() else 0
-                        for p in (OVERLAY, MODE, SESSION))
+            sig = json.dumps(snapshot(), ensure_ascii=False)
         except OSError:
             sig = None
         if sig != last:
             last = sig
-            data = json.dumps(snapshot(), ensure_ascii=False)
+            data = sig
             with _clients_lock:
                 dead = []
                 for q in _clients:

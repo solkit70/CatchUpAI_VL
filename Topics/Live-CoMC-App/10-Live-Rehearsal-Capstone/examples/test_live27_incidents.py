@@ -53,7 +53,7 @@ def run_main(mod, argv: list[str]) -> int:
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--live", default="28")
+    ap.add_argument("--live", default="27")
     ap.add_argument("--part", default="2")
     args = ap.parse_args()
     live, part = args.live, args.part
@@ -149,7 +149,8 @@ def main():
         # 사실이 사고 7 의 수정이다. 성공/거절 어느 쪽이든 ② 가 다시 불렸는지를 본다.
         switched = "②" in r.get("per_stage", {}) and (
             "part_switch" in r.get("per_stage", {}) or r.get("part_switch"))
-        ctx_after = read_json(out(f"broadcast_context.{live}.json")) if pre.get("ok") else {}
+        cp = out(f"broadcast_context.{live}.json")
+        ctx_after = read_json(cp) if cp.exists() else {}  # M11: undefined parts clear stale context.
         check("사고7 파트 전환 뒤 발화 → ② 재실행", switched,
               f"per_stage={list(r.get('per_stage', {}).keys())} ctx.part={ctx_after.get('current_part_id')}")
     finally:

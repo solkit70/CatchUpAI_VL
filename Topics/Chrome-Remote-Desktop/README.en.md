@@ -5,7 +5,8 @@
 | | |
 |---|---|
 | Dates | Roadmap started 2026-09-20 → in progress (two-week plan through about 10/4) |
-| Status | ✅ M1 · M2 · M3 · M5 · M6 complete · 🟡 M4 real-world use 3/6 · 🟡 M7 public guide video in production |
+| Status | ✅ M1 · M2 · M3 · M5 · M6 · M7 complete · 🟡 M4 real-world use 3/6 |
+| 🎬 Guide video | **[English](https://youtu.be/G1WsQ_J2jxU)** · [한국어](https://youtu.be/Uj47SPD6owc) — from setup to locking, remote restart and checking AI tasks (about 15 minutes, published 2026-09-30) |
 | Setup | Host: Windows 11 laptop at home · Away device: **iPad Safari** (iOS app ended in 2025; use the web) · Android app flow **not tested** because no Android device was available |
 | Audience | Everyone, starting with people who have no IT background |
 | Short result | **Leave the home computer on and disable sleep while it is plugged in; from a café, it took about 5 seconds to connect, type, and save. After a remote restart, it was possible to reconnect after 1–2 minutes.** Always lock Windows before leaving the session. |
@@ -33,7 +34,7 @@
 | 4 | [Real-World Use ① Work Away from Home](04-Real-Use-Work/README.en.md) | 🟡 3/6 | [Work on a small screen](04-Real-Use-Work/guides/working-on-small-screen.en.md) · [Session log](04-Real-Use-Work/examples/real-session-log.en.md) · [Device/network matrix](04-Real-Use-Work/examples/device-network-matrix.en.md) |
 | 5 | [Real-World Use ② Review AI Work Away from Home](05-Remote-AI-Review-Loop/README.en.md) | ✅ 9/27 | [Approve while away](05-Remote-AI-Review-Loop/guides/approve-from-phone.en.md) · [Before you leave](05-Remote-AI-Review-Loop/guides/before-you-leave.en.md) · [What works away from home](05-Remote-AI-Review-Loop/examples/what-works-outside.en.md) · [Café test](05-Remote-AI-Review-Loop/examples/loop-session-log.en.md) · [When input fails](05-Remote-AI-Review-Loop/troubleshooting/typing-and-input.en.md) |
 | 6 | [Alternatives and Grok Bot](06-Alternatives-and-GrokBot/README.en.md) | ✅ 9/27 | [Tool comparison](06-Alternatives-and-GrokBot/guides/comparison-table.en.md) · [Two categories](06-Alternatives-and-GrokBot/concepts/two-categories.en.md) · [CRD vs. Grok Bot](06-Alternatives-and-GrokBot/guides/crd-vs-grokbot.en.md) |
-| 7 | [Capstone — A Guide Anyone Can Follow](07-Public-Guide-Video/README.md) | 🟡 In production | [Slide plan v4](07-Public-Guide-Video/examples/slide-plan.md) — 27 slides · about 15–16 minutes · iPad walkthrough · PART 4: why CRD helps people who ask AI to work remotely |
+| 7 | [Capstone — A Guide Anyone Can Follow](07-Public-Guide-Video/README.md) | ✅ 9/30 | 🎬 [English video](https://youtu.be/G1WsQ_J2jxU) · [Korean video](https://youtu.be/Uj47SPD6owc) · [Slide plan v5](07-Public-Guide-Video/examples/slide-plan.md) — 28 slides · about 15 minutes · iPad walkthrough · PART 4: why CRD helps people who ask AI to work remotely |
 
 If you are new, start with these three guides: [Install on Windows](02-Install-and-First-Connect/guides/install-host-windows.en.md) → [Connect from iPad or iPhone](02-Install-and-First-Connect/guides/connect-from-iphone.en.md) → [Windows power and lock settings](03-Security-Checklist/guides/windows-power-and-lock.en.md).
 

@@ -5,7 +5,7 @@
 | | |
 |---|---|
 | 기간 | 2026-09-13 로드맵 → 진행 중 (M1~M5 완료 · 2026-09-27) |
-| 상태 | ✅ **M1~M5 완료** · ⏳ M6 영상 (M5 플레이북이 대본의 뼈대) |
+| 상태 | ✅ **M1~M5 완료** · 🔄 M6 영상 — [슬라이드 플랜 v1 검토 대기](06-Capstone-Video/video-slide-plan.md) |
 | 실소요 | M1 50분 · M2 45분 · M3 약 1시간 · M4 약 1시간 35분 (9/21 + 9/27) · M5 약 25분 — 로드맵 예상 15시간 중 약 4시간 40분 |
 | 출발점 | 이미 만든 실물 — 행사 부스 배치 편집기 · 부스 현황판 · 모임 입장 안내 페이지 · 채용 공고 주간 확인 루틴 (재검토하니 실물은 4건이 아니라 **7건**이었다) |
 | 한 줄 결과 | **사람과 AI 가 같은 데이터를 고칠 때 `if_version` 이 사람의 변경을 지켜 주고, 조용한 자동화는 실패까지 조용하게 만든다.** 둘 다 실측으로 확인했다 |
@@ -28,7 +28,7 @@
 | 3 | [Artifacts 런타임 기능 실험](03-Artifacts-Capabilities-Lab/README.md) | ✅ 9/27 | 예제 5종 (db · user · assets · comments · 다중 파일) · [db 왕복 실측](03-Artifacts-Capabilities-Lab/guides/db-roundtrip.md) · [기능 선택표](03-Artifacts-Capabilities-Lab/concepts/capability-selection-table.md) |
 | 4 | [Routines](04-Routines-Lab/README.md) | ✅ 9/27 | [3주 실패 진단](04-Routines-Lab/guides/wblp-routine-audit.md) · [루틴 기본](04-Routines-Lab/concepts/routines-basics.md) · [두 번째 루틴](04-Routines-Lab/guides/second-routine.md) · [로컬 vs 클라우드](04-Routines-Lab/concepts/local-vs-cloud.md) |
 | 5 | [사용 패턴 가이드](05-Usage-Patterns/README.md) | ✅ 9/27 | **[플레이북](05-Usage-Patterns/guides/artifacts-routines-playbook.md)** · [패턴 6장](05-Usage-Patterns/guides/patterns.md) · [안티패턴 10개](05-Usage-Patterns/guides/anti-patterns.md) |
-| 6 | Capstone — Remotion 영상 | ⏳ | 「내가 몰랐던 기능을 AI 가 찾아냈다」 5~8분 한국어 영상 |
+| 6 | [Capstone — Remotion 영상](06-Capstone-Video/README.md) | 🔄 10/4 플랜 검토 대기 | 「내가 몰랐던 기능을 AI 가 찾아냈다」 한국어 영상(분량은 내용에 따라 결정) · [28장 플랜](06-Capstone-Video/video-slide-plan.md) · [근거 대장](06-Capstone-Video/claim-ledger.md) |
 
 > 처음 온 사람이라면 **[플레이북](05-Usage-Patterns/guides/artifacts-routines-playbook.md)** 한 장부터 보면 된다. 만들기 전에 고를 것과 체크리스트가 모여 있다.
 
