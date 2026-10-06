@@ -17,6 +17,8 @@ status: "v4-review-pending"
 
 **v4 (2026-10-06 나레이션 리뷰)**: 결론을 「일을 시키는 사람도 배워야 한다 · 아직은 조심스럽게」로 바꿨다. S04~S09 · S14 · S15 · S19 · S21 · S22 나레이션을 맥락이 따라가지도록 다시 쓰고, S23(다른 일에도 쓰는 다섯 가지)을 새로 넣고, 결론 S24를 새로 썼다. 25장, 약 15분 50초. 근거 C33~C36 추가.
 
+**구현 시작 (2026-10-06)**: `AI/RemotionStudio/src/claude-artifacts-routines-1004/` — 샘플 3장(S01 · S08 · S15)을 Claude Code 가 만들었고, 나머지 22장은 Codex 가 그 폴더의 `CODEX_HANDOFF.md`(볼트 안 · 이 레포 밖)대로 만든다. 25장 전체의 edge-tts 초벌 음성 · 단어 시각은 `AI/RemotionStudio/public/claude-artifacts-routines-1004/audio/` 에 있다.
+
 ## 검토 순서
 
 1. [슬라이드 플랜 v4](video-slide-plan.md) — 제목·챕터·장면별 내레이션·시각 자료·AI 이미지·동영상 계획·QR 목적지.
