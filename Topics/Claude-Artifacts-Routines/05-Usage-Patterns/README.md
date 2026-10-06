@@ -18,3 +18,6 @@ M1~M4 에서 직접 겪고 확인한 것만 모아 「이럴 땐 이렇게」 �
 ## 이전 / 다음
 
 ← [M4 — Routines](../04-Routines-Lab/README.md) · → M6 — Remotion 영상 (이 플레이북이 대본의 뼈대)
+
+
+English companion: [README_en](README_en.md)

@@ -29,3 +29,6 @@ tags:
 - 루틴이 실행하는 프롬프트는 **미리 저장된 할 일**로 취급되어 그대로 수행된다. 반면 API 로 넘긴 `text` 는 「믿을 수 없는 데이터」로 포장되어 온다 — 프롬프트가 그 내용을 처리하라고 명시해야 쓴다
 - 루틴이 하는 일(메일 발송, 커밋)은 **내 이름으로** 나간다
 - 로컬에서 되던 것이 클라우드에서 안 되면 첫 의심은 **환경의 네트워크**다 → [troubleshooting](../troubleshooting/routine-did-not-run.md)
+
+
+English companion: [routines-basics_en](routines-basics_en.md)

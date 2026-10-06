@@ -27,3 +27,6 @@ tags:
 | `window.claude.db` 처럼 바로 읽기 | 없다. 항상 `await claude.use("db")` 로 받고, `null` 이면 기능을 숨긴다 |
 | 페이지의 카운터 +1 | 마지막에 쓴 사람이 이긴다 — 동시에 누르면 한 번이 사라질 수 있다 |
 | `alert()` · `confirm()` · `prompt()` | 화면에 안 뜬다 (`confirm` 은 false, `prompt` 는 null). 확인 단계는 페이지 안에 만든다 |
+
+
+English companion: [cdn-and-storage-gotchas_en](cdn-and-storage-gotchas_en.md)

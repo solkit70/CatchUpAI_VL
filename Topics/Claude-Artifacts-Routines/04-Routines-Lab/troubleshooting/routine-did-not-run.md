@@ -44,3 +44,6 @@ tags:
 ## 실제 사례
 
 - [../guides/wblp-routine-audit.md](../guides/wblp-routine-audit.md) — 2026-09-07~21, 3주 연속 `EGRESS_BLOCKED` → 환경 Network access 변경으로 복구 + 무시되던 검색 파라미터 발견
+
+
+English companion: [routine-did-not-run_en](routine-did-not-run_en.md)

@@ -39,3 +39,6 @@ tags:
 ## 10초 고르기 연습 — 「회의 중 현황판 만들어 줘」
 
 여러 사람이 동시에 보고 고치고, 회의가 끝나면 Claude 가 결과를 읽어 정리해야 한다 → **`db`**. 누가 바꿨는지 남기려면 **`user`** 를 더하고, 세션이 고칠 때는 **`if_version`** 을 붙인다.
+
+
+English companion: [capability-selection-table_en](capability-selection-table_en.md)

@@ -33,3 +33,6 @@ tags:
 
 - "Artifacts 로 무엇까지 만들 수 있나" 류의 열린 질문 — 겪은 일이 아니다. M5 패턴이 실측에서 자연히 답한다
 - 비용 — 아직 문제로 부딪힌 적 없음. M4 문서 클리핑에서 나오면 적는다
+
+
+English companion: [questions_en](questions_en.md)

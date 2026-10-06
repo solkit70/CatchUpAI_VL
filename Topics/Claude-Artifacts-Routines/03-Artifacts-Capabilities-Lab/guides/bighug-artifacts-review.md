@@ -29,3 +29,6 @@ tags:
 ## 이 점검으로 알게 된 것
 
 부스 매니저는 이미 가장 중요한 선택(공유 상태는 db)을 맞게 했다. 놓친 것은 **이미지를 assets 로 분리하지 않은 것**과 **누가 바꿨는지를 user id 로 남기지 않은 것** 두 가지이고, 둘 다 행사 운영에는 문제가 없었다. 다음 행사용 도구를 만들 때 이 표를 출발점으로 쓴다.
+
+
+English companion: [bighug-artifacts-review_en](bighug-artifacts-review_en.md)

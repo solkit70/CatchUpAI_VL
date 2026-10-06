@@ -122,3 +122,6 @@ flowchart TB
 - [../troubleshooting/routine-did-not-run.md](../troubleshooting/routine-did-not-run.md) — 루틴이 안 돌았을 때 확인 순서 (이 사례로 만든 것)
 - 실물 루틴: https://claude.ai/code/routines (AWS WBLP 공고 주간 확인)
 - 원래 설계: `Datacenter-Workforce-Programs/08-Application-Execution/guides/application-checklist.md`
+
+
+English companion: [wblp-routine-audit_en](wblp-routine-audit_en.md)

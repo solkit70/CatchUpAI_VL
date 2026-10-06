@@ -38,3 +38,6 @@ tags:
 ## 이 표가 POB 에 주는 것
 
 POB 에이전트 넷(Board · Deadline · Intake · Discovery)은 모두 볼트를 읽고 쓰므로 **로컬**이다. 다만 「PC 가 꺼져 있던 날 아침에도 마감 경고를 받고 싶다」가 요구로 나오면, 로컬이 만든 `warnings.md` 를 공개하지 않는 채로 클라우드가 읽을 방법이 없으므로 **메일 발송만 클라우드로 나누는** 설계를 검토한다 — 그때 POB 결정 기록으로 남긴다.
+
+
+English companion: [local-vs-cloud_en](local-vs-cloud_en.md)

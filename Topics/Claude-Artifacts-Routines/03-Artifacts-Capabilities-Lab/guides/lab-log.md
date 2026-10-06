@@ -40,3 +40,6 @@ tags:
 ## 발견 — 세션의 아티팩트 감시(watch)는 10개까지
 
 예제 5개를 연달아 발행하자, 이 세션이 감시하던 기존 아티팩트 둘(부스 매니저 · 부스 현황판)의 감시가 **자동으로 끊겼다.** 알림 원문: *"this session reached its limit of 10 artifact watches and made room to watch a newer one; it was auto-replying to comments, and that stops until its next publish."* 발행할 때마다 그 아티팩트를 감시 목록에 올리고, 한 세션의 한도는 10개다. 댓글 자동 답을 걸어 둔 아티팩트가 있으면, 실습용 발행을 여러 개 할 때 그쪽 감시가 밀려난다 → [troubleshooting](../troubleshooting/cdn-and-storage-gotchas.md)
+
+
+English companion: [lab-log_en](lab-log_en.md)

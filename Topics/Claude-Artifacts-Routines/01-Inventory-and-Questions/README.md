@@ -19,3 +19,6 @@
 
 - 이전: 없음 (첫 모듈) · 재료: `../../Materials_For_Topics/Claude-Artifacts-Routines/`
 - 다음: `02-Artifacts-Sharing-and-Versions/` (M2 시작 시 생성) — 질문 1(db 공유)부터
+
+
+English companion: [README_en](README_en.md)

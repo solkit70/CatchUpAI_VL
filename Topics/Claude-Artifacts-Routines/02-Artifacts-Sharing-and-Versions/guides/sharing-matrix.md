@@ -76,3 +76,6 @@ Share 메뉴에 **조직(organization) 선택지가 없다** — "Only people wi
 
 - 발행 결과 문구에 `sharing owner` 가 찍힌다 → 세션도 공유 상태를 안다 `[실측]`. `action: status` / `list` 로도 확인 가능
 - **세션당 아티팩트 watch 한도 5개** — db 페이지를 발행하자 *"watch limit reached — this session already holds its maximum of 5"* 알림 `[실측 07:31]`. 오늘 세션에서 6개를 다뤘기 때문. 실습 3(watch) 의 제약 조건
+
+
+English companion: [sharing-matrix_en](sharing-matrix_en.md)

@@ -23,3 +23,6 @@
 ## 이전 / 다음
 
 - 이전: [../01-Inventory-and-Questions/](../01-Inventory-and-Questions/) · 다음: `03-Artifacts-Capabilities-Lab/` (M3 시작 시 생성)
+
+
+English companion: [README_en](README_en.md)

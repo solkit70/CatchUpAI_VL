@@ -34,3 +34,6 @@ tags:
 |---|---|---|
 | 페이지에서 「읽고 +1 해서 쓰기」 카운터를 여러 사람이 동시에 | 한 번이 사라질 수 있다 (마지막에 쓴 사람이 이김) | `[문서]` db.d.ts · 동시 클릭 실측은 안 함 |
 | 루틴에 커넥터를 기본값 그대로 전부 포함 | 포함된 커넥터는 쓰기까지 묻지 않고 한다 | `[문서]` Routines — 두 번째 루틴은 Calendar · Gmail 만 남겼다 |
+
+
+English companion: [anti-patterns_en](anti-patterns_en.md)

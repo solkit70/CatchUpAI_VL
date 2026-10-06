@@ -21,3 +21,6 @@ tags:
 | 8 | `permissions` (내장) | 선언 안 함. 상태 조회·묶음 요청 | 여러 권한을 한 번에 물을 때 | — |
 
 **부스 매니저 재검토 포인트(M3)**: 편집 내용을 db 에 두는데, "페이지가 곧 기록"이면 `artifact`(republish)가 더 맞고, 공개 공유도 된다. 반대로 여러 사람이 동시에 편집하고 Claude 가 읽어야 하면 db 가 맞다 — 지금은 후자에 가깝다.
+
+
+English companion: [capabilities-roster_en](capabilities-roster_en.md)

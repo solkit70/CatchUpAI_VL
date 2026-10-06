@@ -82,3 +82,6 @@ flowchart TB
 ## 더 읽기
 
 [패턴 카드 6장](patterns.md) · [안티패턴 10개](anti-patterns.md) · M3 [db 왕복 실측](../../03-Artifacts-Capabilities-Lab/guides/db-roundtrip.md) · M4 [WBLP 3주 실패 진단](../../04-Routines-Lab/guides/wblp-routine-audit.md)
+
+
+English companion: [artifacts-routines-playbook_en](artifacts-routines-playbook_en.md)

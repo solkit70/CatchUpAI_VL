@@ -51,3 +51,6 @@ M4 의 실습 1(루틴 점검)을 9/21 에 먼저 했다. 유일한 실물 루�
 | [vl_materials/](vl_materials/) | 공식 문서 발췌 (Artifacts · Routines · capability 스킬) |
 | [vl_prompts/](vl_prompts/) | 로드맵 · 일일 학습 프롬프트 |
 | [topic_starter.md](topic_starter.md) | Topic 시작 정보 |
+
+
+English companion: [README_en](README_en.md)
