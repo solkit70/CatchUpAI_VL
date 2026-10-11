@@ -1,0 +1,17 @@
+{
+  "model": "gpt-5",
+  "reasoning_effort": "minimal",
+  "stt_model": "gpt-4o-transcribe",
+  "web_search": true,
+  "assessment_interval_seconds": 45,
+  "stt_glossary": [
+    {"canonical": "CoMC", "aliases": ["COMC", "OMC", "코엠씨", "코엠시", "소엠씨", "호엠씨", "고엠씨", "코엠 씨"], "contextual_aliases": [{"alias": "OMG", "context_requires": ["Catch App", "Personal Ops Board"]}]},
+    {"canonical": "Catch App", "aliases": ["캐치 앱", "캐치앱", "CatchApp", "패치 앱", "패치앱"]},
+    {"canonical": "Personal Ops Board", "aliases": ["퍼스널 옵스 보드", "퍼스널옵스보드", "PersonalOpsBoard"]},
+    {"canonical": "Muse", "aliases": ["뮤즈"]},
+    {"canonical": "Grok Bot", "aliases": ["그록 봇", "그록봇", "그로크 봇"]},
+    {"canonical": "Instinct", "aliases": ["인스팅트", "인스틴트"]},
+    {"canonical": "Builders Lounge", "aliases": ["빌더스 라운지", "빌더스라운지"]},
+    {"canonical": "Claude Code", "aliases": ["클로드 코드", "클로드코드"]}
+  ]
+}

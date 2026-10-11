@@ -148,11 +148,23 @@ def snapshot() -> dict:
             d["part_id"] = str(st["current_part_id"])       # 권위값이 이긴다
     except Exception:
         pass
-    if d.get('captioned'):
-        try:
-            cap = json.loads(CAPTIONS.read_text(encoding='utf-8'))
-        except (OSError, ValueError):
-            cap = {}
+    try:
+        cap = json.loads(CAPTIONS.read_text(encoding='utf-8'))
+    except (OSError, ValueError):
+        cap = {}
+    # LIVE acknowledgments are independent of the answer overlay, which may
+    # not exist yet while the model is preparing its response.
+    is_ack = str(cap.get('token') or '').startswith('ack_')
+    if is_ack:
+        phase = cap.get('phase')
+        if d['mode'] == 'MUTE' or phase not in ('playing', 'finished'):
+            d['text'] = ''
+        else:
+            d['text'] = cap.get('text', '')
+            d['captioned'] = True
+            if phase == 'finished' and time.time() >= (cap.get('expires_at') or 0):
+                d['text'] = ''
+    elif d.get('captioned'):
         if cap.get('token') != d.get('updated_at'):
             cap = {'phase': 'ready' if d['mode'] == 'REVIEW' else 'preparing'}
         phase = cap.get('phase')

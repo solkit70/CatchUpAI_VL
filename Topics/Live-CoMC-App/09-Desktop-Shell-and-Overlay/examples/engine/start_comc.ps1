@@ -28,14 +28,8 @@ if (-not $Live) {
   Write-Host "회차 자동 감지: Live #$Live   (다른 회차는  comc 29  처럼)"
 }
 
-# 0. 오늘 Rundown 파싱 + 1부 컨텍스트 + 모드 REVIEW (이 창에서, 결과가 보이게)
-Push-Location $src
-python 01_parse_rundown.py --live $Live
-python 02_resolve_context.py --live $Live --part 1
-python 06_render_output.py --live $Live --set-mode REVIEW --reason "broadcast start - REVIEW"
-# 0-b. 캐주얼 브리프 (CVL 4) — 이번 주 기록 + 서울·시애틀 날씨. 코엠씨의 잡담·주간 회고 근거
-python 02b_build_casual_brief.py --live $Live
-Pop-Location
+# 문서와 주간 기록은 질문 때 최신 내용으로 읽는다. 파트 선택·커버리지 사전 허가는 필요 없다.
+# 콘솔이 시작할 때 REVIEW로 초기화한다.
 
 # 1. 콘솔 — 이 창을 차지한다. Ctrl+C 로 끝.
 Set-Location -LiteralPath $here

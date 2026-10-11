@@ -234,17 +234,17 @@ def test_player_uses_frozen_voice_and_records_actual_playback(isolated, monkeypa
     assert isolated.current()['id'] == 'anchor'
 
 
-def test_default_keeps_console_provider_override(isolated, monkeypatch):
+def test_default_now_uses_explicit_female_persona_voice(isolated, monkeypatch):
     import spoken_player as player
     profile = isolated.current()
     meta = {k: profile[k] for k in ('id', 'name', 'speech', 'definition_sha256')}; meta['live'] = '30'
     monkeypatch.setattr(player, 'SPOKEN', common.out('spoken.json'))
     monkeypatch.setattr(player, 'LOG', common.out('spoken_log.jsonl'))
     monkeypatch.setattr(player, 'current_mode', lambda: 'LIVE')
-    monkeypatch.setattr(player, 'load_provider', lambda *a: pytest.fail('default provider was changed'))
+    monkeypatch.setattr(player, 'load_provider', lambda *a: ('edge', None))
     def speak(*a, **kw):
-        assert a[2] == 'openai' and 'voice' not in kw
-        return {'voice': 'alloy', 'aborted': False, 'synth_ms': 1, 'played_ms': 1}
+        assert a[2] == 'edge' and kw['voice'] == 'ko-KR-SunHiNeural'
+        return {'voice': kw['voice'], 'aborted': False, 'synth_ms': 1, 'played_ms': 1}
     monkeypatch.setattr(player, 'speak', speak)
     common.write_json(player.SPOKEN, {'text': '기본 음성 테스트입니다.', 'persona': meta,
                                     'provider': 'edge', 'voice': 'ko-KR-SunHiNeural', 'spoken_at': 'fixture'})
@@ -286,3 +286,171 @@ def test_persona_intro_does_not_need_weather_or_brief(isolated, monkeypatch):
     monkeypatch.setattr(llm_providers, 'build', lambda *a, **kw: SimpleNamespace(complete=complete))
     assert eng.utter('30', '코엠씨 자기소개 해 주세요')['ok']
     assert common.read_json(common.out('spoken_pending.json'))['persona']['id'] == 'student'
+
+
+def test_varied_voice_mode_defaults_to_free_and_persists(isolated):
+    store = isolated
+    assert store.voice_mode() == 'free'
+    assert store.snapshot('31')['voice_mode'] == 'free'
+    snap = store.set_voice_mode('31', 'varied')
+    assert snap['voice_mode'] == 'varied' and ps.PersonaStore().voice_mode() == 'varied'
+    with pytest.raises(ValueError):
+        store.set_voice_mode('31', 'other')
+    assert store.voice_mode() == 'varied'
+
+
+def test_varied_voices_follow_the_requested_providers_and_are_distinct():
+    rows = {r['id']: r for r in ps.definitions()['personas']}
+    got = {pid: ps.voice_settings(r, 'ko', 'varied') for pid, r in rows.items()}
+    assert got['default']['provider'] == 'edge'
+    assert got['college']['provider'] == got['anchor']['provider'] == 'openai'
+    assert got['student']['provider'] == got['friend']['provider'] == 'qwen'
+    assert len({(g['provider'], g['voice']) for g in got.values()}) == 5
+
+
+def test_free_mode_keeps_every_persona_on_edge_tts():
+    for r in ps.definitions()['personas']:
+        s = ps.voice_settings(r, 'ko')
+        assert s['provider'] == 'edge' and s['voice'].startswith('ko-KR-')
+        assert ps.voice_settings(r, 'ko', 'free') == s
+
+
+def test_varied_voice_definition_is_validated(tmp_path):
+    data = ps.definitions()
+    data['personas'][1]['tts_varied']['provider'] = 'unknown'
+    path = tmp_path / 'bad_varied.json'
+    path.write_text(json.dumps(data, ensure_ascii=False), encoding='utf-8')
+    with pytest.raises(ValueError):
+        ps.definitions(path)
+
+
+def test_paid_voice_failure_falls_back_to_edge_instead_of_going_silent(isolated, monkeypatch):
+    import numpy as np
+    import spoken_player as player
+    monkeypatch.setattr(player, 'AUDIO_DIR', common.out('debug') / 'audio')
+    paid = SimpleNamespace(voice='old')
+    def fail(text, path):
+        raise RuntimeError('network down')
+    paid.synth = fail
+    edge = SimpleNamespace(voice='ko-KR-SunHiNeural', rate='+0%', pitch='+0Hz')
+    edge.synth = lambda text, path: SimpleNamespace(path=path)
+    monkeypatch.setattr(player, 'load_provider', lambda name: ('edge', edge))
+    monkeypatch.setattr(player, 'load_audio', lambda *a: (np.zeros(10), 100))
+    r = player.prepare_audio('안녕하세요.', paid, 'openai', None, 'fb', voice='nova')
+    assert r['provider'] == 'edge' and r['fallback_from'] == 'openai' and r['voice'] == 'ko-KR-SunHiNeural'
+    assert paid.voice == 'old'
+
+
+def _prefetch_setup(monkeypatch, synth_s, play_s, n_chunks, fail_at=None):
+    import time
+    import numpy as np
+    import spoken_player as player
+    monkeypatch.setattr(player, 'AUDIO_DIR', common.out('debug') / 'audio')
+    log = []
+    prov = SimpleNamespace(voice='nova')
+    def synth(text, path):
+        log.append(('synth_start', text, time.perf_counter()))
+        time.sleep(synth_s)
+        if fail_at is not None and text == 'c%d' % fail_at:
+            raise RuntimeError('synthesis failed')
+        log.append(('synth_end', text, time.perf_counter()))
+        return SimpleNamespace(path=path)
+    prov.synth = synth
+    monkeypatch.setattr(player, 'load_audio', lambda *a: (np.zeros((10, 1)), 100))
+    def fake_play(data, sr, device, watch_mode, stop_unless=('LIVE',)):
+        log.append(('play_start', None, time.perf_counter()))
+        time.sleep(play_s)
+        log.append(('play_end', None, time.perf_counter()))
+        return {'played_ms': int(play_s * 1000), 'aborted': False, 'abort_reason': None, 'progress': 1.0}
+    monkeypatch.setattr(player, 'play', fake_play)
+    monkeypatch.setattr(player, '_caption_chunks',
+                        lambda *a, **kw: [{'speech': 'c%d' % i, 'text': 'c%d' % i} for i in range(n_chunks)])
+    return player, prov, log
+
+
+def test_next_caption_page_is_synthesized_while_the_current_one_plays(isolated, monkeypatch):
+    import time
+    player, prov, log = _prefetch_setup(monkeypatch, synth_s=0.3, play_s=0.5, n_chunks=4)
+    t0 = time.perf_counter()
+    r = player.speak('x', prov, 'openai', None, watch_mode=False, tag='pf', voice='nova')
+    elapsed = time.perf_counter() - t0
+    # 순차 합성이면 4*(0.3+0.5)=3.2초. 미리 합성하면 0.3 + 4*0.5 = 2.3초 안팎.
+    assert elapsed < 2.8, elapsed
+    plays = [e for e in log if e[0] in ('play_start', 'play_end')]
+    for k in range(1, 4):
+        gap = plays[2 * k][2] - plays[2 * k - 1][2]
+        assert gap < 0.15, (k, gap)
+    assert r['played_ms'] == 2000 and not r['aborted']
+
+
+def test_prefetched_synthesis_failure_stops_playback_and_raises(isolated, monkeypatch):
+    player, prov, log = _prefetch_setup(monkeypatch, synth_s=0.05, play_s=0.1, n_chunks=4, fail_at=2)
+    with pytest.raises(RuntimeError):
+        player.speak('x', prov, 'edge', None, watch_mode=False, tag='pf2', voice='nova')
+    assert len([e for e in log if e[0] == 'play_start']) == 2
+
+
+def test_single_caption_page_does_not_start_a_background_thread(isolated, monkeypatch):
+    import threading
+    player, prov, log = _prefetch_setup(monkeypatch, synth_s=0.01, play_s=0.01, n_chunks=1)
+    before = threading.active_count()
+    player.speak('x', prov, 'edge', None, watch_mode=False, tag='pf3', voice='nova')
+    assert threading.active_count() == before
+
+
+def test_non_edge_voices_synthesize_the_first_two_pages_in_parallel_and_edge_one_at_a_time(isolated, monkeypatch):
+    player, prov, log = _prefetch_setup(monkeypatch, synth_s=0.3, play_s=0.2, n_chunks=3)
+    player.speak('x', prov, 'openai', None, watch_mode=False, tag='pp', voice='nova')
+    starts = {e[1]: e[2] for e in log if e[0] == 'synth_start'}
+    assert abs(starts['c1'] - starts['c0']) < 0.1
+
+    player, prov, log = _prefetch_setup(monkeypatch, synth_s=0.3, play_s=0.2, n_chunks=3)
+    player.speak('x', prov, 'edge', None, watch_mode=False, tag='pe', voice='nova')
+    starts = {e[1]: e[2] for e in log if e[0] == 'synth_start'}
+    ends = {e[1]: e[2] for e in log if e[0] == 'synth_end'}
+    assert starts['c1'] >= ends['c0'] - 0.01
+
+
+def test_parallel_synthesis_does_not_overwrite_the_shared_provider_voice(isolated, monkeypatch):
+    player, prov, log = _prefetch_setup(monkeypatch, synth_s=0.1, play_s=0.05, n_chunks=4)
+    player.speak('x', prov, 'qwen', None, watch_mode=False, tag='pv', voice='Cherry')
+    assert prov.voice == 'nova'
+
+
+def _pause_setup(monkeypatch, n_chunks=3):
+    import numpy as np
+    import caption_pages
+    import spoken_player as player
+    monkeypatch.setattr(player, 'AUDIO_DIR', common.out('debug') / 'audio')
+    prov = SimpleNamespace(voice='nova', synth=lambda text, path: SimpleNamespace(path=path))
+    monkeypatch.setattr(player, 'load_audio', lambda *a: (np.ones((100, 1), dtype='float32'), 100))
+    played = []
+    def fake_play(data, sr, device, watch_mode, stop_unless=('LIVE',)):
+        played.append(len(data))
+        return {'played_ms': 1, 'aborted': False, 'abort_reason': None, 'progress': 1.0}
+    monkeypatch.setattr(player, 'play', fake_play)
+    monkeypatch.setattr(caption_pages, 'publish', lambda *a, **kw: None)
+    monkeypatch.setattr(player, '_caption_chunks',
+                        lambda *a, **kw: [{'speech': 'c%d' % i, 'text': 'c%d' % i} for i in range(n_chunks)])
+    return player, prov, played
+
+
+def test_second_and_later_caption_pages_get_a_short_pause_before_the_sound(isolated, monkeypatch):
+    player, prov, played = _pause_setup(monkeypatch)
+    monkeypatch.setattr(player, 'PAGE_PAUSE_S', 0.3)
+    player.speak('x', prov, 'openai', None, watch_mode=False, tag='pz', voice='nova',
+                 caption_token='tok', caption_text='x')
+    # 한 묶음은 100샘플(1초 @100Hz). 첫 묶음은 그대로, 이후 묶음은 0.3초(30샘플)가 앞에 붙는다.
+    assert played == [100, 130, 130]
+
+
+def test_page_pause_can_be_turned_off_and_is_not_added_without_captions(isolated, monkeypatch):
+    player, prov, played = _pause_setup(monkeypatch)
+    monkeypatch.setattr(player, 'PAGE_PAUSE_S', 0.0)
+    player.speak('x', prov, 'openai', None, watch_mode=False, tag='pz0', voice='nova',
+                 caption_token='tok', caption_text='x')
+    assert played == [100, 100, 100]
+    player, prov, played = _pause_setup(monkeypatch)
+    monkeypatch.setattr(player, 'PAGE_PAUSE_S', 0.3)
+    player.speak('x', prov, 'openai', None, watch_mode=False, tag='pz1', voice='nova')
+    assert played == [100, 100, 100]

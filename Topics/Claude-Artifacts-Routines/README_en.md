@@ -5,7 +5,7 @@
 | | |
 |---|---|
 | Period | Roadmap began 2026-09-13; in progress (M1–M5 completed 2026-09-27) |
-| Status | ✅ M1–M5 complete · 🔄 M6 video — slide plan awaiting review |
+| Status | ✅ M1–M5 complete · ✅ M6 videos published — [Korean](https://youtu.be/JViFmj31pR4) (2026-10-06) · [English](https://youtu.be/AvoI2A8dcY0) (2026-10-06) |
 | Actual time | M1 50 min · M2 45 min · M3 about 1 hour · M4 about 1h 35m (Sep 21 + 27) · M5 about 25 min. About 4h 40m of the roadmap’s estimated 15h. |
 | Starting point | Existing work: event booth-layout editor, booth status board, event entry page, and weekly job-posting check routine. On review there were **seven** real artifacts, not four. |
 | One-line result | **When a person and AI edit the same data, `if_version` protects the person’s change, while a quiet automation can hide its own failure.** Both were directly observed. |

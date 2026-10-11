@@ -1,0 +1,119 @@
+{
+  "current_part_id": "1",
+  "coverage_state": "defined",
+  "coverage_items": [
+    "개편 시연 — 질문 · REVIEW 승인 · 음성 · OBS 자막 흐름",
+    "LIVE 접수 멘트와 패닉 · MUTE 제어",
+    "한국어 말로 요청 — 재시험 결과"
+  ],
+  "evidence_pool": [
+    {
+      "path": "AI/Roundup/2026-10-04 - Live31 Weekly Rundown.md#1부: CoMC 전면 개편 시연 (30분)",
+      "quote": "[확정] 이번 방송 커버리지 — 개편 시연 — 질문 · REVIEW 승인 · 음성 · OBS 자막 흐름"
+    },
+    {
+      "path": "AI/Roundup/2026-10-04 - Live31 Weekly Rundown.md#1부: CoMC 전면 개편 시연 (30분)",
+      "quote": "[확정] 이번 방송 커버리지 — LIVE 접수 멘트와 패닉 · MUTE 제어"
+    },
+    {
+      "path": "AI/Roundup/2026-10-04 - Live31 Weekly Rundown.md#1부: CoMC 전면 개편 시연 (30분)",
+      "quote": "[확정] 이번 방송 커버리지 — 한국어 말로 요청 — 재시험 결과"
+    },
+    {
+      "path": "AI/Roundup/2026-10-04 - Live31 Weekly Rundown.md#1부: CoMC 전면 개편 시연 (30분)",
+      "quote": "[확정 항목 현재 상태] 개편 시연 — 질문 · REVIEW 승인 · 음성 · OBS 자막 흐름 — 확정 — 10/8 회귀 확인: 첫 음성 대기 단축, 긴 답변도 자막·음성이 끝까지 이어짐. 승인 발화 재생 뒤에도 REVIEW 가 유지되는 것은 예상 동작. OBS 라이브 송출은 시험 전"
+    },
+    {
+      "path": "AI/Roundup/2026-10-04 - Live31 Weekly Rundown.md#1부: CoMC 전면 개편 시연 (30분)",
+      "quote": "[확정 항목 현재 상태] LIVE 접수 멘트와 패닉 · MUTE 제어 — 확정 — 패닉은 음성·자막을 즉시 정지, MUTE 후 재개와 오버레이 숨김·표시도 10/8 확인. LIVE 접수 멘트는 리허설에서 확인"
+    },
+    {
+      "path": "AI/Roundup/2026-10-04 - Live31 Weekly Rundown.md#1부: CoMC 전면 개편 시연 (30분)",
+      "quote": "[확정 항목 현재 상태] 한국어 말로 요청 — 재시험 결과 — 대기 — 10/8 에 입력 장치 선택과 마이크 표시를 고쳤고 실제 음성 재시험 전. 방송 전에 재시험하고, 해결 안 되면 미해결 제한 사항으로만 다룬다"
+    },
+    {
+      "path": "AI/Roundup/2026-10-04 - Live31 Weekly Rundown.md#1부: CoMC 전면 개편 시연 (30분)",
+      "quote": "CoMC 는 이 방송의 AI 공동 진행자로, Rundown 을 근거로 질문에 답하고 진행자가 승인한 말만 소리와 자막으로 내보낸다"
+    },
+    {
+      "path": "AI/Roundup/2026-10-04 - Live31 Weekly Rundown.md#1부: CoMC 전면 개편 시연 (30분)",
+      "quote": "10/8 전면 개편으로 긴 답변의 첫 음성 지연이 줄었고, 패닉과 MUTE 제어가 동작함을 회귀 테스트로 확인했다"
+    },
+    {
+      "path": "AI/Roundup/2026-10-04 - Live31 Weekly Rundown.md#1부: CoMC 전면 개편 시연 (30분)",
+      "quote": "한국어 말로 요청은 외국어로 전사되는 문제가 있어 수정했고, 방송 전에 짧게 재시험한다"
+    },
+    {
+      "path": "AI/Roundup/2026-10-04 - Live31 Weekly Rundown.md#1부: CoMC 전면 개편 시연 (30분)",
+      "quote": "시연은 방송 전 Claude Code 와 한 리허설 시나리오 순서로 한다"
+    },
+    {
+      "path": "AI/Roundup/2026-10-04 - Live31 Weekly Rundown.md#1부: CoMC 전면 개편 시연 (30분)",
+      "quote": "개편 소개 후 질문을 넣고 REVIEW 승인 → 음성 → OBS 자막까지 한 번 보여 준 뒤, 방송 내내 CoMC 를 자연스럽게 쓰며 시연을 이어 간다"
+    },
+    {
+      "path": "AI/Roundup/2026-10-04 - Live31 Weekly Rundown.md#1부: CoMC 전면 개편 시연 (30분)",
+      "quote": "말로 요청은 선택한 입력 장치를 쓰도록 바꿨다. 한국어 인식은 재시험 전이므로 성공으로 말하지 않는다"
+    }
+  ],
+  "status_map": {
+    "rundown": "unconfirmed",
+    "2026-10-04 - Weekly Progress and Planning": "missing_section",
+    "2026-09-27~2026-10-03 - Codex": "missing_section",
+    "2026-10-08 - Daily Roundup": "missing_section"
+  },
+  "excluded_headings": [
+    "시간이 남으면 — 다른 실험 후보",
+    "방송 전 확인 (이번 방송 미편성)"
+  ],
+  "withheld_conditional": [],
+  "forbidden_removed": true,
+  "other_parts": [
+    {
+      "id": "0",
+      "title": "인트로",
+      "coverage_state": "defined"
+    },
+    {
+      "id": "2",
+      "title": "Muse 설치 · 첫 사용",
+      "coverage_state": "defined"
+    },
+    {
+      "id": "3",
+      "title": "시니어 AI 활용 시스템 · 교육 과정 구상",
+      "coverage_state": "defined"
+    },
+    {
+      "id": "4",
+      "title": "AI 시대 새 마켓과 빌더의 대응",
+      "coverage_state": "defined"
+    },
+    {
+      "id": "5",
+      "title": "마무리",
+      "coverage_state": "defined"
+    },
+    {
+      "id": "틈새 A: 이번 주 만든 콘텐츠",
+      "title": "틈새 A: 이번 주 만든 콘텐츠",
+      "coverage_state": "defined"
+    },
+    {
+      "id": "틈새 B: 이번 주 소식 · 인사이트",
+      "title": "틈새 B: 이번 주 소식 · 인사이트",
+      "coverage_state": "defined"
+    },
+    {
+      "id": "틈새 C: Personal Ops Board 리뷰",
+      "title": "틈새 C: Personal Ops Board 리뷰",
+      "coverage_state": "defined"
+    },
+    {
+      "id": "주간 영상",
+      "title": "주간 영상",
+      "coverage_state": "defined"
+    }
+  ],
+  "assembled_at": "2026-10-11T11:48:35.291902+00:00"
+}

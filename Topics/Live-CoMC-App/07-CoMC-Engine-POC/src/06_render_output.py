@@ -195,8 +195,8 @@ def main():
                 return 2
     settings = None
     if profile:
-        from persona_store import voice_settings
-        settings = voice_settings(profile, it.get('slots', {}).get('lang', 'ko'))
+        from persona_store import PersonaStore, voice_settings
+        settings = voice_settings(profile, it.get('slots', {}).get('lang', 'ko'), PersonaStore().voice_mode())
         if settings and not args.provider:
             provider, voice = settings['provider'], settings['voice']
         elif args.provider:

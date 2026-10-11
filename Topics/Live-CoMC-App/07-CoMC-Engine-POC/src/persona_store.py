@@ -10,6 +10,7 @@ from common import ROOT, now_iso, out
 from viewer_store import ViewerStore
 
 CONFIG = ROOT / 'data/personas.json'
+VOICE_MODES = ('free', 'varied')  # free = 전부 Edge TTS(무료, 기본) · varied = 페르소나별 Edge/OpenAI/Qwen3
 
 
 def definitions(path=None):
@@ -29,6 +30,14 @@ def definitions(path=None):
                 raise ValueError('Persona 음성 설정이 올바르지 않습니다')
             if not t['ko'].startswith('ko-KR-') or not t['en'].startswith('en-US-'):
                 raise ValueError('Persona 음성 언어가 올바르지 않습니다')
+        v = r.get('tts_varied')
+        if v is not None:
+            if v.get('provider') not in ('edge', 'openai', 'qwen') or not re.fullmatch(r'[+-]\d{1,2}%', str(v.get('rate', ''))) \
+                    or not re.fullmatch(r'[+-]\d{1,2}Hz', str(v.get('pitch', ''))):
+                raise ValueError('Persona 다양한 음성 설정이 올바르지 않습니다')
+            for lang in ('ko', 'en'):
+                if not re.fullmatch(r'[A-Za-z0-9_.-]{2,60}', str(v.get(lang, ''))):
+                    raise ValueError('Persona 다양한 음성 이름이 올바르지 않습니다')
     if data['default'] not in {r['id'] for r in rows}:
         raise ValueError('기본 Persona가 정의에 없습니다')
     return data
@@ -60,10 +69,24 @@ class PersonaStore(ViewerStore):
         row['definition_sha256'] = hashlib.sha256(json.dumps(row, sort_keys=True, ensure_ascii=False).encode()).hexdigest()
         return row
 
+    def voice_mode(self):
+        with self._locked():
+            data = self._load()
+        return data['voice_mode'] if data.get('voice_mode') in VOICE_MODES else 'free'
+
+    def set_voice_mode(self, live, mode):
+        if mode not in VOICE_MODES:
+            raise ValueError('목소리 방식을 선택해 주세요')
+        with self._locked():
+            data = self._load(); data['voice_mode'] = mode
+            self._save(data)
+        return self.snapshot(live)
+
     def snapshot(self, live):
         with self._locked():
             data = self._load()
         return {'current': self.current(), 'options': definitions(self.config)['personas'],
+                'voice_mode': data['voice_mode'] if data.get('voice_mode') in VOICE_MODES else 'free',
                 'history': data['episodes'].get(str(live), {}).get('events', [])[-20:],
                 'notes': data['episodes'].get(str(live), {}).get('notes', '')}
 
@@ -126,8 +149,9 @@ def prompt_block(profile):
 지어낸 공동 경험이나 추억은 말하지 않는다. 근거가 없으면 추측 대신 답변을 멈춘다.'''
 
 
-def voice_settings(profile, language):
-    t = profile.get('tts')
+def voice_settings(profile, language, mode='free'):
+    """mode='varied' 이면 페르소나의 tts_varied(OpenAI·Qwen3 등)를 쓰고, 기본(free)은 전부 Edge TTS(무료)다."""
+    t = profile.get('tts_varied') if mode == 'varied' and profile.get('tts_varied') else profile.get('tts')
     if t is None:
         return None
     return {'provider': t['provider'], 'voice': t['en' if language == 'en' else 'ko'],

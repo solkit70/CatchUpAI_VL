@@ -39,6 +39,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import re
 import sys
 import threading
@@ -63,20 +64,33 @@ from tts_providers import TTSUnavailable, build     # noqa: E402
 
 REGISTRY = M6 / "voice_registry.runtime.json"
 SPOKEN = out("spoken.json")
+PENDING = out("spoken_pending.json")
 MODE = out("mode.json")
 LOG = out("spoken_log.jsonl")
 AUDIO_DIR = out("debug") / "audio"
 POLL_S = 0.25
 MODE_CHECK_S = 0.05
+# 긴 답이 자막 묶음으로 나뉠 때, 둘째 묶음부터 소리 앞에 이만큼 쉼을 둔다(자막이 먼저 바뀌고 소리가 살짝 뒤따른다).
+# 0 이면 끈다. 환경 변수 COMC_PAGE_PAUSE_S 로 바꾼다.
+try:
+    PAGE_PAUSE_S = max(0.0, min(2.0, float(os.environ.get('COMC_PAGE_PAUSE_S', '0.3'))))
+except ValueError:
+    PAGE_PAUSE_S = 0.3
 REPEAT_WINDOW_S = 30.0
 # Only completed playback counts. Monotonic time is unaffected by clock changes.
 _last_completed = None
+_prepared_pending: dict[str, dict] = {}
+_pending_audio_status = "idle"
+
+
+def pending_audio_status() -> str:
+    return _pending_audio_status
 
 
 def repeat_key(spoken: dict, provider_name: str, prov) -> tuple:
     text = re.sub(r"\s+", " ", normalize_for_tts(spoken.get('text') or '')).strip()
     persona = spoken.get('persona') or {}
-    custom = persona.get('id') not in (None, 'default')
+    custom = bool(persona and spoken.get('voice'))
     return (text, persona.get('live'), persona.get('id'), persona.get('definition_sha256'),
             spoken.get('provider', provider_name) if custom else provider_name,
             spoken.get('voice') if custom else getattr(prov, 'voice', None),
@@ -250,64 +264,204 @@ def prepare_audio(text: str, prov, provider_name: str, device: int | None, tag: 
         if rate is not None: prov.rate = rate
         if pitch is not None: prov.pitch = pitch
     used_voice = prov.voice
+    provider_used, fell_back_from = provider_name, None
     try:
-        r = prov.synth(normalize_for_tts(text), path)
+        try:
+            r = prov.synth(normalize_for_tts(text), path)
+        except Exception as exc:
+            if provider_name == 'edge':
+                raise
+            # 다양한 음성(OpenAI·Qwen3)이 실패해도 방송이 조용해지지 않도록 무료 Edge 기본 음성으로 대신한다.
+            trace('spoken_player', ok=False, reason='tts_fallback_to_edge', provider=provider_name, error=str(exc)[:120])
+            fb_name, fb_prov = load_provider('edge')
+            r = fb_prov.synth(normalize_for_tts(text), path)
+            used_voice, provider_used, fell_back_from = fb_prov.voice, fb_name, provider_name
     finally:
         prov.voice = voice_backup
         if provider_name == 'edge':
             prov.rate, prov.pitch = rate_backup, pitch_backup
     synth_ms = round((time.perf_counter() - t0) * 1000)
     data, sr = load_audio(r.path, device)
-    return {"provider": provider_name, "voice": used_voice, "audio": str(r.path.name),
+    return {"provider": provider_used, "fallback_from": fell_back_from, "voice": used_voice, "audio": str(r.path.name),
             "synth_ms": synth_ms, "audio_s": round(len(data) / sr, 2), 'data': data, 'sr': sr}
+
+
+def _caption_chunks(text: str, caption_token: str | None, caption_text: str | None,
+                    caption_aliases: dict | None) -> list[dict]:
+    from caption_pages import pages
+    chunks = pages(caption_text or text) if caption_token else [{'speech': text, 'text': text}]
+    if caption_aliases:
+        pattern = r'(?<![\w])(' + '|'.join(re.escape(n) for n in sorted(caption_aliases, key=len, reverse=True)) + r')(?:(?![\w])|(?=님))'
+        for chunk in chunks:
+            chunk['speech'] = re.sub(pattern, lambda m: caption_aliases[m[0]], chunk['speech'])
+    return chunks
+
+
+def _prepare_all(chunks: list[dict], text: str, prov, provider_name: str,
+                 device: int | None, tag: str, voice: str | None,
+                 rate: str | None, pitch: str | None, caption_token: str | None,
+                 stop_unless: tuple[str, ...]) -> dict | None:
+    prepared = []
+    effective_voice = voice or (EN_VOICE[provider_name] if is_english(text) and provider_name in EN_VOICE else prov.voice)
+    for i, chunk in enumerate(chunks):
+        if current_mode() not in stop_unless:
+            if caption_token:
+                from caption_pages import publish
+                publish(caption_token, 'stopped')
+            return None
+        audio = prepare_audio(chunk['speech'], prov, provider_name, device,
+                              f'{tag}_{i}', effective_voice, rate, pitch)
+        if caption_token:
+            audio['data'] = trim_silence(audio['data'], audio['sr'])
+        prepared.append(audio)
+    return {'chunks': chunks, 'prepared': prepared,
+            'synth_ms': sum(p['synth_ms'] for p in prepared)}
 
 
 def speak(text: str, prov, provider_name: str, device: int | None,
           watch_mode: bool, tag: str, stop_unless: tuple[str, ...] = ("LIVE",),
           voice: str | None = None, rate: str | None = None, pitch: str | None = None,
           caption_token: str | None = None, caption_text: str | None = None,
-          caption_aliases: dict | None = None) -> dict:
-    from caption_pages import pages, publish
-    chunks = pages(caption_text or text) if caption_token else [{'speech': text, 'text': text}]
-    if caption_aliases:
-        pattern = r'(?<![\w])(' + '|'.join(re.escape(n) for n in sorted(caption_aliases, key=len, reverse=True)) + r')(?:(?![\w])|(?=님))'
-        for chunk in chunks:
-            chunk['speech'] = re.sub(pattern, lambda m: caption_aliases[m[0]], chunk['speech'])
-    prepared = []
-    effective_voice = voice or (EN_VOICE[provider_name] if is_english(text) and provider_name in EN_VOICE else prov.voice)
+          caption_aliases: dict | None = None,
+          preprepared: dict | None = None) -> dict:
+    from caption_pages import publish
+    chunks = _caption_chunks(text, caption_token, caption_text, caption_aliases)
     if caption_token: publish(caption_token, 'preparing')
+    pool = None
     try:
-        # Prepare all pages before playback: no network wait between captions.
+        # REVIEW speech is pre-synthesized while the host reads the pending answer.
+        # LIVE and cache-miss playback synthesize one caption at a time so the first
+        # audio can start without waiting for every later caption page.
+        bundle = preprepared or {'chunks': chunks, 'prepared': None, 'synth_ms': 0}
+        prepared = bundle.get('prepared')
+        use_preprepared = prepared is not None
+        if use_preprepared:
+            chunks = bundle['chunks']
+        else:
+            prepared = []
+        synth_ms = int(bundle.get('synth_ms') or 0)
+        played_ms = 0
+        last_audio = None
+        pr = {'played_ms': 0, 'aborted': False, 'abort_reason': None, 'progress': 1.0}
+        # 재생하는 동안 다음 자막 묶음을 미리 합성해 둔다. 합성이 느린 목소리(OpenAI·Qwen3)도 묶음 사이에
+        # 끊기지 않게 하려는 것이다. Edge 는 한 번에 하나(rate·pitch 를 바꿔 쓰므로), 그 밖의 제공자는
+        # 두 묶음을 동시에 합성한다 — 각자 제공자 복사본을 써서 voice 값을 서로 덮어쓰지 않는다.
+        parallel = provider_name != 'edge'
+        if not use_preprepared and len(chunks) > 1:
+            from concurrent.futures import ThreadPoolExecutor
+            pool = ThreadPoolExecutor(max_workers=2 if parallel else 1)
+        ahead = {}
+
+        def synth_chunk(i):
+            import copy
+            worker_prov = copy.copy(prov) if parallel else prov
+            effective_voice = voice or (EN_VOICE[provider_name] if is_english(text) and provider_name in EN_VOICE else prov.voice)
+            made = prepare_audio(chunks[i]['speech'], worker_prov, provider_name, device,
+                                 f'{tag}_{i}', effective_voice, rate, pitch)
+            if caption_token:
+                made['data'] = trim_silence(made['data'], made['sr'])
+            return made
+
+        if pool is not None and parallel:
+            for k in (0, 1):
+                ahead[k] = pool.submit(synth_chunk, k)
         for i, chunk in enumerate(chunks):
             if watch_mode and current_mode() not in stop_unless:
                 if caption_token: publish(caption_token, 'stopped')
                 return {'aborted': True, 'abort_reason': f'mode={current_mode()}',
-                        'synth_ms': sum(p['synth_ms'] for p in prepared), 'played_ms': 0}
-            audio = prepare_audio(chunk['speech'], prov, provider_name, device,
-                                  f'{tag}_{i}', effective_voice, rate, pitch)
-            if caption_token:
-                audio['data'] = trim_silence(audio['data'], audio['sr'])
-            prepared.append(audio)
-        played_ms = 0
-        for i, audio in enumerate(prepared):
-            if watch_mode and current_mode() not in stop_unless:
-                if caption_token: publish(caption_token, 'stopped')
-                return {'aborted': True, 'abort_reason': f'mode={current_mode()}',
-                        'synth_ms': sum(p['synth_ms'] for p in prepared), 'played_ms': played_ms}
+                        'synth_ms': synth_ms, 'played_ms': played_ms}
+            if use_preprepared:
+                audio = prepared[i]
+            else:
+                audio = ahead.pop(i).result() if i in ahead else synth_chunk(i)
+                synth_ms += audio['synth_ms']
+                prepared.append(audio)
+                if watch_mode and current_mode() not in stop_unless:
+                    if caption_token: publish(caption_token, 'stopped')
+                    return {'aborted': True, 'abort_reason': f'mode={current_mode()}',
+                            'synth_ms': synth_ms, 'played_ms': played_ms}
+            last_audio = audio
+            if pool is not None:
+                nxt = i + (2 if parallel else 1)
+                if nxt < len(chunks) and nxt not in ahead:
+                    ahead[nxt] = pool.submit(synth_chunk, nxt)
             if caption_token: publish(caption_token, 'playing', chunks[i]['text'], i + 1, len(chunks))
-            pr = play(audio['data'], audio['sr'], device, watch_mode, stop_unless)
+            to_play = audio['data']
+            if i > 0 and caption_token and PAGE_PAUSE_S > 0:
+                gap = np.zeros((int(audio['sr'] * PAGE_PAUSE_S),) + tuple(to_play.shape[1:]), dtype=to_play.dtype)
+                to_play = np.concatenate([gap, to_play])
+            pr = play(to_play, audio['sr'], device, watch_mode, stop_unless)
             played_ms += pr['played_ms']
             if pr['aborted']:
                 if caption_token: publish(caption_token, 'stopped')
                 break
         if caption_token and not pr['aborted']:
             publish(caption_token, 'finished', chunks[-1]['text'], len(chunks), len(chunks))
-        return {'provider': provider_name, 'voice': prepared[-1]['voice'],
-                'audio': prepared[-1]['audio'], 'audio_s': round(sum(p['audio_s'] for p in prepared), 2),
-                'synth_ms': sum(p['synth_ms'] for p in prepared), **pr, 'played_ms': played_ms}
+        return {'provider': provider_name, 'voice': last_audio['voice'] if last_audio else prov.voice,
+                'audio': last_audio['audio'] if last_audio else '',
+                'audio_s': round(sum(p['audio_s'] for p in prepared), 2),
+                'synth_ms': synth_ms, **pr, 'played_ms': played_ms}
     except Exception:
         if caption_token: publish(caption_token, 'stopped')
         raise
+    finally:
+        if pool is not None:
+            pool.shutdown(wait=True, cancel_futures=True)
+
+
+def prewarm_pending(prov, provider_name: str, device: int | None) -> bool:
+    """Synthesize a REVIEW draft silently so approval can begin playback promptly."""
+    global _pending_audio_status
+    if not PENDING.exists():
+        active_token = None
+        if SPOKEN.exists():
+            try:
+                active_token = read_json(SPOKEN).get('spoken_at')
+            except Exception:
+                pass
+        if active_token not in _prepared_pending:
+            _prepared_pending.clear()
+        _pending_audio_status = 'ready' if active_token in _prepared_pending else 'idle'
+        return False
+    try:
+        spoken = read_json(PENDING)
+        token = str(spoken.get('spoken_at') or '')
+        if not token or token in _prepared_pending:
+            _pending_audio_status = 'ready' if token in _prepared_pending else 'idle'
+            return bool(token and token in _prepared_pending)
+        if current_mode() == 'MUTE':
+            _prepared_pending.clear()
+            _pending_audio_status = 'idle'
+            return False
+        text = (spoken.get('text') or '').strip()
+        if not text:
+            _pending_audio_status = 'idle'
+            return False
+        requested_provider = spoken.get('provider', provider_name)
+        pending_provider, pending_prov = (load_provider(requested_provider)
+                                          if requested_provider != provider_name else (provider_name, prov))
+        voice = spoken.get('voice')
+        rate = spoken.get('rate')
+        pitch = spoken.get('pitch')
+        chunks = _caption_chunks(text, token, spoken.get('caption_text'), spoken.get('caption_aliases'))
+        _pending_audio_status = 'preparing'
+        safe_tag = re.sub(r'[^A-Za-z0-9_.-]+', '_', token)
+        bundle = _prepare_all(chunks, text, pending_prov, pending_provider, device,
+                              f'pending_{safe_tag}', voice, rate, pitch, token,
+                              ('LIVE', 'REVIEW'))
+        if bundle is None:
+            _pending_audio_status = 'idle'
+            return False
+        _prepared_pending.clear()
+        _prepared_pending[token] = {'provider': pending_provider, 'prov': pending_prov, 'bundle': bundle}
+        _pending_audio_status = 'ready'
+        log({'event': 'prewarmed', 'spoken_at': token, 'synth_ms': bundle['synth_ms'],
+             'pages': len(bundle['chunks'])})
+        return True
+    except Exception as e:
+        _pending_audio_status = 'error'
+        log({'event': 'prewarm_failed', 'reason': type(e).__name__})
+        return False
 
 
 # ── 시그니처 끝인사 (CVL 4, 2026-09-17) ───────────────────────────────
@@ -384,7 +538,7 @@ def consume_signoff(device: int | None) -> bool:
 
 def consume_one(prov, provider_name: str, device: int | None) -> bool:
     """spoken.json 한 건을 처리한다. 처리했으면 True."""
-    global _last_completed
+    global _last_completed, _pending_audio_status
     if not SPOKEN.exists():
         return False
     try:
@@ -400,6 +554,8 @@ def consume_one(prov, provider_name: str, device: int | None) -> bool:
         # ⑥ 은 LIVE 에서만 spoken.json 을 쓰지만, 쓴 뒤에 모드가 내려갔을 수 있다.
         # 그 사이의 발화는 내보내지 않는다 — 진행자가 내린 모드가 이긴다.
         log({"event": "withheld", "reason": f"mode={mode}", "chars": len(text)})
+        _prepared_pending.pop(str(spoken.get('spoken_at') or ''), None)
+        _pending_audio_status = 'idle'
         SPOKEN.unlink(missing_ok=True)
         print(f"  ⏸ 모드 {mode} — 발화 보류·소비 ({len(text)}자)")
         from caption_pages import publish
@@ -430,15 +586,22 @@ def consume_one(prov, provider_name: str, device: int | None) -> bool:
     try:
         # 승인 발화는 REVIEW 상태에서 재생되므로 「LIVE 벗어나면 abort」 감시를 MUTE 기준으로 낮춘다
         options = {}
-        if spoken.get('persona') and spoken['persona']['id'] != 'default':
+        if spoken.get('persona') and spoken.get('voice'):
             requested_provider = spoken.get('provider', provider_name)
             if requested_provider != provider_name:
                 provider_name, prov = load_provider(requested_provider)
             options = {'voice': spoken.get('voice'), 'rate': spoken.get('rate'), 'pitch': spoken.get('pitch')}
+        cached = _prepared_pending.pop(str(spoken.get('spoken_at') or ''), None)
+        preprepared = None
+        if cached:
+            provider_name, prov = cached['provider'], cached['prov']
+            preprepared = cached['bundle']
+        _pending_audio_status = 'idle'
         res = speak(text, prov, provider_name, device, watch_mode=True, tag=tag,
                     stop_unless=("LIVE",) if not approved else ("LIVE", "REVIEW"),
                     caption_token=spoken.get('spoken_at'), caption_text=spoken.get('caption_text'),
-                    caption_aliases=spoken.get('caption_aliases'), **options)
+                    caption_aliases=spoken.get('caption_aliases'),
+                    preprepared=preprepared, **options)
         if not res['aborted']:
             _last_completed = (key, time.monotonic())
         if not res['aborted'] and spoken.get('viewer_greeting'):

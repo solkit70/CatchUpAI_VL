@@ -6,10 +6,12 @@ author:
 tags:
   - claude-artifacts-routines
   - remotion
-status: "v4-review-pending"
+status: "published"
 ---
 
 ## Current status
+
+**Korean version published (2026-10-06):** [YouTube](https://youtu.be/JViFmj31pR4) · about 14 min 16 s · 25 scenes · multiple Qwen3-TTS voices (changing by chapter). **English version published (2026-10-06):** [YouTube](https://youtu.be/AvoI2A8dcY0).
 
 The user reviewed v1 (28 scenes, about 12–15 minutes) and judged that it did not do enough to attract and retain viewer attention. The plan was rebuilt as v2 using the [Claude-version production prompt](../vl_prompts/video_production_prompt_claude.md). V2 had 23 scenes, about 11–12 minutes, and opened with the story of the routine that went quiet for three weeks. The Oct 4 review confirmed the plan: add the ignored-filter anecdote, use no subtitles, and use code-synthesized music only in the outro. Still outstanding were the user’s title decision and obtaining required real screens R1–R4. Voice, video, and QR images had not yet been produced.
 

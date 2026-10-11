@@ -1,0 +1,178 @@
+{
+  "source_path": "AI/Roundup/2026-10-04 - Live31 Weekly Rundown.md",
+  "is_final": false,
+  "parts": [
+    {
+      "id": "0",
+      "sort_key": 0.0,
+      "is_numbered": true,
+      "title": "인트로",
+      "time_raw": "7분",
+      "time_minutes": 7,
+      "is_remainder": false,
+      "coverage_state": "defined",
+      "coverage_items": [
+        "서른한 번째 방송 · 오늘의 주제",
+        "지난 주 생성한 컨텐츠 슬라이드",
+        "오늘의 실험과 진행 중 백로그 목록",
+        "CoMC 전면 개편 기능 소개"
+      ],
+      "directive_note": null
+    },
+    {
+      "id": "1",
+      "sort_key": 1.0,
+      "is_numbered": true,
+      "title": "CoMC 전면 개편 시연",
+      "time_raw": "30분",
+      "time_minutes": 30,
+      "is_remainder": false,
+      "coverage_state": "defined",
+      "coverage_items": [
+        "개편 시연 — 질문 · REVIEW 승인 · 음성 · OBS 자막 흐름",
+        "LIVE 접수 멘트와 패닉 · MUTE 제어",
+        "한국어 말로 요청 — 재시험 결과"
+      ],
+      "directive_note": null
+    },
+    {
+      "id": "2",
+      "sort_key": 2.0,
+      "is_numbered": true,
+      "title": "Muse 설치 · 첫 사용",
+      "time_raw": "40분",
+      "time_minutes": 40,
+      "is_remainder": false,
+      "coverage_state": "defined",
+      "coverage_items": [
+        "Muse 웹 접속과 가입",
+        "개인정보 설정 확인",
+        "첫 공개 정보 과제",
+        "Grok Bot · Muse · Dots · Instinct 비교표 기록"
+      ],
+      "directive_note": null
+    },
+    {
+      "id": "3",
+      "sort_key": 3.0,
+      "is_numbered": true,
+      "title": "시니어 AI 활용 시스템 · 교육 과정 구상",
+      "time_raw": "35분",
+      "time_minutes": 35,
+      "is_remainder": false,
+      "coverage_state": "defined",
+      "coverage_items": [
+        "시니어가 AI 를 자신의 일에 쉽게 적용하도록 돕는 방법",
+        "내 컴퓨터에 내 기록을 쌓는 방식과 대상",
+        "교육 과정 — 기본 과정과 수준별 맞춤"
+      ],
+      "directive_note": null
+    },
+    {
+      "id": "4",
+      "sort_key": 4.0,
+      "is_numbered": true,
+      "title": "AI 시대 새 마켓과 빌더의 대응",
+      "time_raw": "40분",
+      "time_minutes": 40,
+      "is_remainder": false,
+      "coverage_state": "defined",
+      "coverage_items": [
+        "달라지는 마켓에서 빌더는 무엇을 준비해야 하는가",
+        "Builders Lounge 는 어떤 역할을 하려 하는가",
+        "탐구 방법과 발표 준비 연결"
+      ],
+      "directive_note": null
+    },
+    {
+      "id": "5",
+      "sort_key": 5.0,
+      "is_numbered": true,
+      "title": "마무리",
+      "time_raw": "8분",
+      "time_minutes": 8,
+      "is_remainder": false,
+      "coverage_state": "defined",
+      "coverage_items": [
+        "다음 주 계획",
+        "15개 국어 끝인사"
+      ],
+      "directive_note": null
+    },
+    {
+      "id": "틈새 A: 이번 주 만든 콘텐츠",
+      "sort_key": 906.0,
+      "is_numbered": false,
+      "title": "틈새 A: 이번 주 만든 콘텐츠",
+      "time_raw": "시간이 남으면",
+      "time_minutes": null,
+      "is_remainder": false,
+      "coverage_state": "defined",
+      "coverage_items": [
+        "Claude Artifacts & Routines 학습 영상 (한국어)",
+        "Claude Artifacts & Routines 학습 영상 (English)",
+        "Builders Lounge 6차 뉴스레터"
+      ],
+      "directive_note": null
+    },
+    {
+      "id": "틈새 B: 이번 주 소식 · 인사이트",
+      "sort_key": 907.0,
+      "is_numbered": false,
+      "title": "틈새 B: 이번 주 소식 · 인사이트",
+      "time_raw": "시간이 남으면",
+      "time_minutes": null,
+      "is_remainder": false,
+      "coverage_state": "defined",
+      "coverage_items": [
+        "CTS 2026 Builders Lounge 부스",
+        "송재희님 온라인 특강",
+        "한인상공회의소 K-Startup Demo Day 준비",
+        "GOBI-Changbal Space 새 가입자 안내"
+      ],
+      "directive_note": null
+    },
+    {
+      "id": "틈새 C: Personal Ops Board 리뷰",
+      "sort_key": 908.0,
+      "is_numbered": false,
+      "title": "틈새 C: Personal Ops Board 리뷰",
+      "time_raw": "시간이 남으면",
+      "time_minutes": null,
+      "is_remainder": false,
+      "coverage_state": "defined",
+      "coverage_items": [
+        "Personal Ops Board 확인과 구두 소개"
+      ],
+      "directive_note": null
+    },
+    {
+      "id": "주간 영상",
+      "sort_key": 909.0,
+      "is_numbered": false,
+      "title": "주간 영상",
+      "time_raw": "Optional — 10/9부터 선택 코너",
+      "time_minutes": null,
+      "is_remainder": false,
+      "coverage_state": "defined",
+      "coverage_items": [
+        "별도 주간 영상 없음 — 지난 주 컨텐츠(Claude Artifacts & Routines 한국어·영어, 둘 다 YouTube 공개 완료)는 오프닝 슬라이드",
+        "에서 소개"
+      ],
+      "directive_note": null
+    }
+  ],
+  "excluded_sections": [
+    {
+      "heading": "시간이 남으면 — 다른 실험 후보",
+      "reason": "candidate"
+    },
+    {
+      "heading": "방송 전 확인 (이번 방송 미편성)",
+      "reason": "unscheduled"
+    }
+  ],
+  "conditional_sections": [],
+  "parse_anomalies": [],
+  "parsed_at": "2026-10-11T06:55:51.924602+00:00"
+}

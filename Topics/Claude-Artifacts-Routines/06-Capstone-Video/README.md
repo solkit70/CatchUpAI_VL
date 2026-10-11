@@ -6,10 +6,12 @@ author:
 tags:
   - claude-artifacts-routines
   - remotion
-status: "v4-review-pending"
+status: "published"
 ---
 
 ## 현재 상태
+
+**한국어판 공개 (2026-10-06)**: [유튜브](https://youtu.be/JViFmj31pR4) · 약 14분 16초 · 25장 · Qwen3-TTS 여러 목소리(챕터마다 바뀜). **영어판 공개 (2026-10-06)**: [유튜브](https://youtu.be/AvoI2A8dcY0).
 
 사용자가 v1(28장, 약 12~15분)을 리뷰했다. 시청자의 관심을 끌고 유지하는 힘이 부족하다는 판단이었다. 그래서 [Claude 버전 제작 프롬프트](../vl_prompts/video_production_prompt_claude.md)로 바꾸고 플랜을 v2로 다시 짰다. v2는 23장, 약 11~12분이며 3주 동안 조용했던 루틴 이야기로 영상을 연다. 10/4 리뷰에서 플랜 내용이 확정됐다(필터 무시 일화 추가 · 자막 없음 · 아웃트로에만 직접 합성 음악). 남은 것은 사용자의 제목 확정과 필수 실화면 R1~R4 확보다. 음성·영상·QR 이미지는 아직 만들지 않았다.
 
