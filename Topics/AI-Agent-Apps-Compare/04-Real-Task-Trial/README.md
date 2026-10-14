@@ -13,6 +13,8 @@ tags:
 
 # M4 — 내 일 하나 맡겨 보기
 
+[English](README.en.md)
+
 **상태**: ✅ 완료 (2026-10-11)
 **예상 학습 시간**: 2시간 작업 + 30분 버퍼
 
@@ -40,4 +42,4 @@ tags:
 ## 모듈 간 이동
 
 - 이전: [M3 — Muse 첫 사용](../03-Hands-On/README.md)
-- 다음: [M5 계획](../vl_roadmap/20261004_RoadMap_AI-Agent-Apps-Compare.md#M5---선택-가이드-만들기)
+- 다음: [M5 계획](../vl_roadmap/20261004_RoadMap_AI-Agent-Apps-Compare.md#m5---판단-기준--topic-readme)

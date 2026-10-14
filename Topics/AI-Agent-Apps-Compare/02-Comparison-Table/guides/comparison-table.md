@@ -1,5 +1,7 @@
 # 다섯 기준 비교표 — Grok Bot · Muse · Dots · Instinct
 
+[English](comparison-table.en.md)
+
 > **초기 비교**: 2026-10-04 · **갱신**: 2026-10-09 · **Muse 요금 공식 확인**: 2026-10-11 · 출처 상세는 [../../vl_materials/official-sources.md](../../vl_materials/official-sources.md)
 > 「공식」은 회사 문서·발표, 「보조」는 언론·요약 사이트. 확인 못 한 칸은 「확인 필요」. 실제 가입·요금·접근 화면은 바뀔 수 있으므로 M3에서 다시 확인한다.
 

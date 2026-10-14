@@ -12,6 +12,8 @@ tags:
 
 ## 이 Topic에서 한 일
 
+[English](README.en.md)
+
 Grok Bot, Muse, Dots, Instinct 네 에이전트의 공개 자료와 접근 조건을 비교하고, 실제 접근 가능한 Muse에서 첫 사용과 두 가지 가상 과제를 검토했다. 목표는 기능 목록만 비교하는 데서 그치지 않고, 업무 성격·위험도·검증 가능성에 따라 맡길 범위를 정하는 것이다.
 
 ## 핵심 결과
@@ -34,7 +36,7 @@ Grok Bot, Muse, Dots, Instinct 네 에이전트의 공개 자료와 접근 조�
 | 3 | [Muse 첫 사용](03-Hands-On/README.md) | 실제 UI 확인, 읽기 중심 과제, 권한·출처 검증 |
 | 4 | [내 일 하나 맡겨 보기](04-Real-Task-Trial/README.md) | 허구 자료로 과제 두 개 실행·평가 |
 | 5 | [판단 기준 만들기](05-Decision-Guide/README.md) | 업무·위험·근거 수준별 선택 가이드 |
-| 6 | [결과 영상 제작](vl_roadmap/20261004_RoadMap_AI-Agent-Apps-Compare.md#m6---capstone--결과-영상-제작) | 계획 단계; M6에서 완성 예정 |
+| 6 | [결과 영상 제작](06-Capstone-Video/video-slide-plan.md) | 슬라이드 플랜 검토 중; 영상 완성 후 링크 추가 |
 
 ## 선택 가이드
 

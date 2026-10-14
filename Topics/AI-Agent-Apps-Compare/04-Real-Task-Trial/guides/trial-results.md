@@ -13,6 +13,8 @@ tags:
 
 # M4 Muse 실행 및 결과 판정
 
+[English](trial-results.en.md)
+
 ## 실행 조건
 
 - 서비스: Muse 채팅, 가상 텍스트 입력만 사용

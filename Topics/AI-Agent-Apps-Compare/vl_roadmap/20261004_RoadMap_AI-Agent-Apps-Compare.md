@@ -2,7 +2,7 @@
 
 **생성일**: 2026-10-04
 **방법론**: VibeLearn AI
-**버전**: 1.4 (2026-10-11 M5 완료 및 선택 가이드 정리)
+**버전**: 1.5 (2026-10-13 리뷰 보완 · M6 착수)
 
 ---
 
@@ -10,7 +10,7 @@
 
 ### 🔧 범위 갱신 (v1.1, 2026-10-09)
 
-> 박창수 확인 · 결정 (10/9): ① **Dots 는 ChatGPT Plus 에서 사용할 수 없다** — 기존 계획의 「ChatGPT Pro 구독으로 실습」은 사실과 달랐다. Dots 는 Grok Bot 과 같이 **조사 · 비교만** 한다. ② **Instinct 를 네 번째 비교 대상으로 추가**한다 — 박창수가 대기 명단에 등록했고(초대 전용 베타), 승인되면 M3 방식(개인 계정 연결 없이 공개 정보 과제)으로 실습한다. 서비스 카드 4번 참고. ③ 따라서 M3 실습은 **Muse 단독**으로 진행하고(Live #31, [[Ingest/CatchUpAI_VL/Topics/AI-Agent-Apps-Compare/vl_materials/2026-10-11 Live31 Muse 설치·첫 사용 시연 가이드|시연 가이드]]), M4 의 「Muse · Dots 에 과제 2개씩」은 「Muse 에 과제 2개 (+ Instinct 승인 시)」로 읽는다. 아래 모듈 본문의 Dots 실습 문구는 이 갱신에 따라 읽는다.
+> 박창수 확인 · 결정 (10/9): ① **Dots 는 ChatGPT Plus 에서 사용할 수 없다** — 기존 계획의 「ChatGPT Pro 구독으로 실습」은 사실과 달랐다. Dots 는 Grok Bot 과 같이 **조사 · 비교만** 한다. ② **Instinct 를 네 번째 비교 대상으로 추가**한다 — 박창수가 대기 명단에 등록했고(초대 전용 베타), 승인되면 M3 방식(개인 계정 연결 없이 공개 정보 과제)으로 실습한다. 서비스 카드 4번 참고. ③ 따라서 M3 실습은 **Muse 단독**으로 진행하고(Live #31, [시연 가이드](../vl_materials/2026-10-11%20Live31%20Muse%20설치·첫%20사용%20시연%20가이드.md)), M4 의 「Muse · Dots 에 과제 2개씩」은 「Muse 에 과제 2개 (+ Instinct 승인 시)」로 읽는다. 아래 모듈 본문의 Dots 실습 문구는 이 갱신에 따라 읽는다.
 
 ### M3 결과 갱신 (2026-10-11)
 
@@ -18,11 +18,15 @@
 
 ### M4 결과 갱신 (2026-10-11)
 
-> M4는 가상 일정 검토와 허구의 방송 설명문 작성 두 과제를 Muse에서 실행했다. 첫 과제는 정확해 사용 가능, 두 번째는 형식은 맞았지만 근거 밖 표현이 남아 사람 수정 필요로 판정했다. 응답·검토 시간은 별도 측정하지 않아 절약 시간을 계산하지 않았다. Dots는 접근 조건상 제외했다. 상세 결과: [[../04-Real-Task-Trial/README|M4 산출물]].
+> M4는 가상 일정 검토와 허구의 방송 설명문 작성 두 과제를 Muse에서 실행했다. 첫 과제는 정확해 사용 가능, 두 번째는 형식은 맞았지만 근거 밖 표현이 남아 사람 수정 필요로 판정했다. 응답·검토 시간은 별도 측정하지 않아 절약 시간을 계산하지 않았다. Dots는 접근 조건상 제외했다. 상세 결과: [M4 산출물](../04-Real-Task-Trial/README.md).
 
 ### M5 결과 갱신 (2026-10-11)
 
 선택 기준과 Mermaid 흐름도, 예상·실제 비교표, Topic README를 완성했다. 직접 실행 근거는 Muse에 한정하고 나머지 서비스의 성능 판정은 보류했다. M6에는 Codex의 Muse 직접 조작과 스크린샷 문서화 과정 소개를 포함한다.
+
+### 리뷰 보완 · M6 착수 (2026-10-13)
+
+> Claude Code가 M1~M5 산출물을 리뷰하고 문서 사이의 불일치를 고쳤다. ① M1~M3 DoD의 내용 항목과 진행표 비고를 실제 상태에 맞췄다(10/9 범위 갱신 전 문구 정리). ② M1 서비스 카드의 Instinct 약관 출처 수준과 확인 필요 목록을 갱신했다. ③ 공개 레포에서 열리지 않는 볼트 내부 위키 링크와 개인 Muse 대화 주소를 공개 문서에서 뺐다. ④ M1·M2 Module Retrospective를 WorkLog 기록으로 보충했다. M6는 박창수 결정에 따라 **Codex가 Muse를 조작하는 장면은 Live 방송 녹화를 편집해 쓰고**, AI 이미지·Gemini 동영상은 API로 만들지 않고 **프롬프트 문서로 준비**하며, Bonney Lake 지명은 노출해도 된다. 슬라이드 플랜: [06-Capstone-Video/video-slide-plan.md](../06-Capstone-Video/video-slide-plan.md).
 
 ### Topic 소개
 새 AI 에이전트 서비스 네 가지(Grok Bot · Muse · Dots · Instinct)를 공식 자료로 조사·비교하고, 현재 접근 가능한 Muse를 우선 사용해 본다. Dots는 ChatGPT Plus에서 사용할 수 없어, Instinct는 초대 대기 중이므로 우선 조사·비교만 한다. 모든 작업이 끝나면 그 결과로 유튜브 영상을 만든다.
@@ -130,10 +134,10 @@ flowchart LR
 ```
 
 #### Definition of Done
-- [ ] 네 서비스 카드 작성 (회사 · 공식 URL · 한 줄 설명 · 접근 방법)
-- [ ] 모든 사실에 공식 출처 + 확인 날짜
-- [ ] 동명 제품 구분 표시
-- [ ] 「확인 필요」 목록 정리
+- [x] 네 서비스 카드 작성 (회사 · 공식 URL · 한 줄 설명 · 접근 방법)
+- [x] 모든 사실에 공식 출처 + 확인 날짜 (공식 원문을 못 읽은 항목은 「보조」로 표시)
+- [x] 동명 제품 구분 표시
+- [x] 「확인 필요」 목록 정리
 - [x] 모듈 README 작성
 - [x] 🔴 README 링크 확인 (`python scripts/check_links.py`)
 - [x] WorkLog + Daily Retrospective 작성
@@ -157,7 +161,7 @@ flowchart LR
 #### 참조 자료
 - [Grok Bot Overview (xAI)](https://docs.x.ai/grok-bot/overview): Grok Bot 공식 문서 — 9/4 기준, 재확인 필요
 - [CRD M6 — Alternatives and Grok Bot](../../Chrome-Remote-Desktop/06-Alternatives-and-GrokBot/README.md): 이전 Topic 에서 정리한 Grok Bot 비교
-- Muse · Dots 공식 페이지: M1 실습 1 에서 확인 후 이 칸에 추가
+- [Introducing Muse (Meta)](https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/) · [Introducing dots (OpenAI)](https://openai.com/index/introducing-dots/) · [Instinct](https://instinct.com/): M1 실습 1 에서 확인한 공식 페이지 — 전체 목록은 [공식 출처 목록](../vl_materials/official-sources.md)
 
 ---
 
@@ -211,9 +215,9 @@ flowchart LR
 ```
 
 #### Definition of Done
-- [ ] 비교표 4 × 5 완성 (빈칸은 「확인 필요」)
-- [ ] 실습 대상 판정 갱신 (Muse 우선, Dots는 Plus에서 사용 불가, Instinct는 초대 대기)
-- [ ] 승인 · 개인정보 정리
+- [x] 비교표 4 × 5 완성 (빈칸은 「확인 필요」)
+- [x] 실습 대상 판정 갱신 (Muse 우선, Dots는 Plus에서 사용 불가, Instinct는 초대 대기)
+- [x] 승인 · 개인정보 정리
 - [x] 모듈 README 작성
 - [x] 🔴 README 링크 확인 (`python scripts/check_links.py`)
 - [x] WorkLog + Daily Retrospective 작성
@@ -260,7 +264,7 @@ flowchart LR
 #### 실습 과제
 
 **실습 1: 가입 · 설치** ⭐
-- **목적**: Muse 무료 계정 · ChatGPT Pro 의 Dots 를 쓸 수 있는 상태로 만든다
+- **목적**: Muse 무료 계정을 쓸 수 있는 상태로 만든다 (Dots 는 ChatGPT Plus 에서 사용할 수 없어 제외 — v1.1)
 - **단계**:
   1. AI 가 공식 설치 경로를 안내한다 — Muse: iOS · Android · muse.ai
   2. 사용자가 직접 가입 · 로그인 · 설치한다
@@ -289,10 +293,10 @@ flowchart LR
 ```
 
 #### Definition of Done
-- [ ] Muse 웹 첫 화면 진입 및 첫 과제 기록 (Dots · Grok Bot 은 조사 · 비교만)
-- [ ] 첫 과제 결과와 공식 출처 검증 기록
-- [ ] Muse 설치 · 첫 사용 가이드 작성 (개인정보가 담긴 스크린샷은 공개하지 않음)
-- [ ] 무료 플랜으로 실습하고 새 유료 플랜 가입이나 새 결제를 하지 않는다
+- [x] Muse 웹 첫 화면 진입 및 첫 과제 기록 (Dots · Grok Bot 은 조사 · 비교만)
+- [x] 첫 과제 결과와 공식 출처 검증 기록
+- [x] Muse 설치 · 첫 사용 가이드 작성 (개인정보가 담긴 스크린샷은 공개하지 않음)
+- [x] 무료 플랜으로 실습하고 새 유료 플랜 가입이나 새 결제를 하지 않는다
 - [x] 모듈 README 작성
 - [x] 🔴 README 링크 확인 (`python scripts/check_links.py`) · 빈 폴더 없음
 - [x] WorkLog + Daily Retrospective 작성
@@ -515,8 +519,9 @@ README.md                      ← Topic 최상위 (M5 에서 초안, M6 에서 
 ```
 06-Capstone-Video/
 ├── README.md               ← 영상 링크 · 슬라이드 플랜 링크 · 제작 과정
-└── guides/
-    └── video-slide-plan.md ← 승인된 슬라이드 플랜 (제작 파일은 AI/RemotionStudio/)
+├── video-slide-plan.md     ← 슬라이드 플랜 (제작 파일은 AI/RemotionStudio/) — v1.5 에서 guides/ 대신 폴더 바로 아래로
+├── image-prompts.md        ← AI 이미지 프롬프트 (사용자가 직접 생성)
+└── video-prompts.md        ← Gemini 동영상 프롬프트 (사용자가 직접 생성)
 ```
 
 #### Definition of Done
@@ -623,12 +628,12 @@ AI-Agent-Apps-Compare/
 
 | 모듈 | 시작일 | 종료일 | 상태 | DoD 달성률 | 비고 |
 |------|--------|--------|------|-----------|------|
-| M1 | 2026-10-04 | 2026-10-04 | ✅ | 100% | Live #30 — 무료는 Muse 하나, Dots 는 ChatGPT Pro 로 실습 |
-| M2 | 2026-10-04 | 2026-10-04 | ✅ | 100% | Live #30 — 실습 Muse · Dots 확정 |
+| M1 | 2026-10-04 | 2026-10-04 | ✅ | 100% | Live #30 — 무료 실습은 Muse 하나. 10/9 갱신: Instinct 추가, Dots 는 Plus 에서 불가 |
+| M2 | 2026-10-04 | 2026-10-04 | ✅ | 100% | Live #30 — 10/9 갱신: 실습은 Muse 단독, 나머지 셋은 조사 · 비교만 |
 | M3 | 2026-10-11 | 2026-10-11 | ✅ | 100% | Muse 단독 실습 · 첫 과제·권한·공식 출처 검증; Dots 제외 |
 | M4 | 2026-10-11 | 2026-10-11 | ✅ | 100% | Muse 가상 과제 2개 실행·평가; Dots 제외; 측정 한계 기록 |
 | M5 | 2026-10-11 | 2026-10-11 | ✅ | 100% | 판단 흐름도·예상/실제 표·Topic README·회고 완료 |
-| M6 | | | ⏳ | 0% | 영상 |
+| M6 | 2026-10-13 | | 🔄 | 0% | 슬라이드 플랜 작성 → 사용자 검토 대기 |
 
 **범례**:
 - ⏳ 대기

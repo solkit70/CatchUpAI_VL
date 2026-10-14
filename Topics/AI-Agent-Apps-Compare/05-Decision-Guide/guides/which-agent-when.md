@@ -12,6 +12,8 @@ tags:
 
 # 언제 어떤 에이전트를 쓸까
 
+[English](which-agent-when.en.md)
+
 ## 판단 흐름도
 
 ```mermaid

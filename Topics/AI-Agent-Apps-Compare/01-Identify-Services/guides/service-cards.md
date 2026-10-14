@@ -1,5 +1,7 @@
 # 서비스 카드 — Grok Bot · Muse · Dots · Instinct
 
+[English](service-cards.en.md)
+
 > **초기 조사**: 2026-10-04 · **Instinct 추가 및 Dots 접근 정정**: 2026-10-09 · **Muse 구독 공식 확인**: 2026-10-11 · 출처 상세는 [../../vl_materials/official-sources.md](../../vl_materials/official-sources.md)
 
 ## 한눈에 보기
@@ -44,7 +46,7 @@
 
 - **공식 페이지**: [instinct.com](https://instinct.com) — 보조 출처들이 instinct.co · app.instinct.com 도 언급하므로 가입 전 공식 주소 확인 (M1 원칙: 동명 제품 혼동 주의)
 - **무엇**: 홈페이지 소개 「a personal assistant that understands what you're working on and what's important to you」. 문자 · 전화로 일을 맡기면 일정 관리 · 메일 정리 · 차량 · 항공편 예약 같은 개인 업무를 처리한다. 2026-09-16 전화 대행(Concierge) 기능 보도 (보조)
-- **승인 · 위험 (보조 출처, 공식 약관으로 재확인 필요)**: 약관이 Instinct 를 사용자의 **대리인**으로 지정해 대신 맺은 약속이 사용자에게 효력을 가진다 · 모델 학습 사용이 **기본 켜짐**(app.instinct.com/settings 에서 끄기 가능, 안전 검토 데이터는 예외) · 수집 항목에 이메일 · 메시지 · 정밀 위치 포함 · 메일 연결을 끊어도 이미 색인된 메일은 별도 삭제 요청 필요 · 이메일을 통한 피싱 시연 사례
+- **승인 · 위험**: 대리인 조항(대신 맺은 약속이 사용자에게 효력) · 학습 사용 거부 가능하나 안전 검토 자료는 예외 · 연결을 끊어도 이미 색인된 자료는 별도 삭제 절차 — **공식 약관 · 개인정보 정책으로 확인 (2026-10-09)**. 학습 사용이 기본 켜짐 · 수집 항목(이메일 · 메시지 · 정밀 위치) · 이메일을 통한 피싱 시연 사례는 **보조 출처**
 - **접근**: 초대 전용 · 대기 명단 또는 기존 사용자 초대. 18세 이상. 베타 기간 무료, 정식 요금 미공개
 - **이 Topic 에서**: 박창수 대기 명단 등록 (10/9). 승인 전까지 조사 · 비교만, 승인되면 **개인 계정 연결 없이** 공개 정보 과제부터 실습
 - **출처 (보조)**: [Layer3 Labs — What Is Instinct AI?](https://www.layer3labs.io/guides/instinct-ai-explained) · [Vellum — Official Instinct Breakdown](https://www.vellum.ai/blog/official-instinct-breakdown) · [eesel — Instinct AI review](https://www.eesel.ai/blog/instinct-ai-review) · [gyld — privacy risks](https://gyld.ai/blog/instinct-ai-review-impressive-agent-real-privacy-risks)
@@ -55,7 +57,7 @@
 |---|---|---|
 | 1 | Grok Bot 정확한 출시 날짜 · 지역 제한 | ✅ 출시 2026-08-11 초기 베타 (보조) · 지역은 여전히 확인 필요 — 실습 대상이 아니라 보류 |
 | 2 | Muse 무료 단계의 정확한 주간 토큰 수 | Meta 도움말은 사용량 제한만 설명하고 구체적 토큰 수는 공개하지 않음; 앱 화면의 계정별 사용량도 날짜·지역과 함께 기록 |
-| 3 | Dots 공식 발표 · 도움말 원문 | ⏳ chatgpt.com 소개 페이지도 자동 읽기 차단 → M3 에서 사용자가 브라우저로 확인 |
+| 3 | Dots 공식 발표 · 도움말 원문 | ⏹️ 확인하지 않음 — Dots 가 실습 대상에서 빠져(10/9) M3 에서 브라우저 확인을 하지 않았다. Dots 관련 세부 내용은 계속 「보조 · 공식 원문 확인 필요」로 둔다 |
 | 4 | Dots Pro 플랜 가격 | ✅ ChatGPT Pro $100(5x) · $200(20x) (보조) — **정정 (10/9)**: 박창수는 ChatGPT **Plus** 구독이라 Dots 사용 불가 → 조사 · 비교만 |
-| 5 | 네 서비스의 한국어 사용 가능 여부 | ⏳ M3 또는 접근이 가능해진 뒤 실제 화면에서 확인 |
-| 6 | Instinct 공식 주소 · 약관 · 개인정보 정책 원문 | 대기 명단 승인 메일 또는 instinct.com 에서 사용자가 직접 확인 (보조 출처끼리 주소가 다름) |
+| 5 | 네 서비스의 한국어 사용 가능 여부 | Muse ✅ 한국어 질문에 한국어로 답함 (2026-10-11, [단풍 추천 사례](../../vl_materials/20261011_codex-muse-browser-delegation.md#요청과-결과)) · 나머지 셋은 접근하지 못해 확인 안 됨 |
+| 6 | Instinct 공식 주소 · 약관 · 개인정보 정책 원문 | ✅ instinct.com · 약관 · 개인정보 정책 원문 확인 (2026-10-09, [공식 출처 목록](../../vl_materials/official-sources.md#instinct-spear-street-technology)). 초대 · 요금 · 지역 조건은 여전히 확인 필요 |

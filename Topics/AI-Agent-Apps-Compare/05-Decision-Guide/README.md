@@ -12,6 +12,8 @@ tags:
 
 # M5 — 판단 기준 · Topic README
 
+[English](README.en.md)
+
 **상태**: ✅ 완료
 **예상 학습 시간**: 72분 실습 + 18분 버퍼
 
