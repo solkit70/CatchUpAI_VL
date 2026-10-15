@@ -16,6 +16,10 @@ tags:
 
 We compared public materials and access conditions for four agents — Grok Bot, Muse, Dots, and Instinct — and reviewed first use and two synthetic tasks in Muse, the service we could actually access. The goal was to go beyond feature lists and decide what to delegate based on the nature of the work, its risks, and whether the results could be verified.
 
+## Livestream
+
+[Watch the livestream covering this topic](https://youtube.com/live/isjIYk2184I). The broadcast was conducted in Korean.
+
 ## Key Results
 
 - M2 compared each product's features, access, privacy, and permissions. Official evidence was separated from secondary material, and unverified items were not treated as settled.
