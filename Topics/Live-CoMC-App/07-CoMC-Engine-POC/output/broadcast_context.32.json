@@ -1,0 +1,121 @@
+{
+  "current_part_id": "2",
+  "coverage_state": "defined",
+  "coverage_items": [
+    "1단계 Meeting options 설정 점검과 회의 종료 시각 확정",
+    "2단계 로그아웃한 브라우저와 휴대폰으로 참가자 입장 시험(로비)",
+    "3단계 화면 공유 · 채팅 · 마이크 시험",
+    "4단계 참가자 내보내기 · 회의 종료 시험"
+  ],
+  "evidence_pool": [
+    {
+      "path": "AI/Roundup/2026-10-11 - Live32 Weekly Rundown.md#2부: MS Teams 사용 리허설 (약 40분)",
+      "quote": "[확정] 이번 방송 커버리지 — 1단계 Meeting options 설정 점검과 회의 종료 시각 확정"
+    },
+    {
+      "path": "AI/Roundup/2026-10-11 - Live32 Weekly Rundown.md#2부: MS Teams 사용 리허설 (약 40분)",
+      "quote": "[확정] 이번 방송 커버리지 — 2단계 로그아웃한 브라우저와 휴대폰으로 참가자 입장 시험(로비)"
+    },
+    {
+      "path": "AI/Roundup/2026-10-11 - Live32 Weekly Rundown.md#2부: MS Teams 사용 리허설 (약 40분)",
+      "quote": "[확정] 이번 방송 커버리지 — 3단계 화면 공유 · 채팅 · 마이크 시험"
+    },
+    {
+      "path": "AI/Roundup/2026-10-11 - Live32 Weekly Rundown.md#2부: MS Teams 사용 리허설 (약 40분)",
+      "quote": "[확정] 이번 방송 커버리지 — 4단계 참가자 내보내기 · 회의 종료 시험"
+    },
+    {
+      "path": "AI/Roundup/2026-10-11 - Live32 Weekly Rundown.md#2부: MS Teams 사용 리허설 (약 40분)",
+      "quote": "[확정 항목 현재 상태] 1단계 설정 점검 — Meeting options · 종료 시각 (약 10분) — 예정 — 로비는 10/12 설정 완료, 나머지 옵션은 남음"
+    },
+    {
+      "path": "AI/Roundup/2026-10-11 - Live32 Weekly Rundown.md#2부: MS Teams 사용 리허설 (약 40분)",
+      "quote": "[확정 항목 현재 상태] 2단계 참가자 입장 시험 — 로비 · 로그아웃 · 휴대폰 (약 10분) — 예정 — 가장 중요한 시험"
+    },
+    {
+      "path": "AI/Roundup/2026-10-11 - Live32 Weekly Rundown.md#2부: MS Teams 사용 리허설 (약 40분)",
+      "quote": "[확정 항목 현재 상태] 3단계 화면 공유 · 채팅 · 마이크 (약 10분) · 4단계 내보내기 · 종료 (약 5분) — 예정 — 강사와의 리허설은 10/20 따로"
+    },
+    {
+      "path": "AI/Roundup/2026-10-11 - Live32 Weekly Rundown.md#2부: MS Teams 사용 리허설 (약 40분)",
+      "quote": "이 리허설은 Codex GPT-6.1 Sol Medium 과 함께 진행한다(10/17 박창수) — Bila AI 소개보다 먼저 한다. Codex 는 운영 가이드를 읽고 단계를 안내하며 박창수가 말한 화면 상태가 맞는지 판단하고 결과를 기록하고, Teams 는 박창수가 직접 조작한다"
+    },
+    {
+      "path": "AI/Roundup/2026-10-11 - Live32 Weekly Rundown.md#2부: MS Teams 사용 리허설 (약 40분)",
+      "quote": "참가 링크가 공개돼 있어서 로비로 입장을 통제하고 발표 권한을 좁히는 것이 핵심이다 — 지금은 「Who can bypass the lobby?」가 주최자만으로 막혀 있고, 특강 당일 오후 7시 30분 전에 Everyone 으로 바꾼 뒤 끝나면 되돌린다"
+    },
+    {
+      "path": "AI/Roundup/2026-10-11 - Live32 Weekly Rundown.md#2부: MS Teams 사용 리허설 (약 40분)",
+      "quote": "가장 중요한 시험은 2단계 ⑤다 — 로비를 Everyone 으로 열어도 계정 없이 들어오는 사람이 로비에서 기다리는지에 따라 당일에 로비 승인 담당이 필요한지가 정해진다"
+    },
+    {
+      "path": "AI/Roundup/2026-10-11 - Live32 Weekly Rundown.md#2부: MS Teams 사용 리허설 (약 40분)",
+      "quote": "방송은 공개 라이브라서 Teams 참가 링크와 회의 ID, 주최 계정 이메일은 화면에 나오지 않게 가리고 말하지 않는다"
+    },
+    {
+      "path": "AI/Roundup/2026-10-11 - Live32 Weekly Rundown.md#2부: MS Teams 사용 리허설 (약 40분)",
+      "quote": "상세 대본 · 기대 결과 · 기록표 · 비상 대응 → [[Research/2026-10-18 Live32 MS Teams 리허설 시나리오 (Codex 진행) by Claude Code|Teams 리허설 시나리오]]"
+    }
+  ],
+  "status_map": {
+    "rundown": "unconfirmed",
+    "2026-10-11 - Weekly Progress and Planning": "missing_section",
+    "2026-10-04~2026-10-10 - Claude Code": "missing_section",
+    "2026-10-16 - Daily Roundup": "missing_section",
+    "2026-09-22 송재희님 온라인 특강 준비": "missing_section"
+  },
+  "excluded_headings": [
+    "실험 후보 (확정 아님)",
+    "방송 전 확인 (이번 방송 미편성)"
+  ],
+  "withheld_conditional": [],
+  "forbidden_removed": true,
+  "other_parts": [
+    {
+      "id": "0",
+      "title": "인트로",
+      "coverage_state": "defined"
+    },
+    {
+      "id": "1",
+      "title": "AI 와 함께 하는 온라인 특강 준비",
+      "coverage_state": "defined"
+    },
+    {
+      "id": "3",
+      "title": "Bila AI 기능 소개 · 홍보 영상 준비",
+      "coverage_state": "defined"
+    },
+    {
+      "id": "4",
+      "title": "Muse 를 내 Workflow 에 맞추기",
+      "coverage_state": "defined"
+    },
+    {
+      "id": "예비 실험",
+      "title": "예비 실험",
+      "coverage_state": "defined"
+    },
+    {
+      "id": "5",
+      "title": "마무리 — 수요일 특강 초대",
+      "coverage_state": "defined"
+    },
+    {
+      "id": "틈새 A: 이번 주 만든 콘텐츠",
+      "title": "틈새 A: 이번 주 만든 콘텐츠",
+      "coverage_state": "defined"
+    },
+    {
+      "id": "틈새 B: 이번 주 소식 · 인사이트",
+      "title": "틈새 B: 이번 주 소식 · 인사이트",
+      "coverage_state": "undefined"
+    },
+    {
+      "id": "주간 영상",
+      "title": "주간 영상",
+      "coverage_state": "defined"
+    }
+  ],
+  "assembled_at": "2026-10-17T20:39:37.142649+00:00"
+}
