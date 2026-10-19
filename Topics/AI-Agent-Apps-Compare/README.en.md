@@ -16,6 +16,15 @@ tags:
 
 We compared public materials and access conditions for four agents — Grok Bot, Muse, Dots, and Instinct — and reviewed first use and two synthetic tasks in Muse, the service we could actually access. The goal was to go beyond feature lists and decide what to delegate based on the nature of the work, its risks, and whether the results could be verified.
 
+## Results Video
+
+The results of this topic were made into a video (published 2026-10-14).
+
+- Korean (12:06) — [Korean version](https://youtu.be/BQ_TVly3TZI)
+- English (12:29) — [I Never Told It To, But Codex Put Muse to Work](https://youtu.be/zi1iNN3AEBw)
+
+The production process is documented in [M6 — Results video](06-Capstone-Video/README.en.md).
+
 ## Livestream
 
 [Watch the livestream covering this topic](https://youtube.com/live/isjIYk2184I). The broadcast was conducted in Korean.
@@ -40,7 +49,7 @@ We compared public materials and access conditions for four agents — Grok Bot,
 | 3 | [Muse first use](03-Hands-On/README.en.md) | Actual UI checks, read-focused task, permissions/source verification |
 | 4 | [Delegate a piece of my work](04-Real-Task-Trial/README.en.md) | Run and evaluate two tasks using fictional materials |
 | 5 | [Build decision criteria](05-Decision-Guide/README.en.md) | Selection guide by work, risk, and evidence level |
-| 6 | [Produce the results video](06-Capstone-Video/video-slide-plan.en.md) | Slide plan under review; add video link after completion |
+| 6 | [Produce the results video](06-Capstone-Video/README.en.md) | 24-scene slide plan → Korean and English videos published (10/14) |
 
 ## Selection Guide
 
@@ -52,9 +61,9 @@ M4 used fictional data only and did not open email/calendar connectors or publis
 
 ## Capstone Video
 
-The M6 video also introduces **how Codex directly operated Muse's screen, ran two synthetic tasks, captured the result screens, and inserted them into documents**. Screen evidence uses only materials with personal schedules and account-specific permission states masked, and the final slide plan is reviewed before production.
+The M6 video also introduced **how Codex directly operated Muse's screen, ran two synthetic tasks, captured the result screens, and inserted them into documents**. Screen evidence used only materials with personal schedules and account-specific permission states masked.
 
-It also covers **asking Codex in VS Code an everyday question, after which it delegated work to Muse in the browser and received fall foliage recommendations in Korean**. The [delegation example and screen record](vl_materials/20261011_codex-muse-browser-delegation.md#관찰한-흐름) was also linked as a demonstration candidate for Senior-AI-Enablement.
+It also covered **asking Codex in VS Code an everyday question, after which it delegated work to Muse in the browser and received fall foliage recommendations in Korean**. The [delegation example and screen record](vl_materials/20261011_codex-muse-browser-delegation.md#관찰한-흐름) was also linked as a demonstration candidate for Senior-AI-Enablement.
 
 ## Key Materials
 
@@ -62,5 +71,7 @@ It also covers **asking Codex in VS Code an everyday question, after which it de
 - [M3 setup and first task](03-Hands-On/README.en.md)
 - [M4 execution results](04-Real-Task-Trial/guides/trial-results.en.md)
 - [M5 decision flowchart](05-Decision-Guide/guides/which-agent-when.en.md)
+- [M6 results video](06-Capstone-Video/README.en.md)
+- [Topic final retrospective (Korean)](vl_worklog/20261019_AI-Agent-Apps-Compare_Final_Retrospective.md)
 - [Roadmap](vl_roadmap/20261004_RoadMap_AI-Agent-Apps-Compare.md)
 - [Official source list](vl_materials/official-sources.md)

@@ -16,6 +16,15 @@ tags:
 
 Grok Bot, Muse, Dots, Instinct 네 에이전트의 공개 자료와 접근 조건을 비교하고, 실제 접근 가능한 Muse에서 첫 사용과 두 가지 가상 과제를 검토했다. 목표는 기능 목록만 비교하는 데서 그치지 않고, 업무 성격·위험도·검증 가능성에 따라 맡길 범위를 정하는 것이다.
 
+## 결과 영상
+
+이 Topic 의 결과를 영상으로 만들었다(2026-10-14 공개).
+
+- 한국어(12:06) — [지시도 안했는데 Codex가 Muse에게 일을 시키고 있더라구요 - Grok Bot·Dots·Muse·Instinct 비교 분석 및 Muse 사용 직접 경험 해 보니...](https://youtu.be/BQ_TVly3TZI)
+- 영어(12:29) — [I Never Told It To, But Codex Put Muse to Work](https://youtu.be/zi1iNN3AEBw)
+
+제작 과정은 [M6 — 결과 영상 제작](06-Capstone-Video/README.md)에 정리했다.
+
 ## 라이브 방송
 
 [이 토픽을 진행한 라이브 방송 보기](https://youtube.com/live/isjIYk2184I). 한국어로 진행된 방송이다.
@@ -40,7 +49,7 @@ Grok Bot, Muse, Dots, Instinct 네 에이전트의 공개 자료와 접근 조�
 | 3 | [Muse 첫 사용](03-Hands-On/README.md) | 실제 UI 확인, 읽기 중심 과제, 권한·출처 검증 |
 | 4 | [내 일 하나 맡겨 보기](04-Real-Task-Trial/README.md) | 허구 자료로 과제 두 개 실행·평가 |
 | 5 | [판단 기준 만들기](05-Decision-Guide/README.md) | 업무·위험·근거 수준별 선택 가이드 |
-| 6 | [결과 영상 제작](06-Capstone-Video/video-slide-plan.md) | 슬라이드 플랜 검토 중; 영상 완성 후 링크 추가 |
+| 6 | [결과 영상 제작](06-Capstone-Video/README.md) | 슬라이드 플랜 24장 → 한국어 · 영어 영상 공개(10/14) |
 
 ## 선택 가이드
 
@@ -52,9 +61,9 @@ M4는 허구의 데이터만 사용했고 메일·일정 커넥터를 열거나 
 
 ## Capstone 영상
 
-M6 영상에서는 **Codex가 Muse 화면을 직접 조작해 두 가지 가상 과제를 실행하고, 결과 화면을 캡처해 문서에 넣은 과정**도 소개한다. 화면 증거는 개인 일정·계정별 권한 상태를 가린 자료만 사용하며, 최종 슬라이드 플랜은 제작 전에 검토받는다.
+M6 영상에서는 **Codex가 Muse 화면을 직접 조작해 두 가지 가상 과제를 실행하고, 결과 화면을 캡처해 문서에 넣은 과정**도 소개했다. 화면 증거는 개인 일정·계정별 권한 상태를 가린 자료만 사용했다.
 
-추가로 **VS Code의 Codex에 생활 질문을 지시하자 브라우저의 Muse에 일을 맡기고 한국어 단풍 추천을 받은 경험**을 다룬다. [업무 위임 사례와 화면 기록](vl_materials/20261011_codex-muse-browser-delegation.md#관찰한-흐름)은 Senior-AI-Enablement의 시연 후보에도 연결했다.
+추가로 **VS Code의 Codex에 생활 질문을 지시하자 브라우저의 Muse에 일을 맡기고 한국어 단풍 추천을 받은 경험**을 다뤘다. [업무 위임 사례와 화면 기록](vl_materials/20261011_codex-muse-browser-delegation.md#관찰한-흐름)은 Senior-AI-Enablement의 시연 후보에도 연결했다.
 
 ## 주요 자료
 
@@ -62,5 +71,7 @@ M6 영상에서는 **Codex가 Muse 화면을 직접 조작해 두 가지 가상 
 - [M3 설정 및 첫 과제](03-Hands-On/README.md)
 - [M4 실행 결과](04-Real-Task-Trial/guides/trial-results.md)
 - [M5 판단 흐름도](05-Decision-Guide/guides/which-agent-when.md)
+- [M6 결과 영상 제작](06-Capstone-Video/README.md)
+- [Topic 최종 회고](vl_worklog/20261019_AI-Agent-Apps-Compare_Final_Retrospective.md)
 - [Roadmap](vl_roadmap/20261004_RoadMap_AI-Agent-Apps-Compare.md)
 - [공식 출처 목록](vl_materials/official-sources.md)
