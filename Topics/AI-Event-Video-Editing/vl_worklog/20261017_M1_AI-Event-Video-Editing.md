@@ -43,6 +43,7 @@ tags:
 ### 1차 검색에서 알아낸 것 (출처는 methods-map.md)
 
 - 「시덴스」는 ByteDance 의 **Seedance(생성형)**로 추정된다. Claude 스킬 · MCP 로 부를 수 있지만 촬영본 편집은 못 한다.
+  - **2026-10-24 정정**: 위 문장은 10/17의 1차 판단이다. 최신 공식 자료에는 참조 편집도 있으므로 「편집 불가」 단정을 정정하며, 수시간 행사 편집과는 구분한다. → [M2 정정 근거](../02-Methods-Research/cards/seedance.md#기능과-기존-설명-정정)
 - **Premiere Pro MCP 서버**가 커뮤니티 오픈소스로 여럿 있다. Adobe 공식이 아니고 CEP 패널 설치가 필요하다.
 - 긴 영상 → 프롬프트 → 하이라이트 → **Premiere XML** 을 내세우는 서비스: Vidio.ai · OpusClip(Pro 플랜) · VEA(Final Cut XML) · MomentCut.
 

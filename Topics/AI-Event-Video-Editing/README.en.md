@@ -4,7 +4,7 @@ author:
   - "박창수"
   - "Claude Code"
 created: "2026-10-20 10:00:00"
-status: "In progress — M1 (waiting for the client's answers)"
+status: "In progress — M3 ready; M4 local/Vidio trial and revision results"
 tags:
   - ai-event-video-editing
   - video-editing
@@ -14,7 +14,7 @@ tags:
 
 [한국어](README.md)
 
-> **This is an in-progress version (2026-10-20).** It covers the requirements gathered so far, how the work will proceed, and what will be delivered. It will be replaced by a final version with findings and recommendations when the topic is closed.
+> **This is an in-progress version (2026-10-25).** Research outputs cover nine candidates across five groups, with review fixes and conditional recommendations. Client answers remain unconfirmed. One local FFmpeg workflow produced seven review cuts using existing transcripts and sampled frames. Waveform checks on two boundaries found approximately 9 ms and 17 ms of audio overlap, and four short review clips are ready locally. The user reported completing the four review clips. A 147.714-second topic-focused excerpt draft from talk B is now rendered locally; the Vidio Free trial also produced a verified 126.912-second file. A Korean revision request yielded a 1:13 UI result with all PR-review explanation clips removed. Human listening comparison and manual correction remain pending. Recommendations will follow the research and trial stages.
 
 This topic researches ways to take event footage that runs for hours and **tell an AI, in plain words, which scenes to keep — so it edits them into a highlight of about three minutes and adds an intro and transitions**. It started from a request by an event photographer and reporter (the client) who edits by hand, mainly in Adobe Premiere Pro, with After Effects and CapCut. The goal is to research and compare methods, recommend the ones that fit the client, and write **setup and usage manuals**.
 
@@ -58,7 +58,7 @@ The job is split into three parts. We expect **① picking scenes** to take the 
 | **Editing AI** | Finds, cuts, and joins scenes from **footage already shot** | ① picking and ② assembling — **the core** |
 | **Generative AI** | Creates **new video** from text or images | Intros and background shots in ③ decorating |
 
-The "Sidence" the client mentioned is presumably ByteDance's **Seedance**. Seedance is **generative**: it can create new shots such as an intro, but **it cannot pick and cut scenes from footage**. We are asking the client which use they had in mind.
+Whether the client meant ByteDance's **Seedance** remains unconfirmed. Current official materials describe both generation and reference-video editing, so the earlier blanket statement that it cannot edit footage has been corrected. We have not established that it can select real moments from hours of event footage and assemble a three-minute highlight. See [the correction and evidence](02-Methods-Research/cards/seedance.md#기능과-기존-설명-정정).
 
 ### Methods to Research — Five Groups
 
@@ -76,12 +76,12 @@ The "Sidence" the client mentioned is presumably ByteDance's **Seedance**. Seeda
 
 ## Next Steps
 
-Once the client answers the [confirmation questions (Korean)](01-Requirements-Map/client-questions.md), the work proceeds in this order. We expect **about three weeks** after the answers (5–6 hours a week).
+On October 24, the user authorized preliminary M2 research with the [client answers](01-Requirements-Map/client-questions.md) left unconfirmed. We expect about three weeks for the full workflow after the answers arrive (5–6 hours a week).
 
 | Step | What happens | Output of this step |
 |---|---|---|
-| **M1** Requirements and methods map | Organize the request, split the research scope, prepare questions | Requirements card · methods map · questions **(current step)** |
-| **M2** Research by method | Research 8+ candidates from official sources (pricing, limits, Korean, Premiere connection) | Candidate cards · **comparison table** · what the "Claude · ChatGPT + plugin" approach can and cannot do |
+| **M1** Requirements and methods map | Organize the request, split the research scope, prepare questions | Outputs ready; client answers unconfirmed |
+| **M2** Research by method | Research 8+ candidates from official sources (pricing, limits, Korean, Premiere connection) | Review updated: nine cards across five groups, a comparison, and connector analysis |
 | **M3** Choose recommendations | Pick 1–2 recommendations and an alternative for the client's conditions; plan trials | **Recommendations with reasons** · diagram of how they fit the current workflow · trial plan |
 | **M4** Trial ① highlight | Test two methods with the same footage and the same instruction | Step-by-step screenshots · results table (instruction-following, time, rework, cost) |
 | **M5** Trial ② intro and effects | Compare template vs. generative intros; add effects and captions by AI instruction | **Three-minute demo video** (from publishable footage) |
@@ -125,7 +125,7 @@ The manual format (document/PDF, screen recording, or a walk-through session) is
 
 ## What Is Needed Now — Answers to the Questions
 
-To confirm the requirements and fit the manuals to the client's setup, we are asking 18 questions. **Answering only what you know is fine.** M2 starts once the answers arrive.
+To confirm the requirements and fit the manuals to the client's setup, we are asking 18 questions. **Answering only what you know is fine.** On October 24, the user authorized preliminary M2 research while keeping client answers unconfirmed. Recommendations remain provisional.
 
 - **Setup**: Windows / Mac, Adobe plan and Premiere version, paid Claude or ChatGPT use, experience installing plugins
 - **Footage and finished video**: footage length, cameras, resolution, audio quality, delivery format (horizontal/vertical), a recent three-minute example, time per video and number per month
@@ -144,16 +144,34 @@ To confirm the requirements and fit the manuals to the client's setup, we are as
 | [Methods map](01-Requirements-Map/methods-map.md) | Editing vs. generative, five groups of candidates, research order (Korean) |
 | [Confirmation questions](01-Requirements-Map/client-questions.md) | 18 questions for the client and the reasons (Korean) |
 | [Learning roadmap](vl_roadmap/20261017_RoadMap_AI-Event-Video-Editing.md) | Full M1–M6 plan (Korean) |
+| [M2 research guide](02-Methods-Research/README.md) | Nine research cards across five groups (Korean) |
+| [M2 comparison](02-Methods-Research/comparison-table.md) | Features, costs, limits, Korean, Premiere handoff, and unknowns (Korean) |
+| [Claude/ChatGPT connector analysis](02-Methods-Research/claude-chatgpt-plugins.md) | Documented capabilities and untested integration steps (Korean) |
+| [October 24 WorkLog](vl_worklog/20261024_M2_AI-Event-Video-Editing.md) | Research, corrections, retrospective, and next steps (Korean) |
+
+## Client Summary and Review Follow-up
+
+Start with the [plain-language client summary](03-Recommendation/client-summary.md), then the [conditional recommendations](03-Recommendation/recommendation.md) and [trial plan](03-Recommendation/test-plan.md). The trial footage, account access, and schedule remain unconfirmed.
+
+The [review record](02-Methods-Research/review-followup.md) contains pricing screenshots and the status of every M1 candidate. CapCut was added; deferred candidates are explicitly marked as unresearched. Korean is the primary language; this English README summarizes progress rather than translating every research card.
 
 ## Progress
 
 | Step | Status |
 |---|---|
 | M1 Requirements and methods map | 🔄 Outputs done · waiting for the client's answers |
-| M2 Research by method | ⏳ |
-| M3 Choose recommendations | ⏳ |
+| M2 Research by method | Review updated: 9 candidates, 5 groups; trials and user self-assessment not performed |
+| M3 Choose recommendations | Conditional recommendations and trial draft ready; footage and accounts unconfirmed |
 | M4 Trial ① highlight | ⏳ |
 | M5 Trial ② intro and effects | ⏳ |
 | M6 Manual and delivery | ⏳ |
 
 This topic follows the [VibeLearn AI](https://github.com/solkit70/CatchUpAI_VL) method — set a learning plan (roadmap), and leave outputs and work logs at every step.
+
+## Local trial started
+
+See the [local segmentation trial (Korean)](04-HandsOn-Highlight/README.md) for boundary candidates, seven review cuts, and the reproducible script. Footage stays outside this public Topic; no external upload or new payment was used.
+
+## M4 trial conclusion
+
+The [M4 comparison (Korean)](04-HandsOn-Highlight/results-comparison.md) separates file measurements, user feedback, the failed automatic revision, and manual recovery. The user slightly preferred the local ending and also judged the manually restored Vidio version positively. The verified local v1 is the reference for the next demo; original M4 DoD remains 5/7, with a prospectively fixed identical prompt and a complete step-by-step screenshot set unfinished.

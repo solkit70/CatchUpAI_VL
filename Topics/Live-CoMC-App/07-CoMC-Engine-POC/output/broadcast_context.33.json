@@ -1,0 +1,114 @@
+{
+  "current_part_id": "1",
+  "coverage_state": "defined",
+  "coverage_items": [
+    "Muse 로 할 수 있는 일과 내 일에 맞는 일 나누기",
+    "Muse 결과를 내 컴퓨터의 2nd Brain 으로 옮기기",
+    "Muse 에서 VibeLearn AI 방식으로 일할 수 있는지"
+  ],
+  "evidence_pool": [
+    {
+      "path": "AI/Roundup/2026-10-18 - Live33 Weekly Rundown.md#1부: Muse 를 나의 Workflow 에 맞게 — 오늘의 메인 (분 수 미정)",
+      "quote": "[확정] 이번 방송 커버리지 — Muse 로 할 수 있는 일과 내 일에 맞는 일 나누기"
+    },
+    {
+      "path": "AI/Roundup/2026-10-18 - Live33 Weekly Rundown.md#1부: Muse 를 나의 Workflow 에 맞게 — 오늘의 메인 (분 수 미정)",
+      "quote": "[확정] 이번 방송 커버리지 — Muse 결과를 내 컴퓨터의 2nd Brain 으로 옮기기"
+    },
+    {
+      "path": "AI/Roundup/2026-10-18 - Live33 Weekly Rundown.md#1부: Muse 를 나의 Workflow 에 맞게 — 오늘의 메인 (분 수 미정)",
+      "quote": "[확정] 이번 방송 커버리지 — Muse 에서 VibeLearn AI 방식으로 일할 수 있는지"
+    },
+    {
+      "path": "AI/Roundup/2026-10-18 - Live33 Weekly Rundown.md#1부: Muse 를 나의 Workflow 에 맞게 — 오늘의 메인 (분 수 미정)",
+      "quote": "[확정 항목 현재 상태] Muse 로 할 수 있는 일과 내 일에 맞는 일 나누기 — 진행 중 — M1 완료 뒤 보강 2/5(기능 표 · 새 작업 5개 초안), 방송에서 앱 커넥터 확인 · 연결 · 이름 규칙 결정"
+    },
+    {
+      "path": "AI/Roundup/2026-10-18 - Live33 Weekly Rundown.md#1부: Muse 를 나의 Workflow 에 맞게 — 오늘의 메인 (분 수 미정)",
+      "quote": "[확정 항목 현재 상태] Muse 결과를 내 컴퓨터의 2nd Brain 으로 옮기기 — 예정 — Topic M2 실습: 양방향 옮기기 · 하나씩 내려받기 · 음성 원문 보존"
+    },
+    {
+      "path": "AI/Roundup/2026-10-18 - Live33 Weekly Rundown.md#1부: Muse 를 나의 Workflow 에 맞게 — 오늘의 메인 (분 수 미정)",
+      "quote": "[확정 항목 현재 상태] Muse 에서 VibeLearn AI 방식으로 일할 수 있는지 — 예정 — Topic M3 실습: 밖에서 할 수 있는 조각 · 기억에 규칙 넣기"
+    },
+    {
+      "path": "AI/Roundup/2026-10-18 - Live33 Weekly Rundown.md#1부: Muse 를 나의 Workflow 에 맞게 — 오늘의 메인 (분 수 미정)",
+      "quote": "Muse-My-Workflow Topic 의 로드맵을 10/25 새벽 v2.0 으로 바꿔서, 내 볼트를 Muse 와 잇는 해법 · 다른 사람이 따라 할 수 있는 교육 자료 · 과정 영상까지 11/29 까지 6주로 진행한다"
+    },
+    {
+      "path": "AI/Roundup/2026-10-18 - Live33 Weekly Rundown.md#1부: Muse 를 나의 Workflow 에 맞게 — 오늘의 메인 (분 수 미정)",
+      "quote": "볼트를 Muse 의 컴퓨터와 동기화하는 기능은 없고, Dropbox · GitHub 같은 저장소를 Muse 가 들여다보는 「연결」 방식이라는 것이 첫 조사 결과다 — 실험은 다음 주 M4"
+    },
+    {
+      "path": "AI/Roundup/2026-10-18 - Live33 Weekly Rundown.md#1부: Muse 를 나의 Workflow 에 맞게 — 오늘의 메인 (분 수 미정)",
+      "quote": "이 파트는 진행자 자신의 일에 Muse 를 쓰는 방법만 다룬다. 오늘 가장 중요한 실험이라 시간을 가장 많이 쓴다(10/24 박창수)"
+    },
+    {
+      "path": "AI/Roundup/2026-10-18 - Live33 Weekly Rundown.md#1부: Muse 를 나의 Workflow 에 맞게 — 오늘의 메인 (분 수 미정)",
+      "quote": "음성 입력 · Gmail · 캘린더가 되는 것은 「직접 써 보니」로만 말하고, 어디서 써 봤는지는 말하지 않는다"
+    },
+    {
+      "path": "AI/Roundup/2026-10-18 - Live33 Weekly Rundown.md#1부: Muse 를 나의 Workflow 에 맞게 — 오늘의 메인 (분 수 미정)",
+      "quote": "Muse 앱의 커넥터 · 설정 화면은 계정 정보를 가리고 보여 준다"
+    }
+  ],
+  "status_map": {
+    "rundown": "unconfirmed",
+    "2026-10-18 - Weekly Progress and Planning": "missing_section",
+    "2026-10-11~2026-10-17 - Claude Code": "missing_section",
+    "2026-10-11 - Live32 Weekly Rundown": "missing_section"
+  },
+  "excluded_headings": [
+    "실험 후보 (확정 아님)"
+  ],
+  "withheld_conditional": [],
+  "forbidden_removed": true,
+  "other_parts": [
+    {
+      "id": "0",
+      "title": "인트로",
+      "coverage_state": "defined"
+    },
+    {
+      "id": "2",
+      "title": "Seattle AI Week 행사 리서치",
+      "coverage_state": "defined"
+    },
+    {
+      "id": "3",
+      "title": "AI 영상 제작 지원 방법 조사",
+      "coverage_state": "defined"
+    },
+    {
+      "id": "4",
+      "title": "AI 시대 새 마켓과 빌더의 대응",
+      "coverage_state": "defined"
+    },
+    {
+      "id": "5",
+      "title": "밀린 작업 실험 — 시간이 되는 만큼",
+      "coverage_state": "undefined"
+    },
+    {
+      "id": "6",
+      "title": "마무리 — 다음 주 예고",
+      "coverage_state": "defined"
+    },
+    {
+      "id": "틈새 A: 이번 주 만든 콘텐츠",
+      "title": "틈새 A: 이번 주 만든 콘텐츠",
+      "coverage_state": "defined"
+    },
+    {
+      "id": "틈새 B: 이번 주 소식 · 인사이트",
+      "title": "틈새 B: 이번 주 소식 · 인사이트",
+      "coverage_state": "defined"
+    },
+    {
+      "id": "주간 영상",
+      "title": "주간 영상",
+      "coverage_state": "undefined"
+    }
+  ],
+  "assembled_at": "2026-10-25T08:34:43.937916+00:00"
+}
