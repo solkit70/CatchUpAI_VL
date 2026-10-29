@@ -25,14 +25,19 @@ Source: Overview[^overview]
 | Vendor registration | Submission · Use Cases | May need a supplier portal account; **KCIT use cases require registration in the King County E-Procurement Supplier Portal** |
 | Time | FAQ[^faq] | **About 3–5 hours per week** over roughly 30–35 weeks |
 
-### Not stated in the call — to be confirmed at the Oct 26 office hours
+### Not stated in the call — confirmed at the Oct 26 office hours
 
-- **Residency or company location** — not stated.
-- **Whether a U.S. entity is needed** — not required in writing, but finalists submit a W-9 (a U.S. taxpayer form), so **a U.S. tax ID is likely needed in practice** (our inference).
-- **Insurance coverage level** — not specified.
-- **Whether concept-stage products can be selected** — "concept only" is a level in the rubric, but actual selection chances are unknown.
+- **Out-of-state applicants are welcome.** Part of the reason is to attract businesses to Washington; a local preference was discussed but not decided.
+- **Prototypes count.** Either a clickable prototype or working software is fine, and Bellevue selected both in round 1.
+- **Startups and small businesses are weighted equally**, and **a university can apply**.
+- **Employees of Bellevue, King County and Washington State cannot apply.**
 
-> We will update this section after the in-person office hours at Tukwila on October 26, 2026 (Module 4).
+### Still unconfirmed — follow the call
+
+- **Non-U.S. companies or residents** — not addressed directly. Round 1 selected an Israeli company, but finalists submit a W-9 or TIN, so **a U.S. tax ID is likely needed in practice** (our inference).
+- **Insurance coverage level** — the call only says finalists submit a Certificate of Insurance.
+
+> Full results are in [What we confirmed at the Oct 26 office hours](../../04-Application-Guide/concepts/office-hours-findings.en.md). For anything else, use the Nov 4 virtual office hours or email innovation@bellevuewa.gov.
 
 ## 2. Timeline
 
@@ -40,9 +45,9 @@ Source: Overview[^overview]
 |---|---|
 | Oct 14, 2026 | Challenge opens (Exchange Northwest forum at Bellevue City Hall) |
 | Oct 14, 7:30–8:00 PM | Office hours #1, Bellevue City Hall (in person) — past |
-| **Oct 26, 6:00–8:00 PM** | Office hours #2, **Tukwila Community Center (in person)** — [Register on Eventbrite](https://www.eventbrite.com/e/the-exchange-nw-civic-innovation-challenge-working-session-tickets-2003631120618) |
-| Nov 4, 1:00–3:00 PM | Office hours #3, virtual — **sign up for a 10-minute slot** |
-| **Nov 13, 5:00 PM** | **Proposal deadline** — submit early; late applications are not considered |
+| Oct 26, 6:00–8:00 PM | Office hours #2, Tukwila Community Center (in person) — past · [What we confirmed](../../04-Application-Guide/concepts/office-hours-findings.en.md) |
+| **Nov 4, 1:00–3:00 PM** | Office hours #3, virtual — **sign up for a 10-minute slot** (limited) — [Sign up](https://exchangenw.org/events/virtual-office-hours) |
+| **Nov 13, 5:00 PM** | **Proposal deadline (strict)** — submit early; late applications were not accepted in round 1 either |
 | Nov 13 – Dec 10 | Initial review |
 | Dec 10 – Jan 18, 2027 | Finalist interviews; agreements and statements of work |
 | Jan 19, 2027 | Participants announced; program starts |

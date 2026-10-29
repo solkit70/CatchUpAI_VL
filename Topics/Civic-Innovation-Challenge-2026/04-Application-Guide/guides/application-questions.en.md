@@ -21,6 +21,16 @@ The application is a web form, with **175 words per question**.[^submission] In 
 | 15 | AI practices | ⑦ innovation | If AI is involved, say yes — an **AI questionnaire** follows. Be ready to explain data handling and human review | Hiding AI; no data-protection explanation |
 | 16 | **2-minute pitch video** | ⑨ overall quality | See the [pitch video guide](pitch-video.en.md). Check the link opens and include any password | Over two minutes; link permission errors |
 
+## Advice from the Oct 26 office hours
+
+- **Decide first what you want to prove with the government over six months.** It should be **a specific part**, not your whole plan. Applications that said "we'll do whatever you want" were hard to evaluate. → State this one sentence consistently in questions 4, 5 and 10.
+- The sweet spot is where **what your business learns from working with government** meets **how you help the agency**. The speaker also said that if government is not your primary customer, think about whether it is worth your time.
+- **Company size doesn't matter.** "You in the garage" or 20 people — describe where you are honestly. Startups and small businesses are weighted equally.
+- **Already partnering with or being recommended by another organization is "not a deal killer."** Describe partners in question 12. Whether letters of support from community groups affect the score was not confirmed.
+- The speaker said "I think 12 questions" but sounded unsure. **Prepare for the call's 16 questions at 175 words each.**
+
+Source: Oct 26, 2026 in-person office hours, Tukwila → [What we confirmed](../concepts/office-hours-findings.en.md)
+
 ## Lessons from round-1 teams (our reading)
 
 All four round-1 teams attached a **working AI product** to a **specific agency workflow** in a **small pilot** ([round-1 teams](../../03-Round1-And-Research/examples/round1-selected-teams.en.md)). To show this in your application:

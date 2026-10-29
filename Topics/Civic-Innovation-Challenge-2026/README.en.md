@@ -1,6 +1,6 @@
 # Civic Innovation Challenge 2026 — A Plain-Language Guide and Application Prep
 
-**[한국어](README.md)** · By Catch Up AI · As of Oct 24, 2026 · Status: 🔄 First public draft (office-hours results and videos coming)
+**[한국어](README.md)** · By Catch Up AI · As of Oct 29, 2026 · Status: 🔄 Second public draft (office-hours results and help resources added; videos coming)
 
 > **Deadline: Friday, November 13, 2026, 5:00 PM Pacific Time** — Official page: https://exchangenw.org/programs
 
@@ -22,8 +22,8 @@
 | 1 | [M1 — At a Glance](01-Overview/README.en.md) | What it is, who runs it, benefits, **eligibility**, timeline, where to apply | ✅ |
 | 2 | [M2 — The 8 Use Cases and the Rubric](02-Use-Cases-And-Criteria/README.en.md) | The agencies' 8 problems, **9 rubric criteria ↔ 16 questions**, office-hours questions | ✅ |
 | 3 | [M3 — Round 1 (2025) Results and Research](03-Round1-And-Research/README.en.md) | **The four round-1 teams**, round 1 vs round 2, related sources | ✅ |
-| 4 | [M4 — Application Guide](04-Application-Guide/README.en.md) | **Backward timeline, how to answer the 16 questions, the 2-minute pitch video**, when applying is hard | 🔄 Office-hours results coming |
-| 5 | M5 — Where to get help | Local support information | ⏳ In preparation |
+| 4 | [M4 — Application Guide](04-Application-Guide/README.en.md) | **Backward timeline, how to answer the 16 questions, the 2-minute pitch video**, when applying is hard | ✅ Oct 26 office-hours results added |
+| 5 | [M5 — Where to Get Help, and Release](05-Support-And-Publish/README.en.md) | Official contacts and the **KACCWA Startup Support Team** | ✅ |
 | 6 | M6 — Intro videos (Korean · English) | | ⏳ Coming |
 
 ## What we found
@@ -33,19 +33,21 @@
 - **An idea alone is unlikely to be enough.** You need a solution in hand or in progress and a 2-minute pitch video; finalists provide a tax ID and a certificate of insurance.
 - **All four round-1 (2025) teams attached a working AI product to a specific agency workflow in a small pilot.** Teams from Seattle, Denver and Israel were selected, and so was an app built by a high school student.
 - **Round 2 looks much more closely at real deployability.** The rubric grew from 4 to 9 criteria, adding product maturity, number of jurisdictions served and metrics, and the form now asks for an implementation plan and a cost proposal.
+- **The advice stressed most at the Oct 26 office hours**: decide concretely **what you want to prove** with the government in six months; "we'll do whatever you want" applications were hard to evaluate. **Out-of-state teams and prototype-stage products can apply**, and startups and small businesses are weighted equally.
+- **Two of the four round-1 teams are doing follow-up work with Bellevue or Bellevue College, and one is selling to other governments** (Oct 26 office hours). A follow-on contract is still not guaranteed.
 - **Easy points to miss**: product maturity has no dedicated question, so state it in the overview and milestone answers; King County use cases require vendor registration.
 
 ## What we have not confirmed
 
-- Residency or location limits, **whether a U.S. entity or tax ID is required**, insurance level, and **whether concept-stage products can be selected** — to be checked at the Oct 26, 2026 in-person office hours in Tukwila and added to M4.
-- Whether round-1 pilots led to adoption or contracts — not in public sources.
+- **Whether non-U.S. teams or residents can apply**, **insurance level**, and **whether community support letters count** — not answered at the Oct 26 office hours. Follow the call and check at the Nov 4 office hours or with the official contact → [What we confirmed](04-Application-Guide/concepts/office-hours-findings.en.md)
+- Official team-level results for round 1 — beyond the follow-up news we heard at the office hours, not in public sources.
 - Some articles (GeekWire, Bellevue College) were blocked, so we relied on search summaries; this is marked in those documents.
 
 ## Where to get help
 
 - **Official contact**: innovation@bellevuewa.gov
-- **Office hours**: Mon, Oct 26, 2026, 6–8 PM, Tukwila Community Center (in person, [register on Eventbrite](https://www.eventbrite.com/e/the-exchange-nw-civic-innovation-challenge-working-session-tickets-2003631120618)) · Wed, Nov 4, 2026, 1–3 PM, virtual 10-minute slots (sign up)
-- **Local community support**: in preparation — we will add it to M5 once confirmed
+- **Virtual office hours**: Wed, Nov 4, 2026, 1–3 PM, 10-minute slots (limited) — [sign up](https://exchangenw.org/events/virtual-office-hours)
+- **Help in Korean**: KACCWA Startup Support Team, **startup.support@kaccwa.org** — apply on your own or reach out for support → [M5 support page](05-Support-And-Publish/guides/kaccwa-startup-support.en.md)
 
 ## Sources
 

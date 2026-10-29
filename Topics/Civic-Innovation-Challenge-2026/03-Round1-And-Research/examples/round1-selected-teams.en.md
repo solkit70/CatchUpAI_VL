@@ -41,14 +41,16 @@ Sources: City of Bellevue news and participants page[^partners][^participants]
 | **Working products already existed** | Three companies with existing products; FindIt was on iOS[^geekwire] | Fact |
 | **Tied to specific staff or user workflows** | Compliance checks, legal research, curb management, lost items | 🔎 Reading |
 | **Small, clear pilot scope** | One department or one campus, measuring usability and effect | 🔎 Reading |
-| **Local and international teams** | Seattle, Denver, Israel, a local student | Fact (round 2 eligibility to be confirmed) |
+| **Local and international teams** | Seattle, Denver, Israel, a local student | Fact (round 2 also accepts out-of-state teams — Oct 26 office hours; non-U.S. unconfirmed) |
 | **Two pilots included the college** | Juganu, FindIt | Fact |
 
 ## How it turned out
 
 The city reports that milestones (Dec 2025, Jan 2026, Mar 2026) were completed and **pilots concluded in May 2026**.[^accomplishments] **Team-level results were not published.** The city summarized that the pilots demonstrated civic engagement examples, generated practical insights, validated emerging technologies and identified service improvements; one design partner said collaborating with others on a real problem was the most meaningful part.[^program] A council update described the Challenge as contracting with **four businesses** to pilot solutions such as AI compliance dashboards, smart lighting and mobile item lookup.[^council]
 
-> Whether any pilot led to adoption or a follow-on contract is not confirmed in public sources. We will ask at the Oct 26 office hours (question D1).
+**Follow-up results heard at the Oct 26 office hours**: **two of the four teams are doing follow-up work with the City of Bellevue or Bellevue College**, and **one is selling to other governments** using what it learned in Bellevue (the timing was not right for Bellevue, but it was a great product). Results depended on how each pilot went; the teams were not named. The hardware (streetlight) pilot took longer than software because of permits; Bellevue College is installing more of the lights and cameras on campus, and the FindIt app is in use at Bellevue College. → [What we confirmed](../../04-Application-Guide/concepts/office-hours-findings.en.md)
+
+> Even so, **a purchase or follow-on contract after the pilot is not guaranteed** (call FAQ).
 
 ## Sources
 

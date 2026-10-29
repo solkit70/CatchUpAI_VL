@@ -14,7 +14,7 @@
 
 - **What round-1 teams shared**: all AI, working products, small pilots tied to specific workflows. Teams from Israel and Denver were selected too.
 - **What changed in round 2**: four agencies, stipend up to $45,000, a 9-criterion rubric focused on deployability, **18+ only**, tax ID and insurance paperwork.
-- **Results not published**: whether pilots led to adoption or contracts is unconfirmed; we will ask at the office hours.
+- **Follow-up (Oct 26 office hours)**: two of the four teams are doing follow-up work with Bellevue or Bellevue College; one is selling to other governments. Official team-level results are still unpublished.
 
 ## Previous · Next
 

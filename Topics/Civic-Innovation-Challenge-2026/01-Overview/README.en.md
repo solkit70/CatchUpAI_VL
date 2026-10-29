@@ -17,7 +17,7 @@
 - The pilot **does not guarantee adoption**. It is a chance to test and refine your solution with public partners.
 - The stipend range is wide, but the call says **"most solutions will likely receive a stipend at the lower end."**
 - **An idea alone is unlikely to be enough.** You need a solution in hand or in progress, plus a 2-minute pitch video, a tax ID and insurance.
-- Eligibility details not in the call (U.S. entity, residency, insurance level) will be checked at the Oct 26 office hours and updated in Module 4.
+- **Out-of-state applicants are welcome, and a clickable prototype counts** (Oct 26 office hours). Non-U.S. teams and insurance level were not confirmed, so follow the call → [What we confirmed](../04-Application-Guide/concepts/office-hours-findings.en.md)
 
 ## Sources
 

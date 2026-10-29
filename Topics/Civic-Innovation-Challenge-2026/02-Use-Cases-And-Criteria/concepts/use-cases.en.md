@@ -15,6 +15,8 @@ This is not a contest where applicants pick any topic. The agencies first publis
 
 The **"Good fit for"** lines are our reading of the call.
 
+> **What about ideas outside the use cases?** (Oct 26 office hours) All three governments accept them. But the use cases already have **design-partner staff lined up**, so they carry more weight; outside ideas need a partner department found after selection. Your choice of which government to work with does not block selection → [What we confirmed](../../04-Application-Guide/concepts/office-hours-findings.en.md)
+
 ## City of Bellevue
 
 Bellevue also welcomes proposals that support its strategic target areas and Council priorities. Questions: innovation@bellevuewa.gov.[^usecases]
@@ -24,6 +26,7 @@ Bellevue also welcomes proposals that support its strategic target areas and Cou
 - **What they want**: AI and large language models that interpret a request **by meaning and context**, search authorized city repositories, and prioritize likely responsive records — even when wording differs. Staff still review responsiveness, privilege, exemptions and redaction.
 - **Good fit for**: Teams building document search, RAG or records-management AI
 - **Watch out**: Data security and human final review are central
+- **Heard at the office hours**: Current commercial software does not meet the agencies' needs for producing and redacting records, so **all three governments are very interested — called one of the most scalable use cases**
 
 ### 2. Traffic camera video identify and capture automation
 - **Problem**: Under the Public Records Act (RCW 42.56), the city must diligently search all systems, including traffic camera footage, by hand.
@@ -71,6 +74,7 @@ Bellevue also welcomes proposals that support its strategic target areas and Cou
 - **What they want**: One online "front door." Owners answer a few questions (business type, industry, location, employees, subcontractors) and get a **personalized checklist of licenses, permits, registrations and certifications** with links to apply and status tracking. Existing owners manage their information in one place and get **renewal and requirement-change alerts**. It connects existing tools (BLS, SOS filing) rather than replacing them.
 - **Good fit for**: Government-service UX, guided wizards and regulatory data teams
 - **Watch out**: The experience of first-time and immigrant business owners can connect to the rubric's community and equity criteria
+- **Heard at the office hours**: **The current process map is deliberately not shared**, so ideas are not anchored to today's process. A cabinet-level agency leader close to the Governor's office is expected to be the design partner. In the group discussion, "multiple accounts for licenses and permits in systems that don't connect" was the most common story
 
 The call does not list a separate Bellevue College use case.
 
