@@ -7,7 +7,7 @@
 - [x] 상공회의소 스타트업지원팀 지원 안내 (한 · 영) — 10/28 임원회의 결정 반영
 - [x] Topic 최상위 README (한 · 영) 2차 공개판
 - [x] 공개 전 점검 (링크 · 빈 폴더 · 내부 자료 · 이름)
-- [ ] GitHub 공개 — **박창수 승인 대기**
+- [x] GitHub 공개 — 박창수 승인 후 커밋 dd4bc00 푸시 (2026-10-29)
 
 ## 📚 진행 내용
 
@@ -39,10 +39,10 @@ M4 · M5 상태를 ✅ 로, 「알아낸 것」에 설명회 조언과 1차 후�
 - [x] Topic 최상위 README(한 · 영) 2차 공개판
 - [x] 🔴 `check_links.py` 통과 — 깨진 링크 0 · 빈 폴더 0
 - [x] 내부 자료 · 박창수 이름 노출 0 (내용 문서)
-- [ ] 박창수 승인 후 GitHub 공개
-- [ ] WorkLog · Daily Retrospective — 공개 후 완료
+- [x] 박창수 승인 후 GitHub 공개 (dd4bc00 · GitHub 에서 05 폴더 확인)
+- [x] WorkLog · Daily Retrospective
 
-**M5 DoD 4/6 (67%)** — 공개만 남음
+**M5 DoD 6/6 (100%)** ✅
 
 ## 💡 Daily Retrospective
 
