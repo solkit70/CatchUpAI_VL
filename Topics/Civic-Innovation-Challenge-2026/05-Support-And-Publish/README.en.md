@@ -6,7 +6,7 @@
 
 ## 📚 Reading order
 
-1. [guides/kaccwa-startup-support.en.md](guides/kaccwa-startup-support.en.md) — What the KACCWA Startup Support Team can and won't do, and how to reach it
+1. [guides/kaccwa-startup-support.en.md](guides/kaccwa-startup-support.en.md) — The KACCWA Startup Support Team's position, what it won't do, and how to reach it
 
 ## Key points
 

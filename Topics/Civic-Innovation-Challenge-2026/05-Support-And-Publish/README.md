@@ -6,7 +6,7 @@
 
 ## 📚 학습 순서
 
-1. [guides/kaccwa-startup-support.md](guides/kaccwa-startup-support.md) — 워싱턴주 한인상공회의소 스타트업지원팀이 도울 수 있는 일 · 하지 않는 일 · 연락처
+1. [guides/kaccwa-startup-support.md](guides/kaccwa-startup-support.md) — 워싱턴주 한인상공회의소 스타트업지원팀의 지원 안내(기본 입장 · 하지 않는 일) · 연락처
 
 ## 이 모듈에서 꼭 기억할 것
 

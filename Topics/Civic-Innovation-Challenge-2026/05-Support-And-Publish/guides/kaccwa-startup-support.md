@@ -10,15 +10,7 @@
 - 원하시거나 필요하시면 **스타트업지원팀이 지원해 드릴 수 있도록 노력하겠습니다.**
 - 신청서를 대신 써 드리거나 선정을 약속드리지는 않습니다.
 
-## 도울 수 있는 일
-
-| 막히는 곳 | 도울 수 있는 일 |
-|---|---|
-| 영어 공고 이해 | 한국어 요약, 질문 답변 — 이 Topic 의 [M1](../../01-Overview/README.md) ~ [M4](../../04-Application-Guide/README.md) 문서도 함께 쓰세요 |
-| 내 제품이 맞는지 | [사용 사례 8개](../../02-Use-Cases-And-Criteria/concepts/use-cases.md)와 맞춰 보기, 11/4 온라인 상담 안내 |
-| 팀 구성 | 현장을 아는 사업자와 기술 인력을 연결 |
-| 영어 신청서 | 영어 검토를 도와줄 분 연결, SCORE 무료 멘토링 안내 |
-| 2분 피치 영상 | 촬영 · 편집 요령 안내 — [피치 영상 가이드](../../04-Application-Guide/guides/pitch-video.md) |
+사업 내용을 먼저 이해하시려면 이 Topic 의 [M1](../../01-Overview/README.md) ~ [M4](../../04-Application-Guide/README.md) 문서를 함께 보세요.
 
 ## 연락처
 
@@ -33,4 +25,4 @@
 - 공식 문의: innovation@bellevuewa.gov
 - 11/4(수) 13:00~15:00 온라인 10분 상담 신청: https://exchangenw.org/events/virtual-office-hours
 
-> 이 안내는 상공회의소 임원회의(2026-10-28) 결정을 바탕으로 Catch Up AI 가 정리했습니다. 도울 수 있는 범위는 상공회의소 사정에 따라 바뀔 수 있습니다.
+> 이 안내는 상공회의소 임원회의(2026-10-28) 결정을 바탕으로 Catch Up AI 가 정리했습니다. 지원 방식은 상공회의소 사정에 따라 바뀔 수 있습니다.
