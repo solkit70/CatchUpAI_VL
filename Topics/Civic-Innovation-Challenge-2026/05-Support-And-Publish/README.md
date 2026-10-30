@@ -7,6 +7,7 @@
 ## 📚 학습 순서
 
 1. [guides/kaccwa-startup-support.md](guides/kaccwa-startup-support.md) — 워싱턴주 한인상공회의소 스타트업지원팀의 지원 안내(기본 입장 · 하지 않는 일) · 연락처
+2. [guides/civic-innovation-challenge-2026-kaccwa-guide.md](guides/civic-innovation-challenge-2026-kaccwa-guide.md) — 스타트업지원팀이 이 사업을 한 문서로 정리한 홍보 안내문(한국어 · 영어 요약 포함) · [PDF 판](guides/civic-innovation-challenge-2026-kaccwa-guide.pdf)
 
 ## 이 모듈에서 꼭 기억할 것
 

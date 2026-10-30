@@ -7,6 +7,7 @@
 ## 📚 Reading order
 
 1. [guides/kaccwa-startup-support.en.md](guides/kaccwa-startup-support.en.md) — The KACCWA Startup Support Team's position, what it won't do, and how to reach it
+2. [guides/civic-innovation-challenge-2026-kaccwa-guide.md](guides/civic-innovation-challenge-2026-kaccwa-guide.md) — The Startup Support Team's one-document program guide (Korean, with an English summary) · [PDF version](guides/civic-innovation-challenge-2026-kaccwa-guide.pdf)
 
 ## Key points
 
