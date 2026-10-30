@@ -10,9 +10,15 @@ tags:
   - tts
   - alibaba-qwen
   - open-source-ai
+status: completed
+completion_confirmed: 2026-10-29
 ---
 
 # Qwen3-TTS 학습 및 도입 계획
+
+## 현재 Topic 상태
+
+**✅ 완료 — 2026-10-29 사용자 확인.** 사용자가 이 Topic을 완료했다고 명시하고 완료 처리를 요청했다. 아래 진행률·체크리스트·후속 계획은 완료 확인 전의 기록으로 보존하며, 현재 진행 중인 필수 과제로 해석하지 않는다. 개별 실험·자격 취득·검증을 새로 수행했다는 의미는 아니며, 실제 완료일은 별도로 추정하지 않는다.
 
 ## Overview
 Changbal 멤버인 [[Sangho Yeo]]님의 `Daily Content Factory` 프로젝트 리뷰를 통해 발견한 최신 오픈소스 TTS 모델입니다. 15초의 짧은 음성 샘플만으로도 고품질의 음성 복제가 가능하며, Mac의 Neural Engine을 활용해 로컬에서 고속으로 작동하는 것이 특징입니다.
