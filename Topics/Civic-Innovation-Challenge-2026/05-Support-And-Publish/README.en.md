@@ -2,7 +2,7 @@
 
 **Status**: ✅ Complete · released on GitHub (Oct 29, 2026) · **Reading time**: 10 minutes · [한국어](README.md)
 
-> **In one line**: Ask the organizers (innovation@bellevuewa.gov, Nov 4 virtual office hours) for official answers, and the **KACCWA Startup Support Team (startup.support@kaccwa.org)** for help in Korean.
+> **In one line**: Ask the organizers (innovation@bellevuewa.gov, Nov 4 virtual office hours) for official answers, and the **KACCWA Startup Support Team (info@kaccwa.org)** for help in Korean.
 
 ## 📚 Reading order
 

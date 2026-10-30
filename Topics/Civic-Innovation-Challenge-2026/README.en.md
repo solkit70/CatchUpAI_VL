@@ -47,7 +47,7 @@
 
 - **Official contact**: innovation@bellevuewa.gov
 - **Virtual office hours**: Wed, Nov 4, 2026, 1–3 PM, 10-minute slots (limited) — [sign up](https://exchangenw.org/events/virtual-office-hours)
-- **Help in Korean**: KACCWA Startup Support Team, **startup.support@kaccwa.org** — apply on your own or reach out for support → [M5 support page](05-Support-And-Publish/guides/kaccwa-startup-support.en.md)
+- **Help in Korean**: KACCWA Startup Support Team, **info@kaccwa.org** — apply on your own or reach out for support → [M5 support page](05-Support-And-Publish/guides/kaccwa-startup-support.en.md)
 
 ## Sources
 

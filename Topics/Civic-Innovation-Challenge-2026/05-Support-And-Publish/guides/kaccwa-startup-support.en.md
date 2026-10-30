@@ -14,7 +14,7 @@ To understand the program first, see Modules [M1](../../01-Overview/README.en.md
 
 ## Contact
 
-- **Email: startup.support@kaccwa.org** (KACCWA Startup Support Team)
+- **Email: info@kaccwa.org** (KACCWA Startup Support Team)
 - The deadline is **Friday, Nov 13, 5:00 PM PT** — please reach out **early**.
 
 ## Official questions go to the program

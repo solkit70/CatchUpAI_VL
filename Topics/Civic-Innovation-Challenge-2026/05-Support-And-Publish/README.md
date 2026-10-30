@@ -2,7 +2,7 @@
 
 **상태**: ✅ 완료 · GitHub 공개 (2026-10-29) · **예상 학습 시간**: 10분 (읽기) · [English](README.en.md)
 
-> **한 줄 요약**: 공식 답은 주최 측(innovation@bellevuewa.gov · 11/4 온라인 상담)에, 한국어 도움은 **워싱턴주 한인상공회의소 스타트업지원팀(startup.support@kaccwa.org)** 에 물어보세요.
+> **한 줄 요약**: 공식 답은 주최 측(innovation@bellevuewa.gov · 11/4 온라인 상담)에, 한국어 도움은 **워싱턴주 한인상공회의소 스타트업지원팀(info@kaccwa.org)** 에 물어보세요.
 
 ## 📚 학습 순서
 

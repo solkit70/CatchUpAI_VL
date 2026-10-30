@@ -47,7 +47,7 @@
 
 - **공식 문의**: innovation@bellevuewa.gov
 - **온라인 상담**: 2026-11-04(수) 13:00~15:00, 10분 단위 신청(자리 한정) — [신청](https://exchangenw.org/events/virtual-office-hours)
-- **한국어 도움**: 워싱턴주 한인상공회의소 스타트업지원팀 **startup.support@kaccwa.org** — 직접 지원하셔도 되고, 원하시면 돕겠습니다 → [M5 지원 안내](05-Support-And-Publish/guides/kaccwa-startup-support.md)
+- **한국어 도움**: 워싱턴주 한인상공회의소 스타트업지원팀 **info@kaccwa.org** — 직접 지원하셔도 되고, 원하시면 돕겠습니다 → [M5 지원 안내](05-Support-And-Publish/guides/kaccwa-startup-support.md)
 
 ## 근거와 출처
 
