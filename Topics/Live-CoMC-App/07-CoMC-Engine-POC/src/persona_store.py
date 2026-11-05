@@ -24,6 +24,13 @@ def definitions(path=None):
         for key in ('name', 'background', 'length', 'humor', 'style'):
             if not isinstance(r[key], str) or not 1 <= len(r[key]) <= 1000:
                 raise ValueError('Persona 정의의 문장이 올바르지 않습니다')
+        greetings = r.get('greetings')
+        if greetings is not None:
+            if not isinstance(greetings, dict) or not isinstance(greetings.get('closing'), str) or not 1 <= len(greetings['closing']) <= 250:
+                raise ValueError('Persona 마무리 인사는 250자 이내 문장이어야 합니다')
+            general = greetings.get('general')
+            if not isinstance(general, list) or not 1 <= len(general) <= 8 or any(not isinstance(x, str) or not 1 <= len(x) <= 250 for x in general):
+                raise ValueError('Persona 일반 인사는 250자 이내 문장 1~8개여야 합니다')
         if r['tts'] is not None:
             t = r['tts']
             if t['provider'] != 'edge' or not re.fullmatch(r'[+-]\d{1,2}%', t['rate']) or not re.fullmatch(r'[+-]\d{1,2}Hz', t['pitch']):

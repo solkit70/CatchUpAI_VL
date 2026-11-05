@@ -1,0 +1,9 @@
+{
+  "source_root": "../examples/trial-vault",
+  "destination_root": "./synthetic-mirror",
+  "include_paths": ["."],
+  "exclude_paths": [".git", ".obsidian", "node_modules", "_Inbox_"],
+  "allowed_extensions": [".md"],
+  "allowed_visibility": ["public"],
+  "max_file_bytes": 1048576
+}

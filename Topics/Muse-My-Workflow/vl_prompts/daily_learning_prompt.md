@@ -54,20 +54,20 @@ Claude Code 또는 Codex — 오늘 진행하는 에이전트를 WorkLog 「진�
 
 **현재 진행 중인 모듈**:
 ```
-M3 - VibeLearn AI on Muse (실습 1 완료 · 실습 2 부터, 2026-10-25) → M4 볼트 연결 해법 (11/1)
+M4 볼트 연결 해법 (11/5 실습 1 확인표 작성, 1/8) · 시험 후보 확인 뒤 사본 규칙·미리 보기
 Roadmap v2.0 (2026-10-25 사용자 승인) — 모듈 7개 · 6주 (11/29 마무리)
 ```
 
 **가장 최근 WorkLog 파일**:
 ```
-vl_worklog/20261025_M3_Muse-My-Workflow.md (M3 실습 1, 2026-10-25 Live #33 1부 Claude Code) — 「다음 세션에 넘길 것」부터 읽는다
+vl_worklog/20261105_M4_Muse-My-Workflow.md (M4 실습 1, 2026-11-05 Codex) — 해법 8개와 Muse 화면 확인
 이전: vl_worklog/20261025_M2_Muse-My-Workflow.md (M2 완료) · vl_worklog/20261025_M1-v2_Muse-My-Workflow.md (M1 보강 5/5) · vl_worklog/20261018_M1_Muse-My-Workflow.md (M1 완료)
 ```
 
 **이전 세션의 "Tomorrow's focus"** (있다면):
 ```
-- M3 - VibeLearn AI on Muse: (공개 레포 읽기 ✅) → 순서 지키기 시험(실습 2 지시문은 M3 WorkLog 에 있음) → 기억에 규칙 넣기(Data controls 의 Import memory 열어 보기 · 「잊어줘」 시험) → 집에서 이어받기
-- M3 전에 VibeLearn 규칙 요약을 넘김 꾸러미 한 장으로 만든다 (3절 + 「모르는 것은 모른다」 + 볼트 규칙 한 줄)
+- M4 시험 후보 D/E/C(Drive)/A를 확인하고 실습 2 사본 규칙·미리 보기로 이어간다.
+- M3 문서와 실습 4의 재현 순서는 03-VibeLearn-on-Muse/README.md 참고.
 - 열린 질문: 학습 끄기 스위치 위치(M4) · 휴대폰 Save to Files 형식 · 휴대폰 복사 · 붙여넣기
 - 결정 이월: 연결 규칙 ③ · 이름 규칙 ② · 받는 곳 A · 추천표 승인 (do-not-upload.md · transfer-comparison.md)
 ```

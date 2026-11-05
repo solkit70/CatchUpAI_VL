@@ -122,7 +122,10 @@ class Console:
     def __init__(self, live: str, device: str, tts: str | None, overlay_port: int = 8777):
         self.live = live
         self.overlay_port = overlay_port
-        self.device_pat = device
+        saved_audio = out('private') / 'runtime' / 'audio_settings.json'
+        audio_settings = read_json(saved_audio) if saved_audio.exists() else {}
+        self.device_pat = audio_settings.get('device_pattern', device)
+        self.audio_error = ''
         self.tts = tts
         self.log: list[dict] = []
         self.results: list[dict] = []
@@ -165,10 +168,15 @@ class Console:
         threading.Thread(target=self.overlay_srv.serve_forever, daemon=True).start()
         self.note("overlay", f"http://127.0.0.1:{self.overlay_port}/ (OBS Browser Source)")
         # 3) 재생기
-        self.device = spoken_player.pick_device(self.device_pat)
+        self.device = None
+        try:
+            self.device = spoken_player.pick_device(self.device_pat)
+        except RuntimeError as exc:
+            self.audio_error = str(exc)
+            self.note('audio', self.audio_error)
         self.tts_name, self.prov = spoken_player.load_provider(self.tts)
         threading.Thread(target=self._player_loop, daemon=True).start()
-        dev = spoken_player.sd.query_devices(self.device)["name"] if self.device is not None else "기본 출력"
+        dev = self.device_pat or "기본 출력"
         self.note("player", f"{self.tts_name}/{self.prov.voice} → {dev}")
         # 주간 기록은 방송일 기준으로 읽는다. 이전 캐주얼 브리프 캐시는 사용하지 않는다.
         st = self.brief_status()
@@ -196,6 +204,18 @@ class Console:
     def _player_loop(self):
         while True:
             try:
+                # Resolve by configured name for each new utterance, never fall back to a different device.
+                try:
+                    self.device = spoken_player.pick_device(self.device_pat)
+                    spoken_player.sd.query_devices(self.device, 'output')
+                except Exception as exc:
+                    message = str(exc)
+                    if message != self.audio_error:
+                        self.note('audio', message)
+                    self.audio_error = message
+                    time.sleep(2)
+                    continue
+                self.audio_error = ''
                 with _capture() as buf:
                     try:
                         ack = self.ack_queue.get_nowait()
@@ -253,7 +273,7 @@ class Console:
         ss = read_json(out("session_state.json")) if out("session_state.json").exists() else {}
         mode = spoken_player.current_mode()
         ov = read_json(out("overlay.json")) if out("overlay.json").exists() else {}
-        return {"live": self.live, "part": ss.get("current_part_id"), "parts": self.parts(),
+        return {"audio_settings": (read_json(out('private') / 'runtime' / 'audio_settings.json') if (out('private') / 'runtime' / 'audio_settings.json').exists() else {'device_pattern': self.device_pat, 'gain_db': 0, 'normalize': True}), "audio_error": self.audio_error, "live": self.live, "part": ss.get("current_part_id"), "parts": self.parts(),
                 "mode": mode, "overlay": ov.get("text") or "",
                 "pending": out("spoken_pending.json").exists(),
                 "audio_prep": spoken_player.pending_audio_status(),
@@ -334,7 +354,7 @@ class Console:
             self.busy = False
             self.lock.release()
 
-    def greet_viewers(self, ids=None, scope='selected', batch=0):
+    def greet_viewers(self, ids=None, scope='selected', batch=0, comment=''):
         batches = self.viewers.greeting_batch(self.live, ids, scope)
         if not isinstance(batch, int) or not 0 <= batch < len(batches):
             self.busy = False
@@ -342,9 +362,44 @@ class Console:
         rows = batches[batch]
         # Historical names are never represented as current viewers or new comments.
         text = '기록에 있는 시청자분들께 감사 인사 해 주세요'
+        if comment:
+            text += '\n시청자 댓글: ' + str(comment)[:500]
         result = self.ask(text, viewer_records=rows, viewer_scope='all' if scope == 'all' else 'current')
         result.update({'batch_count': len(batches), 'batch_index': batch})
         return result
+
+    def audio_config(self, body):
+        from evidence_lanes import atomic_json
+        if self.playing or self.busy or out('spoken_pending.json').exists() or out('spoken.json').exists():
+            return {'ok': False, 'error': '발화 또는 승인 대기 답변을 처리한 뒤 출력 설정을 바꿔 주세요.'}
+        pattern = str(body.get('device_pattern', self.device_pat) or '').strip()
+        try:
+            gain = float(body.get('gain_db', 0))
+            if not (-12 <= gain <= 12):
+                raise ValueError('음량은 -12~+12 dB 범위입니다')
+            device = spoken_player.pick_device(pattern)
+            info = spoken_player.sd.query_devices(device, 'output')
+            spoken_player.sd.check_output_settings(device=device, channels=1, samplerate=info['default_samplerate'])
+            atomic_json(out('private') / 'runtime' / 'audio_settings.json',
+                        {'device_pattern': pattern, 'gain_db': gain, 'normalize': bool(body.get('normalize', True))})
+            self.device_pat, self.device, self.audio_error = pattern, device, ''
+            return {'ok': True, 'message': '출력 설정 저장 완료. 다음 발화부터 적용합니다.', 'device': info['name']}
+        except (ValueError, RuntimeError, spoken_player.sd.PortAudioError) as exc:
+            return {'ok': False, 'error': str(exc)}
+
+    def audio_check(self):
+        """Inspect the selected route without playing sound or changing device defaults."""
+        try:
+            self.device = spoken_player.pick_device(self.device_pat)
+            info = spoken_player.sd.query_devices(self.device, 'output')
+            spoken_player.sd.check_output_settings(device=self.device, channels=min(2, int(info['max_output_channels'])), samplerate=info['default_samplerate'])
+            message = f"출력 장치: {info['name']} · {int(info['default_samplerate'])} Hz · 출력 설정 정상. 실제 음량과 OBS 송출은 청취로 확인해 주세요."
+            self.note('audio-check', message)
+            return {'ok': True, 'message': message}
+        except Exception as exc:
+            message = f'출력 장치를 사용할 수 없습니다 ({type(exc).__name__}). MOTIV Mix와 장치 연결을 확인하고 콘솔을 재시작해 주세요.'
+            self.note('audio-check', message)
+            return {'ok': False, 'message': message}
 
     def set_part(self, pid: str):
         self.actions.part_set(pid)
@@ -506,6 +561,8 @@ input,select{font:inherit;background:#fdfaff;color:var(--ink);border:1px solid v
  <span id="persona-current" class="badge" style="background:#eddef8"></span>
  <span id="mode" class="badge"></span><span class="meta">문맥 자동 판단 · 방송일 <b id="part"></b> · 시작 <span id="started"></span></span>
  <span id="busy" class="meta"></span></div>
+<div class="row"><button onclick="post('/api/audio-check').then(r=>{$('audio-message').textContent=r.message||r.error;})">출력 장치 점검</button><span id="audio-message" class="meta" role="status"></span></div>
+<details><summary>출력 장치 · 음량 조절</summary><div class="row"><input id="output-pattern" placeholder="출력 장치 이름 일부 (비우면 시스템 기본)"><label>음량 dB <input id="output-gain" type="number" min="-12" max="12" step="1" value="0"></label><label><input id="output-normalize" type="checkbox" checked>작은 음성 보정</label><button onclick="saveOutput()">출력 설정 저장</button></div><div class="meta">다른 장치로 자동 전환하지 않습니다. 재생 중에는 설정을 바꿀 수 없습니다.</div></details>
 <div class="grid">
 <div>
  <div class="card"><h2>오버레이 (시청자가 보는 것) <button id="clear" style="float:right;padding:4px 10px;font-size:13px" onclick="post('/api/clear')">화면 지우기</button></h2><div id="overlay" class="overlay"></div></div>
@@ -527,7 +584,7 @@ input,select{font:inherit;background:#fdfaff;color:var(--ink);border:1px solid v
    <button onclick="quick('이번 주에 뭘 했어요?')">이번 주 한 일</button>
    <button onclick="quick('이번 주 인사이트가 뭐예요?')">인사이트</button>
    <button onclick="quick('잠깐 물 마시고 올게요. 그동안 시청자분들께 재미있는 얘기 해 주세요')">잠깐 자리 비움 (≈50초)</button>
-   <button onclick="quick('잠깐 볼일 보고 올게요. 시청자분들께 지금까지 한 일과 앞으로 남은 일을 설명해 주세요')">지금까지·남은 일 (≈50초)</button>
+   <button onclick="quick('잠깐 볼일 보고 올게요. 시청자분들께 지금까지 한 일과 앞으로 남은 일을 설명해 주세요')">지금까지·남은 일 (≈30초)</button>
    <button onclick="$('viewer-name').focus();$('viewer-name').scrollIntoView({block:'center'})">시청자 명단에 추가</button>
    <button onclick="if(confirm('15개 국어 자기소개 샘플 — 약 2분. 시작할까요?'))post('/api/signoff',{set:'intro'})">🌏 15개 국어 자기소개 (샘플)</button>
    <button onclick="if(confirm('시그니처 끝인사 — 15개 언어, 약 2분 16초. 시작할까요?'))post('/api/signoff',{set:'signoff'})">🌏 시그니처 끝인사 (2:16)</button></div>
@@ -567,7 +624,7 @@ input,select{font:inherit;background:#fdfaff;color:var(--ink);border:1px solid v
   <div class="row"><input id="viewer-date" type="date" aria-label="방송 날짜"><button onclick="viewerPost('/api/viewers/date',{date:$('viewer-date').value})">방송 날짜 저장</button></div>
   <div class="row" style="margin-top:8px"><input id="viewer-name" placeholder="표시 이름 · 여러 명은 쉼표" aria-label="시청자 표시 이름" style="flex:1;min-width:160px"><button onclick="addViewers()">추가</button></div>
   <div class="meta">진행자가 직접 등록합니다. 날짜를 확인해 주세요. ✓는 소리 재생 완료입니다.</div>
-  <div id="viewer-list"></div>
+  <input id="viewer-comment" placeholder="선택한 시청자의 최근 댓글 (선택 사항)" aria-label="시청자 최근 댓글" style="width:100%"><div id="viewer-list"></div>
   <div class="row" style="margin-top:8px"><button onclick="prepareGreetings('selected')">선택한 분께 인사</button><button onclick="prepareGreetings('ungreeted')">아직 인사 안 한 분 모두</button></div>
   <div id="greeting-batches" class="row" style="margin-top:8px"></div><div id="viewer-message" class="meta" role="status"></div>
   <details style="margin-top:10px"><summary>지난 회차 참여자에게 감사 인사</summary><div id="all-viewers"></div><button onclick="prepareGreetings('all')">전체 참여자에게 인사</button></details>
@@ -599,6 +656,7 @@ function renderPersona(p){const sig=JSON.stringify(p.options);if(sig!==PERSONA_O
  {const vt=(p.voice_mode==='varied'&&r.tts_varied)?r.tts_varied:r.tts;const names={edge:'Edge',openai:'OpenAI',qwen:'Qwen3'};$('voice-detail').textContent='현재 목소리 · '+(vt?(names[vt.provider]||vt.provider)+' · '+vt.ko:'기본 설정');}
  $('persona-history').textContent=p.history.map(e=>new Date(e.at).toLocaleTimeString()+' · '+({selected:'선택',rendered:'답변 생성',played:'재생 완료'}[e.event]||e.event)+' · '+(e.name||e.persona_id)+(e.mode?' · '+e.mode:'')).join('\n');
  if(!PERSONA_NOTES_DIRTY&&document.activeElement!==$('persona-notes'))$('persona-notes').value=p.notes||'';}
+async function saveOutput(){const r=await post('/api/audio-config',{device_pattern:$('output-pattern').value,gain_db:Number($('output-gain').value),normalize:$('output-normalize').checked});$('audio-message').textContent=r.message||r.error;}
 async function viewerPost(url,body){try{const r=await post(url,body);$('viewer-message').textContent=r.error||(r.ok?'저장했습니다':'처리하지 못했습니다');await tick();return r;}catch(e){$('viewer-message').textContent='연결 오류 — 다시 시도해 주세요';return {ok:false};}}
 async function addViewers(){const names=$('viewer-name').value.trim();if(!names)return;const r=await viewerPost('/api/viewers/add',{names});if(r.ok)$('viewer-name').value='';}
 $('viewer-name').addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();addViewers();}});
@@ -608,7 +666,7 @@ function renderViewers(v){VIEWERS=v;const sig=JSON.stringify(v);if(sig===VIEWER_
  $('viewer-list').replaceChildren();
  for(const r of v.current){const row=document.createElement('div');row.className='viewer-row';
  const chip=document.createElement('button');chip.textContent=(r.greeted_at?'✓ ':'')+r.name;chip.className=(SELECTED.has(r.id)?'on ':'')+(r.greeted_at?'greeted':'');chip.setAttribute('aria-pressed',String(SELECTED.has(r.id)));chip.onclick=()=>{if(SELECTED.has(r.id))SELECTED.delete(r.id);else SELECTED.add(r.id);VIEWER_SIGNATURE='';renderViewers(VIEWERS);};row.append(chip);
- const greet=document.createElement('button');greet.textContent='👋 인사하기';greet.onclick=async()=>{const res=await post('/api/viewers/greet',{scope:'selected',ids:[r.id]});$('viewer-message').textContent=res.error||(res.ok?'인사를 준비하고 있어요. REVIEW 모드에서는 「대기 발화 승인」을 눌러 주세요.':'다시 요청해 주세요.');};row.append(greet);
+ const greet=document.createElement('button');greet.textContent='👋 인사하기';greet.onclick=async()=>{const res=await post('/api/viewers/greet',{scope:'selected',ids:[r.id],comment:$('viewer-comment').value});$('viewer-message').textContent=res.error||(res.ok?'인사를 준비하고 있어요. REVIEW 모드에서는 「대기 발화 승인」을 눌러 주세요.':'다시 요청해 주세요.');};row.append(greet);
  const meta=document.createElement('span');meta.className='meta';meta.textContent=`등록 기록 ${r.count}회`+(r.previous_count?' · 이전 회차 참여 기록 있음':' · 참여 기록을 이번 회차부터 시작')+(r.pronunciation?' · 읽기: '+r.pronunciation:'');row.append(meta);
  for(const [label,action] of [['수정',()=>editViewer(r)],['이번 회차 삭제',()=>deleteViewer(r,false)],['전체 기록 삭제',()=>deleteViewer(r,true)]]){const b=document.createElement('button');b.textContent=label;b.onclick=action;row.append(b);}$('viewer-list').append(row);}
  if(!v.current.length)$('viewer-list').textContent='등록된 시청자가 없습니다.';
@@ -616,9 +674,9 @@ function renderViewers(v){VIEWERS=v;const sig=JSON.stringify(v);if(sig===VIEWER_
 async function editViewer(r){const name=prompt('표시 이름 수정 (모든 회차 기록에 반영)',r.name);if(name===null)return;const pronunciation=prompt('읽는 법 (비우면 표시 이름 그대로 읽기)',r.pronunciation||'');if(pronunciation===null)return;await viewerPost('/api/viewers/edit',{id:r.id,name,pronunciation});}
 async function deleteViewer(r,everywhere){if(!confirm(r.name+(everywhere?'의 모든 회차 기록을 삭제할까요?':'을 이번 회차에서 삭제할까요?')))return;SELECTED.delete(r.id);await viewerPost('/api/viewers/delete',{id:r.id,everywhere});}
 async function prepareGreetings(scope){if(scope==='selected'&&!SELECTED.size)scope='ungreeted';const r=await post('/api/viewers/batches',{scope,ids:scope==='selected'?[...SELECTED]:null});$('greeting-batches').replaceChildren();if(!r.ok||!r.batches.length){$('viewer-message').textContent=r.error||'등록된 모든 분께 이미 인사했어요. 이름 옆 「인사하기」로 다시 인사할 수 있습니다.';return;}
- if(r.batches.length===1){const res=await post('/api/viewers/greet',{scope:scope==='all'?'all':'selected',ids:r.batches[0].map(x=>x.id)});$('viewer-message').textContent=res.error||'인사를 준비하고 있어요. REVIEW에서는 「대기 발화 승인」을 눌러 주세요.';return;}
+ if(r.batches.length===1){const res=await post('/api/viewers/greet',{scope:scope==='all'?'all':'selected',ids:r.batches[0].map(x=>x.id),comment:$('viewer-comment').value});$('viewer-message').textContent=res.error||'인사를 준비하고 있어요. REVIEW에서는 「대기 발화 승인」을 눌러 주세요.';return;}
  $('viewer-message').textContent='이름을 빠뜨리지 않도록 네 분씩 나눴어요. 순서대로 인사 버튼을 눌러 주세요. REVIEW에서는 각 인사를 승인해 주세요.';
- r.batches.forEach((batch,i)=>{const b=document.createElement('button');b.textContent=`${i+1}/${r.batches.length}: `+batch.map(x=>x.name).join(', ');b.onclick=async()=>{if(b.disabled)return;b.disabled=true;try{const res=await post('/api/viewers/greet',{scope:scope==='all'?'all':'selected',ids:batch.map(x=>x.id)});if(!res.ok){b.disabled=false;$('viewer-message').textContent=res.error;}else $('viewer-message').textContent='인사 생성 중 — 결과·승인 대기를 확인해 주세요';}catch(e){b.disabled=false;$('viewer-message').textContent='연결 오류 — 다시 시도해 주세요';}};$('greeting-batches').append(b);});}
+ r.batches.forEach((batch,i)=>{const b=document.createElement('button');b.textContent=`${i+1}/${r.batches.length}: `+batch.map(x=>x.name).join(', ');b.onclick=async()=>{if(b.disabled)return;b.disabled=true;try{const res=await post('/api/viewers/greet',{scope:scope==='all'?'all':'selected',ids:batch.map(x=>x.id),comment:$('viewer-comment').value});if(!res.ok){b.disabled=false;$('viewer-message').textContent=res.error;}else $('viewer-message').textContent='인사 생성 중 — 결과·승인 대기를 확인해 주세요';}catch(e){b.disabled=false;$('viewer-message').textContent='연결 오류 — 다시 시도해 주세요';}};$('greeting-batches').append(b);});}
 let ASK_SENDING=false;
 async function ask(){const q=$('q'),original=q.value,t=original.trim();if(!t||ASK_SENDING)return;ASK_SENDING=true;$('question-message').textContent='전송 중…';try{const r=await post('/api/ask',{text:t,lane:$('lane').value});if(r.ok){if(q.value===original)q.value='';$('busy').textContent='… 생각 중';$('question-message').textContent='질문을 전송했습니다.';}else{$('question-message').textContent=r.error||'전송하지 못했습니다. 질문을 확인한 뒤 다시 보내 주세요.';}}catch(e){$('question-message').textContent='연결 오류 — 질문을 유지했습니다. 다시 보내 주세요.';}finally{ASK_SENDING=false;}}
 $('q').addEventListener('keydown',e=>{if(e.key==='Enter'&&!e.shiftKey&&!e.isComposing&&e.keyCode!==229){e.preventDefault();ask();}});
@@ -644,6 +702,7 @@ async function tick(){try{const s=await (await fetch('/api/state')).json();
  $('results').innerHTML=s.results.map(r=>`<div class="res ${r.ok?'':'bad'}"><div class="q">${r.ts} · ${esc(r.q)} <span class="meta">${r.ok?r.ms+'ms':'⛔ '+(r.failed_at||'')+' '+(r.reason||'')} · ${r.mode||''} · ${esc(r.lane||'')} · ${esc(r.persona||'')}</span></div><div class="a">${r.ok?esc(r.answer):'(침묵 — '+(r.reason||r.failed_at||'')+')'}</div><div class="meta">${(r.sources||[]).map(esc).join('<br>')}</div>${r.violations&&r.violations.length?'<div class="meta">게이트: '+r.violations.join(', ')+'</div>':''}</div>`).join('');
  $('log').textContent=s.log.map(l=>`${l.ts} ${l.kind.padEnd(8)} ${l.text}`).join('\n');
  if(s.brief){const b=s.brief;$('brief').textContent=b.window.from+' ~ '+b.window.to+' · '+b.generated_at;}
+ if(s.audio_settings&&!window.audioInitialized){$('output-pattern').value=s.audio_settings.device_pattern||'';$('output-gain').value=s.audio_settings.gain_db||0;$('output-normalize').checked=s.audio_settings.normalize!==false;window.audioInitialized=true;}if(s.audio_error)$('audio-message').textContent=s.audio_error;
  if(s.preflight){const p=s.preflight;$('pf').innerHTML='<b>'+esc(p.ts+' · '+p.summary)+'</b>'+(p.checks||[]).map(c=>`<div>${esc(c.status)} ${c.num}. ${esc(c.name)} <span class="meta">${esc(c.detail)}</span></div>`).join('');}
 }catch(e){}}
 setInterval(tick,1000);tick();
@@ -730,8 +789,12 @@ def make_handler(con: Console):
                         if len(batches) != 1:
                             return self._json({'ok': False, 'error': '인사 준비에서 한 묶음을 선택해 주세요'}, 400)
                         con.busy = True
-                        threading.Thread(target=con.greet_viewers, args=(body.get('ids'), body.get('scope', 'selected')), daemon=True).start()
+                        threading.Thread(target=con.greet_viewers, args=(body.get('ids'), body.get('scope', 'selected'), 0, body.get('comment', '')), daemon=True).start()
                     return self._json({'ok': True, 'queued': True})
+                if path == '/api/audio-config':
+                    return self._json(con.audio_config(body))
+                if path == '/api/audio-check':
+                    return self._json(con.audio_check())
                 if path == "/api/ask":
                     with con.request_lock:
                         if con.busy or con.playing:

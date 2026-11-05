@@ -24,7 +24,7 @@
 | 3 | [M3 — Round 1 (2025) Results and Research](03-Round1-And-Research/README.en.md) | **The four round-1 teams**, round 1 vs round 2, related sources | ✅ |
 | 4 | [M4 — Application Guide](04-Application-Guide/README.en.md) | **Backward timeline, how to answer the 16 questions, the 2-minute pitch video**, when applying is hard | ✅ Oct 26 office-hours results added |
 | 5 | [M5 — Where to Get Help, and Release](05-Support-And-Publish/README.en.md) | Official contacts and the **KACCWA Startup Support Team** | ✅ |
-| 6 | M6 — Intro videos (Korean · English) | | ⏳ Coming |
+| 6 | [M6 — Intro videos (Korean · English)](06-Video/README.en.md) | **[Watch the English video](https://youtu.be/J1jJ7JpFM-A)** (10:43) · **[Watch the Korean video](https://youtu.be/3y3bOeLQoe4)** (11:21) | ✅ |
 
 ## What we found
 

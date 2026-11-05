@@ -120,7 +120,7 @@ def pick_device(pattern: str | None) -> int | None:
     hits = [(i, d) for i, d in enumerate(sd.query_devices())
             if pattern.lower() in d["name"].lower() and d["max_output_channels"] > 0]
     if not hits:
-        sys.exit(f"출력 장치 '{pattern}' 을 찾지 못했습니다. --list-devices 로 확인하세요.")
+        raise RuntimeError(f"출력 장치 '{pattern}'을 찾지 못했습니다. 장치 연결과 MOTIV Mix를 확인해 주세요.")
     # WASAPI 를 우선한다 — M6 라우팅 실측과 같은 기준
     apis = {i: a["name"] for i, a in enumerate(sd.query_hostapis())}
     hits.sort(key=lambda x: 0 if "WASAPI" in apis.get(x[1]["hostapi"], "") else 1)
@@ -141,6 +141,11 @@ def load_provider(name: str | None):
 def load_audio(path: Path, device: int | None) -> tuple[np.ndarray, int]:
     data, sr = sf.read(str(path), dtype="float32", always_2d=True)
     info = sd.query_devices(device, "output") if device is not None else sd.query_devices(kind="output")
+    channels = int(info['max_output_channels'])
+    if channels < 1:
+        raise RuntimeError('선택한 장치는 음성 출력 장치가 아닙니다')
+    if data.shape[1] > channels:
+        data = data.mean(axis=1, keepdims=True)
     target = int(info["default_samplerate"])
     if sr != target:                                      # WASAPI 공유 모드는 장치 포맷을 요구한다
         n = int(round(len(data) * target / sr))
@@ -149,6 +154,19 @@ def load_audio(path: Path, device: int | None) -> tuple[np.ndarray, int]:
         data = np.stack([np.interp(xn, xo, data[:, c]) for c in range(data.shape[1])],
                         axis=1).astype(np.float32)
         sr = target
+    settings_path = out('private') / 'runtime' / 'audio_settings.json'
+    settings = read_json(settings_path) if settings_path.exists() else {}
+    gain_db = float(settings.get('gain_db', 0))
+    if not np.isfinite(gain_db):
+        gain_db = 0
+    gain_db = min(12, max(-12, gain_db))
+    peak = float(np.max(np.abs(data))) if data.size else 0
+    # Only lift quiet synthesized speech, at most +6 dB. Never boost silence.
+    lift = min(2.0, 0.65 / peak) if settings.get('normalize', True) and 0.001 < peak < 0.65 else 1.0
+    data = data * lift * (10 ** (gain_db / 20))
+    peak = float(np.max(np.abs(data))) if data.size else 0
+    if peak > 0.95:
+        data *= 0.95 / peak
     return data, sr
 
 
@@ -178,9 +196,12 @@ def play(data: np.ndarray, sr: int, device: int | None, watch_mode: bool,
          stop_unless: tuple[str, ...] = ("LIVE",)) -> dict:
     """블로킹 재생. 재생 중 모드가 `stop_unless` 밖으로 나가면 abort 한다."""
     pos = {"i": 0}
+    underflows = {"count": 0}
     aborted = {"v": False, "reason": None}
 
     def cb(outdata, frames, tinfo, status):
+        if status.output_underflow:
+            underflows['count'] += 1
         i = pos["i"]
         chunk = data[i:i + frames]
         if len(chunk) < frames:
@@ -193,8 +214,11 @@ def play(data: np.ndarray, sr: int, device: int | None, watch_mode: bool,
 
     _com_init()                                           # 콘솔(스레드)에서 부를 때 필요 — 아래 참조
     t0 = time.perf_counter()
+    info = sd.query_devices(device, 'output') if device is not None else sd.query_devices(kind='output')
+    api = sd.query_hostapis(info['hostapi'])['name']
+    shared = sd.WasapiSettings(exclusive=False) if 'WASAPI' in api else None
     stream = sd.OutputStream(samplerate=sr, channels=data.shape[1], device=device,
-                             callback=cb, blocksize=256)
+                             callback=cb, blocksize=0, latency='high', extra_settings=shared)
     with stream:
         while stream.active and pos["i"] < len(data):
             if watch_mode and current_mode() not in stop_unless:
@@ -202,7 +226,12 @@ def play(data: np.ndarray, sr: int, device: int | None, watch_mode: bool,
                 aborted["v"], aborted["reason"] = True, f"mode={current_mode()}"
                 break
             time.sleep(MODE_CHECK_S)
-    return {"played_ms": round((time.perf_counter() - t0) * 1000),
+    if pos['i'] < len(data) and not aborted['v']:
+        aborted['v'], aborted['reason'] = True, 'output_device_stopped'
+    if underflows['count']:
+        # Incomplete/glitching speech must never count as a completed viewer greeting.
+        aborted['v'], aborted['reason'] = True, 'output_underflow'
+    return {"underflows": underflows['count'], "played_ms": round((time.perf_counter() - t0) * 1000),
             "aborted": aborted["v"], "abort_reason": aborted["reason"],
             "progress": round(pos["i"] / max(1, len(data)), 3)}
 

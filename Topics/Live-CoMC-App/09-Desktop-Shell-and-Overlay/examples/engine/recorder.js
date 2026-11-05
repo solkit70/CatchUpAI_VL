@@ -1,20 +1,27 @@
 // Independent MediaRecorder files retain WebM headers (Catch's online-listening pattern).
-let recording = null, recordBusy = false, voice = null;
+let recording = null, recordBusy = false, voice = null, voiceStarting = false, voiceProcessing = false;
+function lockInput(on){$('rec-device').disabled=on;$('rec-source').disabled=on;}
+function selectedAudio(){const audio={echoCancellation:false,noiseSuppression:false,autoGainControl:false};const id=$('rec-device').value;if(id)audio.deviceId={exact:id};return audio;}
+function rememberMic(){localStorage.setItem('comc-mic-device',$('rec-device').value);}
+$('rec-device').addEventListener('change',rememberMic);
+navigator.mediaDevices?.addEventListener('devicechange',()=>{refreshMicDevices();});
 const recError = message => { $('record-error').textContent = message || ''; };
 const recMime = () => MediaRecorder.isTypeSupported('audio/webm;codecs=opus') ? 'audio/webm;codecs=opus' : 'audio/webm';
 
 async function refreshMicDevices() {
   let temporary;
   try {
-    temporary=await navigator.mediaDevices.getUserMedia({audio:true});
-    const selected=$('rec-device').value;
+    // Enumerating while listening must not acquire a second MOTIV microphone stream.
+    if(!recording&&!voice&&!recordBusy&&!voiceStarting&&!voiceProcessing)temporary=await navigator.mediaDevices.getUserMedia({audio:true});
+    const selected=$('rec-device').value||localStorage.getItem('comc-mic-device')||'';
     const devices=await navigator.mediaDevices.enumerateDevices();
     const inputs=devices.filter(d=>d.kind==='audioinput');
     $('rec-device').replaceChildren(new Option('기본 마이크', ''));
     for(const [i,d] of inputs.entries()) $('rec-device').add(new Option(d.label||`마이크 ${i+1}`,d.deviceId));
     if(inputs.some(d=>d.deviceId===selected))$('rec-device').value=selected;
     else {
-      const active=temporary.getAudioTracks()[0]?.getSettings().deviceId;
+      if(selected&&(recording||voice)){ $('rec-device').add(new Option('연결 끊김 · 선택했던 마이크',selected));$('rec-device').value=selected;recError('선택한 마이크 연결이 바뀌었습니다. 녹음을 멈춘 뒤 장치를 다시 선택해 주세요.');return;}
+      const active=temporary?.getAudioTracks()[0]?.getSettings().deviceId;
       if(active && inputs.some(d=>d.deviceId===active))$('rec-device').value=active;
     }
     $('record-transcript-status').textContent=`입력 장치 ${inputs.length}개 확인 · 선택: ${$('rec-device').selectedOptions[0]?.textContent||'기본 마이크'}`;
@@ -23,7 +30,7 @@ async function refreshMicDevices() {
 }
 
 async function apiAudio(url, blob, id) {
-  const response = await fetch(url, {method:'POST', body:blob, headers:id?{'X-Recording-Id':id}:{}});
+  const response = await fetch(url, {signal:AbortSignal.timeout(45000),method:'POST', body:blob, headers:id?{'X-Recording-Id':id}:{}});
   const result = await response.json();
   if(!response.ok || !result.ok) throw new Error(result.error || '음성을 처리하지 못했어요');
   return result;
@@ -42,14 +49,15 @@ function volume(analyser) {
 async function releaseAudio(c) {
   clearInterval(c.meterTimer);clearTimeout(c.timer);
   for(const stream of [c.mic,c.display,c.stream])if(stream)for(const track of stream.getTracks())track.stop();
-  if(c.ctx)await c.ctx.close();
+  if(c.ctx&&c.ctx.state!=='closed')await c.ctx.close().catch(()=>{});
+  lockInput(false);
   $('mic-meter').value=$('remote-meter').value=0;
 }
 async function toggleRecording() {
   if(recordBusy)return;
   if(recording)return stopRecording();
-  if(voice){recError('말로 요청을 마친 뒤 함께 듣기를 시작해 주세요.');return;}
-  recordBusy=true;recError('');$('record-transcript-status').textContent='음성을 기다리고 있습니다.';$('record').disabled=true;
+  if(voice||voiceStarting||voiceProcessing){recError('말로 요청을 마친 뒤 함께 듣기를 시작해 주세요.');return;}
+  recordBusy=true;lockInput(true);rememberMic();recError('');$('record-transcript-status').textContent='음성을 기다리고 있습니다.';$('record').disabled=true;
   const c={active:false,queue:Promise.resolve(),queued:0,id:null,rec:null,timer:null};
   try {
     if(!window.MediaRecorder)throw new Error('Chrome 또는 Edge에서 열어 주세요.');
@@ -71,7 +79,7 @@ async function toggleRecording() {
     c.id=result.id;c.active=true;recording=c;
     c.sliceSpeechMs=0;
     c.meterTimer=setInterval(()=>{const level=volume(c.micMeter);$('mic-meter').value=level;$('remote-meter').value=volume(c.remoteMeter);if(level>=0.05)c.sliceSpeechMs+=100;},100);
-    for(const stream of [c.mic,c.display])if(stream)for(const t of stream.getTracks())t.addEventListener('ended',()=>{if(recording===c)stopRecording();});
+    for(const stream of [c.mic,c.display])if(stream)for(const t of stream.getTracks())t.addEventListener('ended',()=>{if(recording===c){recError('입력 장치 또는 공유 오디오 연결이 끊겼습니다. 입력을 다시 선택해 주세요.');stopRecording();}});
     $('record').textContent='⏹ 함께 듣기 멈춤';$('listen-card').classList.add('recording');
     nextSlice(c);
   } catch(e) {
@@ -143,15 +151,17 @@ window.renderRecording=(r,playing)=>{
 };
 
 async function toggleVoice() {
-  if(recordBusy)return;
+  if(recordBusy||voiceStarting||voiceProcessing)return;
   if(voice){if(voice.rec.state!=='inactive')voice.rec.stop();return;}
   if(recording){recError('함께 듣기를 멈춘 뒤 말로 요청해 주세요. 방송 중에는 질문란에 입력할 수 있어요.');return;}
+  voiceStarting=true;lockInput(true);rememberMic();
+  let startingStream=null,startingContext=null;
   try {
     const deviceId=$('rec-device').value;
     const audio={echoCancellation:false,noiseSuppression:false,autoGainControl:false};
     if(deviceId)audio.deviceId={exact:deviceId};
-    const stream=await navigator.mediaDevices.getUserMedia({audio}), chunks=[];
-    const ctx=new AudioContext();await ctx.resume();
+    const stream=await navigator.mediaDevices.getUserMedia({audio}), chunks=[];startingStream=stream;
+    const ctx=new AudioContext();startingContext=ctx;await ctx.resume();
     const analyser=meterNode(ctx,stream);
     const rec=new MediaRecorder(stream,{mimeType:recMime()});
     const activeVoice={rec,stream,ctx,analyser,meterTimer:null};
@@ -161,7 +171,7 @@ async function toggleVoice() {
     activeVoice.meterTimer=setInterval(()=>{$('mic-meter').value=volume(analyser);},100);
     $('ptt').textContent='⏹ 요청 말하기 완료';
     rec.ondataavailable=e=>{if(e.data.size)chunks.push(e.data);};
-    rec.onstop=async()=>{
+    rec.onstop=async()=>{voiceProcessing=true;
       clearInterval(activeVoice.meterTimer);
       stream.getTracks().forEach(t=>t.stop());
       await ctx.close().catch(()=>{});
@@ -174,13 +184,17 @@ async function toggleVoice() {
         if(r.text){$('q').value=r.text;await ask();}
         else $('question-message').textContent='말씀을 확인하지 못했어요. 다시 요청해 주세요.';
       }catch(e){$('question-message').textContent=e.message;}
-      finally{$('record-transcript-status').textContent='';$('ptt').textContent='🎤 말로 요청';$('ptt').disabled=false;}
+      finally{voiceProcessing=false;lockInput(false);$('record-transcript-status').textContent='';$('ptt').textContent='🎤 말로 요청';$('ptt').disabled=false;}
     };
     rec.start();setTimeout(()=>{if(rec.state!=='inactive')rec.stop();},30000);
   } catch(e){
-    if(voice){clearInterval(voice.meterTimer);for(const track of voice.stream.getTracks())track.stop();await voice.ctx.close().catch(()=>{});voice=null;}
+    if(voice){clearInterval(voice.meterTimer);voice=null;}
+    if(startingStream)startingStream.getTracks().forEach(track=>track.stop());
+    if(startingContext&&startingContext.state!=='closed')await startingContext.close().catch(()=>{});
     $('mic-meter').value=0;
-    recError('음성 입력 실패 · '+e.message);
-  }
+    lockInput(false);recError('음성 입력 실패 · '+e.message);
+  } finally {voiceStarting=false;}
 }
 window.addEventListener('pagehide',()=>{if(recording)navigator.sendBeacon('/api/record/stop',new Blob([JSON.stringify({id:recording.id})],{type:'application/json'}));});
+
+navigator.mediaDevices?.enumerateDevices().then(devices=>{const saved=localStorage.getItem('comc-mic-device');for(const [i,d] of devices.filter(d=>d.kind==='audioinput').entries())if(!Array.from($('rec-device').options).some(o=>o.value===d.deviceId))$('rec-device').add(new Option(d.label||`마이크 ${i+1}`,d.deviceId));if(saved&&Array.from($('rec-device').options).some(o=>o.value===saved))$('rec-device').value=saved;}).catch(()=>{});

@@ -12,7 +12,9 @@
       "is_remainder": false,
       "coverage_state": "defined",
       "coverage_items": [
-        "서른네 번째 방송 · 시간 변경 안내"
+        "서른네 번째 방송 · 시간 변경 안내",
+        "VS Code 여 이젠 안녕",
+        "오늘의 주제 — AI 에게 내 컴퓨터 컨트롤 하게 하기"
       ],
       "directive_note": null
     },
@@ -20,90 +22,144 @@
       "id": "1",
       "sort_key": 1.0,
       "is_numbered": true,
-      "title": "오늘의 메인 실험",
-      "time_raw": "분 수 미정",
+      "title": "내 컴퓨터를 AI 에게 맡기기 — Desktop Agent",
+      "time_raw": "메인",
       "time_minutes": null,
       "is_remainder": false,
-      "coverage_state": "undefined",
-      "coverage_items": [],
+      "coverage_state": "defined",
+      "coverage_items": [
+        "Claude Desktop 에이전트 시험",
+        "ChatGPT Desktop 에이전트 시험",
+        "두 앱 비교 정리"
+      ],
       "directive_note": null
     },
     {
       "id": "2",
       "sort_key": 2.0,
       "is_numbered": true,
-      "title": "두 번째 실험",
-      "time_raw": "분 수 미정",
+      "title": "Muse 심화와 AI 영상 편집",
+      "time_raw": "시간 미표기",
       "time_minutes": null,
       "is_remainder": false,
-      "coverage_state": "undefined",
-      "coverage_items": [],
+      "coverage_state": "defined",
+      "coverage_items": [
+        "Muse 심화 — 내 Workflow 에 맞게 활용하기",
+        "AI 로 영상 편집하기 — 결과를 Remotion 으로 작업하기"
+      ],
       "directive_note": null
     },
     {
       "id": "3",
       "sort_key": 3.0,
       "is_numbered": true,
-      "title": "밀린 작업 실험 — 시간이 되는 만큼",
-      "time_raw": "분 수 미정",
+      "title": "CoMC 새 기능 점검",
+      "time_raw": "시간 미표기",
       "time_minutes": null,
       "is_remainder": false,
-      "coverage_state": "undefined",
-      "coverage_items": [],
+      "coverage_state": "defined",
+      "coverage_items": [
+        "Codex 가 고친 CoMC 새 기능 점검"
+      ],
       "directive_note": null
     },
     {
       "id": "4",
       "sort_key": 4.0,
       "is_numbered": true,
-      "title": "마무리 — 다음 주 예고",
-      "time_raw": "분 수 미정",
+      "title": "밀린 작업 — 시간이 되는 만큼",
+      "time_raw": "시간 미표기",
       "time_minutes": null,
       "is_remainder": false,
-      "coverage_state": "undefined",
-      "coverage_items": [],
+      "coverage_state": "defined",
+      "coverage_items": [
+        "AI 시대 새 마켓과 빌더의 대응 — 발표 자료 준비",
+        "Builders Lounge 뉴스레터 신청 · 해지 · 공개 선택 메뉴",
+        "AI 는 일을 줄이는가, 더 만드는가 — 회고 · 철학 글",
+        "Bila AI Agent 만들기 M2",
+        "AI 와 글쓰기 — 피터 틸 vs 내 관점",
+        "YouTube API 로 분석하는 앱 만들기"
+      ],
+      "directive_note": null
+    },
+    {
+      "id": "5",
+      "sort_key": 5.0,
+      "is_numbered": true,
+      "title": "마무리 — 다음 주 예고",
+      "time_raw": "시간 미표기",
+      "time_minutes": null,
+      "is_remainder": false,
+      "coverage_state": "defined",
+      "coverage_items": [
+        "오늘 실험 정리",
+        "다음 주 예고 · 끝인사"
+      ],
       "directive_note": null
     },
     {
       "id": "틈새 A: 이번 주 만든 콘텐츠",
-      "sort_key": 905.0,
+      "sort_key": 906.0,
       "is_numbered": false,
       "title": "틈새 A: 이번 주 만든 콘텐츠",
       "time_raw": "시간이 남으면",
       "time_minutes": null,
       "is_remainder": false,
-      "coverage_state": "undefined",
-      "coverage_items": [],
+      "coverage_state": "defined",
+      "coverage_items": [
+        "송재희 님 특강 영상",
+        "빌더스 라운지 칼럼 — 특강 현장",
+        "Civic Innovation Challenge 한국어 영상",
+        "Civic Innovation Challenge 영어 영상",
+        "송재희 님 신간 기사",
+        "Civic Innovation Challenge 소개 기사"
+      ],
       "directive_note": null
     },
     {
-      "id": "틈새 B: 이번 주 소식 · 인사이트",
-      "sort_key": 906.0,
+      "id": "틈새 B: 이번 주 인사이트",
+      "sort_key": 907.0,
       "is_numbered": false,
-      "title": "틈새 B: 이번 주 소식 · 인사이트",
+      "title": "틈새 B: 이번 주 인사이트",
       "time_raw": "시간이 남으면",
       "time_minutes": null,
       "is_remainder": false,
-      "coverage_state": "undefined",
-      "coverage_items": [],
+      "coverage_state": "defined",
+      "coverage_items": [
+        "만드는 것보다 닿게 하는 게 어렵다",
+        "자동 결과는 원본과 대조해야 믿을 수 있다",
+        "자동화돼도 사람은 더 바빠진다",
+        "밖으로 나가는 글은 쓰지 않을 것부터 정한다",
+        "하나의 사실을 여러 산출물에 똑같이 맞추기"
+      ],
       "directive_note": null
     },
     {
-      "id": "주간 영상",
-      "sort_key": 907.0,
+      "id": "틈새 C: Builders Lounge 다음 모임 소식",
+      "sort_key": 908.0,
       "is_numbered": false,
-      "title": "주간 영상",
-      "time_raw": "Optional — 선택 코너",
+      "title": "틈새 C: Builders Lounge 다음 모임 소식",
+      "time_raw": "시간이 남으면",
       "time_minutes": null,
       "is_remainder": false,
-      "coverage_state": "undefined",
-      "coverage_items": [],
+      "coverage_state": "defined",
+      "coverage_items": [
+        "다음 달 Builders Lounge 모임 준비 중",
+        "스타트업 빌더 두 분 — 여성 빌더 섭외 중, 추천 부탁",
+        "8차 뉴스레터 발송",
+        "뉴스레터 · 메일링 리스트 신청 안내"
+      ],
       "directive_note": null
     }
   ],
-  "excluded_sections": [],
+  "excluded_sections": [
+    {
+      "heading": "주간 영상 (이번 방송 미편성)",
+      "reason": "unscheduled"
+    }
+  ],
   "conditional_sections": [],
   "parse_anomalies": [],
-  "parsed_at": "2026-10-26T16:10:16.274812+00:00",
-  "frontmatter_status": "draft"
+  "parsed_at": "2026-10-31T12:01:43.370023+00:00",
+  "frontmatter_status": "ready"
 }

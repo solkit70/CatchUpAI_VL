@@ -25,3 +25,9 @@
 
 - 이전: [M1 — 작업 목록과 Muse 적합도 지도](../01-Workflow-Fit-Map/README.md)
 - 다음: M3 — VibeLearn AI on Muse ([로드맵](../vl_roadmap/20261018_RoadMap_Muse-My-Workflow.md) 의 「M3」 절)
+
+## 영상용 재현 화면
+
+아래 화면은 실제 M2 진행 당시의 녹화가 아니라, 2026-11-05 영상 제작을 위해 공개·가상 예시 Markdown 파일 생성으로 재현한 화면이다.
+
+![M2 Muse Markdown 파일 생성 재현 화면](assets/M2-recreated-screen.jpg)

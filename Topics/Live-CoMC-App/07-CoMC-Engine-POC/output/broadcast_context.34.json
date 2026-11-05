@@ -1,0 +1,87 @@
+{
+  "current_part_id": "3",
+  "coverage_state": "defined",
+  "coverage_items": [
+    "Codex 가 고친 CoMC 새 기능 점검"
+  ],
+  "evidence_pool": [
+    {
+      "path": "AI/Roundup/2026-10-25 - Live34 Weekly Rundown.md#3부: CoMC 새 기능 점검",
+      "quote": "[확정] 이번 방송 커버리지 — Codex 가 고친 CoMC 새 기능 점검"
+    },
+    {
+      "path": "AI/Roundup/2026-10-25 - Live34 Weekly Rundown.md#3부: CoMC 새 기능 점검",
+      "quote": "[확정 항목 현재 상태] Codex 가 고친 CoMC 새 기능 점검 — 확정 — 10/30 통합 검증 시나리오(N-00~N-20) 중 방송에서 할 수 있는 단계"
+    },
+    {
+      "path": "AI/Roundup/2026-10-25 - Live34 Weekly Rundown.md#3부: CoMC 새 기능 점검",
+      "quote": "10/30 Codex 가 CoMC 소스코드를 고쳐 댓글에 맞춘 인사, Persona 선택, 짧은 진행 요약, 시청자 이름 기억이 새로 들어갔고, 통합 검증 시나리오로 하나씩 확인한다"
+    },
+    {
+      "path": "AI/Roundup/2026-10-25 - Live34 Weekly Rundown.md#3부: CoMC 새 기능 점검",
+      "quote": "방송 중에는 REVIEW 모드(답을 먼저 보고 승인)로만 진행하고, 이상하면 패닉 버튼으로 바로 끊는다"
+    },
+    {
+      "path": "AI/Roundup/2026-10-25 - Live34 Weekly Rundown.md#3부: CoMC 새 기능 점검",
+      "quote": "방송에서 할 단계는 N-05 기본 인사, N-06 댓글에 따라 인사 바꾸기, N-09 Persona, N-12 짧은 진행 요약, N-13 들은 주제에 맞는 인사다"
+    },
+    {
+      "path": "AI/Roundup/2026-10-25 - Live34 Weekly Rundown.md#3부: CoMC 새 기능 점검",
+      "quote": "장치 · OBS 준비(N-00~N-04)는 방송 전에 하고, 장치 끊김 · 재시작(N-16 · N-17)은 방송 뒤에 한다"
+    }
+  ],
+  "status_map": {
+    "rundown": "unconfirmed",
+    "2026-10-25 - Weekly Progress and Planning": "missing_section",
+    "2026-10-18~2026-10-24 - Claude Code": "missing_section",
+    "2026-10-18 - Live33 Weekly Rundown": "missing_section"
+  },
+  "excluded_headings": [
+    "주간 영상 (이번 방송 미편성)"
+  ],
+  "withheld_conditional": [],
+  "forbidden_removed": true,
+  "other_parts": [
+    {
+      "id": "0",
+      "title": "인트로",
+      "coverage_state": "defined"
+    },
+    {
+      "id": "1",
+      "title": "내 컴퓨터를 AI 에게 맡기기 — Desktop Agent",
+      "coverage_state": "defined"
+    },
+    {
+      "id": "2",
+      "title": "Muse 심화와 AI 영상 편집",
+      "coverage_state": "defined"
+    },
+    {
+      "id": "4",
+      "title": "밀린 작업 — 시간이 되는 만큼",
+      "coverage_state": "defined"
+    },
+    {
+      "id": "5",
+      "title": "마무리 — 다음 주 예고",
+      "coverage_state": "defined"
+    },
+    {
+      "id": "틈새 A: 이번 주 만든 콘텐츠",
+      "title": "틈새 A: 이번 주 만든 콘텐츠",
+      "coverage_state": "defined"
+    },
+    {
+      "id": "틈새 B: 이번 주 인사이트",
+      "title": "틈새 B: 이번 주 인사이트",
+      "coverage_state": "defined"
+    },
+    {
+      "id": "틈새 C: Builders Lounge 다음 모임 소식",
+      "title": "틈새 C: Builders Lounge 다음 모임 소식",
+      "coverage_state": "defined"
+    }
+  ],
+  "assembled_at": "2026-10-31T11:53:40.548071+00:00"
+}

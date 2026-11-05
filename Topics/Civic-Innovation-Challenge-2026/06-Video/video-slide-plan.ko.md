@@ -83,7 +83,10 @@ M1~M5 문서와 **공식 PDF 3종 · exchangenw.org** 를 한 편의 영상으�
 - **한 장면은 한 진행자가 끝까지 읽는다.** 다음 장면에서 진행자가 바뀐다(A → B → A …). 섹션 장면(S03 · S07 · S13 · S16)은 나레이션이 없어 교대 순서에서 뺐다.
 - 인용 C 는 짧은 인용 한 줄에만 쓴다. 담당자 발언은 특정인의 목소리를 흉내 내지 않는 일반 목소리로 둔다.
 - `gen_audio.py` 는 장면마다 `[A]` · `[B]` 를 읽어 목소리를 고르고, 인용 줄만 `[C]` 로 따로 만든다. Qwen3-TTS 단계에서도 같은 배정을 유지한다.
-- 박창수 목소리 복제는 이번에 쓰지 않는다(요청 없음).
+- 박창수 목소리 복제는 이번에 쓰지 않는다(요청 없음, 10/30 「복사 음성은 쓰지 말라」 재확인).
+- **현재 적용(10/30 최종 구성, PART 별로 다르게)**: **Intro(S01~S02) = edge-tts**(SunHi · InJoon) · **PART 1(S04~S06) = 첫 Qwen 판**(Sohee · Ryan · Ethan) · **PART 2(S08~S12) = 두 번째 Qwen 판**(Serena · Neil) · **PART 3(S14~S15) = OpenAI TTS**(marin · cedar) · **PART 4(S17~S20) = 첫 Qwen 판**(Sohee · Ryan) · **PART 5(S21~S24, 이어지는 관계 · 도움 받을 곳 · 마무리) = 두 번째 Qwen 판**(Serena · Neil; OpenAI 는 마음에 들지 않아 되돌림). 대본은 모두 해요체. 생성: `gen_audio_qwen.py --voices v1|v2 --only <키>` · `gen_audio_openai.py --only <키>`. 부분 교체한 이전 판 파일은 `voice-qwen1-all/`(바꾸기 직전) · `voice-v2-qwen/` · `voice-v3-openai/` 에 남아 있다.
+- (이전 시도) **OpenAI TTS 음성(10/30 3차)**: Qwen3-TTS 두 판이 모두 마음에 들지 않아 `gpt-4o-mini-tts` 로 교체했다. 이 모델은 `instructions` 로 톤을 지시할 수 있어 「차분한 아나운서 톤 + 친근한 말투」를 직접 요청한다. A = **marin**(여) · B = **cedar**(남) · C = **onyx**(남, 인용 낭독). 후보 샘플은 `audio/voice-tests/openai_*.mp3`(13종). 생성 스크립트 `audio/gen_audio_openai.py`.
+- (이전 판) **Qwen3-TTS 최종 음성(10/30 2차)**: A = **Serena**(차분한 여성) · B = **Neil**(뉴스 앵커 톤 남성) · C = **Eldric Sage**(차분한 중저음 남성, 인용 낭독). 첫 판(Sohee · Ryan · Ethan)이 마음에 들지 않아 「더 차분하고 아나운서 톤」으로 바꿨고, 말투는 합니다체 → **해요체(친근한 구어)** 로 고쳤다. 실제 읽는 글은 `public/civic-challenge-1029/audio/narrations.json`(이 문서의 나레이션 블록은 첫 판 합니다체 기준이라 읽는 글과 다르다). 화면 큐는 edge-tts 단어 시각을 Whisper 대응점(timewarp)으로 옮겨 맞춘다. 렌더링은 박창수 리뷰 뒤에 정한다.
 
 ## 밝기와 화면 설계
 
@@ -123,6 +126,7 @@ AI 이미지 · 동영상은 승인 뒤 `image-prompts.md` · `video-prompts.md`
 | 워싱턴주 한인상공회의소 | S22 · S23 · S24 | 볼트에 이미 있음(`AI/Initiatives/KACCWA/20261011_Poster/kaccwa-logo.png`). 더 좋은 원본이 있으면 교체 | PNG(투명 배경) |
 
 - 파일 위치: `AI/RemotionStudio/public/civic-challenge-1029/logos/` (이름 예: `bellevue.png` `kingcounty.png` `watech.png` `bellevuecollege.png` `exchangenw.svg` `kaccwa.png`)
+- **받은 로고와 고른 파일 (10/30)**: 벨뷰 시 `Bellevue_Logo.png`(검정, 투명 배경) · 킹카운티 `King-County-logo.png` · WaTech `Black_WaTech_Logo_1.png`(투명) · 벨뷰 칼리지 `Bellevue_College_logo.png`(검정, 투명) · 상공회의소 `kaccwa-logo-2.png`(원형 상징, 343px — 300px 이하로만 사용)와 `kaccwa-logo.png`(가로형). 검정 로고들은 영상에서 같은 남색(`#1B3A6B`)으로 통일해 「로고 벽」처럼 보이게 한다. **10/30 추가**: Exchange Northwest `The_Exchange-logo.png`(229×45, 보라 배경에 흰 「THE EXCHANGE」만 보이고 「Northwest」 줄이 없음 — 다시 캡처하거나 화면에 「Northwest」 글자를 함께 쓴다) · WaTech 색상판 `WaTech-logo.png`(211×73, 파란 배경 — 작아서 배지로만, 로고 벽에는 남색 통일을 위해 투명 검정판 사용). **Exchange Northwest 로고는 「Northwest」가 포함된 판이 필요하다.** → 사이트의 `logo.svg` 도 「THE EXCHANGE」만 있어서, 공식 Overview PDF 머리말(초록 배너)에서 「THE EXCHANGE / Northwest」 두 줄을 잘라 `logos/exchangenw_banner.png`(약 1,400×300, 래스터라 확대에 약함 — 화면에서 500px 안팎까지만)로 만들었다. 워싱턴주 인장(`WA-Logo.png`)은 기관 요청에 없고 주 인장은 사용 제한이 있을 수 있어 쓰지 않는다.
 - **사용 원칙**: 로고는 「관련 기관을 알아보게 하는 용도」로만 쓰고, 로고가 나오는 화면 아래에 작은 줄 「각 기관의 로고는 식별을 위한 것이며, 이 영상은 공식 자료가 아닙니다」를 둔다. 기관이 이 영상을 보증하거나 참여한 것처럼 보이지 않게 로고를 크게 단독으로 쓰지 않는다(카드 위 같은 크기로 나란히).
 - 기관 로고 사용 규정이 따로 있는지는 영상 공개 전에 한 번 확인하는 것이 안전하다.
 
