@@ -1,5 +1,7 @@
 # 옮기기 방법 비교표와 기본 방법
 
+[English](transfer-comparison.en.md)
+
 > 2026-10-25 Live #33 1부에서 직접 시험한 결과다. 시험 재료는 공개해도 되는 가짜 내용(제목 · 목록 3 · 표 3행 · 링크 1 · 마지막 줄)으로 만든 Markdown 파일 하나(397바이트)다. 시험은 **웹 Muse** 에서 했고, 휴대폰은 칸마다 「미확인」으로 표시했다. 개념은 [../concepts/transfer-paths.md](../concepts/transfer-paths.md).
 
 ## 밖 → 집 (Muse 결과를 볼트 쪽으로)

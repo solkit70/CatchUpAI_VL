@@ -8,6 +8,16 @@ tags:
   - worklog
 ---
 
+## 세션 정보
+
+> 2026-11-07 Claude Code 보강 — 앞 세션 WorkLog 와 같은 머리 정보를 맞췄다. 아래 본문(실습 1 결과 ~ 실습 3 준비)은 Codex 원문 그대로다.
+
+**날짜**: 2026-11-05
+**Topic**: Muse-My-Workflow
+**모듈**: M4 - 볼트 연결 해법 — 집과 밖을 끊김 없이 (실습 1 · 2 · 실습 3 준비)
+**진행 에이전트**: Codex
+**이전 WorkLog**: [20261105_M3_Muse-My-Workflow.md](20261105_M3_Muse-My-Workflow.md) — M3 완료
+
 ## 실습 1 결과
 
 11월 5일 공식 자료와 Muse 웹의 Settings를 확인하고, 해법 8개의 비용 조건, 설치 요구 사항, 권한 관련 미확인 항목을 기록했다. Dropbox·GitHub·Box는 Business 목록에서 확인했고 Google Drive는 Productivity 목록에서 확인했다. Google Drive 상세 화면에서 파일 접근, 비공개·공유 파일 작업, 삭제, 백그라운드 동작을 별도로 설정하는 것을 확인했다. [해법 지도](../04-Vault-Connection/guides/solution-map.md#후보-8개-확인표)
@@ -64,3 +74,29 @@ Business 목록에서 GitHub·Dropbox를 확인한 화면과 Data controls 화�
 
 1. 볼트 내부의 미리 보기 보고서에서 실제 볼트의 공개 후보 3개와 현재 전체 범위를 검토한다.
 2. 시험할 후보 D(수동), E(Remote Control), C(Drive), A(Dropbox)를 정한다. Drive·Dropbox 연결이나 파일 업로드는 구체적인 범위 승인 전에는 하지 않는다.
+
+## 📊 DoD 체크리스트 (M4)
+
+> 2026-11-07 Claude Code 보강 — 로드맵 M4 의 Definition of Done 을 이 세션까지의 실제 결과로 표시했다.
+
+- [x] 해법 8가지 확인표 — 모든 행에 출처 종류 · 날짜 (11/5)
+- [ ] 시나리오 5개 × 시험한 해법 결과표 (실패 포함) — 기준선 표만 있음, 실제 시험 전
+- [ ] 사본 규칙 박창수 승인 · 미리 보기 보고서에 내부 표시 문서 0개 — 내부 표시 0개는 확인, **승인 대기**
+- [ ] 첫 업로드는 박창수 승인 뒤 실행, 받는 곳 회수 확인
+- [ ] 작업 종류별 경로표 · 되돌리는 법
+- [x] 공개 문서에 실제 사본 설정 · 계정 정보 없음 · 산출물 폴더 README 작성
+- [x] README 링크가 실제 파일을 가리키는지 확인 (`check_links.py`)
+- [ ] WorkLog (🎬 · 🎓 칸 포함) · Module Retrospective 작성 — WorkLog 는 있음, 회고는 모듈을 닫을 때
+
+**진행 상태**: 🔄 M4 3/8 (2026-11-05)
+
+## 다음 세션에 넘길 것
+
+> 2026-11-07 Claude Code 보강 — 위 「다음 승인 지점」 · 「실습 3 시작 전 필요한 확인」을 다음 에이전트가 바로 쓰게 한 곳에 모았다.
+
+1. **박창수 결정 두 가지가 먼저다.** ① 볼트 안의 내부 미리 보기 보고서(공개 후보 3개)를 검토해 사본 범위를 승인하거나 좁힌다 ② 시험 후보 D · E · C(Drive) · A 중 무엇을 시험할지 고른다. 결정 전에는 실제 복사 · Muse 연결 · 외부 업로드를 하지 않는다.
+2. 결정 뒤 **실습 3**: [가상 시험 폴더](../04-Vault-Connection/examples/trial-vault/) 만 연결해 [시나리오 비교표](../04-Vault-Connection/guides/seamless-scenarios.md#다음-실험-순서)의 「다음 실험 순서」 1~5 대로 진행한다. 권한이 필요 이상이면 중단한다.
+3. 이어서 **실습 4**: 작업 종류별 경로표(`guides/task-route-table.md`, 아직 없음)와 되돌리는 법 → 가동.
+4. 시작할 때 읽을 것: [M4 README](../04-Vault-Connection/README.md) · [두 가지 연결 모델](../04-Vault-Connection/concepts/connection-models.md) · [해법 지도](../04-Vault-Connection/guides/solution-map.md) · [사본 정책 초안](../04-Vault-Connection/guides/mirror-policy.md).
+5. 보류 중: 실습 2 미리 보기 화면 캡처(Windows 캡처 도구 문제).
+6. **일정 주의**: 로드맵은 M5(1주일 실제 사용)를 11/8 에 시작하도록 잡았다. M4 조합이 정해지지 않으면 M5 를 시작할 수 없으므로, Live #35(11/8)에서 후보를 정하거나 로드맵 일정을 다시 잡는다.

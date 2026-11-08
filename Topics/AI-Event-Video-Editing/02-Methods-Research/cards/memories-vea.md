@@ -11,6 +11,8 @@ tags:
 
 ## 요약
 
+[English](memories-vea.en.md)
+
 **범주 B · 확인일 2026-10-24 · 자료로만 / 계정·유료 API 체험 안 함.** VEA 개요와 관리형 Edit Video API를 구분한다. 긴 영상을 이해해 하이라이트를 구성한다는 개요가 있지만, 정확한 3분 길이와 Premiere 전달까지 한 경로에서 검증된 것은 아니다.
 
 > “it cannot be manually specified.”

@@ -1,5 +1,7 @@
 # 받는 곳 문서를 볼트 규칙에 맞추는 단계와 프롬프트
 
+[English](vault-cleanup-prompt.en.md)
+
 > 밖에서 Muse 로 만든 문서가 받는 곳(Inbox)에 도착한 뒤 집에서 하는 정리다. 받는 곳은 박창수가 **A — 볼트 루트의 `_Inbox_/` 에 바로**로 정했다(2026-10-25). 비교와 후보는 [transfer-comparison.md](transfer-comparison.md), 시험 결과는 [../examples/sample-transfer.md](../examples/sample-transfer.md).
 
 ## 정리 단계 (6단계)

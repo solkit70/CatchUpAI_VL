@@ -11,6 +11,8 @@ tags:
 
 ## 요약
 
+[English](premiere-mcp.en.md)
+
 **범주 A · 확인일 2026-10-24 · 자료로만 / 설치·직접 체험 안 함.** 여러 동명 프로젝트 중 `leancoderkavy/premiere-pro-mcp`를 조사했다. Adobe 공식 Assistant와 다른 커뮤니티 프로젝트이며, 저장소 설명은 실제 의뢰인 환경에서의 검증 결과가 아니다.
 
 > “independent, local-first server for supported workflows”

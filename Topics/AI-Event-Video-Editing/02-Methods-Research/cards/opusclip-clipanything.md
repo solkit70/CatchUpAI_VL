@@ -11,6 +11,8 @@ tags:
 
 ## 요약
 
+[English](opusclip-clipanything.en.md)
+
 **범주 B · 공식 자료 확인일 2026-10-24 · 체험 상태: 자료로만 / 직접 체험 안 함.** 프롬프트로 구간을 찾고 Premiere로 넘기는 후보다. 여러 장면을 하나의 3분 행사 이야기로 묶는 품질은 아직 검증하지 않았다.
 
 > “Just type your prompt.”

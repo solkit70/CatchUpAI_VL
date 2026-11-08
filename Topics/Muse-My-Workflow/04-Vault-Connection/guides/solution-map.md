@@ -1,5 +1,7 @@
 # 볼트 연결 해법 지도
 
+[English](solution-map.en.md)
+
 ## 후보 8개 확인표
 
 공식 문서와 Muse 웹 화면 확인일은 **2026-11-05**다. Muse에는 사용량이 제한된 무료 이용 범위가 있으며, 저장소 플랜이나 Claude 구독은 별도로 적용된다. [Meta Muse 이용 안내](https://ai.meta.com/muse/)

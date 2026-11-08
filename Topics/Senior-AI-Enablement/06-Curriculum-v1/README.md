@@ -5,7 +5,7 @@
 
 | 레벨 | 코스 | 상태 |
 |---|---|---|
-| A0 | [Muse 로 시작하는 AI 5주 입문 코스](guides/muse-5week-intro-course.md) — **1회 공통 + 글쓰기 트랙** (10/22 개정), Facebook 은 선택 모듈 | 운영 중 (P1) |
+| A0 | [Muse 로 시작하는 AI 5주 입문 코스](guides/muse-5week-intro-course.md) — **1회 공통 + 목적별 수업**, 글쓰기 트랙은 준비된 예시, Facebook은 선택 모듈 | 운영 중 (P1, 2회차 사례 반영) |
 | A~D | — | 아직 없음 (레벨 판정 뒤 필요한 것부터) |
 
 **예상 학습 시간**: 8시간
@@ -19,7 +19,7 @@
 ## 📚 읽는 순서
 
 1. [concepts/target-level.md](concepts/target-level.md) — A0 레벨 정의, 알아보는 질문 5개, 이 레벨에 Muse 를 쓰는 이유
-2. [guides/muse-5week-intro-course.md](guides/muse-5week-intro-course.md) — 5주 코스 전체: 운영 원칙, 약속 3가지, 60분 진행 순서, 숙제·검사 방법, 주차별 계획, 강사 준비 체크리스트
+2. [guides/muse-5week-intro-course.md](guides/muse-5week-intro-course.md) — 5주 코스, 수강생이 원하는 결과물을 고르는 순서, 운영 원칙과 강사 준비 체크리스트
 3. [guides/week1-card.md](guides/week1-card.md) — 1주차 수강생용 큰 글씨 카드 (인쇄본)
 
 2~5주차 카드는 앞 주의 관찰 기록을 보고 그 주 전에 만든다.

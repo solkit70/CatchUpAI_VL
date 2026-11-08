@@ -10,6 +10,8 @@ tags:
 
 ## 먼저 읽기
 
+[English](manual-existing-tools.en.md)
+
 이 안내는 이미 사용하는 Premiere·CapCut에서 발언 편집과 자막 작업을 줄이는 첫 시험용 초안이다. **의뢰인의 PC·앱 버전·구독과 납품 규격은 미확인**이므로, 아래 메뉴가 보이는지 짧은 사본으로 확인한 뒤 실제 행사 작업에 적용한다. 조건부 추천 근거는 [M3 추천 1](../03-Recommendation/recommendation.md#추천-1--기존-premiere와-capcut에서-줄일-일부터-확인)에 있다.
 
 | 작업 | 근거 수준 | 남은 확인 |

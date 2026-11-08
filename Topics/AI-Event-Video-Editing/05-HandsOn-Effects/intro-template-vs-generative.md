@@ -10,6 +10,8 @@ tags:
 
 ## 실습 지시문
 
+[English](intro-template-vs-generative.en.md)
+
 같은 기술 커뮤니티 행사 인트로 조건으로 생성형 결과를 만들었다. 기존 코드 기반 타이틀 카드와 비교할 수 있도록 행사명·로고를 새로 지어내지 않고, 제목은 후편집으로 넣을 수 있게 중앙 여백을 요청했다.
 
 > Create a 5-second widescreen 16:9 opening for a technology community event. Dark navy background, teal light trails and subtle geometric particles moving forward, clean cinematic motion, professional but warm. No people, no logos, no readable text, no music, no voiceover. Keep the center uncluttered for a title to be added later.

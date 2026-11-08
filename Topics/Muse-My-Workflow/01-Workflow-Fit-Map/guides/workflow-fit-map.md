@@ -1,5 +1,7 @@
 # 작업 목록과 Muse 적합도 지도
 
+[English](workflow-fit-map.en.md)
+
 > M1 실습 1 · 2 결과(v1, 2026-10-18)와 Roadmap v2.0 보강(v1.1, 2026-10-25). 작업은 박창수의 볼트 기록(워크플로 설정 `orchestrator.yaml` · `_Settings_/Prompts/` · 할 일 목록 · 최근 Weekly Progress)에서 뽑았다. 공개 문서라 의뢰인 이름 · 단체 내부 내용은 쓰지 않고 작업 종류만 적는다. 판정 기준은 [../concepts/fit-criteria.md](../concepts/fit-criteria.md).
 
 ## 1. 작업 목록 (v1 — 2026-10-18 볼트 기록 기준)

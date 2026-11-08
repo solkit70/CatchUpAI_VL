@@ -8,6 +8,17 @@ tags:
   - worklog
 ---
 
+## 세션 정보
+
+> 2026-11-07 Claude Code 보강 — 앞 세션 WorkLog 와 같은 머리 정보를 맞췄다. 아래 본문(실습 4 목표 ~ 🎓)은 Codex 원문 그대로다.
+
+**날짜**: 2026-11-05
+**Topic**: Muse-My-Workflow
+**모듈**: M3 - VibeLearn AI on Muse (실습 4 · 모듈 마무리)
+**진행 에이전트**: Codex
+**이전 WorkLog**: [20261101_M3_Muse-My-Workflow.md](20261101_M3_Muse-My-Workflow.md) — 실습 2 · 3 완료 (Claude Code)
+**모듈 회고**: [20261105_M3_Retrospective.md](20261105_M3_Retrospective.md)
+
 ## 실습 4 목표
 
 승인된 40분 계획으로 Muse가 만든 공개 Topic 파일을 집의 볼트에 가져와 기간 검토부터 이어받는다. 11/1 세션에서 M3 실습 1~3이 완료됐으며, 이번 작업은 해당 기록의 인계 지점에서 시작했다. [이전 WorkLog](20261101_M3_Muse-My-Workflow.md#다음-세션에-넘길-것)
@@ -46,3 +57,13 @@ Library에서 원본 3개를 받는 장면, 템플릿 두 절의 일치 판정, 
 ## 🎓 가르칠 때
 
 학습 기록과 실제 파일을 한 묶음으로 전달하는 연습이다. 받아 온 파일의 지시와 사용자 확인 지점을 먼저 찾으면 어느 단계부터 이어갈지 결정할 수 있다.
+
+## 다음 세션에 넘길 것
+
+> 2026-11-07 Claude Code 보강 — 이 세션에 없던 칸을 위 본문 · M4 WorkLog · 로드맵에서 옮겨 적었다.
+
+1. M3 는 닫혔다(DoD 8/8). 다음은 **M4 — 볼트 연결 해법**. 시작할 때 읽을 것: [첫 조사 자료](../vl_materials/vault-connection-first-research.md) · M2 비교표(기준선) · 이 M3 판정 · M1 연결 · 이름 규칙 · 로드맵의 M4 절. (실제로 같은 날 06:39 에 Codex 가 M4 를 시작했다 → [M4 WorkLog](20261105_M4_Muse-My-Workflow.md))
+2. `_Inbox_/AI-Public-Event-Scheduling/` 의 시험 Topic 은 기간 검토에서 멈춘 상태다. 실제 Topic 으로 이어 갈지는 박창수가 정한다.
+3. 남은 열린 질문: 휴대폰 앱의 Import memory · 학습 끄기 스위치.
+4. Muse 기억의 「VibeLearn AI 규칙」은 유지 중(박창수 결정, 11/1). Muse 메인 대화의 Roadmap 승인 질문은 답하지 않은 채 남아 있다.
+5. 이전부터 남은 것: 공개 레포 push(박창수 지시 뒤) · 다운로드 폴더 시험 파일과 전체 데이터 zip 정리(박창수 결정).

@@ -1,5 +1,7 @@
 # 공개 행사 Topic 예시
 
+[English](muse-topic-starter-sample.en.md)
+
 ## Muse가 만든 Topic 정보 발췌
 
 > **Topic 이름**: AI-Public-Event-Scheduling

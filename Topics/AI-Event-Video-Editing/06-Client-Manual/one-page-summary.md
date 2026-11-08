@@ -10,6 +10,8 @@ tags:
 
 ## 먼저 시험할 순서
 
+[English](one-page-summary.en.md)
+
 ```mermaid
 flowchart TB
     A["줄일 작업 하나 정하기"] --> B["기존 편집기에서 확인"]

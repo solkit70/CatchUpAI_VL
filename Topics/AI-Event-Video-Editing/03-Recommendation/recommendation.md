@@ -10,6 +10,8 @@ tags:
 
 ## 판단 기준과 가정
 
+[English](recommendation.en.md)
+
 의뢰인이 Premiere·CapCut·After Effects를 사용한다는 M1 기록을 기준으로 검토한다. **현재 유효 구독·지원 버전·PC·예산·납품 화면비·외부 업로드 동의는 미확인**이다. 아래는 문서 근거와 작업 전환 비용을 고려한 잠정 시험 순서이며, 실제 편집 성능 순위가 아니다. [요구사항 카드](../01-Requirements-Map/requirements-card.md#2-6칸-정리)
 
 ## M4 실제 시험을 반영한 잠정 판단 — 2026-10-25

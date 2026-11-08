@@ -11,6 +11,8 @@ tags:
 
 ## 요약
 
+[English](vidio-vibeedit.en.md)
+
 **범주 B · 공식 자료 확인일 2026-10-24 · 체험 상태: 2026-10-25 Free 계정에서 5분 사본 업로드·한국어 지시·무료 미리보기 출력 직접 실행.** VIDIO의 VibeEdit를 대상으로 하며, 이름이 비슷한 다른 도구와 구분한다. 지시로 촬영본을 고르고 수정하는 기능을 공식 가이드에서 확인했으나, 실제 행사 장면 선택 품질·한국어 지시는 미확인이다.
 
 > “Afterwards you keep refining it by chat”

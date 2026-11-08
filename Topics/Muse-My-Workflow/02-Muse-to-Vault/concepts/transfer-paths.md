@@ -1,5 +1,7 @@
 # 옮기기 경로 — 양방향 · 보존도 · 원문 · 받는 곳 · 넘김 꾸러미
 
+[English](transfer-paths.en.md)
+
 > M2 의 개념 정리다. 방법별 실제 시험 결과는 [../guides/transfer-comparison.md](../guides/transfer-comparison.md).
 
 ## 1. 양방향

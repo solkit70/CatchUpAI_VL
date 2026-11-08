@@ -1,5 +1,7 @@
 # 요구사항 카드 — 행사 촬영본을 AI 로 3분 하이라이트로
 
+[English](requirements-card.en.md)
+
 > 의뢰인(행사 사진 · 동영상을 촬영하는 기자)의 요청을 정리한 카드다. **확인되지 않은 부분은 「가정」으로 표시**했고, [client-questions.md](client-questions.md) 로 의뢰인에게 확인한다.
 
 ## 1. 한 문장 요구

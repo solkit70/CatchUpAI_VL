@@ -11,6 +11,8 @@ tags:
 
 ## 요약
 
+[English](capcut-ai.en.md)
+
 **범주 C · 확인일 2026-10-24 · 공식 자료로만 / 직접 체험 안 함.** 의뢰인이 이미 쓰는 도구인데 M2 초기 조사에서 빠졌으므로 추가했다. 앱 버전·구독·지역은 미확인이고, 새 서비스를 고르기 전에 현재 환경에서 가능한 작업을 확인할 후보로 둔다.
 
 > “Availability and functionality vary by platform.”

@@ -1,5 +1,7 @@
 # Muse 에 올리면 안 되는 것 — 한 장 정리
 
+[English](do-not-upload.en.md)
+
 > Muse 는 Meta 가 운영하는 클라우드 서비스다. 볼트 밖으로 나가면 안 되는 것은 Muse 에도 올리지 않는다. 판정 기준 ① 데이터 등급의 「내부」에 해당한다 — [../concepts/fit-criteria.md](../concepts/fit-criteria.md). v2.0 보강(2026-10-25)에서 「연결 규칙」과 「이름 규칙」을 더했다.
 
 ## 올리지 않는 것

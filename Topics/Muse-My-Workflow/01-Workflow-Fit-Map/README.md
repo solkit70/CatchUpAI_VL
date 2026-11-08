@@ -1,5 +1,7 @@
 # M1 — 작업 목록과 Muse 적합도 지도
 
+[English](README.en.md)
+
 **상태**: ✅ 완료 (2026-10-18, Live #32 방송 4부) · ✅ v2.0 보강 완료 (2026-10-25, Live #33 1부) — 기능 표 v2 · 앱 커넥터 화면 확인 · 판정 기준 ③ · 작업 v1.1 확정 · 연결 · 이름 규칙 결정
 **예상 학습 시간**: 1.5시간 + 보강 0.75시간
 
@@ -29,7 +31,8 @@ Muse 를 어디에 쓸지부터 정한 모듈이다. 박창수의 작업 18개�
 
 ## 이동
 
-- 다음: [M2 — Muse ↔ 볼트 옮기기 (양방향)](../vl_roadmap/20261018_RoadMap_Muse-My-Workflow.md) (로드맵 v2.0 의 「M2」 절)
+- 다음: [M2 — Muse ↔ 볼트 옮기기 (양방향)](../02-Muse-to-Vault/README.md)
+- 회고: [M1 Module Retrospective](../vl_worklog/20261018_M1_Retrospective.md)
 
 ## 영상용 재현 화면
 

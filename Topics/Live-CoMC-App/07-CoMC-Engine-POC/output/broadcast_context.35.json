@@ -1,0 +1,98 @@
+{
+  "current_part_id": "2",
+  "coverage_state": "defined",
+  "coverage_items": [
+    "Muse 심화 — 내 Workflow 에 맞게 활용하기",
+    "AI 영상 편집 Remotion 초안 — Codex 가 만든 것을 Claude 가 리뷰"
+  ],
+  "evidence_pool": [
+    {
+      "path": "AI/Roundup/2026-11-01 - Live35 Weekly Rundown.md#2부: Muse 심화와 AI 영상 편집 Research",
+      "quote": "[확정] 이번 방송 커버리지 — Muse 심화 — 내 Workflow 에 맞게 활용하기"
+    },
+    {
+      "path": "AI/Roundup/2026-11-01 - Live35 Weekly Rundown.md#2부: Muse 심화와 AI 영상 편집 Research",
+      "quote": "[확정] 이번 방송 커버리지 — AI 영상 편집 Remotion 초안 — Codex 가 만든 것을 Claude 가 리뷰"
+    },
+    {
+      "path": "AI/Roundup/2026-11-01 - Live35 Weekly Rundown.md#2부: Muse 심화와 AI 영상 편집 Research",
+      "quote": "[확정 항목 현재 상태] Muse 심화 — 내 Workflow 에 맞게 활용하기 — 진행 중 — Codex 와 함께, M3 완료(11/5), M4 실습 1 · 2 완료, 오늘은 M4 실습 3 — 시험 후보 결정과 한 후보 시험(추천 E Remote Control · C Google Drive)"
+    },
+    {
+      "path": "AI/Roundup/2026-11-01 - Live35 Weekly Rundown.md#2부: Muse 심화와 AI 영상 편집 Research",
+      "quote": "[확정 항목 현재 상태] AI 영상 편집 Remotion 초안 — Codex 가 만든 것을 Claude 가 리뷰 — 확정 — 14장 · 8분 시각 초안(Codex, 11/1)을 Claude 가 6가지 기준으로 리뷰해 장단점 파악"
+    },
+    {
+      "path": "AI/Roundup/2026-11-01 - Live35 Weekly Rundown.md#2부: Muse 심화와 AI 영상 편집 Research",
+      "quote": "Muse-My-Workflow 의 M3 는 11/5 실습 4 「집에서 이어받기」로 마쳤다 — Muse 가 만든 Topic 파일을 집 볼트로 가져와 로드맵 기간 검토까지 이어갔다"
+    },
+    {
+      "path": "AI/Roundup/2026-11-01 - Live35 Weekly Rundown.md#2부: Muse 심화와 AI 영상 편집 Research",
+      "quote": "M4 는 볼트 연결 해법 8개를 확인했고, `visibility: public` 으로 표시한 Markdown 만 골라 복사 전 범위를 보여 주는 미리 보기를 만들었다 — 실제 복사와 연결은 아직 안 했다"
+    },
+    {
+      "path": "AI/Roundup/2026-11-01 - Live35 Weekly Rundown.md#2부: Muse 심화와 AI 영상 편집 Research",
+      "quote": "11/1 Codex 가 AI-Event-Video-Editing 리서치 결과로 만든 Remotion 초안(ai-event-editing-1101)을, 방송에서 Claude 가 플랜 충실도 · 사실성 · 화면 · 코드 · 워크플로 · 이어받기 쉬움으로 리뷰해 장단점과 고칠 목록을 낸다"
+    },
+    {
+      "path": "AI/Roundup/2026-11-01 - Live35 Weekly Rundown.md#2부: Muse 심화와 AI 영상 편집 Research",
+      "quote": "누가 더 잘했나가 아니라, 다른 에이전트가 만든 결과물을 같은 기준으로 읽어 이어받을 수 있는지 보는 실험이다. 리뷰하는 Claude 는 Codex 의 파일을 고치지 않는다"
+    },
+    {
+      "path": "AI/Roundup/2026-11-01 - Live35 Weekly Rundown.md#2부: Muse 심화와 AI 영상 편집 Research",
+      "quote": "M4 미리 보기의 실제 보고서는 `visibility: internal` 이다. 방송에서는 가상 자료 5개로 돌린 예시 보고서만 띄운다"
+    },
+    {
+      "path": "AI/Roundup/2026-11-01 - Live35 Weekly Rundown.md#2부: Muse 심화와 AI 영상 편집 Research",
+      "quote": "공개 후보 3개가 사본 범위에 들어가도 되는지는 방송 중 박창수가 판단한다. 승인 전에는 실제 복사 · Muse 연결을 하지 않는다"
+    }
+  ],
+  "status_map": {
+    "rundown": "unconfirmed",
+    "2026-11-01 - Weekly Progress and Planning": "missing_section",
+    "2026-10-25 - Live34 Weekly Rundown": "missing_section"
+  },
+  "excluded_headings": [
+    "주간 영상 (이번 방송 미편성)"
+  ],
+  "withheld_conditional": [],
+  "forbidden_removed": true,
+  "other_parts": [
+    {
+      "id": "0",
+      "title": "인트로",
+      "coverage_state": "defined"
+    },
+    {
+      "id": "1",
+      "title": "AI 와 Builders Lounge 회고 · 계획",
+      "coverage_state": "defined"
+    },
+    {
+      "id": "3",
+      "title": "글 · 발표 · 연구",
+      "coverage_state": "defined"
+    },
+    {
+      "id": "4",
+      "title": "앱 · 홈페이지 만들기",
+      "coverage_state": "defined"
+    },
+    {
+      "id": "5",
+      "title": "마무리 — 다음 주 예고",
+      "coverage_state": "defined"
+    },
+    {
+      "id": "틈새 A: 지난주 만든 콘텐츠",
+      "title": "틈새 A: 지난주 만든 콘텐츠",
+      "coverage_state": "defined"
+    },
+    {
+      "id": "틈새 B: 이번 주 인사이트",
+      "title": "틈새 B: 이번 주 인사이트",
+      "coverage_state": "defined"
+    }
+  ],
+  "assembled_at": "2026-11-08T07:30:34.747668+00:00"
+}

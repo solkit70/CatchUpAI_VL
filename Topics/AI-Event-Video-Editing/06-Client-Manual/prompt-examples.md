@@ -10,6 +10,8 @@ tags:
 
 ## 사용하는 방법
 
+[English](prompt-examples.en.md)
+
 ```mermaid
 flowchart TB
     A["행사 상황 하나 선택"] --> B["이름·언어·길이 채우기"]

@@ -11,6 +11,8 @@ tags:
 
 ## 요약
 
+[English](seedance.en.md)
+
 **범주 D · 확인일 2026-10-24 · 자료로만 / 직접 생성·유료 API 체험 안 함.** 이번에 공식 페이지에서 확인한 Seedance 2.5를 기준으로 조사했다. 의뢰인이 말한 「시덴스」가 이 모델·버전·서비스를 뜻하는지는 여전히 미확인이다.
 
 > “Smarter Reference and Editing Capabilites”

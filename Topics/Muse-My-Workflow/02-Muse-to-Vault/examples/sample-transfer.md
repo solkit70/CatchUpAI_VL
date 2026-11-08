@@ -1,5 +1,7 @@
 # 시험 결과 한 건 — 전 · 후
 
+[English](sample-transfer.en.md)
+
 > 2026-10-25 Live #33 1부. 공개해도 되는 가짜 내용으로 Muse 가 만든 Markdown 파일 하나를 받는 곳 규칙에 맞게 정리하는 시험이다. 정리 단계는 [../guides/vault-cleanup-prompt.md](../guides/vault-cleanup-prompt.md). 이 예시는 시험이라 **실제 볼트의 `_Inbox_/` 에는 넣지 않았다.**
 
 ## 전 — Muse 에서 받은 그대로 (397바이트)

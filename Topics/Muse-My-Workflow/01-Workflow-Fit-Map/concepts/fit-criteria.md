@@ -1,5 +1,7 @@
 # 적합도 판정 기준 — 어떤 일을 Muse 에 맡길까
 
+[English](fit-criteria.en.md)
+
 > 작업마다 Muse 에 맡길지 정하는 기준이다. 「Muse 가 할 수 있다」와 「Muse 에 맡기는 게 낫다」는 다르다. 볼트 안에서 Claude Code · Codex 로 더 잘 되는 일은 Muse 에 맡길 이유가 적다.
 
 ## 적합도 3단계

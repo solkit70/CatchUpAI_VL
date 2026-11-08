@@ -1,5 +1,7 @@
 # M2 — Muse ↔ 볼트 옮기기 (양방향)
 
+[English](README.en.md)
+
 **상태**: ✅ 완료 (2026-10-25, Live #33 1부) — 밖 → 집 4가지 · 집 → 밖 2가지 · 음성 원문 · 휴대폰 시험 · 받는 곳 A · 추천표 승인 · 정리 프롬프트 1건 시험까지 마쳤다
 **예상 학습 시간**: 2시간
 
@@ -24,7 +26,8 @@
 ## 이동
 
 - 이전: [M1 — 작업 목록과 Muse 적합도 지도](../01-Workflow-Fit-Map/README.md)
-- 다음: M3 — VibeLearn AI on Muse ([로드맵](../vl_roadmap/20261018_RoadMap_Muse-My-Workflow.md) 의 「M3」 절)
+- 다음: [M3 — VibeLearn AI on Muse](../03-VibeLearn-on-Muse/README.md)
+- 회고: [M2 Module Retrospective](../vl_worklog/20261025_M2_Retrospective.md)
 
 ## 영상용 재현 화면
 
