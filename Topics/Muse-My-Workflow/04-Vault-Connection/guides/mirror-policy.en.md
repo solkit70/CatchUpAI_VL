@@ -36,9 +36,25 @@ These rules are a draft for keeping the original vault safe and exporting only s
 3. Copy with `--apply` only after the user approves the mirror copy scope, the destination, and the data levels to include. A new storage connection · upload is checked separately from this approval.
 4. After the run, check the include · exclude counts and the destination files, and do not overwrite results onto the mirror copy.
 
+## Proposal for Review
+
+Based on the evidence so far, the conservative operating proposal is **to leave automatic mirroring off and manually review only explicitly designated `visibility: public` Markdown when needed**. Always exclude `visibility: internal`, `🔒 내부 자료`, `personal`, missing or malformed classifications, paths outside an explicit allow list, non-Markdown files, oversized files, and symbolic links. Limit included paths to a user-designated allow list rather than the whole vault. Do not copy, upload through a connector, or schedule runs until the destination and access scope are settled.
+
+The Dropbox trial did not establish that Muse access can be technically restricted to the named folder. Google Drive folder restriction was not established either. Based on current evidence, I do not recommend connecting either service to an actual vault mirror. Use Muse’s manual single-file handoff, or choose E · Claude Code Remote Control (an alternative outside Muse) when the home PC is running, according to the task.
+
+This is a proposal only. The separately approved one-time upload of 3 public candidates to Drive does not authorize a recurring mirror.
+
 ## Items Waiting for Approval
 
-This draft is not a final policy. The real source path · include paths · destination · allowed data levels have not been decided. The synthetic test currently planned includes only `public` material. The real vault preview and the real copy come after a later review and separate approval.
+This is not a final policy. The internal preview recorded 3 `public` candidates, 55,975 excluded files, and 0 copied files; exclusions included 112 files with an internal marker and 58 with `visibility: internal`. This is evidence from one preview, not policy approval or a guarantee for repeated runs.
+
+Items to decide before approval:
+- Source scope and explicit include allow list
+- Storage · destination · connector access scope
+- Manual or scheduled runs, cadence, and copy retention period
+- Stop · review steps on failure and handling of destination copies
+
+The proposal below is for review only; it does not authorize apply or upload.
 
 ## Links
 

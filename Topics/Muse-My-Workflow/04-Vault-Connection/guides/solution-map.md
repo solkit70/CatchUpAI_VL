@@ -8,7 +8,7 @@
 
 | 후보 | 출처와 화면 관찰 | 비용·설치·확인할 제약 |
 |---|---|---|
-| A · Dropbox 사본 | Dropbox 공식 도움말과 Muse Business 목록에서 확인. [Dropbox 도움말](https://help.dropbox.com/integrations/connect-to-meta-muse) | 미국·캐나다 Dropbox 전 플랜. 브라우저에서 계정 연결이 필요하며, 읽기·쓰기·삭제·공유 등 동작별 설정이 있다. 특정 폴더만 허용하는지, 집 PC로 자동 회수되는지는 시험 필요. |
+| A · Dropbox 사본 | 2026-11-08 공식 도움말과 Muse 화면 확인. [Dropbox 도움말](https://help.dropbox.com/integrations/connect-to-meta-muse) · [Dropbox 발표](https://blog.dropbox.com/topics/company/put-dropbox-project-context-to-work-meta-muse) | 공식 설명상 연결 계정에서 이용 가능한 콘텐츠에 접근하고 개별 동작 권한은 설정할 수 있지만, 폴더별 허용 목록은 문서화되어 있지 않다. 11/8 화면에서는 검색·읽기, 다운로드, 쓰기, 공유 등이 모두 Allow(다운로드·쓰기 Custom Allow)였다. 사용자가 기기 접근 확인을 승인하고 `Muse M4 Test - Synthetic` 비공개 폴더에 가상 Markdown 세 개를 올렸다. 업로드 전 파일명 검색은 0건이었으나 업로드 후 지정 폴더 범위 검색은 세 자료 모두 성공했고, 폴더 목록에는 원본 세 개와 결과 파일이 표시됐다. 지정 경로 읽기와 결과 작성도 성공했다. 따라서 시험 지시의 폴더 한정은 지켰지만 커넥터가 그 폴더만 강제 접근하게 하는지는 확인되지 않았다. 403 표시의 원인은 공식 문서에서 찾지 못했으며, 현재 화면의 배너만으로는 성공한 Dropbox 작업과 연관된 오류인지 판정할 수 없다. 모바일 접근은 미검증이다. Dropbox 데스크톱 앱 설정 후 깨어 있는 PC에서 네 파일이 로컬 동기화되고 Available on this device로 표시됐다. 절전 요청 뒤 같은 로컬 상태가 유지됐으나 S0 전환 확인·절전 중 클라우드 변경 시험은 없어 Sleep 효과는 미판정이다. Dropbox 재실행 후 세 원본 검색과 폴더의 네 항목 목록은 다시 성공했다. 이전 UI의 Error 403 알림은 Dropbox 요청 오류와 연결되지 않았다. Chrome 업데이트·재시작 후 현재 Muse 화면에서 알림은 보이지 않았으나, 사용자가 반복 오류를 보고해 해결·원인은 미확정이다. |
 | B · GitHub private 사본 | Meta 공식 발표와 Muse Business 목록에서 확인. [Meta Connect 발표](https://www.meta.com/blog/meta-connect-2026-everything-we-announced/) | GitHub 계정과 시험 저장소 필요. 별도 커넥터 비용과 private 저장소 하나로 제한 가능한지는 미확인. |
 | C · Google Drive 또는 Box | Muse 화면에서 두 항목 확인. Meta는 Box를 공식 발표했고 Google 연결 데이터에 대한 정책을 안내한다. [Meta Connect 발표](https://www.meta.com/blog/meta-connect-2026-everything-we-announced/) · [Meta 커넥터 도움말](https://www.meta.com/help/superintelligence/1687253048996149/) | 각 서비스 계정 필요. 연결의 별도 비용은 미확인. Drive에는 읽기·쓰기·삭제·공유 및 백그라운드 동작별 설정이 보인다. 화면의 동작 설정만으로 단일 폴더 접근 범위를 판정할 수 없다. Box의 실제 권한 범위는 미확인. |
 | D · 수동 전달 | 볼트 실증으로 Library 다운로드와 Codex 인계 확인. [M3 실습 4](../../vl_worklog/20261105_M3_Muse-My-Workflow.md#실습-4-결과) | 별도 저장소 연결 없이 브라우저에서 가능. 내려받기와 Inbox 복사가 수동이며 원본 3개 보존은 검증했다. |
@@ -24,6 +24,6 @@
 | 1 | D · 수동 다운로드 | S1·S2에서 손으로 해야 하는 단계와 원문 보존을 기준으로 삼는다. |
 | 2 | E · Remote Control | S2·S4에서 집의 작업을 휴대폰으로 이어가는 데 걸리는 단계와 PC 가동 조건을 비교한다. |
 | 3 | C · Google Drive | 사용자가 시험 범위를 확정하면 공개 샘플로 S3·S5의 검색과 회수 가능성을 본다. 파일 동작과 폴더 범위는 구분해 기록한다. |
-| 4 | A · Dropbox | 새 연결을 결정할 경우 공개 샘플만 담은 시험 공간에서 Drive와 같은 조건으로 비교한다. |
+| 4 | A · Dropbox | 가상 세 파일 읽기·쓰기와 업로드 후 검색은 성공했다. 업로드 전 검색 0건은 업로드 시점으로 설명됐다. 폴더 접근의 기술적 제한, 모바일 사용, 자동 PC 회수와 Muse에 남은 403 배너의 원인은 후속 확인 대상으로 남는다. |
 
 후보는 제안 단계다. 저장소 시험 전에는 사본 규칙과 읽기·쓰기 범위를 먼저 확정한다. [M4 실습 순서](../../vl_roadmap/20261018_RoadMap_Muse-My-Workflow.md#m4---볼트-연결-해법--집과-밖을-끊김-없이)

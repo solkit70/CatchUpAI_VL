@@ -5,7 +5,7 @@ author:
   - "Claude Code"
   - "Codex"
 created: "2026-11-07 22:30:00"
-status: "In progress — M1–M3 done · M4 in progress (3/8) · M5–M7 planned"
+status: "In progress — M1–M3 done · M4 in progress (7/8) · M5–M7 planned"
 tags:
   - muse-my-workflow
   - meta-muse
@@ -39,7 +39,7 @@ This Topic is run by **Claude Code and Codex in turns**. So every module and Wor
 | Can I keep exactly what I said? | With one line, "Save this as a Markdown file without changing a single character," the dictated text became a file as is | [M2](02-Muse-to-Vault/README.en.md) |
 | Does Muse follow VibeLearn AI instructions? | It read the instructions in the public repo directly and stopped at the three places that need approval. When I put the rules in its memory (`MEMORY.md`), it kept those rules **even in a new chat** | [M3](03-VibeLearn-on-Muse/README.en.md) |
 | Can I continue at home a Topic I started away? | I downloaded 3 original files from the Muse Library and moved them to the vault. **The SHA-256 values all matched**, and Codex took over from the period review step | [M3](03-VibeLearn-on-Muse/README.en.md) |
-| How should I connect the vault to Muse? | I checked 8 candidates with official documentation and screens. I built a preview that picks only the Markdown marked `visibility: public` in the vault, and ran it: **3 candidates to include · 55,975 excluded · 0 copied** — all internal material was left out. I have not made a real connection yet | [M4](04-Vault-Connection/README.en.md) |
+| How should I connect the vault to Muse? | I checked 8 candidates with official documentation and screens. I built a preview that picks only the Markdown marked `visibility: public` in the vault, and ran it: **3 candidates to include · 55,975 excluded · 0 copied** — all internal material was left out. Synthetic Dropbox and Drive connector tests are complete. The whole-vault mirror policy and any real-vault connection remain undecided | [M4](04-Vault-Connection/README.en.md) |
 
 ## Learning Order and Status by Module
 
@@ -48,7 +48,7 @@ This Topic is run by **Claude Code and Codex in turns**. So every module and Wor
 | M1 | [Task list and Muse fit map](01-Workflow-Fit-Map/README.en.md) | ✅ Done (10/18 · expanded 10/25) |
 | M2 | [Moving between Muse ↔ vault (both ways)](02-Muse-to-Vault/README.en.md) | ✅ Done (10/25) |
 | M3 | [VibeLearn AI on Muse](03-VibeLearn-on-Muse/README.en.md) | ✅ Done (10/25 – 11/5) |
-| M4 | [Vault connection options — home and away, seamless](04-Vault-Connection/README.en.md) | 🔄 In progress 3/8 — waiting for preview report review · choice of candidates to test |
+| M4 | [Vault connection options — home and away, seamless](04-Vault-Connection/README.en.md) | 🔄 In progress 7/8 — scenario matrix and draft route table completed; whole-vault mirror policy and operating route await approval |
 | M5 | One week of real use and a usage guide | ⏳ Planned (use 11/8 – 11/14) |
 | M6 | A teaching block for other people | ⏳ Planned (around 11/15) |
 | M7 | Capstone — process video (Korean · English) | ⏳ Planned (11/22 – 11/29) |

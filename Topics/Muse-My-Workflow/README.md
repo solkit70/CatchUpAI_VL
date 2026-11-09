@@ -5,7 +5,7 @@ author:
   - "Claude Code"
   - "Codex"
 created: "2026-11-07 22:30:00"
-status: "진행 중 — M1~M3 완료 · M4 진행 (3/8) · M5~M7 예정"
+status: "진행 중 — M1~M3 완료 · M4 진행 (7/8) · M5~M7 예정"
 tags:
   - muse-my-workflow
   - meta-muse
@@ -38,7 +38,7 @@ tags:
 | 말한 그대로 남길 수 있나 | 「한 글자도 바꾸지 말고 마크다운 파일로 저장해줘」 한 줄로 받아 적은 글이 그대로 파일이 됐다 | [M2](02-Muse-to-Vault/README.md) |
 | Muse 가 VibeLearn AI 지시를 따르나 | 공개 레포의 지시를 직접 읽고, 승인이 필요한 곳 세 번에서 멈췄다. 규칙을 기억(`MEMORY.md`)에 넣자 **새 대화에서도** 그 규칙을 지켰다 | [M3](03-VibeLearn-on-Muse/README.md) |
 | 밖에서 시작한 Topic 을 집에서 이어갈 수 있나 | Muse Library 에서 원본 3개를 내려받아 볼트에 옮기니 **SHA-256 이 모두 같았고**, Codex 가 기간 검토 단계부터 이어받았다 | [M3](03-VibeLearn-on-Muse/README.md) |
-| 볼트를 Muse 와 어떻게 이을까 | 후보 8개를 공식 자료와 화면으로 확인했다. 볼트에서 `visibility: public` 으로 표시한 Markdown 만 골라 보는 미리 보기를 만들어 돌려 보니 **포함 후보 3 · 제외 55,975 · 복사 0** — 내부 자료는 모두 빠졌다. 실제 연결은 아직 안 했다 | [M4](04-Vault-Connection/README.md) |
+| 볼트를 Muse 와 어떻게 이을까 | 후보 8개를 공식 자료와 화면으로 확인했다. 볼트에서 `visibility: public` 으로 표시한 Markdown 만 골라 보는 미리 보기를 만들어 돌려 보니 **포함 후보 3 · 제외 55,975 · 복사 0** — 내부 자료는 모두 빠졌다. 가상 Dropbox·Drive 시험 연결은 확인했다. 전체 볼트 사본 정책과 실제 볼트 연결은 아직 정하지 않았다 | [M4](04-Vault-Connection/README.md) |
 
 ## 모듈별 학습 순서와 상태
 
@@ -47,7 +47,7 @@ tags:
 | M1 | [작업 목록과 Muse 적합도 지도](01-Workflow-Fit-Map/README.md) | ✅ 완료 (10/18 · 보강 10/25) |
 | M2 | [Muse ↔ 볼트 옮기기 (양방향)](02-Muse-to-Vault/README.md) | ✅ 완료 (10/25) |
 | M3 | [VibeLearn AI on Muse](03-VibeLearn-on-Muse/README.md) | ✅ 완료 (10/25 ~ 11/5) |
-| M4 | [볼트 연결 해법 — 집과 밖을 끊김 없이](04-Vault-Connection/README.md) | 🔄 진행 중 3/8 — 미리 보기 보고서 검토 · 시험 후보 선택 대기 |
+| M4 | [볼트 연결 해법 — 집과 밖을 끊김 없이](04-Vault-Connection/README.md) | 🔄 진행 중 7/8 — 시나리오표·경로표 초안 작성, 전체 볼트 사본 정책 및 운영 경로 승인 대기 |
 | M5 | 1주일 실제 사용과 사용 가이드 | ⏳ 예정 (11/8 ~ 11/14 사용) |
 | M6 | 다른 사람을 위한 교육 블록 | ⏳ 예정 (11/15 전후) |
 | M7 | Capstone — 과정 영상 (한 · 영) | ⏳ 예정 (11/22 ~ 11/29) |

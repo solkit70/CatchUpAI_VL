@@ -54,19 +54,19 @@ Claude Code 또는 Codex — 오늘 진행하는 에이전트를 WorkLog 「진�
 
 **현재 진행 중인 모듈**:
 ```
-M4 볼트 연결 해법 (11/5 실습 1 확인표 작성, 1/8) · 시험 후보 확인 뒤 사본 규칙·미리 보기
+M4 볼트 연결 해법 (2026-11-08 현재 7/8) · 시나리오 표 · 경로표 초안 · WorkLog 및 중간 모듈 회고 완료. 남은 DoD: 실제 볼트 사본 규칙 승인 및 미리 보기 보고서 승인.
 Roadmap v2.0 (2026-10-25 사용자 승인) — 모듈 7개 · 6주 (11/29 마무리)
 ```
 
 **가장 최근 WorkLog 파일**:
 ```
-vl_worklog/20261105_M4_Muse-My-Workflow.md (M4 실습 1, 2026-11-05 Codex) — 해법 8개와 Muse 화면 확인
+vl_worklog/20261108_M4_Muse-My-Workflow.md (2026-11-08 Codex) — E · C · Dropbox 시험, 시나리오 표 · 경로표 · 중간 모듈 회고
 이전: vl_worklog/20261025_M2_Muse-My-Workflow.md (M2 완료) · vl_worklog/20261025_M1-v2_Muse-My-Workflow.md (M1 보강 5/5) · vl_worklog/20261018_M1_Muse-My-Workflow.md (M1 완료)
 ```
 
 **이전 세션의 "Tomorrow's focus"** (있다면):
 ```
-- M4 시험 후보 D/E/C(Drive)/A를 확인하고 실습 2 사본 규칙·미리 보기로 이어간다.
+- 미결정 항목: 실제 볼트에 허용할 자료 등급·포함 경로·목적지·실행 주기와 미리 보기 승인. 승인 전 실제 복사·자동화는 실행하지 않는다.
 - M3 문서와 실습 4의 재현 순서는 03-VibeLearn-on-Muse/README.md 참고.
 - 열린 질문: 학습 끄기 스위치 위치(M4) · 휴대폰 Save to Files 형식 · 휴대폰 복사 · 붙여넣기
 - 결정 이월: 연결 규칙 ③ · 이름 규칙 ② · 받는 곳 A · 추천표 승인 (do-not-upload.md · transfer-comparison.md)
@@ -78,7 +78,7 @@ vl_worklog/20261105_M4_Muse-My-Workflow.md (M4 실습 1, 2026-11-05 Codex) — �
 
 **사용 가능한 시간**:
 ```
-2026-10-25 Live #33 1부 (방송 05:00–08:00 PDT 중 — 분 수는 진행자가 정한다). 못 끝낸 것은 주중에 이어 간다
+2026-11-08 — 오늘 세션은 문서 기반 후속 정리.
 ```
 
 **오늘의 상태/제약사항** (있다면):

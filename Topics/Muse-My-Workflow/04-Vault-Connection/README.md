@@ -2,32 +2,32 @@
 
 [English](README.en.md)
 
-**상태**: 🔄 진행 중 3/8 (2026-11-05 시작 · Codex) — 실습 1 확인표 · 실습 2 미리 보기 완료, 실습 3 준비(가상 시험 폴더 · 시나리오 비교표). **미리 보기 보고서 검토와 시험 후보(D / E / C Drive / A) 선택을 박창수가 하면 실습 3 을 시작한다**
+**상태**: 🔄 진행 중 7/8 (2026-11-05 시작 · Codex) — E의 가상 S2·S4, C의 가상 Drive 파일 읽기·결과 작성·PC 수동 회수, 승인된 공개 후보 3개 별도 Drive 업로드를 확인했다. Dropbox는 연결·동작별 Allow 설정을 확인하고 개인 전용 가상 시험 폴더에 파일 세 개를 올려 Muse 읽기·결과 쓰기를 확인했다. 업로드 전 검색은 0건이었고 업로드 후 재검색에서는 세 파일 모두 찾았다. 폴더 목록에도 결과 파일을 포함해 네 파일을 확인했다. 실제 볼트 전체 사본 정책은 미결정.
 **예상 학습 시간**: 3시간
 
 ## 진행 상태
 
-실습 1에서 공식 문서와 Muse 화면을 확인했고, 실습 2에서 사본 규칙 초안과 가상·실제 볼트 미리 보기를 실행했다. 실습 3 준비로 가상 공개 시험 폴더와 시나리오 비교표를 만들었다. 실제 보고서는 내부 자료로 볼트 안에 두었으며 검토 대기 중이다. 외부 저장소 후보 선택·연결과 복사는 아직 하지 않았다.
+실습 1에서 공식 문서와 Muse 화면을 확인했고, 실습 2에서 사본 규칙 초안과 실제 볼트 미리 보기를 실행했다. 내부 미리 보기 보고서를 검토했고, 표시된 공개 후보 3개는 사용자 승인 뒤 별도 Drive 폴더에 올려 확인했다. 이 승인은 실제 볼트 전체를 미러링하는 포괄 승인이 아니다. E · Claude Code Remote Control은 Muse 밖의 대안으로 가상 S2·S4를 시험했고, C · Google Drive는 지정 가상 폴더의 읽기·결과 작성과 PC 수동 다운로드를 확인했다. Dropbox의 2026-11-08 화면에서는 모든 동작별 권한이 **Allow**(다운로드·쓰기 권한은 Custom Allow)였다. 사용자가 기기 접근 확인창을 승인한 뒤 `Muse M4 Test - Synthetic` 개인 전용 폴더에 가상 자료 세 개를 올렸다. 업로드 전에 실행한 파일명 검색은 0건이었지만, 업로드 뒤 폴더 범위를 지정해 다시 검색하자 세 파일 모두 찾았다. 지정 경로 읽기와 `m4-dropbox-result.md` 작성도 성공했다. Dropbox 화면에서 원본 세 개와 결과 파일, 결과 내용을 확인했다. Dropbox 데스크톱 앱 설정 후 네 파일이 깨어 있는 PC에 자동 동기화되어 자동 PC 회수는 깨어 있는 상태에서 확인했다. 절전 요청 전후 네 파일의 로컬 상태는 유지됐으나 S0 진입·복귀와 절전 중 클라우드 변경은 검증하지 못해 Sleep 효과는 미판정이다. Dropbox 재실행 후 파일명 세 개 검색과 폴더 네 항목 목록도 성공했다. 모바일 시험·폴더 범위 제한은 미검증이다.
 
 ## 📚 학습 순서
 
 1. [두 가지 연결 모델](concepts/connection-models.md) — 클라우드 대리형 · 원격 콘솔형, 동기화가 아니라 연결, 사본과 받는 곳, 연결 전 확인 세 가지.
 2. [해법 지도](guides/solution-map.md) — 후보 8개, 제약과 비용, 다음 시험 범위.
 3. [사본 정책 초안](guides/mirror-policy.md) — 포함·제외 기준과 승인 경계.
-4. [시나리오 비교표](guides/seamless-scenarios.md) — D·E의 기존 근거와 C·A의 미검증 범위, 다음 시험과 캡처 장면.
+4. [시나리오 비교표](guides/seamless-scenarios.md) — D·E·C·A의 기존·합성 시험 근거, 미확인 범위, 다음 시험과 캡처 장면.
 5. [가상 시험 폴더](examples/trial-vault/) — 공개 표시된 가상 Markdown 자료 3개.
 6. [미리 보기 스크립트](scripts/build_mirror.py) — 기본은 보고만 하며 실제 복사는 명시적 `--apply`가 필요하다.
 7. [예시 설정](scripts/mirror_config.example.yaml) — 가상 시험 폴더만 대상으로 하는 JSON 문법의 YAML 호환 설정.
 8. [가상 미리 보기 보고서](examples/mirror-report-sample.md) — 공개 1개 포함 후보, 개인·내부·미분류·비 Markdown 4개 제외.
-9. [M4 WorkLog](../vl_worklog/20261105_M4_Muse-My-Workflow.md) — 실습 1·2 관찰과 다음 확인 지점.
+9. [작업 종류별 경로표 초안](guides/task-route-table.md) — 현재 근거가 있는 흐름과 미승인 경계, 중단·되돌림 원칙.
+10. [M4 WorkLog](../vl_worklog/20261108_M4_Muse-My-Workflow.md) — 실습 1·2 관찰과 다음 확인 지점.
 
 ## 지금까지 알아낸 것
 
-- **후보 8개** 모두 공식 자료와 Muse 화면으로 확인 날짜(11/5)와 함께 정리했다. Muse 커넥터 목록에서 GitHub · Dropbox · Google Drive 를 직접 확인했다(연결은 안 함).
+- **후보 8개** 모두 공식 자료와 Muse 화면으로 확인 날짜와 함께 정리했다. Dropbox 연결과 가상 폴더의 읽기·쓰기 시험도 수행했다.
 - **동기화 기능은 없다.** 커넥터는 필요할 때 들여다보는 연결이다. 그래서 「밖에서 한 일이 집 PC 에 저절로 도착」(S5)은 아직 어떤 후보로도 충족되지 않는다.
 - **공개 표시만 담는 사본이 안전하게 동작한다.** 실제 볼트 미리 보기에서 포함 후보 3 · 제외 55,975 · 복사 0 — 내부 표식 112 · `visibility: internal` 58 은 모두 빠졌다.
-- **확인 못 한 것** — 커넥터를 폴더 하나 · 레포 하나로 좁힐 수 있는지, 웹 Data controls 에 학습 끄기 스위치가 없는데 다른 곳에 있는지, Windows 용 Muse 데스크톱 배포.
-- 실습 2 의 미리 보기 화면 캡처는 Windows 캡처 도구 문제로 보류 중이다.
+- **확인 못 한 것** — 업로드 전 검색은 0건, 업로드 후 지정 폴더 범위 검색은 세 파일 모두 성공했다. 모바일 접근, 폴더 범위의 기술적 강제, Windows 절전 효과는 미판정이다. 깨어 있는 PC의 자동 회수는 Dropbox 데스크톱 앱 설정 뒤 네 파일이 Available on this device로 표시되어 확인했다. 이전 Muse 화면에 나타난 403 알림은 Dropbox 요청 오류와 연결되지 않았다. Chrome 업데이트·재시작 후 현재 Muse 화면에는 알림이 보이지 않았지만, 사용자가 평소 반복된다고 보고해 해결 여부와 원인은 미확정이다. Google Drive 폴더 범위와 자동 동기화도 미확인이다.
 
 ## 실습 2 재현 방법
 
@@ -49,6 +49,11 @@ python Ingest/CatchUpAI_VL/Topics/Muse-My-Workflow/04-Vault-Connection/scripts/b
 
 - [Muse 비즈니스 커넥터](assets/muse-business-connectors.jpg) — GitHub와 Dropbox가 표시된 목록.
 - [Muse Data controls](assets/muse-data-controls.jpg) — 메모리 가져오기, 데이터 내려받기, 초기화 메뉴.
+- [Dropbox 권한 화면 (2026-11-08)](assets/20261108-muse-dropbox-permissions.jpg) — 연결 및 동작별 Allow 상태. 영상에는 계정 식별 정보가 노출되지 않는지 먼저 확인한다.
+- [Dropbox 기기 접근 확인창 (2026-11-08)](assets/20261108-dropbox-permission-prompt-1.jpg) — 전용 가상 시험 폴더와 파일 업로드 전 권한 확인.
+- [Dropbox 업로드 완료 화면](assets/20261108-dropbox-upload-success.jpg) · [시험 폴더 파일 4개](assets/20261108-dropbox-four-files.jpg).
+- [Muse 분석 결과 상단](assets/20261108-muse-dropbox-analysis-result.jpg) · [Dropbox 결과 내용 상단](assets/20261108-dropbox-result-content-top.jpg) · [결과 내용 하단](assets/20261108-dropbox-result-content-bottom.jpg).
+- [Dropbox 결과 파일 검증 화면](assets/20261108-dropbox-result-verified.jpg).
 
 ## 이동
 
