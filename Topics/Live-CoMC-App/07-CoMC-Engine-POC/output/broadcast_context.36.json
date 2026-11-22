@@ -1,0 +1,96 @@
+{
+  "current_part_id": "4",
+  "coverage_state": "defined",
+  "coverage_items": [
+    "Muse 심화학습 진행 상황 소개"
+  ],
+  "evidence_pool": [
+    {
+      "path": "AI/Roundup/2026-11-08 - Live36 Weekly Rundown.md#4부: Muse 심화학습 — Codex 로 계속",
+      "quote": "[확정] 이번 방송 커버리지 — Muse 심화학습 진행 상황 소개"
+    },
+    {
+      "path": "AI/Roundup/2026-11-08 - Live36 Weekly Rundown.md#4부: Muse 심화학습 — Codex 로 계속",
+      "quote": "[확정 항목 현재 상태] Muse 심화학습 진행 상황 소개 — 확정 — 진행 상황만 소개(11/14 박창수). M4 7/8, Codex 로 계속 Research 중이고 Fable 로 할 일은 없음"
+    },
+    {
+      "path": "AI/Roundup/2026-11-08 - Live36 Weekly Rundown.md#4부: Muse 심화학습 — Codex 로 계속",
+      "quote": "이번 방송에서는 실습 없이 진행 상황만 소개한다 — 11/14 에 Codex 가 브라우저와 Muse 를 직접 조작하며 하루 종일 M4 합성 시험을 했고, 박창수는 가끔 수동 처리만 했다"
+    },
+    {
+      "path": "AI/Roundup/2026-11-08 - Live36 Weekly Rundown.md#4부: Muse 심화학습 — Codex 로 계속",
+      "quote": "통과한 것(합성 자료만): Muse 작업 공간에 폴더를 넣고 ZIP 으로 돌려받는 왕복 — Markdown 5,777개 · 약 104 MiB, 실제 Vault 와 같은 파일 수 55,035개"
+    },
+    {
+      "path": "AI/Roundup/2026-11-08 - Live36 Weekly Rundown.md#4부: Muse 심화학습 — Codex 로 계속",
+      "quote": "Obsidian 위키링크도 작은 표본에서 확인했다 — 경로 · 별칭 구분, 이름이 겹치면 모호하다고 알림, heading · block · 이미지 · PDF 첨부 · backlinks"
+    },
+    {
+      "path": "AI/Roundup/2026-11-08 - Live36 Weekly Rundown.md#4부: Muse 심화학습 — Codex 로 계속",
+      "quote": "Dropbox 는 양쪽 수정이 충돌 사본으로 남고, PC 가 완전히 꺼진 동안 휴대폰 Muse 가 쓴 파일이 재시작 뒤 PC 로 돌아왔다"
+    },
+    {
+      "path": "AI/Roundup/2026-11-08 - Live36 Weekly Rundown.md#4부: Muse 심화학습 — Codex 로 계속",
+      "quote": "아직 모르는 것: 실제 Vault(64.6 GiB) 수용 여부와 자동 동기화, Google Drive 커넥터의 404 — 실제 Vault 는 올리지 않았다"
+    },
+    {
+      "path": "AI/Roundup/2026-11-08 - Live36 Weekly Rundown.md#4부: Muse 심화학습 — Codex 로 계속",
+      "quote": "M4 는 7/8 이고 사본 규칙 검토(박창수)가 남았다. 그 뒤 M5 일정을 잡는다"
+    }
+  ],
+  "status_map": {
+    "rundown": "final",
+    "2026-11-08 - Weekly Progress and Planning": "missing_section",
+    "2026-11-01 - Live35 Weekly Rundown": "missing_section",
+    "2026-11-14 - Daily Roundup": "missing_section"
+  },
+  "excluded_headings": [
+    "실험 Backlog (이번 방송 미편성)",
+    "유튜브 업로드 자료 (이번 방송 미편성)"
+  ],
+  "withheld_conditional": [],
+  "forbidden_removed": true,
+  "other_parts": [
+    {
+      "id": "0",
+      "title": "인트로",
+      "coverage_state": "defined"
+    },
+    {
+      "id": "1",
+      "title": "AI Video Edit — Fable 로 영상 계획 리뷰",
+      "coverage_state": "defined"
+    },
+    {
+      "id": "2",
+      "title": "유튜브 채널 관리 웹앱 — 개발 계획",
+      "coverage_state": "defined"
+    },
+    {
+      "id": "3",
+      "title": "송이 영상 Substack 글 — 초안 계획",
+      "coverage_state": "defined"
+    },
+    {
+      "id": "5",
+      "title": "여유 시 다른 실험",
+      "coverage_state": "undefined"
+    },
+    {
+      "id": "6",
+      "title": "마무리 — 다음 주 예고",
+      "coverage_state": "defined"
+    },
+    {
+      "id": "틈새 A: 지난주 만든 콘텐츠",
+      "title": "틈새 A: 지난주 만든 콘텐츠",
+      "coverage_state": "defined"
+    },
+    {
+      "id": "틈새 B: 이번 주 인사이트",
+      "title": "틈새 B: 이번 주 인사이트",
+      "coverage_state": "defined"
+    }
+  ],
+  "assembled_at": "2026-11-15T06:45:08.112256+00:00"
+}

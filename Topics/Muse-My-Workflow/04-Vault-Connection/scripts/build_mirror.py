@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build a one-way Markdown mirror. Preview is the default; --apply copies files."""
+"""Build a one-way allow-listed file mirror. Preview is the default; --apply copies files."""
 
 from __future__ import annotations
 

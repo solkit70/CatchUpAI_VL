@@ -1,0 +1,89 @@
+{
+  "current_part_id": "틈새 B: 이번 주 소식 · 인사이트",
+  "coverage_state": "defined",
+  "coverage_items": [
+    "11/24 Builders Lounge 11월 모임 — 많은 분 등록 부탁",
+    "CloudBro 와의 협업"
+  ],
+  "evidence_pool": [
+    {
+      "path": "AI/Roundup/2026-11-15 - Live37 Weekly Rundown.md#틈새 B: 이번 주 소식 · 인사이트 (시간이 남으면)",
+      "quote": "[확정] 이번 방송 커버리지 — 11/24 Builders Lounge 11월 모임 — 많은 분 등록 부탁"
+    },
+    {
+      "path": "AI/Roundup/2026-11-15 - Live37 Weekly Rundown.md#틈새 B: 이번 주 소식 · 인사이트 (시간이 남으면)",
+      "quote": "[확정] 이번 방송 커버리지 — CloudBro 와의 협업"
+    },
+    {
+      "path": "AI/Roundup/2026-11-15 - Live37 Weekly Rundown.md#틈새 B: 이번 주 소식 · 인사이트 (시간이 남으면)",
+      "quote": "[확정 항목 현재 상태] 11/24 Builders Lounge 11월 모임 — 많은 분 등록 부탁 — 예정 — 11/24(화) 20:00 PT · 한국 11/25(수) 13:00, 온라인 무료, Luma 등록 받는 중"
+    },
+    {
+      "path": "AI/Roundup/2026-11-15 - Live37 Weekly Rundown.md#틈새 B: 이번 주 소식 · 인사이트 (시간이 남으면)",
+      "quote": "[확정 항목 현재 상태] CloudBro 와의 협업 — 진행 중 — 11/18 온라인 미팅, 11/24 이서연 이사 발표, 2027 협업 기획 중"
+    },
+    {
+      "path": "AI/Roundup/2026-11-15 - Live37 Weekly Rundown.md#틈새 B: 이번 주 소식 · 인사이트 (시간이 남으면)",
+      "quote": "11월 모임은 올해 마지막 모임으로 CloudBro 이서연 이사 → 매니패스트 허재혁 대표 메인 세션 → Builders Lounge 올해 돌아보기와 2027 계획의 세 세션이다. 신청은 Luma https://luma.com/b4s042ch 이고, 신청하면 행사 전에 안내 메일을 받는다."
+    },
+    {
+      "path": "AI/Roundup/2026-11-15 - Live37 Weekly Rundown.md#틈새 B: 이번 주 소식 · 인사이트 (시간이 남으면)",
+      "quote": "CloudBro 는 한국 클라우드 엔지니어 실무 Q&A 커뮤니티에서 시작해 초기 오픈소스를 첫 사용자와 기업 고객에게 연결하는 회사로, 11/18 온라인 미팅에서 Builders Lounge 와의 협업을 논의했다."
+    },
+    {
+      "path": "AI/Roundup/2026-11-15 - Live37 Weekly Rundown.md#틈새 B: 이번 주 소식 · 인사이트 (시간이 남으면)",
+      "quote": "11/24 모임의 문은 이서연 이사가 「깃허브에 올렸는데, 누가 쓰나요?」 발표로 열고, Builders Lounge 는 매니패스트 · CloudBro 와 2027년 협업을 기획하고 있다(10차 뉴스레터 · 시애틀코리안데일리 기사 공개 범위)."
+    }
+  ],
+  "status_map": {
+    "rundown": "final",
+    "2026-11-15 - Weekly Progress and Planning": "missing_section",
+    "2026-11-08 - Live36 Weekly Rundown": "missing_section",
+    "2026-11-08~2026-11-14 - Claude Code": "missing_section",
+    "2026-11-20 - Daily Roundup": "missing_section"
+  },
+  "excluded_headings": [
+    "슬라이드 「오늘의 실험」의 나머지 항목 (이번 방송 미편성)",
+    "방송 시작 전 할 일 (이번 방송 미편성)"
+  ],
+  "withheld_conditional": [],
+  "forbidden_removed": true,
+  "other_parts": [
+    {
+      "id": "0",
+      "title": "인트로",
+      "coverage_state": "defined"
+    },
+    {
+      "id": "1",
+      "title": "AI 와 내 LinkedIn",
+      "coverage_state": "defined"
+    },
+    {
+      "id": "2",
+      "title": "Muse 와 Dropbox",
+      "coverage_state": "defined"
+    },
+    {
+      "id": "3",
+      "title": "컴퓨터 맡기기",
+      "coverage_state": "defined"
+    },
+    {
+      "id": "4",
+      "title": "AI 비서",
+      "coverage_state": "defined"
+    },
+    {
+      "id": "틈새 A: 지난주 만든 콘텐츠",
+      "title": "틈새 A: 지난주 만든 콘텐츠",
+      "coverage_state": "defined"
+    },
+    {
+      "id": "6",
+      "title": "마무리 — 다음 주 예고",
+      "coverage_state": "undefined"
+    }
+  ],
+  "assembled_at": "2026-11-21T13:10:33.420396+00:00"
+}

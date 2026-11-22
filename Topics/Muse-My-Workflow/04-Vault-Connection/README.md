@@ -2,12 +2,20 @@
 
 [English](README.en.md)
 
-**상태**: 🔄 진행 중 7/8 (2026-11-05 시작 · Codex) — E의 가상 S2·S4, C의 가상 Drive 파일 읽기·결과 작성·PC 수동 회수, 승인된 공개 후보 3개 별도 Drive 업로드를 확인했다. Dropbox는 연결·동작별 Allow 설정을 확인하고 개인 전용 가상 시험 폴더에 파일 세 개를 올려 Muse 읽기·결과 쓰기를 확인했다. 업로드 전 검색은 0건이었고 업로드 후 재검색에서는 세 파일 모두 찾았다. 폴더 목록에도 결과 파일을 포함해 네 파일을 확인했다. 실제 볼트 전체 사본 정책은 미결정.
+**상태**: 🔄 진행 중 7/8 (2026-11-05 시작 · Codex) — E의 가상 S2·S4, C의 Google Drive 웹 합성 폴더 읽기·결과 작성·PC 수동 회수, 승인된 공개 후보 3개 별도 Drive 업로드를 확인했다. 11/15에는 별도로 Drive for desktop의 `Computers → My PC → trial-vault`에서 Muse 읽기·쓰기와 켜져 있는 PC로의 자동 회수를 검증했다. Dropbox 합성 중첩 Vault의 읽기·쓰기·깨어 있는 PC 회수와 충돌 수동 병합을 확인했다. Muse-native에서는 중첩 합성 폴더 ZIP을 가져오고, 수정본과 새 파일을 포함한 전체 트리를 ZIP으로 되돌려 받아 4개 파일의 경로·해시를 검증했다. 작은 트리의 수동 전체 ZIP 왕복은 통과했지만 실제 Vault 규모 한도와 실제 Vault 자동 동기화는 미확인이다. 실제 Vault 전체 사본 정책은 미결정.
 **예상 학습 시간**: 3시간
+
+2026-11-14 합성 크기 시험에서 Muse는 5,777개 Markdown 파일·103.8 MiB payload를 ZIP으로 왕복했고, 검색·단일 파일 편집 후에도 경로를 유지했다. Obsidian fixture에서 경로가 있는 링크는 같은 basename의 Gamma 노트가 아닌 Beta 노트로 따라갔고, 경로 없는 중복 `[[note]]`는 모호하다고 판정해 대상을 선택하지 않았다. 별도 fixture에서 heading 링크 `#Target Heading`과 block 링크 `#^block-731`을 같은 노트 안의 서로 다른 fragment로 해석하고, 지정한 block 문단만 편집했다. 이미지 첨부 링크는 PNG 픽셀 판독을, PDF 첨부 링크는 명시 경로의 1페이지 텍스트 추출과 동명 decoy 구분을 확인했고, 각 반환 ZIP의 경로·내용을 로컬에서 대조했다. 이는 작은 표본에서의 링크·첨부 처리 결과이며 복잡한 PDF, Obsidian backlinks pane/index, 실제 Vault 전체 동작은 입증하지 않는다. Muse의 Library → System Files에서는 업로드·생성 파일 트리를 관리할 수 있지만 전체 용량 한도는 공개 자료나 화면에서 확인되지 않았다. 전체 Vault는 합성 payload보다 약 637배 크므로 Muse 내부 저장소가 전체 Vault를 수용한다고 아직 결론 내릴 수 없다. 내용 판독에서 Python·JSON·CSV는 정확했고, PNG OCR은 공백을 누락했다. Google Drive for desktop을 설치하고 합성 `trial-vault`의 동기화 완료를 확인했다. Muse의 `Computers` 접근은 아직 미시험이며, Dropbox 표준 동기화는 합성 폴더에서 성공했지만 실제 Vault 위치는 미시험이다. Dropbox Backup은 단방향이므로 Muse 편집 결과를 원본에 되돌리는 동기화 용도로 제외한다. 자세한 근거는 [경로표](guides/task-route-table.md#보조-저장소-비교-업데이트-2026-11-14), [11월 14일 WorkLog — heading/block](../vl_worklog/20261114_M4_Muse-My-Workflow.md#obsidian-headingblock-fragment-링크-시험-2026-11-14), [이미지 첨부](../vl_worklog/20261114_M4_Muse-My-Workflow.md#obsidian-이미지-첨부-wikilink-경로판독-시험-2026-11-14), [PDF 첨부](../vl_worklog/20261114_M4_Muse-My-Workflow.md#obsidian-pdf-첨부-wikilink-경로텍스트-판독-시험-2026-11-14) 기록에 있다.
+
+추가 합성 시험에서는 Muse가 두 노트의 Obsidian wikilink 경로를 기준으로 대상 노트의 역링크 후보를 찾았다(확장자 생략·`.md` 명시 각각 한 건). 이는 작은 fixture를 훑은 결과이며 Obsidian backlinks pane/index나 전체 Vault 색인 기능과 같다고 볼 수 없다. 소비자 Muse Library의 전체 저장 한도는 공개 자료에서 찾지 못했고, Meta Model API의 저장 한도는 별도 제품이라 Muse app에 적용하지 않았다. Drive for desktop의 별도 컴퓨터 동기화에서는 Muse가 지정한 합성 폴더를 읽어 새 Markdown 결과 파일을 만들고, 켜져 있는 PC에서 자동 회수를 확인했다. PC 종료 중 회수와 실제 Vault 동기화는 시험하지 않았다. 근거는 [11월 15일 Drive 왕복 시험](../vl_worklog/20261115_M4_Muse-My-Workflow.md#google-drive-computers-읽기와-pc-자동-회수--통과), [역링크 WorkLog](../vl_worklog/20261114_M4_Muse-My-Workflow.md#obsidian-backlinks-링크-대상-탐색-시험-2026-11-14), [저장 한도 조사](../vl_worklog/20261114_M4_Muse-My-Workflow.md#muse-저장-용량-공식-문서-재확인-2026-11-14)에 있다.
+
+추가로 실제 Vault와 같은 55,035개 파일 수를 가진 작은 합성 Markdown 트리를 Muse 내부에서 ZIP 왕복했다. 로컬에서 파일 수·payload·경로·검사 표식·ZIP integrity를 확인했다. 파일 개수 대응은 확인했지만 payload는 825,535 bytes뿐이라 64.614 GiB 전체 용량이나 형식별 실데이터를 수용하는지는 알 수 없다. 자세한 결과는 [파일 수 시험 WorkLog](../vl_worklog/20261114_M4_Muse-My-Workflow.md#muse-native-실제-vault-파일-수-대응-합성-시험-2026-11-14)와 [경로표](guides/task-route-table.md#실제-vault와-같은-파일-수의-합성-왕복-2026-11-14)에 기록했다.
+
+2026-11-14 Dropbox의 합성 시험 폴더에서 PC 완전 종료 중 휴대폰 Muse로 만든 `pc-off-return-20261114.md`가 재시작 후 로컬 Dropbox 폴더에 나타났다. 상대 경로와 `PC-OFF-RETURN-731` 내용, 18-byte 크기와 SHA-256을 확인했다. 따라서 이 합성 폴더에서는 모바일 작성과 PC 종료 후 자동 회수를 확인했다. 실제 Vault 경로와 S0 절전, Dropbox 권한의 폴더 단위 강제는 미확인이다. [시험 WorkLog](../vl_worklog/20261114_M4_Muse-My-Workflow.md#pc-완전-종료-후-dropbox-결과-재확인--통과-2026-11-14)
 
 ## 진행 상태
 
-실습 1에서 공식 문서와 Muse 화면을 확인했고, 실습 2에서 사본 규칙 초안과 실제 볼트 미리 보기를 실행했다. 내부 미리 보기 보고서를 검토했고, 표시된 공개 후보 3개는 사용자 승인 뒤 별도 Drive 폴더에 올려 확인했다. 이 승인은 실제 볼트 전체를 미러링하는 포괄 승인이 아니다. E · Claude Code Remote Control은 Muse 밖의 대안으로 가상 S2·S4를 시험했고, C · Google Drive는 지정 가상 폴더의 읽기·결과 작성과 PC 수동 다운로드를 확인했다. Dropbox의 2026-11-08 화면에서는 모든 동작별 권한이 **Allow**(다운로드·쓰기 권한은 Custom Allow)였다. 사용자가 기기 접근 확인창을 승인한 뒤 `Muse M4 Test - Synthetic` 개인 전용 폴더에 가상 자료 세 개를 올렸다. 업로드 전에 실행한 파일명 검색은 0건이었지만, 업로드 뒤 폴더 범위를 지정해 다시 검색하자 세 파일 모두 찾았다. 지정 경로 읽기와 `m4-dropbox-result.md` 작성도 성공했다. Dropbox 화면에서 원본 세 개와 결과 파일, 결과 내용을 확인했다. Dropbox 데스크톱 앱 설정 후 네 파일이 깨어 있는 PC에 자동 동기화되어 자동 PC 회수는 깨어 있는 상태에서 확인했다. 절전 요청 전후 네 파일의 로컬 상태는 유지됐으나 S0 진입·복귀와 절전 중 클라우드 변경은 검증하지 못해 Sleep 효과는 미판정이다. Dropbox 재실행 후 파일명 세 개 검색과 폴더 네 항목 목록도 성공했다. 모바일 시험·폴더 범위 제한은 미검증이다.
+실습 1에서 공식 문서와 Muse 화면을 확인했고, 실습 2에서 사본 규칙 초안과 실제 볼트 미리 보기를 실행했다. 내부 미리 보기 보고서를 검토했고, 표시된 공개 후보 3개는 사용자 승인 뒤 별도 Drive 폴더에 올려 확인했다. 이 승인은 실제 볼트 전체를 미러링하는 포괄 승인이 아니다. E · Claude Code Remote Control은 Muse 밖의 대안으로 가상 S2·S4를 시험했고, C · Google Drive는 지정 가상 폴더의 읽기·결과 작성과 PC 수동 다운로드를 확인했다. Dropbox의 2026-11-08 화면에서는 모든 동작별 권한이 **Allow**(다운로드·쓰기 권한은 Custom Allow)였다. 사용자가 기기 접근 확인창을 승인한 뒤 `Muse M4 Test - Synthetic` 개인 전용 폴더에 가상 자료 세 개를 올렸다. 업로드 뒤 폴더 범위 검색, 지정 경로 읽기, 결과 파일 작성과 PC 회수를 확인했다. 2026-11-14에는 PC 완전 종료 중 휴대폰 Muse에서 만든 새 합성 파일이 PC 재시작 후 Dropbox 폴더에 도착했다. 모바일 작성과 종료 후 회수는 합성 폴더에서 통과했다. S0 절전 효과와 폴더 범위 권한 강제는 미검증이며, 실제 Vault 경로도 시험하지 않았다.
 
 ## 📚 학습 순서
 
@@ -25,9 +33,9 @@
 ## 지금까지 알아낸 것
 
 - **후보 8개** 모두 공식 자료와 Muse 화면으로 확인 날짜와 함께 정리했다. Dropbox 연결과 가상 폴더의 읽기·쓰기 시험도 수행했다.
-- **동기화 기능은 없다.** 커넥터는 필요할 때 들여다보는 연결이다. 그래서 「밖에서 한 일이 집 PC 에 저절로 도착」(S5)은 아직 어떤 후보로도 충족되지 않는다.
+- **Muse-native 합성 트리 전체의 수동 ZIP 왕복은 확인했다.** Muse 작업 공간에서 수정·추가한 파일을 포함해 네 파일을 경로와 해시를 보존한 ZIP으로 회수했다. 이는 Muse Library를 통한 수동 전달이며 로컬 Vault 자동 동기화가 아니다. 전체 Vault 크기·파일 수 한도와 PC가 꺼져 있을 때의 전체 절차는 아직 미검증이므로 S5는 자동 도착 시나리오로는 실증되지 않았다.
 - **공개 표시만 담는 사본이 안전하게 동작한다.** 실제 볼트 미리 보기에서 포함 후보 3 · 제외 55,975 · 복사 0 — 내부 표식 112 · `visibility: internal` 58 은 모두 빠졌다.
-- **확인 못 한 것** — 업로드 전 검색은 0건, 업로드 후 지정 폴더 범위 검색은 세 파일 모두 성공했다. 모바일 접근, 폴더 범위의 기술적 강제, Windows 절전 효과는 미판정이다. 깨어 있는 PC의 자동 회수는 Dropbox 데스크톱 앱 설정 뒤 네 파일이 Available on this device로 표시되어 확인했다. 이전 Muse 화면에 나타난 403 알림은 Dropbox 요청 오류와 연결되지 않았다. Chrome 업데이트·재시작 후 현재 Muse 화면에는 알림이 보이지 않았지만, 사용자가 평소 반복된다고 보고해 해결 여부와 원인은 미확정이다. Google Drive 폴더 범위와 자동 동기화도 미확인이다.
+- **확인 못 한 것** — Dropbox에서 실제 Vault 경로의 동기화, 폴더 범위의 기술적 강제, Windows 절전 중 새 변경 반영은 미확인이다. PC 완전 종료 후 자동 회수는 합성 폴더에서 통과했지만 실제 Vault의 S5 전체를 증명하지 않는다. 이전 Muse 화면의 403 알림은 Dropbox 요청 오류와 연결되지 않았다. Chrome 업데이트·재시작 후 현재 Muse 화면에는 알림이 보이지 않았지만, 사용자가 평소 반복된다고 보고해 해결 여부와 원인은 미확정이다. Google Drive에서는 Muse가 `Computers` 동기화 경로를 찾고 편집할 수 있는지, 새 변경이 PC로 자동 돌아오는지 확인해야 한다. Dropbox 표준 동기화가 현재 Vault 위치를 이동 없이 지원하는지도 미확인이다.
 
 ## 실습 2 재현 방법
 

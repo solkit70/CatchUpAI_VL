@@ -13,12 +13,12 @@ lang: en
 
 [한국어](mirror-policy.md)
 
-These rules are a draft for keeping the original vault safe and exporting only selected Markdown material to a separate mirror copy. The current default setting is preview. This document and the example config do not copy real vault material or connect to Muse · cloud storage.
+These rules are a draft for keeping the original vault safe and exporting selected material to a separate mirror copy. Markdown is the default file type, but other formats such as source code, documents in other formats, and images may be included when needed by explicitly adding their extensions to the allow list. The allowed formats depend on the intended use and reviewed scope. The example config currently allows only `.md` by default. The current default setting is preview. This document and the example config do not copy real vault material or connect to Muse · cloud storage.
 
 ## Include Rules
 
 - Only files in the source root set by the user, and in the explicit include paths inside it, are treated as candidates.
-- Only files with the `.md` extension and within the set size limit are treated as candidates.
+- By default, only `.md` files within the set size limit are candidates. Other formats such as source code, documents in other formats, and images may be included when needed by explicitly adding their extensions to the allow list and reviewing them. Formats absent from the allow list are excluded.
 - By default, only files whose YAML `visibility` value is `public` are included. `personal` files are excluded until approval and a config change.
 - Files are copied to a separate destination, keeping their relative path from the source.
 
@@ -26,7 +26,7 @@ These rules are a draft for keeping the original vault safe and exporting only s
 
 - Files with `visibility: internal`, or with a `🔒 내부 자료` mark in the body
 - Files with no classification marker or that cannot be read, `personal` material, and paths the user did not put on the allow list
-- Files under path components excluded in the config, formats other than Markdown, files over the size limit, and symbolic links
+- Files under path components excluded in the config, formats absent from the allow list, files over the size limit, and symbolic links
 - The destination folder is not placed inside the source root. If a file with the same path already exists at the destination, it is not overwritten.
 
 ## Run Steps
@@ -38,7 +38,7 @@ These rules are a draft for keeping the original vault safe and exporting only s
 
 ## Proposal for Review
 
-Based on the evidence so far, the conservative operating proposal is **to leave automatic mirroring off and manually review only explicitly designated `visibility: public` Markdown when needed**. Always exclude `visibility: internal`, `🔒 내부 자료`, `personal`, missing or malformed classifications, paths outside an explicit allow list, non-Markdown files, oversized files, and symbolic links. Limit included paths to a user-designated allow list rather than the whole vault. Do not copy, upload through a connector, or schedule runs until the destination and access scope are settled.
+Based on the evidence so far, the conservative operating proposal is **to leave automatic mirroring off and manually review only explicitly designated `visibility: public` Markdown when needed**. When needed, other formats such as source code, documents in other formats, and images may be separately reviewed by adding their extensions to the allow list. Always exclude `visibility: internal`, `🔒 내부 자료`, `personal`, missing or malformed classifications, paths outside an explicit allow list, formats absent from the allow list, oversized files, and symbolic links. Limit included paths to a user-designated allow list rather than the whole vault. Do not copy, upload through a connector, or schedule runs until the destination and access scope are settled.
 
 The Dropbox trial did not establish that Muse access can be technically restricted to the named folder. Google Drive folder restriction was not established either. Based on current evidence, I do not recommend connecting either service to an actual vault mirror. Use Muse’s manual single-file handoff, or choose E · Claude Code Remote Control (an alternative outside Muse) when the home PC is running, according to the task.
 
@@ -46,11 +46,13 @@ This is a proposal only. The separately approved one-time upload of 3 public can
 
 ## Items Waiting for Approval
 
+**November 14, 2026 storage decision.** Manage remote work files in the Muse workspace by default. Dropbox and Google Drive are candidates for retrieving the results and bringing them into the vault after the home PC is turned back on. Choose a secondary storage service after completing the remaining trials, from mobile work with the PC powered off through retrieval and incorporation into the vault after startup.
+
 This is not a final policy. The internal preview recorded 3 `public` candidates, 55,975 excluded files, and 0 copied files; exclusions included 112 files with an internal marker and 58 with `visibility: internal`. This is evidence from one preview, not policy approval or a guarantee for repeated runs.
 
 Items to decide before approval:
 - Source scope and explicit include allow list
-- Storage · destination · connector access scope
+- Destination folder and connector permissions when selecting a secondary storage service after the trials
 - Manual or scheduled runs, cadence, and copy retention period
 - Stop · review steps on failure and handling of destination copies
 

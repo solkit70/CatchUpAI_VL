@@ -1,0 +1,140 @@
+{
+  "source_path": "AI/Roundup/2026-11-15 - Live37 Weekly Rundown.md",
+  "is_final": true,
+  "parts": [
+    {
+      "id": "0",
+      "sort_key": 0.0,
+      "is_numbered": true,
+      "title": "인트로",
+      "time_raw": "시간 미표기",
+      "time_minutes": null,
+      "is_remainder": false,
+      "coverage_state": "defined",
+      "coverage_items": [
+        "오늘의 주제 — 출장으로 밀린 컴퓨터 작업 AI 와 같이 하기",
+        "2박 3일 K-Startup Demo Day 출장",
+        "출장 중 밤에 한 일 — CloudBro 온라인 미팅 · 밖에서 Muse 로 내 컴퓨터 작업",
+        "배우고 만나고, 틈틈이 내 일도 처리한 경험",
+        "오늘의 실험 네 가지 예고"
+      ],
+      "directive_note": null
+    },
+    {
+      "id": "1",
+      "sort_key": 1.0,
+      "is_numbered": true,
+      "title": "AI 와 내 LinkedIn",
+      "time_raw": "시간 미표기",
+      "time_minutes": null,
+      "is_remainder": false,
+      "coverage_state": "defined",
+      "coverage_items": [
+        "AI 에게 내 LinkedIn 업데이트 시키기"
+      ],
+      "directive_note": null
+    },
+    {
+      "id": "2",
+      "sort_key": 2.0,
+      "is_numbered": true,
+      "title": "Muse 와 Dropbox",
+      "time_raw": "시간 미표기",
+      "time_minutes": null,
+      "is_remainder": false,
+      "coverage_state": "defined",
+      "coverage_items": [
+        "Muse 와 Dropbox 로 AI 서버 대체하기",
+        "Muse 심화 학습 M5 마무리",
+        "Muse 심화 학습 M6 진행"
+      ],
+      "directive_note": null
+    },
+    {
+      "id": "3",
+      "sort_key": 3.0,
+      "is_numbered": true,
+      "title": "컴퓨터 맡기기",
+      "time_raw": "시간 미표기",
+      "time_minutes": null,
+      "is_remainder": false,
+      "coverage_state": "defined",
+      "coverage_items": [
+        "AI 에게 컴퓨터 맡겨 보기 — 행사 사진 정리"
+      ],
+      "directive_note": null
+    },
+    {
+      "id": "4",
+      "sort_key": 4.0,
+      "is_numbered": true,
+      "title": "AI 비서",
+      "time_raw": "시간 미표기",
+      "time_minutes": null,
+      "is_remainder": false,
+      "coverage_state": "defined",
+      "coverage_items": [
+        "AI 비서가 가장 급한 내 일 판단해서 처리"
+      ],
+      "directive_note": null
+    },
+    {
+      "id": "틈새 A: 지난주 만든 콘텐츠",
+      "sort_key": 905.0,
+      "is_numbered": false,
+      "title": "틈새 A: 지난주 만든 콘텐츠",
+      "time_raw": "시간이 남으면",
+      "time_minutes": null,
+      "is_remainder": false,
+      "coverage_state": "defined",
+      "coverage_items": [
+        "AI 영상 편집 실험 영상 — 한국어판",
+        "AI 영상 편집 실험 영상 — 영어판"
+      ],
+      "directive_note": null
+    },
+    {
+      "id": "틈새 B: 이번 주 소식 · 인사이트",
+      "sort_key": 906.0,
+      "is_numbered": false,
+      "title": "틈새 B: 이번 주 소식 · 인사이트",
+      "time_raw": "시간이 남으면",
+      "time_minutes": null,
+      "is_remainder": false,
+      "coverage_state": "defined",
+      "coverage_items": [
+        "11/24 Builders Lounge 11월 모임 — 많은 분 등록 부탁",
+        "CloudBro 와의 협업"
+      ],
+      "directive_note": null
+    },
+    {
+      "id": "6",
+      "sort_key": 6.0,
+      "is_numbered": true,
+      "title": "마무리 — 다음 주 예고",
+      "time_raw": "시간 미표기",
+      "time_minutes": null,
+      "is_remainder": false,
+      "coverage_state": "defined",
+      "coverage_items": [
+        "11/24 Builders Lounge 11월 모임 다시 안내"
+      ],
+      "directive_note": null
+    }
+  ],
+  "excluded_sections": [
+    {
+      "heading": "슬라이드 「오늘의 실험」의 나머지 항목 (이번 방송 미편성)",
+      "reason": "unscheduled"
+    },
+    {
+      "heading": "방송 시작 전 할 일 (이번 방송 미편성)",
+      "reason": "unscheduled"
+    }
+  ],
+  "conditional_sections": [],
+  "parse_anomalies": [],
+  "parsed_at": "2026-11-22T08:15:33.636243+00:00",
+  "frontmatter_status": "ready — 모든 파트 커버리지 확정(11/21 박창수)"
+}

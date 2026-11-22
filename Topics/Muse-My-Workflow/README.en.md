@@ -5,7 +5,7 @@ author:
   - "Claude Code"
   - "Codex"
 created: "2026-11-07 22:30:00"
-status: "In progress — M1–M3 done · M4 in progress (7/8) · M5–M7 planned"
+status: "In progress — M1–M5 done · M6 review incorporated · M7 planned"
 tags:
   - muse-my-workflow
   - meta-muse
@@ -17,7 +17,7 @@ lang: en
 
 [한국어](README.md)
 
-This Topic looks for a way to work on my phone with Meta Muse when my laptop is not with me, and then add the results seamlessly to the Obsidian vault (2nd Brain) at home. I find the way **by trying it myself**. I decided which work to give to Muse, moved files between Muse and the vault, and tested whether Muse follows VibeLearn AI instructions. Right now I am comparing options for connecting the whole vault to Muse (M4). At the end, I will make a guide from one week of real use, a teaching block for teaching other people, and a video of the process (Korean · English).
+This Topic looks for a way to work on my phone with Meta Muse when my laptop is not with me, and then add the results seamlessly to the Obsidian vault (2nd Brain) at home. I find the way **by trying it myself**. I decided which work to give to Muse, moved files between Muse and the vault, and tested whether Muse follows VibeLearn AI instructions. M4 explored ways to connect the vault. M5 documented two real tasks and six days of observation. The revised M6 kit is ready for classroom use and feedback.
 
 > When my laptop is not with me, I can use Muse, and later, when I get home, move the work to my computer. That way I can keep my work in my 2nd Brain on my local machine
 >
@@ -40,6 +40,7 @@ This Topic is run by **Claude Code and Codex in turns**. So every module and Wor
 | Does Muse follow VibeLearn AI instructions? | It read the instructions in the public repo directly and stopped at the three places that need approval. When I put the rules in its memory (`MEMORY.md`), it kept those rules **even in a new chat** | [M3](03-VibeLearn-on-Muse/README.en.md) |
 | Can I continue at home a Topic I started away? | I downloaded 3 original files from the Muse Library and moved them to the vault. **The SHA-256 values all matched**, and Codex took over from the period review step | [M3](03-VibeLearn-on-Muse/README.en.md) |
 | How should I connect the vault to Muse? | I checked 8 candidates with official documentation and screens. I built a preview that picks only the Markdown marked `visibility: public` in the vault, and ran it: **3 candidates to include · 55,975 excluded · 0 copied** — all internal material was left out. Synthetic Dropbox and Drive connector tests are complete. The whole-vault mirror policy and any real-vault connection remain undecided | [M4](04-Vault-Connection/README.en.md) |
+| How did this work in daily use? | Two real tasks and six days of observation informed the handoff from work away from home to the vault | [M5](05-Daily-Use-Guide/README.md#실습-결과와-현재-상태) |
 
 ## Learning Order and Status by Module
 
@@ -48,12 +49,12 @@ This Topic is run by **Claude Code and Codex in turns**. So every module and Wor
 | M1 | [Task list and Muse fit map](01-Workflow-Fit-Map/README.en.md) | ✅ Done (10/18 · expanded 10/25) |
 | M2 | [Moving between Muse ↔ vault (both ways)](02-Muse-to-Vault/README.en.md) | ✅ Done (10/25) |
 | M3 | [VibeLearn AI on Muse](03-VibeLearn-on-Muse/README.en.md) | ✅ Done (10/25 – 11/5) |
-| M4 | [Vault connection options — home and away, seamless](04-Vault-Connection/README.en.md) | 🔄 In progress 7/8 — scenario matrix and draft route table completed; whole-vault mirror policy and operating route await approval |
-| M5 | One week of real use and a usage guide | ⏳ Planned (use 11/8 – 11/14) |
-| M6 | A teaching block for other people | ⏳ Planned (around 11/15) |
+| M4 | [Vault connection options — home and away, seamless](04-Vault-Connection/README.en.md) | ✅ Completed. Synthetic connector trials and route guidance documented. |
+| M5 | [Daily use guide](05-Daily-Use-Guide/README.md) | ✅ Completed (Nov 22) |
+| M6 | [Teaching kit](06-Teaching-Kit/README.md) | 🔄 Review incorporated. Classroom use pending. |
 | M7 | Capstone — process video (Korean · English) | ⏳ Planned (11/22 – 11/29) |
 
-The M5 – M7 folders do not exist yet. The plans are in the detailed module plans and the progress table of the [roadmap](vl_roadmap/20261018_RoadMap_Muse-My-Workflow.md).
+The M6 kit includes five lessons, a 60-minute beginner taster, three-session plans for work and personal knowledge use, and synthetic exercises with expected answers. The lesson materials are in Korean. The plans are in the detailed module plans and the progress table of the [roadmap](vl_roadmap/20261018_RoadMap_Muse-My-Workflow.md).
 
 ```mermaid
 flowchart TB
@@ -61,13 +62,13 @@ flowchart TB
         direction LR
         M1["M1 What to delegate"] --> M2["M2 Moving files"] --> M3["M3 Following instructions"]
     end
-    subgraph Now["In progress"]
+    subgraph Now["Completed connections and daily use"]
         direction LR
-        M4["M4 Vault connection options"]
+        M4["M4 Vault connection options"] --> M5["M5 Daily use guide"]
     end
-    subgraph Next["Planned"]
+    subgraph Next["In progress and planned"]
         direction LR
-        M5["M5 One week of use"] --> M6["M6 Teaching block"] --> M7["M7 Process video"]
+        M6["M6 Teaching block"] --> M7["M7 Process video"]
     end
     Done --> Now --> Next
 ```
@@ -110,7 +111,7 @@ This method also keeps failures and unverified items as results.
 | Record | Location |
 |---|---|
 | Learning roadmap (v2.0, 6 weeks) | [vl_roadmap/20261018_RoadMap_Muse-My-Workflow.md](vl_roadmap/20261018_RoadMap_Muse-My-Workflow.md) |
-| WorkLog | [vl_worklog/](vl_worklog/) — M1 · M1 expansion · M2 · M3 (10/25 · 11/1 · 11/5) · M4 (11/5) |
+| WorkLog | [vl_worklog/](vl_worklog/) — M1 · M1 expansion · M2 · M3 (10/25 · 11/1 · 11/5) · M4 · M5 · M6 |
 | Module retrospectives | [M1](vl_worklog/20261018_M1_Retrospective.md) · [M2](vl_worklog/20261025_M2_Retrospective.md) · [M3](vl_worklog/20261105_M3_Retrospective.md) — the M2 · M3 retrospectives were written late, during the 2026-11-07 Topic review |
 | Prompts | [vl_prompts/roadmap_prompt.md](vl_prompts/roadmap_prompt.md) · [vl_prompts/daily_learning_prompt.md](vl_prompts/daily_learning_prompt.md) |
 | First research material | [vl_materials/vault-connection-first-research.md](vl_materials/vault-connection-first-research.md) |

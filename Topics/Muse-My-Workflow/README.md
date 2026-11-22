@@ -5,7 +5,7 @@ author:
   - "Claude Code"
   - "Codex"
 created: "2026-11-07 22:30:00"
-status: "진행 중 — M1~M3 완료 · M4 진행 (7/8) · M5~M7 예정"
+status: "진행 중 — M1~M5 완료 · M6 교육 키트 리뷰 반영 · M7 예정"
 tags:
   - muse-my-workflow
   - meta-muse
@@ -16,7 +16,7 @@ tags:
 
 [English](README.en.md)
 
-노트북이 옆에 없을 때 휴대폰의 Meta Muse 로 일하고, 그 결과를 집의 Obsidian 볼트(2nd Brain)에 끊김 없이 이어 붙이는 방법을 **직접 해 보며** 찾는 Topic 이다. 어떤 일을 Muse 에 맡길지 정하고, Muse 와 볼트 사이로 파일을 옮기고, Muse 가 VibeLearn AI 지시를 따르는지 시험했다. 지금은 볼트 전체를 Muse 와 잇는 해법(M4)을 비교하는 중이다. 마지막에는 1주일 실제 사용 가이드, 다른 사람을 가르칠 교육 블록, 과정 영상(한 · 영)을 만든다.
+노트북이 옆에 없을 때 휴대폰의 Meta Muse 로 일하고, 그 결과를 집의 Obsidian 볼트(2nd Brain)에 끊김 없이 이어 붙이는 방법을 **직접 해 보며** 찾는 Topic 이다. 어떤 일을 Muse 에 맡길지 정하고, Muse 와 볼트 사이로 파일을 옮기고, Muse 가 VibeLearn AI 지시를 따르는지 시험했다. M4에서 연결 해법을 실험하고 M5에서 실제 업무 두 건과 6일 관찰을 바탕으로 일상 사용 가이드를 정리했다. M6 교육 키트는 리뷰를 반영했으며 실제 수업 적용을 앞두고 있다.
 
 > 노트북이 옆에 없을 때는 Muse 를 사용하고 나중에 집에 와서 작업한 내용을 컴퓨터로 옮기는 방법으로 내 로컬에 있는 나의 2nd Brain 에 작업 내용을 보관할 수 있다
 >
@@ -38,7 +38,8 @@ tags:
 | 말한 그대로 남길 수 있나 | 「한 글자도 바꾸지 말고 마크다운 파일로 저장해줘」 한 줄로 받아 적은 글이 그대로 파일이 됐다 | [M2](02-Muse-to-Vault/README.md) |
 | Muse 가 VibeLearn AI 지시를 따르나 | 공개 레포의 지시를 직접 읽고, 승인이 필요한 곳 세 번에서 멈췄다. 규칙을 기억(`MEMORY.md`)에 넣자 **새 대화에서도** 그 규칙을 지켰다 | [M3](03-VibeLearn-on-Muse/README.md) |
 | 밖에서 시작한 Topic 을 집에서 이어갈 수 있나 | Muse Library 에서 원본 3개를 내려받아 볼트에 옮기니 **SHA-256 이 모두 같았고**, Codex 가 기간 검토 단계부터 이어받았다 | [M3](03-VibeLearn-on-Muse/README.md) |
-| 볼트를 Muse 와 어떻게 이을까 | 후보 8개를 공식 자료와 화면으로 확인했다. 볼트에서 `visibility: public` 으로 표시한 Markdown 만 골라 보는 미리 보기를 만들어 돌려 보니 **포함 후보 3 · 제외 55,975 · 복사 0** — 내부 자료는 모두 빠졌다. 가상 Dropbox·Drive 시험 연결은 확인했다. 전체 볼트 사본 정책과 실제 볼트 연결은 아직 정하지 않았다 | [M4](04-Vault-Connection/README.md) |
+| 볼트를 Muse 와 어떻게 이을까 | 후보 8개를 공식 자료와 화면으로 확인했다. 볼트에서 `visibility: public` 으로 표시한 Markdown 만 골라 보는 미리 보기를 만들어 돌려 보니 **포함 후보 3 · 제외 55,975 · 복사 0** — 내부 자료는 모두 빠졌다. Dropbox 와 Drive for desktop 의 합성 폴더 왕복 시험을 마쳤다. 실제 Vault 사본 정책은 미결정이며, 실제 Vault 를 연결하지 않았다 | [M4](04-Vault-Connection/README.md) |
+| 실제 업무에서 어떻게 썼나 | 실제 업무 두 건과 6일 관찰로 외부에서 시작해 Vault에서 마무리하는 경로를 정리했다 | [M5](05-Daily-Use-Guide/README.md#실습-결과와-현재-상태) |
 
 ## 모듈별 학습 순서와 상태
 
@@ -47,12 +48,12 @@ tags:
 | M1 | [작업 목록과 Muse 적합도 지도](01-Workflow-Fit-Map/README.md) | ✅ 완료 (10/18 · 보강 10/25) |
 | M2 | [Muse ↔ 볼트 옮기기 (양방향)](02-Muse-to-Vault/README.md) | ✅ 완료 (10/25) |
 | M3 | [VibeLearn AI on Muse](03-VibeLearn-on-Muse/README.md) | ✅ 완료 (10/25 ~ 11/5) |
-| M4 | [볼트 연결 해법 — 집과 밖을 끊김 없이](04-Vault-Connection/README.md) | 🔄 진행 중 7/8 — 시나리오표·경로표 초안 작성, 전체 볼트 사본 정책 및 운영 경로 승인 대기 |
-| M5 | 1주일 실제 사용과 사용 가이드 | ⏳ 예정 (11/8 ~ 11/14 사용) |
-| M6 | 다른 사람을 위한 교육 블록 | ⏳ 예정 (11/15 전후) |
-| M7 | Capstone — 과정 영상 (한 · 영) | ⏳ 예정 (11/22 ~ 11/29) |
+| M4 | [볼트 연결 해법 — 집과 밖을 끊김 없이](04-Vault-Connection/README.md) | ✅ 완료 (11/15; 실제 Vault 연결은 미실행, 승인된 공개 자료 사본 원칙으로 종료) |
+| M5 | 1주일 실제 사용과 사용 가이드 | ✅ 완료 (11/22; 6일 관찰과 원격 업무 흐름 분석) |
+| M6 | [다른 사람을 위한 교육 블록](06-Teaching-Kit/README.md) | 🔄 리뷰 반영 · 실제 수업 적용 전 |
+| M7 | Capstone — 과정 영상 (한 · 영) | ⏳ 11/22 ~ 11/29, M6와 병행 예정 |
 
-M5 ~ M7 폴더는 아직 없다. 계획은 [로드맵](vl_roadmap/20261018_RoadMap_Muse-My-Workflow.md)의 모듈별 상세 계획과 진행 상황 표에 있다.
+M6 교육 키트에 Claude 리뷰를 반영했다. M7 산출물 폴더는 아직 시작 전이다. 최신 일정과 완료 조건은 [로드맵](vl_roadmap/20261018_RoadMap_Muse-My-Workflow.md)의 모듈별 상세 계획과 진행 상황 표를 따른다.
 
 ```mermaid
 flowchart TB
@@ -60,15 +61,15 @@ flowchart TB
         direction LR
         M1["M1 무엇을 맡길까"] --> M2["M2 옮기기"] --> M3["M3 지시 따르기"]
     end
-    subgraph Now["진행 중"]
+    subgraph Done2["완료"]
         direction LR
-        M4["M4 볼트 연결 해법"]
+        M4["M4 볼트 연결 해법"] --> M5["M5 일상 사용 가이드"]
     end
-    subgraph Next["예정"]
+    subgraph Next["진행·예정"]
         direction LR
-        M5["M5 1주일 사용"] --> M6["M6 교육 블록"] --> M7["M7 과정 영상"]
+        M6["M6 교육 블록 11/22 Live #37"] --> M7["M7 과정 영상"]
     end
-    Done --> Now --> Next
+    Done --> Done2 --> Next
 ```
 
 ## 볼트 연결 후보 (M4)
@@ -109,7 +110,7 @@ flowchart TB
 | 기록 | 위치 |
 |---|---|
 | 학습 로드맵 (v2.0, 6주) | [vl_roadmap/20261018_RoadMap_Muse-My-Workflow.md](vl_roadmap/20261018_RoadMap_Muse-My-Workflow.md) |
-| WorkLog | [vl_worklog/](vl_worklog/) — M1 · M1 보강 · M2 · M3(10/25 · 11/1 · 11/5) · M4(11/5) |
+| WorkLog | [vl_worklog/](vl_worklog/) — M1 · M1 보강 · M2 · M3(10/25 · 11/1 · 11/5) · M4 · M5 · M6 |
 | 모듈 회고 | [M1](vl_worklog/20261018_M1_Retrospective.md) · [M2](vl_worklog/20261025_M2_Retrospective.md) · [M3](vl_worklog/20261105_M3_Retrospective.md) — M2 · M3 회고는 2026-11-07 Topic 점검에서 뒤늦게 작성 |
 | 프롬프트 | [vl_prompts/roadmap_prompt.md](vl_prompts/roadmap_prompt.md) · [vl_prompts/daily_learning_prompt.md](vl_prompts/daily_learning_prompt.md) |
 | 첫 조사 자료 | [vl_materials/vault-connection-first-research.md](vl_materials/vault-connection-first-research.md) |

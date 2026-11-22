@@ -1,20 +1,22 @@
 {
-  "source_path": "AI/Roundup/2026-10-25 - Live34 Weekly Rundown.md",
-  "is_final": false,
+  "source_path": "AI/Roundup/2026-11-15 - Live37 Weekly Rundown.md",
+  "is_final": true,
   "parts": [
     {
       "id": "0",
       "sort_key": 0.0,
       "is_numbered": true,
       "title": "인트로",
-      "time_raw": "5분",
-      "time_minutes": 5,
+      "time_raw": "시간 미표기",
+      "time_minutes": null,
       "is_remainder": false,
       "coverage_state": "defined",
       "coverage_items": [
-        "서른네 번째 방송 · 시간 변경 안내",
-        "VS Code 여 이젠 안녕",
-        "오늘의 주제 — AI 에게 내 컴퓨터 컨트롤 하게 하기"
+        "오늘의 주제 — 출장으로 밀린 컴퓨터 작업 AI 와 같이 하기",
+        "2박 3일 K-Startup Demo Day 출장",
+        "출장 중 밤에 한 일 — CloudBro 온라인 미팅 · 밖에서 Muse 로 내 컴퓨터 작업",
+        "배우고 만나고, 틈틈이 내 일도 처리한 경험",
+        "오늘의 실험 네 가지 예고"
       ],
       "directive_note": null
     },
@@ -22,15 +24,13 @@
       "id": "1",
       "sort_key": 1.0,
       "is_numbered": true,
-      "title": "내 컴퓨터를 AI 에게 맡기기 — Desktop Agent",
-      "time_raw": "메인",
+      "title": "AI 와 내 LinkedIn",
+      "time_raw": "시간 미표기",
       "time_minutes": null,
       "is_remainder": false,
       "coverage_state": "defined",
       "coverage_items": [
-        "Claude Desktop 에이전트 시험",
-        "ChatGPT Desktop 에이전트 시험",
-        "두 앱 비교 정리"
+        "AI 에게 내 LinkedIn 업데이트 시키기"
       ],
       "directive_note": null
     },
@@ -38,14 +38,14 @@
       "id": "2",
       "sort_key": 2.0,
       "is_numbered": true,
-      "title": "Muse 심화와 AI 영상 편집",
+      "title": "Muse 와 Dropbox",
       "time_raw": "시간 미표기",
       "time_minutes": null,
       "is_remainder": false,
       "coverage_state": "defined",
       "coverage_items": [
-        "Muse 심화 — 내 Workflow 에 맞게 활용하기",
-        "AI 로 영상 편집하기 — 결과를 Remotion 으로 작업하기"
+        "Muse 와 Dropbox 로 AI 서버 대체하기",
+        "Muse 심화 학습 M6 진행"
       ],
       "directive_note": null
     },
@@ -53,13 +53,13 @@
       "id": "3",
       "sort_key": 3.0,
       "is_numbered": true,
-      "title": "CoMC 새 기능 점검",
+      "title": "컴퓨터 맡기기",
       "time_raw": "시간 미표기",
       "time_minutes": null,
       "is_remainder": false,
       "coverage_state": "defined",
       "coverage_items": [
-        "Codex 가 고친 CoMC 새 기능 점검"
+        "AI 에게 컴퓨터 맡겨 보기 — 행사 사진 정리"
       ],
       "directive_note": null
     },
@@ -67,24 +67,49 @@
       "id": "4",
       "sort_key": 4.0,
       "is_numbered": true,
-      "title": "밀린 작업 — 시간이 되는 만큼",
+      "title": "AI 비서",
       "time_raw": "시간 미표기",
       "time_minutes": null,
       "is_remainder": false,
       "coverage_state": "defined",
       "coverage_items": [
-        "AI 시대 새 마켓과 빌더의 대응 — 발표 자료 준비",
-        "Builders Lounge 뉴스레터 신청 · 해지 · 공개 선택 메뉴",
-        "AI 는 일을 줄이는가, 더 만드는가 — 회고 · 철학 글",
-        "Bila AI Agent 만들기 M2",
-        "AI 와 글쓰기 — 피터 틸 vs 내 관점",
-        "YouTube API 로 분석하는 앱 만들기"
+        "AI 비서가 가장 급한 내 일 판단해서 처리"
       ],
       "directive_note": null
     },
     {
-      "id": "5",
-      "sort_key": 5.0,
+      "id": "틈새 A: 지난주 만든 콘텐츠",
+      "sort_key": 905.0,
+      "is_numbered": false,
+      "title": "틈새 A: 지난주 만든 콘텐츠",
+      "time_raw": "시간이 남으면",
+      "time_minutes": null,
+      "is_remainder": false,
+      "coverage_state": "defined",
+      "coverage_items": [
+        "AI 영상 편집 실험 영상 — 한국어판",
+        "AI 영상 편집 실험 영상 — 영어판"
+      ],
+      "directive_note": null
+    },
+    {
+      "id": "틈새 B: 이번 주 소식 · 인사이트",
+      "sort_key": 906.0,
+      "is_numbered": false,
+      "title": "틈새 B: 이번 주 소식 · 인사이트",
+      "time_raw": "시간이 남으면",
+      "time_minutes": null,
+      "is_remainder": false,
+      "coverage_state": "defined",
+      "coverage_items": [
+        "11/24 Builders Lounge 11월 모임 — 많은 분 등록 부탁",
+        "CloudBro 와의 협업"
+      ],
+      "directive_note": null
+    },
+    {
+      "id": "6",
+      "sort_key": 6.0,
       "is_numbered": true,
       "title": "마무리 — 다음 주 예고",
       "time_raw": "시간 미표기",
@@ -92,74 +117,23 @@
       "is_remainder": false,
       "coverage_state": "defined",
       "coverage_items": [
-        "오늘 실험 정리",
-        "다음 주 예고 · 끝인사"
-      ],
-      "directive_note": null
-    },
-    {
-      "id": "틈새 A: 이번 주 만든 콘텐츠",
-      "sort_key": 906.0,
-      "is_numbered": false,
-      "title": "틈새 A: 이번 주 만든 콘텐츠",
-      "time_raw": "시간이 남으면",
-      "time_minutes": null,
-      "is_remainder": false,
-      "coverage_state": "defined",
-      "coverage_items": [
-        "송재희 님 특강 영상",
-        "빌더스 라운지 칼럼 — 특강 현장",
-        "Civic Innovation Challenge 한국어 영상",
-        "Civic Innovation Challenge 영어 영상",
-        "송재희 님 신간 기사",
-        "Civic Innovation Challenge 소개 기사"
-      ],
-      "directive_note": null
-    },
-    {
-      "id": "틈새 B: 이번 주 인사이트",
-      "sort_key": 907.0,
-      "is_numbered": false,
-      "title": "틈새 B: 이번 주 인사이트",
-      "time_raw": "시간이 남으면",
-      "time_minutes": null,
-      "is_remainder": false,
-      "coverage_state": "defined",
-      "coverage_items": [
-        "만드는 것보다 닿게 하는 게 어렵다",
-        "자동 결과는 원본과 대조해야 믿을 수 있다",
-        "자동화돼도 사람은 더 바빠진다",
-        "밖으로 나가는 글은 쓰지 않을 것부터 정한다",
-        "하나의 사실을 여러 산출물에 똑같이 맞추기"
-      ],
-      "directive_note": null
-    },
-    {
-      "id": "틈새 C: Builders Lounge 다음 모임 소식",
-      "sort_key": 908.0,
-      "is_numbered": false,
-      "title": "틈새 C: Builders Lounge 다음 모임 소식",
-      "time_raw": "시간이 남으면",
-      "time_minutes": null,
-      "is_remainder": false,
-      "coverage_state": "defined",
-      "coverage_items": [
-        "다음 달 Builders Lounge 모임 준비 중",
-        "스타트업 빌더 두 분 — 여성 빌더 섭외 중, 추천 부탁",
-        "8차 뉴스레터 발송",
-        "뉴스레터 · 메일링 리스트 신청 안내"
+        "11/24 Builders Lounge 11월 모임 다시 안내"
       ],
       "directive_note": null
     }
   ],
   "excluded_sections": [
     {
-      "heading": "주간 영상 (이번 방송 미편성)",
+      "heading": "슬라이드 「오늘의 실험」의 나머지 항목 (이번 방송 미편성)",
+      "reason": "unscheduled"
+    },
+    {
+      "heading": "방송 시작 전 할 일 (이번 방송 미편성)",
       "reason": "unscheduled"
     }
   ],
   "conditional_sections": [],
   "parse_anomalies": [],
-  "parsed_at": "2026-10-31T11:53:26.012921+00:00",
-  "frontmatter_status": "ready"
+  "parsed_at": "2026-11-22T08:09:19.380988+00:00",
+  "frontmatter_status": "ready — 모든 파트 커버리지 확정(11/21 박창수)"
 }

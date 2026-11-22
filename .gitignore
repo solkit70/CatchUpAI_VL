@@ -25,6 +25,19 @@ Topics/CMDS-System-Files/
 
 # GOBI Vibe Guiding - GitHub 포함
 
+# Muse M5 field evidence — internal evaluation and unredacted screenshots stay local.
+# Company/product details and Muse chat list are visible; exclude until reviewed/redacted.
+Topics/Muse-My-Workflow/05-Daily-Use-Guide/examples/real-work-trials.md
+Topics/Muse-My-Workflow/05-Daily-Use-Guide/assets/
+Topics/Muse-My-Workflow/vl_worklog/20261118_M5_Muse-My-Workflow.md
+Topics/Muse-My-Workflow/vl_worklog/20261119_M5_Muse-My-Workflow.md
+Topics/Muse-My-Workflow/vl_worklog/20261120_M5_Muse-My-Workflow.md
+Topics/Muse-My-Workflow/vl_worklog/20261121_M5_Muse-My-Workflow.md
+Topics/Muse-My-Workflow/vl_worklog/20261122_M5_Retrospective.md
+Topics/Muse-My-Workflow/vl_worklog/20261122_M6_Muse-My-Workflow.md
+# Claude Code internal review of Codex drafts (🔒 visibility: internal)
+Topics/Muse-My-Workflow/06-Teaching-Kit/claude-review-v1.md
+
 # OS generated files
 .DS_Store
 Thumbs.db

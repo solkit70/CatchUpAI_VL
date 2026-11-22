@@ -1,6 +1,6 @@
 {
   "source_path": "AI/Roundup/2026-11-08 - Live36 Weekly Rundown.md",
-  "is_final": false,
+  "is_final": true,
   "parts": [
     {
       "id": "0",
@@ -10,64 +10,80 @@
       "time_raw": "5분",
       "time_minutes": 5,
       "is_remainder": false,
-      "coverage_state": "undefined",
-      "coverage_items": [],
+      "coverage_state": "defined",
+      "coverage_items": [
+        "서른여섯 번째 방송 안내",
+        "오늘의 주제 — Fable 5.2 사용해보기",
+        "이번 실험 4가지 소개",
+        "지난 주 만든 콘텐츠 한 줄 예고"
+      ],
       "directive_note": null
     },
     {
       "id": "1",
       "sort_key": 1.0,
       "is_numbered": true,
-      "title": "메인 실험",
+      "title": "AI Video Edit — Fable 로 영상 계획 리뷰",
       "time_raw": "시간 미표기",
       "time_minutes": null,
       "is_remainder": false,
-      "coverage_state": "undefined",
-      "coverage_items": [],
+      "coverage_state": "defined",
+      "coverage_items": [
+        "Fable 5.2 로 AI Video Edit Topic 과 Remotion 영상 계획 리뷰",
+        "리뷰 결과와 업데이트한 영상 계획을 문서로 저장"
+      ],
       "directive_note": null
     },
     {
       "id": "2",
       "sort_key": 2.0,
       "is_numbered": true,
-      "title": "Muse 와 AI 영상 편집",
+      "title": "유튜브 채널 관리 웹앱 — 개발 계획",
       "time_raw": "시간 미표기",
       "time_minutes": null,
       "is_remainder": false,
-      "coverage_state": "undefined",
-      "coverage_items": [],
+      "coverage_state": "defined",
+      "coverage_items": [
+        "Fable 로 유튜브 채널 관리 웹앱 개발 계획 세우기",
+        "개발 계획을 문서로 저장"
+      ],
       "directive_note": null
     },
     {
       "id": "3",
       "sort_key": 3.0,
       "is_numbered": true,
-      "title": "글 · 발표 · 연구",
-      "time_raw": "시간이 되는 만큼",
+      "title": "송이 영상 Substack 글 — 초안 계획",
+      "time_raw": "시간 미표기",
       "time_minutes": null,
       "is_remainder": false,
-      "coverage_state": "undefined",
-      "coverage_items": [],
+      "coverage_state": "defined",
+      "coverage_items": [
+        "송이 채취 영상 기반 Substack 글 초안을 위한 볼트 기록 검토와 계획",
+        "글 초안 계획을 문서로 저장"
+      ],
       "directive_note": null
     },
     {
       "id": "4",
       "sort_key": 4.0,
       "is_numbered": true,
-      "title": "앱 · 홈페이지 만들기",
-      "time_raw": "시간이 되는 만큼",
+      "title": "Muse 심화학습 — Codex 로 계속",
+      "time_raw": "시간 미표기",
       "time_minutes": null,
       "is_remainder": false,
-      "coverage_state": "undefined",
-      "coverage_items": [],
+      "coverage_state": "defined",
+      "coverage_items": [
+        "Muse 심화학습 진행 상황 소개"
+      ],
       "directive_note": null
     },
     {
       "id": "5",
       "sort_key": 5.0,
       "is_numbered": true,
-      "title": "마무리 — 다음 주 예고",
-      "time_raw": "시간 미표기",
+      "title": "여유 시 다른 실험",
+      "time_raw": "시간이 남으면",
       "time_minutes": null,
       "is_remainder": false,
       "coverage_state": "undefined",
@@ -75,33 +91,66 @@
       "directive_note": null
     },
     {
+      "id": "6",
+      "sort_key": 6.0,
+      "is_numbered": true,
+      "title": "마무리 — 다음 주 예고",
+      "time_raw": "시간 미표기",
+      "time_minutes": null,
+      "is_remainder": false,
+      "coverage_state": "defined",
+      "coverage_items": [
+        "오늘 만든 계획 문서 정리",
+        "다음 방송 안내"
+      ],
+      "directive_note": null
+    },
+    {
       "id": "틈새 A: 지난주 만든 콘텐츠",
-      "sort_key": 906.0,
+      "sort_key": 907.0,
       "is_numbered": false,
       "title": "틈새 A: 지난주 만든 콘텐츠",
       "time_raw": "시간이 남으면",
       "time_minutes": null,
       "is_remainder": false,
-      "coverage_state": "undefined",
-      "coverage_items": [],
+      "coverage_state": "defined",
+      "coverage_items": [
+        "송이밭 발견 영상 — 하루 61개, 숲에서 세운 2027 계획"
+      ],
       "directive_note": null
     },
     {
       "id": "틈새 B: 이번 주 인사이트",
-      "sort_key": 907.0,
+      "sort_key": 908.0,
       "is_numbered": false,
       "title": "틈새 B: 이번 주 인사이트",
       "time_raw": "시간이 남으면",
       "time_minutes": null,
       "is_remainder": false,
-      "coverage_state": "undefined",
-      "coverage_items": [],
+      "coverage_state": "defined",
+      "coverage_items": [
+        "드라이브하며 뉴스레터 360명 발송 — 원격으로 AI 조종",
+        "AI 에이전트는 모임이 아니라 각자가 만든다"
+      ],
       "directive_note": null
     }
   ],
-  "excluded_sections": [],
+  "excluded_sections": [
+    {
+      "heading": "실험 Backlog (이번 방송 미편성)",
+      "reason": "unscheduled"
+    },
+    {
+      "heading": "방송 시작 전 할 일 (이번 방송 미편성)",
+      "reason": "unscheduled"
+    },
+    {
+      "heading": "유튜브 업로드 자료 (이번 방송 미편성)",
+      "reason": "unscheduled"
+    }
+  ],
   "conditional_sections": [],
   "parse_anomalies": [],
-  "parsed_at": "2026-11-09T09:03:08.029893+00:00",
-  "frontmatter_status": "draft"
+  "parsed_at": "2026-11-15T06:48:39.579401+00:00",
+  "frontmatter_status": "ready — 커버리지 확정 (11/14 최종 점검, 5부는 여유 시 선택)"
 }
