@@ -1,0 +1,124 @@
+{
+  "source_path": "AI/Roundup/2026-11-22 - Live38 Weekly Rundown.md",
+  "is_final": true,
+  "parts": [
+    {
+      "id": "0",
+      "sort_key": 0.0,
+      "is_numbered": true,
+      "title": "인트로",
+      "time_raw": "시간 미표기",
+      "time_minutes": null,
+      "is_remainder": false,
+      "coverage_state": "defined",
+      "coverage_items": [
+        "빌더스라운지 11월 모임을 잘 마친 소식",
+        "추수감사절 연휴 마지막 날 — 한 해를 마무리하고 내년 계획을 세울 때"
+      ],
+      "directive_note": null
+    },
+    {
+      "id": "1",
+      "sort_key": 1.0,
+      "is_numbered": true,
+      "title": "첫 번째 실험",
+      "time_raw": "시간 미표기",
+      "time_minutes": null,
+      "is_remainder": false,
+      "coverage_state": "defined",
+      "coverage_items": [
+        "gobi-a2a 소스코드 분석 · 실사용 · 피드백"
+      ],
+      "directive_note": null
+    },
+    {
+      "id": "2",
+      "sort_key": 2.0,
+      "is_numbered": true,
+      "title": "두 번째 실험",
+      "time_raw": "시간 미표기",
+      "time_minutes": null,
+      "is_remainder": false,
+      "coverage_state": "defined",
+      "coverage_items": [
+        "워싱턴주 한인 연간 행사 캘린더 만들기"
+      ],
+      "directive_note": null
+    },
+    {
+      "id": "3",
+      "sort_key": 3.0,
+      "is_numbered": true,
+      "title": "세 번째 실험",
+      "time_raw": "시간 미표기",
+      "time_minutes": null,
+      "is_remainder": false,
+      "coverage_state": "defined",
+      "coverage_items": [
+        "Muse 활용 경험을 교재로 & 과정 영상 기획",
+        "빌더스라운지 11월 모임 후속 조치를 AI 와 상의하며 처리"
+      ],
+      "directive_note": null
+    },
+    {
+      "id": "틈새 A: 이번 주 만든 콘텐츠",
+      "sort_key": 904.0,
+      "is_numbered": false,
+      "title": "틈새 A: 이번 주 만든 콘텐츠",
+      "time_raw": "시간이 남으면",
+      "time_minutes": null,
+      "is_remainder": false,
+      "coverage_state": "defined",
+      "coverage_items": [
+        "창발 Dev 임현욱 발표 영상 「AI는 왜 거짓말을 할까?」",
+        "시애틀코리안데일리 칼럼 「AI는 왜 거짓말을 할까?」"
+      ],
+      "directive_note": null
+    },
+    {
+      "id": "틈새 B: 이번 주 소식 · 인사이트",
+      "sort_key": 905.0,
+      "is_numbered": false,
+      "title": "틈새 B: 이번 주 소식 · 인사이트",
+      "time_raw": "시간이 남으면",
+      "time_minutes": null,
+      "is_remainder": false,
+      "coverage_state": "defined",
+      "coverage_items": [
+        "한 수강생이 Muse 와 2주 만에 책을 만든 이야기",
+        "CloudBro 오픈소스 인큐베이터 검증에 참여",
+        "Black Friday 에 뽑아 본 컴퓨터 견적"
+      ],
+      "directive_note": null
+    },
+    {
+      "id": "6",
+      "sort_key": 6.0,
+      "is_numbered": true,
+      "title": "마무리 — 다음 주 예고",
+      "time_raw": "시간 미표기",
+      "time_minutes": null,
+      "is_remainder": false,
+      "coverage_state": "defined",
+      "coverage_items": [
+        "다음 방송부터 12월 — 올해를 제대로 마무리하고 내년 계획을 세우는 달",
+        "시청자께 드리는 12월 인사"
+      ],
+      "directive_note": null
+    }
+  ],
+  "excluded_sections": [
+    {
+      "heading": "주간 영상 (이번 주 미편성)",
+      "reason": "unscheduled"
+    },
+    {
+      "heading": "방송 시작 전 할 일 (이번 방송 미편성)",
+      "reason": "unscheduled"
+    }
+  ],
+  "conditional_sections": [],
+  "parse_anomalies": [],
+  "parsed_at": "2026-11-28T14:43:55.697074+00:00",
+  "frontmatter_status": "ready — 주제 · 0~3부 · 틈새 A · B · 6부 커버리지 확정, 주간 영상 미편성(11/28). 남은 것은 방송 전 준비 점검표"
+}

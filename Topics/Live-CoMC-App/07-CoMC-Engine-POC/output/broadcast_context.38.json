@@ -1,0 +1,83 @@
+{
+  "current_part_id": "6",
+  "coverage_state": "defined",
+  "coverage_items": [
+    "다음 방송부터 12월 — 올해를 제대로 마무리하고 내년 계획을 세우는 달",
+    "시청자께 드리는 12월 인사"
+  ],
+  "evidence_pool": [
+    {
+      "path": "AI/Roundup/2026-11-22 - Live38 Weekly Rundown.md#6부: 마무리 — 다음 주 예고",
+      "quote": "[확정] 이번 방송 커버리지 — 다음 방송부터 12월 — 올해를 제대로 마무리하고 내년 계획을 세우는 달"
+    },
+    {
+      "path": "AI/Roundup/2026-11-22 - Live38 Weekly Rundown.md#6부: 마무리 — 다음 주 예고",
+      "quote": "[확정] 이번 방송 커버리지 — 시청자께 드리는 12월 인사"
+    },
+    {
+      "path": "AI/Roundup/2026-11-22 - Live38 Weekly Rundown.md#6부: 마무리 — 다음 주 예고",
+      "quote": "[확정 항목 현재 상태] 다음 방송부터 12월 — 올해를 제대로 마무리하고 내년 계획을 세우는 달 — 확정 — 다음 방송 12/6(일) 한국 21:00"
+    },
+    {
+      "path": "AI/Roundup/2026-11-22 - Live38 Weekly Rundown.md#6부: 마무리 — 다음 주 예고",
+      "quote": "[확정 항목 현재 상태] 시청자께 드리는 12월 인사 — 확정"
+    },
+    {
+      "path": "AI/Roundup/2026-11-22 - Live38 Weekly Rundown.md#6부: 마무리 — 다음 주 예고",
+      "quote": "다음 방송은 12월입니다. 12월은 올해를 제대로 마무리하고 내년 계획을 세우는 달로 만들어 가겠습니다."
+    },
+    {
+      "path": "AI/Roundup/2026-11-22 - Live38 Weekly Rundown.md#6부: 마무리 — 다음 주 예고",
+      "quote": "시청자분들도 12월 한 달 동안 한 해 마무리 잘 하시고, 내년 계획도 잘 세우시기 바랍니다."
+    },
+    {
+      "path": "AI/Roundup/2026-11-22 - Live38 Weekly Rundown.md#6부: 마무리 — 다음 주 예고",
+      "quote": "오늘 실험의 결과와 이어지는 작업(캘린더 후속 · Muse 과정 영상)은 다음 방송에서 이어 갑니다."
+    }
+  ],
+  "status_map": {
+    "rundown": "final",
+    "2026-11-22 - Weekly Progress and Planning": "missing_section",
+    "2026-11-15 - Live37 Weekly Rundown": "missing_section",
+    "2026-11-15~2026-11-21 - Claude Code": "missing_section"
+  },
+  "excluded_headings": [
+    "주간 영상 (이번 주 미편성)",
+    "방송 시작 전 할 일 (이번 방송 미편성)"
+  ],
+  "withheld_conditional": [],
+  "forbidden_removed": true,
+  "other_parts": [
+    {
+      "id": "0",
+      "title": "인트로",
+      "coverage_state": "defined"
+    },
+    {
+      "id": "1",
+      "title": "첫 번째 실험",
+      "coverage_state": "defined"
+    },
+    {
+      "id": "2",
+      "title": "두 번째 실험",
+      "coverage_state": "defined"
+    },
+    {
+      "id": "3",
+      "title": "세 번째 실험",
+      "coverage_state": "defined"
+    },
+    {
+      "id": "틈새 A: 이번 주 만든 콘텐츠",
+      "title": "틈새 A: 이번 주 만든 콘텐츠",
+      "coverage_state": "defined"
+    },
+    {
+      "id": "틈새 B: 이번 주 소식 · 인사이트",
+      "title": "틈새 B: 이번 주 소식 · 인사이트",
+      "coverage_state": "defined"
+    }
+  ],
+  "assembled_at": "2026-11-28T14:40:05.185636+00:00"
+}
